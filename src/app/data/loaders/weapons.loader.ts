@@ -47,6 +47,14 @@ export class WeaponsLoader extends DataLoader<ItemModel> {
 		_.each(items, item => {
 			item.equipmentCategory = EquipmentCategoryType.Weapon;
 			item.itemType = ItemType.Weapon;
+			/*
+			if (item.sharpnessLevelsBar && !isNaN(item.sharpnessLevelsBar[0])) {
+				const total = item.sharpnessLevelsBar.reduce((a, b) => a + b, 0);
+				if (total != 40 && total != 45 && !item.sharpnessDataNeeded) {
+					console.log(item.id, item.name, total);
+				}
+			}
+			*/
 		});
 
 		return items;
