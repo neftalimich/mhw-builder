@@ -1,0 +1,89 @@
+<div class="container">
+	<div class="search-container">
+		<input #searchBox (keyup)="search(searchBox.value)" placeholder="Search names, skills, monster" />
+
+		<button class="clear-button" (click)="resetSearchResults()">
+			<i class="fas fa-times"></i>
+		</button>
+		<button id="dummy"></button>
+	</div>
+
+	<virtual-scroll id="items-list" #itemList class="scroll-container" *ngIf="items" [items]="filteredItems" (update)="onItemListUpdate($event)" [childHeight]="134">
+		<div *ngFor="let item of virtualItems" class="scroll-item-container" (click)="selectItem(item)">
+
+			<div class="name-container">
+				<div class="name">
+					{{item.name}}
+				</div>
+				<div class="slots">
+					<div *ngIf="item.slots[0]?.level">
+						<img [src]="'assets/images/slot-' + item?.slots[0]?.level + '-icon.png'">
+					</div>
+					<div *ngIf="item.slots[1]?.level">
+						<img [src]="'assets/images/slot-' + item?.slots[1]?.level + '-icon.png'">
+					</div>
+					<div *ngIf="item.slots[2]?.level">
+						<img [src]="'assets/images/slot-' + item?.slots[2]?.level + '-icon.png'">
+					</div>
+				</div>
+				<div class="type">
+					<span class="typeName">{{item.itemType}}</span>
+					<img [src]="'assets/images/armor/' + (item.itemType | lowercase) + '-icon.png'" />
+				</div>
+				<div class="rarity" *ngIf="item.rarity">
+					<span class="r1">Rarity </span><span class="r2">R</span>{{item.rarity}}
+				</div>
+			</div>
+
+			<div class="stats-container">
+				<div class="stat-container">
+					<div class="icon-container">
+						<img src="assets/images/defense-icon.png">
+					</div>
+					<div class="stat-value">{{item.baseDefense}} ➝ {{item.maxDefense}} ➟ {{item.augmentedDefense}}</div>
+				</div>
+				<div class="stat-container">
+					<div class="icon-container">
+						<img src="assets/images/fire-icon.png">
+					</div>
+					<div class="stat-value">{{item.fireResist}}</div>
+				</div>
+				<div class="stat-container">
+					<div class="icon-container">
+						<img src="assets/images/water-icon.png">
+					</div>
+					<div class="stat-value">{{item.waterResist}}</div>
+				</div>
+				<div class="stat-container">
+					<div class="icon-container">
+						<img src="assets/images/ice-icon.png">
+					</div>
+					<div class="stat-value">{{item.iceResist}}</div>
+				</div>
+				<div class="stat-container">
+					<div class="icon-container">
+						<img src="assets/images/thunder-icon.png">
+					</div>
+					<div class="stat-value">{{item.thunderResist}}</div>
+				</div>
+				<div class="stat-container">
+					<div class="icon-container">
+						<img src="assets/images/dragon-icon.png">
+					</div>
+					<div class="stat-value">{{item.dragonResist}}</div>
+				</div>
+			</div>
+
+			<div class="skills-container">
+				<div class="skill-container" *ngFor="let skill of dataService.getSkills(item.skills)">
+					<div class="count">
+						{{getSkillCount(item, skill)}}
+					</div>
+					<div class="name">
+						{{skill.name}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</virtual-scroll>
+</div>

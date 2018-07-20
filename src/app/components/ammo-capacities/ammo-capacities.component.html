@@ -1,0 +1,138 @@
+<div class="container">
+	<table *ngIf="ammoCapacities?.deviation != deviationTypes.NA">
+		<thead>
+			<tr>
+				<th style="text-align:left;">Deviation {{ammoCapacities.deviation}} / {{ammoCapacities.specialAmmo}}</th>
+				<th>Lv 1</th>
+				<th>Lv 2</th>
+				<th>Lv 3</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngIf="!allZero(ammoCapacities.normal)">
+				<td><img src="assets/images/ammo/ammo-normal-icon.png" /> Normal</td>
+				<td>{{ammoCapacities.normal[0]}}</td>
+				<td>{{ammoCapacities.normal[1]}}</td>
+				<td>{{ammoCapacities.normal[2]}}</td>
+			</tr>
+			<tr *ngIf="!allZero(ammoCapacities.piercing)">
+				<td><img src="assets/images/ammo/ammo-piercing-icon.png" /> Piercing</td>
+				<td>{{ammoCapacities.piercing[0]}}</td>
+				<td>{{ammoCapacities.piercing[1]}}</td>
+				<td>{{ammoCapacities.piercing[2]}}</td>
+			</tr>
+			<tr *ngIf="!allZero(ammoCapacities.spread)">
+				<td><img src="assets/images/ammo/ammo-spread-icon.png" /> Spread</td>
+				<td>{{ammoCapacities.spread[0]}}</td>
+				<td>{{ammoCapacities.spread[1]}}</td>
+				<td>{{ammoCapacities.spread[2]}}</td>
+			</tr>
+			<tr *ngIf="!allZero(ammoCapacities.sticky)">
+				<td><img src="assets/images/ammo/ammo-sticky-icon.png" /> Sticky</td>
+				<td>{{ammoCapacities.sticky[0]}}</td>
+				<td>{{ammoCapacities.sticky[1]}}</td>
+				<td>{{ammoCapacities.sticky[2]}}</td>
+			</tr>
+			<tr *ngIf="!allZero(ammoCapacities.cluster)">
+				<td><img src="assets/images/ammo/ammo-cluster-icon.png" /> Cluster</td>
+				<td>{{ammoCapacities.cluster[0]}}</td>
+				<td>{{ammoCapacities.cluster[1]}}</td>
+				<td>{{ammoCapacities.cluster[2]}}</td>
+			</tr>
+			<tr *ngIf="!allZero(ammoCapacities.recover)">
+				<td><img src="assets/images/ammo/ammo-recover-icon.png" /> Recover</td>
+				<td>{{ammoCapacities.recover[0]}}</td>
+				<td>{{ammoCapacities.recover[1]}}</td>
+				<td>-</td>
+			</tr>
+			<tr *ngIf="!allZero(ammoCapacities.poison)">
+				<td><img src="assets/images/ammo/ammo-poison-icon.png" /> Poison</td>
+				<td>{{ammoCapacities.poison[0]}}</td>
+				<td>{{ammoCapacities.poison[1]}}</td>
+				<td>-</td>
+			</tr>
+			<tr *ngIf="!allZero(ammoCapacities.paralysis)">
+				<td><img src="assets/images/ammo/ammo-paralysis-icon.png" /> Paralysis</td>
+				<td>{{ammoCapacities.paralysis[0]}}</td>
+				<td>{{ammoCapacities.paralysis[1]}}</td>
+				<td>-</td>
+			</tr>
+			<tr *ngIf="!allZero(ammoCapacities.sleep)">
+				<td><img src="assets/images/ammo/ammo-sleep-icon.png" /> Sleep</td>
+				<td>{{ammoCapacities.sleep[0]}}</td>
+				<td>{{ammoCapacities.sleep[1]}}</td>
+				<td>-</td>
+			</tr>
+			<tr *ngIf="!allZero(ammoCapacities.exhaust)">
+				<td><img src="assets/images/ammo/ammo-exhaust-icon.png" /> Exhaust</td>
+				<td>{{ammoCapacities.exhaust[0]}}</td>
+				<td>{{ammoCapacities.exhaust[1]}}</td>
+				<td>-</td>
+			</tr>
+			<tr *ngIf="ammoCapacities.flaming" style="border-top-style:solid;">
+				<td><img src="assets/images/ammo/ammo-flaming-icon.png" /> Flaming</td>
+				<td>{{ammoCapacities.flaming}}</td>
+				<td></td>
+				<td>-</td>
+			</tr>
+			<tr *ngIf="ammoCapacities.water">
+				<td><img src="assets/images/ammo/ammo-water-icon.png" /> Water</td>
+				<td>{{ammoCapacities.water}}</td>
+				<td>-</td>
+				<td>-</td>
+			</tr>
+			<tr *ngIf="ammoCapacities.freeze">
+				<td><img src="assets/images/ammo/ammo-freeze-icon.png" /> Freeze</td>
+				<td>{{ammoCapacities.freeze}}</td>
+				<td>-</td>
+				<td>-</td>
+			</tr>
+			<tr *ngIf="ammoCapacities.thunder">
+				<td><img src="assets/images/ammo/ammo-thunder-icon.png" /> Thunder</td>
+				<td>{{ammoCapacities.thunder}}</td>
+				<td>-</td>
+				<td>-</td>
+			</tr>
+			<tr *ngIf="ammoCapacities.dragon">
+				<td><img src="assets/images/ammo/ammo-dragon-icon.png" /> Dragon</td>
+				<td>{{ammoCapacities.dragon}}</td>
+				<td>-</td>
+				<td>-</td>
+			</tr>
+			<tr *ngIf="ammoCapacities.slicing">
+				<td><img src="assets/images/ammo/ammo-slicing-icon.png" /> Slicing</td>
+				<td>{{ammoCapacities.slicing}}</td>
+				<td>-</td>
+				<td>-</td>
+			</tr>
+			<tr *ngIf="ammoCapacities.wyvern">
+				<td><img src="assets/images/ammo/ammo-wyvern-icon.png" /> Wyvern</td>
+				<td>{{ammoCapacities.wyvern}}</td>
+				<td>-</td>
+				<td>-</td>
+			</tr>
+			<tr *ngIf="ammoCapacities.demon">
+				<td><img src="assets/images/ammo/ammo-demon-icon.png" /> Demon</td>
+				<td>{{ammoCapacities.demon}}</td>
+				<td>-</td>
+				<td>-</td>
+			</tr>
+			<tr *ngIf="ammoCapacities.armor">
+				<td><img src="assets/images/ammo/ammo-armor-icon.png" /> Armor</td>
+				<td>{{ammoCapacities.armor}}</td>
+				<td>-</td>
+				<td>-</td>
+			</tr>
+			<tr *ngIf="ammoCapacities.tranq">
+				<td><img src="assets/images/ammo/ammo-tranq-icon.png" /> Tranq</td>
+				<td>{{ammoCapacities.tranq}}</td>
+				<td>-</td>
+				<td>-</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div class="no-data-warning" *ngIf="ammoCapacities?.deviation == deviationTypes.NA">
+		Ammo capacity data is missing!
+	</div>
+</div>

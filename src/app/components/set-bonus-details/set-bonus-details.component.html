@@ -1,0 +1,35 @@
+<div class="container" (click)="clearSetBonus()">
+	<h3>{{equippedSetBonus?.name}}<span class="close-btn-sm" style="visibility:hidden;"><i class="fa fa-times"></i></span></h3>
+	<hr>
+	<ul>
+		<li *ngFor="let level of equippedSetBonus?.details; let i = index" [style.color]="getLevelColor(equippedSetBonus?.equippedCount >= level.requiredCount)">
+			<div class="level">{{level.requiredCount}} Parts</div>
+			<div class="level-description">{{level.skill.name}}</div>
+		</li>
+	</ul>
+	<hr />
+	<table class="skill-part-table">
+		<tr>
+			<td>
+				<img src="assets/images/armor/head-icon.png" [hidden]="!(equippedSetBonus?.headCount == 0)" class="armor-icon info-opaque">
+				<img src="assets/images/armor/head-icon-gold.png" [hidden]="!(equippedSetBonus?.headCount > 0)" class="armor-icon">
+			</td>
+			<td>
+				<img src="assets/images/armor/chest-icon.png" [hidden]="!(equippedSetBonus?.chestCount == 0)" class="armor-icon info-opaque">
+				<img src="assets/images/armor/chest-icon-gold.png" [hidden]="!(equippedSetBonus?.chestCount > 0)" class="armor-icon">
+			</td>
+			<td>
+				<img src="assets/images/armor/hands-icon.png" [hidden]="!(equippedSetBonus?.handsCount == 0)" class="armor-icon info-opaque">
+				<img src="assets/images/armor/hands-icon-gold.png" [hidden]="!(equippedSetBonus?.handsCount > 0)" class="armor-icon">
+			</td>
+			<td>
+				<img src="assets/images/armor/legs-icon.png" [hidden]="!(equippedSetBonus?.legsCount == 0)" class="armor-icon info-opaque">
+				<img src="assets/images/armor/legs-icon-gold.png" [hidden]="!(equippedSetBonus?.legsCount > 0)" class="armor-icon">
+			</td>
+			<td>
+				<img src="assets/images/armor/feet-icon.png" [hidden]="!(equippedSetBonus?.feetCount == 0)" class="armor-icon info-opaque">
+				<img src="assets/images/armor/feet-icon-gold.png" [hidden]="!(equippedSetBonus?.feetCount > 0)" class="armor-icon">
+			</td>
+		</tr>
+	</table>
+</div>

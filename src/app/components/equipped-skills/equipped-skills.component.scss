@@ -1,0 +1,31 @@
+@import "~sass/common";
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	list-style: none;
+	padding: 4px 4px;
+	cursor: default;
+	display: grid;
+	grid-template-columns: min-content auto min-content;
+	grid-gap: 4px;
+
+	.detail-icon {
+		grid-column: 1;
+		margin-right: 4px;	
+	}
+
+	.name {
+		grid-column: 2;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	
+	.value {
+		grid-column: 3;
+	}
+}

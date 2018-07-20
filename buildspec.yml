@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+    install:
+        commands:
+            - npm install
+            - npm install -g @angular/cli
+    build:
+        commands:
+            - ng build --prod
+    post_build:
+         commands:
+            - aws s3 cp dist s3://$S3_BUCKET --recursive
+artifacts:
+    files:
+        - '**/*'
+    base-directory: 'dist*'
+    discard-paths: yes

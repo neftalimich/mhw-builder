@@ -1,0 +1,58 @@
+[
+	{
+		"type": "GreatSword",
+		"attackModifier": 4.8
+	},
+	{
+		"type": "LongSword",
+		"attackModifier": 3.3
+	},
+	{
+		"type": "SwordAndShield",
+		"attackModifier": 1.4
+	},
+	{
+		"type": "DualBlades",
+		"attackModifier": 1.4
+	},
+	{
+		"type": "Hammer",
+		"attackModifier": 5.2
+	},
+	{
+		"type": "HuntingHorn",
+		"attackModifier": 4.2
+	},
+	{
+		"type": "Lance",
+		"attackModifier": 2.3
+	},
+	{
+		"type": "Gunlance",
+		"attackModifier": 2.3
+	},
+	{
+		"type": "SwitchAxe",
+		"attackModifier": 3.5
+	},
+	{
+		"type": "ChargeBlade",
+		"attackModifier": 3.6
+	},
+	{
+		"type": "InsectGlaive",
+		"attackModifier": 3.1
+	},
+	{
+		"type": "LightBowgun",
+		"attackModifier": 1.3
+	},
+	{
+		"type": "HeavyBowgun",
+		"attackModifier": 1.5
+	},
+	{
+		"type": "Bow",
+		"attackModifier": 1.2
+	}
+]

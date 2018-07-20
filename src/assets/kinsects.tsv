@@ -1,0 +1,13 @@
+id	rarity	name	attackType	dustEffect	power	speed	heal
+1	7	Monarch Alucanid III	Sever	Poison	14	7	11
+2	7	Empresswing III	Sever	Blast	15	5	10
+3	7	Cancadaman III	Sever	Paralysis	4	12	15
+4	7	Fiddlebrix III	Sever	Blast	11	4	15
+5	7	Grancathar III	Sever	Heal	4	15	11
+6	7	Pseudocath III	Sever	Blast	12	15	3
+7	7	Carnage Beetle III	Blunt	Poison		13	11	4
+8	7	Bonnetfille III	Blunt	Blast	14	6	8
+9	7	Ladypavise III	Blunt	Paralysis		9	6	15
+10	7	Arkmaiden III	Blunt	Blast	7	6	15
+11	7	Bullshroud III	Blunt	Heal	5	15	7
+12	7	Whispervesp III	Blunt	Blast	3	15	11

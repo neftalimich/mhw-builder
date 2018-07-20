@@ -1,0 +1,28 @@
+<div class="container">
+	<table>
+		<thead>
+			<tr>
+				<td>
+					Notes: 
+					<span *ngFor="let note of weaponMelodies.notes; let i = index">
+						<img [src]="'assets/images/notes/' + note + '-icon.png'" class="note">
+					</span>
+				</td>
+				<td></td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let melody of weaponMelodies.melodies; let i = index">
+				<td>
+					{{weaponMelodies.melodyEffect[i].name}}
+				</td>
+				<td>
+					<span *ngFor="let note of melody">
+						<img class="note" [src]="'assets/images/notes/' + weaponMelodies.notes[note-1] + '-icon.png'">
+						&nbsp;
+					</span> 
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

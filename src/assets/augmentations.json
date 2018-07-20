@@ -1,0 +1,115 @@
+[
+	{
+		"id": 1,
+		"name": "Attack Increase",
+		"description": "Increases attack power. Stacks with other upgrades.",
+		"levels": [
+			{
+				"description": "Attack +5",
+				"passiveAttack": 5
+			},
+			{
+				"description": "Attack +10",
+				"passiveAttack": 10
+			},
+			{
+				"description": "Attack +15",
+				"passiveAttack": 15
+			}
+		]
+	},
+	{
+		"id": 2,
+		"name": "Affinity Increase",
+		"description": "Increases affinity. Stacks with other upgrades.",
+		"levels": [
+			{
+				"description": "Affinity +10%",
+				"passiveAffinity": 10
+			},
+			{
+				"description": "Affinity +15%",
+				"passiveAffinity": 15
+			},
+			{
+				"description": "Affinity +20%",
+				"passiveAffinity": 20
+			}
+		]
+	},
+	{
+		"id": 3,
+		"name": "Defense Increase",
+		"description": "Increases defense and adds a chance to reduce damage taken each time you receive damage. Defense stacks with other upgrades, Divine Blessing does not.",
+		"levels": [
+			{
+				"description": "Defense +10. Grants Divine Blessing Lv 1.",
+				"passiveDefense": 10,
+				"skills": [
+					{
+						"id": "divineBlessing",
+						"level": 1
+					}
+				]
+			},
+			{
+				"description": "Defense +20. Grants Divine Blessing Lv 2.",
+				"passiveDefense": 20,
+				"skills": [
+					{
+						"id": "divineBlessing",
+						"level": 2
+					}
+				]
+			},
+			{
+				"description": "Defense +30. Grants Divine Blessing Lv 3.",
+				"passiveDefense": 30,
+				"skills": [
+					{
+						"id": "divineBlessing",
+						"level": 3
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": 4,
+		"name": "Slot Upgrade",
+		"description": "Adds an extra slot. Stack with other upgrades to increase the slot's level.",
+		"levels": [
+			{
+				"description": "Adds a Lv 1 slot",
+				"slotLevel": 1
+			},
+			{
+				"description": "Adds a Lv 2 slot",
+				"slotLevel": 2
+			},
+			{
+				"description": "Adds a Lv 3 slot",
+				"slotLevel": 3
+			}
+		]
+	},
+	{
+		"id": 5,
+		"name": "Health Regen",
+		"description": "Regain health as you land attacks. Stack with other upgrades to increase the amount of health regained.",
+		"levels": [
+			{
+				"description": "Heal on hit +10%",
+				"healOnHitPercent": 10
+			},
+			{
+				"description": "Heal on hit +15%",
+				"healOnHitPercent": 15
+			},
+			{
+				"description": "Heal on hit +20%",
+				"healOnHitPercent": 20
+			}
+		]
+	}
+]

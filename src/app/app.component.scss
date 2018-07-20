@@ -1,0 +1,133 @@
+@import "~sass/variables";
+
+$tabsHeight: 36px;
+
+.container {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 16px;
+
+	margin: $appMargin;
+
+	overflow: hidden;
+}
+
+.tab-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	border-bottom: 4px #525252 solid;
+
+	display: none;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 6px;
+
+	.tab {
+		background-color: #323232;
+		border-radius: 3px 3px 0 0;
+		text-align: center;
+		line-height: $tabsHeight;
+		cursor: pointer;
+	}
+
+	.tab.selected {
+		background-color: #525252;
+	}
+}
+	.tab2 {
+		background-color: #323232;
+		border-radius: 3px 3px 3px 3px;
+		text-align: center;
+		line-height: 25px;
+		cursor: pointer;
+	}
+
+
+	.tab2.selected {
+		background-color: #525252;
+		color:white;
+	}
+
+.equipment-container {
+	grid-column: 1 / 3;
+	grid-row: 1;
+
+	position: absolute;
+	top: 0;
+	bottom: 12px;
+	right: 0;
+	left: 0;
+
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.stats-container {
+	grid-column: 3;
+	grid-row: 1;
+
+	position: absolute;
+	top: 0;
+	bottom: 12px;
+	right: 0;
+	left: 0;
+
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.signature {
+	font-size: 12px;
+	position: fixed;
+	bottom: 2px;
+	left: 10px;
+	color:#969696;
+
+	a, a:visited {
+		color:#969696;
+		padding: 2px;
+	}
+
+	button {
+		text-decoration: underline;
+		padding-left: 0;
+	}
+}
+
+.version-info {
+	font-size: 12px;
+	position: fixed;
+	bottom: 2px;
+	right: 8px;
+	color:#969696;
+
+	a, a:visited {
+		color:#969696;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.tab-container {
+		height: $tabsHeight;
+		display: grid;
+	}
+
+	.equipment-container {
+		top: $tabsHeight + 0;
+		grid-column: 1 / 4;
+		margin-top: 8px;
+	}
+
+	.stats-container {
+		top: $tabsHeight + 0;
+		grid-column: 1 / 4;
+		margin-top: 8px;
+	}
+}

@@ -1,0 +1,12 @@
+<div class="container">
+	<h3>{{augmentation?.name}}</h3>
+	<hr>
+	<div>{{augmentation?.description}}</div>
+	<br />
+	<ul>
+		<li *ngFor="let level of augmentation?.levels; let i = index">
+			<div class="level">Lv {{i + 1}}</div>
+			<div class="level-description">{{level.description}}</div>
+		</li>
+	</ul>
+</div>

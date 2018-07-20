@@ -1,0 +1,143 @@
+
+@import './variables';
+
+html, body {
+	height: 100%;
+	overflow: hidden;
+	margin: 0;
+}
+
+body {
+	background: rgb(30,30,30);
+	color: white;
+	// font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Roboto', sans-serif;
+	height: 100%;
+	overflow: auto;
+}
+
+h1, h2, h3, h4, h5 {
+	margin: 0;
+}
+
+button {
+	background: none;
+	border: none;
+	outline: none;
+	color: rgb(150, 150, 150);
+	cursor: pointer;
+}
+
+button:hover {
+	color: rgb(255, 255, 255);
+}
+
+a {
+	color: $blue;
+}
+
+a:visited {
+	color: $blue;
+}
+
+.loading-indicator {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	width: 200px;
+	height: 100px;
+	text-align: center;
+}
+
+h4 {
+	span > .number {
+		float: right;
+		cursor: pointer;
+	}
+}
+
+@media (max-width:576px) {
+	.close-btn-sm {
+		visibility: visible !important;
+		float: right;
+	}
+}
+
+.sharp-box {
+	height: 12px;
+}
+
+.sharp-box span {
+	display: inline-block;
+	height: 100%;
+}
+
+.sharp-bg-0 {
+	background: #bc0b43;
+	color: #bc0b43;
+}
+
+.sharp-bg-1 {
+	background: #f45600;
+	color: #f45600;
+}
+
+.sharp-bg-2 {
+	background: #ffc836;
+	color: #ffc836;
+}
+
+.sharp-bg-3 {
+	background: #4de200;
+	color: #4de200;
+}
+
+.sharp-bg-4 {
+	background: #647FF6;
+	color: #647FF6;
+}
+
+.sharp-bg-5 {
+	background: #fff;
+	color: #fff;
+}
+
+.sharp-bg-7 {
+	background: #666;
+	color: #666;
+}
+
+.sharp-0 {
+	color: #bc0b43;
+}
+
+.sharp-1 {
+	color: #f45600;
+}
+
+.sharp-2 {
+	color: #ffc836;
+}
+
+.sharp-3 {
+	color: #4de200;
+}
+
+.sharp-4 {
+	color: #647FF6;
+}
+
+.sharp-5 {
+	color: #fff;
+}
+
+.sharp-6 {
+	color: #666;
+}
+
+.sharp-8 {
+	color: #bbb;
+}

@@ -1,0 +1,48 @@
+<div class="container">
+	<div class="item-container"
+		 (pointerenter)="setTooltipItem($event)"
+		 (pointerleave)="clearTooltipItem()"
+		 [class.selected]="selected">
+
+		<!-- <div class="slot-name">{{slotName}}</div> -->
+		<div class="slot-icon" (click)="equipmentSlotClicked()">
+			<img [src]="getItemIconName()">
+		</div>
+		<div class="selected-item" (click)="equipmentSlotClicked()">{{item?.name}}</div>
+
+		<div *ngIf="item?.levels" class="levels-container">
+			<button class="level-down-button" (click)="levelDownClicked($event)">
+				<i class="fas fa-minus"></i>
+			</button>
+
+			<div class="level">
+				{{item.equippedLevel}}
+			</div>
+
+			<button class="level-up-button" (click)="levelUpClicked($event)">
+				<i class="fas fa-plus"></i>
+			</button>
+		</div>
+		<button class="info-button" style="visibility:hidden;" (click)="showOnClickTooltipItem()">
+			<i class="fas fa-info-circle"></i>
+		</button>
+		<button class="clear-button" (click)="equipmentClearClicked($event)">
+			<i class="fas fa-times"></i>
+		</button>
+	</div>
+
+	<div class="augmentation-container" *ngIf="augmentations && augmentations.length">
+		<mhw-builder-augmentation-slot
+			*ngFor="let aug of augmentations">
+		</mhw-builder-augmentation-slot>
+	</div>
+
+	<div class="decoration-container" *ngIf="item?.slots && item?.slots.length">
+		<mhw-builder-decoration-slot
+			*ngFor="let slot of item?.slots"
+			[level]="slot.level"
+			[itemId]="item.id"
+			[itemType]="item.itemType">
+		</mhw-builder-decoration-slot>
+	</div>
+</div>

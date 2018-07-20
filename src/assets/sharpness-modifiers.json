@@ -1,0 +1,62 @@
+[
+	{
+		"damageType": "Physical",
+		"sharpnessType": "Red",
+		"value": 0.5
+	},
+	{
+		"damageType": "Physical",
+		"sharpnessType": "Orange",
+		"value": 0.75
+	},
+	{
+		"damageType": "Physical",
+		"sharpnessType": "Yellow",
+		"value": 1
+	},
+	{
+		"damageType": "Physical",
+		"sharpnessType": "Green",
+		"value": 1.05
+	},
+	{
+		"damageType": "Physical",
+		"sharpnessType": "Blue",
+		"value": 1.2
+	},
+	{
+		"damageType": "Physical",
+		"sharpnessType": "White",
+		"value": 1.32
+	},
+	{
+		"damageType": "Elemental",
+		"sharpnessType": "Red",
+		"value": 0.25
+	},
+	{
+		"damageType": "Elemental",
+		"sharpnessType": "Orange",
+		"value": 0.5
+	},
+	{
+		"damageType": "Elemental",
+		"sharpnessType": "Yellow",
+		"value": 0.75
+	},
+	{
+		"damageType": "Elemental",
+		"sharpnessType": "Green",
+		"value": 1
+	},
+	{
+		"damageType": "Elemental",
+		"sharpnessType": "Blue",
+		"value": 1.0625
+	},
+	{
+		"damageType": "Elemental",
+		"sharpnessType": "White",
+		"value": 1.125
+	}
+]

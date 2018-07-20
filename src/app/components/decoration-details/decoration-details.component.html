@@ -1,0 +1,26 @@
+<div class="container">
+	<h3>{{decoration?.name}}</h3>
+	<hr>
+	<ul class="striped-light">
+		<li>
+			<span class="name">Rarity</span>
+			<span class="value">{{decoration?.rarity}}</span>
+		</li>
+	</ul>
+	<div *ngIf="skills?.length" class="skills-container">
+		<ul>
+			<div *ngFor="let skill of skills">
+				<div *ngIf="skill.levels">
+					<li>
+						<div class="skill-header">
+							<h4 class="skill-name">{{skill.name}}</h4>
+							<h4 class="skill-level">{{getSkillCount(skill)}}</h4>
+						</div>
+						<hr>
+						<span>{{skill.description}}</span>
+					</li>
+				</div>
+			</div>
+		</ul>
+	</div>
+</div>

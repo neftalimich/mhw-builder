@@ -1,0 +1,28 @@
+@import "~sass/common";
+
+$borderStyle: 1px dashed rgb(88, 88, 88);
+
+table {
+	width: 100%;
+	font-size: 12px;
+
+	thead th,
+	tbody tr:nth-last-child(n + 2) td {
+		border-bottom: $borderStyle;
+	}
+
+	thead th:nth-child(n + 2),
+	tbody td:nth-child(n + 2) {
+		text-align: center;
+		border-left: $borderStyle;
+	}
+
+	tbody > tr > td > img {
+		height: 12px;
+	}
+}
+
+.no-data-warning {
+	color: $yellow;
+	text-align: center;
+}

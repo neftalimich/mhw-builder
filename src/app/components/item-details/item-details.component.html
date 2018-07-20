@@ -1,0 +1,52 @@
+<div class="container" (click)="clearTooltipItem()">
+	<h3>{{item?.name}}<span class="close-btn-sm" style="visibility:hidden;"><i class="fa fa-times"></i></span></h3>
+	<hr>
+	<ul class="striped-light">
+		<li *ngFor="let stat of stats">
+			<span class="name" [ngStyle]="{ color: stat.color }">{{stat.name}}</span>
+			<span class="value" [ngStyle]="{ color: stat.color }">{{stat.value}}</span>
+		</li>
+	</ul>
+
+	<div class="slots-container">
+		<ng-template [ngIf]="item?.slots">
+			<div *ngIf="item?.slots[0]?.level">
+				<img [src]="'assets/images/slot-' + item?.slots[0]?.level + '-icon.png'">
+			</div>
+			<div *ngIf="item?.slots[1]?.level">
+				<img [src]="'assets/images/slot-' + item?.slots[1]?.level + '-icon.png'">
+			</div>
+			<div *ngIf="item?.slots[2]?.level">
+				<img [src]="'assets/images/slot-' + item?.slots[2]?.level + '-icon.png'">
+			</div>
+		</ng-template>
+	</div>
+
+	<div *ngIf="skills?.length" class="skills-container">
+		<ul>
+			<div *ngFor="let skill of skills">
+				<div *ngIf="skill.levels">
+					<li>
+						<div class="skill-header">
+							<h4 class="skill-name">{{skill.name}}</h4>
+							<h4 class="skill-level">{{getSkillCount(skill)}}</h4>
+						</div>
+						<hr>
+						<span>{{skill.description}}</span>
+					</li>
+				</div>
+
+				<!-- <div *ngIf="skill.setLevels">
+					<li *ngFor="let setLevel of skill.setLevels">
+						<div class="skill-header">
+							<h4 class="skill-name">{{skill.name}}</h4>
+							<h4 class="skill-level">{{setLevel.level}} piece</h4>
+						</div>
+						<hr>
+						<span>{{setLevel.description}}</span>
+					</li>
+				</div> -->
+			</div>
+		</ul>
+	</div>
+</div>

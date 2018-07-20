@@ -1,0 +1,58 @@
+
+@import "~sass/variables";
+@import "~sass/common";
+
+h3, h4, h5 {
+	margin: 0;
+}
+
+.template {
+	margin: 20px 10px;
+	text-align: center;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+
+	li {
+		.value {
+			float: right;
+		}
+	}
+}
+
+ul.info {
+	margin: 10px 4px 20px 4px;
+	text-align: center;
+	color: $yellow;
+}
+
+::ng-deep .green {
+	color: $green;
+}
+
+::ng-deep .blue {
+	color: $blue;
+}
+
+::ng-deep .yellow {
+	color: $yellow;
+}
+
+::ng-deep .orange {
+	color: $orange;
+}
+
+::ng-deep .red {
+	color: $red;
+}
+
+::ng-deep .purple {
+	color: $purple;
+}
+
+::ng-deep .kakhi {
+	color: $kakhi;
+}

@@ -1,0 +1,68 @@
+<div class="container" (click)="clearSkill()">
+	<h3>{{skill?.name}}<span class="close-btn-sm" style="visibility:hidden;"><i class="fa fa-times"></i></span></h3>
+	<hr>
+	<div [hidden]="skill?.levels.length == 1">{{skill?.description}}</div>
+	<br [hidden]="skill?.levels.length == 1"/>
+	<ul>
+		<li *ngFor="let level of skill?.levels; let i = index" [style.color]="getLevelColor(i + 1)">
+			<div class="level">Lv {{i + 1}}</div>
+			<div class="level-description">{{level.description}}</div>
+		</li>
+	</ul>
+	<hr />
+	<table class="skill-part-table">
+		<tr>
+			<td [hidden]="equippedSkill.isSetBonus">
+				<img src="assets/images/armor/weapon-icon.png" [hidden]="!(equippedSkill.weaponCount == 0)" class="armor-icon info-opaque">
+				<img src="assets/images/armor/weapon-icon-gold.png" [hidden]="!(equippedSkill.weaponCount > 0)" class="armor-icon">
+			</td>
+			<td>
+				<img src="assets/images/armor/head-icon.png" [hidden]="!(equippedSkill.headCount == 0)" class="armor-icon info-opaque">
+				<img src="assets/images/armor/head-icon-gold.png" [hidden]="!(equippedSkill.headCount > 0)" class="armor-icon">
+			</td>
+			<td>
+				<img src="assets/images/armor/chest-icon.png" [hidden]="!(equippedSkill.chestCount == 0)" class="armor-icon info-opaque">
+				<img src="assets/images/armor/chest-icon-gold.png" [hidden]="!(equippedSkill.chestCount > 0)" class="armor-icon">
+			</td>
+			<td>
+				<img src="assets/images/armor/hands-icon.png" [hidden]="!(equippedSkill.handsCount == 0)" class="armor-icon info-opaque">
+				<img src="assets/images/armor/hands-icon-gold.png" [hidden]="!(equippedSkill.handsCount > 0)" class="armor-icon">
+			</td>
+			<td>
+				<img src="assets/images/armor/legs-icon.png" [hidden]="!(equippedSkill.legsCount == 0)" class="armor-icon info-opaque">
+				<img src="assets/images/armor/legs-icon-gold.png" [hidden]="!(equippedSkill.legsCount > 0)" class="armor-icon">
+			</td>
+			<td>
+				<img src="assets/images/armor/feet-icon.png" [hidden]="!(equippedSkill.feetCount == 0)" class="armor-icon info-opaque">
+				<img src="assets/images/armor/feet-icon-gold.png" [hidden]="!(equippedSkill.feetCount > 0)" class="armor-icon">
+			</td>
+			<td [hidden]="equippedSkill.isSetBonus">
+				<img src="assets/images/armor/charm-icon.png" [hidden]="!(equippedSkill.charmCount == 0)" class="armor-icon info-opaque">
+				<img src="assets/images/armor/charm-icon-gold.png" [hidden]="!(equippedSkill.charmCount > 0)" class="armor-icon">
+			</td>
+		</tr>
+		<tr [hidden]="equippedSkill.isSetBonus">
+			<td>
+				<span [ngClass]="{'info-opaque':equippedSkill.weaponCount==0}">{{equippedSkill.weaponCount}}</span>
+			</td>
+			<td>
+				<span [ngClass]="{'info-opaque':equippedSkill.headCount==0}">{{equippedSkill.headCount}}</span>
+			</td>
+			<td>
+				<span [ngClass]="{'info-opaque':equippedSkill.chestCount==0}">{{equippedSkill.chestCount}}</span>
+			</td>
+			<td>
+				<span [ngClass]="{'info-opaque':equippedSkill.handsCount==0}">{{equippedSkill.handsCount}}</span>
+			</td>
+			<td>
+				<span [ngClass]="{'info-opaque':equippedSkill.legsCount==0}">{{equippedSkill.legsCount}}</span>
+			</td>
+			<td>
+				<span [ngClass]="{'info-opaque':equippedSkill.feetCount==0}">{{equippedSkill.feetCount}}</span>
+			</td>
+			<td>
+				<span [ngClass]="{'info-opaque':equippedSkill.charmCount==0}">{{equippedSkill.charmCount}}</span>
+			</td>
+		</tr>
+	</table>
+</div>

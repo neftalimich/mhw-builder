@@ -1,0 +1,56 @@
+$itemHeight: 32px;
+
+.items-container {
+	overflow-y: auto;
+	border-radius: 3px;
+	flex-grow: 1;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		background-color: rgb(50,50,50);
+		border-radius: 3px;
+	
+		li {
+			cursor: pointer;
+			height: $itemHeight;
+			line-height: $itemHeight - 2;
+			list-style: none;
+			padding: 8px;
+			border-bottom: 1px black solid;
+		
+			.info-container {
+				display: -webkit-box;
+		
+				.name-container {
+					flex-grow: 1;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					min-width: 0;
+				}
+		
+				.stat-container {
+					flex-grow: 0;
+		
+					.attack-container {
+						display: inline-flex;
+		
+						div, img {
+							white-space: nowrap;
+							overflow: hidden;
+							text-overflow: ellipsis;
+							line-height: $itemHeight;
+							max-height: $itemHeight;
+						}
+					}
+				}
+			}
+		}
+		
+		li:hover {
+			background-color: #525252;
+			border-radius: 3px;
+		}
+	}
+}

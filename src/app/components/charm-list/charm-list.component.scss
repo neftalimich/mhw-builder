@@ -1,0 +1,119 @@
+@import "~sass/variables";
+@import "~sass/common";
+
+$searchHeight: 38px;
+
+.container {
+	display: grid;
+	grid-template-rows: $searchHeight max-content auto;
+	grid-row-gap: 4px;
+	height: 100%;
+}
+
+.search-container {
+	grid-row: 1;
+	background-color: rgb(50,50,50);
+	padding: 0 0 0 12px;	
+	border-radius: 3px;
+	display: grid;
+	grid-template-columns: auto min-content;
+	height: $searchHeight;
+
+	input {
+		background-color: rgb(50,50,50);
+		border: none;
+		color: white;
+		font-size: 16px;
+		height: $searchHeight - 2;
+	}
+
+	input:focus {
+		outline: none;
+	}
+
+	.clear-button {
+		padding-top: 4px;
+		height: $searchHeight;
+		width: 36px;
+		flex-grow: 0;
+	}
+}
+
+.scroll-container {
+	grid-row: 3;
+	overflow-y: auto;
+	border-radius: 3px;
+
+	.scroll-item-container {
+		min-height: 32px;
+		display: grid;
+		grid-template-rows: auto max-content;
+		grid-gap: 4px;
+		border-radius: 3px;
+		background-color: #323232;
+		margin-bottom: 4px;
+		padding: 4px 8px;
+		cursor: pointer;
+
+		.name-container {
+			padding-left: 4px;
+			line-height: 30px;
+			display: grid;
+			grid-template-columns: auto max-content;
+
+			.name {
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+
+			.levels {
+				height: 22px;
+				line-height: 22px;
+				background-color: #272727;
+				border-radius: 26px;
+				text-align: center;
+				font-size: 12px;
+				margin: 4px 0;
+				padding: 0 8px;
+			}
+		}
+
+		.skills-container {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 4px;
+			font-size: 12px;
+
+			.skill-container {
+				background-color: #272727;
+				border-radius: 3px;
+				display: grid;
+				grid-template-columns: min-content auto;
+
+				.count {
+					height: 26px;
+					line-height: 26px;
+					text-align: center;
+					padding: 0 8px;
+					font-weight: 900;
+				}
+
+				.name {
+					border-left: 1px solid #323232;
+					line-height: 26px;
+					text-align: center;
+					font-size: 12px;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					overflow: hidden;
+					padding: 0 8px;
+				}
+			}
+		}
+	}
+
+	.scroll-item-container:hover {
+		background-color: #525252;
+	}
+}

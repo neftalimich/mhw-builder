@@ -1,0 +1,52 @@
+@import "~sass/common";
+
+.container {
+	padding-top: 4px;
+}
+
+h4 {
+	margin: 0;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+.attack-stats > li {
+	grid-template-columns: 20px auto min-content;
+}
+
+.defense-stats > li {
+	grid-template-columns: min-content auto min-content;
+}
+
+.ammo-stats > div {
+	color: $yellow;
+	text-align: center;
+}
+
+li {
+	list-style: none;
+	padding:4px 4px;
+	cursor: default;
+	display: grid;
+	grid-gap: 4px;
+
+	.detail-icon {
+		grid-column: 1;
+		margin-right: 4px;	
+	}
+
+	.name {
+		grid-column: 2;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	
+	.value {
+		grid-column: 3;
+		white-space: nowrap;
+	}
+}

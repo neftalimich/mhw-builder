@@ -1,0 +1,17 @@
+<div class="container">
+	<div class="header-container">
+		<div class="title-container">
+			<span>{{title}}</span>
+		</div>
+
+		<button class="close-button" (click)="close()">
+			<i class="fas fa-times"></i>
+		</button>
+	</div>
+
+	<div class="content-container">
+		<ng-content></ng-content>
+	</div>
+
+	<div class="background" (click)="close()"></div>
+</div>

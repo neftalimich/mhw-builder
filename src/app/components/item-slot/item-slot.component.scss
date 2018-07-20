@@ -1,0 +1,99 @@
+$equipmentHeight: 40px;
+
+.container {
+    width: 100%;
+	margin-bottom: 16px;
+	display: grid;
+	grid-template-rows: $equipmentHeight + 16 auto auto;
+	grid-gap: 4px;
+}
+
+.item-container {
+	height: $equipmentHeight;
+	background-color: rgb(50,50,50);
+	cursor: pointer;
+	padding: 8px;
+	border-radius: 3px;
+	display: grid;
+	grid-template-columns: $equipmentHeight auto min-content min-content 28px;
+	// .slot-name {
+	// 	grid-column: 1;
+	// 	color: #b7b7b7;
+	// 	line-height: $equipmentHeight;
+	// }
+	.slot-icon {
+		grid-column: 1;
+		height: $equipmentHeight;
+		line-height: $equipmentHeight;
+
+		img {
+			height: $equipmentHeight * 0.65;
+			vertical-align: middle;
+		}
+	}
+
+	.selected-item {
+		grid-column: 2;
+		line-height: $equipmentHeight;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		font-size: 20px;
+	}
+
+	.levels-container {
+		grid-column: 3;
+		display: grid;
+		grid-template-columns: $equipmentHeight min-content $equipmentHeight;
+
+		.level-down-button {
+			grid-column: 1;
+			height: $equipmentHeight;
+		}
+
+		.level {
+			grid-column: 2;
+			line-height: $equipmentHeight;
+		}
+
+		.level-up-button {
+			grid-column: 3;
+			height: $equipmentHeight;
+		}
+	}
+
+	.info-button {
+		grid-column: 4;
+		height: $equipmentHeight;
+	}
+
+	.clear-button {
+		grid-column: 5;
+		height: $equipmentHeight;
+	}
+}
+
+.augmentation-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	// grid-template-columns: repeat(3, 1fr);
+	grid-gap: 4px;
+}
+
+.decoration-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 4px;
+}
+
+.selected {
+	background-color: #525252;
+}
+
+
+@media (max-width:576px) {
+	.info-button {
+		visibility: visible !important;
+		float: right;
+	}
+}

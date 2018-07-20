@@ -1,0 +1,8 @@
+<div class="container" (click)="clicked()" [class.selected]="selected" (pointerenter)="setTooltipAugmentation($event, augmentation)" (pointerleave)="clearTooltipAugmentation()">
+	<div class="slot-icon"><img [src]="'assets/images/augment-icon.png'"></div>
+	<div class="selected-augmentation">{{augmentation?.name}}</div>
+
+	<button class="clear-button" (click)="clearClicked($event)">
+		<i class="fas fa-times"></i>
+	</button>
+</div>

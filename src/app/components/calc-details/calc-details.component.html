@@ -1,0 +1,14 @@
+<div class="container" (click)="clearCalc()">
+	<h3>{{calc.name}}<span class="close-btn-sm" style="visibility:hidden"><i class="fa fa-times"></i></span></h3>
+	<hr>
+	<div class="template" [innerHTML]="detailTemplate"></div>
+	<ul class="info" *ngIf="calc.info">
+		<li *ngFor="let info of calc.info">{{info}}</li>
+	</ul>
+	<ul class="striped-light">
+		<li *ngFor="let item of calc.calculationVariables">
+			<span class="name">{{item.displayName}}</span>
+			<span class="value" [ngClass]="item.colorClass">{{item.value}}</span>
+		</li>
+	</ul>
+</div>
