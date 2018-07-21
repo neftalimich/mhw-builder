@@ -201,7 +201,7 @@ export class CalculationService {
 			this.sharpnessBar.empty = sharpnessEmpty;
 			this.sharpnessBar.widthModifier = 4;
 			this.sharpnessBar.levelsMissing = 6 - sharpnessLevels.length;
-			this.sharpnessBar.tooltipTemplate += ' | = <span class="sharp-8">' + (total * 10) + '</span>';
+			this.sharpnessBar.tooltipTemplate += ' | = <span class="sharp-8">' + ((total - sharpnessEmpty) * 10) + '</span>';
 		}
 	}
 
