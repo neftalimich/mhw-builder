@@ -36,13 +36,14 @@ export class StatService {
 		this.updateAugmentations(augmentations);
 
 		const weapon = _.find(items, item => item.weaponType != null);
-		this.calculateAttack(weapon);
 
 		if (weapon) {
 			if (weapon.weaponType === WeaponType.HeavyBowgun || weapon.weaponType === WeaponType.LightBowgun) {
 				this.stats.ammoCapacities = weapon.ammoCapacities;
 			}
 		}
+
+		this.calculateAttack(weapon);
 
 		this.statsUpdated$.next(this.stats);
 
@@ -256,18 +257,18 @@ export class StatService {
 		this.stats.elementCapped = this.stats.totalElementAttack > 0 && this.stats.totalElementAttack >= this.stats.elementCap;
 		this.stats.ailmentCapped = this.stats.totalAilmentAttack > 0 && this.stats.totalAilmentAttack >= this.stats.ailmentCap;
 
-		if (this.stats.elementlessBoostPercent > 0 && this.stats.totalElementAttack == 0 && this.stats.totalAilmentAttack == 0) {
+		if (this.checkElementless()) {
 			this.stats.totalAttack =
 				Math.round(
 					this.stats.attack * (1 + this.stats.elementlessBoostPercent / 100)
 					+ this.stats.passiveAttack * this.stats.weaponAttackModifier
 				);
-
 			this.stats.totalAttackPotential =
 				Math.round(
 					this.stats.attack * this.stats.effectivePhysicalSharpnessModifier * (1 + this.stats.elementlessBoostPercent / 100)
 					+ (this.stats.passiveAttack + this.stats.activeAttack) * this.stats.weaponAttackModifier
 				);
+			this.stats.elementless = true;
 		} else {
 			this.stats.totalAttack =
 				this.stats.attack + Math.round(this.stats.passiveAttack * this.stats.weaponAttackModifier);
@@ -276,6 +277,7 @@ export class StatService {
 					this.stats.attack * this.stats.effectivePhysicalSharpnessModifier
 					+ (this.stats.passiveAttack + this.stats.activeAttack) * this.stats.weaponAttackModifier
 				);
+			this.stats.elementless = false;
 		}
 
 		if (this.stats.elderseal && this.stats.eldersealLevelBoost) {
@@ -283,6 +285,25 @@ export class StatService {
 			const currentIndex = eldersealTypes.indexOf(this.stats.elderseal);
 			const newIndex = Math.min(currentIndex + this.stats.eldersealLevelBoost, eldersealTypes.length - 1);
 			this.stats.elderseal = eldersealTypes[newIndex];
+		}
+	}
+
+	private checkElementless() {
+		if (this.stats.elementlessBoostPercent > 0 && this.stats.totalElementAttack == 0 && this.stats.totalAilmentAttack == 0) {
+			if (this.stats.ammoCapacities) {
+				if (this.stats.ammoCapacities.flaming == 0
+					&& this.stats.ammoCapacities.water == 0
+					&& this.stats.ammoCapacities.freeze == 0
+					&& this.stats.ammoCapacities.thunder == 0
+					&& this.stats.ammoCapacities.dragon == 0) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+			return true;
+		} else {
+			return false;
 		}
 	}
 

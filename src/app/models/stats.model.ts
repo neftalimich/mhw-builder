@@ -26,6 +26,7 @@ export class StatsModel {
 	slidingAffinity: number;
 	passiveCriticalBoostPercent: number;
 
+	elementless: boolean;
 	elementlessBoostPercent: number;
 
 	element: ElementType;
@@ -103,6 +104,7 @@ export class StatsModel {
 		this.passiveAttack = 0;
 		this.activeAttack = 0;
 
+		this.elementless = false;
 		this.elementlessBoostPercent = 0;
 
 		this.sharpnessDataNeeded = false;

@@ -488,7 +488,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 596	LightBowgun	6	Erupter Gold Razer	208	0	20								false			kulve;taroth		
 224	LightBowgun	6	Frost Blitz II	247	0	0								false			legiana		
 597	LightBowgun	6	Glutton Gold Razer	221	0	20								false			kulve;taroth		
-601	LightBowgun	6	Gold Peirce Razer	195	10	20								false			kulve;taroth		
+601	LightBowgun	6	Gold Pierce Razer	195	10	20								false			kulve;taroth		
 602	LightBowgun	6	Gold Shot Razer	208	0	20								false			kulve;taroth		
 603	LightBowgun	6	Gold Spread Razer	195	10	20								false			kulve;taroth		
 221	LightBowgun	6	Jagras Fire	247	0	0								false		3;2	great;jagras		

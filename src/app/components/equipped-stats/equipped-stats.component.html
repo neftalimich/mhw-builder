@@ -12,7 +12,7 @@
 				<span class="name">{{calc.name}}</span>
 				<span class="value">{{calc.value}}</span>
 			</li>
-			<li *ngIf="sharpnessBar" (pointerenter)="showSharpDetails($event, sharpnessBar)" (pointerleave)="clearSharpDetails()" (click)="showOnClickSharpDetails(sharpnessBar)">
+			<li *ngIf="sharpnessBar && sharpnessBar.levels" (pointerenter)="showSharpDetails($event, sharpnessBar)" (pointerleave)="clearSharpDetails()" (click)="showOnClickSharpDetails(sharpnessBar)">
 				<span class="detail-icon">
 					<i class="far fa-question-circle"></i>
 				</span>

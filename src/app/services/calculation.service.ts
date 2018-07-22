@@ -103,7 +103,7 @@ export class CalculationService {
 			]
 		};
 
-		if (stats.elementlessBoostPercent > 0 && stats.totalAilmentAttack == 0 && stats.totalElementAttack == 0) {
+		if (stats.elementless) {
 			attackCalc.calculationVariables.push(this.getElementlessVariable(stats));
 			attackCalc.calculationTemplate = `{attack} × {elementlessBoostPercent} + {passiveAttack} × {weaponModifier} ≈ ${stats.totalAttack}`;
 		} else {
