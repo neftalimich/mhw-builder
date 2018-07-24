@@ -136,6 +136,7 @@ export class StatService {
 				if (level.passiveDragonResist) { this.stats.passiveDragonResist += level.passiveDragonResist; }
 
 				if (level.hiddenElementUp) { this.stats.elementAttackMultiplier = level.hiddenElementUp; }
+				if (level.ammoUp) { this.stats.ammoUp += level.ammoUp; }
 				if (level.eldersealLevelBoost) { this.stats.eldersealLevelBoost = level.eldersealLevelBoost; }
 			}
 		}

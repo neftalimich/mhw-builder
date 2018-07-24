@@ -97,6 +97,8 @@ export class StatsModel {
 	healOnHitPercent: number;
 
 	ammoCapacities: AmmoCapacitiesModel;
+	ammoCapacitiesUp: AmmoCapacitiesModel;
+	ammoUp: number;
 
 	constructor() {
 		this.totalAttack = 0;
@@ -189,5 +191,7 @@ export class StatsModel {
 		this.healOnHitPercent = 0;
 
 		this.ammoCapacities = null;
+		this.ammoCapacitiesUp = null;
+		this.ammoUp = 0;
 	}
 }

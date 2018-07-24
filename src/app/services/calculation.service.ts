@@ -20,6 +20,7 @@ export class CalculationService {
 	updateCalcs(stats: StatsModel) {
 		this.buildAttackCalcs(stats);
 		this.buildDefenseCalcs(stats);
+		this.buildAmmoCapacities(stats);
 		this.getSharpnessBar(stats);
 
 		this.attackCalcsUpdated$.next(this.attackCalcs);
@@ -34,7 +35,7 @@ export class CalculationService {
 			to set up some kind of model to display more detailed ammo information
 			on mouseover or something.
 		*/
-		this.ammoUpdated$.next(stats.ammoCapacities);
+		this.ammoUpdated$.next(stats.ammoCapacitiesUp);
 		this.sharpnessUpdated$.next(this.sharpnessBar);
 	}
 
@@ -660,5 +661,84 @@ export class CalculationService {
 			name: 'Dragon Resist',
 			value: stats.dragonResist + stats.passiveDragonResist
 		});
+	}
+
+	private buildAmmoCapacities(stats: StatsModel) {
+		if (stats.ammoCapacities) {
+			stats.ammoCapacitiesUp = JSON.parse(JSON.stringify(stats.ammoCapacities));
+			if (stats.ammoUp >= 1) {
+				stats.ammoCapacitiesUp.normal[0]
+					+= (stats.ammoCapacitiesUp.normal[0] >= 5 ? 2 : (stats.ammoCapacitiesUp.normal[0] > 0 ? 1 : 0));
+				stats.ammoCapacitiesUp.piercing[0]
+					+= (stats.ammoCapacitiesUp.piercing[0] >= 5 ? 2 : (stats.ammoCapacitiesUp.piercing[0] > 0 ? 1 : 0));
+				stats.ammoCapacitiesUp.spread[0]
+					+= (stats.ammoCapacitiesUp.spread[0] >= 5 ? 2 : (stats.ammoCapacitiesUp.spread[0] > 0 ? 1 : 0));
+				stats.ammoCapacitiesUp.sticky[0]
+					+= (stats.ammoCapacitiesUp.sticky[0] < 3 && stats.ammoCapacitiesUp.sticky[0] > 0 ? 1 : 0);
+				stats.ammoCapacitiesUp.cluster[0]
+					+= (stats.ammoCapacitiesUp.cluster[0] < 3 && stats.ammoCapacitiesUp.cluster[0] > 0 ? 1 : 0);
+			}
+			if (stats.ammoUp >= 2) {
+				stats.ammoCapacitiesUp.normal[1]
+					+= (stats.ammoCapacitiesUp.normal[1] >= 5 ? 2 : (stats.ammoCapacitiesUp.normal[1] > 0 ? 1 : 0));
+				stats.ammoCapacitiesUp.piercing[1]
+					+= (stats.ammoCapacitiesUp.piercing[1] >= 5 ? 2 : (stats.ammoCapacitiesUp.piercing[1] > 0 ? 1 : 0));
+				stats.ammoCapacitiesUp.spread[1]
+					+= (stats.ammoCapacitiesUp.spread[1] >= 5 ? 2 : (stats.ammoCapacitiesUp.spread[1] > 0 ? 1 : 0));
+				stats.ammoCapacitiesUp.sticky[1]
+					+= (stats.ammoCapacitiesUp.sticky[1] < 2 && stats.ammoCapacitiesUp.sticky[1] > 0 ? 1 : 0);
+				stats.ammoCapacitiesUp.cluster[1]
+					+= (stats.ammoCapacitiesUp.cluster[1] < 2 && stats.ammoCapacitiesUp.cluster[1] > 0 ? 1 : 0);
+
+				stats.ammoCapacitiesUp.recover[0]
+					+= (stats.ammoCapacitiesUp.recover[0] >= 5 ? 2 : (stats.ammoCapacitiesUp.recover[0] > 0 ? 1 : 0));
+				stats.ammoCapacitiesUp.poison[0]
+					+= (stats.ammoCapacitiesUp.poison[0] >= 5 ? 2 : (stats.ammoCapacitiesUp.poison[0] > 0 ? 1 : 0));
+				stats.ammoCapacitiesUp.paralysis[0]
+					+= (stats.ammoCapacitiesUp.paralysis[0] >= 5 ? 2 : (stats.ammoCapacitiesUp.paralysis[0] > 0 ? 1 : 0));
+				stats.ammoCapacitiesUp.sleep[0]
+					+= (stats.ammoCapacitiesUp.sleep[0] >= 5 ? 2 : (stats.ammoCapacitiesUp.sleep[0] > 0 ? 1 : 0));
+				stats.ammoCapacitiesUp.exhaust[0]
+					+= (stats.ammoCapacitiesUp.exhaust[0] >= 5 ? 2 : (stats.ammoCapacitiesUp.exhaust[0] > 0 ? 1 : 0));
+			}
+			if (stats.ammoUp >= 3) {
+				stats.ammoCapacitiesUp.normal[2]
+					+= (stats.ammoCapacitiesUp.normal[2] >= 5 ? 2 : (stats.ammoCapacitiesUp.normal[2] > 0 ? 1 : 0));
+				stats.ammoCapacitiesUp.piercing[2]
+					+= (stats.ammoCapacitiesUp.piercing[2] >= 5 ? 2 : (stats.ammoCapacitiesUp.piercing[2] > 0 ? 1 : 0));
+				stats.ammoCapacitiesUp.spread[2]
+					+= (stats.ammoCapacitiesUp.spread[2] >= 5 ? 2 : (stats.ammoCapacitiesUp.spread[2] > 0 ? 1 : 0));
+
+				stats.ammoCapacitiesUp.recover[1]
+					+= (stats.ammoCapacitiesUp.recover[1] >= 5 ? 2 : (stats.ammoCapacitiesUp.recover[1] > 0 ? 1 : 0));
+				stats.ammoCapacitiesUp.poison[1]
+					+= (stats.ammoCapacitiesUp.poison[1] >= 5 ? 2 : (stats.ammoCapacitiesUp.poison[1] > 0 ? 1 : 0));
+				stats.ammoCapacitiesUp.paralysis[1]
+					+= (stats.ammoCapacitiesUp.paralysis[1] >= 5 ? 2 : (stats.ammoCapacitiesUp.paralysis[1] > 0 ? 1 : 0));
+				stats.ammoCapacitiesUp.sleep[1]
+					+= (stats.ammoCapacitiesUp.sleep[1] >= 5 ? 2 : (stats.ammoCapacitiesUp.sleep[1] > 0 ? 1 : 0));
+				stats.ammoCapacitiesUp.exhaust[1]
+					+= (stats.ammoCapacitiesUp.exhaust[1] >= 5 ? 2 : (stats.ammoCapacitiesUp.exhaust[1] > 0 ? 1 : 0));
+
+				stats.ammoCapacitiesUp.flaming
+					+= (stats.ammoCapacitiesUp.flaming >= 5 ? 2 : (stats.ammoCapacitiesUp.flaming > 0 ? 1 : 0));
+				stats.ammoCapacitiesUp.water
+					+= (stats.ammoCapacitiesUp.water >= 5 ? 2 : (stats.ammoCapacitiesUp.water > 0 ? 1 : 0));
+				stats.ammoCapacitiesUp.freeze
+					+= (stats.ammoCapacitiesUp.freeze >= 5 ? 2 : (stats.ammoCapacitiesUp.freeze > 0 ? 1 : 0));
+				stats.ammoCapacitiesUp.thunder
+					+= (stats.ammoCapacitiesUp.thunder >= 5 ? 2 : (stats.ammoCapacitiesUp.thunder > 0 ? 1 : 0));
+				stats.ammoCapacitiesUp.dragon
+					+= (stats.ammoCapacitiesUp.dragon < 3 && stats.ammoCapacitiesUp.dragon > 0 ? 1 : 0);
+				stats.ammoCapacitiesUp.slicing
+					+= (stats.ammoCapacitiesUp.slicing < 3 && stats.ammoCapacitiesUp.slicing > 0 ? 1 : 0);
+				stats.ammoCapacitiesUp.demon
+					+= (stats.ammoCapacitiesUp.demon >= 5 ? 2 : (stats.ammoCapacitiesUp.demon > 0 ? 1 : 0));
+				stats.ammoCapacitiesUp.armor
+					+= (stats.ammoCapacitiesUp.armor >= 5 ? 2 : (stats.ammoCapacitiesUp.armor > 0 ? 1 : 0));
+				stats.ammoCapacitiesUp.tranq
+					+= (stats.ammoCapacitiesUp.tranq >= 5 ? 2 : (stats.ammoCapacitiesUp.tranq > 0 ? 1 : 0));
+			}
+		}
 	}
 }

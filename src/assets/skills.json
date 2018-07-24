@@ -1016,15 +1016,18 @@
 		"levels": [
 			{
 				"description": "Draws out 33% of hidden element and expands clip size for some ammo.",
-				"hiddenElementUp": 0.33
+				"hiddenElementUp": 0.33,
+				"ammoUp": 1
 			},
 			{
 				"description": "Draws out 66% of hidden element and expands clip size for some ammo.",
-				"hiddenElementUp": 0.66
+				"hiddenElementUp": 0.66,
+				"ammoUp": 2
 			},
 			{
 				"description": "Draws out 100% of hidden element and expands clip size for some ammo.",
-				"hiddenElementUp": 1
+				"hiddenElementUp": 1,
+				"ammoUp": 3
 			}
 		]
 	},
