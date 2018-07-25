@@ -610,8 +610,8 @@ export class CalculationService {
 
 	private getRawAverage(attack: number, affinity: number, criticalBoostPercent: number, weaponAttackModifier: number): number {
 		return Math.round((
-			(attack * (affinity / 100) * (affinity > 0 ? (criticalBoostPercent + 125) / 100 : 1.25))
-			+ (attack * (1 - affinity / 100))
+			(attack * (Math.min(affinity, 100) / 100) * (Math.min(affinity, 100) > 0 ? (criticalBoostPercent + 125) / 100 : 1.25))
+			+ (attack * (1 - Math.min(affinity, 100) / 100))
 		) / weaponAttackModifier);
 	}
 
