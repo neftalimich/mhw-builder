@@ -27,8 +27,6 @@ export class ItemModel {
 	weaponType?: WeaponType;
 	baseAttack?: number;
 	sharpnessDataNeeded: boolean;
-	sharpnessLevels: SharpnessLevelModel[];
-	maxSharpness?: SharpnessType;
 	sharpnessLevelsBar: number[];
 	baseAffinityPercent?: number;
 	ailment?: AilmentType;

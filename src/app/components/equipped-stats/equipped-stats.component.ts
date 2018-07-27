@@ -90,8 +90,13 @@ export class EquippedStatsComponent implements OnInit {
 				name: 'Sharpness',
 				value: sharp.tooltipTemplate,
 				calculationTemplate: sharp.tooltipTemplate,
-				calculationVariables: []
+				calculationVariables: [],
+				info: []
 			};
+			if (sharp.sharpnessDataNeeded) {
+				sharpDetail.info.push('Missing data for this weapon! Sharpness values are probably incorrect!');
+			}
+
 			this.tooltipService.setCalc(sharpDetail);
 		} else {
 			this.clearSharpDetails();

@@ -27,20 +27,16 @@ export class WeaponsLoader extends DataLoader<ItemModel> {
 				parser: new SlotsParser()
 			},
 			{
+				columnName: 'sharpnessLevelsBar',
+				parser: new CapacitiesParser()
+			},
+			{
 				columnName: 'tags',
 				parser: new TagsParser()
 			},
 			{
-				columnName: 'sharpnessLevels',
-				parser: new SharpnessLevelsParser()
-			},
-			{
 				columnName: 'skills',
 				parser: new SkillReferencesParser()
-			},
-			{
-				columnName: 'sharpnessLevelsBar',
-				parser: new CapacitiesParser()
 			}
 		]);
 

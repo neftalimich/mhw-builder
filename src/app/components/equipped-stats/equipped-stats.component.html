@@ -13,7 +13,7 @@
 				<span class="value">{{calc.value}}</span>
 			</li>
 			<li *ngIf="sharpnessBar && sharpnessBar.levels" (pointerenter)="showSharpDetails($event, sharpnessBar)" (pointerleave)="clearSharpDetails()" (click)="showOnClickSharpDetails(sharpnessBar)">
-				<span class="detail-icon">
+				<span class="detail-icon" [ngClass]="sharpnessBar.color">
 					<i class="far fa-question-circle"></i>
 				</span>
 				<span class="name">Sharpness</span>

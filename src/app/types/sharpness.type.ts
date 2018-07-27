@@ -4,5 +4,6 @@ export enum SharpnessType {
 	Yellow = 'Yellow',
 	Green = 'Green',
 	Blue = 'Blue',
-	White = 'White'
+	White = 'White',
+	Purple = 'Purple'
 }

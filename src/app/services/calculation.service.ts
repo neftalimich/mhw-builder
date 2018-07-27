@@ -172,37 +172,39 @@ export class CalculationService {
 	}
 
 	private getSharpnessBar(stats: StatsModel) {
-		const sharpnessLevels = Object.assign([], stats.sharpnessLevelsBar);
+		const sharpnessLevelsBar = Object.assign([], stats.sharpnessLevelsBar);
 
 		if (stats.sharpnessLevelsBar && !isNaN(stats.sharpnessLevelsBar[0])) {
-			let total = sharpnessLevels.reduce((a, b) => a + b, 0);
+			let total = sharpnessLevelsBar.reduce((a, b) => a + b, 0);
 			const maxHandicraftLevels = 40 + 5 - total;
 			this.sharpnessBar.tooltipTemplate = '';
 
 			let levelsToSubstract = Math.min(5 - (stats.passiveSharpness / 10), maxHandicraftLevels);
 			const sharpnessEmpty = levelsToSubstract;
 
-			for (let i = sharpnessLevels.length - 1; i >= 0; i--) {
+			for (let i = sharpnessLevelsBar.length - 1; i >= 0; i--) {
 				if (levelsToSubstract > 0) {
-					const toSubstract = Math.min(sharpnessLevels[i], levelsToSubstract);
-					sharpnessLevels[i] -= toSubstract;
+					const toSubstract = Math.min(sharpnessLevelsBar[i], levelsToSubstract);
+					sharpnessLevelsBar[i] -= toSubstract;
 					levelsToSubstract -= toSubstract;
 				}
 				// When handicraft is not needed
-				if (total > 40 && sharpnessLevels[i] > 0) {
-					const toSubstract2 = Math.min(sharpnessLevels[i], total - 40);
-					sharpnessLevels[i] -= toSubstract2;
+				if (total > 40 && sharpnessLevelsBar[i] > 0) {
+					const toSubstract2 = Math.min(sharpnessLevelsBar[i], total - 40);
+					sharpnessLevelsBar[i] -= toSubstract2;
 					total -= toSubstract2;
 				}
 				this.sharpnessBar.tooltipTemplate =
-					'| <span class="sharp-' + i + '">' + sharpnessLevels[i] * 10 + '</span> ' + this.sharpnessBar.tooltipTemplate;
+					'| <span class="sharp-' + i + '">' + sharpnessLevelsBar[i] * 10 + '</span> ' + this.sharpnessBar.tooltipTemplate;
 			}
 
-			this.sharpnessBar.levels = sharpnessLevels;
+			this.sharpnessBar.levels = sharpnessLevelsBar;
 			this.sharpnessBar.empty = sharpnessEmpty;
 			this.sharpnessBar.widthModifier = 4;
-			this.sharpnessBar.levelsMissing = 6 - sharpnessLevels.length;
+			this.sharpnessBar.levelsMissing = 6 - sharpnessLevelsBar.length;
 			this.sharpnessBar.tooltipTemplate += ' | = <span class="sharp-8">' + ((total - sharpnessEmpty) * 10) + '</span>';
+			this.sharpnessBar.sharpnessDataNeeded = stats.sharpnessDataNeeded;
+			this.sharpnessBar.color = stats.sharpnessDataNeeded ? 'red' : 'white';
 		}
 	}
 
@@ -291,21 +293,6 @@ export class CalculationService {
 		}
 
 		return affinityPotentialCalc;
-	}
-
-	private getEffectiveSharpness(stats: StatsModel): StatDetailModel {
-		const sharpnessCalc: StatDetailModel = {
-			name: 'Sharpness',
-			value: `${stats.effectiveSharpnessLevel.value} ${stats.effectiveSharpnessLevel.color}`,
-			info: []
-		};
-
-		if (stats.sharpnessDataNeeded) {
-			sharpnessCalc.color = 'red';
-			sharpnessCalc.info.push('Missing data for this weapon! Sharpness values are probably incorrect!');
-		}
-
-		return sharpnessCalc;
 	}
 
 	private getCriticalBoost(stats: StatsModel): StatDetailModel {

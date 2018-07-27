@@ -6,4 +6,6 @@ export class SharpnessBarModel {
 	widthModifier: number;
 	levelsMissing: number;
 	tooltipTemplate: string;
+	sharpnessDataNeeded: boolean;
+	color: string;
 }
