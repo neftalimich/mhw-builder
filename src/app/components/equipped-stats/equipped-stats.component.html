@@ -10,7 +10,14 @@
 			<li *ngFor="let calc of attackCalcs" (pointerenter)="showCalcDetails($event, calc)" (pointerleave)="clearCalcDetails()" (click)="showOnClickCalcDetails(calc)">
 				<span *ngIf="calc.calculationTemplate || calc.info?.length" class="detail-icon" [ngClass]="calc.color"><i class="far fa-question-circle"></i></span>
 				<span class="name">{{calc.name}}</span>
-				<span class="value">{{calc.value}}</span>
+				<span class="value">
+					<span [ngClass]="calc.valueColor">{{calc.value}}</span>
+					<span *ngIf="calc.extra1 || calc.extra2"> (</span>
+					<span [ngClass]="calc.class1">{{calc.extra1}}</span>
+					<span *ngIf="calc.extra1 && calc.extra2">/</span>
+					<span [ngClass]="calc.class2">{{calc.extra2}}</span>
+					<span *ngIf="calc.extra1 || calc.extra2">)</span>
+				</span>
 			</li>
 			<li *ngIf="sharpnessBar && sharpnessBar.levels" (pointerenter)="showSharpDetails($event, sharpnessBar)" (pointerleave)="clearSharpDetails()" (click)="showOnClickSharpDetails(sharpnessBar)">
 				<span class="detail-icon" [ngClass]="sharpnessBar.color">

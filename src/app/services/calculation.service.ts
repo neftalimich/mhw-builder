@@ -26,15 +26,6 @@ export class CalculationService {
 		this.attackCalcsUpdated$.next(this.attackCalcs);
 		this.defenseCalcsUpdated$.next(this.defenseCalcs);
 
-		/*
-			(TurkeyTickle - 2018-07-09) - Ammo capacities are just a passthrough for now,
-			but when bowgun mods are added, some calculations will need to be run
-			to calculate new capacities. It may not make sense in the end for ammo
-			capacities to flow through the calculation service, but instead to come
-			from the stat service directly. I think it depends on whether we want
-			to set up some kind of model to display more detailed ammo information
-			on mouseover or something.
-		*/
 		this.ammoUpdated$.next(stats.ammoCapacitiesUp);
 		this.sharpnessUpdated$.next(this.sharpnessBar);
 	}
@@ -400,7 +391,7 @@ export class CalculationService {
 			elementCalc.color = 'yellow';
 		}
 
-		if (stats.ailmentHidden && stats.elementAttackMultiplier < 1) {
+		if (stats.elementHidden && stats.elementAttackMultiplier < 1) {
 			elementCalc.info.push('Effectiveness reduced due to hidden element.');
 			elementCalc.color = !stats.elementAttackMultiplier ? 'red' : 'yellow';
 		}
@@ -478,6 +469,15 @@ export class CalculationService {
 		const rawAttackAvgCalc: StatDetailModel = {
 			name: 'Raw Attack Average',
 			value: Number.isInteger(rawAttackAvg) ? rawAttackAvg : 0,
+			extra1:
+				stats.totalAilmentAttack ?
+					this.getAilmentAverage(stats.totalAilmentAttack, 0, 0, 1)
+					: null,
+			class1: stats.totalAilmentAttack ? stats.ailment : null,
+			extra2: stats.totalElementAttack ?
+				this.getElementAverage(stats.totalElementAttack, 0, 0, 1)
+				: null,
+			class2: stats.totalElementAttack ? stats.element : null,
 			calculationTemplate: `({totalAttack} × {totalAffinity} × {criticalBoost} + {totalAttack} × (100% - {totalAffinity})) <br>÷ {weaponModifier} <br>=<br> [${rawAttackAvg}`,
 			calculationVariables: [
 				{
@@ -540,6 +540,18 @@ export class CalculationService {
 		const rawAttackAveragePotentialCalc: StatDetailModel = {
 			name: 'Raw Attack Average Potential',
 			value: Number.isInteger(rawAttackAveragePotential) ? rawAttackAveragePotential : 0,
+			extra1:
+				stats.totalAilmentAttack ?
+					this.getAilmentAverage(stats.totalAilmentAttack, Math.max(stats.crititalStatus ? totalAffinityPotential : 0, 0), stats.passiveCriticalBoostPercent, stats.effectiveElementalSharpnessModifier)
+					: null,
+			class1:
+				stats.totalAilmentAttack ? stats.ailment : null,
+			extra2:
+				stats.totalElementAttack ?
+					this.getElementAverage(stats.totalElementAttack, Math.max(stats.crititalElement ? totalAffinityPotential : 0, 0), stats.passiveCriticalBoostPercent, stats.effectiveElementalSharpnessModifier)
+					: null,
+			class2:
+				stats.totalElementAttack ? stats.element : null,
 			calculationTemplate:
 				`({totalAttackPotential} × {totalAffinityPotential} × {criticalBoost} + {totalAttackPotential} × (100% - {totalAffinityPotential})) <br>÷ {weaponModifier} <br>=<br> [${rawAttackAveragePotential}`,
 			calculationVariables: [
@@ -593,13 +605,6 @@ export class CalculationService {
 		rawAttackAveragePotentialCalc.calculationVariables[1].value += '%';
 
 		return rawAttackAveragePotentialCalc;
-	}
-
-	private getRawAverage(attack: number, affinity: number, criticalBoostPercent: number, weaponAttackModifier: number): number {
-		return Math.round((
-			(attack * (Math.min(affinity, 100) / 100) * (Math.min(affinity, 100) > 0 ? (criticalBoostPercent + 125) / 100 : 1.25))
-			+ (attack * (1 - Math.min(affinity, 100) / 100))
-		) / weaponAttackModifier);
 	}
 
 	private buildDefenseCalcs(stats: StatsModel) {
@@ -727,5 +732,26 @@ export class CalculationService {
 					+= (stats.ammoCapacitiesUp.tranq >= 5 ? 2 : (stats.ammoCapacitiesUp.tranq > 0 ? 1 : 0));
 			}
 		}
+	}
+
+	private getAilmentAverage(attack: number, affinity: number, criticalBoostPercent: number, elementAttackModififier: number): number {
+		return Math.round((
+			(attack * (Math.min(affinity, 100) / 100) * (Math.min(affinity, 100) > 0 ? (criticalBoostPercent + 125) / 100 : 1.25))
+			+ (attack * (1 - Math.min(affinity, 100) / 100))
+		) * elementAttackModififier / 30);
+	}
+
+	private getRawAverage(attack: number, affinity: number, criticalBoostPercent: number, weaponAttackModifier: number): number {
+		return Math.round((
+			(attack * (Math.min(affinity, 100) / 100) * (Math.min(affinity, 100) > 0 ? (criticalBoostPercent + 125) / 100 : 1.25))
+			+ (attack * (1 - Math.min(affinity, 100) / 100))
+		) / weaponAttackModifier);
+	}
+
+	private getElementAverage(attack: number, affinity: number, criticalBoostPercent: number, elementAttackModififier: number): number {
+		return Math.round((
+			(attack * (Math.min(affinity, 100) / 100) * (Math.min(affinity, 100) > 0 ? (criticalBoostPercent + 125) / 100 : 1.25))
+			+ (attack * (1 - Math.min(affinity, 100) / 100))
+		) * elementAttackModififier / 10);
 	}
 }

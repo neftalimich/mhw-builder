@@ -2004,7 +2004,8 @@
 		"description": "Increases elemental damage (fire, water, thunder, ice, dragon) when landing critical hits.",
 		"levels": [
 			{
-				"description": "Increases elemental damage (fire, water, thunder, ice, dragon) when landing critical hits."
+				"description": "Increases elemental damage (fire, water, thunder, ice, dragon) when landing critical hits.",
+				"criticalElement": true
 			}
 		]
 	},
@@ -2116,7 +2117,8 @@
 		"description": "Increases abnormal status effect damage (paralysis, poison, sleep, blast) when landing critical hits.",
 		"levels": [
 			{
-				"description": "Increases abnormal status effect damage (paralysis, poison, sleep, blast) when landing critical hits."
+				"description": "Increases abnormal status effect damage (paralysis, poison, sleep, blast) when landing critical hits.",
+				"criticalStatus": true
 			}
 		]
 	},

@@ -23,6 +23,8 @@ export class StatsModel {
 	drawAffinity: number;
 	slidingAffinity: number;
 	passiveCriticalBoostPercent: number;
+	crititalElement: boolean;
+	crititalStatus: boolean;
 
 	elementless: boolean;
 	elementlessBoostPercent: number;
@@ -119,6 +121,8 @@ export class StatsModel {
 		this.drawAffinity = 0;
 		this.slidingAffinity = 0;
 		this.passiveCriticalBoostPercent = 0;
+		this.crititalElement = false;
+		this.crititalStatus = false;
 
 		this.element = null;
 		this.baseElementAttack = 0;

@@ -102,6 +102,8 @@ export class StatService {
 				if (level.passiveSharpness) { this.stats.passiveSharpness += level.passiveSharpness; }
 
 				if (level.passiveCriticalBoostPercent) { this.stats.passiveCriticalBoostPercent += level.passiveCriticalBoostPercent; }
+				if (level.criticalElement) { this.stats.crititalElement = true; }
+				if (level.criticalStatus) { this.stats.crititalStatus = true; }
 
 				if (level.passiveFireAttack) { this.stats.passiveFireAttack += level.passiveFireAttack; }
 				if (level.passiveWaterAttack) { this.stats.passiveWaterAttack += level.passiveWaterAttack; }
@@ -267,6 +269,10 @@ export class StatService {
 				const sharpnessModifier = this.dataService.getSharpnessModifier(DamageType.Physical, color);
 				if (sharpnessModifier) {
 					this.stats.effectivePhysicalSharpnessModifier = sharpnessModifier.value;
+				}
+				const ElementalSharpnessModifier = this.dataService.getSharpnessModifier(DamageType.Elemental, color);
+				if (ElementalSharpnessModifier) {
+					this.stats.effectiveElementalSharpnessModifier = ElementalSharpnessModifier.value;
 				}
 			}
 		}
