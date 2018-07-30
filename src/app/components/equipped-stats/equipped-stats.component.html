@@ -19,17 +19,17 @@
 					<span *ngIf="calc.extra1 || calc.extra2">)</span>
 				</span>
 			</li>
-			<li *ngIf="sharpnessBar && sharpnessBar.levels" (pointerenter)="showSharpDetails($event, sharpnessBar)" (pointerleave)="clearSharpDetails()" (click)="showOnClickSharpDetails(sharpnessBar)">
+			<li *ngIf="sharpnessBar && sharpnessBar.sharps" (pointerenter)="showSharpDetails($event, sharpnessBar)" (pointerleave)="clearSharpDetails()" (click)="showOnClickSharpDetails(sharpnessBar)">
 				<span class="detail-icon" [ngClass]="sharpnessBar.color">
 					<i class="far fa-question-circle"></i>
 				</span>
 				<span class="name">Sharpness</span>
 				<div class="value text-righ sharp-box">
-					<span *ngFor="let level of sharpnessBar.levels; let i = index"
-						  [ngClass]="'sharp-bg-'+ (i + sharpnessBar.levelsMissing)"
-						  [ngStyle]="{'width.px': (level * sharpnessBar.widthModifier)}">
+					<span *ngFor="let sharp of sharpnessBar.sharps; let i = index"
+						  [ngClass]="['sharp-bg-' + sharp.colorIndex, sharp.active ? 'sharp-active':'sharp-none', sharp.last ? 'sharp-active-last':'', sharp.first ? 'sharp-active-first':'']"
+						  [ngStyle]="{'width.px': (sharp.level * sharpnessBar.widthModifier)}">
 					</span>
-					<span class="sharp-bg-7"
+					<span class="sharp-bg-7 sharp-none"
 						  [ngStyle]="{'width.px': (sharpnessBar.empty * sharpnessBar.widthModifier)}">
 					</span>
 				</div>

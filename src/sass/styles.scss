@@ -67,7 +67,7 @@ h4 {
 }
 
 .sharp-box {
-	height: 12px;
+	height: 11px;
 }
 
 .sharp-box span {
@@ -108,6 +108,21 @@ h4 {
 .sharp-bg-7 {
 	background: #666;
 	color: #666;
+}
+
+.sharp-active {
+	border-top: 2px solid lightskyblue;
+	border-bottom: 2px solid lightskyblue;
+	color: lightskyblue;
+}
+.sharp-active-first {
+	border-left: 2px solid lightskyblue;
+}
+.sharp-active-last {
+	border-right: 2px solid lightskyblue;
+}
+.sharp-none {
+	border-bottom: 1px solid transparent;
 }
 
 .sharp-0 {

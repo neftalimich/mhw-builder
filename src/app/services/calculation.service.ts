@@ -5,6 +5,7 @@ import { CalculationVariableModel } from '../models/calculation-variable.model';
 import { SharpnessBarModel } from '../models/sharpness-bar.model';
 import { StatDetailModel } from '../models/stat-detail.model';
 import { StatsModel } from '../models/stats.model';
+import { SharpnessModel } from '../models/sharpness-model';
 
 @Injectable()
 export class CalculationService {
@@ -169,9 +170,12 @@ export class CalculationService {
 			let total = sharpnessLevelsBar.reduce((a, b) => a + b, 0);
 			const maxHandicraftLevels = 40 + 5 - total;
 			this.sharpnessBar.tooltipTemplate = '';
+			this.sharpnessBar.sharps = [];
 
 			let levelsToSubstract = Math.min(5 - (stats.passiveSharpness / 10), maxHandicraftLevels);
+			let levelsToAdd = Math.min((stats.passiveSharpness / 10), maxHandicraftLevels);
 			const sharpnessEmpty = levelsToSubstract;
+			let last = true;
 
 			for (let i = sharpnessLevelsBar.length - 1; i >= 0; i--) {
 				if (levelsToSubstract > 0) {
@@ -179,6 +183,31 @@ export class CalculationService {
 					sharpnessLevelsBar[i] -= toSubstract;
 					levelsToSubstract -= toSubstract;
 				}
+				const aux = Math.min(sharpnessLevelsBar[i], levelsToAdd);
+
+				if (levelsToAdd > 0) {
+					const sharpnessAux: SharpnessModel = {
+						colorIndex: i,
+						level: aux,
+						active: true,
+						last: last
+					};
+					last = false;
+					if (levelsToAdd - aux == 0) {
+						sharpnessAux.first = true;
+					}
+					this.sharpnessBar.sharps.push(sharpnessAux);
+				}
+				if (levelsToAdd < sharpnessLevelsBar[i]) {
+					const sharpnessAux: SharpnessModel = {
+						colorIndex: i,
+						level: sharpnessLevelsBar[i] - levelsToAdd,
+						active: false
+					};
+					this.sharpnessBar.sharps.push(sharpnessAux);
+				}
+				levelsToAdd -= aux;
+
 				// When handicraft is not needed
 				if (total > 40 && sharpnessLevelsBar[i] > 0) {
 					const toSubstract2 = Math.min(sharpnessLevelsBar[i], total - 40);
@@ -189,6 +218,7 @@ export class CalculationService {
 					'| <span class="sharp-' + i + '">' + sharpnessLevelsBar[i] * 10 + '</span> ' + this.sharpnessBar.tooltipTemplate;
 			}
 
+			this.sharpnessBar.sharps = this.sharpnessBar.sharps.reverse();
 			this.sharpnessBar.levels = sharpnessLevelsBar;
 			this.sharpnessBar.empty = sharpnessEmpty;
 			this.sharpnessBar.widthModifier = 4;

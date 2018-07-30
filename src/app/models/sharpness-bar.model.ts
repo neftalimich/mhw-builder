@@ -1,7 +1,8 @@
-import { SharpnessType } from '../types/sharpness.type';
+import { SharpnessModel } from './sharpness-model';
 
 export class SharpnessBarModel {
 	levels: number[];
+	sharps: SharpnessModel[];
 	empty: number;
 	widthModifier: number;
 	levelsMissing: number;
