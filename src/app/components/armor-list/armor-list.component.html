@@ -5,7 +5,6 @@
 		<button class="clear-button" (click)="resetSearchResults()">
 			<i class="fas fa-times"></i>
 		</button>
-		<button id="dummy"></button>
 	</div>
 
 	<virtual-scroll id="items-list" #itemList class="scroll-container" *ngIf="items" [items]="filteredItems" (update)="onItemListUpdate($event)" [childHeight]="134">

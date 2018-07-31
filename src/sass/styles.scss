@@ -67,7 +67,7 @@ h4 {
 }
 
 .sharp-box {
-	height: 11px;
+	height: 9px;
 }
 
 .sharp-box span {
@@ -111,18 +111,19 @@ h4 {
 }
 
 .sharp-active {
-	border-top: 2px solid lightskyblue;
-	border-bottom: 2px solid lightskyblue;
+	border-top: 2px solid #9DD7FB;
+	border-bottom: 2px solid #9DD7FB;
 	color: lightskyblue;
 }
 .sharp-active-first {
-	border-left: 2px solid lightskyblue;
+	border-left: 2px solid #9DD7FB;
 }
 .sharp-active-last {
-	border-right: 2px solid lightskyblue;
+	border-right: 2px solid #9DD7FB;
 }
 .sharp-none {
-	border-bottom: 1px solid transparent;
+	border-bottom: 2px solid rgba(0, 0, 0, 0);
+	border-top: 2px solid rgba(0, 0, 0, 0);
 }
 
 .sharp-0 {

@@ -85,12 +85,6 @@ export class ArmorListComponent implements OnInit {
 		}
 	}
 
-	@HostListener('document:keydown', ['$event']) onKeydownHandler(event: KeyboardEvent) {
-		if (event.keyCode === 13) {
-			document.getElementById('dummy').focus();
-		}
-	}
-
 	resetSearchResults() {
 		this.searchBox.nativeElement.value = null;
 		this.filteredItems = this.items;

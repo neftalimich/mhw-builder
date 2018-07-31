@@ -108,12 +108,6 @@ export class WeaponListComponent implements OnInit {
 		}
 	}
 
-	@HostListener('document:keydown', ['$event']) onKeydownHandler(event: KeyboardEvent) {
-		if (event.keyCode === 13) {
-			document.getElementById('dummy').focus();
-		}
-	}
-
 	resetSearchResults() {
 		this.searchBox.nativeElement.value = null;
 		this.filteredItems = this.items;
@@ -161,5 +155,65 @@ export class WeaponListComponent implements OnInit {
 		}
 
 		this.search(this.searchBox.nativeElement.value);
+	}
+
+	weaponSortByAttack() {
+		this.filteredItems = this.items;
+		this.applyWeaponFilter();
+		this.filteredItems.sort(function (item1, item2) {
+			if (item1.baseAttack > item2.baseAttack) {
+				return -1;
+			} else if (item1.baseAttack < item2.baseAttack) {
+				return 1;
+			} else {
+				return 0;
+			}
+		});
+		this.virtualItems = this.filteredItems;
+	}
+
+	weaponSortByAffinity() {
+		this.filteredItems = this.items;
+		this.applyWeaponFilter();
+		this.filteredItems.sort(function (item1, item2) {
+			if (item1.baseAffinityPercent > item2.baseAffinityPercent) {
+				return -1;
+			} else if (item1.baseAffinityPercent < item2.baseAffinityPercent) {
+				return 1;
+			} else {
+				return 0;
+			}
+		});
+		this.virtualItems = this.filteredItems;
+	}
+
+	weaponSortByAilment() {
+		this.filteredItems = this.items;
+		this.applyWeaponFilter();
+		this.filteredItems.sort(function (item1, item2) {
+			if (item1.ailmentBaseAttack > item2.ailmentBaseAttack) {
+				return -1;
+			} else if (item1.ailmentBaseAttack < item2.ailmentBaseAttack) {
+				return 1;
+			} else {
+				return 0;
+			}
+		});
+		this.virtualItems = this.filteredItems;
+	}
+
+	weaponSortByElement() {
+		this.filteredItems = this.items;
+		this.applyWeaponFilter();
+		this.filteredItems.sort(function (item1, item2) {
+			if (item1.elementBaseAttack > item2.elementBaseAttack) {
+				return -1;
+			} else if (item1.elementBaseAttack < item2.elementBaseAttack) {
+				return 1;
+			} else {
+				return 0;
+			}
+		});
+		this.virtualItems = this.filteredItems;
 	}
 }

@@ -159,6 +159,9 @@ export class AppComponent implements OnInit, AfterViewInit {
 	}
 
 	@HostListener('document:keydown', ['$event']) onKeydownHandler(event: KeyboardEvent) {
+		if (event.keyCode === 13) {
+			document.getElementById('dummy').focus();
+		}
 		if (event.keyCode === 37) {
 			this.attackDefenseVisible = !this.attackDefenseVisible;
 			if (!this.skillsVisible) {
