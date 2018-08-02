@@ -1,8 +1,7 @@
-import { ElementType } from '../types/element.type';
 import { AilmentType } from '../types/ailment.type';
-import { SharpnessLevelModel } from './sharpness-level.model';
-import { SharpnessType } from '../types/sharpness.type';
+import { ElementType } from '../types/element.type';
 import { AmmoCapacitiesModel } from './ammo-capacities.model';
+import { ExtraDataModel } from './extra-data.model';
 
 export class StatsModel {
 	totalAttack: number;
@@ -99,6 +98,7 @@ export class StatsModel {
 	ammoCapacities: AmmoCapacitiesModel;
 	ammoCapacitiesUp: AmmoCapacitiesModel;
 	ammoUp: number;
+	extraData: ExtraDataModel;
 
 	constructor() {
 		this.totalAttack = 0;
@@ -193,5 +193,6 @@ export class StatsModel {
 		this.ammoCapacities = null;
 		this.ammoCapacitiesUp = null;
 		this.ammoUp = 0;
+		this.extraData = null;
 	}
 }

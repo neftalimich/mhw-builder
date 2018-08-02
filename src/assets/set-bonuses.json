@@ -1,6 +1,6 @@
 [
 	{
-		"id":"xenojivaDivinity",
+		"id": "xenojivaDivinity",
 		"name": "Xeno'jiva Divinity",
 		"setLevels": [
 			{
@@ -10,7 +10,7 @@
 		]
 	},
 	{
-		"id":"kirinFavor",
+		"id": "kirinFavor",
 		"name": "Kirin Favor",
 		"setLevels": [
 			{
@@ -20,7 +20,7 @@
 		]
 	},
 	{
-		"id":"nergiganteHunger",
+		"id": "nergiganteHunger",
 		"name": "Nergigante Hunger",
 		"setLevels": [
 			{
@@ -169,18 +169,32 @@
 			}
 		]
 	},
-		{
-			"id": "lunastraFavor",
-			"name": "Lunastra Favor",
-			"setLevels": [
-				{
-					"id": "staminaCapUp",
-					"pieces": 2
-				},
-				{
-					"id": "mindsEyeBallistics",
-					"pieces": 4
-				}
-			]
-		}
+	{
+		"id": "lunastraFavor",
+		"name": "Lunastra Favor",
+		"setLevels": [
+			{
+				"id": "staminaCapUp",
+				"pieces": 2
+			},
+			{
+				"id": "mindsEyeBallistics",
+				"pieces": 4
+			}
+		]
+	},
+	{
+		"id": "soulDragon",
+		"name": "Soul of the Dragon",
+		"setLevels": [
+			{
+				"id": "elementalAirborne",
+				"pieces": 2
+			},
+			{
+				"id": "mastersTouch",
+				"pieces": 4
+			}
+		]
+	}
 ]

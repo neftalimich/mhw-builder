@@ -16,6 +16,7 @@ import { WeaponType } from '../types/weapon.type';
 import { CalculationService } from './calculation.service';
 import { DataService } from './data.service';
 import { SharpnessBarModel } from '../models/sharpness-bar.model';
+import { ExtraDataModel } from '../models/extra-data.model';
 
 @Injectable()
 export class StatService {
@@ -217,6 +218,10 @@ export class StatService {
 			this.stats.sharpnessDataNeeded = weapon.sharpnessDataNeeded;
 			this.stats.elementHidden = weapon.elementHidden;
 			this.stats.ailmentHidden = weapon.ailmentHidden;
+			this.stats.extraData = {
+				weaponType: weapon.weaponType,
+				otherData: weapon.otherData
+			};
 
 			const weaponModifier = this.dataService.getWeaponModifier(weapon.weaponType);
 			if (weaponModifier) {

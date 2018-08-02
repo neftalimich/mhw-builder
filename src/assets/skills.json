@@ -2131,5 +2131,15 @@
 				"description": "Extends the duration of your poison's effect on monsters."
 			}
 		]
+	},
+	{
+		"id": "elementalAirborne",
+		"name": "Elemental Airborne",
+		"description": "Elemental damage increased for jumping attacks.",
+		"levels": [
+			{
+				"description": "Elemental damage increased for jumping attacks."
+			}
+		]
 	}
 ]

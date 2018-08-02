@@ -5,7 +5,7 @@ import { ItemModel } from '../../models/item.model';
 import { EquipmentCategoryType } from '../../types/equipment-category.type';
 import { ItemType } from '../../types/item.type';
 import { CapacitiesParser } from '../parsers/capacities.parser';
-import { SharpnessLevelsParser } from '../parsers/sharpness-levels.parser';
+import { OtherDataParser } from '../parsers/other-data.parser';
 import { SkillReferencesParser } from '../parsers/skill-references.parser';
 import { SlotsParser } from '../parsers/slots.parser';
 import { TagsParser } from '../parsers/tags.parser';
@@ -37,6 +37,10 @@ export class WeaponsLoader extends DataLoader<ItemModel> {
 			{
 				columnName: 'skills',
 				parser: new SkillReferencesParser()
+			},
+			{
+				columnName: 'otherData',
+				parser: new OtherDataParser()
 			}
 		]);
 

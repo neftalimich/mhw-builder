@@ -10,6 +10,7 @@ import { SharpnessLevelModel } from './sharpness-level.model';
 import { SkillReferenceModel } from './skill-reference.model';
 import { SlotModel } from './slot.model';
 import { MelodiesModel } from './melodies.model';
+import { OtherDataModel } from './other-data.model';
 
 export class ItemModel {
 	id: number;
@@ -38,6 +39,7 @@ export class ItemModel {
 	elementHidden: boolean;
 	elementAttackIncreaseCapOverride: number;
 	elderseal?: EldersealType;
+	otherData?: OtherDataModel[];
 	ammoCapacities?: AmmoCapacitiesModel;
 	melodies?: MelodiesModel;
 

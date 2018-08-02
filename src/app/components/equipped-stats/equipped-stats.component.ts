@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { AmmoCapacitiesModel } from '../../models/ammo-capacities.model';
+import { ExtraDataModel } from '../../models/extra-data.model';
+import { SharpnessBarModel } from '../../models/sharpness-bar.model';
 import { StatDetailModel } from '../../models/stat-detail.model';
 import { CalculationService } from '../../services/calculation.service';
 import { TooltipService } from '../../services/tooltip.service';
 import { PointerType } from '../../types/pointer.type';
-import { AmmoCapacitiesModel } from '../../models/ammo-capacities.model';
-import { SharpnessBarModel } from '../../models/sharpness-bar.model';
 
 @Component({
 	selector: 'mhw-builder-equipped-stats',
@@ -18,6 +19,7 @@ export class EquippedStatsComponent implements OnInit {
 	defenseCalcs = new Array<StatDetailModel>();
 	ammoCapacities: AmmoCapacitiesModel;
 	sharpnessBar: SharpnessBarModel;
+	extraData: ExtraDataModel;
 
 	attackVisible: boolean;
 	detailsVisible: boolean;
@@ -39,6 +41,10 @@ export class EquippedStatsComponent implements OnInit {
 
 		this.calculationService.sharpnessUpdated$.subscribe(sharp => {
 			this.sharpnessBar = sharp;
+		});
+
+		this.calculationService.extraDataUpdated$.subscribe(extraData => {
+			this.extraData = extraData;
 		});
 
 		this.calculationService.defenseCalcsUpdated$.subscribe(calcs => {

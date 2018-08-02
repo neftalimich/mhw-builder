@@ -34,6 +34,22 @@
 					</span>
 				</div>
 			</li>
+			<li *ngIf="extraData && extraData.otherData[0].value">
+				<span class="detail-icon">
+					<!--<i class="far fa-question-circle"></i>-->
+				</span>
+				<span class="name">
+					<span *ngIf="extraData.weaponType=='Bow'">Coatings</span>
+					<span *ngIf="extraData.weaponType=='ChargeBlade' || extraData.weaponType=='SwitchAxe'">Phial Type</span>
+					<span *ngIf="extraData.weaponType=='Gunlance'">Shell Type</span>
+					<span *ngIf="extraData.weaponType=='InsectGlaive'">Boost Type</span>
+				</span>
+				<div class="value">
+					<div *ngFor="let other of extraData.otherData; let i = index">
+						{{other.value}}<span *ngIf="other.data!=0">-{{other.data}}</span>
+					</div>
+				</div>
+			</li>
 		</ul>
 	</div>
 	<br />

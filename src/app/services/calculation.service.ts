@@ -2,10 +2,13 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { AmmoCapacitiesModel } from '../models/ammo-capacities.model';
 import { CalculationVariableModel } from '../models/calculation-variable.model';
+import { ExtraDataModel } from '../models/extra-data.model';
+import { OtherDataModel } from '../models/other-data.model';
 import { SharpnessBarModel } from '../models/sharpness-bar.model';
+import { SharpnessModel } from '../models/sharpness-model';
 import { StatDetailModel } from '../models/stat-detail.model';
 import { StatsModel } from '../models/stats.model';
-import { SharpnessModel } from '../models/sharpness-model';
+import { WeaponType } from '../types/weapon.type';
 
 @Injectable()
 export class CalculationService {
@@ -13,22 +16,26 @@ export class CalculationService {
 	public defenseCalcsUpdated$ = new Subject<StatDetailModel[]>();
 	public ammoUpdated$ = new Subject<AmmoCapacitiesModel>();
 	public sharpnessUpdated$ = new Subject<SharpnessBarModel>();
+	public extraDataUpdated$ = new Subject<ExtraDataModel>();
 
 	attackCalcs = new Array<StatDetailModel>();
 	defenseCalcs = new Array<StatDetailModel>();
 	sharpnessBar = new SharpnessBarModel;
+	extraData = new ExtraDataModel;
 
 	updateCalcs(stats: StatsModel) {
 		this.buildAttackCalcs(stats);
 		this.buildDefenseCalcs(stats);
 		this.buildAmmoCapacities(stats);
 		this.getSharpnessBar(stats);
+		this.getExtraData(stats);
 
 		this.attackCalcsUpdated$.next(this.attackCalcs);
 		this.defenseCalcsUpdated$.next(this.defenseCalcs);
 
 		this.ammoUpdated$.next(stats.ammoCapacitiesUp);
 		this.sharpnessUpdated$.next(this.sharpnessBar);
+		this.extraDataUpdated$.next(this.extraData);
 	}
 
 	private buildAttackCalcs(stats: StatsModel) {
@@ -227,6 +234,10 @@ export class CalculationService {
 			this.sharpnessBar.sharpnessDataNeeded = stats.sharpnessDataNeeded;
 			this.sharpnessBar.color = stats.sharpnessDataNeeded ? 'red' : 'white';
 		}
+	}
+
+	private getExtraData(stats: StatsModel) {
+		this.extraData = stats.extraData;
 	}
 
 	private getAffinity(stats: StatsModel): StatDetailModel {
