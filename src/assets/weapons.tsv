@@ -4,21 +4,9 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 268	Bow	6	Anja Arch III	240	-20	0	Fire	390						false			anjanath;fire		Close Range;Power;Blast
 258	Bow	6	Archer's Dance III	204	20	0				Blast	270	true		false			kulu-ya-ku;blast		Close;Paralysis;Sleep;Blast
 267	Bow	6	Datura String III	204	0	0				Blast	240	true		false		2;1	pukei-pukei;blast		Close;Paralysis;Poison
-508	Bow	6	Decay Gold Piercer	192	0	20	Dragon	120					Average	false			kulve;taroth;dragon		Close;Power;Sleep
 270	Bow	6	Dragonbone Bow III	180	0	0	Dragon	420					Low	false		1;1			Close;Paralysis;Sleep
-507	Bow	6	Gold Blast Piercer	168	0	30				Blast	180	true		false			kulve;taroth;blast		Close;Paralysis;Poison;Sleep;Blast
-307	Bow	6	Gold Thunder Piercer	168	10	20	Thunder	210	true					false			kulve;taroth;thunder		Close;Power
-517	Bow	6	Gold Water Piercer	180	0	25	Water	210	true					false			kulve;taroth;water		Close;Paralysis;Poison
-509	Bow	6	Horn Gold Piercer	216	-20	25	Ice	150	true					false			kulve;taroth;ice		Close
 264	Bow	6	Hunter's Proudbow II	216	0	10	Water	360	true					false		3	bone;water		Close;Paralysis;Poison
-510	Bow	6	King Gold Piercer	168	20	20	Fire	120						false			kulve;taroth;fire		Close
 260	Bow	6	Princess Arrow III	216	10	0	Dragon	240	true				Low	false		2;1	rathian;dragon		Close;Power;Poison
-511	Bow	6	Queen Gold Piercer	180	10	20	Dragon	330	true				Low	false			kulve;taroth;dragon		Close;Power;Poison
-512	Bow	6	Rage Gold Piercer	204	20	20	Fire	150						false			kulve;taroth;fire		Close
-513	Bow	6	Spark Gold Piercer	168	20	20	Thunder	120						false			kulve;taroth;thunder		Close;Power;Paralysis
-514	Bow	6	Spew Gold Piercer	180	0	20				Blast	120	true		false			kulve;taroth;blast		Close;Paralysis;Poison
-515	Bow	6	Stream Gold Piercer	156	0	20	Ice	210						false			kulve;taroth;ice		Close
-516	Bow	6	Thief Gold Piercer	168	30	20				Blast	90			false			kulve;taroth;blast		Close;Paralysis;Sleep;Blast
 262	Bow	6	Water Shot III	204	0	0	Water	240						false		3	jyuratodus;water		Close;Power
 269	Bow	7	Flying Kadachi Strikebow	204	15	0	Thunder	270						false		1	tobi-kadachi;thunder		Close;Power;Paralysis
 265	Bow	7	Hazak Velos II	228	0	0	Dragon	270					Average	false		2	vaal;hazak;dragon		Close;Power;Sleep
@@ -47,25 +35,13 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 682	Bow	8	Empress Arrow "Ruin"	228	0	0				Blast	90			false		2;2	lunastra;blast	hastenRecovery-1	Close;Power;Poison;Sleep
 683	Bow	8	Empress Arrow "Styx"	216	10	0				Blast	180			false		3;3	lunastra;blast	razorSharpSpareShot-1	Close;Power
 180	ChargeBlade	6	Chrome Guardian II	648	0	0	Thunder	270						false	6;6;2;15;9;2	1;1	ore;thunder		Impact
-518	ChargeBlade	6	Claw Gold Cutter	504	25	20	Fire	90	true					true	0;0;0;0;2;0		kulve;taroth;fire		Impact
-519	ChargeBlade	6	Crusher Gold Cutter	540	0	20				Blast	90			true	0;0;0;0;2;0		kulve;taroth;blast		Impact
-344	ChargeBlade	6	Decay Gold Cutter	576	10	20	Dragon	120					Average	true	0;0;0;0;2;0		kulve;taroth;dragon		Power Element
 194	ChargeBlade	6	Dragonbone Cutter III	576	0	0	Dragon	360					Low	false	12;11;4;4;7;2	1;1	dragon		Impact
 184	ChargeBlade	6	Gigafrost II	612	0	0	Ice	240						false	9;6;8;8;7;2	2;2	legiana;ice		Power Element
 190	ChargeBlade	6	Girros Nadja III	576	20	0				Paralysis	300			false	11;11;4;4;8;2		great;girros;paralysis		Impact
-317	ChargeBlade	6	Glutton Gold Cutter	540	0	20				Sleep	90			true	0;0;0;0;2;0		kulve;taroth;sleep		Impact
-521	ChargeBlade	6	Gold Ice Cutter	504	0	20	Ice	180	true					true	0;0;0;0;2;0		kulve;taroth;ice		Impact
-296	ChargeBlade	6	Gold Sleep Cutter	504	0	20				Sleep	120	true		true	0;0;0;0;2;0		kulve;taroth;sleep		Impact
-526	ChargeBlade	6	Gold Thunder Cutter	504	0	20	Thunder	210	true					true	0;0;0;0;2;0		kulve;taroth;thunder		Impact
-520	ChargeBlade	6	Horn Gold Cuter	684	-30	25	Ice	120	true					true	0;0;0;0;2;0		kulve;taroth;ice		Impact
 188	ChargeBlade	6	Jagras Escudo III	684	0	0				Sleep	180	true		false	10;12;4;5;9;0	3;2	great;jagras;sleep		Impact
 183	ChargeBlade	6	Jyura Depth III	684	0	0	Water	270						false	10;6;6;10;5;3	1	jyuratodus;water		Power Element 
 192	ChargeBlade	6	Kadachi Kaina III	648	15	0	Thunder	210						false	19;7;2;2;6;4	1	tobi-kadachi;thunder		Power Element
-522	ChargeBlade	6	King Gold Cutter	684	20	20	Fire	120						true	0;0;0;0;2;0		kulve;taroth;fire		Power Element
 186	ChargeBlade	6	Mighty Strongarm II	684	0	10				Blast	240	true		false	9;12;4;5;10;0	3	bone;blast		Impact
-523	ChargeBlade	6	Mire Gold Cutter	576	10	20	Water	150						true	0;0;0;0;2;0		kulve;taroth;water		Power Element
-524	ChargeBlade	6	Numb Gold Cutter	504	30	20				Paralysis	150			true	0;0;0;0;2;0		kulve;taroth;paralysis		Impact
-525	ChargeBlade	6	Spark Gold Cutter	540	15	20	Thunder	120						true	0;0;0;0;2;0		kulve;taroth;thunder		Power Element
 185	ChargeBlade	7	Dear Hacatelia	684	0	0				Poison	330			false	7;5;6;12;6;4	2;2	rathian;poison		Impact
 187	ChargeBlade	7	Diablos Tyrannis II	828	-30	15	Ice	180	true					false	9;5;6;12;6;2		ice		Impact
 189	ChargeBlade	7	Gama Silt II	612	0	0				Blast	180			false	11;11;4;4;8;2	2;2	dodogama;blast		Impact
@@ -94,41 +70,28 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 671	ChargeBlade	8	Empress Alma "Styx"	648	10	0				Blast	210			false	10;3;6;9;3;9	3;3	lunastra;blast	razorSharpSpareShot-1	Impact
 67	DualBlades	6	Arcanaria III	238	20	0				Sleep	120			false	8;6;6;10;7;3		kulu-ya-ku;sleep		
 62	DualBlades	6	Chrome Slicers II	252	0	0				Poison	270	true		false	6;6;2;15;9;2	1;1	ore;poison		
-527	DualBlades	6	Claw Gold Twinblades	196	20	20	Fire	60	true					true	0;0;0;0;2;0		kulve;taroth;fire		
 74	DualBlades	6	Dark Ripper III	224	0	0				Paralysis	90	true		false	11;3;6;8;4;8	2	hornetaur;paralysis		
 64	DualBlades	6	Dual Destroyers III	252	0	0	Thunder	210	true					false	8;5;6;12;5;4	3	tzitzi-ya-ku;thunder		
-528	DualBlades	6	Erupter Gold Twinblades	238	0	20	Fire	60						true	0;0;0;0;2;0	1	kulve;taroth;fire		
-331	DualBlades	6	Flash Gold Twinblades	224	0	20	Thunder	90	true					true	0;0;0;0;2;0		kulve;taroth;thunder		
 66	DualBlades	6	Freeze Chain II	252	0	0	Ice	150						false	8;5;6;12;5;4	2	legiana;ice		
-330	DualBlades	6	Gold Ice Twinblades	224	0	20	Ice	120	true					true	0;0;0;0;2;0		kulve;taroth;ice		
-533	DualBlades	6	Gold Poison Twinblades	224	0	20				Poison	150	true		true	0;0;0;0;2;0		kulve;taroth;poison		
-310	DualBlades	6	Gold Water Twinblades	238	0	20	Water	120	true					true	0;0;0;0;2;0		kulve;taroth;water		
-529	DualBlades	6	Horn Gold Twinblades	266	-10	25	Ice	60	true					true	0;0;0;0;2;0		kulve;taroth;ice		
 72	DualBlades	6	Jyura Hatchets III	266	0	0	Water	210						false	16;10;3;3;5;3	1	jyuratodus;water		
 75	DualBlades	6	Kadachi Claws III	252	10	0	Thunder	150						false	20;7;2;2;5;4	1	tobi-kadachi;thunder		
-530	DualBlades	6	Lurk Gold Twinblades	182	0	20				Paralysis	60	true		true	0;0;0;0;0;2		kulve;taroth;paralysis		
-531	DualBlades	6	Magma Gold Twinblades	238	-20	30				Blast	90			true	0;0;0;0;2;0		kulve;taroth;blast		
-532	DualBlades	6	Mire Gold Twinblades	182	10	20	Water	90						true	0;0;0;0;2;0		kulve;taroth;water		
-534	DualBlades	6	Rage Gold Twinblades	224	-20	20	Fire	120						true	0;0;0;0;2;0		kulve;taroth;fire		
-309	DualBlades	6	Spark Gold Twinblades	196	10	20	Thunder	60						true	0;0;0;0;0;2		kulve;taroth;thunder		
 69	DualBlades	6	Strong Hatchets II	266	0	10				Blast	180			false	11;5;5;8;11;0	3	bone;blast		
-535	DualBlades	6	Thief Gold Twinblades	210	20	20				Sleep	60			true	0;0;0;0;2;0		kulve;taroth;sleep		
 70	DualBlades	7	Anja Cyclone III	252	-20	0	Fire	210						false	10;12;4;5;9;0		anjanath;fire		
 71	DualBlades	7	Diablos Clubs II	322	-10	15	Ice	90	true					false	9;5;6;12;6;2	2	ice		
 77	DualBlades	7	Enduring Schism	196	0	0	Dragon	270					true	false	11;11;4;4;8;2	1;1	dragonbone;dragon		
 68	DualBlades	7	Holy Sabers	252	0	0	Water	120						false	6;5;6;12;7;4	3	workshop;water		
 73	DualBlades	7	Lava Cyclone II	252	0	0	Fire	150						false	20;7;2;2;5;4	2;2	lavasioth;fire		
 79	DualBlades	7	Magda Ungulae II	308	-20	20				Blast	210			false	18;3;6;9;4;0	2	zorah;magdaros;blast		
-332	DualBlades	7	Taroth Daggers "Claw"	252	20	20	Fire	90	true					true	0;0;0;0;2;0		kulve;taroth;odogaron;fire		
-489	DualBlades	7	Taroth Daggers "Erupter"	266	0	20	Fire	150						true	0;0;0;0;2;0		kulve;taroth;lavasioth;fire		
-490	DualBlades	7	Taroth Daggers "Flash"	266	0	20	Thunder	210	false					true	0;0;0;0;2;0		kulve;taroth;tzitzi-ya-ku;thunder		
-494	DualBlades	7	Taroth Daggers "Horn"	322	-10	25	Ice	150	false					true	0;0;0;0;2;0		kulve;taroth;diablos;ice		
-334	DualBlades	7	Taroth Daggers "Lurk"	238	0	20				Paralysis	90	true		true	0;0;0;0;0;2		kulve;taroth;hornetaur;paralysis		
-492	DualBlades	7	Taroth Daggers "Magma"	280	-20	30				Blast	210			true	0;0;0;0;2;0		kulve;taroth;zorah;blast		
-491	DualBlades	7	Taroth Daggers "Mire"	266	10	20	Water	210						true	0;0;0;0;2;0		kulve;taroth;jyuratodus;water		
-493	DualBlades	7	Taroth Daggers "Rage"	294	-20	20	Fire	240						true	0;0;0;0;2;0		kulve;taroth;anjanath;fire		
-640	DualBlades	7	Taroth Daggers "Spark"	252	10	20	Thunder	150						true	0;0;0;0;0;2		kulve;taroth;tobi-kadachi;thunder		
-335	DualBlades	7	Taroth Daggers "Thief"	238	0	20				Sleep	90			true	0;0;0;0;2;0		kulve;taroth;kulu-ya-ku;sleep		
+332	DualBlades	7	Taroth Daggers "Claw"	252	20	20	Fire	90	true					true	5;12;8;6;4;5		kulve;taroth;odogaron;fire		
+489	DualBlades	7	Taroth Daggers "Erupter"	266	0	20	Fire	150						false	20;7;2;2;5;4		kulve;taroth;lavasioth;fire		
+490	DualBlades	7	Taroth Daggers "Flash"	266	0	20	Thunder	210	false					false	8;5;6;12;5;4		kulve;taroth;tzitzi-ya-ku;thunder		
+494	DualBlades	7	Taroth Daggers "Horn"	322	-10	25	Ice	150	false					false	9;5;6;12;6;2		kulve;taroth;diablos;ice		
+334	DualBlades	7	Taroth Daggers "Lurk"	238	0	20				Paralysis	90	true		false	11;3;6;8;4;8		kulve;taroth;hornetaur;paralysis		
+492	DualBlades	7	Taroth Daggers "Magma"	280	-20	30				Blast	210			true	10;12;4;5;9;0		kulve;taroth;zorah;blast		
+491	DualBlades	7	Taroth Daggers "Mire"	266	10	20	Water	210						false	16;10;3;3;5;3		kulve;taroth;jyuratodus;water		
+493	DualBlades	7	Taroth Daggers "Rage"	294	-20	20	Fire	240						false	10;12;4;5;9;0		kulve;taroth;anjanath;fire		
+640	DualBlades	7	Taroth Daggers "Spark"	252	10	20	Thunder	150						true	21;2;2;5;2;8		kulve;taroth;tobi-kadachi;thunder		
+335	DualBlades	7	Taroth Daggers "Thief"	238	0	20				Sleep	90			false	8;6;6;10;7;3		kulve;taroth;kulu-ya-ku;sleep		
 277	DualBlades	7	Wrathful Predation	308	-20	0	Dragon	180					High	false	4;12;8;6;5;5		deviljho;dragon		
 65	DualBlades	8	Bazelhawk Rookslayer	280	-10	0				Blast	150			false	6;12;8;6;3;5	1	bazelgeuse;blast		
 63	DualBlades	8	Decimation Claws	294	0	0	Dragon	120					High	false	9;12;4;5;15;0	1	nergigante;dragon		
@@ -145,25 +108,13 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 14	GreatSword	6	Barroth Shredder III	960	-20	15				Paralysis	390	true		false	11;12;4;5;8;0	2;1	barroth;paralysis		
 1	GreatSword	6	Chrome Razor II	864	0	0				Poison	420	true		false	6;6;2;15;9;2	1;1	ore;poison		
 8	GreatSword	6	Datura Blaze II	816	0	0				Poison	540			false	11;12;4;5;8;0	2;1	pukei-pukei;poison		
-322	GreatSword	6	Decay Gold Fellsword	816	10	20	Dragon	150					Average	true	0;0;0;0;2;0		kulve;taroth;dragon		
-16	GreatSword	6	Dragonbone Cleaver III	768	0	0	Dragon	420					Low	false	12;11;4;4;7;2	1;1	dragon		
-536	GreatSword	6	Erupter Gold Fellsword	768	0	20	Fire	150						true	0;0;0;0;2;0		kulve;taroth;fire		
+16	GreatSword	6	Dragonbone Cleaver III	768	0	0	Dragon	420					Low	false	12;11;4;4;7;2	1;1	dragon			
 4	GreatSword	6	Frost Blaze II	768	0	0	Ice	390						false	8;6;8;8;8;2	3	legiana;ice		
 10	GreatSword	6	Giant Jawblade II	912	15	10	Ice	300	true					false	11;12;4;5;8;0	3	bone;ice		
-290	GreatSword	6	Glutton Gold Fellsword	768	0	20	Water	150	true					true	0;0;0;0;2;0	3	kulve;taroth;water		
-323	GreatSword	6	Gold Ice Fellsword	768	10	20	Ice	240	true					true	0;0;0;0;2;0		kulve;taroth;ice		
-540	GreatSword	6	Gold Sleep Fellsword	768	0	30				Sleep	210	true		true	0;0;0;0;2;0		kulve;taroth;sleep		
-541	GreatSword	6	Gold Water Fellsword	768	0	20	Water	270	true					true	0;0;0;0;2;0		kulve;taroth;water		
-5	GreatSword	6	Jagras Hacker III	912	0	0	Water	300	true					false	11;12;4;5;8;0	3;3	great;jagras;water		
-537	GreatSword	6	King Gold Fellsword	816	10	20	Fire	120						true	0;0;0;0;2;0		kulve;taroth;fire		
+5	GreatSword	6	Jagras Hacker III	912	0	0	Water	300	true					false	11;12;4;5;8;0	3;3	great;jagras;water			
 3	GreatSword	6	Lightning Punisher III	912	0	0	Thunder	240						false	10;12;4;5;9;0	2	tzitzi-ya-ku;thunder		
-321	GreatSword	6	Magma Gold Fellsword	768	-20	20				Blast	210			true	0;0;0;0;2;0		kulve;taroth;blast		
 6	GreatSword	6	Malady's Kiss III	768	20	0				Paralysis	450			false	8;6;6;10;7;3		great;girros;paralysis		
-538	GreatSword	6	Mud Gold Fellsword	864	-20	25				Paralysis	180	true		true	0;0;0;0;2;0		kulve;taroth;paralysis		
-539	GreatSword	6	Numb Gold Fellsword	672	30	20				Paralysis	210			true	0;0;0;0;2;0		kulve;taroth;paralysis		
 15	GreatSword	6	Radobaan Slab III	912	0	20				Sleep	270			false	11;12;4;5;8;0		radobaan;sleep		
-319	GreatSword	6	Spew Gold Fellsword	768	0	20				Poison	270			true	0;0;0;0;2;0		kulve;taroth;poison		
-320	GreatSword	6	Tar Gold Fellsword	816	10	20				Sleep	120			true	0;0;0;0;2;0		kulve;taroth;sleep		
 13	GreatSword	6	Water Golem III	912	0	0	Water	300						false	19;7;2;5;3;4	2	water		
 274	GreatSword	7	Anguish	1104	-30	0	Dragon	240					High	false	6;12;8;6;3;5		deviljho;dragon		
 12	GreatSword	7	Gnashing Flammenzahn	1008	-30	0	Fire	480						false	12;12;4;5;7;0		anjanath;fire		
@@ -194,25 +145,12 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 644	GreatSword	8	Empress Galea "Styx"	864	10	0				Blast	330			false	11;3;6;8;4;8	3;3	lunastra;blast	razorSharpSpareShot-1	
 156	Gunlance	6	Anja Cannon III	483	-20	0	Fire	450						false	13;7;3;10;7;0		anjanath;fire		Long-3
 155	Gunlance	6	Barroth Blaster III	460	-10	15				Paralysis	390	true		false	12;7;3;10;8;0		barroth;paralysis		Wide-3
-542	Gunlance	6	Bomber Gold Exploder	368	0	20				Blast	90			true	0;0;0;0;2;0		kulve;taroth;blast		Wide-4
 143	Gunlance	6	Chrome Gunlance II	414	0	0				Blast	270	true		false	6;6;2;15;9;2	1;1	ore;blast		Normal-3
 153	Gunlance	6	Deathfang Gunlance III	368	10	0				Paralysis	450			false	15;10;3;3;6;3		great;girros;paralysis		Normal-3
-314	Gunlance	6	Decay Gold Exploder	368	10	20	Dragon	120					Average	true	0;0;0;0;3;0		kulve;taroth;dragon		Long-3
 157	Gunlance	6	Dragonbone Gunlance III	368	0	0	Dragon	420					Low	false	12;11;4;4;7;2	1;1	dragonbone;dragon	Normal-3
-543	Gunlance	6	Glutton Gold Exploder	322	0	20				Sleep	90			true	0;0;0;0;2;0		kulve;taroth;sleep		Normal-4
 152	Gunlance	6	Glutton Gunlance III	437	0	0				Sleep	300	true		false	9;12;4;5;10;0	3;2	great;jagras;sleep		Normal-3
-305	Gunlance	6	Gold Poison Exploder	299	15	20				Poison	210	true		true	0;0;0;0;2;0		kulve;taroth;poison		Normal-3
-548	Gunlance	6	Gold Sleep Exploder	322	0	20				Sleep	210	true		true	0;0;0;0;2;0		kulve;taroth;sleep		Normal-3
-550	Gunlance	6	Gold Water Exploder	322	0	20	Water	210	true					true	0;0;0;0;2;0		kulve;taroth;water		Wide-3
 150	Gunlance	6	Great Bone Gunlance II	437	0	10	Thunder	270	true					false	10;12;4;5;9;0	3	bone;thunder	Long-2
 148	Gunlance	6	Jyura Buster III	437	0	0	Water	360						false	11;6;8;8;5;2	1	jyuratodus;water		Wide-3
-316	Gunlance	6	King Gold Exploder	322	20	20	Fire	120						true	0;0;0;0;6;0		kulve;taroth;fire		Long-4
-544	Gunlance	6	Mire Gold Exploder	322	0	20	Water	180						true	0;0;0;0;2;0		kulve;taroth;water		Wide-3
-545	Gunlance	6	Mud Gold Exploder	299	-10	25				Paralysis	180	true		true	0;0;0;0;0;2		kulve;taroth;paralysis	Wide-3	
-546	Gunlance	6	Numb Gold Exploder	322	10	20				Paralysis	210			true	0;0;0;0;2;0		kulve;taroth;paralysis		Normal-3
-547	Gunlance	6	Rage Gold Exploder	345	-20	20	Fire	210						true	0;0;0;0;2;0		kulve;taroth;fire		Wide-3
-315	Gunlance	6	Spark Gold Exploder	322	20	20	Thunder	120						true	0;0;0;0;6;0		kulve;taroth;thunder		Long-3
-549	Gunlance	6	Stream Gold Exploder	322	10	20	Ice	180						true	0;0;0;0;2;0		kulve;taroth;ice		Normal-3
 151	Gunlance	7	Bazel Buster II	460	-10	0				Blast	210			false	6;12;8;6;3;5	1	bazelgeuse;blast	Wide-3
 154	Gunlance	7	Hazak Spysa II	460	0	0	Dragon	270					Average	false	20;7;2;2;5;4	2	vaal;hazak;dragon		Long-3
 281	Gunlance	7	Insatiable Gunlance	529	-30	0	Dragon	240					High	false	4;12;8;6;5;5		deviljho;dragon		Long-3
@@ -244,23 +182,11 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 92	Hammer	6	Baan Strike III	988	0	20				Sleep	270			false	11;12;4;5;8;0		radobaan;sleep		
 96	Hammer	6	Barroth Breaker III	1040	-10	15				Paralysis	390	true		false	11;12;4;5;8;0	2;1	barroth;paralysis		
 94	Hammer	6	Crushing Beak III	884	0	0				Sleep	360	true		false	12;11;4;4;7;2		kulu-ya-ku;sleep		
-302	Hammer	6	Decay Gold Bludgeon	936	0	20	Dragon	120						true	0;0;0;0;2;0		kulve;taroth;dragon		
 98	Hammer	6	Dragonbone Basher III	832	0	0	Dragon	420					Low	false	12;11;4;4;7;2	1	dragonbone;dragon		
-553	Hammer	6	Gold Ice Bludgeon	832	0	20	Ice	210	true					true	0;0;0;0;2;0		kulve;taroth;ice		
-301	Hammer	6	Gold Thunder Bludgeon	832	0	30				Thunder	240	true		true	0;0;0;0;2;0		kulve;taroth;thunder		
-336	Hammer	6	Gold Water Bludgeon	832	0	30	Water	180	true					true	0;0;0;0;2;0		kulve;taroth;water		
 90	Hammer	6	Grandrock II	988	0	10	Thunder	420	true					false	11;12;4;5;8;0	3	bone;thunder		
-551	Hammer	6	Gyre Gold Bludgeon	936	0	30	Fire	60						true	0;0;0;0;2;0		kulve;taroth;fire		
-552	Hammer	6	Horn Gold Bludgeon	988	-25	20	Ice	60						true	0;0;0;0;2;0		kulve;taroth;ice		
 83	Hammer	6	Iron Archdemon II	936	0	0				Blast	270	true		false	6;6;2;15;9;2	1;1	ore;blast		
 89	Hammer	6	Lightning Bash III	988	0	0	Thunder	300						false	15;10;3;3;6;3	2	tobi-kadachi;thunder		
-87	Hammer	6	Malady's Fist III	832	20	0				Paralysis	390			false	9;6;6;10;6;3		great;girros;paralysis		
-338	Hammer	6	Mud Gold Bludgeon	936	-10	25				Paralysis	180	true		true	0;0;0;0;2;0	1	kulve;taroth;paralysis		
-337	Hammer	6	Numb Gold Bludgeon	728	30	20				Paralysis	180			true	0;0;0;0;2;0		kulve;taroth;paralysis		
-554	Hammer	6	Rage Gold Bludgeon	884	-20	20	Fire	210						true	0;0;0;0;2;0		kulve;taroth;fire		
-555	Hammer	6	Spew Gold Bludgeon	780	0	20				Poison	270			true	0;0;0;0;2;0		kulve;taroth;poison		
-556	Hammer	6	Tar Gold Bludgeon	780	10	30				Sleep	120			true	0;0;0;0;2;0		kulve;taroth;sleep		
-557	Hammer	6	Thief Gold Bludgeon	884	35	20				Sleep	120	true		true	0;0;0;0;2;0		kulve;taroth;sleep		
+87	Hammer	6	Malady's Fist III	832	20	0				Paralysis	390			false	9;6;6;10;6;3		great;girros;paralysis			
 86	Hammer	6	Water Basher III	936	0	0	Water	240						false	9;6;8;8;7;2	2	jyuratodus;water		
 93	Hammer	7	Brazenbreak II	1092	0	30	Fire	120						false	12;12;4;5;7;0	3	uragaan;fire		
 88	Hammer	7	Buona Flora	936	0	0				Poison	540			false	10;12;4;5;9;0	2;2	pukei-pukei;poison		
@@ -336,25 +262,13 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 680	HeavyBowgun	8	Empress Cannon "Styx"	285	10	0								false		3;1	lunastra	razorSharpSpareShot-1	
 113	HuntingHorn	6	Anja Barone III	882	-20	0	Fire	450						false	12;12;4;5;7;0		anjanath;fire		
 118	HuntingHorn	6	Baan Horn III	798	0	20				Sleep	270			false	11;12;4;5;8;0		radobaan;sleep		
-368	HuntingHorn	6	Buzzer Gold Flute	546	30	20				Paralysis	150			true	0;0;0;0;2;0		kulve;taroth;paralysis		
-371	HuntingHorn	6	Crusher Gold Flute	714	10	20				Blast	90			true	0;0;0;0;2;0		kulve;taroth;blast		
 107	HuntingHorn	6	Dancing Davul III	714	25	0				Sleep	360	true		false	9;6;8;8;7;2		kulu-ya-ku;sleep		
 114	HuntingHorn	6	Datura Horn III	714	0	0				Poison	540			false	11;12;4;5;8;0	2;1	pukei-pukei;poison		
-119	HuntingHorn	6	Dragonbone Auldhorn III	672	0	0	Dragon	420					Low	false	12;11;4;4;7;2	1;1	dragonbone;dragon		
-369	HuntingHorn	6	Drifter Gold Flute	630	10	20	Water	210						true	0;0;0;0;2;0		kulve;taroth;water		
+119	HuntingHorn	6	Dragonbone Auldhorn III	672	0	0	Dragon	420					Low	false	12;11;4;4;7;2	1;1	dragonbone;dragon			
 104	HuntingHorn	6	Fortissimo II	756	0	0				Paralysis	270	true		false	6;6;2;15;9;2	1;1	ore;paralysis		
-295	HuntingHorn	6	Gold Dragon Flute	672	0	20	Dragon	270	true				Low	true	0;0;0;0;3;0		kulve;taroth;dragon		
-565	HuntingHorn	6	Gold Paralysis Flute	588	0	20				Paralysis	210	true		true	0;0;0;0;2;0		kulve;taroth;paralysis		
-370	HuntingHorn	6	Gold Water Flute	630	10	20	Water	300	true					true	0;0;0;0;2;0		kulve;taroth;water		
 111	HuntingHorn	6	Heavy Bone Horn II	798	0	10	Ice	270	true					false	11;12;4;5;8;0	3	bone;ice		
 106	HuntingHorn	6	Lightning Drum III	756	0	0	Thunder	240						false	9;6;8;8;7;2	3	tobi-kadachi;thunder		
 115	HuntingHorn	6	Lumu Barone III	714	10	0	Water	570	true					false	8;5;6;12;5;4	3;1	paolumu;water		
-372	HuntingHorn	6	Myth Gold Flute	504	0	20				Thunder	270			true	0;0;0;0;0;2		kulve;taroth;thunder		
-566	HuntingHorn	6	Rage Gold Flute	714	-20	20	Fire	210						true	0;0;0;0;2;0		kulve;taroth;fire		
-567	HuntingHorn	6	Spew Gold Flute	630	0	20				Poison	270			true	0;0;0;0;2;0	1	kulve;taroth;poison		
-312	HuntingHorn	6	Stream Gold Flute	588	0	20	Ice	180						true	0;0;0;0;6;0		kulve;taroth;ice		
-568	HuntingHorn	6	Tar Gold Flute	714	10	30				Sleep	120			true	0;0;0;0;2;0		kulve;taroth;sleep		
-569	HuntingHorn	6	Thief Gold Flute	588	35	20				Sleep	180	true		true	0;0;0;0;2;0		kulve;taroth;sleep		
 109	HuntingHorn	6	Water Tamtam III	756	0	0	Water	270						false	9;6;8;8;7;2	2	jyuratodus;water		
 279	HuntingHorn	7	Deep Vero	924	-30	0	Dragon	240					High	false	5;12;8;6;4;5		deviljho;dragon		
 112	HuntingHorn	7	Gama Horn II	798	0	0				Blast	150			false	12;11;4;4;7;2	2;2	dodogama;blast		
@@ -383,23 +297,11 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 659	HuntingHorn	8	Empress Roar "Styx"	798	10	0				Blast	240			false	11;3;6;8;4;8	3;1	lunastra;blast	razorSharpSpareShot-1	
 206	InsectGlaive	6	Aerial Rod II	589	0	10				Paralysis	210	true		false	9;12;4;5;10;0	3	bone;paralysis		Blunt
 198	InsectGlaive	6	Chrome Blade II	558	0	0				Blast	270	true		false	6;6;2;15;9;2	1;1	ore;blast		Sever
-570	InsectGlaive	6	Claw Gold Naginata	434	20	20	Fire	60	true					true	0;0;0;0;2;0		kulve;taroth;fire		Speed
-571	InsectGlaive	6	Crusher Gold Naginata	465	0	20				Blast	90			true	0;0;0;0;2;0	2;2	kulve;taroth;blast		Stamina
 204	InsectGlaive	6	Datura Blade III	527	0	0				Poison	390			false	9;12;4;5;10;0	2;1	pukei-pukei;poison		Health
-572	InsectGlaive	6	Decay Gold Naginata	465	0	20	Dragon	90					Average	true	0;0;0;0;0;2		kulve;taroth;dragon		Blunt
 202	InsectGlaive	6	Destroyer Bo III	558	0	0	Thunder	300	true					false	8;5;6;12;5;4	3	tzitzi-ya-ku;thunder		Speed
 213	InsectGlaive	6	Dragonbone Glaive III	496	0	0	Dragon	390					Low	false	12;11;4;4;7;2	1;1	dragonbone;dragon		Element
-573	InsectGlaive	6	Flash Gold Naginata	527	0	20	Thunder	150	true					true	0;0;0;0;2;0		kulve;taroth;thunder		Speed
 203	InsectGlaive	6	Freeze Gale II	527	0	0	Ice	240						false	9;6;8;8;7;2	2;2	legiana;ice		Element
-575	InsectGlaive	6	Gold Ice Naginata	434	0	20	Ice	180	true					true	0;0;0;0;2;0		kulve;taroth;ice		Element
-577	InsectGlaive	6	Gold Paralysis Naginata	434	0	30				Paralysis	180	true		true	0;0;0;0;2;0		kulve;taroth;paralysis		Blunt
-581	InsectGlaive	6	Gold Water Naginata	465	0	20	Water	180	true					true	0;0;0;0;2;0		kulve;taroth;water		Element
-574	InsectGlaive	6	Horn Gold Naginata	620	-30	25	Ice	120	true					true	0;0;0;0;2;0		kulve;taroth;ice		Stamina
 211	InsectGlaive	6	Kadachi Pillar III	558	10	0	Thunder	240						false	19;7;2;2;6;4	1	tobi-kadachi;thunder		Speed
-576	InsectGlaive	6	King Gold Naginata	496	20	20	Fire	120						true	0;0;0;0;2;0		kulve;taroth;fire		Sever
-578	InsectGlaive	6	Spark Gold Naginata	465	20	20	Thunder	120						true	0;0;0;0;2;0		kulve;taroth;thunder		Speed
-579	InsectGlaive	6	Spew Gold Naginata	465	0	20				Poison	180			true	0;0;0;0;2;0	1	kulve;taroth;poison		Health
-580	InsectGlaive	6	Thief Gold Naginata	465	30	20				Sleep	120	true		true	0;0;0;0;2;0		kulve;taroth;sleep		Speed
 209	InsectGlaive	6	Water Glaive III	589	0	0	Water	210						false	11;12;4;5;8;0	2	jyuratodus;water		Element
 201	InsectGlaive	6	Ya-Ku Wrath III	527	20	0				Sleep	210	true		false	8;6;6;10;7;3		kulu-ya-ku;sleep		Speed
 200	InsectGlaive	7	Firedance Rathmaul	589	20	0	Fire	180						false	9;6;6;10;6;3	1	rathalos;fire		Sever
@@ -431,24 +333,12 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 684	InsectGlaive	8	Gae Bolg	589	20	0	Dragon	300						false	6;6;2;15;9;2	2	behemoth;dragon		Element
 134	Lance	6	Barroth Stinger III	460	-20	15				Paralysis	390	true		false	10;12;4;5;9;0	2;1	barroth;paralysis		
 123	Lance	6	Chrome Lance	414	0	0				Paralysis	270	true		false	6;6;2;15;9;2	1;1	ore;paralysis		
-313	Lance	6	Claw Gold Defender	299	30	20	Fire	60	true					true	0;0;0;0;4;0		kulve;taroth;fire		
-582	Lance	6	Crusher Gold Defender	345	10	20				Blast	90			true	0;0;0;0;2;0		kulve;taroth;blast		
 133	Lance	6	Dark Stinger III	368	0	0				Blast	240	true		false	11;3;6;8;4;8	3	hornetaur;paralysis		
 129	Lance	6	Datura Pike III	391	0	0				Poison	540			false	10;12;4;5;9;0	2;1	pukei-pukei;poison		
-304	Lance	6	Decay Gold Defender	322	0	20	Dragon	210						true	0;0;0;0;4;0		kulve;taroth;dragon		
-137	Lance	6	Dragonbone Lance III	368	0	0	Dragon	420					Low	false	12;11;4;4;7;2	1;1	dragonbone;dragon		
-586	Lance	6	Gold Sleep Defender	322	10	20				Sleep	210	true		true	0;0;0;0;2;0		kulve;taroth;sleep		
-590	Lance	6	Gold Thunder Defender	299	20	20	Thunder	270	true					true	0;0;0;0;2;0		kulve;taroth;thunder		
-591	Lance	6	Gold Water Defender	345	0	25	Water	120	true					true	0;0;0;0;2;0		kulve;taroth;water		
+137	Lance	6	Dragonbone Lance III	368	0	0	Dragon	420					Low	false	12;11;4;4;7;2	1;1	dragonbone;dragon			
 131	Lance	6	Heavy Bone Lance II	437	0	10				Poison	240	true		false	10;12;4;5;9;0	3	bone;poison		
-583	Lance	6	King Gold Defender	299	0	20	Fire	150						true	0;0;0;0;0;2		kulve;taroth;fire		
 126	Lance	6	Kula Hasta III	391	25	0				Sleep	360	true		false	9;6;6;10;6;3		kulu-ya-ku;sleep		
 128	Lance	6	Lightning Spire III	414	0	0	Thunder	240						false	9;6;8;8;7;2	2	tobi-kadachi;thunder		
-584	Lance	6	Lurk Gold Defender	299	10	20				Blast	40			true	0;0;0;0;0;2		kulve;taroth;blast		
-585	Lance	6	Mud Gold Defender	345	-20	25				Paralysis	120			true	0;0;0;0;2;0		kulve;taroth;paralysis		
-587	Lance	6	Spew Gold Defender	345	0	20				Poison	270			true	0;0;0;0;2;0	1	kulve;taroth;poison		
-588	Lance	6	Stream Gold Defender	299	0	20	Ice	150						true	0;0;0;0;0;2		kulve;taroth;ice		
-589	Lance	6	Thief Gold Defender	322	10	20				Sleep	90			true	0;0;0;0;2;0		kulve;taroth;sleep		
 136	Lance	6	Water Spike III	437	0	0	Water	300						false	11;12;4;5;8;0	2	jyuratodus;water		
 280	Lance	7	Fiendish Tower	529	-25	0	Dragon	210					High	false	5;12;8;6;4;5		deviljho;dragon		
 127	Lance	7	Gama Pilebunker II	391	0	0				Blast	210			false	9;6;8;8;7;2	2;2	dodogama;blast		
@@ -480,26 +370,13 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 662	Lance	8	Empress Lance "Styx"	414	10	0				Blast	240			false	11;3;6;8;4;8	3;3	lunastra;blast	razorSharpSpareShot-1	
 227	LightBowgun	6	Anja Buster III	273	-30	0								false			anjanath		
 230	LightBowgun	6	Barroth Shot III	260	-20	15								false		1	barroth		
-592	LightBowgun	6	Bomber Gold Razer	221	-20	20								false			kulve;taroth		
-593	LightBowgun	6	Claw Gold Razer	195	30	20								false			kulve;taroth		
-217	LightBowgun	6	Cross Blitz II	234	0	0								false		1;1	ore		
-594	LightBowgun	6	Decay Gold Razer	221	0	20								false			kulve;taroth		
+217	LightBowgun	6	Cross Blitz II	234	0	0								false		1;1	ore				
 232	LightBowgun	6	Dragonbone Bowgun III	208	0	0								false		1	dragonbone		
-595	LightBowgun	6	Drifter Gold Razer	182	20	20								false			kulve;taroth		
-596	LightBowgun	6	Erupter Gold Razer	208	0	20								false			kulve;taroth		
 224	LightBowgun	6	Frost Blitz II	247	0	0								false			legiana		
-597	LightBowgun	6	Glutton Gold Razer	221	0	20								false			kulve;taroth		
-601	LightBowgun	6	Gold Pierce Razer	195	10	20								false			kulve;taroth		
-602	LightBowgun	6	Gold Shot Razer	208	0	20								false			kulve;taroth		
-603	LightBowgun	6	Gold Spread Razer	195	10	20								false			kulve;taroth		
 221	LightBowgun	6	Jagras Fire	247	0	0								false		3;2	great;jagras		
-228	LightBowgun	6	Jyura Bullet III	247	0	0								false		1;1	jyuratodus		
-598	LightBowgun	6	King Gold Razer	195	0	20								false			kulve;taroth		
+228	LightBowgun	6	Jyura Bullet III	247	0	0								false		1;1	jyuratodus				
 223	LightBowgun	6	Lightning Blitz III	234	0	0								false		1	tobi-kadachi		
 219	LightBowgun	6	Lumu Typhon III	221	15	0								false		1	paolumu		
-599	LightBowgun	6	Mire Gold Razer	208	10	20								false			kulve;taroth		
-600	LightBowgun	6	Mud Gold Razer	221	-10	25								false			kulve;taroth		
-387	LightBowgun	6	Rage Gold Razer	221	-10	20								false			kulve;taroth		
 225	LightBowgun	6	Sniper Shot II	247	0	10								false		3	bone		
 220	LightBowgun	7	Bazel Typhoon II	260	-10	0								false			bazelgeuse		
 285	LightBowgun	7	Devil's Madness	299	-25	0								false			deviljho		
@@ -533,24 +410,11 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 29	LongSword	6	Bone Reaper II	627	0	10				Sleep	270	true		false	10;12;4;5;9;0	3	bone;sleep		
 36	LongSword	6	Dark Scimitar III	528	0	0				Paralysis	240	true		false	11;3;6;8;4;8	2	hornetaur;paralysis		
 24	LongSword	6	Dazzling Flash III	594	0	0	Thunder	360	true					false	8;5;6;12;5;4	3	tzitzi-ya-ku;thunder		
-604	LongSword	6	Decay Gold Katana	561	10	20	Dragon	120					Average	true	0;0;0;0;2;0		kulve;taroth;dragon		
 32	LongSword	6	Dipterus III	627	0	0	Water	360						false	17;10;3;3;4;3	3	jyuratodus;water		
 37	LongSword	6	Dragonbone Stabber III	528	0	0	Dragon	420					Low	false	15;10;3;3;6;3	1	dragonbone;dragon		
-605	LongSword	6	Flash Gold Katana	528	0	20	Thunder	180						true	0;0;0;0;2;0		kulve;taroth;thunder		
-291	LongSword	6	Gold Paralysis Katana	495	0	20				Paralysis	150	true		true	0;0;0;0;0;2		kulve;taroth;paralysis		
-610	LongSword	6	Gold Poison Katana	528	10	20				Poison	210	true		true	0;0;0;0;0;2		kulve;taroth;poison		
-615	LongSword	6	Gold Water Katana	528	0	20	Water	210	true					true	0;0;0;0;2;0		kulve;taroth;water		
-606	LongSword	6	Gyre Gold Katana	528	0	40	Fire	90						true	0;0;0;0;2;0	1	kulve;taroth;fire		
 22	LongSword	6	Iron Gospel II	594	0	0	Water	180	true					false	5;6;2;15;9;3	1;1	ore;water		
 34	LongSword	6	Kadachi Fang III	594	15	0	Thunder	270						false	15;10;3;3;6;3	1	tobi-kadachi;thunder		
 25	LongSword	6	Last Dance III	561	20	0				Sleep	270	true		false	8;6;8;8;8;2		kulu-ya-ku;sleep		
-607	LongSword	6	Lurk Gold Katana	396	0	20				Paralysis	120			true	0;0;0;0;0;2		kulve;taroth;paralysis		
-608	LongSword	6	Magma Gold Katana	528	-20	30				Blast	180			true	0;0;0;0;2;0		kulve;taroth;blast		
-609	LongSword	6	Mire Gold Katana	594	0	20	Water	180						true	0;0;0;0;2;0		kulve;taroth;water		
-611	LongSword	6	Rage Gold Katana	561	-10	20	Fire	180						true	0;0;0;0;2;0		kulve;taroth;fire		
-612	LongSword	6	Spark Gold Katana	528	30	20	Thunder	120						true	0;0;0;0;2;0		kulve;taroth;thunder		
-613	LongSword	6	Stream Gold Katana	462	0	20	Ice	180						true	0;0;0;0;0;2		kulve;taroth;ice		
-614	LongSword	6	Thief Gold Katana	495	20	20				Sleep	120			true	0;0;0;0;2;0		kulve;taroth;sleep		
 641	LongSword	7	Azure Star "Dragon Dance"	495	30	0	Water	180						false	12;3;6;8;4;7	3	water		
 26	LongSword	7	Brazenridge II	660	-10	30	Fire	120						false	9;5;5;8;13;0	3;1	uragaan;fire		
 33	LongSword	7	Hazak Grosser II	660	0	0	Dragon	270					Average	false	20;7;2;2;5;4	2	vaal;hazak;dragon		
@@ -581,24 +445,11 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 646	LongSword	8	Empress Sword "Ruin"	627	0	0				Blast	150			false	11;3;6;8;4;8	2;2	lunastra;blast	hastenRecovery-1	
 647	LongSword	8	Empress Sword "Styx"	594	10	0				Blast	240			false	11;3;6;8;4;8	3;3	lunastra;blast	razorSharpSpareShot-1	
 173	SwitchAxe	6	Barroth Grinder III	735	-20	15				Paralysis	300	true		false	12;7;3;10;8;0	3;1	barroth;paralysis		Paralysis-270
-616	SwitchAxe	6	Bomber Gold Chopper	595	0	20				Blast	90			true	0;0;0;0;2;0		kulve;taroth;blast		Power
-617	SwitchAxe	6	Decay Gold Chopper	525	30	20	Dragon	90					Average	true	0;0;0;0;0;2		kulve;taroth;dragon		Power Element
 176	SwitchAxe	6	Dragonbone Slicer III	560	0	0	Dragon	330					Low	false	12;11;4;4;7;2	1;1	dragonbone;dragon		Power Element
-618	SwitchAxe	6	Drifter Gold Chopper	525	25	20				Blast	210	true		true	0;0;0;0;2;0		kulve;taroth;blast		Power
-619	SwitchAxe	6	Glutton Gold Chopper	560	0	20				Sleep	90			true	0;0;0;0;2;0		kulve;taroth;sleep		Power
-625	SwitchAxe	6	Gold Paralysis Chopper	525	-20	25				Paralysis	210	true		true	0;0;0;0;2;0		kulve;taroth;paralysis		Power
-626	SwitchAxe	6	Gold Sleep Chopper	490	0	20				Sleep	180	true		true	0;0;0;0;2;0		kulve;taroth;sleep		Power
-628	SwitchAxe	6	Gold Thunder Chopper	455	10	20	Thunder	240						true	0;0;0;0;2;0		kulve;taroth;thunder		Power
-620	SwitchAxe	6	Gyre Gold Chopper	560	10	40	Fire	60						true	0;0;0;0;2;0		kulve;taroth;fire		Power
-621	SwitchAxe	6	Horn Gold Chopper	665	-30	25	Ice	120						true	0;0;0;0;2;0		kulve;taroth;ice		Power
 166	SwitchAxe	6	Jagras Raider III	665	0	0				Sleep	240	true		false	11;12;4;5;8;0	3;2	great;jagras;sleep		Exhaust-210
-622	SwitchAxe	6	King Gold Chopper	490	15	20	Fire	90						true	0;0;0;0;2;0		kulve;taroth;fire		Power
 164	SwitchAxe	6	Lightning Chopper III	630	0	0	Thunder	180						false	9;6;8;8;7;2	2	tobi-kadachi;thunder		Power
-623	SwitchAxe	6	Mire Gold Chopper	560	0	20	Water	150						true	0;0;0;0;2;0		kulve;taroth;water		Power Element
-624	SwitchAxe	6	Mud Gold Chopper	560	-20	25				Paralysis	90			true	0;0;0;0;2;0		kulve;taroth;paralysis		Power
 161	SwitchAxe	6	Perfected Alloy Axe II	630	0	0				Poison	420	true		false	6;6;2;15;9;2	1;1	ore;poison		Poison-420
 169	SwitchAxe	6	Power Smasher II	665	10	10							Average	false	10;12;4;5;9;0	3	bone		Dragon-420
-627	SwitchAxe	6	Stream Gold Chopper	455	10	20	Ice	150						true	0;0;0;0;2;0		kulve;taroth;ice		Power Element
 167	SwitchAxe	7	Bazel Raider II	700	-15	0				Blast	180			false	7;12;8;6;2;5	1	bazelgeuse;blast		Power
 175	SwitchAxe	7	Gnashing Flammenbeil	735	-20	0	Fire	300						false	11;12;4;5;8;0		anjanath;fire		Power Element
 170	SwitchAxe	7	Hazak Demios II	700	0	0	Dragon	210					Average	false	20;7;2;2;5;4	2	vaal;hazak;dragon		Power Element
@@ -633,26 +484,13 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 56	SwordAndShield	6	Barroth Club II	294	-10	15				Paralysis	180	true		false	10;12;4;5;9;0	2;1	barroth;paralysis		
 42	SwordAndShield	6	Chrome Slicer II	252	0	0				Sleep	240	true		false	5;6;2;15;9;3	1;1	ore;sleep		
 50	SwordAndShield	6	Datura Blossom III	238	0	0				Poison	390			false	9;12;4;5;10;0	2;1	pukei-pukei;poison		
-58	SwordAndShield	6	Dragonbone Sword III	196	0	0	Dragon	450					Low	false	15;10;3;3;6;3	1	dragonbone;dragon		
-630	SwordAndShield	6	Drifter Gold Scimitar	210	0	20				Blast	120			true	0;0;0;0;2;0		kulve;taroth;blast		
-631	SwordAndShield	6	Glutton Gold Scimitar	238	0	20	Water	120						true	0;0;0;0;2;0		kulve;taroth;water		
-293	SwordAndShield	6	Gold Blast Scimitar	224	0	20				Blast	180	true		true	0;0;0;0;3;0		kulve;taroth;blast		
-629	SwordAndShield	6	Gold Dragon Scimtar	196	0	20	Dragon	210	true				Average	true	0;0;0;0;2;0		kulve;taroth;dragon		
-639	SwordAndShield	6	Gold Water Scimtar	224	10	20	Water	210	true					true	0;0;0;0;2;0		kulve;taroth;water		
+58	SwordAndShield	6	Dragonbone Sword III	196	0	0	Dragon	450					Low	false	15;10;3;3;6;3	1	dragonbone;dragon				
 52	SwordAndShield	6	Grand Barong II	266	0	10				Paralysis	300	true		false	9;12;4;5;10;0	3	bone;paralysis		
 54	SwordAndShield	6	Jagras Garotte III	266	0	0	Water	360	true					false	9;12;4;5;10;0	3;2	great;jagras;water		
-632	SwordAndShield	6	King Gold Scimitar	210	30	20	Fire	120						true	0;0;0;0;2;0		kulve;taroth;fire		
 55	SwordAndShield	6	Lightning Nemesis III	266	0	0	Thunder	210						false	10;12;4;5;9;0	2	thunder		
 49	SwordAndShield	6	Lumu Tabar III	238	0	0				Blast	330	true		false	8;5;6;12;5;4	3;1	paolumu;blast		
 51	SwordAndShield	6	Malady's Tabar III	224	20	0				Paralysis	240			false	8;5;6;12;5;4		great;girros;paralysis		
-633	SwordAndShield	6	Mud Gold Scimitar	252	-10	25				Paralysis	180	true		true	0;0;0;0;2;0	1	kulve;taroth;paralysis		
-634	SwordAndShield	6	Myth Gold Scimitar	196	0	20	Thunder	180						true	0;0;0;0;2;0		kulve;taroth;thunder		
-635	SwordAndShield	6	Numb Gold Scimtar	196	30	20				Paralysis	120			true	0;0;0;0;2;0		kulve;taroth;paralysis		
-636	SwordAndShield	6	Rage Gold Scimitar	224	-20	20	Fire	120						true	0;0;0;0;2;0		kulve;taroth;fire		
 46	SwordAndShield	6	Rogue Wave III	252	0	0	Water	240						false	10;6;6;10;5;3	2	water		
-292	SwordAndShield	6	Spew Gold Scimitar	224	0	20				Poison	180			true	0;0;0;0;4;0	1	kulve;taroth		
-637	SwordAndShield	6	Stream Gold Scimitar	196	0	20	Ice	150						true	0;0;0;0;0;2		kulve;taroth;ice		
-638	SwordAndShield	6	Tar Gold Scimitar	224	10	30				Sleep	120			true	0;0;0;0;2;0		kulve;taroth;sleep		
 44	SwordAndShield	7	Corona	266	20	0	Fire	180						false	9;6;6;10;6;3	1	rathalos;fire		
 276	SwordAndShield	7	Fatal Bite	308	-20	0	Dragon	210					High	false	5;12;8;6;4;5		deviljho;dragon		
 57	SwordAndShield	7	Gnashing Flammensucher	294	-20	0	Fire	240						false	10;12;4;5;9;0		anjanath;fire		

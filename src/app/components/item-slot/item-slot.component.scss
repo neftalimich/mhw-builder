@@ -44,7 +44,7 @@ $equipmentHeight: 40px;
 	.levels-container {
 		grid-column: 3;
 		display: grid;
-		grid-template-columns: $equipmentHeight min-content $equipmentHeight;
+		grid-template-columns: 40px min-content 40px;
 
 		.level-down-button {
 			grid-column: 1;
@@ -75,7 +75,7 @@ $equipmentHeight: 40px;
 
 .augmentation-container {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 	// grid-template-columns: repeat(3, 1fr);
 	grid-gap: 4px;
 }

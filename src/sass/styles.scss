@@ -12,7 +12,7 @@ body {
 	color: white;
 	// font-family: Arial, Helvetica, sans-serif;
 	font-family: 'Roboto', sans-serif;
-	height: 100%;
+	min-height: 100%;
 	overflow: auto;
 }
 
@@ -63,6 +63,23 @@ h4 {
 	.close-btn-sm {
 		visibility: visible !important;
 		float: right;
+	}
+
+	.visible-xs {
+		display: block !important;
+	}
+
+	.hidden-xs {
+		display: none !important;
+	}
+}
+@media (min-width:577px) {
+	.visible-xs {
+		display: none !important;
+	}
+
+	.hidden-xs {
+		display: block !important;
 	}
 }
 
