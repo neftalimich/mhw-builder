@@ -28,6 +28,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 273	Bow	8	Great Hunter's Bow	228	0	20				Blast	150			false		3	workshop;blast		Close;Paralysis;Poison;Sleep;Blast
 263	Bow	8	Legia Snowfletcher	180	0	0	Ice	390						false			legiana;ice		Close;Power;Poison;Sleep
 308	Bow	8	Taroth Arrow "Blast"	240	0	30	Blast	360	true					false		3	kulve;taroth;blast		Close;Paralysis;Poison;Sleep;Blast
+685	Bow	8	Taroth Arrow "Fire"	240	10	20	Fire	360	true					false		3	kulve;taroth;fire		Close;Power
 411	Bow	8	Taroth Arrow "Thunder"	228	10	20	Thunder	360	true					false		3	kulve;taroth;thunder		Close;Power
 357	Bow	8	Taroth Arrow "Water"	228	0	30	Water	360	true					false		3	kulve;taroth;water		Close;Paralysis;Poison
 272	Bow	8	Xeno Metora	204	15	0	Dragon	180					Low	false		3;3	xeno'jiva;dragon		Close;Power;Poison;Blast
@@ -64,6 +65,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 346	ChargeBlade	8	Taroth Strongarm "Ice"	648	0	20	Ice	390	true					false	6;5;6;12;7;4	3	kulve;taroth;ice		Impact
 405	ChargeBlade	8	Taroth Strongarm "Sleep"	684	0	20				Sleep	270	true		false	7;5;6;12;6;4	3	kulve;taroth;sleep		Impact
 406	ChargeBlade	8	Taroth Strongarm "Thunder"	684	0	20	Thunder	420	true					false	7;5;6;12;6;4	3	kulve;taroth;thunder		Impact
+686	ChargeBlade	8	Taroth Strongarm "Water"	648	20	20	Water	300						false	22;2;2;2;3;9	3	kulve;taroth;water		Power Element
 197	ChargeBlade	8	Xeno Ra'atz	648	15	0	Dragon	180					Low	false	13;3;6;8;4;6	3;3	xeno'jiva;dragon		Impact
 669	ChargeBlade	8	Empress Alma "Blaze"	648	20	0				Blast	150			false	10;3;6;9;3;9	2;1	lunastra;blast	guts-1	Impact
 670	ChargeBlade	8	Empress Alma "Ruin"	684	0	0				Blast	120			false	10;3;6;9;3;9	2;2	lunastra;blast	hastenRecovery-1	Impact
@@ -98,6 +100,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 80	DualBlades	8	Fire and Ice	252	10	0	Ice	240		Blast	240			false	6;5;6;12;7;4	2	blacksteel;ice;blast		
 78	DualBlades	8	Monarch	224	0	0	Thunder	270						false	11;2;2;12;13;0		kirin;thunder		
 76	DualBlades	8	Sin	224	20	0	Fire	180	true					false	20;7;2;2;5;9		odogaron;fire		
+687	DualBlades	8	Taroth Daggers "Blast"	252	0	20	Fire	180	true					false	22;2;2;2;3;9	3	kulve;taroth;fire		
 333	DualBlades	8	Taroth Daggers "Ice"	266	0	20	Ice	270	true					false	5;5;6;12;8;4	3	kulve;taroth;ice		
 391	DualBlades	8	Taroth Daggers "Poison"	266	0	20				Poison	330	true		false	5;5;6;12;8;4	3	kulve;taroth;poison		
 392	DualBlades	8	Taroth Daggers "Water"	266	0	20	Water	270	true					false	19;7;2;2;6;4	3	kulve;taroth;water		
@@ -138,6 +141,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 9	GreatSword	8	Rathalos Glinsword	912	15	0	Fire	240						false	9;6;6;10;6;3	1	fire		
 299	GreatSword	8	Taroth Blaze "Ice"	912	10	20	Ice	510	true					false	6;5;6;12;7;4	3	kulve;taroth;ice		
 329	GreatSword	8	Taroth Blaze "Sleep"	912	0	20				Sleep	450	true		false	8;5;6;12;5;4	3	kulve;taroth;sleep		
+688	GreatSword	8	Taroth Blaze "Thunder"	1008	0	20	Thunder	600	true					false	8;10;4;4;14;0	3	kulve;taroth;thunder		
 328	GreatSword	8	Taroth Blaze "Water"	912	0	20	Water	540	true					false	15;10;3;3;6;3	3	kulve;taroth;water		
 20	GreatSword	8	Xeno Maliq	816	15	0	Dragon	210					Low	false	13;3;6;8;4;6	3;3	xeno'jiva;dragon		
 642	GreatSword	8	Empress Galea "Blaze"	864	20	0				Blast	270			false	11;3;6;8;4;8	2;1	lunastra;blast	guts-1	
@@ -171,6 +175,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 159	Gunlance	8	Daora's Brigia	414	10	0	Ice	240						false	9;6;8;8;7;2	3	kushala;daora;ice		Long-3
 158	Gunlance	8	Earthshaker Magda Lahat	460	-10	20				Blast	420			false	21;3;4;9;3;0		zorah;magdaros;blast		Long-4
 144	Gunlance	8	Eradication Flame	483	0	0	Dragon	150					High	false	11;12;4;5;13;0	2	nergigante;dragon		Wide-2
+689	Gunlance	8	Taroth Buster "Ice"	414	0	20	Ice	450	true					false	22;2;2;2;3;9	3	kulve;taroth;ice		Long-3
 400	Gunlance	8	Taroth Buster "Poison"	460	15	20				Poison	450	true		false	6;5;6;12;7;4	3	kulve;taroth;poison		Normal-3
 399	Gunlance	8	Taroth Buster "Sleep"	437	0	20				Sleep	450	true		false	18;7;2;2;7;4	3	kulve;taroth;sleep		Normal-4
 401	Gunlance	8	Taroth Buster "Water"	437	0	20	Water	450	true					false	7;6;6;10;8;3	3	kulve;taroth;water		Wide-4
@@ -208,6 +213,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 91	Hammer	8	Pandemonium's Root	1040	0	0	Dragon	270					Average	false	20;7;2;2;5;4	2	vaal;hazak;dragon		
 99	Hammer	8	Ragefire Magda Floga	1144	-20	20				Blast	420			false	19;3;6;8;4;0	2	zorah;magdaros;blast		
 393	Hammer	8	Taroth Hammer "Ice"	988	0	20	Thunder	510	true					false	19;7;2;2;6;4	3	kulve;taroth;ice		
+690	Hammer	8	Taroth Hammer "Sleep"	1040	0	30	Sleep	300	true					false	22;2;2;2;3;9	3	kulve;taroth;ice		
 394	Hammer	8	Taroth Hammer "Thunder"	988	0	30	Thunder	480	true					false	15;10;3;3;6;3	3	kulve;taroth;thunder		
 339	Hammer	8	Taroth Hammer "Water"	988	0	20	Water	360	true					false	8;5;6;12;5;4		kulve;taroth;water		
 101	Hammer	8	Xeno Maph'agarna	884	15	0	Dragon	180					Low	false	13;3;6;8;4;6	3;3	xeno'jiva;dragon		
@@ -254,6 +260,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 252	HeavyBowgun	8	Quickquiver	255	0	0								false		1	kirin		
 355	HeavyBowgun	8	Taroth Assault "Blast"	285	10	20								false		3	kulve;taroth		
 356	HeavyBowgun	8	Taroth Assault "Icewater"	285	0	20								false		3	kulve;taroth		
+691	HeavyBowgun	8	Taroth Assault "Pierce"	285	10	20								false		3	kulve;taroth		
 410	HeavyBowgun	8	Taroth Assault "Support"	270	20	20								false		3	kulve;taroth		
 254	HeavyBowgun	8	Teostra's Flames	270	0	0								false			blacksteel;teostra		
 255	HeavyBowgun	8	Xeno Jiiqa	255	0	0								false		3;3	xeno'jiva		
@@ -289,6 +296,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 105	HuntingHorn	8	Desolation's Overture	882	0	0	Dragon	150					High	false	11;12;4;5;13;0	1	nergigante;dragon		
 374	HuntingHorn	8	Taroth Pipe "Dragon"	756	0	20	Dragon	540	true				Average	false	24;2;2;2;3;7	3	kulve;taroth;dragon		
 396	HuntingHorn	8	Taroth Pipe "Paralysis"	840	0	20				Paralysis	420	true		false	5;5;5;8;17;0	3	kulve;taroth;paralysis		
+692	HuntingHorn	8	Taroth Pipe "Sleep"	798	0	20				Sleep	420	true		false	22;2;2;3;3;8	3	kulve;taroth;sleep		
 395	HuntingHorn	8	Taroth Pipe "Water"	714	10	20	Water	630	true					false	11;3;6;8;4;8	3	kulve;taroth;water		
 121	HuntingHorn	8	Teostra's Orphée	798	0	0				Blast	390			false	9;6;6;10;6;3		blacksteel;teostra		
 122	HuntingHorn	8	Xeno Manasheena	714	15	0	Dragon	180					Low	false	13;3;6;8;4;6	3;3	xeno'jiva;dragon		
@@ -323,6 +331,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 215	InsectGlaive	8	Daora's Tethidine	558	10	0	Ice	180						false	9;6;8;8;7;2	2	blacksteel;kushala;daora;ice		Health
 385	InsectGlaive	8	Taroth Glaive "Ice"	527	0	20	Ice	390	true					false	11;3;6;8;4;8	3	kulve;taroth;ice		Element
 306	InsectGlaive	8	Taroth Glaive "Paralysis"	620	0	30				Paralysis	300	true		false	7;5;5;8;15;0	3	kulve;taroth;paralysis		Blunt
+693	InsectGlaive	8	Taroth Glaive "Sleep"	558	0	20				Sleep	270	true		false	22;2;2;2;3;9	3	kulve;taroth;sleep		Sever
 298	InsectGlaive	8	Taroth Glaive "Water"	620	0	20	Water	360	true					false	7;5;6;12;6;4	3	kulve;taroth;water		Element
 214	InsectGlaive	8	Verdant Levin	496	0	0	Thunder	360						false	11;2;2;12;13;0		kirin;thunder		Element
 212	InsectGlaive	8	Vice	496	20	0	Fire	150	true					false	20;7;2;2;5;4	2	odogaron;fire		Speed
@@ -360,6 +369,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 142	Lance	8	Elder Babel Spear	460	0	20	Fire	330	true					false	11;12;4;5;8;0	3	workshop;fire		
 132	Lance	8	Love's Sorrow	460	0	0	Dragon	270					Average	false	20;7;2;2;5;4	2	vaal;hazak;dragon		
 124	Lance	8	Perdition's Hand	483	0	0	Dragon	150					High	false	11;12;4;5;13;0	1	nergigante;dragon		
+694	Lance	8	Taroth Crest "Poison"	460	-10	20				Poison	630	true		false	10;4;5;9;12;0	3	kulve;taroth;poison		
 398	Lance	8	Taroth Crest "Sleep"	437	10	20				Sleep	450	true		false	9;6;6;10;6;3	3	kulve;taroth;sleep		
 380	Lance	8	Taroth Crest "Thunder"	368	20	20	Thunder	600	true					false	11;2;2;14;11;0	3	kulve;taroth;thunder		
 397	Lance	8	Taroth Crest "Water"	437	0	20	Water	420	true					false	7;5;6;12;6;4	3	kulve;taroth;water		
@@ -402,6 +412,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 408	LightBowgun	8	Taroth Blitz "Pierce"	260	0	20								false		3	kulve;taroth		
 409	LightBowgun	8	Taroth Blitz "Shot"	273	-10	20								false		3	kulve;taroth		
 407	LightBowgun	8	Taroth Blitz "Spread"	247	10	20								false		3	kulve;taroth		
+695	LightBowgun	8	Taroth Blitz "Support"	247	0	30								false		3	kulve;taroth		
 236	LightBowgun	8	Xeno Nequiina	234	0	0								false		3;3	xeno'jiva		
 675	LightBowgun	8	Empress Shell "Blaze"	247	20	0								false		1	lunastra	guts-1	
 676	LightBowgun	8	Empress Shell "Ruin"	260	0	0								false		2	lunastra	hastenRecovery-1	
@@ -436,6 +447,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 23	LongSword	8	Extermination's Edge	693	0	0	Dragon	120					High	false	11;12;4;5;13;0	1	nergigante;dragon		
 39	LongSword	8	Imperial Shimmer	627	0	0				Blast	300			false	7;5;6;12;6;4		blacksteel;teostra;blast		
 35	LongSword	8	Legia Stealer	528	0	0	Ice	360						false	24;2;2;2;3;7		legiana;ice		
+696	LongSword	8	Taroth Sword "Fire"	660	0	20	Fire	450	true					false	22;2;2;2;3;9	3	kulve;taroth;fire		
 389	LongSword	8	Taroth Sword "Paralysis"	561	0	20				Paralysis	330	true		false	11;3;6;8;4;8	3	kulve;taroth;paralysis		
 364	LongSword	8	Taroth Sword "Poison"	627	10	20				Poison	420	true		false	6;5;6;12;7;4	3	kulve;taroth;poison		
 365	LongSword	8	Taroth Sword "Water"	627	0	20	Water	420	true					false	20;7;2;2;5;4	3	kulve;taroth;water		
@@ -474,7 +486,8 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 177	SwitchAxe	8	Kirin Thunderpeal	560	0	0	Thunder	450						false	11;2;2;14;11;0		kirin;thunder		Power Element
 402	SwitchAxe	8	Taroth Axe "Paralysis"	735	0	30				Paralysis	450	true		false	11;10;4;4;11;0	3	kulve;taroth;paralysis		Power
 403	SwitchAxe	8	Taroth Axe "Sleep"	665	0	20				Sleep	360	true		false	6;5;6;12;7;4	3	kulve;taroth;sleep		Power
-404	SwitchAxe	8	Taroth Axe "Thunder"	560	10	20	Thunder	480	true					false	12;3;6;8;4;7	3	kulve;taroth;thunder	Power	
+404	SwitchAxe	8	Taroth Axe "Thunder"	560	10	20	Thunder	480	true					false	12;3;6;8;4;7	3	kulve;taroth;thunder		Power
+697	SwitchAxe	8	Taroth Axe "Water"	700	0	20	Water	480	true					false	6;6;6;11;8;3	3	kulve;taroth;water		Power
 178	SwitchAxe	8	Teostra's Castle	665	0	0				Blast	300			false	9;6;6;10;6;3		blacksteel;teostra;blast		Power
 179	SwitchAxe	8	Xeno Martshu	595	15	0	Dragon	150					Low	false	13;3;6;8;4;6	3;3	xeno'jiva;dragon		Power
 666	SwitchAxe	8	Empress Axe "Blaze"	630	20	0				Blast	180			false	11;3;6;8;4;8	2;1	lunastra;blast	guts-1	Power
@@ -511,6 +524,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 47	SwordAndShield	8	Legia Rimespire	224	0	0	Ice	330						false	12;3;6;8;4;7	1	legiana;ice		
 294	SwordAndShield	8	Taroth Slicer "Blast"	238	0	20				Blast	390	true		false	11;3;6;8;4;8	3	kulve;taroth;blast		
 390	SwordAndShield	8	Taroth Slicer "Dragon"	224	0	20	Dragon	450	true				Low	false	16;8;2;2;8;4	3	kulve;taroth;dragon		
+698	SwordAndShield	8	Taroth Slicer "Fire"	252	0	20	Fire	390	true					false	22;2;2;2;3;9	3	kulve;taroth;fire		
 367	SwordAndShield	8	Taroth Slicer "Water"	266	10	20	Water	420	true					false	16;8;2;2;8;4	3	kulve;taroth;water		
 60	SwordAndShield	8	Teostra's Emblem	266	0	0				Blast	240			false	7;5;6;12;6;4		blacksteel;teostra;blast		
 61	SwordAndShield	8	Xeno Mabura	238	15	0	Dragon	270					Low	false	13;3;6;8;4;6	3;3	xeno'jiva;dragon		
