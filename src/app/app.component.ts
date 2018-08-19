@@ -133,6 +133,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 		} else {
 			this.equipmentVisible = true;
 			this.statsVisible = true;
+			this.attackDefenseVisible = true;
 			this.skillsVisible = true;
 			this.tabsVisible = false;
 		}
