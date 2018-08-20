@@ -163,29 +163,6 @@ export class AppComponent implements OnInit, AfterViewInit {
 		if (event.keyCode === 13) {
 			document.getElementById('dummy').focus();
 		}
-		if (event.keyCode === 37) {
-			this.attackDefenseVisible = !this.attackDefenseVisible;
-			if (!this.skillsVisible) {
-				this.skillsVisible = true;
-			}
-		} else if (event.keyCode === 39) {
-			this.skillsVisible = !this.skillsVisible;
-			if (!this.attackDefenseVisible) {
-				this.attackDefenseVisible = true;
-			}
-		} else if (event.keyCode === 40 && this.tabsVisible) {
-			this.equipmentVisible = false;
-			this.statsVisible = true;
-		} else if (event.keyCode === 38 && this.tabsVisible) {
-			this.equipmentVisible = true;
-			this.statsVisible = false;
-		}
-		/*else if (event.keyCode === 49 || event.keyCode === 97) { // 1
-		} else if (event.keyCode === 50 || event.keyCode === 98) { // 2
-			this.detailsVisible = !this.detailsVisible;
-		} else if (event.keyCode === 51 || event.keyCode === 99) { // 3
-		} else if (event.keyCode === 52 || event.keyCode === 100) { // 4
-		}*/
 	}
 
 	moveTooltip(event: PointerEvent) {

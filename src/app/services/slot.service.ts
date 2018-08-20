@@ -1,16 +1,16 @@
-import { Injectable, ChangeDetectorRef } from '@angular/core';
-import { ItemSlotComponent } from '../components/item-slot/item-slot.component';
-import { DecorationSlotComponent } from '../components/decoration-slot/decoration-slot.component';
-import { AugmentationSlotComponent } from '../components/augmentation-slot/augmentation-slot.component';
-import { ItemModel } from '../models/item.model';
-import { DecorationModel } from '../models/decoration.model';
-import { AugmentationModel } from '../models/augmentation.model';
-import { EquipmentService } from './equipment.service';
-import { Subject } from 'rxjs';
-import { SlotEventModel } from '../models/slot-event.model';
-import { ItemType } from '../types/item.type';
+import { ChangeDetectorRef, Injectable } from '@angular/core';
 import * as _ from 'lodash';
+import { Subject } from 'rxjs';
+import { AugmentationSlotComponent } from '../components/augmentation-slot/augmentation-slot.component';
+import { DecorationSlotComponent } from '../components/decoration-slot/decoration-slot.component';
+import { ItemSlotComponent } from '../components/item-slot/item-slot.component';
+import { AugmentationModel } from '../models/augmentation.model';
+import { DecorationModel } from '../models/decoration.model';
+import { ItemModel } from '../models/item.model';
+import { SlotEventModel } from '../models/slot-event.model';
 import { EquipmentCategoryType } from '../types/equipment-category.type';
+import { ItemType } from '../types/item.type';
+import { EquipmentService } from './equipment.service';
 
 @Injectable()
 export class SlotService {

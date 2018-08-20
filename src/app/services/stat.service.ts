@@ -15,8 +15,6 @@ import { SharpnessType } from '../types/sharpness.type';
 import { WeaponType } from '../types/weapon.type';
 import { CalculationService } from './calculation.service';
 import { DataService } from './data.service';
-import { SharpnessBarModel } from '../models/sharpness-bar.model';
-import { ExtraDataModel } from '../models/extra-data.model';
 
 @Injectable()
 export class StatService {

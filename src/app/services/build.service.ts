@@ -1,14 +1,13 @@
-import { Injectable, ChangeDetectorRef } from '@angular/core';
-import { ItemSlotComponent } from '../components/item-slot/item-slot.component';
-import { DataService } from './data.service';
-import { ItemModel } from '../models/item.model';
-import { ItemType } from '../types/item.type';
-import { SlotService } from './slot.service';
-import { EquipmentService } from './equipment.service';
-import { Subject } from 'rxjs';
-import { EquipmentCategoryType } from '../types/equipment-category.type';
-
+import { ChangeDetectorRef, Injectable } from '@angular/core';
 import * as _ from 'lodash';
+import { Subject } from 'rxjs';
+import { ItemSlotComponent } from '../components/item-slot/item-slot.component';
+import { ItemModel } from '../models/item.model';
+import { EquipmentCategoryType } from '../types/equipment-category.type';
+import { ItemType } from '../types/item.type';
+import { DataService } from './data.service';
+import { EquipmentService } from './equipment.service';
+import { SlotService } from './slot.service';
 
 @Injectable()
 export class BuildService {

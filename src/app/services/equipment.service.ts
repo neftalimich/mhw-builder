@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { SkillService } from './skill.service';
-import { AugmentationModel } from '../models/augmentation.model';
-import { ItemModel } from '../models/item.model';
-import { DecorationModel } from '../models/decoration.model';
 import * as _ from 'lodash';
+import { AugmentationModel } from '../models/augmentation.model';
+import { DecorationModel } from '../models/decoration.model';
+import { ItemModel } from '../models/item.model';
+import { SkillService } from './skill.service';
 import { StatService } from './stat.service';
 
 @Injectable()

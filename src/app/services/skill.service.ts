@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import * as _ from 'lodash';
+import { Subject } from 'rxjs';
+import { AugmentationModel } from '../models/augmentation.model';
 import { DecorationModel } from '../models/decoration.model';
+import { EquippedSetBonusDetailModel } from '../models/equipped-set-bonus-detail.model';
 import { EquippedSetBonusModel } from '../models/equipped-set-bonus.model';
 import { EquippedSkillModel } from '../models/equipped-skill.model';
 import { ItemModel } from '../models/item.model';
 import { ItemType } from '../types/item.type';
 import { DataService } from './data.service';
-import { Subject } from 'rxjs';
-import { AugmentationModel } from '../models/augmentation.model';
-import { EquippedSetBonusDetailModel } from '../models/equipped-set-bonus-detail.model';
 
 @Injectable()
 export class SkillService {

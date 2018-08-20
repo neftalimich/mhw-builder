@@ -4,6 +4,7 @@ import { AmmoCapacitiesModel } from '../models/ammo-capacities.model';
 import { AugmentationModel } from '../models/augmentation.model';
 import { DecorationModel } from '../models/decoration.model';
 import { ItemModel } from '../models/item.model';
+import { MelodiesModel } from '../models/melodies.model';
 import { SetBonusModel } from '../models/set-bonus.model';
 import { SharpnessModifierModel } from '../models/sharpness-modifier.model';
 import { SkillReferenceModel } from '../models/skill-reference.model';
@@ -15,8 +16,6 @@ import { EquipmentCategoryType } from '../types/equipment-category.type';
 import { ItemType } from '../types/item.type';
 import { SharpnessType } from '../types/sharpness.type';
 import { WeaponType } from '../types/weapon.type';
-import { MelodiesModel } from '../models/melodies.model';
-import { MelodyEffectModel } from '../models/melody-effect.model';
 
 @Injectable()
 export class DataService {
