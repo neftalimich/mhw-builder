@@ -228,7 +228,7 @@ export class CalculationService {
 			this.sharpnessBar.sharps = this.sharpnessBar.sharps.reverse();
 			this.sharpnessBar.levels = sharpnessLevelsBar;
 			this.sharpnessBar.empty = sharpnessEmpty;
-			this.sharpnessBar.widthModifier = 4;
+			this.sharpnessBar.widthModifier = 3.5;
 			this.sharpnessBar.levelsMissing = 6 - sharpnessLevelsBar.length;
 			this.sharpnessBar.tooltipTemplate += ' | = <span class="sharp-8">' + ((total - sharpnessEmpty) * 10) + '</span>';
 			this.sharpnessBar.sharpnessDataNeeded = stats.sharpnessDataNeeded;
