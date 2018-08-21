@@ -73,6 +73,7 @@ h4 {
 		display: none !important;
 	}
 }
+
 @media (min-width:577px) {
 	.visible-xs {
 		display: none !important;
@@ -125,6 +126,8 @@ h4 {
 .sharp-bg-7 {
 	background: #666;
 	color: #666;
+	border-left: none !important;
+	border-right: none !important;
 }
 
 .sharp-active {
@@ -132,15 +135,18 @@ h4 {
 	border-bottom: 2px solid #9DD7FB;
 	color: lightskyblue;
 }
+
 .sharp-active-first {
 	border-left: 2px solid #9DD7FB;
 }
+
 .sharp-active-last {
 	border-right: 2px solid #9DD7FB;
 }
+
 .sharp-none {
-	border-bottom: 2px solid rgba(0, 0, 0, 0);
 	border-top: 2px solid rgba(0, 0, 0, 0);
+	border-bottom: 2px solid rgba(0, 0, 0, 0);
 	border-left: 2px solid rgba(0, 0, 0, 0);
 	border-right: 2px solid rgba(0, 0, 0, 0);
 }
