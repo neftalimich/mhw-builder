@@ -3,14 +3,12 @@ import { EldersealType } from '../types/elderseal.type';
 import { ElementType } from '../types/element.type';
 import { EquipmentCategoryType } from '../types/equipment-category.type';
 import { ItemType } from '../types/item.type';
-import { SharpnessType } from '../types/sharpness.type';
 import { WeaponType } from '../types/weapon.type';
 import { AmmoCapacitiesModel } from './ammo-capacities.model';
-import { SharpnessLevelModel } from './sharpness-level.model';
-import { SkillReferenceModel } from './skill-reference.model';
-import { SlotModel } from './slot.model';
 import { MelodiesModel } from './melodies.model';
 import { OtherDataModel } from './other-data.model';
+import { SkillReferenceModel } from './skill-reference.model';
+import { SlotModel } from './slot.model';
 
 export class ItemModel {
 	id: number;
@@ -52,6 +50,7 @@ export class ItemModel {
 	skills?: SkillReferenceModel[];
 
 	tags?: string[];
+	version: number;
 
 	equippedLevel?: number;
 }

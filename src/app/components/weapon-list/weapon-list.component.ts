@@ -1,13 +1,13 @@
-import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild, HostListener } from '@angular/core';
+import { Component, ElementRef, EventEmitter, HostListener, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { VirtualScrollComponent } from 'angular2-virtual-scroll';
 import * as _ from 'lodash';
 import { ItemModel } from '../../models/item.model';
+import { SkillModel } from '../../models/skill.model';
 import { DataService } from '../../services/data.service';
+import { SlotService } from '../../services/slot.service';
+import { EquipmentCategoryType } from '../../types/equipment-category.type';
 import { ItemType } from '../../types/item.type';
 import { WeaponType } from '../../types/weapon.type';
-import { SlotService } from '../../services/slot.service';
-import { VirtualScrollComponent } from 'angular2-virtual-scroll';
-import { EquipmentCategoryType } from '../../types/equipment-category.type';
-import { SkillModel } from '../../models/skill.model';
 
 @Component({
 	selector: 'mhw-builder-weapon-list',
