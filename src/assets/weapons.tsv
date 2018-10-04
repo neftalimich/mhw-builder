@@ -80,6 +80,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 69	DualBlades	6	Strong Hatchets II	266	0	10				Blast	180			false	11;5;5;8;11;0	3	bone;blast			1.0
 70	DualBlades	7	Anja Cyclone III	252	-20	0	Fire	210						false	10;12;4;5;9;0		anjanath;fire			1.0
 71	DualBlades	7	Diablos Clubs II	322	-10	15	Ice	90	true					false	9;5;6;12;6;2	2	ice			1.0
+699	DualBlades	7	Downy Crake Love	252	0	0				Sleep	120			false	9;5;5;8;13;0		workshop;sleep			1.0
 77	DualBlades	7	Enduring Schism	196	0	0	Dragon	270					true	false	11;11;4;4;8;2	1;1	dragonbone;dragon			1.0
 68	DualBlades	7	Holy Sabers	252	0	0	Water	120						false	6;5;6;12;7;4	3	workshop;water			1.0
 73	DualBlades	7	Lava Cyclone II	252	0	0	Fire	150						false	20;7;2;2;5;4	2;2	lavasioth;fire			1.0
@@ -339,7 +340,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 672	InsectGlaive	8	Empress Cane "Blaze"	589	20	0				Blast	150			false	10;3;6;9;3;9	1	lunastra;blast	guts-1	Speed	1.0
 673	InsectGlaive	8	Empress Cane "Ruin"	620	0	0				Blast	120			false	10;3;6;9;3;9	2	lunastra;blast	hastenRecovery-1	Speed	1.0
 674	InsectGlaive	8	Empress Cane "Styx"	589	10	0				Blast	210			false	10;3;6;9;3;9	3;1	lunastra;blast	razorSharpSpareShot-1	Speed	1.0
-684	InsectGlaive	8	Gae Bolg	589	20	0	Dragon	300						false	6;6;2;15;9;2	2	behemoth;dragon		Element	1.0
+684	InsectGlaive	8	Gae Bolg	589	20	0	Dragon	300						false	6;6;2;15;9;2	2	behemoth;dragon		Element	5.0
 134	Lance	6	Barroth Stinger III	460	-20	15				Paralysis	390	true		false	10;12;4;5;9;0	2;1	barroth;paralysis			1.0
 123	Lance	6	Chrome Lance	414	0	0				Paralysis	270	true		false	6;6;2;15;9;2	1;1	ore;paralysis			1.0
 133	Lance	6	Dark Stinger III	368	0	0				Blast	240	true		false	11;3;6;8;4;8	3	hornetaur;paralysis			1.0
