@@ -76,7 +76,9 @@
 		<hr>
 		<ul class="defense-stats striped">
 			<li *ngFor="let calc of defenseCalcs" (pointerenter)="showCalcDetails($event, calc)" (pointerleave)="clearCalcDetails()">
-				<span *ngIf="calc.calculationTemplate || calc.info?.length" class="detail-icon" [ngClass]="calc.color"><i class="far fa-question-circle"></i></span>
+				<span *ngIf="calc.extra1" class="detail-icon">
+					<img [src]="'assets/images/' + calc.extra1 + '-icon.png'" style="height:1em;">
+				</span>
 				<span class="name">{{calc.name}}</span>
 				<span class="value">{{calc.value}}</span>
 			</li>

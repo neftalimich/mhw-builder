@@ -653,46 +653,54 @@ export class CalculationService {
 
 		this.defenseCalcs.push({
 			name: 'Defense',
-			value: (stats.defense + stats.passiveDefense) + ' ➝ ' + (stats.maxDefense + stats.passiveDefense) + ' ➟ ' + (stats.augmentedDefense + stats.passiveDefense)
+			value: (stats.defense + stats.passiveDefense) + ' ➝ ' + (stats.maxDefense + stats.passiveDefense) + ' ➟ ' + (stats.augmentedDefense + stats.passiveDefense),
+			extra1: 'defense'
 		});
 
 		if (stats.passiveHealth) {
 			this.defenseCalcs.push({
 				name: 'Health',
-				value: 100 + stats.passiveHealth
+				value: 100 + stats.passiveHealth,
+				extra1: 'health'
 			});
 		}
 
 		if (stats.passiveStamina) {
 			this.defenseCalcs.push({
 				name: 'Stamina',
-				value: 100 + stats.passiveStamina
+				value: 100 + stats.passiveStamina,
+				extra1: 'stamina'
 			});
 		}
 
 		this.defenseCalcs.push({
 			name: 'Fire Resist',
-			value: stats.fireResist + stats.passiveFireResist
+			value: stats.fireResist + stats.passiveFireResist,
+			extra1: 'fire'
 		});
 
 		this.defenseCalcs.push({
 			name: 'Water Resist',
-			value: stats.waterResist + stats.passiveWaterResist
+			value: stats.waterResist + stats.passiveWaterResist,
+			extra1: 'water'
 		});
 
 		this.defenseCalcs.push({
 			name: 'Thunder Resist',
-			value: stats.thunderResist + stats.passiveThunderResist
+			value: stats.thunderResist + stats.passiveThunderResist,
+			extra1: 'thunder'
 		});
 
 		this.defenseCalcs.push({
 			name: 'Ice Resist',
-			value: stats.iceResist + stats.passiveIceResist
+			value: stats.iceResist + stats.passiveIceResist,
+			extra1: 'ice'
 		});
 
 		this.defenseCalcs.push({
 			name: 'Dragon Resist',
-			value: stats.dragonResist + stats.passiveDragonResist
+			value: stats.dragonResist + stats.passiveDragonResist,
+			extra1: 'dragon'
 		});
 	}
 

@@ -28,14 +28,16 @@ ul {
 
 li {
 	list-style: none;
-	padding:4px 4px;
+	padding: 4px 4px;
 	cursor: default;
 	display: grid;
 	grid-gap: 4px;
 
 	.detail-icon {
 		grid-column: 1;
-		margin-right: 4px;	
+		margin-right: 4px;
+		/*height: 50px;*/
+		height: 1em;
 	}
 
 	.name {
@@ -44,7 +46,7 @@ li {
 		white-space: nowrap;
 		overflow: hidden;
 	}
-	
+
 	.value {
 		grid-column: 3;
 		white-space: nowrap;

@@ -22,6 +22,7 @@
 			<hr>
 			<ul class="striped">
 				<li *ngFor="let setBonus of setBonuses" (pointerenter)="showSetBonusDetails($event, setBonus)" (pointerleave)="clearSetBonusDetails()" (click)="showOnClickSetBonusDetails(setBonus)">
+					<span class="detail-icon"><i class="far fa-question-circle"></i></span>
 					<span class="name">{{setBonus.name}}</span>
 					<div class="value">
 						<span class="" *ngFor="let level of setBonus.details" [style.color]="getSetBonusColor(setBonus.equippedCount, level.requiredCount)">
