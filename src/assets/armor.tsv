@@ -68,8 +68,8 @@ id	itemType	rarity	name	baseDefense	maxDefense	augmentedDefense	fireResist	water
 53	Chest	8	Vaal Hazak Mail Beta	64	70	84	-4	4	1	-1	-3	recoverySpeed-2;vaalHazakVitality	1;1		1.0
 323	Chest	8	Vangis Mail Alpha	58	70	84	1	1	-3	2	-3	speedEating-1;handicraft-1	2	deviljho	1.0
 324	Chest	8	Vangis Mail Beta	58	70	84	1	1	-3	2	-3	speedEating-1	3	deviljho	1.0
-50	Chest	8	Xeno'jiva Hide Alpha	72	78	92	-3	2	2	2	-4	powerProlonger-2;blightResistance-1;xenojivaDivinity	1	xenojiva	1.0
-49	Chest	8	Xeno'jiva Hide Beta	72	78	92	-3	2	2	2	-4	powerProlonger-2;xenojivaDivinity	1;1	xenojiva	1.0
+50	Chest	8	Xeno'jiiva Hide Alpha	72	78	92	-3	2	2	2	-4	powerProlonger-2;blightResistance-1;xenojiivaDivinity	1	xenojiiva	1.0
+49	Chest	8	Xeno'jiiva Hide Beta	72	78	92	-3	2	2	2	-4	powerProlonger-2;xenojiivaDivinity	1;1	xenojiiva	1.0
 363	Chest	8	Dante's Coat Alpha	64	70	84	3	-3	3	-3	3	evadeWindow-1;criticalEye-1	3		1.0
 478	Chest	8	Drachen Mail Alpha	72	78	92	-2	-2	3	-2	4	criticalEye-2;criticalBoost-1;soulDragon	3	behemoth	5.0
 492	Chest	8	Empress Mail Gamma	70	76	90	3	1	1	-3	-2	earplugs-2;toolSpecialist-1;lunastraFavor	3	lunastra	5.0
@@ -77,7 +77,7 @@ id	itemType	rarity	name	baseDefense	maxDefense	augmentedDefense	fireResist	water
 467	Chest	8	Kirin Mail Gamma	72	78	92	-3	-2	4	-2	2	freeElemAmmoUp-2;kirinFavor	1;1		5.0
 488	Chest	8	Kushala Cista Gamma	72	78	92	0	2	-3	4	-2	iceAttack-3;evadeExtender-1;kushalaDaoraFlight	2	kushala;daora	5.0
 472	Chest	8	Vaal Hazak Mail Gamma	72	78	92	-4	4	1	-1	-3	recoveryUp-1;peakPerformance-1;vaalHazakVitality	3		5.0
-502	Chest	8	Xeno'jiva Hide Gamma	72	78	92	-3	2	2	2	-4	flinchFree-2;xenojivaDivinity	1;1	xenojiva	5.0
+502	Chest	8	Xeno'jiiva Hide Gamma	72	78	92	-3	2	2	2	-4	flinchFree-2;xenojiivaDivinity	1;1	xenojiiva	5.0
 497	Chest	8	Zorah Hide Gamma	72	78	92	4	-3	-1	-2	-3	tremorResistance-2;zorahMagdarosMastery	1;1;1	magdaros	5.0
 335	Feet	5	Aloy's Leggings Alpha	46	68	84	1	1	1	1	1	slingerCapacity-2;anjanathWill	2		1.0
 340	Feet	5	Blossom Boots Alpha	40	62	78	1	1	4	1	1	recoverySpeed-1	1;1		1.0
@@ -148,8 +148,8 @@ id	itemType	rarity	name	baseDefense	maxDefense	augmentedDefense	fireResist	water
 185	Feet	8	Vaal Hazak Greaves Beta	64	70	84	-4	4	1	-1	-3	effluviaResistance-2;vaalHazakVitality	1;1		1.0
 329	Feet	8	Vangis Greaves Alpha	58	70	84	1	1	-3	2	-3	speedEating-2;partbreaker-1		deviljho	1.0
 330	Feet	8	Vangis Greaves Beta	58	70	84	1	1	-3	2	-3	speedEating-2	1;1	deviljho	1.0
-182	Feet	8	Xeno'jiva Spurs Alpha	72	78	92	-3	2	2	2	-4	flinchFree-1;powerProlonger-1;xenojivaDivinity	1	xenojiva	1.0
-181	Feet	8	Xeno'jiva Spurs Beta	72	78	92	-3	2	2	2	-4	flinchFree-1;xenojivaDivinity	1;1	xenojiva	1.0
+182	Feet	8	Xeno'jiiva Spurs Alpha	72	78	92	-3	2	2	2	-4	flinchFree-1;powerProlonger-1;xenojiivaDivinity	1	xenojiiva	1.0
+181	Feet	8	Xeno'jiiva Spurs Beta	72	78	92	-3	2	2	2	-4	flinchFree-1;xenojiivaDivinity	1;1	xenojiiva	1.0
 366	Feet	8	Dante's Leather Boots Alpha	64	70	84	3	-3	3	-3	3	weaknessExploit-2	1;1		1.0
 481	Feet	8	Drachen Greaves Alpha	72	78	92	-2	-2	3	-2	4	attackBoost-2;criticalBoost-1;soulDragon	2	behemoth	5.0
 493	Feet	8	Empress Greaves Gamma	70	76	90	3	1	1	-3	-2	earplugs-2;agitator-1;lunastraFavor	3	lunastra	5.0
@@ -157,7 +157,7 @@ id	itemType	rarity	name	baseDefense	maxDefense	augmentedDefense	fireResist	water
 468	Feet	8	Kirin Greaves Gamma	72	78	92	-3	-2	4	-2	2	blightResistance-1;thunderAttack-2;kirinFavor	3		5.0
 491	Feet	8	Kushala Crus Gamma	72	78	92	0	2	-3	4	-2	evadeWindow-2;kushalaDaoraFlight	3	kushala;daora	5.0
 473	Feet	8	Vaal Hazak Greaves Gamma	72	78	92	-4	4	1	-1	-3	recoverySpeed-1;peakPerformance-1;vaalHazakVitality	3;1		5.0
-503	Feet	8	Xeno'jiva Spurs Gamma	72	78	92	-3	2	2	2	-4	criticalBoost-1;xenojivaDivinity	2;1;1	xenojiva	5.0
+503	Feet	8	Xeno'jiiva Spurs Gamma	72	78	92	-3	2	2	2	-4	criticalBoost-1;xenojiivaDivinity	2;1;1	xenojiiva	5.0
 498	Feet	8	Zorah Spurs Gamma	72	78	92	4	-3	-1	-2	-3	blastAttack-2;criticalEye-1;zorahMagdarosMastery	3;2	magdaros	5.0
 333	Hands	5	Aloy's Arms Alpha	46	68	84	1	1	1	1	1	weaknessExploit-1;scenthound-1;anjanathWill	1		1.0
 338	Hands	5	Blossom Cuffs Alpha	40	62	78	1	1	4	1	1	paralysisResistance-1	1;1		1.0
@@ -228,8 +228,8 @@ id	itemType	rarity	name	baseDefense	maxDefense	augmentedDefense	fireResist	water
 97	Hands	8	Vaal Hazak Braces Beta	64	70	84	-4	4	1	-1	-3	peakPerformance-1;vaalHazakVitality	1;1;1		1.0
 325	Hands	8	Vangis Vambraces Alpha	58	70	84	1	1	-3	2	-3	latentPower-2;partbreaker-1		deviljho	1.0
 326	Hands	8	Vangis Vambraces Beta	58	70	84	1	1	-3	2	-3	latentPower-2	2	deviljho	1.0
-94	Hands	8	Xeno'jiva Claws Alpha	72	78	92	-3	2	2	2	-4	flinchFree-1;criticalBoost-1;xenojivaDivinity	1	xenojiva	1.0
-93	Hands	8	Xeno'jiva Claws Beta	72	78	92	-3	2	2	2	-4	flinchFree-1;xenojivaDivinity	3	xenojiva	1.0
+94	Hands	8	Xeno'jiiva Claws Alpha	72	78	92	-3	2	2	2	-4	flinchFree-1;criticalBoost-1;xenojiivaDivinity	1	xenojiiva	1.0
+93	Hands	8	Xeno'jiiva Claws Beta	72	78	92	-3	2	2	2	-4	flinchFree-1;xenojiivaDivinity	3	xenojiiva	1.0
 364	Hands	8	Dante's Gloves Alpha	64	70	84	3	-3	3	-3	3	evadeWindow-1;specialAmmoBoost-1	3		1.0
 479	Hands	8	Drachen Vambraces Alpha	72	78	92	-2	-2	3	-2	4	criticalEye-2;attackBoost-1;soulDragon	2;2	behemoth	5.0
 494	Hands	8	Empress Vambraces Gamma	70	76	90	3	1	1	-3	-2	agitator-2;evadeExtender-1;lunastraFavor	3;1	lunastra	5.0
@@ -237,7 +237,7 @@ id	itemType	rarity	name	baseDefense	maxDefense	augmentedDefense	fireResist	water
 469	Hands	8	Kirin Vambraces Gamma	72	78	92	-3	-2	4	-2	2	blightResistance-1;freeElemAmmoUp-1;kirinFavor	2;2		5.0
 489	Hands	8	Kushala Grip Gamma	72	78	92	0	2	-3	4	-2	focus-2;kushalaDaoraFlight	1;1;1	kushala;daora	5.0
 474	Hands	8	Vaal Hazak Vambraces Gamma	72	78	92	-4	4	1	-1	-3	dragonAttack-3;vaalHazakVitality	3;2		5.0
-504	Hands	8	Xeno'jiva Claws Gamma	72	78	92	-3	2	2	2	-4	powerProlonger-1;specialAmmoBoost-1;xenojivaDivinity	2;2;1	xenojiva	5.0
+504	Hands	8	Xeno'jiiva Claws Gamma	72	78	92	-3	2	2	2	-4	powerProlonger-1;specialAmmoBoost-1;xenojiivaDivinity	2;2;1	xenojiiva	5.0
 499	Hands	8	Zorah Claws Gamma	72	78	92	4	-3	-1	-2	-3	earplugs-2;zorahMagdarosMastery	3;1	magdaros	5.0
 331	Head	5	Aloy's Head Alpha	46	68	84	1	1	1	1	1	affinitySliding-1;anjanathWill	3		1.0
 336	Head	5	Blossom Headgear Alpha	40	62	78	1	1	4	1	1	honeyHunter-1	1;1		1.0
@@ -313,8 +313,8 @@ id	itemType	rarity	name	baseDefense	maxDefense	augmentedDefense	fireResist	water
 12	Head	8	Nergigante Helm Beta	64	70	84	1	1	-3	1	-3	maximumMight-2;nergiganteHunger	1;1		1.0
 7	Head	8	Vaal Hazak Helm Alpha	64	70	84	-4	4	1	-1	-3	peakPerformance-1;dragonAttack-2;vaalHazakVitality			1.0
 6	Head	8	Vaal Hazak Helm Beta	64	70	84	-4	4	1	-1	-3	peakPerformance-1;vaalHazakVitality	1		1.0
-3	Head	8	Xeno'jiva Headgear Alpha	72	78	92	-3	2	2	2	-4	flinchFree-1;specialAmmoBoost-1;xenojivaDivinity	1	xenojiva	1.0
-2	Head	8	Xeno'jiva Headgear Beta	72	78	92	-3	2	2	2	-4	flinchFree-1;xenojivaDivinity	2	xenojiva	1.0
+3	Head	8	Xeno'jiiva Headgear Alpha	72	78	92	-3	2	2	2	-4	flinchFree-1;specialAmmoBoost-1;xenojiivaDivinity	1	xenojiiva	1.0
+2	Head	8	Xeno'jiiva Headgear Beta	72	78	92	-3	2	2	2	-4	flinchFree-1;xenojiivaDivinity	2	xenojiiva	1.0
 362	Head	8	Dante's Hair Alpha	64	70	84	3	-3	3	-3	3	weaknessExploit-1;criticalEye-1	1		1.0
 477	Head	8	Drachen Helm Alpha	72	78	92	-2	-2	3	-2	4	criticalBoost-1;airborne-1;soulDragon	3;1	behemoth	5.0
 495	Head	8	Empress Crown Gamma	70	76	90	3	1	1	-3	-2	wideRange-2;peakPerformance-1;lunastraFavor	1;1;1	lunastra	5.0
@@ -322,7 +322,7 @@ id	itemType	rarity	name	baseDefense	maxDefense	augmentedDefense	fireResist	water
 470	Head	8	Kirin Helm Gamma	72	78	92	-3	-2	4	-2	2	blightResistance-1;thunderAttack-3;kirinFavor	2		5.0
 487	Head	8	Kushala Glare Gamma	72	78	92	0	2	-3	4	-2	handicraft-2;kushalaDaoraFlight	2	kushala;daora	5.0
 475	Head	8	Vaal Hazak Helm Gamma	72	78	92	-4	4	1	-1	-3	dragonAttack-1;recoveryUp-2;vaalHazakVitality	3		5.0
-505	Head	8	Xeno'jiva Headgear Gamma	72	78	92	-3	2	2	2	-4	blightResistance-2;powerProlonger-1;xenojivaDivinity	2;1;1	xenojiva	5.0
+505	Head	8	Xeno'jiiva Headgear Gamma	72	78	92	-3	2	2	2	-4	blightResistance-2;powerProlonger-1;xenojiivaDivinity	2;1;1	xenojiiva	5.0
 500	Head	8	Zorah Headgear Gamma	72	78	92	4	-3	-1	-2	-3	windproof-2;criticalEye-2;zorahMagdarosMastery	2	magdaros	5.0
 334	Legs	5	Aloy's Torso Alpha	46	68	84	1	1	1	1	1	stealth-2;anjanathWill	3		1.0
 339	Legs	5	Blossom Coat Alpha	40	62	78	1	1	4	1	1	scoutflyRangeUp-1	1;1		1.0
@@ -393,8 +393,8 @@ id	itemType	rarity	name	baseDefense	maxDefense	augmentedDefense	fireResist	water
 141	Legs	8	Vaal Hazak Coil Beta	64	70	84	-4	4	1	-1	-3	peakPerformance-1;vaalHazakVitality	1;1		1.0
 327	Legs	8	Vangis Coil Alpha	58	70	84	1	1	-3	2	-3	latentPower-1;handicraft-1	1	deviljho	1.0
 328	Legs	8	Vangis Coil Beta	58	70	84	1	1	-3	2	-3	latentPower-1	3;1	deviljho	1.0
-138	Legs	8	Xeno'jiva Spine Alpha	72	78	92	-3	2	2	2	-4	blightResistance-2;specialAmmoBoost-1;xenojivaDivinity	2	xenojiva	1.0
-137	Legs	8	Xeno'jiva Spine Beta	72	78	92	-3	2	2	2	-4	blightResistance-2;xenojivaDivinity	2;1	xenojiva	1.0
+138	Legs	8	Xeno'jiiva Spine Alpha	72	78	92	-3	2	2	2	-4	blightResistance-2;specialAmmoBoost-1;xenojiivaDivinity	2	xenojiiva	1.0
+137	Legs	8	Xeno'jiiva Spine Beta	72	78	92	-3	2	2	2	-4	blightResistance-2;xenojiivaDivinity	2;1	xenojiiva	1.0
 365	Legs	8	Dante's Belt Alpha	64	70	84	3	-3	3	-3	3	evadeWindow-1;latentPower-1	3		1.0
 480	Legs	8	Drachen Coil Alpha	72	78	92	-2	-2	3	-2	4	criticalEye-2;powerProlonger-1;soulDragon	3	behemoth	5.0
 496	Legs	8	Empress Coil Gamma	70	76	90	3	1	1	-3	-2	evadeWindow-2;healthBoost-2;lunastraFavor	3	lunastra	5.0
@@ -402,5 +402,5 @@ id	itemType	rarity	name	baseDefense	maxDefense	augmentedDefense	fireResist	water
 471	Legs	8	Kirin Coil Gamma	72	78	92	-3	-2	4	-2	2	marathonRunner-2;kirinFavor	1;1		5.0
 490	Legs	8	Kushala Cocoon Gamma	72	78	92	0	2	-3	4	-2	handicraft-2;kushalaDaoraFlight	1;1	kushala;daora	5.0
 476	Legs	8	Vaal Hazak Coil Gamma	72	78	92	-4	4	1	-1	-3	dragonAttack-1;recoverySpeed-2;vaalHazakVitality	2;1;1		5.0
-506	Legs	8	Xeno'jiva Spine Gamma	72	78	92	-3	2	2	2	-4	criticalBoost-1;xenojivaDivinity	3;1	xenojiva	5.0
+506	Legs	8	Xeno'jiiva Spine Gamma	72	78	92	-3	2	2	2	-4	criticalBoost-1;xenojiivaDivinity	3;1	xenojiiva	5.0
 501	Legs	8	Zorah Spine Gamma	78	78	92	4	-3	-1	-2	-3	bombardier-2;criticalEye-1;zorahMagdarosMastery	3;2	magdaros	5.0
