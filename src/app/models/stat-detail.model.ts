@@ -12,5 +12,6 @@ export class StatDetailModel {
 	extra2?: string | number;
 	class1?: string;
 	class2?: string;
+	icon?: string;
 }
 

@@ -374,6 +374,7 @@ export class CalculationService {
 		const ailmentAttackCalc: StatDetailModel = {
 			name: 'Ailment Attack',
 			value: stats.totalAilmentAttack,
+			icon: stats.ailment.toLowerCase() + (stats.ailmentHidden ? '-gray' : ''),
 			color: ailmentCalc.color,
 			info: ailmentCalc.info,
 			calculationVariables: [
@@ -442,6 +443,7 @@ export class CalculationService {
 		const elementAttackCalc: StatDetailModel = {
 			name: 'Element Attack',
 			value: stats.totalElementAttack,
+			icon: stats.element.toLowerCase() + (stats.elementHidden ? '-gray' : ''),
 			color: elementCalc.color,
 			info: elementCalc.info,
 			calculationVariables: [
@@ -583,13 +585,23 @@ export class CalculationService {
 			value: Number.isInteger(rawAttackAveragePotential) ? rawAttackAveragePotential : 0,
 			extra1:
 				stats.totalAilmentAttack ?
-					this.getAilmentAverage(stats.totalAilmentAttack, Math.max(stats.crititalStatus ? totalAffinityPotential : 0, 0), stats.passiveCriticalBoostPercent, stats.effectiveElementalSharpnessModifier, auxDivider)
+					this.getAilmentAverage(
+						stats.totalAilmentAttack,
+						Math.max(stats.crititalStatus ? totalAffinityPotential : 0, 0),
+						stats.passiveCriticalBoostPercent,
+						stats.effectiveElementalSharpnessModifier,
+						auxDivider)
 					: null,
 			class1:
 				stats.totalAilmentAttack ? stats.ailment : null,
 			extra2:
 				stats.totalElementAttack ?
-					this.getElementAverage(stats.totalElementAttack, Math.max(stats.crititalElement ? totalAffinityPotential : 0, 0), stats.passiveCriticalBoostPercent, stats.effectiveElementalSharpnessModifier, auxDivider)
+					this.getElementAverage(
+						stats.totalElementAttack,
+						Math.max(stats.crititalElement ? totalAffinityPotential : 0, 0),
+						stats.passiveCriticalBoostPercent,
+						stats.effectiveElementalSharpnessModifier,
+						auxDivider)
 					: null,
 			class2:
 				stats.totalElementAttack ? stats.element : null,
@@ -654,14 +666,14 @@ export class CalculationService {
 		this.defenseCalcs.push({
 			name: 'Defense',
 			value: (stats.defense + stats.passiveDefense) + ' ➝ ' + (stats.maxDefense + stats.passiveDefense) + ' ➟ ' + (stats.augmentedDefense + stats.passiveDefense),
-			extra1: 'defense'
+			icon: 'defense'
 		});
 
 		if (stats.passiveHealth) {
 			this.defenseCalcs.push({
 				name: 'Health',
 				value: 100 + stats.passiveHealth,
-				extra1: 'health'
+				icon: 'health'
 			});
 		}
 
@@ -669,38 +681,38 @@ export class CalculationService {
 			this.defenseCalcs.push({
 				name: 'Stamina',
 				value: 100 + stats.passiveStamina,
-				extra1: 'stamina'
+				icon: 'stamina'
 			});
 		}
 
 		this.defenseCalcs.push({
 			name: 'Fire Resist',
 			value: stats.fireResist + stats.passiveFireResist,
-			extra1: 'fire'
+			icon: 'fire'
 		});
 
 		this.defenseCalcs.push({
 			name: 'Water Resist',
 			value: stats.waterResist + stats.passiveWaterResist,
-			extra1: 'water'
+			icon: 'water'
 		});
 
 		this.defenseCalcs.push({
 			name: 'Thunder Resist',
 			value: stats.thunderResist + stats.passiveThunderResist,
-			extra1: 'thunder'
+			icon: 'thunder'
 		});
 
 		this.defenseCalcs.push({
 			name: 'Ice Resist',
 			value: stats.iceResist + stats.passiveIceResist,
-			extra1: 'ice'
+			icon: 'ice'
 		});
 
 		this.defenseCalcs.push({
 			name: 'Dragon Resist',
 			value: stats.dragonResist + stats.passiveDragonResist,
-			extra1: 'dragon'
+			icon: 'dragon'
 		});
 	}
 

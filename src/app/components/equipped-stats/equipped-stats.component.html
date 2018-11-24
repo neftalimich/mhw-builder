@@ -7,8 +7,14 @@
 	<div [hidden]="!attackVisible">
 		<hr>
 		<ul class="attack-stats striped">
-			<li *ngFor="let calc of attackCalcs" (pointerenter)="showCalcDetails($event, calc)" (pointerleave)="clearCalcDetails()" (click)="showOnClickCalcDetails(calc)">
-				<span *ngIf="calc.calculationTemplate || calc.info?.length" class="detail-icon" [ngClass]="calc.color"><i class="far fa-question-circle"></i></span>
+			<li *ngFor="let calc of attackCalcs" (pointerenter)="showCalcDetails($event, calc)" (pointerleave)="clearCalcDetails()"
+			 (click)="showOnClickCalcDetails(calc)">
+				<span *ngIf="(calc.calculationTemplate || calc.info?.length) && !calc.icon" class="detail-icon" [ngClass]="calc.color">
+					<i class="far fa-question-circle"></i>
+				</span>
+				<span *ngIf="calc.icon" class="detail-icon">
+					<img [src]="'assets/images/' + calc.icon + '-icon.png'" style="height:1em;margin:auto;padding-top:1px;">
+				</span>
 				<span class="name">{{calc.name}}</span>
 				<span class="value">
 					<span [ngClass]="calc.valueColor">{{calc.value}}</span>
@@ -19,18 +25,17 @@
 					<span *ngIf="calc.extra1 || calc.extra2">)</span>
 				</span>
 			</li>
-			<li *ngIf="sharpnessBar && sharpnessBar.sharps" (pointerenter)="showSharpDetails($event, sharpnessBar)" (pointerleave)="clearSharpDetails()" (click)="showOnClickSharpDetails(sharpnessBar)">
+			<li *ngIf="sharpnessBar && sharpnessBar.sharps" (pointerenter)="showSharpDetails($event, sharpnessBar)"
+			 (pointerleave)="clearSharpDetails()" (click)="showOnClickSharpDetails(sharpnessBar)">
 				<span class="detail-icon" [ngClass]="sharpnessBar.color">
-					<i class="far fa-question-circle"></i>
+					<img [src]="'assets/images/sharpness-icon.png'" style="height:1em;margin:auto;padding-top:1px;">
 				</span>
 				<span class="name">Sharpness</span>
 				<div class="value text-righ sharp-box">
-					<span *ngFor="let sharp of sharpnessBar.sharps; let i = index"
-						  [ngClass]="['sharp-bg-' + sharp.colorIndex, sharp.active ? 'sharp-active':'sharp-none', sharp.last ? 'sharp-active-last':'', sharp.first ? 'sharp-active-first':'']"
-						  [ngStyle]="{'width.px': (sharp.level * sharpnessBar.widthModifier)}">
+					<span *ngFor="let sharp of sharpnessBar.sharps; let i = index" [ngClass]="['sharp-bg-' + sharp.colorIndex, sharp.active ? 'sharp-active':'sharp-none', sharp.last ? 'sharp-active-last':'', sharp.first ? 'sharp-active-first':'']"
+					 [ngStyle]="{'width.px': (sharp.level * sharpnessBar.widthModifier)}">
 					</span>
-					<span class="sharp-bg-7 sharp-none"
-						  [ngStyle]="{'width.px': (sharpnessBar.empty * sharpnessBar.widthModifier)}">
+					<span class="sharp-bg-7 sharp-none" [ngStyle]="{'width.px': (sharpnessBar.empty * sharpnessBar.widthModifier)}">
 					</span>
 				</div>
 			</li>
@@ -76,8 +81,8 @@
 		<hr>
 		<ul class="defense-stats striped">
 			<li *ngFor="let calc of defenseCalcs" (pointerenter)="showCalcDetails($event, calc)" (pointerleave)="clearCalcDetails()">
-				<span *ngIf="calc.extra1" class="detail-icon">
-					<img [src]="'assets/images/' + calc.extra1 + '-icon.png'" style="height:1em;">
+				<span *ngIf="calc.icon" class="detail-icon">
+					<img [src]="'assets/images/' + calc.icon + '-icon.png'" style="height:1em;margin:auto;padding-top:1px;">
 				</span>
 				<span class="name">{{calc.name}}</span>
 				<span class="value">{{calc.value}}</span>
