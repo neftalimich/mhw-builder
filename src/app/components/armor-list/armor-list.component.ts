@@ -5,7 +5,7 @@ import { DataService } from '../../services/data.service';
 import { SkillModel } from '../../models/skill.model';
 import * as _ from 'lodash';
 import { ItemType } from '../../types/item.type';
-import { VirtualScrollComponent } from 'angular2-virtual-scroll';
+import { VirtualScrollerComponent } from 'ngx-virtual-scroller';
 import { SlotService } from '../../services/slot.service';
 
 @Component({
@@ -26,7 +26,7 @@ export class ArmorListComponent implements OnInit {
 	get itemType(): ItemType { return this._itemType; }
 
 	@ViewChild('searchBox') searchBox: ElementRef;
-	@ViewChild('itemList') itemList: VirtualScrollComponent;
+	@ViewChild('itemList') itemList: VirtualScrollerComponent;
 
 	items: ItemModel[];
 	filteredItems: ItemModel[];

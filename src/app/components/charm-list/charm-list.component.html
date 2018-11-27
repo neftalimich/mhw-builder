@@ -7,7 +7,7 @@
 		</button>
 	</div>
 
-	<virtual-scroll id="items-list" #itemList class="scroll-container" *ngIf="items" [items]="filteredItems" (update)="onItemListUpdate($event)" [childHeight]="72">
+	<virtual-scroller id="items-list" #itemList class="scroll-container" *ngIf="items" [items]="filteredItems" (update)="onItemListUpdate($event)" [childHeight]="72">
 		<div *ngFor="let item of virtualItems" class="scroll-item-container" (click)="selectItem(item)">
 			<div class="name-container">
 				<div class="name">
@@ -29,5 +29,5 @@
 				</div>
 			</div>
 		</div>
-	</virtual-scroll>
+	</virtual-scroller>
 </div>

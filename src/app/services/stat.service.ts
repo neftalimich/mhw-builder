@@ -149,14 +149,16 @@ export class StatService {
 		const augGroups = _.groupBy(augmentations, 'id');
 
 		for (const key in augGroups) {
-			const value = augGroups[key];
+			if (augGroups.hasOwnProperty(key)) {
+				const value = augGroups[key];
 
-			const level = value[0].levels[value.length - 1];
-			if (level) {
-				if (level.passiveAttack) { this.stats.passiveAttack += level.passiveAttack; }
-				if (level.passiveAffinity) { this.stats.passiveAffinity += level.passiveAffinity; }
-				if (level.passiveDefense) { this.stats.passiveDefense += level.passiveDefense; }
-				if (level.healOnHitPercent) { this.stats.healOnHitPercent += level.healOnHitPercent; }
+				const level = value[0].levels[value.length - 1];
+				if (level) {
+					if (level.passiveAttack) { this.stats.passiveAttack += level.passiveAttack; }
+					if (level.passiveAffinity) { this.stats.passiveAffinity += level.passiveAffinity; }
+					if (level.passiveDefense) { this.stats.passiveDefense += level.passiveDefense; }
+					if (level.healOnHitPercent) { this.stats.healOnHitPercent += level.healOnHitPercent; }
+				}
 			}
 		}
 	}

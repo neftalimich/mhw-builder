@@ -2,7 +2,7 @@ import { Component, OnInit, Input, ViewChild, ElementRef, HostListener } from '@
 import * as _ from 'lodash';
 import { EquipmentCategoryType } from '../../types/equipment-category.type';
 import { ItemType } from '../../types/item.type';
-import { VirtualScrollComponent } from 'angular2-virtual-scroll';
+import { VirtualScrollerComponent } from 'ngx-virtual-scroller';
 import { ItemModel } from '../../models/item.model';
 import { SlotService } from '../../services/slot.service';
 import { DataService } from '../../services/data.service';
@@ -26,7 +26,7 @@ export class CharmListComponent implements OnInit {
 	get itemType(): ItemType { return this._itemType; }
 
 	@ViewChild('searchBox') searchBox: ElementRef;
-	@ViewChild('itemList') itemList: VirtualScrollComponent;
+	@ViewChild('itemList') itemList: VirtualScrollerComponent;
 
 	items: ItemModel[];
 	filteredItems: ItemModel[];

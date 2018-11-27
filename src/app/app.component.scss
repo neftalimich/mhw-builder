@@ -1,4 +1,4 @@
-@import "~sass/variables";
+@import "../sass/variables";
 
 $tabsHeight: 36px;
 
@@ -8,13 +8,10 @@ $tabsHeight: 36px;
 	right: 0;
 	bottom: 0;
 	left: 0;
-
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 16px;
-
 	margin: $appMargin;
-
 	overflow: hidden;
 }
 
@@ -24,7 +21,6 @@ $tabsHeight: 36px;
 	left: 0;
 	right: 0;
 	border-bottom: 4px #525252 solid;
-
 	display: none;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 6px;
@@ -41,30 +37,29 @@ $tabsHeight: 36px;
 		background-color: #525252;
 	}
 }
-	.tab2 {
-		background-color: #323232;
-		border-radius: 3px 3px 3px 3px;
-		text-align: center;
-		line-height: 25px;
-		cursor: pointer;
-	}
+
+.tab2 {
+	background-color: #323232;
+	border-radius: 3px 3px 3px 3px;
+	text-align: center;
+	line-height: 25px;
+	cursor: pointer;
+}
 
 
-	.tab2.selected {
-		background-color: #525252;
-		color:white;
-	}
+.tab2.selected {
+	background-color: #525252;
+	color: white;
+}
 
 .equipment-container {
 	grid-column: 1 / 3;
 	grid-row: 1;
-
 	position: absolute;
 	top: 0;
 	bottom: 12px;
 	right: 0;
 	left: 0;
-
 	overflow-y: auto;
 	overflow-x: hidden;
 }
@@ -72,13 +67,11 @@ $tabsHeight: 36px;
 .stats-container {
 	grid-column: 3;
 	grid-row: 1;
-
 	position: absolute;
 	top: 0;
 	bottom: 12px;
 	right: 0;
 	left: 0;
-
 	overflow-y: auto;
 	overflow-x: hidden;
 }
@@ -88,10 +81,10 @@ $tabsHeight: 36px;
 	position: fixed;
 	bottom: 2px;
 	left: 10px;
-	color:#969696;
+	color: #969696;
 
 	a, a:visited {
-		color:#969696;
+		color: #969696;
 		padding: 2px;
 	}
 
@@ -106,10 +99,10 @@ $tabsHeight: 36px;
 	position: fixed;
 	bottom: 2px;
 	right: 2px;
-	color:#969696;
+	color: #969696;
 
 	a, a:visited {
-		color:#969696;
+		color: #969696;
 	}
 }
 

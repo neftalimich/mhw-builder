@@ -220,7 +220,7 @@ export class CalculationService {
 					total -= toSubstract2;
 				}
 				this.sharpnessBar.tooltipTemplate =
-					'| <span class="sharp-' + i + '">' + sharpnessLevelsBar[i] * 10 + '</span> ' + this.sharpnessBar.tooltipTemplate;
+					`| <span class="sharp-${i}">${sharpnessLevelsBar[i] * 10}</span> ${this.sharpnessBar.tooltipTemplate}`;
 			}
 
 			this.sharpnessBar.sharps = this.sharpnessBar.sharps.reverse();
@@ -665,7 +665,7 @@ export class CalculationService {
 
 		this.defenseCalcs.push({
 			name: 'Defense',
-			value: (stats.defense + stats.passiveDefense) + ' ➝ ' + (stats.maxDefense + stats.passiveDefense) + ' ➟ ' + (stats.augmentedDefense + stats.passiveDefense),
+			value: `${(stats.defense + stats.passiveDefense)} ➝ ${(stats.maxDefense + stats.passiveDefense)} ➟ ${(stats.augmentedDefense + stats.passiveDefense)}`,
 			icon: 'defense'
 		});
 

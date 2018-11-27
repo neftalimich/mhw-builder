@@ -180,29 +180,30 @@ export class SkillService {
 
 	private addAugmentationSkills(augmentations: AugmentationModel[], equippedSkills: EquippedSkillModel[]) {
 		const augGroups = _.groupBy(augmentations, 'id');
-
 		for (const key in augGroups) {
-			const value = augGroups[key];
+			if (augGroups.hasOwnProperty(key)) {
+				const value = augGroups[key];
 
-			const level = value[0].levels[value.length - 1];
-			if (level && level.skills) {
-				for (const skillRef of level.skills) {
+				const level = value[0].levels[value.length - 1];
+				if (level && level.skills) {
+					for (const skillRef of level.skills) {
 
-					let equippedSkill = _.find(equippedSkills, es => es.id == skillRef.id);
+						let equippedSkill = _.find(equippedSkills, es => es.id == skillRef.id);
 
-					// Augmentation skills (as of this writing) do not build on skills from other sources. If the augmentation skill level is higher, it overwrites.
-					if (!equippedSkill) {
-						const skill = this.dataService.getSkill(skillRef.id);
-						equippedSkill = new EquippedSkillModel();
-						equippedSkill.skill = skill;
-						equippedSkill.id = skill.id;
-						equippedSkill.name = skill.name;
-						equippedSkill.description = skill.description;
-						equippedSkill.equippedCount = skillRef.level;
-						equippedSkill.totalLevelCount = skill.levels.length;
-						equippedSkills.push(equippedSkill);
-					} else if (equippedSkill.equippedCount < skillRef.level) {
-						equippedSkill.equippedCount = skillRef.level;
+						// Augmentation skills (as of this writing) do not build on skills from other sources. If the augmentation skill level is higher, it overwrites.
+						if (!equippedSkill) {
+							const skill = this.dataService.getSkill(skillRef.id);
+							equippedSkill = new EquippedSkillModel();
+							equippedSkill.skill = skill;
+							equippedSkill.id = skill.id;
+							equippedSkill.name = skill.name;
+							equippedSkill.description = skill.description;
+							equippedSkill.equippedCount = skillRef.level;
+							equippedSkill.totalLevelCount = skill.levels.length;
+							equippedSkills.push(equippedSkill);
+						} else if (equippedSkill.equippedCount < skillRef.level) {
+							equippedSkill.equippedCount = skillRef.level;
+						}
 					}
 				}
 			}

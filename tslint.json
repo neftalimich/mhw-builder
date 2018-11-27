@@ -15,6 +15,7 @@
 			"severity": "warn"
 		},
 		"eofline": true,
+		"forin": true,
 		"import-blacklist": [
 			true,
 			"rxjs/Rx"
@@ -44,7 +45,7 @@
 			}
 		],
 		"no-arg": true,
-		"no-bitwise": false,
+		"no-bitwise": true,
 		"no-console": [
 			true,
 			"debug",
@@ -65,6 +66,7 @@
 		],
 		"no-misused-new": true,
 		"no-non-null-assertion": true,
+		"no-redundant-jsdoc": true,
 		"no-shadowed-variable": true,
 		"no-string-literal": false,
 		"no-string-throw": true,
@@ -92,11 +94,10 @@
 			true,
 			"always"
 		],
-		// "triple-equals": [
-		//   true,
-		//   "allow-null-check",
-		//   "allow"
-		// ],
+		"triple-equals": [
+			false,
+			"allow-null-check"
+		],
 		"typedef-whitespace": [
 			true,
 			{
@@ -117,18 +118,7 @@
 			"check-separator",
 			"check-type"
 		],
-		"directive-selector": [
-			true,
-			"attribute",
-			"mhw-builder",
-			"camelCase"
-		],
-		"component-selector": [
-			true,
-			"element",
-			"mhw-builder",
-			"kebab-case"
-		],
+		"no-output-on-prefix": true,
 		"use-input-property-decorator": true,
 		"use-output-property-decorator": true,
 		"use-host-property-decorator": true,

@@ -160,7 +160,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 	}
 
 	@HostListener('document:keydown', ['$event']) onKeydownHandler(event: KeyboardEvent) {
-		if (event.keyCode === 13) {
+		if (event.key === 'Enter') {
 			document.getElementById('dummy').focus();
 		}
 	}

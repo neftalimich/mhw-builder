@@ -6,7 +6,7 @@
 		</button>
 	</div>
 
-	<virtual-scroll id="decorations-list" #decorationList class="scroll-container" *ngIf="decorations" [items]="filteredDecorations" (update)="onDecorationListUpdate($event)" [childHeight]="44">
+	<virtual-scroller id="decorations-list" #decorationList class="scroll-container" *ngIf="decorations" [items]="filteredDecorations" (update)="onDecorationListUpdate($event)" [childHeight]="44">
 		<div *ngFor="let decoration of virtualDecorations" class="scroll-item-container" (click)="selectDecoration(decoration)">
 			<div class="decoration-name">
 				{{decoration.name}}
@@ -23,5 +23,5 @@
 				</div>
 			</div>
 		</div>
-	</virtual-scroll>
+	</virtual-scroller>
 </div>

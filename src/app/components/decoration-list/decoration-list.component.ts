@@ -6,7 +6,7 @@ import { ItemType } from '../../types/item.type';
 import { DecorationModel } from '../../models/decoration.model';
 import { PointerType } from '../../types/pointer.type';
 import * as _ from 'lodash';
-import { VirtualScrollComponent } from 'angular2-virtual-scroll';
+import { VirtualScrollerComponent } from 'ngx-virtual-scroller';
 import { SkillModel } from '../../models/skill.model';
 
 @Component({
@@ -27,7 +27,7 @@ export class DecorationListComponent implements OnInit {
 	@Output() decorationSelected = new EventEmitter<DecorationModel>();
 
 	@ViewChild('searchBox') searchBox: ElementRef;
-	@ViewChild('decorationList') decorationList: VirtualScrollComponent;
+	@ViewChild('decorationList') decorationList: VirtualScrollerComponent;
 
 	decorations: DecorationModel[];
 	filteredDecorations: DecorationModel[];

@@ -1,6 +1,6 @@
 import { Component, ElementRef, EventEmitter, HostListener, Input, OnInit, Output, ViewChild } from '@angular/core';
-import { VirtualScrollComponent } from 'angular2-virtual-scroll';
 import * as _ from 'lodash';
+import { VirtualScrollerComponent } from 'ngx-virtual-scroller';
 import { ItemModel } from '../../models/item.model';
 import { SkillModel } from '../../models/skill.model';
 import { DataService } from '../../services/data.service';
@@ -29,7 +29,7 @@ export class WeaponListComponent implements OnInit {
 	@Output() itemSelected = new EventEmitter<ItemModel>();
 
 	@ViewChild('searchBox') searchBox: ElementRef;
-	@ViewChild('itemList') itemList: VirtualScrollComponent;
+	@ViewChild('itemList') itemList: VirtualScrollerComponent;
 
 	items: ItemModel[];
 	filteredItems: ItemModel[];

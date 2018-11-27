@@ -2,7 +2,7 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
 import { HttpClientModule } from '@angular/common/http';
 import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { VirtualScrollModule } from 'angular2-virtual-scroll';
+import { VirtualScrollerModule } from 'ngx-virtual-scroller';
 import { AppComponent } from './app.component';
 import { AmmoCapacitiesComponent } from './components/ammo-capacities/ammo-capacities.component';
 import { ArmorListComponent } from './components/armor-list/armor-list.component';
@@ -35,6 +35,7 @@ import { SlotService } from './services/slot.service';
 import { StatService } from './services/stat.service';
 import { TooltipService } from './services/tooltip.service';
 
+
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -62,7 +63,7 @@ import { TooltipService } from './services/tooltip.service';
 	imports: [
 		BrowserModule,
 		HttpClientModule,
-		VirtualScrollModule,
+		VirtualScrollerModule,
 		DataModule
 	],
 	providers: [
@@ -77,7 +78,7 @@ import { TooltipService } from './services/tooltip.service';
 		CalculationService,
 		BuildService,
 		AppDataProvider,
-		{ provide: APP_INITIALIZER, useFactory: appDataProviderFactory, deps: [AppDataProvider], multi: true}
+		{ provide: APP_INITIALIZER, useFactory: appDataProviderFactory, deps: [AppDataProvider], multi: true }
 	],
 	bootstrap: [AppComponent]
 })
