@@ -10,18 +10,20 @@ $itemHeight: 32px;
 		padding: 0;
 		background-color: rgb(50,50,50);
 		border-radius: 3px;
-	
+
 		li {
 			cursor: pointer;
-			height: $itemHeight;
+			/*height: $itemHeight;*/
 			line-height: $itemHeight - 2;
 			list-style: none;
-			padding: 8px;
+			padding: 2px 8px 8px 8px;
 			border-bottom: 1px black solid;
-		
+
 			.info-container {
-				display: -webkit-box;
-		
+				display: grid;
+				grid-row: 2;
+				grid-template-rows: max-content max-content;
+
 				.name-container {
 					flex-grow: 1;
 					white-space: nowrap;
@@ -29,28 +31,33 @@ $itemHeight: 32px;
 					text-overflow: ellipsis;
 					min-width: 0;
 				}
-		
+
 				.stat-container {
-					flex-grow: 0;
-		
-					.attack-container {
-						display: inline-flex;
-		
-						div, img {
-							white-space: nowrap;
-							overflow: hidden;
-							text-overflow: ellipsis;
-							line-height: $itemHeight;
-							max-height: $itemHeight;
-						}
+					flex-grow: 1;
+					display: grid;
+					font-size: 12px;
+					line-height: 16px;
+					background-color: #272727;
+					border-radius: 3px;
+					display: grid;
+
+					.description-value {
+						padding: 2px 5px 2px 7px;
 					}
 				}
 			}
 		}
-		
+
 		li:hover {
 			background-color: #525252;
 			border-radius: 3px;
 		}
 	}
 }
+
+@media only screen and (min-width: 716px) {
+	.description-value{
+		display: none !important;
+	}
+}
+

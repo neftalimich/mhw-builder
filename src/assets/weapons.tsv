@@ -195,7 +195,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 87	Hammer	6	Malady's Fist III	832	20	0				Paralysis	390			false	9;6;6;10;6;3		great;girros;paralysis				1.0
 86	Hammer	6	Water Basher III	936	0	0	Water	240						false	9;6;8;8;7;2	2	jyuratodus;water			1.0
 93	Hammer	7	Brazenbreak II	1092	0	30	Fire	120						false	12;12;4;5;7;0	3	uragaan;fire			1.0
-700	Hammer	6	Bristly Grudge	1040	0	0				Poison	270			false	0;0;0;0;12;0		workshop;poison				1.0
+700	Hammer	7	Bristly Grudge	1040	0	0				Poison	270			false	11;5;5;8;11;0		workshop;poison				1.0
 88	Hammer	7	Buona Flora	936	0	0				Poison	540			false	10;12;4;5;9;0	2;2	pukei-pukei;poison			1.0
 85	Hammer	7	Cocytus	936	0	0	Ice	450						false	11;12;4;5;8;0	3	workshop;ice			1.0
 278	Hammer	7	Devil's Crush	1196	-30	0	Dragon	210					High	false	5;12;8;6;4;5		deviljho;dragon			1.0

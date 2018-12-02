@@ -28,9 +28,13 @@
 			<li *ngIf="sharpnessBar && sharpnessBar.sharps" (pointerenter)="showSharpDetails($event, sharpnessBar)"
 			 (pointerleave)="clearSharpDetails()" (click)="showOnClickSharpDetails(sharpnessBar)">
 				<span class="detail-icon" [ngClass]="sharpnessBar.color">
-					<img [src]="'assets/images/sharpness-icon.png'" style="height:1em;margin:auto;padding-top:1px;">
+					<!--<img [src]="'assets/images/sharpness3-icon.png'" style="height:1em;margin:auto;padding-top:1px;">-->
+					<i class="far fa-question-circle" style="" [ngClass]="['sharp-' + sharpnessBar.maxSharp]"></i>
 				</span>
-				<span class="name">Sharpness</span>
+				<span class="name">
+					Sharpness
+					
+				</span>
 				<div class="value text-righ sharp-box">
 					<span *ngFor="let sharp of sharpnessBar.sharps; let i = index" [ngClass]="['sharp-bg-' + sharp.colorIndex, sharp.active ? 'sharp-active':'sharp-none', sharp.last ? 'sharp-active-last':'', sharp.first ? 'sharp-active-first':'']"
 					 [ngStyle]="{'width.px': (sharp.level * sharpnessBar.widthModifier)}">

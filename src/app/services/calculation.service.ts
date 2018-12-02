@@ -176,6 +176,7 @@ export class CalculationService {
 			const maxHandicraftLevels = 40 + 5 - total;
 			this.sharpnessBar.tooltipTemplate = '';
 			this.sharpnessBar.sharps = [];
+			this.sharpnessBar.maxSharp = null;
 
 			let levelsToSubstract = Math.min(5 - (stats.passiveSharpness / 10), maxHandicraftLevels);
 			let levelsToAdd = Math.min((stats.passiveSharpness / 10), maxHandicraftLevels);
@@ -183,6 +184,9 @@ export class CalculationService {
 			let last = true;
 
 			for (let i = sharpnessLevelsBar.length - 1; i >= 0; i--) {
+				if (this.sharpnessBar.maxSharp == null && sharpnessLevelsBar[i] > 0) {
+					this.sharpnessBar.maxSharp = i;
+				}
 				if (levelsToSubstract > 0) {
 					const toSubstract = Math.min(sharpnessLevelsBar[i], levelsToSubstract);
 					sharpnessLevelsBar[i] -= toSubstract;

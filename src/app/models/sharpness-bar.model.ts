@@ -7,6 +7,7 @@ export class SharpnessBarModel {
 	widthModifier: number;
 	levelsMissing: number;
 	tooltipTemplate: string;
+	maxSharp?: number;
 	sharpnessDataNeeded: boolean;
 	color: string;
 }
