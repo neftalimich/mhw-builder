@@ -196,5 +196,15 @@
 				"pieces": 4
 			}
 		]
+	},
+	{
+		"id": "asteraBlessing",
+		"name": "Astera Blessing",
+		"setLevels": [
+			{
+				"id": "greatLuck",
+				"pieces": 5
+			}
+		]
 	}
 ]

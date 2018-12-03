@@ -353,9 +353,9 @@
 				"passiveWeaponChargeReductionPercent": "10"
 			},
 			{
-				"description": "Increases gauge fill rate by 20% and reduces charge times by 20%.",
-				"passiveGaugeFillRatePercent": "20",
-				"passiveWeaponChargeReductionPercent": "20"
+				"description": "Increases gauge fill rate by 15% and reduces charge times by 15%.",
+				"passiveGaugeFillRatePercent": "15",
+				"passiveWeaponChargeReductionPercent": "15"
 			}
 		]
 	},
@@ -2139,6 +2139,16 @@
 		"levels": [
 			{
 				"description": "Elemental damage increased for jumping attacks."
+			}
+		]
+	},
+	{
+		"id": "greatLuck",
+		"name": "Great Luck",
+		"description": "Often increases the number of rewards received at the end of a quest. (Does not work if joining a quest in progress)",
+		"levels": [
+			{
+				"description": "Often increases the number of rewards received at the end of a quest. (Does not work if joining a quest in progress)"
 			}
 		]
 	}

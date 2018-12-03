@@ -43,6 +43,7 @@ id	itemType	rarity	name	baseDefense	maxDefense	augmentedDefense	fireResist	water
 71	Chest	7	Diablos Nero Mail Beta	56	68	82	2	-3	0	-4	2	resentment-1;diablosMastery	2;1	black;diablos	1.0
 64	Chest	7	Dober Mail Alpha	60	72	86	-2	0	-1	-1	4	attackBoost-2;mushroomancer-1	1		1.0
 63	Chest	7	Dober Mail Beta	60	72	86	-2	0	-1	-1	4	attackBoost-2	3		1.0
+507	Chest	7	Gala Suit Jacket Alpha	64	76	90	1	1	1	1	4	criticalDraw-1;asteraBlessing	2;1;1	astera	5.2
 74	Chest	7	Rath Soul Mail Alpha	56	68	82	3	2	2	-3	-4	freeElemAmmoUp-1;intimidator-1;rathalosMastery	1	azure;rathalos	1.0
 73	Chest	7	Rath Soul Mail Beta	56	68	82	3	2	2	-3	-4	freeElemAmmoUp-1;rathalosMastery	2	azure;rathalos	1.0
 70	Chest	7	Uragaan Mail Alpha	60	72	86	4	-3	1	-2	-2	partbreaker-2;uragaanProtection	1		1.0
@@ -124,6 +125,7 @@ id	itemType	rarity	name	baseDefense	maxDefense	augmentedDefense	fireResist	water
 203	Feet	7	Diablos Nero Greaves Beta	56	68	82	2	-3	0	-4	2	normalShots-1;diablosMastery	2	black;diablos	1.0
 196	Feet	7	Dober Greaves Alpha	60	72	86	-2	0	-1	-1	4	attackBoost-2;staminaSurge-1			1.0
 195	Feet	7	Dober Greaves Beta	60	72	86	-2	0	-1	-1	4	attackBoost-2	1		1.0
+508	Feet	7	Gala Suit Slacks Alpha	64	76	90	1	1	1	1	4	divineBlessing-1;asteraBlessing	3;1;1	astera	5.2
 206	Feet	7	Rath Soul Greaves Alpha	56	68	82	3	2	2	-3	-4	focus-1;cliffhanger-1;rathalosMastery		azure;rathalos	1.0
 205	Feet	7	Rath Soul Greaves Beta	56	68	82	3	2	2	-3	-4	focus-1;rathalosMastery	1	azure;rathalos	1.0
 202	Feet	7	Uragaan Greaves Alpha	60	72	86	4	-3	1	-2	-2	guard-2;uragaanProtection	1		1.0
@@ -204,6 +206,7 @@ id	itemType	rarity	name	baseDefense	maxDefense	augmentedDefense	fireResist	water
 115	Hands	7	Diablos Nero Braces Beta	56	68	82	2	-3	0	-4	2	focus-1;diablosMastery	2;1	black;diablos	1.0
 108	Hands	7	Dober Vambraces Alpha	60	72	86	-2	0	-1	-1	4	staminaSurge-2;mushroomancer-1			1.0
 107	Hands	7	Dober Vambraces Beta	60	72	86	-2	0	-1	-1	4	staminaSurge-1;mushroomancer-1	1;1		1.0
+509	Hands	7	Gala Suit Cuffs Alpha	64	76	90	1	1	1	1	4	maximumMight-1;asteraBlessing	2;1;1	astera	5.2
 118	Hands	7	Rath Soul Braces Alpha	56	68	82	3	2	2	-3	-4	focus-1;windproof-1;rathalosMastery	1	azure;rathalos	1.0
 117	Hands	7	Rath Soul Braces Beta	56	68	82	3	2	2	-3	-4	focus-1;rathalosMastery	2	azure;rathalos	1.0
 114	Hands	7	Uragaan Vambraces Alpha	60	72	86	4	-3	1	-2	-2	guard-1;defenseBoost-1;uragaanProtection	1		1.0
@@ -287,6 +290,7 @@ id	itemType	rarity	name	baseDefense	maxDefense	augmentedDefense	fireResist	water
 25	Head	7	Diablos Nero Helm Beta	56	68	82	2	-3	0	-4	2	focus-1;diablosMastery	3	black;diablos	1.0
 18	Head	7	Dober Helm Alpha	60	72	86	-2	0	-1	-1	4	freeElemAmmoUp-1;dragonResistance-1			1.0
 17	Head	7	Dober Helm Beta	60	72	86	-2	0	-1	-1	4	freeElemAmmoUp-1	1		1.0
+510	Head	7	Gala Suit Top Hat Alpha	64	76	90	1	1	1	1	4	criticalBoost-1;asteraBlessing	2;1;1	astera	5.2
 28	Head	7	Rath Soul Helm Alpha	56	68	82	3	2	2	-3	-4	criticalBoost-1;intimidator-2;rathalosMastery		azure;rathalos	1.0
 27	Head	7	Rath Soul Helm Beta	56	68	82	3	2	2	-3	-4	criticalBoost-1;rathalosMastery	1;1	azure;rathalos	1.0
 14	Head	7	Skull Mask Alpha	64	76	90	-3	-1	-1	-1	2	handicraft-1	2		1.0
@@ -369,6 +373,7 @@ id	itemType	rarity	name	baseDefense	maxDefense	augmentedDefense	fireResist	water
 159	Legs	7	Diablos Nero Coil Beta	56	68	82	2	-3	0	-4	2	resentment-1;diablosMastery	2	black;diablos	1.0
 152	Legs	7	Dober Coil Alpha	60	72	86	-2	0	-1	-1	4	dragonResistance-2;attackBoost-1	2		1.0
 151	Legs	7	Dober Coil Beta	60	72	86	-2	0	-1	-1	4	dragonResistance-2	3		1.0
+511	Legs	7	Gala Suit Tail Alpha	64	76	90	1	1	1	1	4	slingerCapacity-1;asteraBlessing	3;1;1	astera	5.2
 162	Legs	7	Rath Soul Coil Alpha	56	68	82	3	2	2	-3	-4	windproof-2;piercingShots-1;rathalosMastery		azure;rathalos	1.0
 161	Legs	7	Rath Soul Coil Beta	56	68	82	3	2	2	-3	-4	windproof-2;rathalosMastery	3	azure;rathalos	1.0
 158	Legs	7	Uragaan Coil Alpha	60	72	86	4	-3	1	-2	-2	partbreaker-1;thunderResistance-1;uragaanProtection	1;1		1.0
