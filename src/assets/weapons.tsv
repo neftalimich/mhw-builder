@@ -16,7 +16,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 359	Bow	7	Taroth Arrow "King"	216	30	20	Fire	240						false			kulve;taroth;rathalos;fire		Close	10
 504	Bow	7	Taroth Arrow "Queen"	216	10	20	Dragon	330	false				Low	false			kulve;taroth;rathian;dragon		Close;Power;Poison	10
 505	Bow	7	Taroth Arrow "Rage"	252	0	20	Fire	210						false			kulve;taroth;anjanath;fire		Close	10
-502	Bow	7	Taroth Arrow "Spark"	204	20	20	Thunder	270						false			kulve;taroth;tobi-kadachi;thunder	Close;Power;Paralysis		10
+502	Bow	7	Taroth Arrow "Spark"	204	20	20	Thunder	270						false			kulve;taroth;tobi-kadachi;thunder		Close;Power;Paralysis	10
 503	Bow	7	Taroth Arrow "Spew"	216	0	20				Blast	240	false		false			kulve;taroth;pukei-pukei;blast		Close;Paralysis;Poison	10
 501	Bow	7	Taroth Arrow "Stream"	180	0	20	Ice	390						false			kulve;taroth;legiana;ice		Close	10
 360	Bow	7	Taroth Arrow "Thief"	204	30	20				Blast	150	true		false			kulve;taroth;kulu-ya-ku;blast		Close;Paralysis;Sleep;Blast	10
@@ -81,7 +81,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 70	DualBlades	7	Anja Cyclone III	252	-20	0	Fire	210						false	10;12;4;5;9;0		anjanath;fire			10
 71	DualBlades	7	Diablos Clubs II	322	-10	15	Ice	90	true					false	9;5;6;12;6;2	2	ice			10
 699	DualBlades	7	Downy Crake Love	252	0	0				Sleep	120			false	9;5;5;8;13;0		workshop;sleep			10
-77	DualBlades	7	Enduring Schism	196	0	0	Dragon	270					true	false	11;11;4;4;8;2	1;1	dragonbone;dragon			10
+77	DualBlades	7	Enduring Schism	196	0	0	Dragon	270					Low	false	11;11;4;4;8;2	1;1	dragonbone;dragon			10
 68	DualBlades	7	Holy Sabers	252	0	0	Water	120						false	6;5;6;12;7;4	3	workshop;water			10
 73	DualBlades	7	Lava Cyclone II	252	0	0	Fire	150						false	20;7;2;2;5;4	2;2	lavasioth;fire			10
 79	DualBlades	7	Magda Ungulae II	308	-20	20				Blast	210			false	18;3;6;9;4;0	2	zorah;magdaros;blast			10
@@ -152,11 +152,11 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 155	Gunlance	6	Barroth Blaster III	460	-10	15				Paralysis	390	true		false	12;7;3;10;8;0		barroth;paralysis		Wide-3	10
 143	Gunlance	6	Chrome Gunlance II	414	0	0				Blast	270	true		false	6;6;2;15;9;2	1;1	ore;blast		Normal-3	10
 153	Gunlance	6	Deathfang Gunlance III	368	10	0				Paralysis	450			false	15;10;3;3;6;3		great;girros;paralysis		Normal-3	10
-157	Gunlance	6	Dragonbone Gunlance III	368	0	0	Dragon	420					Low	false	12;11;4;4;7;2	1;1	dragonbone;dragon	Normal-3	10
+157	Gunlance	6	Dragonbone Gunlance III	368	0	0	Dragon	420					Low	false	12;11;4;4;7;2	1;1	dragonbone;dragon		Normal-3	10
 152	Gunlance	6	Glutton Gunlance III	437	0	0				Sleep	300	true		false	9;12;4;5;10;0	3;2	great;jagras;sleep		Normal-3	10
-150	Gunlance	6	Great Bone Gunlance II	437	0	10	Thunder	270	true					false	10;12;4;5;9;0	3	bone;thunder	Long-2	10
+150	Gunlance	6	Great Bone Gunlance II	437	0	10	Thunder	270	true					false	10;12;4;5;9;0	3	bone;thunder		Long-2	10
 148	Gunlance	6	Jyura Buster III	437	0	0	Water	360						false	11;6;8;8;5;2	1	jyuratodus;water		Wide-3	10
-151	Gunlance	7	Bazel Buster II	460	-10	0				Blast	210			false	6;12;8;6;3;5	1	bazelgeuse;blast	Wide-3	10
+151	Gunlance	7	Bazel Buster II	460	-10	0				Blast	210			false	6;12;8;6;3;5	1	bazelgeuse;blast		Wide-3	10
 154	Gunlance	7	Hazak Spysa II	460	0	0	Dragon	270					Average	false	20;7;2;2;5;4	2	vaal;hazak;dragon		Long-3	10
 281	Gunlance	7	Insatiable Gunlance	529	-30	0	Dragon	240					High	false	4;12;8;6;5;5		deviljho;dragon		Long-3	10
 149	Gunlance	7	Legiana Cannon II	368	0	0	Ice	360						false	13;3;6;8;4;6		legiana;ice		Normal-3	10
@@ -476,7 +476,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 381	SwitchAxe	7	Taroth Axe "Bomber"	630	0	20				Blast	180			true	0;0;0;0;2;0		kulve;taroth;bazelgeuse;blast		Power	10
 426	SwitchAxe	7	Taroth Axe "Decay"	595	0	20	Dragon	210						true	0;0;0;0;0;2		kulve;taroth;vaal;dragon		Power Element	10
 384	SwitchAxe	7	Taroth Axe "Drifter"	595	25	20								true	0;0;0;0;2;0		kulve;taroth;paolumu		Power	10
-424	SwitchAxe	7	Taroth Axe "Glutton"	665	0	20				Sleep	150			true	0;0;0;0;2;0		kulve;taroth;jagras;sleep	Power		10
+424	SwitchAxe	7	Taroth Axe "Glutton"	665	0	20				Sleep	150			true	0;0;0;0;2;0		kulve;taroth;jagras;sleep		Power	10
 422	SwitchAxe	7	Taroth Axe "Gyre"	735	10	40	Fire	120						true	0;0;0;0;2;0		kulve;taroth;uragaan;fire		Power	10
 383	SwitchAxe	7	Taroth Axe "Horn"	805	-30	25	Ice	240	true					false	9;5;6;12;6;2		kulve;taroth;diablos;ice		Power	10
 425	SwitchAxe	7	Taroth Axe "King"	665	15	20	Fire	210						true	0;0;0;0;2;0		kulve;taroth;rathalos;fire		Power	10
