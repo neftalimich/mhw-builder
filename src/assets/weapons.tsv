@@ -27,7 +27,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 259	Bow	8	Giracles	228	0	0	Fire	150						false		3	uragaan;fire		Close;Sleep;Blast	10
 273	Bow	8	Great Hunter's Bow	228	0	20				Blast	150			false		3	workshop;blast		Close;Paralysis;Poison;Sleep;Blast	10
 263	Bow	8	Legia Snowfletcher	180	0	0	Ice	390						false			legiana;ice		Close;Power;Poison;Sleep	10
-308	Bow	8	Taroth Arrow "Blast"	240	0	30	Blast	360	true					false		3	kulve;taroth;blast		Close;Paralysis;Poison;Sleep;Blast	10
+308	Bow	8	Taroth Arrow "Blast"	240	0	30				Blast	360	true		false		3	kulve;taroth;blast		Close;Paralysis;Poison;Sleep;Blast	10
 685	Bow	8	Taroth Arrow "Fire"	240	10	20	Fire	360	true					false		3	kulve;taroth;fire		Close;Power	50
 411	Bow	8	Taroth Arrow "Thunder"	228	10	20	Thunder	360	true					false		3	kulve;taroth;thunder		Close;Power	10
 357	Bow	8	Taroth Arrow "Water"	228	0	30	Water	360	true					false		3	kulve;taroth;water		Close;Paralysis;Poison	10
@@ -130,7 +130,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 485	GreatSword	7	Taroth Blaze "King"	912	10	20	Fire	240						true	0;0;0;0;2;0		kulve;taroth;rathalos;fire			10
 327	GreatSword	7	Taroth Blaze "Magma"	1008	-20	30				Blast	420			true	0;0;0;0;2;0		kulve;taroth;zorah;blast			10
 488	GreatSword	7	Taroth Blaze "Mud"	1008	-20	25				Paralysis	390	false		true	0;0;0;0;2;0		kulve;taroth;barroth;paralysis			10
-325	GreatSword	7	Taroth Blaze "Numb"	768	30	20	Paralysis	450						true	0;0;0;0;2;0		kulve;taroth;girros;paralysis			10
+325	GreatSword	7	Taroth Blaze "Numb"	768	30	20				Paralysis	450			true	0;0;0;0;2;0		kulve;taroth;girros;paralysis			10
 484	GreatSword	7	Taroth Blaze "Spew"	864	0	20				Poison	540			true	0;0;0;0;2;0		kulve;taroth;pukei-pukei;poison			10
 486	GreatSword	7	Taroth Blaze "Tar"	912	10	30				Sleep	270			true	0;0;0;0;2;0		kulve;taroth;radobaan;sleep			10
 289	GreatSword	7	Wyvern Ignition "Impact"	1008	-15	0	Fire	510	true					false	25;2;2;2;3;6	1;1	fire			10
@@ -215,7 +215,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 91	Hammer	8	Pandemonium's Root	1040	0	0	Dragon	270					Average	false	20;7;2;2;5;4	2	vaal;hazak;dragon			10
 99	Hammer	8	Ragefire Magda Floga	1144	-20	20				Blast	420			false	19;3;6;8;4;0	2	zorah;magdaros;blast			10
 393	Hammer	8	Taroth Hammer "Ice"	988	0	20	Thunder	510	true					false	19;7;2;2;6;4	3	kulve;taroth;ice			10
-690	Hammer	8	Taroth Hammer "Sleep"	1040	0	30	Sleep	300	true					false	22;2;2;2;3;9	3	kulve;taroth;ice			50
+690	Hammer	8	Taroth Hammer "Sleep"	1040	0	30				Sleep	300	true		false	22;2;2;2;3;9	3	kulve;taroth;ice			50
 394	Hammer	8	Taroth Hammer "Thunder"	988	0	30	Thunder	480	true					false	15;10;3;3;6;3	3	kulve;taroth;thunder			10
 339	Hammer	8	Taroth Hammer "Water"	988	0	20	Water	360	true					false	8;5;6;12;5;4		kulve;taroth;water			10
 101	Hammer	8	Xeno Maph'agarna	884	15	0	Dragon	180					Low	false	13;3;6;8;4;6	3;3	xenojiiva;dragon			10
@@ -355,7 +355,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 127	Lance	7	Gama Pilebunker II	391	0	0				Blast	210			false	9;6;8;8;7;2	2;2	dodogama;blast			10
 135	Lance	7	Garon Dhara II	391	30	0	Fire	210	true					false	17;10;3;3;4;8		odogaron;fire			10
 125	Lance	7	Legiana Halberd II	368	0	0	Ice	360						false	13;3;6;8;4;6		legiana;ice			10
-318	Lance	7	Sapphire Star Lance	437	0	0	Paralysis	180						false	9;5;5;8;13;0		workshop;paralysis			10
+318	Lance	7	Sapphire Star Lance	437	0	0				Paralysis	180			false	9;5;5;8;13;0		workshop;paralysis			10
 375	Lance	7	Taroth Crest "Claw"	437	30	20	Fire	90	true					false	6;12;8;6;3;5		kulve;taroth;odogaron;fire			10
 376	Lance	7	Taroth Crest "Crusher"	391	10	20				Blast	210			true	0;0;0;0;2;0		kulve;taroth;dodogama;blast			10
 444	Lance	7	Taroth Crest "Decay"	391	0	20	Dragon	270					Average	true	0;0;0;0;0;2		kulve;taroth;vaal;dragon			10
