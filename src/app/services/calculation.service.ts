@@ -513,7 +513,7 @@ export class CalculationService {
 		const auxDivider = stats.totalAilmentAttack && stats.totalElementAttack ? 2 : 1;
 
 		const rawAttackAvgCalc: StatDetailModel = {
-			name: 'Raw Attack Average',
+			name: 'True Raw Average',
 			value: Number.isInteger(rawAttackAvg) ? rawAttackAvg : 0,
 			extra1:
 				stats.totalAilmentAttack ?
@@ -585,7 +585,7 @@ export class CalculationService {
 		const auxDivider = stats.totalAilmentAttack && stats.totalElementAttack ? 2 : 1;
 
 		const rawAttackAveragePotentialCalc: StatDetailModel = {
-			name: 'Raw Attack Average Potential',
+			name: 'True Raw Average Potential',
 			value: Number.isInteger(rawAttackAveragePotential) ? rawAttackAveragePotential : 0,
 			extra1:
 				stats.totalAilmentAttack ?

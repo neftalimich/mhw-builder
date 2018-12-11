@@ -192,22 +192,27 @@ export class StatService {
 		switch (this.stats.ailment) {
 			case AilmentType.Poison:
 				this.stats.effectivePassiveAilmentAttack = this.stats.passivePoisonAttack;
+				this.stats.effectivePassiveAilmentAttack += this.nearestTen(this.stats.baseAilmentAttack * (this.stats.passivePoisonBuildupPercent / 100));
 				this.stats.effectivePassiveAilmentBuildupPercent = this.stats.passivePoisonBuildupPercent;
 				break;
 			case AilmentType.Sleep:
 				this.stats.effectivePassiveAilmentAttack = this.stats.passiveSleepAttack;
+				this.stats.effectivePassiveAilmentAttack += this.nearestTen(this.stats.baseAilmentAttack * (this.stats.passiveSleepBuildupPercent / 100));
 				this.stats.effectivePassiveAilmentBuildupPercent = this.stats.passiveSleepBuildupPercent;
 				break;
 			case AilmentType.Paralysis:
 				this.stats.effectivePassiveAilmentAttack = this.stats.passiveParalysisAttack;
+				this.stats.effectivePassiveAilmentAttack += this.nearestTen(this.stats.baseAilmentAttack * (this.stats.passiveParalysisBuildupPercent / 100));
 				this.stats.effectivePassiveAilmentBuildupPercent = this.stats.passiveParalysisBuildupPercent;
 				break;
 			case AilmentType.Blast:
 				this.stats.effectivePassiveAilmentAttack = this.stats.passiveBlastAttack;
+				this.stats.effectivePassiveAilmentAttack += this.nearestTen(this.stats.baseAilmentAttack * (this.stats.passiveBlastBuildupPercent / 100));
 				this.stats.effectivePassiveAilmentBuildupPercent = this.stats.passiveBlastBuildupPercent;
 				break;
 			case AilmentType.Stun:
 				this.stats.effectivePassiveAilmentAttack = this.stats.passiveStunAttack;
+				this.stats.effectivePassiveAilmentAttack += this.nearestTen(this.stats.baseAilmentAttack * (this.stats.passiveStunBuildupPercent / 100));
 				this.stats.effectivePassiveAilmentBuildupPercent = this.stats.passiveStunBuildupPercent;
 				break;
 			default:
