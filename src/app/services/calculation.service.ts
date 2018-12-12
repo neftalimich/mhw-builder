@@ -378,7 +378,7 @@ export class CalculationService {
 		const ailmentAttackCalc: StatDetailModel = {
 			name: 'Ailment Attack',
 			value: stats.totalAilmentAttack,
-			icon: stats.ailment.toLowerCase() + (stats.ailmentHidden ? '-gray' : ''),
+			icon: stats.ailment.toLowerCase() + (stats.effectiveAilmentAttack == 0 ? '-gray' : ''),
 			color: ailmentCalc.color,
 			info: ailmentCalc.info,
 			calculationVariables: [
@@ -447,7 +447,7 @@ export class CalculationService {
 		const elementAttackCalc: StatDetailModel = {
 			name: 'Element Attack',
 			value: stats.totalElementAttack,
-			icon: stats.element.toLowerCase() + (stats.elementHidden ? '-gray' : ''),
+			icon: stats.element.toLowerCase() + (stats.effectiveElementAttack == 0 ? '-gray' : ''),
 			color: elementCalc.color,
 			info: elementCalc.info,
 			calculationVariables: [
