@@ -32,7 +32,7 @@
 				</span>
 				<span class="name">
 					Sharpness
-					<i class="fas fa-circle" style="font-size:12px;" [ngClass]="['sharp-' + sharpnessBar.maxSharp]"></i>
+					<i class="fas fa-circle fa-sm" [ngClass]="['sharp-' + sharpnessBar.maxSharp]"></i>
 				</span>
 				<div class="value text-righ sharp-box">
 					<span *ngFor="let sharp of sharpnessBar.sharps; let i = index" [ngClass]="['sharp-bg-' + sharp.colorIndex, sharp.active ? 'sharp-active':'sharp-none', sharp.last ? 'sharp-active-last':'', sharp.first ? 'sharp-active-first':'']"

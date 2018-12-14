@@ -13,7 +13,7 @@ $searchHeight: 38px;
 .search-container {
 	grid-row: 1;
 	background-color: rgb(50,50,50);
-	padding: 0 0 0 12px;	
+	padding: 0 0 0 12px;
 	border-radius: 3px;
 	display: grid;
 	grid-template-columns: auto min-content;
@@ -59,12 +59,27 @@ $searchHeight: 38px;
 			padding-left: 4px;
 			line-height: 30px;
 			display: grid;
-			grid-template-columns: auto max-content;
+			grid-template-columns: auto max-content max-content;
 
 			.name {
 				white-space: nowrap;
 				text-overflow: ellipsis;
 				overflow: hidden;
+			}
+
+			.rarity {
+				height: 22px;
+				line-height: 22px;
+				background-color: #272727;
+				border-radius: 26px;
+				text-align: center;
+				font-size: 12px;
+				margin: 4px 0;
+				padding: 0 8px;
+
+				.r2 {
+					display: none;
+				}
 			}
 
 			.levels {
@@ -115,5 +130,17 @@ $searchHeight: 38px;
 
 	.scroll-item-container:hover {
 		background-color: #525252;
+	}
+}
+
+@media only screen and (max-width: 716px) {
+	.rarity {
+		.r1 {
+			display: none !important;
+		}
+
+		.r2 {
+			display: inline !important;
+		}
 	}
 }

@@ -13,6 +13,9 @@
 				<div class="name">
 					{{item.name}}
 				</div>
+				<div class="rarity" *ngIf="item.rarity">
+					<span class="r1">Rarity </span><span class="r2">R</span>{{item.rarity}}
+				</div>
 				<div class="levels">
 					{{item.levels}} {{item.levels > 1 ? 'levels' : 'level'}}
 				</div>

@@ -1,7 +1,7 @@
 $equipmentHeight: 40px;
 
 .container {
-    width: 100%;
+	width: 100%;
 	margin-bottom: 12px;
 	display: grid;
 	grid-template-rows: $equipmentHeight + 16 auto auto;
@@ -92,8 +92,12 @@ $equipmentHeight: 40px;
 
 
 @media (max-width:576px) {
-	.info-button {
-		visibility: visible !important;
+	.icon-xs {
+		display: block !important;
+	}
+
+	.icon-md {
+		display: none !important;
 		float: right;
 	}
 }
