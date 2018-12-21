@@ -591,7 +591,7 @@ export class CalculationService {
 				stats.totalAilmentAttack ?
 					this.getAilmentAverage(
 						stats.totalAilmentAttack,
-						Math.max(stats.crititalStatus ? totalAffinityPotential : 0, 0),
+						Math.max(stats.criticalStatus ? totalAffinityPotential : 0, 0),
 						stats.passiveCriticalBoostPercent,
 						stats.effectiveElementalSharpnessModifier,
 						auxDivider)
@@ -602,7 +602,7 @@ export class CalculationService {
 				stats.totalElementAttack ?
 					this.getElementAverage(
 						stats.totalElementAttack,
-						Math.max(stats.crititalElement ? totalAffinityPotential : 0, 0),
+						Math.max(stats.criticalElement ? totalAffinityPotential : 0, 0),
 						stats.passiveCriticalBoostPercent,
 						stats.effectiveElementalSharpnessModifier,
 						auxDivider)

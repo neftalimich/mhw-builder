@@ -101,8 +101,8 @@ export class StatService {
 				if (level.passiveSharpness) { this.stats.passiveSharpness += level.passiveSharpness; }
 
 				if (level.passiveCriticalBoostPercent) { this.stats.passiveCriticalBoostPercent += level.passiveCriticalBoostPercent; }
-				if (level.criticalElement) { this.stats.crititalElement = true; }
-				if (level.criticalStatus) { this.stats.crititalStatus = true; }
+				if (level.criticalElement) { this.stats.criticalElement = true; }
+				if (level.criticalStatus) { this.stats.criticalStatus = true; }
 
 				if (level.passiveFireAttack) { this.stats.passiveFireAttack += level.passiveFireAttack; }
 				if (level.passiveWaterAttack) { this.stats.passiveWaterAttack += level.passiveWaterAttack; }

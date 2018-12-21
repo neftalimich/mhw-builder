@@ -110,6 +110,14 @@
 					</div>
 					<div class="stat-value" [style.color]="item.elementHidden ? 'gray' : 'white'">{{item.elementBaseAttack}}</div>
 				</div>
+				<div class="stat-container" *ngIf="item.sharpnessLevelsBar.length > 1">
+					<div class="icon-container">
+						<img src="assets/images/sharpness3-icon.png">
+					</div>
+					<div class="stat-value" [ngClass]="['sharp-'+(item.sharpnessLevelsBar | maxSharpness:true)]">
+						{{(item.sharpnessLevelsBar | maxSharpness) * 10}} <i class="fas fa-circle fa-sm"></i>
+					</div>
+				</div>	
 				<div class="stat-container" *ngIf="item.ammoCapacities?.deviation">
 					<div class="icon-container">
 						<img src="assets/images/deviation-icon.png">

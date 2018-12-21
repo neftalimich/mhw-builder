@@ -28,7 +28,7 @@ id	name
 26	Stun Negated
 27	Paralysis Negated
 28	Tremors Negated
-29	All Ailments Negated
+29	Blight Negated
 30	Sonic Waves
 31	Tool Use Drain Reduced (S)
 32	Tool Use Drain Reduced (L)
@@ -46,3 +46,5 @@ id	name
 44	Abnormal Status Atk. Increased
 45	All Melody Effects Extended
 46	Knockbacks Negated
+47	Earplug (S) & Wind Pressure Negated
+48	Blight Res Up
