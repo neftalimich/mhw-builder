@@ -30,9 +30,13 @@
 					<img [src]="'assets/images/sharpness3-icon.png'" style="height:1em;margin:auto;padding-top:1px;">
 				</span>
 				<span class="name">
-					Sharpness {{sharpn}}
+					Sharpness
 				</span>
-				<mhw-builder-sharpness-bar class="value" [sharpnessLevels]="sharpnessBar.levels" [handicraftLevel]="sharpnessBar.handicraftLevel"></mhw-builder-sharpness-bar>
+				<mhw-builder-sharpness-bar class="value"
+					[sharpnessLevels]="sharpnessBar.levels"
+					[handicraftLevel]="sharpnessBar.handicraftLevel"
+					[dataNeeded]="sharpnessBar.sharpnessDataNeeded">
+				</mhw-builder-sharpness-bar>
 			</li>
 
 			<li *ngIf="extraData && extraData.otherData[0].value">

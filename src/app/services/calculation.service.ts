@@ -175,7 +175,6 @@ export class CalculationService {
 			this.sharpnessBar.levels = JSON.parse(JSON.stringify(sharpnessLevelsBar));
 			this.sharpnessBar.handicraftLevel = (stats.passiveSharpness / 10);
 			this.sharpnessBar.sharpnessDataNeeded = stats.sharpnessDataNeeded;
-			this.sharpnessBar.color = stats.sharpnessDataNeeded ? 'red' : 'white';
 		}
 	}
 

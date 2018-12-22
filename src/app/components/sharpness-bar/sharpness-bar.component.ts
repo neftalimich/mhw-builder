@@ -18,9 +18,6 @@ export class SharpnessBarComponent implements OnInit {
 	set handicraftLevel(handicraftLevel: number) {
 		this._handicraftLevel = handicraftLevel;
 	}
-	get handicraftLevel(): number {
-		return this._handicraftLevel;
-	}
 
 	@Input()
 	set sharpnessLevels(sharpnessLevels: number[]) {
@@ -28,20 +25,16 @@ export class SharpnessBarComponent implements OnInit {
 		this._sharpnessLevels = sharpnessLevels;
 		this.generateSharpnessBar();
 	}
-	get sharpnessLevels(): number[] {
-		return this._sharpnessLevels;
-	}
-	
+
+	@Input() dataNeeded: boolean;
 
 	sharpnessBar: SharpnessBarModel = new SharpnessBarModel();
 
 	constructor(private tooltipService: TooltipService) {
-		
+
 	}
 
 	ngOnInit() {
-		console.log(this._sharpnessLevels, this._handicraftLevel)
-		this.generateSharpnessBar();
 	}
 
 	generateSharpnessBar() {
@@ -109,8 +102,9 @@ export class SharpnessBarComponent implements OnInit {
 		this.sharpnessBar.tooltipTemplate +=
 			` | = <span class="sharp-8"> ${((total - sharpnessEmpty) * 10)}`
 			+ ` [<span class="sharp-${this.sharpnessBar.maxColorSharp}">${this.sharpnessBar.maxLevelSharp * 10}<i class="fas fa-circle fa-sm"></i></span>]</span>`;
+		this.sharpnessBar.sharpnessDataNeeded = this.dataNeeded;
+		this.sharpnessBar.color = this.dataNeeded ? 'red' : 'white';
 	}
-
 
 	showSharpDetails(event: PointerEvent) {
 		if (event.pointerType == PointerType.Mouse) {
