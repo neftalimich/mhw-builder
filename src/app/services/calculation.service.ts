@@ -172,67 +172,8 @@ export class CalculationService {
 		const sharpnessLevelsBar = Object.assign([], stats.sharpnessLevelsBar);
 
 		if (stats.sharpnessLevelsBar && !isNaN(stats.sharpnessLevelsBar[0])) {
-			let total = sharpnessLevelsBar.reduce((a, b) => a + b, 0);
-			const maxHandicraftLevels = 40 + 5 - total;
-			this.sharpnessBar.tooltipTemplate = '';
-			this.sharpnessBar.sharps = [];
-			this.sharpnessBar.maxSharp = null;
-
-			let levelsToSubstract = Math.min(5 - (stats.passiveSharpness / 10), maxHandicraftLevels);
-			let levelsToAdd = Math.min((stats.passiveSharpness / 10), maxHandicraftLevels);
-			const sharpnessEmpty = levelsToSubstract;
-			let last = true;
-
-			for (let i = sharpnessLevelsBar.length - 1; i >= 0; i--) {
-				if (this.sharpnessBar.maxSharp == null && sharpnessLevelsBar[i] > 0) {
-					this.sharpnessBar.maxSharp = i;
-				}
-				if (levelsToSubstract > 0) {
-					const toSubstract = Math.min(sharpnessLevelsBar[i], levelsToSubstract);
-					sharpnessLevelsBar[i] -= toSubstract;
-					levelsToSubstract -= toSubstract;
-				}
-				const aux = Math.min(sharpnessLevelsBar[i], levelsToAdd);
-
-				if (levelsToAdd > 0) {
-					const sharpnessAux: SharpnessModel = {
-						colorIndex: i,
-						level: aux,
-						active: true,
-						last: last
-					};
-					last = false;
-					if (levelsToAdd - aux == 0) {
-						sharpnessAux.first = true;
-					}
-					this.sharpnessBar.sharps.push(sharpnessAux);
-				}
-				if (levelsToAdd < sharpnessLevelsBar[i]) {
-					const sharpnessAux: SharpnessModel = {
-						colorIndex: i,
-						level: sharpnessLevelsBar[i] - levelsToAdd,
-						active: false
-					};
-					this.sharpnessBar.sharps.push(sharpnessAux);
-				}
-				levelsToAdd -= aux;
-
-				// When handicraft is not needed
-				if (total > 40 && sharpnessLevelsBar[i] > 0) {
-					const toSubstract2 = Math.min(sharpnessLevelsBar[i], total - 40);
-					sharpnessLevelsBar[i] -= toSubstract2;
-					total -= toSubstract2;
-				}
-				this.sharpnessBar.tooltipTemplate =
-					`| <span class="sharp-${i}">${sharpnessLevelsBar[i] * 10}</span> ${this.sharpnessBar.tooltipTemplate}`;
-			}
-
-			this.sharpnessBar.sharps = this.sharpnessBar.sharps.reverse();
-			this.sharpnessBar.levels = sharpnessLevelsBar;
-			this.sharpnessBar.empty = sharpnessEmpty;
-			this.sharpnessBar.widthModifier = 3.5;
-			this.sharpnessBar.levelsMissing = 6 - sharpnessLevelsBar.length;
-			this.sharpnessBar.tooltipTemplate += ' | = <span class="sharp-8">' + ((total - sharpnessEmpty) * 10) + '</span>';
+			this.sharpnessBar.levels = JSON.parse(JSON.stringify(sharpnessLevelsBar));
+			this.sharpnessBar.handicraftLevel = (stats.passiveSharpness / 10);
 			this.sharpnessBar.sharpnessDataNeeded = stats.sharpnessDataNeeded;
 			this.sharpnessBar.color = stats.sharpnessDataNeeded ? 'red' : 'white';
 		}

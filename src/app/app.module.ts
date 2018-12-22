@@ -35,6 +35,7 @@ import { SlotService } from './services/slot.service';
 import { StatService } from './services/stat.service';
 import { TooltipService } from './services/tooltip.service';
 import { MaxSharpnessPipe } from './pipes/max-sharpness.pipe';
+import { SharpnessBarComponent } from './components/sharpness-bar/sharpness-bar.component';
 
 
 @NgModule({
@@ -60,7 +61,8 @@ import { MaxSharpnessPipe } from './pipes/max-sharpness.pipe';
 		SetBonusDetailsComponent,
 		ModalComponent,
 		TooltipComponent,
-		MaxSharpnessPipe
+		MaxSharpnessPipe,
+		SharpnessBarComponent
 	],
 	imports: [
 		BrowserModule,

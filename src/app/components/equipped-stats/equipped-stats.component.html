@@ -8,7 +8,7 @@
 		<hr>
 		<ul class="attack-stats striped">
 			<li *ngFor="let calc of attackCalcs" (pointerenter)="showCalcDetails($event, calc)" (pointerleave)="clearCalcDetails()"
-			 (click)="showOnClickCalcDetails(calc)">
+				(click)="showOnClickCalcDetails(calc)">
 				<span *ngIf="(calc.calculationTemplate || calc.info?.length) && !calc.icon" class="detail-icon" [ngClass]="calc.color">
 					<i class="far fa-question-circle"></i>
 				</span>
@@ -25,23 +25,16 @@
 					<span *ngIf="calc.extra1 || calc.extra2">)</span>
 				</span>
 			</li>
-			<li *ngIf="sharpnessBar && sharpnessBar.sharps" (pointerenter)="showSharpDetails($event, sharpnessBar)"
-			 (pointerleave)="clearSharpDetails()" (click)="showOnClickSharpDetails(sharpnessBar)">
+			<li *ngIf="sharpnessBar">
 				<span class="detail-icon" [ngClass]="sharpnessBar.color">
 					<img [src]="'assets/images/sharpness3-icon.png'" style="height:1em;margin:auto;padding-top:1px;">
 				</span>
 				<span class="name">
-					Sharpness
-					<i class="fas fa-circle fa-sm" [ngClass]="['sharp-' + sharpnessBar.maxSharp]"></i>
+					Sharpness {{sharpn}}
 				</span>
-				<div class="value text-righ sharp-box">
-					<span *ngFor="let sharp of sharpnessBar.sharps; let i = index" [ngClass]="['sharp-bg-' + sharp.colorIndex, sharp.active ? 'sharp-active':'sharp-none', sharp.last ? 'sharp-active-last':'', sharp.first ? 'sharp-active-first':'']"
-					 [ngStyle]="{'width.px': (sharp.level * sharpnessBar.widthModifier)}">
-					</span>
-					<span class="sharp-bg-7 sharp-none" [ngStyle]="{'width.px': (sharpnessBar.empty * sharpnessBar.widthModifier)}">
-					</span>
-				</div>
+				<mhw-builder-sharpness-bar class="value" [sharpnessLevels]="sharpnessBar.levels" [handicraftLevel]="sharpnessBar.handicraftLevel"></mhw-builder-sharpness-bar>
 			</li>
+
 			<li *ngIf="extraData && extraData.otherData[0].value">
 				<span class="detail-icon">
 					<!--<i class="far fa-question-circle"></i>-->
