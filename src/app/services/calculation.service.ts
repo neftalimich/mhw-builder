@@ -169,12 +169,12 @@ export class CalculationService {
 	}
 
 	private getSharpnessBar(stats: StatsModel) {
-		const sharpnessLevelsBar = Object.assign([], stats.sharpnessLevelsBar);
-
 		if (stats.sharpnessLevelsBar && !isNaN(stats.sharpnessLevelsBar[0])) {
-			this.sharpnessBar.levels = JSON.parse(JSON.stringify(sharpnessLevelsBar));
+			this.sharpnessBar.levels = JSON.parse(JSON.stringify(stats.sharpnessLevelsBar));
 			this.sharpnessBar.handicraftLevel = (stats.passiveSharpness / 10);
 			this.sharpnessBar.sharpnessDataNeeded = stats.sharpnessDataNeeded;
+		} else {
+			this.sharpnessBar.levels = null;
 		}
 	}
 
