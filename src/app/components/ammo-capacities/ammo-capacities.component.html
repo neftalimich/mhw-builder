@@ -1,137 +1,101 @@
 <div class="container">
-	<table *ngIf="ammoCapacities?.deviation != deviationTypes.NA">
+	<div *ngIf="showAmmoInfo" class="animated fadeIn fast">
+		<button (click)="setRecoil(1)" [ngClass]="{'recoil':recoilSuppresorMod>0}">
+			<i class="fas fa-sign-out-alt fa-rotate-90"></i> 1
+		</button>
+		<button (click)="setRecoil(2)" [ngClass]="{'recoil':recoilSuppresorMod>1}">
+			<i class="fas fa-sign-out-alt fa-rotate-90"></i> 2
+		</button>
+		<button (click)="setRecoil(3)" [ngClass]="{'recoil':recoilSuppresorMod>2}">
+			<i class="fas fa-sign-out-alt fa-rotate-90"></i> 3
+		</button>
+		<button (click)="setReload(1)" [ngClass]="{'reload':reloadAssistMod>0}">
+			<i class="fas fa-angle-double-up"></i> 1
+		</button>
+		<button (click)="setReload(2)" [ngClass]="{'reload':reloadAssistMod>1}">
+			<i class="fas fa-angle-double-up"></i> 2
+		</button>
+		<button (click)="setReload(3)" [ngClass]="{'reload':reloadAssistMod>2}">
+			<i class="fas fa-angle-double-up"></i> 3
+		</button>
+		<button (click)="setDeviation(1)" [ngClass]="{'deviation':deviationSuppresorMod>0}">
+			<i class="fas fa-compress-arrows-alt"></i> 1
+		</button>
+		<button (click)="setDeviation(2)" [ngClass]="{'deviation':deviationSuppresorMod>1}">
+			<i class="fas fa-compress-arrows-alt"></i> 2
+		</button>
+		<button (click)="setDeviation(3)" [ngClass]="{'deviation':deviationSuppresorMod>2}">
+			<i class="fas fa-compress-arrows-alt"></i> 3
+		</button>
+	</div>
+	<table *ngIf="ammoCapacities?.deviation">
 		<thead>
 			<tr>
-				<th style="text-align:left;">Deviation {{ammoCapacities.deviation}} / {{ammoCapacities.specialAmmo}}</th>
+				<th style="text-align:left;">
+					Deviation {{ammoCapacities.deviation[deviationSuppresorMod]}}
+					<span *ngIf="deviationSuppresorMod >= ammoCapacities.deviation.length">
+						{{ammoCapacities.deviation[ ammoCapacities.deviation.length-1]}}
+					</span>
+					<br />
+					{{ammoCapacities.specialAmmo}}
+					<button>
+						<i class="fas fa-cog" [ngClass]="{'sharp-2':showAmmoInfo}" (click)="showAmmoInfo=!showAmmoInfo"></i>
+					</button>
+				</th>
 				<th>Lv 1</th>
 				<th>Lv 2</th>
 				<th>Lv 3</th>
 			</tr>
 		</thead>
 		<tbody>
-			<tr *ngIf="!allZero(ammoCapacities.normal)">
-				<td><img src="assets/images/ammo/ammo-normal-icon.png" /> Normal</td>
-				<td>{{ammoCapacities.normal[0]}}</td>
-				<td>{{ammoCapacities.normal[1]}}</td>
-				<td>{{ammoCapacities.normal[2]}}</td>
-			</tr>
-			<tr *ngIf="!allZero(ammoCapacities.piercing)">
-				<td><img src="assets/images/ammo/ammo-piercing-icon.png" /> Piercing</td>
-				<td>{{ammoCapacities.piercing[0]}}</td>
-				<td>{{ammoCapacities.piercing[1]}}</td>
-				<td>{{ammoCapacities.piercing[2]}}</td>
-			</tr>
-			<tr *ngIf="!allZero(ammoCapacities.spread)">
-				<td><img src="assets/images/ammo/ammo-spread-icon.png" /> Spread</td>
-				<td>{{ammoCapacities.spread[0]}}</td>
-				<td>{{ammoCapacities.spread[1]}}</td>
-				<td>{{ammoCapacities.spread[2]}}</td>
-			</tr>
-			<tr *ngIf="!allZero(ammoCapacities.sticky)">
-				<td><img src="assets/images/ammo/ammo-sticky-icon.png" /> Sticky</td>
-				<td>{{ammoCapacities.sticky[0]}}</td>
-				<td>{{ammoCapacities.sticky[1]}}</td>
-				<td>{{ammoCapacities.sticky[2]}}</td>
-			</tr>
-			<tr *ngIf="!allZero(ammoCapacities.cluster)">
-				<td><img src="assets/images/ammo/ammo-cluster-icon.png" /> Cluster</td>
-				<td>{{ammoCapacities.cluster[0]}}</td>
-				<td>{{ammoCapacities.cluster[1]}}</td>
-				<td>{{ammoCapacities.cluster[2]}}</td>
-			</tr>
-			<tr *ngIf="!allZero(ammoCapacities.recover)">
-				<td><img src="assets/images/ammo/ammo-recover-icon.png" /> Recover</td>
-				<td>{{ammoCapacities.recover[0]}}</td>
-				<td>{{ammoCapacities.recover[1]}}</td>
-				<td>-</td>
-			</tr>
-			<tr *ngIf="!allZero(ammoCapacities.poison)">
-				<td><img src="assets/images/ammo/ammo-poison-icon.png" /> Poison</td>
-				<td>{{ammoCapacities.poison[0]}}</td>
-				<td>{{ammoCapacities.poison[1]}}</td>
-				<td>-</td>
-			</tr>
-			<tr *ngIf="!allZero(ammoCapacities.paralysis)">
-				<td><img src="assets/images/ammo/ammo-paralysis-icon.png" /> Paralysis</td>
-				<td>{{ammoCapacities.paralysis[0]}}</td>
-				<td>{{ammoCapacities.paralysis[1]}}</td>
-				<td>-</td>
-			</tr>
-			<tr *ngIf="!allZero(ammoCapacities.sleep)">
-				<td><img src="assets/images/ammo/ammo-sleep-icon.png" /> Sleep</td>
-				<td>{{ammoCapacities.sleep[0]}}</td>
-				<td>{{ammoCapacities.sleep[1]}}</td>
-				<td>-</td>
-			</tr>
-			<tr *ngIf="!allZero(ammoCapacities.exhaust)">
-				<td><img src="assets/images/ammo/ammo-exhaust-icon.png" /> Exhaust</td>
-				<td>{{ammoCapacities.exhaust[0]}}</td>
-				<td>{{ammoCapacities.exhaust[1]}}</td>
-				<td>-</td>
-			</tr>
-			<tr *ngIf="ammoCapacities.flaming" style="border-top-style:solid;">
-				<td><img src="assets/images/ammo/ammo-flaming-icon.png" /> Flaming</td>
-				<td>{{ammoCapacities.flaming}}</td>
-				<td></td>
-				<td>-</td>
-			</tr>
-			<tr *ngIf="ammoCapacities.water">
-				<td><img src="assets/images/ammo/ammo-water-icon.png" /> Water</td>
-				<td>{{ammoCapacities.water}}</td>
-				<td>-</td>
-				<td>-</td>
-			</tr>
-			<tr *ngIf="ammoCapacities.freeze">
-				<td><img src="assets/images/ammo/ammo-freeze-icon.png" /> Freeze</td>
-				<td>{{ammoCapacities.freeze}}</td>
-				<td>-</td>
-				<td>-</td>
-			</tr>
-			<tr *ngIf="ammoCapacities.thunder">
-				<td><img src="assets/images/ammo/ammo-thunder-icon.png" /> Thunder</td>
-				<td>{{ammoCapacities.thunder}}</td>
-				<td>-</td>
-				<td>-</td>
-			</tr>
-			<tr *ngIf="ammoCapacities.dragon">
-				<td><img src="assets/images/ammo/ammo-dragon-icon.png" /> Dragon</td>
-				<td>{{ammoCapacities.dragon}}</td>
-				<td>-</td>
-				<td>-</td>
-			</tr>
-			<tr *ngIf="ammoCapacities.slicing">
-				<td><img src="assets/images/ammo/ammo-slicing-icon.png" /> Slicing</td>
-				<td>{{ammoCapacities.slicing}}</td>
-				<td>-</td>
-				<td>-</td>
-			</tr>
-			<tr *ngIf="ammoCapacities.wyvern">
-				<td><img src="assets/images/ammo/ammo-wyvern-icon.png" /> Wyvern</td>
-				<td>{{ammoCapacities.wyvern}}</td>
-				<td>-</td>
-				<td>-</td>
-			</tr>
-			<tr *ngIf="ammoCapacities.demon">
-				<td><img src="assets/images/ammo/ammo-demon-icon.png" /> Demon</td>
-				<td>{{ammoCapacities.demon}}</td>
-				<td>-</td>
-				<td>-</td>
-			</tr>
-			<tr *ngIf="ammoCapacities.armor">
-				<td><img src="assets/images/ammo/ammo-armor-icon.png" /> Armor</td>
-				<td>{{ammoCapacities.armor}}</td>
-				<td>-</td>
-				<td>-</td>
-			</tr>
-			<tr *ngIf="ammoCapacities.tranq">
-				<td><img src="assets/images/ammo/ammo-tranq-icon.png" /> Tranq</td>
-				<td>{{ammoCapacities.tranq}}</td>
-				<td>-</td>
-				<td>-</td>
-			</tr>
+			<ng-container *ngFor="let ammo of ammoCapacities.ammo">
+				<tr *ngIf="!allZero2(ammo.levels)">
+					<td>
+						<img [src]="'assets/images/ammo/ammo-'+ammo.name+'-icon.png'" /> {{ammo.name|titlecase}}
+					</td>
+					<td *ngFor="let level of ammo.levels | keyvalue">
+						<div *ngIf="!showAmmoInfo" class="animated fadeIn fast">
+							<span style="font-weight:bold;">
+								{{level.value.capacity}} <i class="fas fa-angle-double-up sharp-2" *ngIf="level.value.type==1"></i>
+								<i class="fas fa-sign-out-alt fa-rotate-90 recoil" *ngIf="level.value.type==2"></i>
+							</span>
+						</div>
+						<div *ngIf="showAmmoInfo" class="animated fadeIn fast">
+							<span *ngIf="recoilSuppresorMod<level.value.recoil.length" class="recoil">
+								<!--{{level.value.recoil[recoilSuppresorMod]}}-->
+								<span *ngIf="level.value.recoil[recoilSuppresorMod]>0">
+									{{recoilType[level.value.recoil[recoilSuppresorMod]]}}
+								</span>
+								<i class="fas fa-sign-out-alt fa-rotate-90 recoil" *ngIf="level.value.recoil[recoilSuppresorMod]==0"></i>
+							</span>
+							<span *ngIf="recoilSuppresorMod>=level.value.recoil.length" class="recoil">
+								<span *ngIf="level.value.recoil[level.value.recoil.length-1]>0">
+									{{recoilType[level.value.recoil[level.value.recoil.length-1]]}}
+								</span>
+								<i class="fas fa-sign-out-alt fa-rotate-90 recoil" *ngIf="level.value.recoil[level.value.recoil.length-1]==0"></i>
+							</span>
+							<br />
+							<span *ngIf="reloadAssistMod<level.value.reload.length" class="reload">
+								<!--{{level.value.reload[reloadAssistMod]}}-->
+								{{reloadType[level.value.reload[reloadAssistMod]]}}
+							</span>
+							<span *ngIf="reloadAssistMod>=level.value.reload.length" class="reload">
+
+								<!--{{level.value.reload[level.value.reload.length-1]}}-->
+								{{reloadType[level.value.reload[level.value.reload.length-1]]}}
+							</span>
+						</div>
+					</td>
+					<td *ngIf="(ammo.levels|keyvalue).length < 3">
+						-
+					</td>
+					<td *ngIf="(ammo.levels|keyvalue).length < 2">
+						-
+					</td>
+				</tr>
+			</ng-container>
 		</tbody>
 	</table>
-
 	<div class="no-data-warning" *ngIf="ammoCapacities?.deviation == deviationTypes.NA">
 		Ammo capacity data is missing!
 	</div>

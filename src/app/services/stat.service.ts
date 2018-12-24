@@ -345,11 +345,12 @@ export class StatService {
 	private checkElementless() {
 		if (this.stats.elementlessBoostPercent > 0 && this.stats.totalElementAttack == 0 && this.stats.totalAilmentAttack == 0) {
 			if (this.stats.ammoCapacities) {
-				if (this.stats.ammoCapacities.flaming == 0
-					&& this.stats.ammoCapacities.water == 0
-					&& this.stats.ammoCapacities.freeze == 0
-					&& this.stats.ammoCapacities.thunder == 0
-					&& this.stats.ammoCapacities.dragon == 0) {
+				if (this.stats.ammoCapacities.ammo[10].levels[0].capacity == 0 // flaming
+					&& this.stats.ammoCapacities.ammo[11].levels[0].capacity == 0 // water
+					&& this.stats.ammoCapacities.ammo[12].levels[0].capacity == 0 // freeze
+					&& this.stats.ammoCapacities.ammo[13].levels[0].capacity == 0 // thunder
+					&& this.stats.ammoCapacities.ammo[14].levels[0].capacity == 0 // dragon
+				) {
 					return true;
 				} else {
 					return false;

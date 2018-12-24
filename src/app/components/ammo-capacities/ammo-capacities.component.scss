@@ -26,3 +26,23 @@ table {
 	color: $yellow;
 	text-align: center;
 }
+
+.bd-left {
+	border-left: $borderStyle;
+}
+
+.bd-bottom {
+	border-bottom: $borderStyle;
+}
+
+.recoil {
+	color: lightskyblue;
+}
+
+.reload {
+	color: lightgreen;
+}
+
+.deviation {
+	color: lightcoral;
+}

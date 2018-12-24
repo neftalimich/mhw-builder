@@ -47,7 +47,7 @@ export class AppDataProvider {
 				this.setBonusesLoader.load('set-bonuses.json'),
 				this.sharpnessModifiersLoader.load('sharpness-modifiers.json', false),
 				this.weaponModifiersLoader.load('weapon-modifiers.json', false),
-				this.ammoCapacitiesLoader.load('ammo-capacities.tsv', false),
+				this.ammoCapacitiesLoader.load('ammo-capacities.json', false),
 				this.melodiesLoader.load('melodies.tsv', false),
 				this.melodyEffectLoader.load('melody-effect.tsv', false)
 			).subscribe(results => {
