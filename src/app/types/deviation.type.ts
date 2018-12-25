@@ -12,7 +12,8 @@ export enum RecoilType {
 	Low = 2,
 	Average = 3,
 	High = 4,
-	VeryHigh = 5
+	VeryHigh = 5,
+	Wyvern = 6
 }
 export enum ReloadType {
 	VerySlow = 1,

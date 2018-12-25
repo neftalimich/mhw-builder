@@ -274,7 +274,7 @@
 					{
 						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 6 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -3483,7 +3483,7 @@
 				]
 			}
 		],
-		"deviation": [ "None", "None", "None", "None" ],
+		"deviation": [ "None" ],
 		"specialAmmo": "Wyvernheart"
 	},
 	{
@@ -4117,7 +4117,7 @@
 				]
 			}
 		],
-		"deviation": [ "None", "None", "None", "None" ],
+		"deviation": [ "None" ],
 		"specialAmmo": "Wyvernsnipe"
 	},
 	{
@@ -5385,7 +5385,7 @@
 				]
 			}
 		],
-		"deviation": [ "None", "None", "None", "None" ],
+		"deviation": [ "None" ],
 		"specialAmmo": "Wyvernheart"
 	},
 	{
@@ -10140,7 +10140,7 @@
 				]
 			}
 		],
-		"deviation": [ "None", "None", "None", "None" ],
+		"deviation": [ "None" ],
 		"specialAmmo": "Wyvernheart"
 	},
 	{
@@ -11725,7 +11725,7 @@
 				]
 			}
 		],
-		"deviation": [ "None", "None", "None", "None" ],
+		"deviation": [ "None" ],
 		"specialAmmo": "Wyvernheart"
 	},
 	{
@@ -12993,7 +12993,7 @@
 				]
 			}
 		],
-		"deviation": [ "None", "None", "None", "None" ],
+		"deviation": [ "None" ],
 		"specialAmmo": "Wyvernsnipe"
 	},
 	{
@@ -13005,20 +13005,20 @@
 					{
 						"capacity": 5,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 2 ],
+						"reload": [ 3, 3, 4 ]
 					},
 					{
 						"capacity": 4,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3, 3, 2 ],
+						"reload": [ 3, 3, 3, 4 ]
 					},
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3, 3, 3, 2 ],
+						"reload": [ 2, 2, 3 ]
 					}
 				]
 			},
@@ -13028,20 +13028,20 @@
 					{
 						"capacity": 10,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 2 ],
+						"reload": [ 3, 4 ]
 					},
 					{
 						"capacity": 8,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 2 ],
+						"reload": [ 3, 3, 4 ]
 					},
 					{
 						"capacity": 6,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3, 2 ],
+						"reload": [ 3, 3, 3, 4 ]
 					}
 				]
 			},
@@ -13074,8 +13074,8 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3, 3, 3, 2 ],
+						"reload": [ 2, 2, 2, 3 ]
 					},
 					{
 						"capacity": 0,
@@ -13120,14 +13120,14 @@
 					{
 						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5, 4 ],
+						"reload": [ 1, 2, 2, 3 ]
 					},
 					{
 						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5, 5, 4 ],
+						"reload": [ 1, 1, 2, 3 ]
 					}
 				]
 			},
@@ -13137,8 +13137,8 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3, 3, 2 ],
+						"reload": [ 2, 3, 3, 4 ]
 					},
 					{
 						"capacity": 0,
@@ -13154,14 +13154,14 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5, 4, 4, 3 ],
+						"reload": [ 2, 2, 3 ]
 					},
 					{
 						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5, 5, 5, 4 ],
+						"reload": [ 1, 1, 2, 3 ]
 					}
 				]
 			},
@@ -13171,8 +13171,8 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3, 3, 2 ],
+						"reload": [ 2, 3, 3, 4 ]
 					},
 					{
 						"capacity": 0,
@@ -13194,8 +13194,8 @@
 					{
 						"capacity": 4,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4, 3, 3, 2 ],
+						"reload": [ 2, 2, 3 ]
 					}
 				]
 			},
@@ -13205,8 +13205,8 @@
 					{
 						"capacity": 5,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4, 3, 2 ],
+						"reload": [ 2, 2, 2, 3 ]
 					}
 				]
 			},
@@ -13260,8 +13260,8 @@
 					{
 						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4, 3 ],
+						"reload": [ 1, 2, 2, 3 ]
 					}
 				]
 			},
@@ -13271,7 +13271,7 @@
 					{
 						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 6 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -13282,8 +13282,8 @@
 					{
 						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5, 5, 4, 3 ],
+						"reload": [ 1, 1, 2, 3 ]
 					}
 				]
 			},
@@ -13293,8 +13293,8 @@
 					{
 						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5, 5, 4, 3 ],
+						"reload": [ 1, 1, 2, 3 ]
 					}
 				]
 			},
@@ -13304,13 +13304,13 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3, 3, 2 ],
+						"reload": [ 2, 3, 3, 4 ]
 					}
 				]
 			}
 		],
-		"deviation": [ "None", "None", "None", "None" ],
+		"deviation": [ "None" ],
 		"specialAmmo": "Wyvernheart"
 	},
 	{
@@ -14905,22 +14905,22 @@
 				"name": "normal",
 				"levels": [
 					{
-						"capacity": 9,
+						"capacity": 7,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
-						"capacity": 8,
+						"capacity": 6,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
 					},
 					{
-						"capacity": 5,
+						"capacity": 4,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -14940,9 +14940,9 @@
 						"reload": [ 1 ]
 					},
 					{
-						"capacity": 4,
+						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 5 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -14963,10 +14963,10 @@
 						"reload": [ 1 ]
 					},
 					{
-						"capacity": 4,
+						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -14997,21 +14997,21 @@
 				"name": "cluster",
 				"levels": [
 					{
-						"capacity": 2,
+						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 4 ],
 						"reload": [ 1 ]
 					},
 					{
-						"capacity": 2,
+						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 4 ],
 						"reload": [ 1 ]
 					},
 					{
-						"capacity": 2,
+						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 4 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -15020,9 +15020,9 @@
 				"name": "recover",
 				"levels": [
 					{
-						"capacity": 3,
+						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 5 ],
 						"reload": [ 1 ]
 					},
 					{
@@ -15037,16 +15037,16 @@
 				"name": "poison",
 				"levels": [
 					{
-						"capacity": 9,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
-					},
-					{
 						"capacity": 7,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 2 ],
+						"reload": [ 3 ]
+					},
+					{
+						"capacity": 5,
+						"type": 0,
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -15054,15 +15054,15 @@
 				"name": "paralysis",
 				"levels": [
 					{
-						"capacity": 2,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"capacity": 1,
+						"type": 2,
+						"recoil": [ 0 ],
+						"reload": [ 3 ]
 					},
 					{
-						"capacity": 5,
+						"capacity": 4,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 4 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -15071,16 +15071,16 @@
 				"name": "sleep",
 				"levels": [
 					{
-						"capacity": 7,
+						"capacity": 5,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 2 ],
+						"reload": [ 3 ]
 					},
 					{
-						"capacity": 4,
+						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -15088,16 +15088,16 @@
 				"name": "exhaust",
 				"levels": [
 					{
-						"capacity": 9,
+						"capacity": 7,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 2 ],
+						"reload": [ 3 ]
 					},
 					{
-						"capacity": 8,
+						"capacity": 6,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -15151,7 +15151,7 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 4 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -15160,9 +15160,9 @@
 				"name": "slicing",
 				"levels": [
 					{
-						"capacity": 3,
+						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 5 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -15173,7 +15173,7 @@
 					{
 						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 6 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -15193,9 +15193,9 @@
 				"name": "armor",
 				"levels": [
 					{
-						"capacity": 3,
+						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 5 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -15204,15 +15204,15 @@
 				"name": "tranq",
 				"levels": [
 					{
-						"capacity": 4,
+						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
 					}
 				]
 			}
 		],
-		"deviation": [ "High", "High", "High", "High" ],
+		"deviation": [ "High", "High"],
 		"specialAmmo": "Wyvernheart"
 	},
 	{
@@ -15222,22 +15222,22 @@
 				"name": "normal",
 				"levels": [
 					{
-						"capacity": 2,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"capacity": 1,
+						"type": 2,
+						"recoil": [ 0 ],
+						"reload": [ 3 ]
 					},
 					{
-						"capacity": 7,
+						"capacity": 5,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 2 ],
+						"reload": [ 3 ]
 					},
 					{
-						"capacity": 4,
+						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -15257,10 +15257,10 @@
 						"reload": [ 1 ]
 					},
 					{
-						"capacity": 3,
+						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -15280,10 +15280,10 @@
 						"reload": [ 1 ]
 					},
 					{
-						"capacity": 4,
+						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					}
 				]
 			},
@@ -15297,15 +15297,15 @@
 						"reload": [ 1 ]
 					},
 					{
-						"capacity": 3,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
-					},
-					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
+					},
+					{
+						"capacity": 1,
+						"type": 0,
+						"recoil": [ 4 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -15337,9 +15337,9 @@
 				"name": "recover",
 				"levels": [
 					{
-						"capacity": 2,
+						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 5 ],
 						"reload": [ 1 ]
 					},
 					{
@@ -15354,15 +15354,15 @@
 				"name": "poison",
 				"levels": [
 					{
-						"capacity": 4,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
-					},
-					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
+					},
+					{
+						"capacity": 2,
+						"type": 0,
+						"recoil": [ 4 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -15371,15 +15371,15 @@
 				"name": "paralysis",
 				"levels": [
 					{
-						"capacity": 3,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
-					},
-					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 4 ],
+						"reload": [ 2 ]
+					},
+					{
+						"capacity": 1,
+						"type": 0,
+						"recoil": [ 5 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -15466,9 +15466,9 @@
 				"name": "dragon",
 				"levels": [
 					{
-						"capacity": 3,
+						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 5 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -15490,7 +15490,7 @@
 					{
 						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 6 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -15499,9 +15499,9 @@
 				"name": "demon",
 				"levels": [
 					{
-						"capacity": 2,
+						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 5 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -15521,15 +15521,15 @@
 				"name": "tranq",
 				"levels": [
 					{
-						"capacity": 4,
+						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
 					}
 				]
 			}
 		],
-		"deviation": [ "High", "High", "High", "High" ],
+		"deviation": [ "High" ],
 		"specialAmmo": "Wyvernheart"
 	},
 	{
@@ -15541,20 +15541,20 @@
 					{
 						"capacity": 10,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 2 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 9,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 6,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -15562,16 +15562,16 @@
 				"name": "piercing",
 				"levels": [
 					{
-						"capacity": 1,
+						"capacity": 9,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 3 ]
 					},
 					{
-						"capacity": 2,
+						"capacity": 7,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 2 ]
 					},
 					{
 						"capacity": 0,
@@ -15587,20 +15587,20 @@
 					{
 						"capacity": 9,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 6,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 5,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -15610,8 +15610,8 @@
 					{
 						"capacity": 4,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 2 ]
 					},
 					{
 						"capacity": 0,
@@ -15633,7 +15633,7 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 4 ],
 						"reload": [ 1 ]
 					},
 					{
@@ -15673,13 +15673,13 @@
 					{
 						"capacity": 5,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 5,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 4 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -15690,8 +15690,8 @@
 					{
 						"capacity": 4,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 2 ]
 					},
 					{
 						"capacity": 0,
@@ -15741,8 +15741,8 @@
 					{
 						"capacity": 7,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 2 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -15785,7 +15785,7 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 5 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -15796,7 +15796,7 @@
 					{
 						"capacity": 4,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 4 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -15807,7 +15807,7 @@
 					{
 						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 6 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -15818,7 +15818,7 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 5 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -15840,13 +15840,13 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
 					}
 				]
 			}
 		],
-		"deviation": [ "High", "High", "High", "High" ],
+		"deviation": [ "High", "High"],
 		"specialAmmo": "Wyvernsnipe"
 	},
 	{
@@ -15858,14 +15858,14 @@
 					{
 						"capacity": 10,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 2 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 9,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 0,
@@ -15881,20 +15881,20 @@
 					{
 						"capacity": 9,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 7,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 2 ]
 					},
 					{
 						"capacity": 5,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -15904,8 +15904,8 @@
 					{
 						"capacity": 9,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 0,
@@ -15933,7 +15933,7 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 5 ],
 						"reload": [ 1 ]
 					},
 					{
@@ -15956,7 +15956,7 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 4 ],
 						"reload": [ 1 ]
 					},
 					{
@@ -16007,7 +16007,7 @@
 					{
 						"capacity": 4,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 4 ],
 						"reload": [ 1 ]
 					},
 					{
@@ -16024,8 +16024,8 @@
 					{
 						"capacity": 4,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
 					},
 					{
 						"capacity": 0,
@@ -16091,8 +16091,8 @@
 					{
 						"capacity": 7,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 2 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -16102,7 +16102,7 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 5 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -16113,7 +16113,7 @@
 					{
 						"capacity": 4,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 4 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -16124,7 +16124,7 @@
 					{
 						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 6 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -16135,7 +16135,7 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 5 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -16157,13 +16157,13 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
 					}
 				]
 			}
 		],
-		"deviation": [ "None", "None", "None", "None" ],
+		"deviation": [ "None" ],
 		"specialAmmo": "Wyvernheart"
 	},
 	{
@@ -16173,22 +16173,22 @@
 				"name": "normal",
 				"levels": [
 					{
-						"capacity": 9,
+						"capacity": 7,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
-						"capacity": 8,
+						"capacity": 6,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
 					},
 					{
-						"capacity": 5,
+						"capacity": 4,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -16196,16 +16196,16 @@
 				"name": "piercing",
 				"levels": [
 					{
-						"capacity": 8,
+						"capacity": 6,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 2 ]
 					},
 					{
-						"capacity": 7,
+						"capacity": 5,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 2 ]
 					},
 					{
 						"capacity": 0,
@@ -16219,16 +16219,16 @@
 				"name": "spread",
 				"levels": [
 					{
-						"capacity": 8,
+						"capacity": 6,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
-						"capacity": 4,
+						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 2 ]
 					},
 					{
 						"capacity": 0,
@@ -16242,15 +16242,15 @@
 				"name": "sticky",
 				"levels": [
 					{
-						"capacity": 5,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
-					},
-					{
 						"capacity": 4,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
+					},
+					{
+						"capacity": 3,
+						"type": 0,
+						"recoil": [ 5 ],
 						"reload": [ 1 ]
 					},
 					{
@@ -16265,9 +16265,9 @@
 				"name": "cluster",
 				"levels": [
 					{
-						"capacity": 2,
+						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 4 ],
 						"reload": [ 1 ]
 					},
 					{
@@ -16305,16 +16305,16 @@
 				"name": "poison",
 				"levels": [
 					{
-						"capacity": 9,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
-					},
-					{
 						"capacity": 7,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 2 ],
+						"reload": [ 3 ]
+					},
+					{
+						"capacity": 5,
+						"type": 0,
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -16339,16 +16339,16 @@
 				"name": "sleep",
 				"levels": [
 					{
-						"capacity": 7,
+						"capacity": 5,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 2 ],
+						"reload": [ 3 ]
 					},
 					{
-						"capacity": 4,
+						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -16395,10 +16395,10 @@
 				"name": "freeze",
 				"levels": [
 					{
-						"capacity": 9,
+						"capacity": 7,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 2 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -16419,7 +16419,7 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 4 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -16428,9 +16428,9 @@
 				"name": "slicing",
 				"levels": [
 					{
-						"capacity": 3,
+						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 5 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -16441,7 +16441,7 @@
 					{
 						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 6 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -16472,15 +16472,15 @@
 				"name": "tranq",
 				"levels": [
 					{
-						"capacity": 4,
+						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
 					}
 				]
 			}
 		],
-		"deviation": [ "Low", "Low", "Low", "Low" ],
+		"deviation": [ "Low", "Low" ],
 		"specialAmmo": "Wyvernsnipe"
 	},
 	{
@@ -16490,22 +16490,22 @@
 				"name": "normal",
 				"levels": [
 					{
-						"capacity": 7,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
-					},
-					{
 						"capacity": 5,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 2 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 4,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
+					},
+					{
+						"capacity": 3,
+						"type": 0,
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -16513,22 +16513,22 @@
 				"name": "piercing",
 				"levels": [
 					{
-						"capacity": 12,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
-					},
-					{
 						"capacity": 10,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 2 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 8,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 2 ],
+						"reload": [ 3 ]
+					},
+					{
+						"capacity": 6,
+						"type": 0,
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					}
 				]
 			},
@@ -16559,10 +16559,10 @@
 				"name": "sticky",
 				"levels": [
 					{
-						"capacity": 3,
+						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
 					},
 					{
 						"capacity": 0,
@@ -16605,15 +16605,15 @@
 				"name": "recover",
 				"levels": [
 					{
-						"capacity": 2,
+						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 5 ],
 						"reload": [ 1 ]
 					},
 					{
-						"capacity": 2,
+						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 5 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -16622,10 +16622,10 @@
 				"name": "poison",
 				"levels": [
 					{
-						"capacity": 4,
+						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
 					},
 					{
 						"capacity": 0,
@@ -16639,15 +16639,15 @@
 				"name": "paralysis",
 				"levels": [
 					{
-						"capacity": 3,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
-					},
-					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 5 ],
+						"reload": [ 2 ]
+					},
+					{
+						"capacity": 1,
+						"type": 0,
+						"recoil": [ 5 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -16656,10 +16656,10 @@
 				"name": "sleep",
 				"levels": [
 					{
-						"capacity": 3,
+						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
 					},
 					{
 						"capacity": 0,
@@ -16679,10 +16679,10 @@
 						"reload": [ 1 ]
 					},
 					{
-						"capacity": 5,
+						"capacity": 4,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -16701,10 +16701,10 @@
 				"name": "water",
 				"levels": [
 					{
-						"capacity": 9,
+						"capacity": 7,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 2 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -16734,9 +16734,9 @@
 				"name": "dragon",
 				"levels": [
 					{
-						"capacity": 3,
+						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 5 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -16745,9 +16745,9 @@
 				"name": "slicing",
 				"levels": [
 					{
-						"capacity": 2,
+						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 4 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -16758,7 +16758,7 @@
 					{
 						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 6 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -16767,9 +16767,9 @@
 				"name": "demon",
 				"levels": [
 					{
-						"capacity": 2,
+						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 5 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -16778,9 +16778,9 @@
 				"name": "armor",
 				"levels": [
 					{
-						"capacity": 2,
+						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 5 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -16789,15 +16789,15 @@
 				"name": "tranq",
 				"levels": [
 					{
-						"capacity": 4,
+						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
 					}
 				]
 			}
 		],
-		"deviation": [ "None", "None", "None", "None" ],
+		"deviation": [ "None" ],
 		"specialAmmo": "Wyvernheart"
 	},
 	{
@@ -21869,7 +21869,7 @@
 				]
 			}
 		],
-		"deviation": [ "None", "None", "None", "None" ],
+		"deviation": [ "None" ],
 		"specialAmmo": "Wyvernblast"
 	},
 	{
@@ -21881,20 +21881,20 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -21904,8 +21904,8 @@
 					{
 						"capacity": 4,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 0,
@@ -21916,8 +21916,8 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -21927,8 +21927,8 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 0,
@@ -21939,8 +21939,8 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -21950,8 +21950,8 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 2 ]
 					},
 					{
 						"capacity": 0,
@@ -22013,8 +22013,8 @@
 					{
 						"capacity": 6,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 4 ]
 					},
 					{
 						"capacity": 0,
@@ -22030,8 +22030,8 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 0,
@@ -22047,8 +22047,8 @@
 					{
 						"capacity": 5,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 4 ]
 					},
 					{
 						"capacity": 0,
@@ -22064,14 +22064,14 @@
 					{
 						"capacity": 5,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 5,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -22090,10 +22090,10 @@
 				"name": "water",
 				"levels": [
 					{
-						"capacity": 0,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"capacity": 3,
+						"type": 1,
+						"recoil": [ 4 ],
+						"reload": [ 3 ]
 					}
 				]
 			},
@@ -22125,8 +22125,8 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					}
 				]
 			},
@@ -22136,8 +22136,8 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -22158,8 +22158,8 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					}
 				]
 			},
@@ -22180,13 +22180,13 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 3 ]
 					}
 				]
 			}
 		],
-		"deviation": [ "Low", "Low", "Low", "Low" ],
+		"deviation": [ "Low", "Low" ],
 		"specialAmmo": "Wyvernblast"
 	},
 	{
@@ -25673,7 +25673,7 @@
 				]
 			}
 		],
-		"deviation": [ "None", "None", "None", "None" ],
+		"deviation": [ "None" ],
 		"specialAmmo": "Wyvernblast"
 	},
 	{
@@ -26307,7 +26307,7 @@
 				]
 			}
 		],
-		"deviation": [ "None", "None", "None", "None" ],
+		"deviation": [ "None" ],
 		"specialAmmo": "Wyvernblast"
 	},
 	{
@@ -27586,15 +27586,15 @@
 				"levels": [
 					{
 						"capacity": 1,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"type": 2,
+						"recoil": [ 0 ],
+						"reload": [ 4 ]
 					},
 					{
 						"capacity": 6,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"type": 1,
+						"recoil": [ 3, 3, 2 ],
+						"reload": [ 4 ]
 					},
 					{
 						"capacity": 0,
@@ -27609,15 +27609,15 @@
 				"levels": [
 					{
 						"capacity": 1,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"type": 2,
+						"recoil": [ 0 ],
+						"reload": [ 4 ]
 					},
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4, 3, 2 ],
+						"reload": [ 2, 3, 3, 4 ]
 					},
 					{
 						"capacity": 0,
@@ -27632,15 +27632,15 @@
 				"levels": [
 					{
 						"capacity": 1,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"type": 2,
+						"recoil": [ 0 ],
+						"reload": [ 4 ]
 					},
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4, 3, 2 ],
+						"reload": [ 2, 3, 3, 4 ]
 					},
 					{
 						"capacity": 0,
@@ -27662,14 +27662,14 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5, 5, 5, 4 ],
+						"reload": [ 2, 3, 3, 4 ]
 					},
 					{
 						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 2, 2, 3 ]
 					}
 				]
 			},
@@ -27702,14 +27702,14 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5, 4, 4, 3 ],
+						"reload": [ 3, 3, 3, 4 ]
 					},
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5, 5, 4, 3 ],
+						"reload": [ 2, 3, 3, 4 ]
 					}
 				]
 			},
@@ -27718,15 +27718,15 @@
 				"levels": [
 					{
 						"capacity": 1,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"type": 2,
+						"recoil": [ 0 ],
+						"reload": [ 4 ]
 					},
 					{
 						"capacity": 4,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4, 3 ],
+						"reload": [ 3, 3, 4 ]
 					}
 				]
 			},
@@ -27736,14 +27736,14 @@
 					{
 						"capacity": 5,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4, 4, 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 2, 3 ]
 					}
 				]
 			},
@@ -27752,15 +27752,15 @@
 				"levels": [
 					{
 						"capacity": 1,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"type": 2,
+						"recoil": [ 0 ],
+						"reload": [ 4 ]
 					},
 					{
 						"capacity": 4,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4, 3 ],
+						"reload": [ 3, 3, 4 ]
 					}
 				]
 			},
@@ -27770,14 +27770,14 @@
 					{
 						"capacity": 5,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5, 4, 3, 2 ],
+						"reload": [ 4 ]
 					},
 					{
 						"capacity": 4,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5, 4, 4, 3 ],
+						"reload": [ 3, 3, 4 ]
 					}
 				]
 			},
@@ -27786,9 +27786,9 @@
 				"levels": [
 					{
 						"capacity": 3,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"type": 1,
+						"recoil": [ 4, 4, 4, 3 ],
+						"reload": [ 3, 3, 3, 4 ]
 					}
 				]
 			},
@@ -27831,8 +27831,8 @@
 					{
 						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 2, 2, 3, 4 ]
 					}
 				]
 			},
@@ -27863,9 +27863,9 @@
 				"levels": [
 					{
 						"capacity": 1,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"type": 2,
+						"recoil": [ 0 ],
+						"reload": [ 3 ]
 					}
 				]
 			},
@@ -27875,8 +27875,8 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4, 4, 3 ],
+						"reload": [ 2, 3, 4 ]
 					}
 				]
 			},
@@ -27886,13 +27886,13 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4, 3, 2 ],
+						"reload": [ 3, 3, 3, 4 ]
 					}
 				]
 			}
 		],
-		"deviation": [ "average", "average", "average", "average" ],
+		"deviation": [ "none" ],
 		"specialAmmo": "Wyvernblast"
 	},
 	{
@@ -29171,21 +29171,21 @@
 				"levels": [
 					{
 						"capacity": 1,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"type": 2,
+						"recoil": [ 0 ],
+						"reload": [ 4 ]
+					},
+					{
+						"capacity": 3,
+						"type": 1,
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
-					},
-					{
-						"capacity": 3,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 3 ]
 					}
 				]
 			},
@@ -29201,8 +29201,8 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 0,
@@ -29224,8 +29224,8 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 4 ]
 					},
 					{
 						"capacity": 0,
@@ -29241,20 +29241,20 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 2 ]
 					},
 					{
 						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -29310,8 +29310,8 @@
 					{
 						"capacity": 4,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 3 ]
 					}
 				]
 			},
@@ -29337,15 +29337,15 @@
 				"levels": [
 					{
 						"capacity": 1,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"type": 2,
+						"recoil": [ 0 ],
+						"reload": [ 4 ]
 					},
 					{
 						"capacity": 4,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 3 ]
 					}
 				]
 			},
@@ -29355,14 +29355,14 @@
 					{
 						"capacity": 5,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 4 ]
 					},
 					{
 						"capacity": 4,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 3 ]
 					}
 				]
 			},
@@ -29416,8 +29416,8 @@
 					{
 						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -29427,8 +29427,8 @@
 					{
 						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -29438,7 +29438,7 @@
 					{
 						"capacity": 0,
 						"type": 0,
-						"recoil": [ 1 ],
+						"recoil": [ 6 ],
 						"reload": [ 1 ]
 					}
 				]
@@ -29448,9 +29448,9 @@
 				"levels": [
 					{
 						"capacity": 1,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"type": 2,
+						"recoil": [ 0 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -29471,8 +29471,8 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 3 ]
 					}
 				]
 			}
@@ -29489,20 +29489,20 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -29512,8 +29512,8 @@
 					{
 						"capacity": 4,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 0,
@@ -29524,8 +29524,8 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -29535,8 +29535,8 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 0,
@@ -29547,8 +29547,8 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -29558,8 +29558,8 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 2 ]
 					},
 					{
 						"capacity": 0,
@@ -29621,8 +29621,8 @@
 					{
 						"capacity": 6,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 4 ]
 					},
 					{
 						"capacity": 0,
@@ -29638,8 +29638,8 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 0,
@@ -29655,8 +29655,8 @@
 					{
 						"capacity": 5,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 4 ]
 					},
 					{
 						"capacity": 0,
@@ -29672,14 +29672,14 @@
 					{
 						"capacity": 5,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 5,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -29699,9 +29699,9 @@
 				"levels": [
 					{
 						"capacity": 3,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"type": 1,
+						"recoil": [ 4 ],
+						"reload": [ 3 ]
 					}
 				]
 			},
@@ -29733,8 +29733,8 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					}
 				]
 			},
@@ -29744,8 +29744,8 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -29764,10 +29764,10 @@
 				"name": "demon",
 				"levels": [
 					{
-						"capacity": 1,
+						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					}
 				]
 			},
@@ -29788,13 +29788,13 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 3 ]
 					}
 				]
 			}
 		],
-		"deviation": [ "Low", "Low", "Low", "Low" ],
+		"deviation": [ "Low" ],
 		"specialAmmo": "Wyvernblast"
 	},
 	{
@@ -29806,20 +29806,20 @@
 					{
 						"capacity": 4,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 4,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -29829,20 +29829,20 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 2 ]
 					},
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -29852,8 +29852,8 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 0,
@@ -29875,8 +29875,8 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 2 ]
 					},
 					{
 						"capacity": 0,
@@ -29921,8 +29921,8 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 0,
@@ -29936,16 +29936,16 @@
 				"name": "poison",
 				"levels": [
 					{
-						"capacity": 1,
+						"capacity": 6,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 2 ],
+						"reload": [ 4 ]
 					},
 					{
-						"capacity": 2,
+						"capacity": 5,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 4 ]
 					}
 				]
 			},
@@ -30005,9 +30005,9 @@
 				"levels": [
 					{
 						"capacity": 3,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"type": 1,
+						"recoil": [ 4 ],
+						"reload": [ 3 ]
 					}
 				]
 			},
@@ -30050,8 +30050,8 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 3 ]
 					}
 				]
 			},
@@ -30061,8 +30061,8 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -30083,8 +30083,8 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					}
 				]
 			},
@@ -30105,8 +30105,8 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 3 ]
 					}
 				]
 			}
@@ -30121,16 +30121,16 @@
 				"name": "normal",
 				"levels": [
 					{
-						"capacity": 4,
+						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
-						"capacity": 4,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"capacity": 3,
+						"type": 1,
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 0,
@@ -30144,22 +30144,22 @@
 				"name": "piercing",
 				"levels": [
 					{
-						"capacity": 5,
+						"capacity": 4,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
-						"capacity": 5,
+						"capacity": 4,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 3 ]
 					},
 					{
-						"capacity": 3,
+						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -30167,10 +30167,10 @@
 				"name": "spread",
 				"levels": [
 					{
-						"capacity": 4,
+						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 0,
@@ -30190,10 +30190,10 @@
 				"name": "sticky",
 				"levels": [
 					{
-						"capacity": 3,
+						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 2 ]
 					},
 					{
 						"capacity": 0,
@@ -30236,16 +30236,16 @@
 				"name": "recover",
 				"levels": [
 					{
-						"capacity": 4,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
-					},
-					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
+					},
+					{
+						"capacity": 2,
+						"type": 0,
+						"recoil": [ 4 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -30259,10 +30259,10 @@
 						"reload": [ 1 ]
 					},
 					{
-						"capacity": 7,
+						"capacity": 5,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					}
 				]
 			},
@@ -30270,10 +30270,10 @@
 				"name": "paralysis",
 				"levels": [
 					{
-						"capacity": 4,
+						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 0,
@@ -30343,10 +30343,10 @@
 				"name": "freeze",
 				"levels": [
 					{
-						"capacity": 7,
+						"capacity": 5,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					}
 				]
 			},
@@ -30354,10 +30354,10 @@
 				"name": "thunder",
 				"levels": [
 					{
-						"capacity": 4,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"capacity": 3,
+						"type": 1,
+						"recoil": [ 4 ],
+						"reload": [ 3 ]
 					}
 				]
 			},
@@ -30367,8 +30367,8 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					}
 				]
 			},
@@ -30376,10 +30376,10 @@
 				"name": "slicing",
 				"levels": [
 					{
-						"capacity": 3,
+						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -30420,10 +30420,10 @@
 				"name": "tranq",
 				"levels": [
 					{
-						"capacity": 3,
+						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 3 ]
 					}
 				]
 			}
@@ -30440,14 +30440,14 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
 					},
 					{
 						"capacity": 0,
@@ -30463,8 +30463,8 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 0,
@@ -30485,21 +30485,21 @@
 				"levels": [
 					{
 						"capacity": 3,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"type": 1,
+						"recoil": [ 4 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 4,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -30509,8 +30509,8 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 2 ]
 					},
 					{
 						"capacity": 0,
@@ -30555,14 +30555,14 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -30572,8 +30572,8 @@
 					{
 						"capacity": 6,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 4 ]
 					},
 					{
 						"capacity": 0,
@@ -30606,8 +30606,8 @@
 					{
 						"capacity": 5,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 4 ]
 					},
 					{
 						"capacity": 0,
@@ -30622,9 +30622,9 @@
 				"levels": [
 					{
 						"capacity": 4,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"type": 1,
+						"recoil": [ 4 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 0,
@@ -30661,9 +30661,9 @@
 				"levels": [
 					{
 						"capacity": 3,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"type": 1,
+						"recoil": [ 4 ],
+						"reload": [ 3 ]
 					}
 				]
 			},
@@ -30684,8 +30684,8 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 3 ]
 					}
 				]
 			},
@@ -30695,8 +30695,8 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -30739,13 +30739,13 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 3 ]
 					}
 				]
 			}
 		],
-		"deviation": [ "Average", "Average", "Average", "Average" ],
+		"deviation": [ "Average" ],
 		"specialAmmo": "Wyvernblast"
 	},
 	{
@@ -30756,21 +30756,21 @@
 				"levels": [
 					{
 						"capacity": 4,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"type": 1,
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 3,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"type": 1,
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 3 ]
 					}
 				]
 			},
@@ -30780,20 +30780,20 @@
 					{
 						"capacity": 5,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 2 ]
 					},
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -30802,21 +30802,21 @@
 				"levels": [
 					{
 						"capacity": 3,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"type": 1,
+						"recoil": [ 4 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -30889,14 +30889,14 @@
 					{
 						"capacity": 5,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -30906,8 +30906,8 @@
 					{
 						"capacity": 4,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
 					},
 					{
 						"capacity": 0,
@@ -30923,8 +30923,8 @@
 					{
 						"capacity": 5,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
 					},
 					{
 						"capacity": 0,
@@ -30939,15 +30939,15 @@
 				"levels": [
 					{
 						"capacity": 4,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"type": 1,
+						"recoil": [ 4 ],
+						"reload": [ 3 ]
 					},
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -31001,8 +31001,8 @@
 					{
 						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -31012,8 +31012,8 @@
 					{
 						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -31034,8 +31034,8 @@
 					{
 						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3 ],
+						"reload": [ 2 ]
 					}
 				]
 			},
@@ -31056,13 +31056,13 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4 ],
+						"reload": [ 3 ]
 					}
 				]
 			}
 		],
-		"deviation": [ "None", "None", "None", "None" ],
+		"deviation": [ "None" ],
 		"specialAmmo": "Wyvernblast"
 	}
 ]

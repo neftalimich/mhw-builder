@@ -122,10 +122,10 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 651	DualBlades	8	Empress Daggers "Blaze"	252	20	0				Blast	90			false	9;3;6;8;4;10	2;1	lunastra;blast	guts-1		10
 652	DualBlades	8	Empress Daggers "Ruin"	266	0	0				Blast	60			false	9;3;6;8;4;10	2;2	lunastra;blast	hastenRecovery-1		10
 653	DualBlades	8	Empress Daggers "Styx"	252	10	0				Blast	120			false	9;3;6;8;4;10	3;3	lunastra;blast	razorSharpSpareShot-1		10
-715	DualBlades	8	Kjárr Daggers "Magma"	266	5	15				Blast	180			false	9;12;4;5;10;0	1	kulve;kjarr;blast	criticalElement-1		52
+715	DualBlades	8	Kjárr Daggers "Magma"	266	5	15				Blast	180			false	9;12;4;5;10;0	1	kulve;kjarr;blast	criticalStatus-1		52
 716	DualBlades	8	Kjárr Daggers "Dragon"	252	20	0	Dragon	210					Average	false	4;5;6;12;9;4	1	kulve;kjarr;dragon	criticalElement-1		52
 717	DualBlades	8	Kjárr Daggers "Rage"	280	5	0	Fire	210						false	8;5;5;8;14;0		kulve;kjarr;fire	criticalElement-1		52
-718	DualBlades	8	Kjárr Daggers "Lurk"	224	10	0				Paralysis	90			false	9;3;6;8;4;10	1	kulve;kjarr;paralysis	criticalElement-1		52
+718	DualBlades	8	Kjárr Daggers "Lurk"	224	10	0				Paralysis	90			false	9;3;6;8;4;10	1	kulve;kjarr;paralysis	criticalStatus-1		52
 719	DualBlades	8	Kjárr Daggers "Spark"	252	15	0	Thunder	180						false	22;2;2;5;2;7	1	kulve;kjarr;thunder	criticalElement-1		52
 720	DualBlades	8	Kjárr Daggers "Ice"	252	15	0	Ice	210						false	4;5;6;12;9;4	1	kulve;kjarr;ice	criticalElement-1		52
 721	DualBlades	8	Kjárr Daggers "Water"	252	10	0	Water	210						false	17;7;2;2;8;4	1	kulve;kjarr;water	criticalElement-1		52

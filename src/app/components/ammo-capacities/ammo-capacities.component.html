@@ -53,43 +53,40 @@
 					<td>
 						<img [src]="'assets/images/ammo/ammo-'+ammo.name+'-icon.png'" /> {{ammo.name|titlecase}}
 					</td>
-					<td *ngFor="let level of ammo.levels | keyvalue">
+					<td *ngFor="let level of ammo.levels">
 						<div *ngIf="!showAmmoInfo" class="animated fadeIn fast">
 							<span style="font-weight:bold;">
-								{{level.value.capacity}} <i class="fas fa-angle-double-up sharp-2" *ngIf="level.value.type==1"></i>
-								<i class="fas fa-sign-out-alt fa-rotate-90 recoil" *ngIf="level.value.type==2"></i>
+								{{level.capacity}} <i class="fas fa-angle-double-up sharp-2" *ngIf="level.type==1"></i>
+								<i class="fas fa-sign-out-alt fa-rotate-90 recoil" *ngIf="level.type==2"></i>
 							</span>
 						</div>
-						<div *ngIf="showAmmoInfo" class="animated fadeIn fast">
-							<span *ngIf="recoilSuppresorMod<level.value.recoil.length" class="recoil">
-								<!--{{level.value.recoil[recoilSuppresorMod]}}-->
-								<span *ngIf="level.value.recoil[recoilSuppresorMod]>0">
-									{{recoilType[level.value.recoil[recoilSuppresorMod]]}}
-								</span>
-								<i class="fas fa-sign-out-alt fa-rotate-90 recoil" *ngIf="level.value.recoil[recoilSuppresorMod]==0"></i>
+						<div *ngIf="showAmmoInfo && level.capacity > 0" class="animated fadeIn fast">
+							<span *ngIf="recoilSuppresorMod<level.recoil.length" class="recoil">
+								<!--{{level.recoil[recoilSuppresorMod]}}-->
+								{{recoilType[level.recoil[recoilSuppresorMod]]}}
 							</span>
-							<span *ngIf="recoilSuppresorMod>=level.value.recoil.length" class="recoil">
-								<span *ngIf="level.value.recoil[level.value.recoil.length-1]>0">
-									{{recoilType[level.value.recoil[level.value.recoil.length-1]]}}
+							<span *ngIf="recoilSuppresorMod>=level.recoil.length" class="recoil">
+								<span *ngIf="level.recoil[level.recoil.length-1]>0">
+									{{recoilType[level.recoil[level.recoil.length-1]]}}
 								</span>
-								<i class="fas fa-sign-out-alt fa-rotate-90 recoil" *ngIf="level.value.recoil[level.value.recoil.length-1]==0"></i>
+								<i class="fas fa-sign-out-alt fa-rotate-90 recoil" *ngIf="level.recoil[level.recoil.length-1]==0"></i>
 							</span>
 							<br />
-							<span *ngIf="reloadAssistMod<level.value.reload.length" class="reload">
-								<!--{{level.value.reload[reloadAssistMod]}}-->
-								{{reloadType[level.value.reload[reloadAssistMod]]}}
+							<span *ngIf="reloadAssistMod<level.reload.length" class="reload">
+								<!--{{level.reload[reloadAssistMod]}}-->
+								{{reloadType[level.reload[reloadAssistMod]]}}
 							</span>
-							<span *ngIf="reloadAssistMod>=level.value.reload.length" class="reload">
+							<span *ngIf="reloadAssistMod>=level.reload.length" class="reload">
 
-								<!--{{level.value.reload[level.value.reload.length-1]}}-->
-								{{reloadType[level.value.reload[level.value.reload.length-1]]}}
+								<!--{{level.reload[level.reload.length-1]}}-->
+								{{reloadType[level.reload[level.reload.length-1]]}}
 							</span>
 						</div>
 					</td>
-					<td *ngIf="(ammo.levels|keyvalue).length < 3">
+					<td *ngIf="(ammo.levels).length < 3">
 						-
 					</td>
-					<td *ngIf="(ammo.levels|keyvalue).length < 2">
+					<td *ngIf="(ammo.levels).length < 2">
 						-
 					</td>
 				</tr>
