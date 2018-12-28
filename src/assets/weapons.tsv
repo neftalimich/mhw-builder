@@ -488,7 +488,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 675	LightBowgun	8	Empress Shell "Blaze"	247	20	0								false		1	lunastra	guts-1		10
 676	LightBowgun	8	Empress Shell "Ruin"	260	0	0								false		2	lunastra	hastenRecovery-1		10
 677	LightBowgun	8	Empress Shell "Styx"	247	10	0								false		3;1	lunastra	razorSharpSpareShot-1		10
-770	LightBowgun	8	Kjárr Blitz "Bomber"	260	20	0								false			kulve;kjarr	criticalStatus-1		52
+770	LightBowgun	8	Kjárr Blitz "Bomber"	260	10	0								false			kulve;kjarr	criticalStatus-1		52
 771	LightBowgun	8	Kjárr Blitz "Decay"	273	10	0								false			kulve;kjarr	criticalElement-1		52
 772	LightBowgun	8	Kjárr Blitz "King"	260	20	0								false			kulve;kjarr	criticalElement-1		52
 773	LightBowgun	8	Kjárr Blitz "Thunder"	260	15	0								false		1	kulve;kjarr	criticalElement-1		52

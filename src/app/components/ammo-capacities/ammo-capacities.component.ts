@@ -19,7 +19,7 @@ export class AmmoCapacitiesComponent implements OnInit {
 	rangeAttackUpMod = 0;
 	shieldMod = 0;
 
-	showAmmoInfo = false;
+	showAmmoModsInfo = false;
 
 	deviationTypes = DeviationType;
 	recoilType = RecoilType;

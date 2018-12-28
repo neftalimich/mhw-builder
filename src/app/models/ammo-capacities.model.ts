@@ -3,8 +3,20 @@ import { SpecialAmmoType } from '../types/special-ammo.type';
 
 export class AmmoCapacitiesModel {
 	id: number;
-	deviation: DeviationType;
+	deviation: DeviationType[];
 	specialAmmo: SpecialAmmoType;
-	ammo: any[];
+	ammo: AmmoTypeModel[];
+	missingMods: boolean;
 }
 
+export class AmmoTypeModel {
+	name: string;
+	levels: AmmoLevelModel[];
+}
+
+export class AmmoLevelModel {
+	capacity: number;
+	type: number;
+	recoil: number[];
+	reload: number[];
+}

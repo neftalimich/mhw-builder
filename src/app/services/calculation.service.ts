@@ -543,7 +543,7 @@ export class CalculationService {
 					this.getElementAverage(
 						stats.totalElementAttack,
 						Math.max(stats.criticalElement ? totalAffinityPotential : 0, 0),
-						stats.passiveCriticalBoostPercent,
+						stats.critElementModifier,
 						stats.effectiveElementalSharpnessModifier,
 						auxDivider)
 					: null,

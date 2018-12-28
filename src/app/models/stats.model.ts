@@ -15,6 +15,7 @@ export class StatsModel {
 	effectivePhysicalSharpnessModifier: number;
 	effectiveElementalSharpnessModifier: number;
 	weaponAttackModifier: number;
+	critElementModifier: number;
 	affinity: number;
 	passiveAffinity: number;
 	activeAffinity: number;
@@ -114,6 +115,7 @@ export class StatsModel {
 		this.effectivePhysicalSharpnessModifier = 1;
 		this.effectiveElementalSharpnessModifier = 1;
 		this.weaponAttackModifier = 0;
+		this.critElementModifier = 0;
 		this.affinity = 0;
 		this.passiveAffinity = 0;
 		this.activeAffinity = 0;

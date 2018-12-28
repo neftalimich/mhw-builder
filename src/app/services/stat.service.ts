@@ -231,6 +231,7 @@ export class StatService {
 			const weaponModifier = this.dataService.getWeaponModifier(weapon.weaponType);
 			if (weaponModifier) {
 				this.stats.weaponAttackModifier = weaponModifier.attackModifier;
+				this.stats.critElementModifier = weaponModifier.critElementModifier;
 			}
 		}
 
@@ -345,11 +346,17 @@ export class StatService {
 	private checkElementless() {
 		if (this.stats.elementlessBoostPercent > 0 && this.stats.totalElementAttack == 0 && this.stats.totalAilmentAttack == 0) {
 			if (this.stats.ammoCapacities) {
-				if (this.stats.ammoCapacities.ammo[10].levels[0].capacity == 0 // flaming
-					&& this.stats.ammoCapacities.ammo[11].levels[0].capacity == 0 // water
-					&& this.stats.ammoCapacities.ammo[12].levels[0].capacity == 0 // freeze
-					&& this.stats.ammoCapacities.ammo[13].levels[0].capacity == 0 // thunder
-					&& this.stats.ammoCapacities.ammo[14].levels[0].capacity == 0 // dragon
+				const flaming = this.stats.ammoCapacities.ammo.filter(ammo => ammo.name === 'flaming');
+				const water = this.stats.ammoCapacities.ammo.filter(ammo => ammo.name === 'water');
+				const freeze = this.stats.ammoCapacities.ammo.filter(ammo => ammo.name === 'freeze');
+				const thunder = this.stats.ammoCapacities.ammo.filter(ammo => ammo.name === 'thunder');
+				const dragon = this.stats.ammoCapacities.ammo.filter(ammo => ammo.name === 'dragon');
+				if (
+					(flaming.length == 0 || flaming[0].levels[0].capacity == 0)
+					&& (water.length == 0 || water[0].levels[0].capacity == 0)
+					&& (freeze.length == 0 || freeze[0].levels[0].capacity == 0)
+					&& (thunder.length == 0 || thunder[0].levels[0].capacity == 0)
+					&& (dragon.length == 0 || dragon[0].levels[0].capacity == 0)
 				) {
 					return true;
 				} else {
