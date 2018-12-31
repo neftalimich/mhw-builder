@@ -250,6 +250,9 @@ export class StatService {
 						}
 						levelsToSubstract -= toSubstract;
 					}
+					if (weapon.sharpnessLevelsBar[i] == 0) {
+						colorAux = i - 1;
+					}
 				}
 				let color: SharpnessType;
 				switch (colorAux) {
