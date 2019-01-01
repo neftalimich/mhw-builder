@@ -136,6 +136,9 @@ export class BuildService {
 				}
 			}
 		}
+		else {
+			this.slotService.clearItemSlot(slot);
+		}
 	}
 
 	private updateBuildId() {

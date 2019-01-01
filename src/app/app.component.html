@@ -17,6 +17,7 @@
 		</div>
 	</div>
 	<div class="stats-container" [hidden]="!statsVisible">
+		<mhw-builder-save-set></mhw-builder-save-set>
 		<mhw-builder-equipped-stats [hidden]="!attackDefenseVisible"></mhw-builder-equipped-stats>
 		<mhw-builder-equipped-skills [hidden]="!skillsVisible"></mhw-builder-equipped-skills>
 		<ng-container *ngIf="weaponSlot?.item?.melodies && attackDefenseVisible">
