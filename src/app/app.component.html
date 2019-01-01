@@ -3,6 +3,9 @@
 		<div class="tab" (click)="equipmentSelected()" [class.selected]="equipmentVisible">Equipment</div>
 		<div class="tab" (click)="statsSelected()" [class.selected]="attackDefenseVisible && statsVisible">Stats</div>
 		<div class="tab" (click)="skillsSelected()" [class.selected]="skillsVisible && statsVisible">Skills</div>
+		<div class="tab" (click)="openSaveModal()">
+			<i class="fas fa-save fa-lg"></i>
+		</div>
 	</div>
 
 	<div class="equipment-container" [hidden]="!equipmentVisible">
@@ -17,7 +20,9 @@
 		</div>
 	</div>
 	<div class="stats-container" [hidden]="!statsVisible">
-		<mhw-builder-save-set></mhw-builder-save-set>
+		<div (click)="openSaveModal()" class="save-button">
+			<i class="fas fa-save fa-lg"></i>
+		</div>
 		<mhw-builder-equipped-stats [hidden]="!attackDefenseVisible"></mhw-builder-equipped-stats>
 		<mhw-builder-equipped-skills [hidden]="!skillsVisible"></mhw-builder-equipped-skills>
 		<ng-container *ngIf="weaponSlot?.item?.melodies && attackDefenseVisible">
@@ -37,7 +42,7 @@
 	<mhw-builder-tooltip></mhw-builder-tooltip>
 
 	<div class="signature">
-		Made with 💋 by TurkeyTickle - 
+		By TurkeyTickle & Neftalimich -
 		<button (click)="openContributors()">Information</button>
 		<a href="https://github.com/neftalimich/mhw-builder" target="_blank">
 			<i class="fab fa-github"></i>
@@ -51,6 +56,10 @@
 		<button id="dummy"></button>
 		<button (click)="openChangeLog()">ChangeLog</button>
 	</div>
+
+	<mhw-builder-modal #setListModal title="Set List (BETA)">
+		<mhw-builder-set-list></mhw-builder-set-list>
+	</mhw-builder-modal>
 
 	<mhw-builder-modal #contributorsModal title="Information">
 		<div style="padding:16px;">
@@ -81,6 +90,7 @@
 		<mhw-builder-decoration-list *ngIf="slotService.selectedDecorationSlot" [decorationLevel]="slotService.selectedDecorationSlot?.level"></mhw-builder-decoration-list>
 		<mhw-builder-augmentations-list *ngIf="slotService.selectedAugmentationSlot"></mhw-builder-augmentations-list>
 	</mhw-builder-modal>
+
 
 	<mhw-builder-modal #changeLogModal title="Change Log">
 		<div style="padding:16px;">

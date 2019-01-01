@@ -22,8 +22,8 @@ $tabsHeight: 36px;
 	right: 0;
 	border-bottom: 4px #525252 solid;
 	display: none;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 6px;
+	grid-template-columns: repeat(3, 1fr) 40px;
+	grid-gap: 4px;
 
 	.tab {
 		background-color: #323232;
@@ -106,6 +106,13 @@ $tabsHeight: 36px;
 	}
 }
 
+.save-button {
+	position: fixed;
+	right: 50px;
+	top: 10px;
+	cursor:pointer;
+}
+
 @media only screen and (max-width: 768px) {
 	.tab-container {
 		height: $tabsHeight;
@@ -122,5 +129,9 @@ $tabsHeight: 36px;
 		top: $tabsHeight + 0;
 		grid-column: 1 / 4;
 		margin-top: 8px;
+	}
+
+	.save-button {
+		display:none;
 	}
 }

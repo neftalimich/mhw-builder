@@ -13,6 +13,7 @@ import { SlotService } from './services/slot.service';
 import { EquipmentCategoryType } from './types/equipment-category.type';
 import { ItemType } from './types/item.type';
 import { PointerType } from './types/pointer.type';
+import { SetListComponent } from './components/set-list/set-list.component';
 
 @Component({
 	selector: 'mhw-builder-root',
@@ -37,6 +38,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
 	@ViewChild('itemListModal') itemListModal: ModalComponent;
 	@ViewChild('changeLogModal') changeLogModal: ModalComponent;
+	@ViewChild('setListModal') setListModal: ModalComponent;
 	@ViewChild('contributorsModal') contributorsModal: ModalComponent;
 
 	equipmentVisible = true;
@@ -181,6 +183,10 @@ export class AppComponent implements OnInit, AfterViewInit {
 
 	openChangeLog() {
 		this.changeLogModal.open();
+	}
+
+	openSaveModal() {
+		this.setListModal.open();
 	}
 
 	openContributors() {

@@ -1,0 +1,77 @@
+@import "../../../sass/variables";
+@import "../../../sass/common";
+
+$saveHeight: 38px;
+
+.container {
+	display: grid;
+	grid-template-rows: $saveHeight auto 25px;
+	grid-row-gap: 4px;
+	height: 98%;
+
+	.save-container {
+		grid-row: 1;
+		background-color: rgb(50,50,50);
+		padding: 0 0 0 12px;
+		border-radius: 3px;
+		display: grid;
+		grid-template-columns: auto min-content;
+		height: $saveHeight;
+
+		input {
+			background-color: rgb(50,50,50);
+			border: none;
+			color: white;
+			font-size: 16px;
+			height: $saveHeight - 2;
+		}
+
+		input:focus {
+			outline: none;
+		}
+
+		.save-button {
+			padding-top: 4px;
+			height: $saveHeight;
+			width: 38px;
+			flex-grow: 0;
+		}
+	}
+
+	.scroll-container {
+		grid-row: 2;
+		overflow-y: auto;
+		border-radius: 3px;
+
+		.scroll-item-container {
+			min-height: 25px;
+			display: grid;
+			grid-template-columns: auto 50px;
+			grid-gap: 4px;
+			border-radius: 3px;
+			background-color: #525252;
+			margin-bottom: 4px;
+			padding: 4px 8px;
+			cursor: pointer;
+
+			.name-container {
+				grid-column: 1;
+				grid-gap: 8px;
+			}
+
+			.buttons-container {
+				grid-column: 2;
+				grid-gap: 8px;
+				color: white;
+			}
+		}
+
+		.scroll-item-container:hover {
+			background-color: #828282;
+		}
+	}
+
+	.download-container {
+		grid-row: 3;
+	}
+}

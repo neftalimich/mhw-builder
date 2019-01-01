@@ -36,7 +36,7 @@ import { StatService } from './services/stat.service';
 import { TooltipService } from './services/tooltip.service';
 import { MaxSharpnessPipe } from './pipes/max-sharpness.pipe';
 import { SharpnessBarComponent } from './components/sharpness-bar/sharpness-bar.component';
-import { SaveSetComponent } from './components/save-set/save-set.component';
+import { SetListComponent } from './components/set-list/set-list.component';
 
 
 @NgModule({
@@ -64,7 +64,7 @@ import { SaveSetComponent } from './components/save-set/save-set.component';
 		TooltipComponent,
 		MaxSharpnessPipe,
 		SharpnessBarComponent,
-		SaveSetComponent
+		SetListComponent
 	],
 	imports: [
 		BrowserModule,

@@ -1,0 +1,29 @@
+<div class="container">
+	<form class="save-container" (ngSubmit)="save(saveBox.value)">
+		<input #saveBox placeholder="Set Name" />
+		<button type="submit" class="save-button" (click)="save(saveBox.value)">
+			<i class="fas fa-save fa-lg"></i>
+		</button>
+	</form>
+	<virtual-scroller id="items-list" #itemList class="scroll-container" *ngIf="savedSets" [items]="savedSets" (update)="onItemListUpdate($event)" [childHeight]="20">
+		<div *ngFor="let item of virtualItems; let i = index" class="scroll-item-container">
+			<div class="name-container" (click)="select(item)" [ngClass]="{'sharp-2':i==selectedSetIndex}">
+				• {{item.setName}}
+			</div>
+			<div class="buttons-container text-right">
+				<button (click)="remove(i)">
+					<i class="fas fa-trash" [ngClass]="{'sharp-0':item.confirm}"></i>
+				</button>
+				<button [hidden]="!item.confirm">
+					<i class="fas fa-times" (click)="item.confirm=false"></i>
+				</button>
+			</div>
+		</div>
+	</virtual-scroller>
+	<div class="download-container text-right">
+		*if all this fails it's because I'm being controlled by someone from the future*
+		<button (click)="downloadFile()">
+			Download <i class="fas fa-download"></i>
+		</button>
+	</div>
+</div>
