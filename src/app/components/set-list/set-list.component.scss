@@ -5,7 +5,7 @@ $saveHeight: 38px;
 
 .container {
 	display: grid;
-	grid-template-rows: $saveHeight auto 25px;
+	grid-template-rows: $saveHeight auto 50px;
 	grid-row-gap: 4px;
 	height: 98%;
 
@@ -74,4 +74,12 @@ $saveHeight: 38px;
 	.download-container {
 		grid-row: 3;
 	}
+}
+
+.trash-color {
+	color: indianred;
+}
+
+.save-color{
+	color: powderblue;
 }

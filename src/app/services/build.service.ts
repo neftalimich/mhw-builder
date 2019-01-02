@@ -135,8 +135,7 @@ export class BuildService {
 					}
 				}
 			}
-		}
-		else {
+		} else {
 			this.slotService.clearItemSlot(slot);
 		}
 	}

@@ -12,23 +12,20 @@ export class SetListComponent implements OnInit {
 
 	savedSets: SavedSetModel[] = [];
 	virtualItems: SavedSetModel[];
-	private selectedSetIndex: number = -1;
+	selectedSetIndex = -1;
 
 	@ViewChild('saveBox') saveBox: ElementRef;
 	@ViewChild('itemList') itemList: VirtualScrollerComponent;
 
-
 	constructor(private location: Location, private buildService: BuildService) { }
 
 	ngOnInit() {
-		let stringSets = localStorage.getItem('mhwSets');
+		const stringSets = localStorage.getItem('mhwSets');
 		if (stringSets) {
 			try {
 				this.savedSets = JSON.parse(stringSets);
-				// console.log("localStorage", this.savedSets);
 			} catch (err) {
-				// console.log("Error", stringSets);
-				// localStorage.setItem('mhwSets', '');
+				console.log('LocalStorage-Error:', stringSets);
 			}
 		}
 	}
@@ -38,7 +35,6 @@ export class SetListComponent implements OnInit {
 	}
 
 	save(setName: string) {
-		console.log(setName);
 		if (setName) {
 			let setItem = this.savedSets.find(s => s.setName === setName);
 			if (setItem) {
@@ -69,23 +65,23 @@ export class SetListComponent implements OnInit {
 	select(set: SavedSetModel) {
 		this.location.replaceState(this.location.path(false), set.hashString);
 		this.buildService.loadBuild(location.hash);
-		this.saveBox.nativeElement.value = set.setName
+		this.saveBox.nativeElement.value = set.setName;
 		this.selectedSetIndex = this.savedSets.indexOf(set);
 	}
 
 	downloadFile() {
-		let fileName = 'mhw-builder.txt';
+		const fileName = 'mhw-builder.txt';
 		let fileString = '';
-		for (let item of this.savedSets) {
-			fileString += `-${item.setName}: ${window.location.origin}/?${item.hashString}` + '\n';
+		for (const item of this.savedSets) {
+			fileString += `-${item.setName}: https://neftalimich.github.io/mhw-builder-page/` + `${item.hashString}` + '\n';
 		}
-		fileString = fileString.replace(/\n/g, "\r\n");
+		fileString = fileString.replace(/\n/g, '\r\n');
 		console.log(fileString);
 		const blob = new Blob([fileString], { type: 'text/txt' });
 		if (window.navigator && window.navigator.msSaveOrOpenBlob) {
 			window.navigator.msSaveOrOpenBlob(blob, fileName);
 		} else {
-			var a = document.createElement('a');
+			const a = document.createElement('a');
 			a.href = URL.createObjectURL(blob);
 			a.download = fileName;
 			document.body.appendChild(a);
