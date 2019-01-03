@@ -55,7 +55,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 182	ChargeBlade	7	Halberion Blade	684	20	0	Fire	240						false	7;5;6;12;6;4	1	rathalos;fire		Power Element	10
 191	ChargeBlade	7	Hazak Aspida II	684	0	0	Dragon	270					Average	false	20;7;2;2;5;4	2	vaal;dragon		Power Element	10
 283	ChargeBlade	7	Oppressor's Charge Blade	792	-25	0	Dragon	210					High	false	5;12;8;6;4;5		deviljho;dragon		Power Element	10
-498	ChargeBlade	7	Taroth Strongarm "Claw"	684	25	20	Fire	90	false					true	4;12;8;5;3;5		kulve;taroth;odogaron;fire		Impact	10
+498	ChargeBlade	7	Taroth Strongarm "Claw"	684	25	20	Fire	90	false					false	4;12;8;5;3;5		kulve;taroth;odogaron;fire		Impact	10
 496	ChargeBlade	7	Taroth Strongarm "Crusher"	684	0	20				Blast	90			false	11;11;4;4;8;2		kulve;taroth;dodogama;blast		Impact	10
 497	ChargeBlade	7	Taroth Strongarm "Decay"	684	10	20	Dragon	120						false	20;7;2;2;5;4		kulve;taroth;vaal;dragon		Power Element	10
 499	ChargeBlade	7	Taroth Strongarm "Glutton"	684	0	20				Sleep	90			false	10;12;4;5;9;0		kulve;taroth;jagras;sleep		Impact	10
