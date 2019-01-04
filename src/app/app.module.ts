@@ -3,6 +3,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { VirtualScrollerModule } from 'ngx-virtual-scroller';
+import { SortablejsModule } from 'angular-sortablejs';
 import { AppComponent } from './app.component';
 import { AmmoCapacitiesComponent } from './components/ammo-capacities/ammo-capacities.component';
 import { ArmorListComponent } from './components/armor-list/armor-list.component';
@@ -70,6 +71,7 @@ import { SetListComponent } from './components/set-list/set-list.component';
 		BrowserModule,
 		HttpClientModule,
 		VirtualScrollerModule,
+		SortablejsModule.forRoot({ animation: 150 }),
 		DataModule
 	],
 	providers: [

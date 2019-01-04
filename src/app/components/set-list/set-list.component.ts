@@ -1,7 +1,7 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Location } from '@angular/common';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { SortablejsOptions } from 'angular-sortablejs';
 import { BuildService } from 'src/app/services/build.service';
-import { VirtualScrollerComponent } from 'ngx-virtual-scroller';
 
 @Component({
 	selector: 'mhw-builder-set-list',
@@ -13,11 +13,11 @@ export class SetListComponent implements OnInit {
 	savedSets: SavedSetModel[] = [];
 	virtualItems: SavedSetModel[];
 	selectedSetIndex = -1;
+	loading = false;
 
 	@ViewChild('saveBox') saveBox: ElementRef;
-	@ViewChild('itemList') itemList: VirtualScrollerComponent;
 
-	constructor(private location: Location, private buildService: BuildService) { }
+	constructor(private location: Location, private buildService: BuildService) {}
 
 	ngOnInit() {
 		const stringSets = localStorage.getItem('mhwSets');
@@ -30,9 +30,13 @@ export class SetListComponent implements OnInit {
 		}
 	}
 
-	onItemListUpdate(items: SavedSetModel[]) {
-		this.virtualItems = items;
-	}
+	eventOptions: SortablejsOptions = {
+		onUpdate: (event) => {
+			if (this.selectedSetIndex == event.oldIndex) {
+				this.selectedSetIndex = event.newIndex;
+			}
+		}
+	};
 
 	save(setName: string) {
 		if (setName) {
@@ -51,6 +55,14 @@ export class SetListComponent implements OnInit {
 			}
 			localStorage.setItem('mhwSets', JSON.stringify(this.savedSets));
 		}
+	}
+
+	saveSets() {
+		this.loading = true;
+		localStorage.setItem('mhwSets', JSON.stringify(this.savedSets));
+		setTimeout(() => {
+			this.loading = false;
+		}, 1000);
 	}
 
 	remove(index: number) {
