@@ -1,7 +1,7 @@
 id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	elementBaseAttack	elementHidden	ailment	ailmentBaseAttack	ailmentHidden	elderseal	sharpnessDataNeeded	sharpnessLevelsBar	slots	tags	skills	otherData	version
 256	Bow	6	Alloy Bow II	204	0	0	Thunder	150	true					false		2;2	ore;thunder		Close;Power	10
 288	Bow	6	Aloy's War Bow	192	30	0	Thunder	240	true					false		3	thunder		Close;Paralysis;Poison	10
-268	Bow	6	Anja Arch III	240	-20	0	Fire	390						false			anjanath;fire		Close Range;Power;Blast	10
+268	Bow	6	Anja Arch III	240	-20	0	Fire	390						false			anjanath;fire		Close;Power;Blast	10
 258	Bow	6	Archer's Dance III	204	20	0				Blast	270	true		false			kulu-ya-ku;blast		Close;Paralysis;Sleep;Blast	10
 267	Bow	6	Datura String III	204	0	0				Blast	240	true		false		2;1	pukei-pukei;blast		Close;Paralysis;Poison	10
 270	Bow	6	Dragonbone Bow III	180	0	0	Dragon	420					Low	false		1;1			Close;Paralysis;Sleep	10
@@ -175,49 +175,49 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 726	GreatSword	8	Kjárr Fellsword "Thunder"	1008	10	0	Thunder	480						false	7;10;4;4;15;0		kulve;kjarr;thunder	criticalElement-1		52
 727	GreatSword	8	Kjárr Fellsword "Ice"	912	20	0	Ice	450						false	5;5;6;12;8;4		kulve;kjarr;ice	criticalElement-1		52
 728	GreatSword	8	Kjárr Fellsword "Water"	912	20	0	Water	480						false	13;10;3;3;8;3		kulve;kjarr;water	criticalElement-1		52
-156	Gunlance	6	Anja Cannon III	483	-20	0	Fire	450						false	13;7;3;10;7;0		anjanath;fire		Long-3	10
-155	Gunlance	6	Barroth Blaster III	460	-10	15				Paralysis	390	true		false	12;7;3;10;8;0		barroth;paralysis		Wide-3	10
-143	Gunlance	6	Chrome Gunlance II	414	0	0				Blast	270	true		false	6;6;2;15;9;2	1;1	ore;blast		Normal-3	10
-153	Gunlance	6	Deathfang Gunlance III	368	10	0				Paralysis	450			false	15;10;3;3;6;3		great;girros;paralysis		Normal-3	10
-157	Gunlance	6	Dragonbone Gunlance III	368	0	0	Dragon	420					Low	false	12;11;4;4;7;2	1;1	dragonbone;dragon		Normal-3	10
-152	Gunlance	6	Glutton Gunlance III	437	0	0				Sleep	300	true		false	9;12;4;5;10;0	3;2	great;jagras;sleep		Normal-3	10
-150	Gunlance	6	Great Bone Gunlance II	437	0	10	Thunder	270	true					false	10;12;4;5;9;0	3	bone;thunder		Long-2	10
-148	Gunlance	6	Jyura Buster III	437	0	0	Water	360						false	11;6;8;8;5;2	1	jyuratodus;water		Wide-3	10
-151	Gunlance	7	Bazel Buster II	460	-10	0				Blast	210			false	6;12;8;6;3;5	1	bazelgeuse;blast		Wide-3	10
-154	Gunlance	7	Hazak Spysa II	460	0	0	Dragon	270					Average	false	20;7;2;2;5;4	2	vaal;hazak;dragon		Long-3	10
-281	Gunlance	7	Insatiable Gunlance	529	-30	0	Dragon	240					High	false	4;12;8;6;5;5		deviljho;dragon		Long-3	10
-149	Gunlance	7	Legiana Cannon II	368	0	0	Ice	360						false	13;3;6;8;4;6		legiana;ice		Normal-3	10
-145	Gunlance	7	Mythic Kadachi Striker	414	20	0	Thunder	270						false	10;6;6;10;5;3	1	tobi-kadachi;thunder		Long-3	10
-147	Gunlance	7	Royal Burst	437	15	0				Poison	330			false	8;6;6;10;7;3	1	rathian;poison		Normal-4	10
-478	Gunlance	7	Taroth Buster "Bomber"	414	0	20				Blast	210			true	0;0;0;0;2;0		kulve;taroth;bazelgeuse;blast		Wide-4	10
-481	Gunlance	7	Taroth Buster "Decay"	460	10	20	Dragon	270					Average	true	0;0;0;0;2;0		kulve;taroth;vaal;dragon		Long-3	10
-483	Gunlance	7	Taroth Buster "Glutton"	437	0	20				Sleep	180			true	0;0;0;0;2;0		kulve;taroth;jagras;sleep		Normal-4	10
-479	Gunlance	7	Taroth Buster "King"	414	20	20	Fire	240						false	8;5;5;8;14;0		kulve;taroth;rathalos;fire		Long-4	10
-480	Gunlance	7	Taroth Buster "Mire"	437	0	20	Water	360						true	0;0;0;0;2;0		kulve;taroth;jyuratodus;water		Wide-3	10
-342	Gunlance	7	Taroth Buster "Mud"	391	-10	20				Paralysis	390	true		true	0;0;0;0;0;2		kulve;taroth;barroth;paralysis		Wide-3	10
-476	Gunlance	7	Taroth Buster "Numb"	368	10	20				Paralysis	450			true	0;0;0;0;2;0		kulve;taroth;girros;paralysis		Normal-3	10
-343	Gunlance	7	Taroth Buster "Rage"	460	-20	20	Fire	450						true	0;0;0;0;2;0		kulve;taroth;anjanath;fire		Wide-3	10
-477	Gunlance	7	Taroth Buster "Spark"	391	20	20	Thunder	270						true	0;0;0;0;2;0		kulve;taroth;tobi-kadachi;thunder		Long-3	10
-475	Gunlance	7	Taroth Buster "Stream"	368	10	20	Ice	360						true	0;0;0;0;2;0		kulve;taroth;legiana;ice		Normal-3	10
-146	Gunlance	8	Blue Chariot	437	20	0	Fire	240						false	8;5;6;12;5;4	1	rathalos;fire		Long-3	10
-159	Gunlance	8	Daora's Brigia	414	10	0	Ice	240						false	9;6;8;8;7;2	3	kushala;daora;ice		Long-3	10
-158	Gunlance	8	Earthshaker Magda Lahat	460	-10	20				Blast	420			false	21;3;4;9;3;0		zorah;magdaros;blast		Long-4	10
-144	Gunlance	8	Eradication Flame	483	0	0	Dragon	150					High	false	11;12;4;5;13;0	2	nergigante;dragon		Wide-2	10
-689	Gunlance	8	Taroth Buster "Ice"	414	0	20	Ice	450	true					false	22;2;2;2;3;9	3	kulve;taroth;ice		Long-3	50
-400	Gunlance	8	Taroth Buster "Poison"	460	15	20				Poison	450	true		false	6;5;6;12;7;4	3	kulve;taroth;poison		Normal-3	10
-399	Gunlance	8	Taroth Buster "Sleep"	437	0	20				Sleep	450	true		false	18;7;2;2;7;4	3	kulve;taroth;sleep		Normal-4	10
-401	Gunlance	8	Taroth Buster "Water"	437	0	20	Water	450	true					false	7;6;6;10;8;3	3	kulve;taroth;water		Wide-4	10
-160	Gunlance	8	Xeno Hemta	391	15	0	Dragon	180					Low	false	13;3;6;8;4;6	3;3	xenojiiva;dragon		Long-3	10
-663	Gunlance	8	Empress Howl "Blaze"	437	20	0				Blast	180			false	10;3;6;8;4;9	1	lunastra;blast	guts-1	Wide-3	10
-664	Gunlance	8	Empress Howl "Ruin"	460	0	0				Blast	150			false	10;3;6;8;4;9	2	lunastra;blast	hastenRecovery-1	Wide-3	10
-665	Gunlance	8	Empress Howl "Styx"	437	10	0				Blast	240			false	10;3;6;8;4;9	3;1	lunastra;blast	razorSharpSpareShot-1	Wide-3	10
-729	Gunlance	8	Kjárr Buster "Bomber"	414	20	0				Blast	330			false	7;5;5;8;15;0	1	kulve;kjarr;blast	criticalStatus-1	Wide-4	52
-730	Gunlance	8	Kjárr Buster "Decay"	437	15	0	Dragon	300					Average	false	18;7;2;2;7;4		kulve;kjarr;dragon	criticalElement-1	Long-4	52
-731	Gunlance	8	Kjárr Buster "King"	414	15	0	Fire	390						false	6;5;5;8;16;0		kulve;kjarr;fire	criticalElement-1	Long-4	52
-732	Gunlance	8	Kjárr Buster "Paralysis"	414	15	0				Paralysis	360			false	9;5;5;8;13;0		kulve;kjarr;paralysis	criticalStatus-1	Normal-4	52
-733	Gunlance	8	Kjárr Buster "Spark"	414	15	0	Thunder	330						false	7;5;6;12;6;4		kulve;kjarr;thunder	criticalElement-1	Long-4	52
-734	Gunlance	8	Kjárr Buster "Stream"	414	15	0	Ice	390						false	16;7;2;2;9;4		kulve;kjarr;ice	criticalElement-1	Normal-4	52
-735	Gunlance	8	Kjárr Buster "Water"	437	10	0	Water	420						false	6;6;6;10;9;3		kulve;kjarr;water	criticalElement-1	Wide-4	52
+156	Gunlance	6	Anja Cannon III	483	-20	0	Fire	450						false	13;7;3;10;7;0		anjanath;fire;long3		Long-3	10
+155	Gunlance	6	Barroth Blaster III	460	-10	15				Paralysis	390	true		false	12;7;3;10;8;0		barroth;paralysis;wide3		Wide-3	10
+143	Gunlance	6	Chrome Gunlance II	414	0	0				Blast	270	true		false	6;6;2;15;9;2	1;1	ore;blast;normal3		Normal-3	10
+153	Gunlance	6	Deathfang Gunlance III	368	10	0				Paralysis	450			false	15;10;3;3;6;3		great;girros;paralysis;normal3		Normal-3	10
+157	Gunlance	6	Dragonbone Gunlance III	368	0	0	Dragon	420					Low	false	12;11;4;4;7;2	1;1	dragonbone;dragon;normal3		Normal-3	10
+152	Gunlance	6	Glutton Gunlance III	437	0	0				Sleep	300	true		false	9;12;4;5;10;0	3;2	great;jagras;sleep;normal3		Normal-3	10
+150	Gunlance	6	Great Bone Gunlance II	437	0	10	Thunder	270	true					false	10;12;4;5;9;0	3	bone;thunder;long2		Long-2	10
+148	Gunlance	6	Jyura Buster III	437	0	0	Water	360						false	11;6;8;8;5;2	1	jyuratodus;water;wide3		Wide-3	10
+151	Gunlance	7	Bazel Buster II	460	-10	0				Blast	210			false	6;12;8;6;3;5	1	bazelgeuse;blast;wide3		Wide-3	10
+154	Gunlance	7	Hazak Spysa II	460	0	0	Dragon	270					Average	false	20;7;2;2;5;4	2	vaal;hazak;dragon;long3		Long-3	10
+281	Gunlance	7	Insatiable Gunlance	529	-30	0	Dragon	240					High	false	4;12;8;6;5;5		deviljho;dragon;long3		Long-3	10
+149	Gunlance	7	Legiana Cannon II	368	0	0	Ice	360						false	13;3;6;8;4;6		legiana;ice;normal3		Normal-3	10
+145	Gunlance	7	Mythic Kadachi Striker	414	20	0	Thunder	270						false	10;6;6;10;5;3	1	tobi-kadachi;thunder;long3		Long-3	10
+147	Gunlance	7	Royal Burst	437	15	0				Poison	330			false	8;6;6;10;7;3	1	rathian;poison;normal4		Normal-4	10
+478	Gunlance	7	Taroth Buster "Bomber"	414	0	20				Blast	210			true	0;0;0;0;2;0		kulve;taroth;bazelgeuse;blast;wide4		Wide-4	10
+481	Gunlance	7	Taroth Buster "Decay"	460	10	20	Dragon	270					Average	true	0;0;0;0;2;0		kulve;taroth;vaal;dragon;long3		Long-3	10
+483	Gunlance	7	Taroth Buster "Glutton"	437	0	20				Sleep	180			true	0;0;0;0;2;0		kulve;taroth;jagras;sleep;normal4		Normal-4	10
+479	Gunlance	7	Taroth Buster "King"	414	20	20	Fire	240						false	8;5;5;8;14;0		kulve;taroth;rathalos;fire;long4		Long-4	10
+480	Gunlance	7	Taroth Buster "Mire"	437	0	20	Water	360						true	0;0;0;0;2;0		kulve;taroth;jyuratodus;water;wide3		Wide-3	10
+342	Gunlance	7	Taroth Buster "Mud"	391	-10	20				Paralysis	390	true		true	0;0;0;0;0;2		kulve;taroth;barroth;paralysis;wide3		Wide-3	10
+476	Gunlance	7	Taroth Buster "Numb"	368	10	20				Paralysis	450			true	0;0;0;0;2;0		kulve;taroth;girros;paralysis;normal3		Normal-3	10
+343	Gunlance	7	Taroth Buster "Rage"	460	-20	20	Fire	450						true	0;0;0;0;2;0		kulve;taroth;anjanath;fire;wide3		Wide-3	10
+477	Gunlance	7	Taroth Buster "Spark"	391	20	20	Thunder	270						true	0;0;0;0;2;0		kulve;taroth;tobi-kadachi;thunder;long3		Long-3	10
+475	Gunlance	7	Taroth Buster "Stream"	368	10	20	Ice	360						true	0;0;0;0;2;0		kulve;taroth;legiana;ice;normal3		Normal-3	10
+146	Gunlance	8	Blue Chariot	437	20	0	Fire	240						false	8;5;6;12;5;4	1	rathalos;fire;long3		Long-3	10
+159	Gunlance	8	Daora's Brigia	414	10	0	Ice	240						false	9;6;8;8;7;2	3	kushala;daora;ice;long3		Long-3	10
+158	Gunlance	8	Earthshaker Magda Lahat	460	-10	20				Blast	420			false	21;3;4;9;3;0		zorah;magdaros;blast;long4		Long-4	10
+144	Gunlance	8	Eradication Flame	483	0	0	Dragon	150					High	false	11;12;4;5;13;0	2	nergigante;dragon;wide2		Wide-2	10
+689	Gunlance	8	Taroth Buster "Ice"	414	0	20	Ice	450	true					false	22;2;2;2;3;9	3	kulve;taroth;ice;long3		Long-3	50
+400	Gunlance	8	Taroth Buster "Poison"	460	15	20				Poison	450	true		false	6;5;6;12;7;4	3	kulve;taroth;poison;normal3		Normal-3	10
+399	Gunlance	8	Taroth Buster "Sleep"	437	0	20				Sleep	450	true		false	18;7;2;2;7;4	3	kulve;taroth;sleep;normal4		Normal-4	10
+401	Gunlance	8	Taroth Buster "Water"	437	0	20	Water	450	true					false	7;6;6;10;8;3	3	kulve;taroth;water;wide4		Wide-4	10
+160	Gunlance	8	Xeno Hemta	391	15	0	Dragon	180					Low	false	13;3;6;8;4;6	3;3	xenojiiva;dragon;long3		Long-3	10
+663	Gunlance	8	Empress Howl "Blaze"	437	20	0				Blast	180			false	10;3;6;8;4;9	1	lunastra;blast;wide3	guts-1	Wide-3	10
+664	Gunlance	8	Empress Howl "Ruin"	460	0	0				Blast	150			false	10;3;6;8;4;9	2	lunastra;blast;wide3	hastenRecovery-1	Wide-3	10
+665	Gunlance	8	Empress Howl "Styx"	437	10	0				Blast	240			false	10;3;6;8;4;9	3;1	lunastra;blast;wide3	razorSharpSpareShot-1	Wide-3	10
+729	Gunlance	8	Kjárr Buster "Bomber"	414	20	0				Blast	330			false	7;5;5;8;15;0	1	kulve;kjarr;blast;wide4	criticalStatus-1	Wide-4	52
+730	Gunlance	8	Kjárr Buster "Decay"	437	15	0	Dragon	300					Average	false	18;7;2;2;7;4		kulve;kjarr;dragon;long4	criticalElement-1	Long-4	52
+731	Gunlance	8	Kjárr Buster "King"	414	15	0	Fire	390						false	6;5;5;8;16;0		kulve;kjarr;fire;long4	criticalElement-1	Long-4	52
+732	Gunlance	8	Kjárr Buster "Paralysis"	414	15	0				Paralysis	360			false	9;5;5;8;13;0		kulve;kjarr;paralysis;normal4	criticalStatus-1	Normal-4	52
+733	Gunlance	8	Kjárr Buster "Spark"	414	15	0	Thunder	330						false	7;5;6;12;6;4		kulve;kjarr;thunder;long4	criticalElement-1	Long-4	52
+734	Gunlance	8	Kjárr Buster "Stream"	414	15	0	Ice	390						false	16;7;2;2;9;4		kulve;kjarr;ice;normal4	criticalElement-1	Normal-4	52
+735	Gunlance	8	Kjárr Buster "Water"	437	10	0	Water	420						false	6;6;6;10;9;3		kulve;kjarr;water;wide4	criticalElement-1	Wide-4	52
 97	Hammer	6	Anja Striker III	1092	-20	0	Fire	450						false	12;12;4;5;7;0		anjanath;fire			10
 92	Hammer	6	Baan Strike III	988	0	20				Sleep	270			false	11;12;4;5;8;0		radobaan;sleep			10
 96	Hammer	6	Barroth Breaker III	1040	-10	15				Paralysis	390	true		false	11;12;4;5;8;0	2;1	barroth;paralysis			10

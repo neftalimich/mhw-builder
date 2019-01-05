@@ -117,7 +117,7 @@
 					<div class="stat-value" [ngClass]="['sharp-'+(item.sharpnessLevelsBar | maxSharpness:true)]">
 						{{(item.sharpnessLevelsBar | maxSharpness) * 10}} <i class="fas fa-circle fa-sm"></i>
 					</div>
-				</div>	
+				</div>
 				<div class="stat-container" *ngIf="item.ammoCapacities?.deviation">
 					<div class="icon-container">
 						<img src="assets/images/deviation-icon.png">
@@ -130,6 +130,13 @@
 					</div>
 					<div class="stat-value">{{item.ammoCapacities.specialAmmo}}</div>
 				</div>
+				<div class="stat-container" *ngIf="item.weaponType=='Gunlance'">
+					<div class="icon-container">
+						<img src="assets/images/special-ammo-icon.png">
+					</div>
+					<div class="stat-value">{{item.otherData[0].value}}-{{item.otherData[0].data}}</div>
+				</div>
+				
 			</div>
 
 			<div class="skills-container">
