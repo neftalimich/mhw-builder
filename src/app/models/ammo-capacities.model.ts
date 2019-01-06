@@ -6,6 +6,7 @@ export class AmmoCapacitiesModel {
 	deviation: DeviationType[];
 	specialAmmo: SpecialAmmoType;
 	ammo: AmmoTypeModel[];
+	missingData: boolean;
 	missingMods: boolean;
 }
 

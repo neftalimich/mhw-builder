@@ -90,10 +90,10 @@
 			</ng-container>
 		</tbody>
 	</table>
-	<div class="no-data-warning" *ngIf="ammoCapacities?.deviation == deviationTypes.NA">
+	<div class="no-data-warning" *ngIf="ammoCapacities?.missingData && showAmmoModsInfo">
 		Ammo capacity data is missing!
 	</div>
 	<div class="no-data-warning" *ngIf="ammoCapacities?.missingMods && showAmmoModsInfo">
-		Ammo mods data are missing!
+		Ammo mods data is missing!
 	</div>
 </div>

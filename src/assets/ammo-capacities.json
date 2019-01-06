@@ -315,6 +315,7 @@
 		],
 		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernheart",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -633,6 +634,7 @@
 		],
 		"deviation": [ "Average", "Average", "Average", "Average" ],
 		"specialAmmo": "Wyvernsnipe",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -951,6 +953,7 @@
 		],
 		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernheart",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -1269,6 +1272,7 @@
 		],
 		"deviation": [ "Average", "Average", "Average", "Average" ],
 		"specialAmmo": "Wyvernheart",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -1587,6 +1591,7 @@
 		],
 		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernsnipe",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -1905,6 +1910,7 @@
 		],
 		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernsnipe",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -2223,6 +2229,7 @@
 		],
 		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernsnipe",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -2541,6 +2548,7 @@
 		],
 		"deviation": [ "Average", "Average", "Average", "Average" ],
 		"specialAmmo": "Wyvernsnipe",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -2859,6 +2867,7 @@
 		],
 		"deviation": [ "High", "High", "High", "High" ],
 		"specialAmmo": "Wyvernsnipe",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -3177,6 +3186,7 @@
 		],
 		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernsnipe",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -3495,6 +3505,7 @@
 		],
 		"deviation": [ "None" ],
 		"specialAmmo": "Wyvernheart",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -3813,6 +3824,7 @@
 		],
 		"deviation": [ "High", "High", "High", "High" ],
 		"specialAmmo": "Wyvernheart",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -4131,6 +4143,7 @@
 		],
 		"deviation": [ "None" ],
 		"specialAmmo": "Wyvernsnipe",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -4449,6 +4462,7 @@
 		],
 		"deviation": [ "High", "High", "High", "High" ],
 		"specialAmmo": "Wyvernheart",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -4767,6 +4781,7 @@
 		],
 		"deviation": [ "Average", "Average", "Average", "Average" ],
 		"specialAmmo": "Wyvernsnipe",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -5085,6 +5100,7 @@
 		],
 		"deviation": [ "High", "High", "High", "High" ],
 		"specialAmmo": "Wyvernsnipe",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -5403,6 +5419,7 @@
 		],
 		"deviation": [ "None" ],
 		"specialAmmo": "Wyvernheart",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -5721,6 +5738,7 @@
 		],
 		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernheart",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -6039,6 +6057,7 @@
 		],
 		"deviation": [ "Average", "Average", "Average", "Average" ],
 		"specialAmmo": "Wyvernheart",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -6357,6 +6376,7 @@
 		],
 		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernheart",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -6675,7 +6695,8 @@
 		],
 		"deviation": [ "High", "Average", "Low", "None" ],
 		"specialAmmo": "Wyvernheart",
-		"missingMods": true
+		"missingData": false,
+		"missingMods": false
 	},
 	{
 		"id": 249,
@@ -6993,6 +7014,7 @@
 		],
 		"deviation": [ "Average", "Average", "Average", "Average" ],
 		"specialAmmo": "Wyvernsnipe",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -7311,6 +7333,7 @@
 		],
 		"deviation": [ "Average", "Average", "Average", "Average" ],
 		"specialAmmo": "Wyvernheart",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -7629,6 +7652,7 @@
 		],
 		"deviation": [ "High", "High", "High", "High" ],
 		"specialAmmo": "Wyvernheart",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -7947,6 +7971,7 @@
 		],
 		"deviation": [ "High", "High", "High", "High" ],
 		"specialAmmo": "Wyvernsnipe",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -8265,6 +8290,7 @@
 		],
 		"deviation": [ "Average", "Average", "Average", "Average" ],
 		"specialAmmo": "Wyvernheart",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -8583,6 +8609,7 @@
 		],
 		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernsnipe",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -8744,6 +8771,7 @@
 		],
 		"deviation": [ "Average", "Low", "None" ],
 		"specialAmmo": "Wyvernsnipe",
+		"missingData": false,
 		"missingMods": true
 	},
 	{
@@ -8754,21 +8782,21 @@
 				"levels": [
 					{
 						"capacity": 1,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"type": 2,
+						"recoil": [ 0 ],
+						"reload": [ 3, 3, 3, 4 ]
 					},
 					{
 						"capacity": 5,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 2 ],
+						"reload": [ 3, 3, 3, 4 ]
 					},
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3, 2 ],
+						"reload": [ 2, 3 ]
 					}
 				]
 			},
@@ -8790,8 +8818,8 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3, 3, 3, 2 ],
+						"reload": [ 2, 3 ]
 					}
 				]
 			},
@@ -8813,54 +8841,8 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
-					}
-				]
-			},
-			{
-				"name": "sticky",
-				"levels": [
-					{
-						"capacity": 0,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
-					},
-					{
-						"capacity": 0,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
-					},
-					{
-						"capacity": 0,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
-					}
-				]
-			},
-			{
-				"name": "cluster",
-				"levels": [
-					{
-						"capacity": 0,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
-					},
-					{
-						"capacity": 0,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
-					},
-					{
-						"capacity": 0,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3, 3, 2 ],
+						"reload": [ 3, 3, 3, 4 ]
 					}
 				]
 			},
@@ -8870,8 +8852,8 @@
 					{
 						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5, 4 ],
+						"reload": [ 1, 2, 2, 3 ]
 					},
 					{
 						"capacity": 0,
@@ -8887,8 +8869,8 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3, 2 ],
+						"reload": [ 2, 3 ]
 					},
 					{
 						"capacity": 0,
@@ -8904,109 +8886,9 @@
 					{
 						"capacity": 2,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 4, 4, 3 ],
+						"reload": [ 2, 2, 2, 3 ]
 					},
-					{
-						"capacity": 0,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
-					}
-				]
-			},
-			{
-				"name": "sleep",
-				"levels": [
-					{
-						"capacity": 0,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
-					},
-					{
-						"capacity": 0,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
-					}
-				]
-			},
-			{
-				"name": "exhaust",
-				"levels": [
-					{
-						"capacity": 0,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
-					},
-					{
-						"capacity": 0,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
-					}
-				]
-			},
-			{
-				"name": "flaming",
-				"levels": [
-					{
-						"capacity": 0,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
-					}
-				]
-			},
-			{
-				"name": "water",
-				"levels": [
-					{
-						"capacity": 0,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
-					}
-				]
-			},
-			{
-				"name": "freeze",
-				"levels": [
-					{
-						"capacity": 0,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
-					}
-				]
-			},
-			{
-				"name": "thunder",
-				"levels": [
-					{
-						"capacity": 0,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
-					}
-				]
-			},
-			{
-				"name": "dragon",
-				"levels": [
-					{
-						"capacity": 0,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
-					}
-				]
-			},
-			{
-				"name": "slicing",
-				"levels": [
 					{
 						"capacity": 0,
 						"type": 0,
@@ -9021,8 +8903,8 @@
 					{
 						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 6 ],
+						"reload": [ 1, 2 ]
 					}
 				]
 			},
@@ -9030,21 +8912,10 @@
 				"name": "demon",
 				"levels": [
 					{
-						"capacity": 0,
+						"capacity": 1,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
-					}
-				]
-			},
-			{
-				"name": "armor",
-				"levels": [
-					{
-						"capacity": 0,
-						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 5, 5, 4, 3 ],
+						"reload": [ 1, 1, 2, 3 ]
 					}
 				]
 			},
@@ -9054,15 +8925,16 @@
 					{
 						"capacity": 3,
 						"type": 0,
-						"recoil": [ 1 ],
-						"reload": [ 1 ]
+						"recoil": [ 3, 3, 2 ],
+						"reload": [ 2, 3, 3, 4 ]
 					}
 				]
 			}
 		],
-		"deviation": [ "High", "High", "High", "High" ],
+		"deviation": [ "High", "Average", "Slow", "None" ],
 		"specialAmmo": "Wyvernheart",
-		"missingMods": true
+		"missingData": false,
+		"missingMods": false
 	},
 	{
 		"id": 469,
@@ -9380,6 +9252,7 @@
 		],
 		"deviation": [ "High", "High", "High", "High" ],
 		"specialAmmo": "Wyvernheart",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -9698,6 +9571,7 @@
 		],
 		"deviation": [ "High", "High", "High", "High" ],
 		"specialAmmo": "Wyvernsnipe",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -10016,6 +9890,7 @@
 		],
 		"deviation": [ "None" ],
 		"specialAmmo": "Wyvernheart",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -10334,6 +10209,7 @@
 		],
 		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernheart",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -10652,6 +10528,7 @@
 		],
 		"deviation": [ "Average", "Average", "Average", "Average" ],
 		"specialAmmo": "Wyvernheart",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -10970,6 +10847,7 @@
 		],
 		"deviation": [ "Average", "Average", "Average", "Average" ],
 		"specialAmmo": "Wyvernheart",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -11288,6 +11166,7 @@
 		],
 		"deviation": [ "High", "High", "High", "High" ],
 		"specialAmmo": "Wyvernsnipe",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -11606,6 +11485,7 @@
 		],
 		"deviation": [ "None" ],
 		"specialAmmo": "Wyvernheart",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -11924,6 +11804,7 @@
 		],
 		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernsnipe",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -12242,6 +12123,7 @@
 		],
 		"deviation": [ "High", "High", "High", "High" ],
 		"specialAmmo": "Wyvernsnipe",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -12560,6 +12442,7 @@
 		],
 		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernsnipe",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -12878,6 +12761,7 @@
 		],
 		"deviation": [ "None" ],
 		"specialAmmo": "Wyvernsnipe",
+		"missingData": false,
 		"missingMods": false
 	},
 	{
@@ -13196,7 +13080,8 @@
 		],
 		"deviation": [ "None" ],
 		"specialAmmo": "Wyvernheart",
-		"missingMods": true
+		"missingData": false,
+		"missingMods": false
 	},
 	{
 		"id": 254,
@@ -13402,6 +13287,7 @@
 		],
 		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernheart",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -13658,6 +13544,7 @@
 		],
 		"deviation": [ "Average", "Low", "None" ],
 		"specialAmmo": "Wyvernheart",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -13915,6 +13802,7 @@
 		],
 		"deviation": [ "Average", "Average", "Average", "Average" ],
 		"specialAmmo": "Wyvernsnipe",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -14121,6 +14009,7 @@
 		],
 		"deviation": [ "High", "Average", "Low", "None" ],
 		"specialAmmo": "Wyvernsnipe",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -14361,6 +14250,7 @@
 		],
 		"deviation": [ "Low", "None" ],
 		"specialAmmo": "Wyvernsnipe",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -14679,6 +14569,7 @@
 		],
 		"deviation": [ "High", "Average", "Low", "None" ],
 		"specialAmmo": "Wyvernheart",
+		"missingData": false,
 		"missingMods": true
 	},
 	{
@@ -14997,6 +14888,7 @@
 		],
 		"deviation": [ "High", "Average", "Low", "None" ],
 		"specialAmmo": "Wyvernheart",
+		"missingData": false,
 		"missingMods": true
 	},
 	{
@@ -15315,6 +15207,7 @@
 		],
 		"deviation": [ "High", "Average", "Low", "None" ],
 		"specialAmmo": "Wyvernsnipe",
+		"missingData": false,
 		"missingMods": true
 	},
 	{
@@ -15633,6 +15526,7 @@
 		],
 		"deviation": [ "None" ],
 		"specialAmmo": "Wyvernheart",
+		"missingData": false,
 		"missingMods": true
 	},
 	{
@@ -15951,6 +15845,7 @@
 		],
 		"deviation": [ "Low", "None" ],
 		"specialAmmo": "Wyvernsnipe",
+		"missingData": false,
 		"missingMods": true
 	},
 	{
@@ -16269,6 +16164,7 @@
 		],
 		"deviation": [ "None" ],
 		"specialAmmo": "Wyvernheart",
+		"missingData": false,
 		"missingMods": true
 	},
 	{
@@ -16587,6 +16483,7 @@
 		],
 		"deviation": [ "High", "High", "High", "High" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -16905,6 +16802,7 @@
 		],
 		"deviation": [ "Average", "Average", "Average", "Average" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -17223,6 +17121,7 @@
 		],
 		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -17541,6 +17440,7 @@
 		],
 		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -17859,6 +17759,7 @@
 		],
 		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -18177,6 +18078,7 @@
 		],
 		"deviation": [ "Average", "Average", "Average", "Average" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -18495,6 +18397,7 @@
 		],
 		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -18813,6 +18716,7 @@
 		],
 		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -19131,6 +19035,7 @@
 		],
 		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -19449,6 +19354,7 @@
 		],
 		"deviation": [ "Average", "Average", "Average", "Average" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -19767,6 +19673,7 @@
 		],
 		"deviation": [ "Average", "Average", "Average", "Average" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -20085,6 +19992,7 @@
 		],
 		"deviation": [ "High", "Average", "Low", "None" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": false,
 		"missingMods": false
 	},
 	{
@@ -20403,6 +20311,7 @@
 		],
 		"deviation": [ "Average", "Average", "Average", "Average" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -20721,6 +20630,7 @@
 		],
 		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -21039,6 +20949,7 @@
 		],
 		"deviation": [ "Average", "Average", "Average", "Average" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -21357,6 +21268,7 @@
 		],
 		"deviation": [ "None" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -21675,6 +21587,7 @@
 		],
 		"deviation": [ "Low", "Low" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -21993,6 +21906,7 @@
 		],
 		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -22311,6 +22225,7 @@
 		],
 		"deviation": [ "Average", "Average", "Average", "Average" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -22629,6 +22544,7 @@
 		],
 		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -22947,6 +22863,7 @@
 		],
 		"deviation": [ "High", "High", "High", "High" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -23265,6 +23182,7 @@
 		],
 		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -23583,6 +23501,7 @@
 		],
 		"deviation": [ "Average", "Average", "Average", "Average" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -23901,6 +23820,7 @@
 		],
 		"deviation": [ "High", "High", "High", "High" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -24219,6 +24139,7 @@
 		],
 		"deviation": [ "Average", "Average", "Average", "Average" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -24537,6 +24458,7 @@
 		],
 		"deviation": [ "High", "High", "High", "High" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -24855,6 +24777,7 @@
 		],
 		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -25173,6 +25096,7 @@
 		],
 		"deviation": [ "None" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -25491,6 +25415,7 @@
 		],
 		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -25703,6 +25628,7 @@
 		],
 		"deviation": [ "None" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -26021,6 +25947,7 @@
 		],
 		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -26339,6 +26266,7 @@
 		],
 		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -26466,6 +26394,7 @@
 		],
 		"deviation": [ "Average", "Low", "None" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": false,
 		"missingMods": false
 	},
 	{
@@ -26784,6 +26713,7 @@
 		],
 		"deviation": [ "average", "average", "average", "average" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -27102,6 +27032,7 @@
 		],
 		"deviation": [ "none" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -27420,6 +27351,7 @@
 		],
 		"deviation": [ "Average", "Average", "Average", "Average" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -27738,6 +27670,7 @@
 		],
 		"deviation": [ "Average", "Average", "Average", "Average" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -27888,6 +27821,7 @@
 		],
 		"deviation": [ "High", "High", "High", "High" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": true,
 		"missingMods": true
 	},
 	{
@@ -28094,6 +28028,7 @@
 		],
 		"deviation": [ "Low", "None" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": false,
 		"missingMods": false
 	},
 	{
@@ -28412,6 +28347,7 @@
 		],
 		"deviation": [ "Average", "Average", "Average", "Average" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": false,
 		"missingMods": true
 	},
 	{
@@ -28730,6 +28666,7 @@
 		],
 		"deviation": [ "Low", "None" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": false,
 		"missingMods": true
 	},
 	{
@@ -29048,6 +28985,7 @@
 		],
 		"deviation": [ "Low", "None" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": false,
 		"missingMods": true
 	},
 	{
@@ -29366,6 +29304,7 @@
 		],
 		"deviation": [ "Low", "None" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": false,
 		"missingMods": true
 	},
 	{
@@ -29684,6 +29623,7 @@
 		],
 		"deviation": [ "Average", "Low", "None" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": false,
 		"missingMods": true
 	},
 	{
@@ -30002,6 +29942,7 @@
 		],
 		"deviation": [ "None" ],
 		"specialAmmo": "Wyvernblast",
+		"missingData": false,
 		"missingMods": true
 	}
 ]
