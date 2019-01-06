@@ -13,7 +13,7 @@ export class SetListComponent implements OnInit {
 	savedSets: SavedSetModel[] = [];
 	virtualItems: SavedSetModel[];
 	selectedSetIndex = -1;
-	loading = false;
+	loading = 0;
 
 	@ViewChild('saveBox') saveBox: ElementRef;
 
@@ -40,6 +40,7 @@ export class SetListComponent implements OnInit {
 
 	save(setName: string) {
 		if (setName) {
+			this.loading = 1;
 			let setItem = this.savedSets.find(s => s.setName === setName);
 			if (setItem) {
 				setItem.hashString = location.hash;
@@ -54,15 +55,18 @@ export class SetListComponent implements OnInit {
 				this.selectedSetIndex = this.savedSets.length - 1;
 			}
 			localStorage.setItem('mhwSets', JSON.stringify(this.savedSets));
+			setTimeout(() => {
+				this.loading = 0;
+			}, 500);
 		}
 	}
 
 	saveSets() {
-		this.loading = true;
+		this.loading = 2;
 		localStorage.setItem('mhwSets', JSON.stringify(this.savedSets));
 		setTimeout(() => {
-			this.loading = false;
-		}, 1000);
+			this.loading = 0;
+		}, 500);
 	}
 
 	remove(index: number) {
