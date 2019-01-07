@@ -1,12 +1,12 @@
-import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef, HostListener } from '@angular/core';
-import { EquipmentCategoryType } from '../../types/equipment-category.type';
-import { ItemModel } from '../../models/item.model';
-import { DataService } from '../../services/data.service';
-import { SkillModel } from '../../models/skill.model';
+import { Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
 import * as _ from 'lodash';
-import { ItemType } from '../../types/item.type';
 import { VirtualScrollerComponent } from 'ngx-virtual-scroller';
+import { ItemModel } from '../../models/item.model';
+import { SkillModel } from '../../models/skill.model';
+import { DataService } from '../../services/data.service';
 import { SlotService } from '../../services/slot.service';
+import { EquipmentCategoryType } from '../../types/equipment-category.type';
+import { ItemType } from '../../types/item.type';
 
 @Component({
 	selector: 'mhw-builder-armor-list',

@@ -2,6 +2,7 @@ import { ChangeDetectorRef, Injectable } from '@angular/core';
 import * as _ from 'lodash';
 import { Subject } from 'rxjs';
 import { ItemSlotComponent } from '../components/item-slot/item-slot.component';
+import { BuildItemModel, BuildModel } from '../models/build.model';
 import { ItemModel } from '../models/item.model';
 import { EquipmentCategoryType } from '../types/equipment-category.type';
 import { ItemType } from '../types/item.type';
@@ -50,65 +51,141 @@ export class BuildService {
 
 	loadBuild(buildId: string) {
 		this.loadingBuild = true;
+		const build = this.parseBuildId(buildId);
 
-		const itemHashes = buildId.split('i');
-
-		// build string format version number is hash[0]
-
-		this.loadBuildSlot(itemHashes[1], this.slotService.weaponSlot);
-		this.loadBuildSlot(itemHashes[2], this.slotService.headSlot);
-		this.loadBuildSlot(itemHashes[3], this.slotService.chestSlot);
-		this.loadBuildSlot(itemHashes[4], this.slotService.handsSlot);
-		this.loadBuildSlot(itemHashes[5], this.slotService.legsSlot);
-		this.loadBuildSlot(itemHashes[6], this.slotService.feetSlot);
-		this.loadBuildSlot(itemHashes[7], this.slotService.charmSlot);
+		this.loadBuildSlot(build.weapon, this.slotService.weaponSlot);
+		this.loadBuildSlot(build.head, this.slotService.headSlot);
+		this.loadBuildSlot(build.chest, this.slotService.chestSlot);
+		this.loadBuildSlot(build.hands, this.slotService.handsSlot);
+		this.loadBuildSlot(build.legs, this.slotService.legsSlot);
+		this.loadBuildSlot(build.feet, this.slotService.feetSlot);
+		this.loadBuildSlot(build.charm, this.slotService.charmSlot);
 
 		this.slotService.selectItemSlot(null);
 		this.changeDetector.detectChanges();
 		this.loadingBuild = false;
 	}
 
-	private loadBuildSlot(itemHash: string, slot: ItemSlotComponent) {
-		if (itemHash) {
-			const decorationParts = itemHash.split('d');
-			const itemParts = itemHash.split('l');
-			const augmentParts = itemHash.split('a');
-			const itemId = parseInt(itemParts[0], 10);
+	private parseBuildId(buildId: string): BuildModel {
+		const itemGroupRegex = /(i[.]*[^i]*)/g;
+		const itemRegex = /(?<=i)([\d]+)/g;
+		const decoRegex = /(?<=d)([\d]+)/g;
+		const augRegex = /(?<=a)([\d]+)/g;
+		const kinsectRegex = /(?<=k)([\d]+)/g;
+		const modificationRegex = /(?<=m)([\d]+)/g;
+		const elementRegex = /(?<=e)([\d]+)/g;
+		const levelRegex = /(?<=l)([\d]+)/g;
 
-			if (itemId) {
-				let item: ItemModel;
-				switch (this.dataService.getEquipmentCategory(slot.slotName)) {
-					case EquipmentCategoryType.Weapon:
-						item = this.dataService.getWeapon(itemId);
-						break;
-					case EquipmentCategoryType.Armor:
-						item = this.dataService.getArmor(itemId);
-						break;
-					case EquipmentCategoryType.Charm:
-						item = this.dataService.getCharm(itemId);
-						break;
+		const build = new BuildModel();
+
+		const itemGroups = buildId.match(itemGroupRegex);
+		let index = 1;
+		for (const itemGroup of itemGroups) {
+			const buildItem = new BuildItemModel();
+
+			const item = itemGroup.match(itemRegex);
+			if (item) {
+				buildItem.itemId = parseInt(item[0], 10);
+			}
+
+			const decos = itemGroup.match(decoRegex);
+			if (decos) {
+				buildItem.decorationIds = [];
+				for (const deco of decos) {
+					buildItem.decorationIds.push(parseInt(deco, 10));
+				}
+			}
+
+			const augs = itemGroup.match(augRegex);
+			if (augs) {
+				buildItem.augmentationIds = [];
+				for (const aug of augs) {
+					buildItem.augmentationIds.push(parseInt(aug, 10));
+				}
+			}
+
+			const kinsect = itemGroup.match(kinsectRegex);
+			if (kinsect) {
+				buildItem.kinsectId = parseInt(kinsect[0], 10);
+			}
+
+			const mods = itemGroup.match(modificationRegex);
+			if (mods) {
+				buildItem.modificationIds = [];
+				for (const mod of mods) {
+					buildItem.modificationIds.push(parseInt(mod, 10));
+				}
+			}
+
+			const element = itemGroup.match(elementRegex);
+			if (element) {
+				buildItem.kinsectElementId = parseInt(element[0], 10);
+			}
+
+			const level = itemGroup.match(levelRegex);
+			if (level) {
+				buildItem.level = parseInt(level[0], 10);
+			}
+
+			switch (index) {
+				case 1:
+					build.weapon = buildItem;
+					break;
+				case 2:
+					build.head = buildItem;
+					break;
+				case 3:
+					build.chest = buildItem;
+					break;
+				case 4:
+					build.hands = buildItem;
+					break;
+				case 5:
+					build.legs = buildItem;
+					break;
+				case 6:
+					build.feet = buildItem;
+					break;
+				case 7:
+					build.charm = buildItem;
+					break;
+			}
+
+			index++;
+		}
+
+		return build;
+	}
+
+	private loadBuildSlot(buildItem: BuildItemModel, slot: ItemSlotComponent) {
+		if (buildItem.itemId) {
+			let item: ItemModel;
+			switch (this.dataService.getEquipmentCategory(slot.slotName)) {
+				case EquipmentCategoryType.Weapon:
+					item = this.dataService.getWeapon(buildItem.itemId);
+					break;
+				case EquipmentCategoryType.Armor:
+					item = this.dataService.getArmor(buildItem.itemId);
+					break;
+				case EquipmentCategoryType.Charm:
+					item = this.dataService.getCharm(buildItem.itemId);
+					break;
+			}
+
+			if (item) {
+				if (buildItem.level) {
+					item.equippedLevel = buildItem.level;
 				}
 
-				// if (slot.slotName == ItemType.Weapon) {
-				// 	item = this.dataService.getWeapon(itemId);
-				// } else if (this.dataService.getEquipmentCategory(slot.slotName) == EquipmentCategoryType.Armor) {
-				// 	item = this.dataService.getArmor(itemId);
-				// }
+				this.slotService.selectItemSlot(slot);
+				this.slotService.selectItem(item);
 
-				if (item) {
-					if (itemParts.length > 1) {
-						const level = parseInt(itemParts[1], 10);
-						item.equippedLevel = level;
-					}
+				this.changeDetector.detectChanges();
 
-					this.slotService.selectItemSlot(slot);
-					this.slotService.selectItem(item);
-
-					this.changeDetector.detectChanges();
-
-					if (augmentParts.length > 1 && item.equipmentCategory == EquipmentCategoryType.Weapon) {
+				if (item.equipmentCategory == EquipmentCategoryType.Weapon) {
+					if (buildItem.augmentationIds) {
 						for (let i = 0; i < 9 - item.rarity; i++) {
-							const augId = parseInt(augmentParts[i + 1], 10);
+							const augId = buildItem.augmentationIds[i];
 							if (augId) {
 								const aug = this.dataService.getAugmentation(augId);
 								if (aug) {
@@ -119,19 +196,20 @@ export class BuildService {
 							}
 						}
 					}
+				}
 
-					this.changeDetector.detectChanges();
+				this.changeDetector.detectChanges();
 
-					for (let i = 1; i < decorationParts.length; i++) {
-						const decorationId = parseInt(decorationParts[i], 10);
-						if (decorationId) {
-							const decoration = this.dataService.getDecoration(decorationId);
-							if (decoration) {
-								this.slotService.selectDecorationSlot(slot.decorationSlots.toArray()[i - 1]);
-								const newDecoration = Object.assign({}, decoration);
-								this.slotService.selectDecoration(newDecoration);
-							}
+				if (buildItem.decorationIds) {
+					let i = 0;
+					for (const decorationId of buildItem.decorationIds) {
+						const decoration = this.dataService.getDecoration(decorationId);
+						if (decoration) {
+							this.slotService.selectDecorationSlot(slot.decorationSlots.toArray()[i]);
+							const newDecoration = Object.assign({}, decoration);
+							this.slotService.selectDecoration(newDecoration);
 						}
+						i++;
 					}
 				}
 			}

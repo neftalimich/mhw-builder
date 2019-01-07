@@ -189,7 +189,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 149	Gunlance	7	Legiana Cannon II	368	0	0	Ice	360						false	13;3;6;8;4;6		legiana;ice;normal3		Normal-3	10
 145	Gunlance	7	Mythic Kadachi Striker	414	20	0	Thunder	270						false	10;6;6;10;5;3	1	tobi-kadachi;thunder;long3		Long-3	10
 147	Gunlance	7	Royal Burst	437	15	0				Poison	330			false	8;6;6;10;7;3	1	rathian;poison;normal4		Normal-4	10
-478	Gunlance	7	Taroth Buster "Bomber"	414	0	20				Blast	210			true	0;0;0;0;2;0		kulve;taroth;bazelgeuse;blast;wide4		Wide-4	10
+478	Gunlance	7	Taroth Buster "Bomber"	414	0	20				Blast	210			false	8;5;5;8;14;0		kulve;taroth;bazelgeuse;blast;wide4		Wide-4	10
 481	Gunlance	7	Taroth Buster "Decay"	460	10	20	Dragon	270					Average	true	0;0;0;0;2;0		kulve;taroth;vaal;dragon;long3		Long-3	10
 483	Gunlance	7	Taroth Buster "Glutton"	437	0	20				Sleep	180			true	0;0;0;0;2;0		kulve;taroth;jagras;sleep;normal4		Normal-4	10
 479	Gunlance	7	Taroth Buster "King"	414	20	20	Fire	240						false	8;5;5;8;14;0		kulve;taroth;rathalos;fire;long4		Long-4	10
