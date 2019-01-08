@@ -17,7 +17,17 @@ export class SetListComponent implements OnInit {
 
 	@ViewChild('saveBox') saveBox: ElementRef;
 
-	constructor(private location: Location, private buildService: BuildService) {}
+	eventOptions: SortablejsOptions = {};
+
+	constructor(private location: Location, private buildService: BuildService) {
+		this.eventOptions = {
+			onUpdate: (event) => {
+				if (this.selectedSetIndex == event.oldIndex) {
+					this.selectedSetIndex = event.newIndex;
+				}
+			}
+		};
+	}
 
 	ngOnInit() {
 		const stringSets = localStorage.getItem('mhwSets');
@@ -29,14 +39,6 @@ export class SetListComponent implements OnInit {
 			}
 		}
 	}
-
-	eventOptions: SortablejsOptions = {
-		onUpdate: (event) => {
-			if (this.selectedSetIndex == event.oldIndex) {
-				this.selectedSetIndex = event.newIndex;
-			}
-		}
-	};
 
 	save(setName: string) {
 		if (setName) {

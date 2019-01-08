@@ -4,7 +4,6 @@ import { AmmoCapacitiesModel } from '../models/ammo-capacities.model';
 import { CalculationVariableModel } from '../models/calculation-variable.model';
 import { ExtraDataModel } from '../models/extra-data.model';
 import { SharpnessBarModel } from '../models/sharpness-bar.model';
-import { SharpnessModel } from '../models/sharpness-model';
 import { StatDetailModel } from '../models/stat-detail.model';
 import { StatsModel } from '../models/stats.model';
 
@@ -53,13 +52,13 @@ export class CalculationService {
 
 		if (stats.ailment) {
 			const ailmentCalc = this.getAilment(stats);
-			this.attackCalcs.push(ailmentCalc);
+			// this.attackCalcs.push(ailmentCalc);
 			this.attackCalcs.push(this.getAilmentAttack(stats, ailmentCalc));
 		}
 
 		if (stats.element) {
 			const elementCalc = this.getElement(stats);
-			this.attackCalcs.push(elementCalc);
+			// this.attackCalcs.push(elementCalc);
 			this.attackCalcs.push(this.getElementAttack(stats, elementCalc));
 		}
 
@@ -308,7 +307,7 @@ export class CalculationService {
 
 		if (stats.ailmentHidden && stats.elementAttackMultiplier < 1) {
 			ailmentCalc.info.push('Effectiveness reduced due to hidden ailment.');
-			ailmentCalc.color = !stats.elementAttackMultiplier ? 'red' : 'yellow';
+			ailmentCalc.color = !stats.elementAttackMultiplier ? 'gray' : 'lightgray';
 		}
 
 		return ailmentCalc;
@@ -318,6 +317,7 @@ export class CalculationService {
 		const ailmentAttackCalc: StatDetailModel = {
 			name: 'Ailment Attack',
 			value: stats.totalAilmentAttack,
+			valueColor: ailmentCalc.color,
 			icon: stats.ailment.toLowerCase() + (stats.effectiveAilmentAttack == 0 ? '-gray' : ''),
 			color: ailmentCalc.color,
 			info: ailmentCalc.info,
@@ -377,7 +377,7 @@ export class CalculationService {
 
 		if (stats.elementHidden && stats.elementAttackMultiplier < 1) {
 			elementCalc.info.push('Effectiveness reduced due to hidden element.');
-			elementCalc.color = !stats.elementAttackMultiplier ? 'red' : 'yellow';
+			elementCalc.color = !stats.elementAttackMultiplier ? 'gray' : 'lightgray';
 		}
 
 		return elementCalc;
@@ -385,8 +385,9 @@ export class CalculationService {
 
 	private getElementAttack(stats: StatsModel, elementCalc: StatDetailModel): StatDetailModel {
 		const elementAttackCalc: StatDetailModel = {
-			name: 'Element Attack',
+			name: 'Elment Attack',
 			value: stats.totalElementAttack,
+			valueColor: elementCalc.color,
 			icon: stats.element.toLowerCase() + (stats.effectiveElementAttack == 0 ? '-gray' : ''),
 			color: elementCalc.color,
 			info: elementCalc.info,
@@ -532,7 +533,7 @@ export class CalculationService {
 					this.getAilmentAverage(
 						stats.totalAilmentAttack,
 						Math.max(stats.criticalStatus ? totalAffinityPotential : 0, 0),
-						stats.passiveCriticalBoostPercent,
+						1.2,
 						stats.effectiveElementalSharpnessModifier,
 						auxDivider)
 					: null,

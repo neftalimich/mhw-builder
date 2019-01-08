@@ -103,10 +103,10 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 490	DualBlades	7	Taroth Daggers "Flash"	266	0	20	Thunder	210	false					false	8;5;6;12;5;4		kulve;taroth;tzitzi-ya-ku;thunder			10
 494	DualBlades	7	Taroth Daggers "Horn"	322	-10	25	Ice	150	false					false	9;5;6;12;6;2		kulve;taroth;diablos;ice			10
 334	DualBlades	7	Taroth Daggers "Lurk"	238	0	20				Paralysis	90	true		false	11;3;6;8;4;8		kulve;taroth;hornetaur;paralysis			10
-492	DualBlades	7	Taroth Daggers "Magma"	280	-20	30				Blast	210			true	10;12;4;5;9;0		kulve;taroth;zorah;blast			10
+492	DualBlades	7	Taroth Daggers "Magma"	280	-20	30				Blast	210			false	9;12;4;5;10;0		kulve;taroth;zorah;blast			10
 491	DualBlades	7	Taroth Daggers "Mire"	266	10	20	Water	210						false	16;10;3;3;5;3		kulve;taroth;jyuratodus;water			10
 493	DualBlades	7	Taroth Daggers "Rage"	294	-20	20	Fire	240						false	10;12;4;5;9;0		kulve;taroth;anjanath;fire			10
-640	DualBlades	7	Taroth Daggers "Spark"	252	10	20	Thunder	150						true	21;2;2;5;2;8		kulve;taroth;tobi-kadachi;thunder			10
+640	DualBlades	7	Taroth Daggers "Spark"	252	10	20	Thunder	150						false	22;2;2;5;2;7		kulve;taroth;tobi-kadachi;thunder			10
 335	DualBlades	7	Taroth Daggers "Thief"	238	0	20				Sleep	90			false	8;6;6;10;7;3		kulve;taroth;kulu-ya-ku;sleep			10
 277	DualBlades	7	Wrathful Predation	308	-20	0	Dragon	180					High	false	4;12;8;6;5;5		deviljho;dragon			10
 65	DualBlades	8	Bazelhawk Rookslayer	280	-10	0				Blast	150			false	6;12;8;6;3;5	1	bazelgeuse;blast			10
@@ -144,7 +144,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 12	GreatSword	7	Gnashing Flammenzahn	1008	-30	0	Fire	480						false	12;12;4;5;7;0		anjanath;fire			10
 7	GreatSword	7	Lava Blaze II	864	0	0	Fire	330						false	9;6;6;10;6;3	2;2	lavasioth;fire			10
 18	GreatSword	7	Magda Potestas II	1056	-20	20				Blast	420			false	21;3;4;9;3;0	2	zorah;magdaros;blast			10
-487	GreatSword	7	Taroth Blaze "Decay"	960	10	20	Dragon	300						true	0;0;0;0;2;0		kulve;taroth;vaal;dragon			10
+487	GreatSword	7	Taroth Blaze "Decay"	960	10	20	Dragon	300						false	19;7;2;2;6;4		kulve;taroth;vaal;dragon			10
 326	GreatSword	7	Taroth Blaze "Erupter"	912	0	20	Fire	330						true	0;0;0;0;2;0		kulve;taroth;lavasioth;fire			10
 324	GreatSword	7	Taroth Blaze "Glutton"	960	0	20	Water	300	true					true	0;0;0;0;2;0	3	kulve;taroth;jagras;water			10
 485	GreatSword	7	Taroth Blaze "King"	912	10	20	Fire	240						true	0;0;0;0;2;0		kulve;taroth;rathalos;fire			10

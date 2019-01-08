@@ -312,8 +312,8 @@ export class StatService {
 		this.stats.totalElementAttack = Math.min(this.stats.effectiveElementAttack + this.stats.effectivePassiveElementAttack, this.stats.elementCap);
 		this.stats.totalAilmentAttack = Math.min(this.stats.effectiveAilmentAttack + this.stats.effectivePassiveAilmentAttack, this.stats.ailmentCap);
 
-		this.stats.elementCapped = this.stats.totalElementAttack > 0 && this.stats.totalElementAttack >= this.stats.elementCap;
-		this.stats.ailmentCapped = this.stats.totalAilmentAttack > 0 && this.stats.totalAilmentAttack >= this.stats.ailmentCap;
+		this.stats.elementCapped = this.stats.totalElementAttack > 0 && (this.stats.effectiveElementAttack + this.stats.effectivePassiveElementAttack) > this.stats.elementCap;
+		this.stats.ailmentCapped = this.stats.totalAilmentAttack > 0 && (this.stats.effectiveAilmentAttack + this.stats.effectivePassiveAilmentAttack) > this.stats.ailmentCap;
 
 		if (this.checkElementless()) {
 			this.stats.totalAttack =

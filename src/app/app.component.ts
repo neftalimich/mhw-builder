@@ -115,7 +115,9 @@ export class AppComponent implements OnInit, AfterViewInit {
 	}
 
 	ngAfterViewInit() {
-		this.buildService.loadBuild(location.hash);
+		if (location.hash) {
+			this.buildService.loadBuild(location.hash);
+		}
 	}
 
 	respondToResize() {
