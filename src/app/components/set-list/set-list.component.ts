@@ -30,6 +30,10 @@ export class SetListComponent implements OnInit {
 	}
 
 	ngOnInit() {
+		this.loadSets();
+	}
+
+	loadSets() {
 		const stringSets = localStorage.getItem('mhwSets');
 		if (stringSets) {
 			try {
@@ -43,6 +47,7 @@ export class SetListComponent implements OnInit {
 	save(setName: string) {
 		if (setName) {
 			this.loading = 1;
+			this.loadSets();
 			let setItem = this.savedSets.find(s => s.setName === setName);
 			if (setItem) {
 				setItem.hashString = location.hash;
