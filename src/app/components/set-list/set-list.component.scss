@@ -16,6 +16,9 @@ $saveHeight: 38px;
 		border-radius: 3px;
 		display: grid;
 		grid-template-columns: auto min-content;
+		margin-left: 10px;
+		margin-right: 20px;
+		margin-bottom: 5px;
 		height: $saveHeight;
 
 		input {
@@ -39,29 +42,39 @@ $saveHeight: 38px;
 	}
 
 	.scroll-container {
-		grid-row: 2;
 		overflow-y: auto;
 		border-radius: 3px;
 
 		.scroll-item-container {
 			min-height: 25px;
 			display: grid;
-			grid-template-columns: auto 50px;
-			grid-gap: 4px;
+			grid-template-columns: 25px auto auto 50px;
 			border-radius: 3px;
 			background-color: #525252;
-			margin-bottom: 4px;
-			padding: 4px 8px;
+			margin-bottom: 6px;
+			margin-right: 20px;
+			margin-left: 10px;
+			padding: 4px;
 			cursor: pointer;
 
-			.name-container {
+			.icon-container {
 				grid-column: 1;
-				grid-gap: 8px;
+
+				img {
+					height: 18px;
+				}
+			}
+
+			.name-container {
+				grid-column: 2;
+			}
+
+			.stats-container {
+				grid-column: 3;
 			}
 
 			.buttons-container {
-				grid-column: 2;
-				grid-gap: 8px;
+				grid-column: 4;
 				color: white;
 			}
 		}
@@ -80,7 +93,7 @@ $saveHeight: 38px;
 	color: indianred;
 }
 
-.save-color{
+.save-color {
 	color: powderblue;
 }
 

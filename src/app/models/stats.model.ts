@@ -1,5 +1,6 @@
 import { AilmentType } from '../types/ailment.type';
 import { ElementType } from '../types/element.type';
+import { WeaponType } from '../types/weapon.type';
 import { AmmoCapacitiesModel } from './ammo-capacities.model';
 import { ExtraDataModel } from './extra-data.model';
 
@@ -14,6 +15,7 @@ export class StatsModel {
 	sharpnessLevelsBar: number[];
 	effectivePhysicalSharpnessModifier: number;
 	effectiveElementalSharpnessModifier: number;
+	weaponType?: WeaponType;
 	weaponAttackModifier: number;
 	critElementModifier: number;
 	affinity: number;

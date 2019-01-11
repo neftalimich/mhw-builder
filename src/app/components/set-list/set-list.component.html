@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="save-container">
-		<input #saveBox placeholder="Set Name" (keydown.enter)="save(saveBox.value)"/>
+		<input #saveBox placeholder="Set Name" (keydown.enter)="save(saveBox.value)" />
 		<button type="submit" class="save-button save-color" (click)="save(saveBox.value)">
 			<i class="fas fa-save fa-lg" [hidden]="loading==1"></i>
 			<i class="fas fa-spinner fa-spin" [hidden]="loading!=1"></i>
@@ -9,8 +9,19 @@
 	<div class="scroll-container" *ngIf="savedSets">
 		<div [sortablejs]="savedSets" [sortablejsOptions]="eventOptions">
 			<div *ngFor="let item of savedSets; let i = index" class="scroll-item-container">
+				<div class="icon-container text-left">
+					<img [src]="'assets/images/weapons/'+item.weaponType+'-icon.png'" *ngIf="item.weaponType"/>
+				</div>
 				<div class="name-container" (click)="select(item)" [ngClass]="{'sharp-2':i==selectedSetIndex}">
-					• {{item.setName}}
+					{{item.setName}} 
+				</div>
+				<div class="stats-container text-right" (click)="select(item)">
+					<span>{{item.totalAttack}}</span>
+					<span *ngIf="item.element || item.ailment"> (</span>
+					<span [ngClass]="item.element" *ngIf="item.element">{{item.elementAttack}}</span>
+					<span *ngIf="item.element && item.ailment">/</span>
+					<span [ngClass]="item.ailment" *ngIf="item.ailment">{{item.ailmentAttack}}</span>
+					<span *ngIf="item.element || item.ailment">)</span>
 				</div>
 				<div class="buttons-container text-right">
 					<button (click)="remove(i)">

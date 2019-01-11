@@ -98,7 +98,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 68	DualBlades	7	Holy Sabers	252	0	0	Water	120						false	6;5;6;12;7;4	3	workshop;water			10
 73	DualBlades	7	Lava Cyclone II	252	0	0	Fire	150						false	20;7;2;2;5;4	2;2	lavasioth;fire			10
 79	DualBlades	7	Magda Ungulae II	308	-20	20				Blast	210			false	18;3;6;9;4;0	2	zorah;magdaros;blast			10
-332	DualBlades	7	Taroth Daggers "Claw"	252	20	20	Fire	90	true					true	5;12;8;6;4;5		kulve;taroth;odogaron;fire			10
+332	DualBlades	7	Taroth Daggers "Claw"	252	20	20	Fire	90	true					false	5;12;8;6;4;5		kulve;taroth;odogaron;fire			10
 489	DualBlades	7	Taroth Daggers "Erupter"	266	0	20	Fire	150						false	20;7;2;2;5;4		kulve;taroth;lavasioth;fire			10
 490	DualBlades	7	Taroth Daggers "Flash"	266	0	20	Thunder	210	false					false	8;5;6;12;5;4		kulve;taroth;tzitzi-ya-ku;thunder			10
 494	DualBlades	7	Taroth Daggers "Horn"	322	-10	25	Ice	150	false					false	9;5;6;12;6;2		kulve;taroth;diablos;ice			10
@@ -423,10 +423,10 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 378	Lance	7	Taroth Crest "King"	368	0	20	Fire	300						true	0;0;0;0;0;2		kulve;taroth;rathalos;fire			10
 443	Lance	7	Taroth Crest "Lurk"	368	10	20				Blast	270	false		true	0;0;0;0;0;2		kulve;taroth;hornetaur;blast			10
 447	Lance	7	Taroth Crest "Mud"	437	-20	25				Paralysis	240			true	0;0;0;0;2;0		kulve;taroth;barroth;paralysis			10
-445	Lance	7	Taroth Crest "Spew"	391	0	20				Poison	540			true	0;0;0;0;2;0	1	kulve;taroth;pukei-pukei;poison			10
+445	Lance	7	Taroth Crest "Spew"	391	0	20				Poison	540			false	10;12;4;5;9;0	1	kulve;taroth;pukei-pukei;poison			10
 377	Lance	7	Taroth Crest "Stream"	368	0	20	Ice	300	true					true	0;0;0;0;0;2		kulve;taroth;legiana;ice			10
-446	Lance	7	Taroth Crest "Thief"	391	10	20				Sleep	210			true	0;0;0;0;2;0		kulve;taroth;kulu-ya-ku;sleep			10
-701	Lance	7	White Wind Lance	391	0	0				Sleep	180			true	22;2;3;1;2;10		workshop;sleep			52
+446	Lance	7	Taroth Crest "Thief"	391	10	20				Sleep	210			false	9;6;6;10;6;3		kulve;taroth;kulu-ya-ku;sleep			10
+701	Lance	7	White Wind Lance	391	0	0				Sleep	180			false	22;2;3;1;2;10		workshop;sleep			52
 138	Lance	8	Bazel Myniad Rookslayer	460	-10	0				Blast	210			false	7;12;8;6;2;5		bazelgeuse;blast			10
 130	Lance	8	Blue Prominence	437	20	0	Fire	300						false	9;6;6;10;6;3	1	rathalos;fire			10
 140	Lance	8	Daora's Fang	414	10	0	Ice	240						false	9;6;8;8;7;2	2	blacksteel;kushala;daora;ice			10
@@ -517,7 +517,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 429	LongSword	7	Taroth Sword "Rage"	693	-10	20	Fire	390						true	0;0;0;0;2;0		kulve;taroth;anjanath;fire			10
 431	LongSword	7	Taroth Sword "Spark"	594	30	20	Thunder	270						true	0;0;0;0;2;0		kulve;taroth;tobi-kadachi;thunder			10
 433	LongSword	7	Taroth Sword "Stream"	528	0	20	Ice	360						true	0;0;0;0;2;0		kulve;taroth;legiana;ice			10
-432	LongSword	7	Taroth Sword "Thief"	561	20	20				Sleep	210			true	0;0;0;0;2;0		kulve;taroth;kulu-ya-ku;sleep			10
+432	LongSword	7	Taroth Sword "Thief"	561	20	20				Sleep	210			false	8;6;8;8;8;2		kulve;taroth;kulu-ya-ku;sleep			10
 27	LongSword	7	Wyvern Blade "Holly"	627	10	0				Poison	330			false	8;6;6;10;7;3	1	rathian;poison			10
 30	LongSword	8	Bazel Varga Rookslayer	660	-10	0				Blast	210			false	6;12;8;6;3;5	1;1	bazelgeuse;blast			10
 41	LongSword	8	Divine Slasher	693	0	20	Dragon	150	true				High	false	10;6;6;10;5;3	3	workshop;dragon			10
@@ -556,8 +556,8 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 168	SwitchAxe	7	Rathbringer Axe II	665	15	0	Fire	150						false	9;6;8;8;7;2	1	rathalos;fire		Power	10
 381	SwitchAxe	7	Taroth Axe "Bomber"	630	0	20				Blast	180			true	0;0;0;0;2;0		kulve;taroth;bazelgeuse;blast		Power	10
 426	SwitchAxe	7	Taroth Axe "Decay"	595	0	20	Dragon	210						true	0;0;0;0;0;2		kulve;taroth;vaal;dragon		Power Element	10
-384	SwitchAxe	7	Taroth Axe "Drifter"	595	25	20								true	0;0;0;0;2;0		kulve;taroth;paolumu		Power	10
-424	SwitchAxe	7	Taroth Axe "Glutton"	665	0	20				Sleep	150			true	0;0;0;0;2;0		kulve;taroth;jagras;sleep		Power	10
+384	SwitchAxe	7	Taroth Axe "Drifter"	595	25	20				Blast	420			true	0;0;0;0;2;0		kulve;taroth;paolumu		Power	10
+424	SwitchAxe	7	Taroth Axe "Glutton"	665	0	20				Sleep	150			false	11;12;4;5;8;0		kulve;taroth;jagras;sleep		Power	10
 422	SwitchAxe	7	Taroth Axe "Gyre"	735	10	40	Fire	120						true	0;0;0;0;2;0		kulve;taroth;uragaan;fire		Power	10
 383	SwitchAxe	7	Taroth Axe "Horn"	805	-30	25	Ice	240	true					false	9;5;6;12;6;2		kulve;taroth;diablos;ice		Power	10
 425	SwitchAxe	7	Taroth Axe "King"	665	15	20	Fire	210						true	0;0;0;0;2;0		kulve;taroth;rathalos;fire		Power	10
@@ -607,9 +607,9 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 414	SwordAndShield	7	Taroth Slicer "Myth"	224	0	20	Thunder	360						true	0;0;0;0;2;0		kulve;taroth;kirin;thunder			10
 413	SwordAndShield	7	Taroth Slicer "Numb"	224	30	20				Paralysis	240			true	0;0;0;0;2;0		kulve;taroth;girros;paralysis			10
 420	SwordAndShield	7	Taroth Slicer "Rage"	294	-20	20	Fire	240						true	0;0;0;0;2;0		kulve;taroth;anjanath;fire			10
-416	SwordAndShield	7	Taroth Slicer "Spew"	252	0	20				Poison	390			true	0;0;0;0;2;0	1	kulve;taroth;pukei-pukei;poison			10
-412	SwordAndShield	7	Taroth Slicer "Stream"	224	0	20	Ice	330						true	0;0;0;0;2;0		kulve;taroth;legiana;ice			10
-418	SwordAndShield	7	Taroth Slicer "Tar"	266	10	20				Sleep	210			true	0;0;0;0;2;0		kulve;taroth;radobaan;sleep			10
+416	SwordAndShield	7	Taroth Slicer "Spew"	252	0	20				Poison	390			false	9;12;4;5;10;0	1	kulve;taroth;pukei-pukei;poison			10
+412	SwordAndShield	7	Taroth Slicer "Stream"	224	0	20	Ice	330						false	10;3;6;8;4;9		kulve;taroth;legiana;ice			10
+418	SwordAndShield	7	Taroth Slicer "Tar"	266	10	20				Sleep	210			false	10;12;4;5;9;0		kulve;taroth;radobaan;sleep			10
 59	SwordAndShield	7	Thunderbolt Sword	224	0	0	Thunder	360						false	11;2;2;13;12;0		kirin;thunder			10
 43	SwordAndShield	8	Eradication Vanguard	294	0	0	Dragon	150					High	false	9;12;4;5;15;0	1	nergigante;dragon			10
 47	SwordAndShield	8	Legia Rimespire	224	0	0	Ice	330						false	12;3;6;8;4;7	1	legiana;ice			10

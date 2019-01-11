@@ -2,6 +2,7 @@ import { Location } from '@angular/common';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { SortablejsOptions } from 'angular-sortablejs';
 import { BuildService } from 'src/app/services/build.service';
+import { StatService } from 'src/app/services/stat.service';
 
 @Component({
 	selector: 'mhw-builder-set-list',
@@ -19,7 +20,7 @@ export class SetListComponent implements OnInit {
 
 	eventOptions: SortablejsOptions = {};
 
-	constructor(private location: Location, private buildService: BuildService) {
+	constructor(private location: Location, private buildService: BuildService, private statService: StatService) {
 		this.eventOptions = {
 			onUpdate: (event) => {
 				if (this.selectedSetIndex == event.oldIndex) {
@@ -51,11 +52,24 @@ export class SetListComponent implements OnInit {
 			let setItem = this.savedSets.find(s => s.setName === setName);
 			if (setItem) {
 				setItem.hashString = location.hash;
+				setItem.weaponType = this.statService.stats.weaponType.toLowerCase();
+				setItem.totalAttack = this.statService.stats.totalAttack;
+				setItem.element = this.statService.stats.element;
+				setItem.elementAttack = this.statService.stats.totalElementAttack;
+				setItem.ailment = this.statService.stats.ailment;
+				setItem.ailmentAttack = this.statService.stats.totalAilmentAttack;
+				setItem.confirm = false;
 				this.selectedSetIndex = this.savedSets.indexOf(setItem);
 			} else {
 				setItem = {
 					setName: setName,
 					hashString: location.hash,
+					weaponType: this.statService.stats.weaponType.toLowerCase(),
+					totalAttack: this.statService.stats.totalAttack,
+					element: this.statService.stats.element,
+					elementAttack: this.statService.stats.totalElementAttack,
+					ailment: this.statService.stats.ailment,
+					ailmentAttack: this.statService.stats.totalAilmentAttack,
 					confirm: false
 				};
 				this.savedSets.push(setItem);
@@ -116,6 +130,12 @@ export class SetListComponent implements OnInit {
 
 class SavedSetModel {
 	setName: string;
+	weaponType: string;
+	totalAttack: number;
+	element?: string;
+	elementAttack?: number;
+	ailment?: string;
+	ailmentAttack?: number;
 	hashString: string;
 	confirm: boolean;
 }

@@ -42,6 +42,7 @@ export class StatService {
 			if (weapon.weaponType === WeaponType.HeavyBowgun || weapon.weaponType === WeaponType.LightBowgun) {
 				this.stats.ammoCapacities = weapon.ammoCapacities;
 			}
+			this.stats.weaponType = weapon.weaponType;
 		}
 
 		this.calculateAttack(weapon);
