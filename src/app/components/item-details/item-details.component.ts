@@ -94,6 +94,32 @@ export class ItemDetailsComponent implements OnInit {
 					color: this.item.elementHidden ? 'grey' : 'white'
 				});
 			}
+			if (this.item.otherData && this.item.otherData[0].value) {
+				console.log(this.item.otherData);
+				const auxDetail: StatDetailModel = {
+					name: '',
+					value: ''
+				};
+				if (this.item.weaponType == WeaponType.Bow) {
+					auxDetail.name = 'Coatings';
+				} else if (this.item.weaponType == WeaponType.ChargeBlade || this.item.weaponType == WeaponType.SwitchAxe) {
+					auxDetail.name = 'Phial Type';
+				} else if (this.item.weaponType == WeaponType.Gunlance) {
+					auxDetail.name = 'Shell Type';
+				} else if (this.item.weaponType == WeaponType.InsectGlaive) {
+					auxDetail.name = 'Boost Type';
+				} else {
+					auxDetail.name = 'Other Data';
+				}
+
+				for (const other of this.item.otherData) {
+					auxDetail.value += `${other.value}${other.data ? '-' + other.data : ''}	`;
+					if (this.item.otherData.length > 1) {
+						auxDetail.value += ' | ';
+					}
+				}
+				this.stats.push(auxDetail);
+			}
 		}
 
 		if (this.item.itemType == ItemType.Charm) {

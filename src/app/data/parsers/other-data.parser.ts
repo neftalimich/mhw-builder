@@ -9,7 +9,7 @@ export class OtherDataParser extends DataParser<OtherDataModel> {
 			const parts = value.split('-');
 			otherLevels.push({
 				value: parts[0],
-				data: parts.length == 2 ? parseInt(parts[1], 10) : 0
+				data: parts.length == 2 ? parseInt(parts[1], 10) : null
 			});
 		}
 		return otherLevels;
