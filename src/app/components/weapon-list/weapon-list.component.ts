@@ -8,6 +8,7 @@ import { SlotService } from '../../services/slot.service';
 import { EquipmentCategoryType } from '../../types/equipment-category.type';
 import { ItemType } from '../../types/item.type';
 import { WeaponType } from '../../types/weapon.type';
+import { promise } from 'selenium-webdriver';
 
 @Component({
 	selector: 'mhw-builder-weapon-list',
@@ -35,6 +36,7 @@ export class WeaponListComponent implements OnInit {
 	filteredItems: ItemModel[];
 	virtualItems: ItemModel[];
 	weaponTypeFilter?: WeaponType;
+	weaponTypeSort: String;
 
 	childHeight: number;
 
@@ -155,11 +157,11 @@ export class WeaponListComponent implements OnInit {
 		}
 
 		this.search(this.searchBox.nativeElement.value);
+		this.weaponTypeSort = '';
 	}
 
 	weaponSortByAttack() {
-		this.filteredItems = this.items;
-		this.applyWeaponFilter();
+		this.weaponTypeSort = 'ATK';
 		this.filteredItems.sort(function (item1, item2) {
 			if (item1.baseAttack > item2.baseAttack) {
 				return -1;
@@ -173,8 +175,7 @@ export class WeaponListComponent implements OnInit {
 	}
 
 	weaponSortByAffinity() {
-		this.filteredItems = this.items;
-		this.applyWeaponFilter();
+		this.weaponTypeSort = 'AFN';
 		this.filteredItems.sort(function (item1, item2) {
 			if (item1.baseAffinityPercent > item2.baseAffinityPercent) {
 				return -1;
@@ -188,8 +189,7 @@ export class WeaponListComponent implements OnInit {
 	}
 
 	weaponSortByAilment() {
-		this.filteredItems = this.items;
-		this.applyWeaponFilter();
+		this.weaponTypeSort = 'AIL';
 		this.filteredItems.sort(function (item1, item2) {
 			if (item1.ailmentBaseAttack > item2.ailmentBaseAttack) {
 				return -1;
@@ -203,8 +203,7 @@ export class WeaponListComponent implements OnInit {
 	}
 
 	weaponSortByElement() {
-		this.filteredItems = this.items;
-		this.applyWeaponFilter();
+		this.weaponTypeSort = 'ELE';
 		this.filteredItems.sort(function (item1, item2) {
 			if (item1.elementBaseAttack > item2.elementBaseAttack) {
 				return -1;

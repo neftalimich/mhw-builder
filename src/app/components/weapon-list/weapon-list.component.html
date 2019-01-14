@@ -1,12 +1,18 @@
 <div class="container">
 	<div class="search-container">
 		<input #searchBox (keyup)="search(searchBox.value)" placeholder="Search names, skills, monster" />
+		<button class="sort-button" (click)="showSortContainer=!showSortContainer">
+			<i class="fas fa-sort-amount-up"></i>
+		</button>
+		<button class="filter-button" (click)="hideFilterContainer=!hideFilterContainer">
+			<i class="fas fa-filter"></i>
+		</button>
 		<button class="clear-button" (click)="resetSearchResults()">
 			<i class="fas fa-times"></i>
 		</button>
 	</div>
 
-	<div class="filter-container" *ngIf="itemType == 'Weapon'">
+	<div class="filter-container" *ngIf="itemType == 'Weapon' && !hideFilterContainer">
 		<button class="weapon-filter" [class.selected]="weaponTypeFilter == 'GreatSword'" (click)="weaponFilterClicked('GreatSword')">
 			<img src="assets/images/weapons/greatsword-icon.png">
 		</button>
@@ -48,6 +54,23 @@
 		</button>
 		<button class="weapon-filter" [class.selected]="weaponTypeFilter == 'HeavyBowgun'" (click)="weaponFilterClicked('HeavyBowgun')">
 			<img src="assets/images/weapons/heavybowgun-icon.png">
+		</button>
+	</div>
+
+	<div class="sort-container" *ngIf="showSortContainer">
+		<button class="weapon-sort" [class.selected]="weaponTypeSort == 'ATK'" (click)="weaponSortByAttack()">
+			<!--<img src="assets/images/attack-icon.png" />-->
+			ATK
+		</button>
+		<button class="weapon-sort" [class.selected]="weaponTypeSort == 'AFN'" (click)="weaponSortByAffinity()">
+			<!--<img src="assets/images/affinity-icon.png" />-->
+			AFN
+		</button>
+		<button class="weapon-sort" [class.selected]="weaponTypeSort == 'AIL'" (click)="weaponSortByAilment()">
+			AIL
+		</button>
+		<button class="weapon-sort" [class.selected]="weaponTypeSort == 'ELE'" (click)="weaponSortByElement()">
+			ELE
 		</button>
 	</div>
 

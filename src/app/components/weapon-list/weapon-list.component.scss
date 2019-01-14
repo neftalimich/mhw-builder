@@ -18,7 +18,7 @@ $listItemHeight: 66px;
 	padding: 0 0 0 12px;
 	border-radius: 3px;
 	display: grid;
-	grid-template-columns: auto min-content;
+	grid-template-columns: auto min-content min-content min-content;
 	height: $searchHeight;
 
 	input {
@@ -33,6 +33,16 @@ $listItemHeight: 66px;
 		outline: none;
 	}
 
+	.sort-button {
+		padding-top: 4px;
+		height: $searchHeight;
+	}
+
+	.filter-button {
+		padding-top: 4px;
+		height: $searchHeight;
+	}
+
 	.clear-button {
 		padding-top: 4px;
 		height: $searchHeight;
@@ -43,7 +53,6 @@ $listItemHeight: 66px;
 
 .filter-container {
 	grid-row: 2;
-
 	display: grid;
 	grid-template-columns: repeat(14, 1fr);
 
@@ -63,8 +72,29 @@ $listItemHeight: 66px;
 	}
 }
 
-.scroll-container {
+.sort-container {
 	grid-row: 3;
+	display: grid;
+	grid-template-columns: repeat(14, 1fr);
+
+	.selected > img {
+		background: $blue;
+		border-radius: 3px;
+	}
+
+	.weapon-sort {
+		padding: 4px;
+		height: 25px;
+
+		img {
+			padding: 2px;
+			height: 14px;
+		}
+	}
+}
+
+.scroll-container {
+	grid-row: 4;
 	overflow-y: auto;
 	border-radius: 3px;
 
@@ -216,6 +246,10 @@ $listItemHeight: 66px;
 		grid-template-columns: repeat(7, 1fr);
 	}
 
+	.sort-container {
+		grid-template-columns: repeat(7,1fr);
+	}
+
 	.name-container > .type {
 		img {
 			display: inline !important;
@@ -225,6 +259,7 @@ $listItemHeight: 66px;
 			display: none !important;
 		}
 	}
+
 	.name-container > .rarity {
 		.r1 {
 			display: none !important;
