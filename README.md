@@ -1,10 +1,10 @@
-# MHW-Builder by TurkeyTickle (Clone)
+# MHW-Builder by TurkeyTickle & neftalimich
 
 Version 1: https://github.com/TurkeyTickle/mhw-builder
 
 Version 1 - Page: http://mhw-builder.com/
 
-Version 2: https://neftalimich.github.io/mhw-builder-page/
+Version 2 - Page: https://neftalimich.github.io/mhw-builder-page/
 
 
 ## Development server
