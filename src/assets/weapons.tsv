@@ -145,14 +145,14 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 7	GreatSword	7	Lava Blaze II	864	0	0	Fire	330						false	9;6;6;10;6;3	2;2	lavasioth;fire			10
 18	GreatSword	7	Magda Potestas II	1056	-20	20				Blast	420			false	21;3;4;9;3;0	2	zorah;magdaros;blast			10
 487	GreatSword	7	Taroth Blaze "Decay"	960	10	20	Dragon	300						false	19;7;2;2;6;4		kulve;taroth;vaal;dragon			10
-326	GreatSword	7	Taroth Blaze "Erupter"	912	0	20	Fire	330						true	0;0;0;0;2;0		kulve;taroth;lavasioth;fire			10
-324	GreatSword	7	Taroth Blaze "Glutton"	960	0	20	Water	300	true					true	0;0;0;0;2;0	3	kulve;taroth;jagras;water			10
-485	GreatSword	7	Taroth Blaze "King"	912	10	20	Fire	240						true	0;0;0;0;2;0		kulve;taroth;rathalos;fire			10
-327	GreatSword	7	Taroth Blaze "Magma"	1008	-20	30				Blast	420			true	0;0;0;0;2;0		kulve;taroth;zorah;blast			10
-488	GreatSword	7	Taroth Blaze "Mud"	1008	-20	25				Paralysis	390	false		true	0;0;0;0;2;0		kulve;taroth;barroth;paralysis			10
-325	GreatSword	7	Taroth Blaze "Numb"	768	30	20				Paralysis	450			true	0;0;0;0;2;0		kulve;taroth;girros;paralysis			10
-484	GreatSword	7	Taroth Blaze "Spew"	864	0	20				Poison	540			true	0;0;0;0;2;0		kulve;taroth;pukei-pukei;poison			10
-486	GreatSword	7	Taroth Blaze "Tar"	912	10	30				Sleep	270			true	0;0;0;0;2;0		kulve;taroth;radobaan;sleep			10
+326	GreatSword	7	Taroth Blaze "Erupter"	912	0	20	Fire	330						false	9;6;6;10;6;3		kulve;taroth;lavasioth;fire			10
+324	GreatSword	7	Taroth Blaze "Glutton"	960	0	20	Water	300	true					false	11;12;4;5;8;0	3	kulve;taroth;jagras;water			10
+485	GreatSword	7	Taroth Blaze "King"	912	10	20	Fire	240						false	5;5;6;12;8;4		kulve;taroth;rathalos;fire			10
+327	GreatSword	7	Taroth Blaze "Magma"	1008	-20	30				Blast	420			false	11;12;4;5;8;0		kulve;taroth;zorah;blast			10
+488	GreatSword	7	Taroth Blaze "Mud"	1008	-20	25				Paralysis	390	false		false	11;12;4;5;8;0		kulve;taroth;barroth;paralysis			10
+325	GreatSword	7	Taroth Blaze "Numb"	768	30	20				Paralysis	450			false	7;6;6;10;8;3		kulve;taroth;girros;paralysis			10
+484	GreatSword	7	Taroth Blaze "Spew"	864	0	20				Poison	540			false	11;12;4;5;8;0		kulve;taroth;pukei-pukei;poison			10
+486	GreatSword	7	Taroth Blaze "Tar"	912	10	30				Sleep	270			false	11;12;4;5;8;0		kulve;taroth;radobaan;sleep			10
 289	GreatSword	7	Wyvern Ignition "Impact"	1008	-15	0	Fire	510	true					false	25;2;2;2;3;6	1;1	fire			10
 19	GreatSword	8	Daora's Decimator	864	10	0	Ice	270						false	9;6;8;8;7;2	2	blacksteel;kushala;daora;ice			10
 21	GreatSword	8	Great Wyvern Jawblade	960	0	20				Blast	330	true		false	11;12;4;5;8;0	3	workshop;blast			10
@@ -189,16 +189,16 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 149	Gunlance	7	Legiana Cannon II	368	0	0	Ice	360						false	13;3;6;8;4;6		legiana;ice;normal3		Normal-3	10
 145	Gunlance	7	Mythic Kadachi Striker	414	20	0	Thunder	270						false	10;6;6;10;5;3	1	tobi-kadachi;thunder;long3		Long-3	10
 147	Gunlance	7	Royal Burst	437	15	0				Poison	330			false	8;6;6;10;7;3	1	rathian;poison;normal4		Normal-4	10
-478	Gunlance	7	Taroth Buster "Bomber"	414	0	20				Blast	210			false	8;5;5;8;14;0		kulve;taroth;bazelgeuse;blast;wide4		Wide-4	10
-481	Gunlance	7	Taroth Buster "Decay"	460	10	20	Dragon	270					Average	true	0;0;0;0;2;0		kulve;taroth;vaal;dragon;long3		Long-3	10
-483	Gunlance	7	Taroth Buster "Glutton"	437	0	20				Sleep	180			true	0;0;0;0;2;0		kulve;taroth;jagras;sleep;normal4		Normal-4	10
-479	Gunlance	7	Taroth Buster "King"	414	20	20	Fire	240						false	8;5;5;8;14;0		kulve;taroth;rathalos;fire;long4		Long-4	10
-480	Gunlance	7	Taroth Buster "Mire"	437	0	20	Water	360						true	0;0;0;0;2;0		kulve;taroth;jyuratodus;water;wide3		Wide-3	10
+478	Gunlance	7	Taroth Buster "Bomber"	414	0	20				Blast	210			false	6;5;5;8;16;0		kulve;taroth;bazelgeuse;blast;wide4		Wide-4	10
+481	Gunlance	7	Taroth Buster "Decay"	460	10	20	Dragon	270					Average	false	18;7;2;2;7;4		kulve;taroth;vaal;dragon;long3		Long-3	10
+483	Gunlance	7	Taroth Buster "Glutton"	437	0	20				Sleep	180			false	9;12;4;5;10;0		kulve;taroth;jagras;sleep;normal4		Normal-4	10
+479	Gunlance	7	Taroth Buster "King"	414	20	20	Fire	240						false	6;5;5;8;16;0		kulve;taroth;rathalos;fire;long4		Long-4	10
+480	Gunlance	7	Taroth Buster "Mire"	437	0	20	Water	360						false	6;6;6;10;9;3		kulve;taroth;jyuratodus;water;wide3		Wide-3	10
 342	Gunlance	7	Taroth Buster "Mud"	391	-10	20				Paralysis	390	true		true	0;0;0;0;0;2		kulve;taroth;barroth;paralysis;wide3		Wide-3	10
-476	Gunlance	7	Taroth Buster "Numb"	368	10	20				Paralysis	450			true	0;0;0;0;2;0		kulve;taroth;girros;paralysis;normal3		Normal-3	10
+476	Gunlance	7	Taroth Buster "Numb"	368	10	20				Paralysis	450			false	9;5;5;8;13;0		kulve;taroth;girros;paralysis;normal3		Normal-3	10
 343	Gunlance	7	Taroth Buster "Rage"	460	-20	20	Fire	450						true	0;0;0;0;2;0		kulve;taroth;anjanath;fire;wide3		Wide-3	10
 477	Gunlance	7	Taroth Buster "Spark"	391	20	20	Thunder	270						true	0;0;0;0;2;0		kulve;taroth;tobi-kadachi;thunder;long3		Long-3	10
-475	Gunlance	7	Taroth Buster "Stream"	368	10	20	Ice	360						true	0;0;0;0;2;0		kulve;taroth;legiana;ice;normal3		Normal-3	10
+475	Gunlance	7	Taroth Buster "Stream"	368	10	20	Ice	360						false	16;7;2;2;9;4		kulve;taroth;legiana;ice;normal3		Normal-3	10
 146	Gunlance	8	Blue Chariot	437	20	0	Fire	240						false	8;5;6;12;5;4	1	rathalos;fire;long3		Long-3	10
 159	Gunlance	8	Daora's Brigia	414	10	0	Ice	240						false	9;6;8;8;7;2	3	kushala;daora;ice;long3		Long-3	10
 158	Gunlance	8	Earthshaker Magda Lahat	460	-10	20				Blast	420			false	21;3;4;9;3;0		zorah;magdaros;blast;long4		Long-4	10
@@ -234,15 +234,15 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 85	Hammer	7	Cocytus	936	0	0	Ice	450						false	11;12;4;5;8;0	3	workshop;ice			10
 278	Hammer	7	Devil's Crush	1196	-30	0	Dragon	210					High	false	5;12;8;6;4;5		deviljho;dragon			10
 95	Hammer	7	Diablos Shatterer II	1196	-25	15	Ice	150	true					false	10;5;6;12;5;2	2	diablos;ice			10
-472	Hammer	7	Taroth Hammer "Decay"	1040	0	20	Dragon	270						true	0;0;0;0;2;0		kulve;taroth;vaal;dragon			10
-473	Hammer	7	Taroth Hammer "Gyre"	1092	0	30	Fire	120						true	0;0;0;0;2;0		kulve;taroth;uragaan;fire			10
-340	Hammer	7	Taroth Hammer "Horn"	1144	-25	20	Ice	90						true	0;0;0;0;2;0		kulve;taroth;diablos;ice			10
-474	Hammer	7	Taroth Hammer "Mud"	1092	-10	25				Paralysis	390	false		true	0;0;0;0;2;0		kulve;taroth;barroth;paralysis			10
-470	Hammer	7	Taroth Hammer "Numb"	832	30	20				Paralysis	390			true	0;0;0;0;2;0		kulve;taroth;girros;paralysis			10
-341	Hammer	7	Taroth Hammer "Rage"	1040	-20	20	Fire	450						true	0;0;0;0;2;0		kulve;taroth;anjanath;fire			10
-311	Hammer	7	Taroth Hammer "Spew"	988	0	20				Poison	540			true	0;0;0;0;2;0		kulve;taroth;pukei-pukei;poison			10
-471	Hammer	7	Taroth Hammer "Tar"	988	10	30				Sleep	270			true	0;0;0;0;2;0		kulve;taroth;radobaan;sleep			10
-300	Hammer	7	Taroth Hammer "Thief"	884	35	20				Sleep	360	true		true	0;0;0;0;2;0		kulve;taroth;kulu-ya-ku;sleep			10
+472	Hammer	7	Taroth Hammer "Decay"	1040	0	20	Dragon	270						false	6;12;8;7;2;5		kulve;taroth;vaal;dragon			10
+473	Hammer	7	Taroth Hammer "Gyre"	1092	0	30	Fire	120						false	11;12;4;5;8;0		kulve;taroth;uragaan;fire			10
+340	Hammer	7	Taroth Hammer "Horn"	1144	-25	20	Ice	90						false	10;5;6;12;5;2		kulve;taroth;diablos;ice			10
+474	Hammer	7	Taroth Hammer "Mud"	1092	-10	25				Paralysis	390	false		false	11;12;4;5;8;0		kulve;taroth;barroth;paralysis			10
+470	Hammer	7	Taroth Hammer "Numb"	832	30	20				Paralysis	390			false	8;6;6;10;7;3		kulve;taroth;girros;paralysis			10
+341	Hammer	7	Taroth Hammer "Rage"	1040	-20	20	Fire	450						false	12;12;4;5;7;0		kulve;taroth;anjanath;fire			10
+311	Hammer	7	Taroth Hammer "Spew"	988	0	20				Poison	540			false	10;12;4;5;9;0		kulve;taroth;pukei-pukei;poison			10
+471	Hammer	7	Taroth Hammer "Tar"	988	10	30				Sleep	270			false	11;12;4;5;8;0		kulve;taroth;radobaan;sleep			10
+300	Hammer	7	Taroth Hammer "Thief"	884	35	20				Sleep	360	true		false	12;11;4;4;7;2		kulve;taroth;kulu-ya-ku;sleep			10
 102	Hammer	8	Binder Mace	936	0	20				Paralysis	210			false	16;10;3;3;5;3	3	workshop;paralysis			10
 100	Hammer	8	Daora's Colossus	1040	10	0	Ice	150						false	9;6;8;8;7;2	2	blacksteel;kushala;daora;ice			10
 84	Hammer	8	Obliteration's Footfall	1092	0	0	Dragon	120					High	false	11;12;4;5;13;0	1	nergigante;dragon			10

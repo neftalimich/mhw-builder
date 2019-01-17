@@ -38,6 +38,9 @@ export class WeaponListComponent implements OnInit {
 	weaponTypeFilter?: WeaponType;
 	weaponTypeSort: String;
 
+	hideFilterContainer = false;
+	showSortContainer = false;
+
 	childHeight: number;
 
 	@HostListener('window:resize')

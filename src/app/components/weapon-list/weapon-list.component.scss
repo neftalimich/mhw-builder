@@ -7,7 +7,7 @@ $listItemHeight: 66px;
 
 .container {
 	display: grid;
-	grid-template-rows: $searchHeight max-content auto;
+	grid-template-rows: $searchHeight max-content min-content auto;
 	grid-row-gap: 4px;
 	height: 100%;
 }
