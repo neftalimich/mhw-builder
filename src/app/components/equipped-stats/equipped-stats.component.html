@@ -51,7 +51,7 @@
 				</span>
 				<div class="value">
 					<div *ngFor="let other of extraData.otherData; let i = index">
-						{{other.value}}<span *ngIf="other.data!=0">-{{other.data}}</span>
+						{{other.value}}<span *ngIf="other.data && other.data!=0">-{{other.data}}</span>
 					</div>
 				</div>
 			</li>

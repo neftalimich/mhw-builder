@@ -191,6 +191,13 @@ export class AppComponent implements OnInit, AfterViewInit {
 		this.setListModal.open();
 	}
 
+	clearAllItems() {
+		if (confirm('Are you sure you want to clear all items?')) {
+			this.buildService.loadBuild('#v1iiiiiii');
+		} else {
+		}
+	}
+
 	openContributors() {
 		this.contributorsModal.open();
 	}

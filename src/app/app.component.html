@@ -20,8 +20,13 @@
 		</div>
 	</div>
 	<div class="stats-container" [hidden]="!statsVisible">
-		<div (click)="openSaveModal()" class="save-button">
-			<i class="fas fa-save fa-lg"></i>
+		<div class="control-buttons">
+			<button (click)="clearAllItems()">
+				<i class="fas fa-eraser fa-lg"></i>
+			</button>
+			<button (click)="openSaveModal()">
+				<i class="fas fa-save fa-lg"></i>
+			</button>
 		</div>
 		<mhw-builder-equipped-stats [hidden]="!attackDefenseVisible"></mhw-builder-equipped-stats>
 		<mhw-builder-equipped-skills [hidden]="!skillsVisible"></mhw-builder-equipped-skills>

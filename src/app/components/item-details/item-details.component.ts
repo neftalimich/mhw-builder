@@ -95,7 +95,6 @@ export class ItemDetailsComponent implements OnInit {
 				});
 			}
 			if (this.item.otherData && this.item.otherData[0].value) {
-				console.log(this.item.otherData);
 				const auxDetail: StatDetailModel = {
 					name: '',
 					value: ''
