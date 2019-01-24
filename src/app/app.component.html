@@ -21,10 +21,10 @@
 	</div>
 	<div class="stats-container" [hidden]="!statsVisible">
 		<div class="control-buttons">
-			<button (click)="clearAllItems()">
+			<button (click)="clearAllItems()" title="Clear">
 				<i class="fas fa-eraser fa-lg"></i>
 			</button>
-			<button (click)="openSaveModal()">
+			<button (click)="openSaveModal()" title="Save">
 				<i class="fas fa-save fa-lg"></i>
 			</button>
 		</div>
@@ -55,6 +55,9 @@
 		<a href="https://discord.gg/4s7yqFg" target="_blank">
 			<i class="fab fa-discord"></i>
 		</a>
+		<a href="https://twitter.com/mhw_builder" target="_blank">
+			<i class="fab fa-twitter"></i>
+		</a>
 	</div>
 
 	<div class="version-info">
@@ -75,6 +78,7 @@
 				<a href="https://www.github.com/neftalimich/mhw-builder" target="_blank">Neftalí Michelet Github (v2.0)</a>
 			</h3>
 			<p>
+				<a href="https://twitter.com/mhw_builder" target="_blank">MHW Builder Twitter</a>
 			</p>
 		</div>
 	</mhw-builder-modal>
