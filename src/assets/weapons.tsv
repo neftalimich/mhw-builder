@@ -331,15 +331,15 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 110	HuntingHorn	7	Legia Sectored	672	0	0	Ice	360						false	13;3;6;8;4;6		legiana;ice			10
 117	HuntingHorn	7	Queen Vespoid Horn	672	0	0				Paralysis	300			false	11;3;6;8;4;8	1;1	vespoid;paralysis			10
 108	HuntingHorn	7	Royal Chordmaker	798	25	0	Fire	240						false	7;5;6;12;6;4	2	rathian;fire			10
-458	HuntingHorn	7	Taroth Pipe "Buzzer"	672	30	20				Paralysis	300			true	0;0;0;0;2;0		kulve;taroth;vespoid;paralysis			10
-461	HuntingHorn	7	Taroth Pipe "Crusher"	798	10	20				Blast	150			true	0;0;0;0;2;0		kulve;taroth;dodogama;blast			10
-460	HuntingHorn	7	Taroth Pipe "Drifter"	714	10	20	Water	420						true	0;0;0;0;2;0		kulve;taroth;paolumu;water			10
-456	HuntingHorn	7	Taroth Pipe "Myth"	630	0	20	Thunder	540						true	0;0;0;0;0;2		kulve;taroth;kirin;thunder			10
-303	HuntingHorn	7	Taroth Pipe "Rage"	840	-20	20	Fire	450						true	0;0;0;0;3;0		kulve;taroth;anjanath;fire			10
-373	HuntingHorn	7	Taroth Pipe "Spew"	756	0	20				Poison	540			true	0;0;0;0;2;0	1	kulve;taroth;pukei-pukei;poison			10
-457	HuntingHorn	7	Taroth Pipe "Stream"	672	0	20	Ice	360						true	0;0;0;0;2;0		kulve;taroth;legiana;ice			10
-462	HuntingHorn	7	Taroth Pipe "Tar"	798	10	30				Sleep	270			true	0;0;0;0;2;0		kulve;taroth;radobaan;sleep			10
-459	HuntingHorn	7	Taroth Pipe "Thief"	714	35	20				Sleep	360	false		true	0;0;0;0;2;0		kulve;taroth;kulu-ya-ku;sleep			10
+458	HuntingHorn	7	Taroth Pipe "Buzzer"	672	30	20				Paralysis	300			false	5;5;5;8;17;0		kulve;taroth;vespoid;paralysis			10
+461	HuntingHorn	7	Taroth Pipe "Crusher"	798	10	20				Blast	150			false	11;11;4;4;8;2		kulve;taroth;dodogama;blast			10
+460	HuntingHorn	7	Taroth Pipe "Drifter"	714	10	20	Water	420						false	8;5;6;12;5;4		kulve;taroth;paolumu;water			10
+456	HuntingHorn	7	Taroth Pipe "Myth"	630	0	20	Thunder	540						false	24;2;2;2;3;7		kulve;taroth;kirin;thunder			10
+303	HuntingHorn	7	Taroth Pipe "Rage"	840	-20	20	Fire	450						false	9;10;4;4;13;0		kulve;taroth;anjanath;fire			10
+373	HuntingHorn	7	Taroth Pipe "Spew"	756	0	20				Poison	540			false	11;12;4;5;8;0	1	kulve;taroth;pukei-pukei;poison			10
+457	HuntingHorn	7	Taroth Pipe "Stream"	672	0	20	Ice	360						false	9;10;4;4;13;0		kulve;taroth;legiana;ice			10
+462	HuntingHorn	7	Taroth Pipe "Tar"	798	10	30				Sleep	270			false	11;12;4;5;8;0		kulve;taroth;radobaan;sleep			10
+459	HuntingHorn	7	Taroth Pipe "Thief"	714	35	20				Sleep	360	false		false	9;6;8;8;7;2		kulve;taroth;kulu-ya-ku;sleep			10
 120	HuntingHorn	7	Thunderbolt Horn II	672	0	0	Thunder	540						false	11;2;2;14;11;0		kirin;thunder			10
 116	HuntingHorn	8	Bazelreid Rookslayer	840	-10	0				Blast	210			false	7;12;8;6;2;5	2;2	bazelgeuse;blast			10
 105	HuntingHorn	8	Desolation's Overture	882	0	0	Dragon	150					High	false	11;12;4;5;13;0	1	nergigante;dragon			10
@@ -373,15 +373,15 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 208	InsectGlaive	7	Gnashing Flammenkaefer	651	-20	0	Fire	270						false	10;12;4;5;9;0		anjanath;fire		Blunt	10
 284	InsectGlaive	7	Grunge Storm	682	-25	0	Dragon	210					High	false	5;12;8;6;4;5		deviljho;dragon		Health	10
 207	InsectGlaive	7	Hazak Entoma II	620	0	0	Dragon	180					Average	false	20;7;2;2;5;4	2	vaal;hazak;dragon		Blunt	10
-451	InsectGlaive	7	Taroth Glaive "Claw"	558	20	20	Fire	90	false					true	0;0;0;0;2;0		kulve;taroth;odogaron;fire		Speed	10
-450	InsectGlaive	7	Taroth Glaive "Crusher"	558	0	20				Blast	150			true	0;0;0;0;2;0	2	kulve;taroth;dodogama;blast		Stamina	10
-448	InsectGlaive	7	Taroth Glaive "Decay"	527	0	20	Dragon	180					Average	true	0;0;0;0;0;2		kulve;taroth;vaal;dragon		Blunt	10
-454	InsectGlaive	7	Taroth Glaive "Flash"	589	0	20	Thunder	300	false					true	0;0;0;0;2;0		kulve;taroth;tzitzi-ya-ku;thunder		Speed	10
-455	InsectGlaive	7	Taroth Glaive "Horn"	713	-30	25	Ice	240	true					true	0;0;0;0;2;0		kulve;taroth;diablos;ice		Stamina	10
-453	InsectGlaive	7	Taroth Glaive "King"	589	20	20	Fire	210						true	0;0;0;0;2;0		kulve;taroth;rathalos;fire		Sever	10
-452	InsectGlaive	7	Taroth Glaive "Spark"	558	20	20	Thunder	240						true	0;0;0;0;2;0		kulve;taroth;tobi-kadachi;thunder		Speed	10
-386	InsectGlaive	7	Taroth Glaive "Spew"	558	0	20				Poison	300	true		true	0;0;0;0;2;0	1	kulve;taroth;pukei-pukei;poison		Health	10
-449	InsectGlaive	7	Taroth Glaive "Thief"	527	30	20				Sleep	210	false		true	0;0;0;0;2;0		kulve;taroth;kulu-ya-ku;sleep		Speed	10
+451	InsectGlaive	7	Taroth Glaive "Claw"	558	20	20	Fire	90	false					false	5;12;8;6;4;5		kulve;taroth;odogaron;fire		Speed	10
+450	InsectGlaive	7	Taroth Glaive "Crusher"	558	0	20				Blast	150			false	13;11;4;4;6;2	2	kulve;taroth;dodogama;blast		Stamina	10
+448	InsectGlaive	7	Taroth Glaive "Decay"	527	0	20	Dragon	180					Average	false	23;2;2;2;3;8		kulve;taroth;vaal;dragon		Blunt	10
+454	InsectGlaive	7	Taroth Glaive "Flash"	589	0	20	Thunder	300	false					false	8;5;6;12;5;4		kulve;taroth;tzitzi-ya-ku;thunder		Speed	10
+455	InsectGlaive	7	Taroth Glaive "Horn"	713	-30	25	Ice	240	true					false	9;5;6;12;6;2		kulve;taroth;diablos;ice		Stamina	10
+453	InsectGlaive	7	Taroth Glaive "King"	589	20	20	Fire	210						false	7;6;6;10;8;3		kulve;taroth;rathalos;fire		Sever	10
+452	InsectGlaive	7	Taroth Glaive "Spark"	558	20	20	Thunder	240						false	17;7;2;2;8;4		kulve;taroth;tobi-kadachi;thunder		Speed	10
+386	InsectGlaive	7	Taroth Glaive "Spew"	558	0	20				Poison	300	true		false	9;12;4;5;10;0	1	kulve;taroth;pukei-pukei;poison		Health	10
+449	InsectGlaive	7	Taroth Glaive "Thief"	527	30	20				Sleep	210	false		false	8;6;6;10;7;3		kulve;taroth;kulu-ya-ku;sleep		Speed	10
 210	InsectGlaive	7	Tyrannis Glaive II	713	-30	15	Ice	180	true					false	9;5;6;12;6;2	2	diablos;ice		Stamina	10
 199	InsectGlaive	8	Catastrophe's Light	651	0	0	Dragon	150					High	false	10;12;4;5;14;0	1	nergigante;dragon		Sever	10
 215	InsectGlaive	8	Daora's Tethidine	558	10	0	Ice	180						false	9;6;8;8;7;2	2	blacksteel;kushala;daora;ice		Health	10
