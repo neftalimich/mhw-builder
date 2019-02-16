@@ -107,14 +107,64 @@ export class SetListComponent implements OnInit {
 	}
 
 	downloadFile() {
-		const fileName = 'mhw-builder.txt';
-		let fileString = '';
+		let dateNow = new Date().toLocaleDateString("en-GB", {
+			year: "numeric",
+			month: "2-digit",
+			day: "2-digit",
+		});
+		const fileName = `mhw-builder-save(${dateNow}).html`;
+		let fileString = '<html><head>'
+			+ `<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">`
+			+ '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">';
+		fileString += `<style>
+				.Fire {
+					color: #ff6666;
+				}
+				.Water {
+					color: #66ccff;
+				}
+				.Thunder {
+					color: #ff9900;
+				}
+				.Ice {
+					color: #0099ff;
+				}
+				.Dragon {
+					color: #3cb05d;
+				}
+				.Poison {
+					color: #cc44ff;
+				}
+				.Sleep {
+					color: #9999ff;
+				}
+				.Paralysis {
+					color: #e6cb00;
+				}
+				.Blast {
+					color: #E6A400;
+				}
+			</style>`
+			+ '</head><body>'
+			+ '<div class="container-fluid"><div class="row"><div class="col-12">'
+			+ '<h2>MHW-Builder</h2>'
+			+ '<ul>';
 		for (const item of this.savedSets) {
-			fileString += `-${item.setName}: https://neftalimich.github.io/mhw-builder-page/` + `${item.hashString}` + '\n';
+			fileString += `<li>`
+				+ `<a href="https://neftalimich.github.io/mhw-builder-page?${item.hashString}">`
+				+ `${item.setName}`
+				+ `</a> `
+				+ `${item.totalAttack}`
+				+ ` (<span class="${item.element}">${item.element ? item.elementAttack : ''}</span>`
+				+ `${item.ailment && item.element ? '/' : ''}`
+				+ `<span class="${item.ailment}">${item.ailment ? item.ailmentAttack : ''}</span>)`
+				+ ` - ${item.weaponType}`
+				+ `</li>`;
 		}
-		fileString = fileString.replace(/\n/g, '\r\n');
-		console.log(fileString);
-		const blob = new Blob([fileString], { type: 'text/txt' });
+		fileString += '</ul>'
+			+ '</div></div></div>'
+			+ '</body></html>';
+		const blob = new Blob([fileString], { type: 'text/html' });
 		if (window.navigator && window.navigator.msSaveOrOpenBlob) {
 			window.navigator.msSaveOrOpenBlob(blob, fileName);
 		} else {

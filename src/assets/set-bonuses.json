@@ -206,5 +206,19 @@
 				"pieces": 5
 			}
 		]
+	},
+	{
+		"id": "witchersKnowledge",
+		"name": "Witcher's Knowledge",
+		"setLevels": [
+			{
+				"id": "igniIntensity",
+				"pieces": 2
+			},
+			{
+				"id": "superRecovery",
+				"pieces": 4
+			}
+		]
 	}
 ]
