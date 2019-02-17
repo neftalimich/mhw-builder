@@ -4,15 +4,16 @@ import { Pipe, PipeTransform } from '@angular/core';
 	name: 'maxSharpness'
 })
 export class MaxSharpnessPipe implements PipeTransform {
-	transform(value: any[], color?: boolean): any {
+	transform(value: number[], color?: boolean): any {
 		if (value.length > 1) {
+			let over = value.reduce((a, b) => a + b, 0) - 40;
 			let result = '';
 			for (let i = value.length - 1; i >= 0; i--) {
 				if (value[i] > 0) {
 					if (color) {
 						result = '' + i;
 					} else {
-						result = value[i];
+						result = (value[i] - over).toString();
 					}
 					break;
 				}

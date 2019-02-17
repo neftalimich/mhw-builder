@@ -146,7 +146,7 @@ export class SetListComponent implements OnInit {
 				}
 			</style>`
 			+ '</head><body>'
-			+ '<div class="container-fluid"><div class="row"><div class="col-12">'
+			+ '<div class="container-fluid"><div class="row"><div class="col-md-6 col-xs-12">'
 			+ '<h2>MHW-Builder</h2>'
 			+ '<ul>';
 		for (const item of this.savedSets) {
@@ -155,13 +155,14 @@ export class SetListComponent implements OnInit {
 				+ `${item.setName}`
 				+ `</a> `
 				+ `${item.totalAttack}`
-				+ ` (<span class="${item.element}">${item.element ? item.elementAttack : ''}</span>`
+				+ ` (<span class="${item.element}" title="${item.element}">${item.element ? item.elementAttack : ''}</span>`
 				+ `${item.ailment && item.element ? '/' : ''}`
-				+ `<span class="${item.ailment}">${item.ailment ? item.ailmentAttack : ''}</span>)`
+				+ `<span class="${item.ailment}" title="${item.ailment}">${item.ailment ? item.ailmentAttack : ''}</span>)`
 				+ ` - ${item.weaponType}`
 				+ `</li>`;
 		}
 		fileString += '</ul>'
+			+ '<span class="text-muted float-right">By Neftalí Michelet (neftalimich)</span>'
 			+ '</div></div></div>'
 			+ '</body></html>';
 		const blob = new Blob([fileString], { type: 'text/html' });

@@ -53,7 +53,7 @@ export class SharpnessBarComponent implements OnInit {
 		for (let i = this._sharpnessLevels.length - 1; i >= 0; i--) {
 			if (this.sharpnessBar.maxColorSharp == null && this._sharpnessLevels[i] > 0) {
 				this.sharpnessBar.maxColorSharp = i;
-				this.sharpnessBar.maxLevelSharp = this._sharpnessLevels[i];
+				this.sharpnessBar.maxLevelSharp = this._sharpnessLevels[i] - (total - 40);
 			}
 			if (levelsToSubstract > 0) {
 				const toSubstract = Math.min(this._sharpnessLevels[i], levelsToSubstract);

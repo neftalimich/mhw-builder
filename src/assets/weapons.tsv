@@ -129,7 +129,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 719	DualBlades	8	Kjárr Daggers "Spark"	252	15	0	Thunder	180						false	22;2;2;5;2;7	1	kulve;kjarr;thunder	criticalElement-1		52
 720	DualBlades	8	Kjárr Daggers "Ice"	252	15	0	Ice	210						false	4;5;6;12;9;4	1	kulve;kjarr;ice	criticalElement-1		52
 721	DualBlades	8	Kjárr Daggers "Water"	252	10	0	Water	210						false	17;7;2;2;8;4	1	kulve;kjarr;water	criticalElement-1		52
-798	DualBlades	8	Zireael	294	0	0	Dragon	240					High	false	25;2;2;2;3;6	3	witcher;dragon			60
+798	DualBlades	8	Zireael	294	0	0	Dragon	240	true				High	false	25;2;2;2;3;6	3	witcher;dragon			60
 14	GreatSword	6	Barroth Shredder III	960	-20	15				Paralysis	390	true		false	11;12;4;5;8;0	2;1	barroth;paralysis			10
 1	GreatSword	6	Chrome Razor II	864	0	0				Poison	420	true		false	6;6;2;15;9;2	1;1	ore;poison			10
 8	GreatSword	6	Datura Blaze II	816	0	0				Poison	540			false	11;12;4;5;8;0	2;1	pukei-pukei;poison			10
@@ -630,4 +630,4 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 794	SwordAndShield	8	Kjárr Slicer "Myth"	238	10	0	Thunder	330						false	13;10;3;3;8;3	1	kulve;kjarr;thunder	criticalElement-1		52
 795	SwordAndShield	8	Kjárr Slicer "Stream"	238	10	0	Ice	300						false	10;3;6;8;4;9	1	kulve;kjarr;ice	criticalElement-1		52
 796	SwordAndShield	8	Kjárr Slicer "Water"	252	15	0	Water	330						false	16;7;2;2;9;4	1	kulve;kjarr;water	criticalElement-1		52
-797	SwordAndShield	8	Witcher's Silver Sword+	266	0	0	Dragon	330					High	false	25;2;2;2;3;6	1	witcher;dragon			60
+797	SwordAndShield	8	Witcher's Silver Sword+	266	0	0	Dragon	330					High	false	25;2;2;2;3;11	1	witcher;dragon			60
