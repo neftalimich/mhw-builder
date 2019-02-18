@@ -9,18 +9,16 @@
 	</ul>
 	<div *ngIf="skills?.length" class="skills-container">
 		<ul>
-			<div *ngFor="let skill of skills">
-				<div *ngIf="skill.levels">
-					<li>
-						<div class="skill-header">
-							<h4 class="skill-name">{{skill.name}}</h4>
-							<h4 class="skill-level">{{getSkillCount(skill)}}</h4>
-						</div>
-						<hr>
-						<span>{{skill.description}}</span>
-					</li>
-				</div>
-			</div>
+			<ng-container *ngFor="let skill of skills">
+				<li *ngIf="skill.levels">
+					<div class="skill-header">
+						<h4 class="skill-name">{{skill.name}}</h4>
+						<h4 class="skill-level">{{getSkillCount(skill)}}</h4>
+					</div>
+					<hr>
+					<span>{{skill.description}}</span>
+				</li>
+			</ng-container>
 		</ul>
 	</div>
 </div>

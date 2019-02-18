@@ -21,10 +21,10 @@
 	</div>
 	<div class="stats-container" [hidden]="!statsVisible">
 		<div class="control-buttons">
-			<button (click)="clearAllItems()" title="Clear">
+			<button type="button" (click)="clearAllItems()" title="Clear">
 				<i class="fas fa-eraser fa-lg"></i>
 			</button>
-			<button (click)="openSaveModal()" title="Save">
+			<button type="button" (click)="openSaveModal()" title="Save">
 				<i class="fas fa-save fa-lg"></i>
 			</button>
 		</div>
@@ -48,21 +48,21 @@
 
 	<div class="signature">
 		By TurkeyTickle & Neftalimich -
-		<button (click)="openContributors()">Information</button>
-		<a href="https://github.com/neftalimich/mhw-builder" target="_blank">
+		<button type="button" (click)="openContributors()">Information</button>
+		<a href="https://github.com/neftalimich/mhw-builder" target="_blank" rel="noreferrer" title="github">
 			<i class="fab fa-github"></i>
 		</a>
-		<a href="https://discord.gg/4s7yqFg" target="_blank">
+		<a href="https://discord.gg/4s7yqFg" target="_blank" rel="noreferrer" title="discord">
 			<i class="fab fa-discord"></i>
 		</a>
-		<a href="https://twitter.com/mhw_builder" target="_blank">
+		<a href="https://twitter.com/mhw_builder" target="_blank" rel="noreferrer" title="twitter">
 			<i class="fab fa-twitter"></i>
 		</a>
 	</div>
 
 	<div class="version-info">
-		<button id="dummy"></button>
-		<button (click)="openChangeLog()">ChangeLog</button>
+		<button type="button" id="dummy" aria-label="dummy"></button>
+		<button type="button" (click)="openChangeLog()">ChangeLog</button>
 	</div>
 
 	<mhw-builder-modal #setListModal title="Saved Sets List">
@@ -72,13 +72,13 @@
 	<mhw-builder-modal #contributorsModal title="Information">
 		<div style="padding:16px;">
 			<h3>
-				<a href="https://github.com/TurkeyTickle/mhw-builder" target="_blank">TurkeyTickle Github (v1.0)</a>
+				<a href="https://github.com/TurkeyTickle/mhw-builder" target="_blank" rel="noreferrer">TurkeyTickle Github (v1.0)</a>
 			</h3>
 			<h3>
-				<a href="https://www.github.com/neftalimich/mhw-builder" target="_blank">Neftalí Michelet Github (v2.0)</a>
+				<a href="https://www.github.com/neftalimich/mhw-builder" target="_blank" rel="noreferrer">Neftalí Michelet Github (v2.0)</a>
 			</h3>
 			<p>
-				<a href="https://twitter.com/mhw_builder" target="_blank">MHW Builder Twitter</a>
+				<a href="https://twitter.com/mhw_builder" target="_blank" rel="noreferrer">MHW Builder Twitter</a>
 			</p>
 		</div>
 	</mhw-builder-modal>

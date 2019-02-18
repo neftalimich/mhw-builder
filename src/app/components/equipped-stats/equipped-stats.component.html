@@ -13,7 +13,7 @@
 					<i class="far fa-question-circle"></i>
 				</span>
 				<span *ngIf="calc.icon" class="detail-icon">
-					<img [src]="'assets/images/' + calc.icon + '-icon.png'" style="height:1em;margin:auto;padding-top:1px;">
+					<img [src]="'assets/images/' + calc.icon + '-icon.png'" style="height:1em;margin:auto;padding-top:1px;" alt="stat icon">
 				</span>
 				<span class="name">{{calc.name}}</span>
 				<span class="value">
@@ -27,7 +27,7 @@
 			</li>
 			<li *ngIf="sharpnessBar && sharpnessBar.levels">
 				<span class="detail-icon" [ngClass]="sharpnessBar.color">
-					<img [src]="'assets/images/sharpness3-icon.png'" style="height:1em;margin:auto;padding-top:1px;">
+					<img [src]="'assets/images/sharpness3-icon.png'" style="height:1em;margin:auto;padding-top:1px;" alt="sharpness">
 				</span>
 				<span class="name">
 					Sharpness
@@ -82,7 +82,7 @@
 		<ul class="defense-stats striped">
 			<li *ngFor="let calc of defenseCalcs" (pointerenter)="showCalcDetails($event, calc)" (pointerleave)="clearCalcDetails()">
 				<span *ngIf="calc.icon" class="detail-icon">
-					<img [src]="'assets/images/' + calc.icon + '-icon.png'" style="height:1em;margin:auto;padding-top:1px;">
+					<img [src]="'assets/images/' + calc.icon + '-icon.png'" style="height:1em;margin:auto;padding-top:1px;" alt="stat icon">
 				</span>
 				<span class="name">{{calc.name}}</span>
 				<span class="value">{{calc.value}}</span>

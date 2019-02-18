@@ -6,12 +6,12 @@
 
 		<!-- <div class="slot-name">{{slotName}}</div> -->
 		<div class="slot-icon" (click)="equipmentSlotClicked()">
-			<img [src]="getItemIconName()">
+			<img [src]="getItemIconName()" alt="slot icon">
 		</div>
 		<div class="selected-item" (click)="equipmentSlotClicked()">{{item?.name}}</div>
 
 		<div *ngIf="item?.levels" class="levels-container">
-			<button class="level-down-button" (click)="levelDownClicked($event)">
+			<button type="button" class="level-down-button" (click)="levelDownClicked($event)">
 				<i class="fas fa-minus"></i>
 			</button>
 
@@ -19,15 +19,15 @@
 				{{item.equippedLevel}}
 			</div>
 
-			<button class="level-up-button" (click)="levelUpClicked($event)">
+			<button type="button" class="level-up-button" (click)="levelUpClicked($event)">
 				<i class="fas fa-plus"></i>
 			</button>
 		</div>
-		<button class="info-button" (click)="showOnClickTooltipItem()">
+		<button type="button" class="info-button" (click)="showOnClickTooltipItem()" aria-label="info">
 			<i class="fas fa-info-circle icon-xs" [ngClass]="'rarity-'+item?.rarity" style="display:none;"></i>
 			<i class="fas fa-grip-lines-vertical icon-md" [ngClass]="'rarity-'+item?.rarity"></i>
 		</button>
-		<button class="clear-button" (click)="equipmentClearClicked($event)">
+		<button type="button" class="clear-button" (click)="equipmentClearClicked($event)" aria-label="clear">
 			<i class="fas fa-times"></i>
 		</button>
 	</div>

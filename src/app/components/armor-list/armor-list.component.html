@@ -2,7 +2,7 @@
 	<div class="search-container">
 		<input #searchBox (keyup)="search(searchBox.value)" placeholder="Search names, skills, monster" />
 
-		<button class="clear-button" (click)="resetSearchResults()">
+		<button type="button" class="clear-button" (click)="resetSearchResults()">
 			<i class="fas fa-times"></i>
 		</button>
 	</div>
@@ -16,18 +16,18 @@
 				</div>
 				<div class="slots">
 					<div *ngIf="item.slots[0]?.level">
-						<img [src]="'assets/images/slot-' + item?.slots[0]?.level + '-icon.png'">
+						<img [src]="'assets/images/slot-' + item?.slots[0]?.level + '-icon.png'" alt="slot">
 					</div>
 					<div *ngIf="item.slots[1]?.level">
-						<img [src]="'assets/images/slot-' + item?.slots[1]?.level + '-icon.png'">
+						<img [src]="'assets/images/slot-' + item?.slots[1]?.level + '-icon.png'" alt="slot">
 					</div>
 					<div *ngIf="item.slots[2]?.level">
-						<img [src]="'assets/images/slot-' + item?.slots[2]?.level + '-icon.png'">
+						<img [src]="'assets/images/slot-' + item?.slots[2]?.level + '-icon.png'" alt="slot">
 					</div>
 				</div>
 				<div class="type">
 					<span class="typeName">{{item.itemType}}</span>
-					<img [src]="'assets/images/armor/' + (item.itemType | lowercase) + '-icon.png'" />
+					<img [src]="'assets/images/armor/' + (item.itemType | lowercase) + '-icon.png'" alt="item type"/>
 				</div>
 				<div class="rarity" *ngIf="item.rarity">
 					<span class="r1">Rarity </span><span class="r2">R</span>{{item.rarity}}
@@ -37,37 +37,37 @@
 			<div class="stats-container">
 				<div class="stat-container">
 					<div class="icon-container">
-						<img src="assets/images/defense-icon.png">
+						<img src="assets/images/defense-icon.png" alt="defense">
 					</div>
 					<div class="stat-value">{{item.baseDefense}} ➝ {{item.maxDefense}} ➟ {{item.augmentedDefense}}</div>
 				</div>
 				<div class="stat-container">
 					<div class="icon-container">
-						<img src="assets/images/fire-icon.png">
+						<img src="assets/images/fire-icon.png" alt="fire">
 					</div>
 					<div class="stat-value">{{item.fireResist}}</div>
 				</div>
 				<div class="stat-container">
 					<div class="icon-container">
-						<img src="assets/images/water-icon.png">
+						<img src="assets/images/water-icon.png" alt="water">
 					</div>
 					<div class="stat-value">{{item.waterResist}}</div>
 				</div>
 				<div class="stat-container">
 					<div class="icon-container">
-						<img src="assets/images/ice-icon.png">
+						<img src="assets/images/ice-icon.png" alt="ice">
 					</div>
 					<div class="stat-value">{{item.iceResist}}</div>
 				</div>
 				<div class="stat-container">
 					<div class="icon-container">
-						<img src="assets/images/thunder-icon.png">
+						<img src="assets/images/thunder-icon.png" alt="thunder">
 					</div>
 					<div class="stat-value">{{item.thunderResist}}</div>
 				</div>
 				<div class="stat-container">
 					<div class="icon-container">
-						<img src="assets/images/dragon-icon.png">
+						<img src="assets/images/dragon-icon.png" alt="dragon">
 					</div>
 					<div class="stat-value">{{item.dragonResist}}</div>
 				</div>

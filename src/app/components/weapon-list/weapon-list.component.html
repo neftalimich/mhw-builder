@@ -1,75 +1,75 @@
 <div class="container">
 	<div class="search-container">
 		<input #searchBox (keyup)="search(searchBox.value)" placeholder="Search names, skills, monster" />
-		<button class="sort-button" (click)="showSortContainer=!showSortContainer">
+		<button type="button" class="sort-button" (click)="showSortContainer=!showSortContainer">
 			<i class="fas fa-sort-amount-up"></i>
 		</button>
-		<button class="filter-button" (click)="hideFilterContainer=!hideFilterContainer">
+		<button type="button" class="filter-button" (click)="hideFilterContainer=!hideFilterContainer">
 			<i class="fas fa-filter"></i>
 		</button>
-		<button class="clear-button" (click)="resetSearchResults()">
+		<button type="button" class="clear-button" (click)="resetSearchResults()">
 			<i class="fas fa-times"></i>
 		</button>
 	</div>
 
 	<div class="filter-container" *ngIf="itemType == 'Weapon' && !hideFilterContainer">
-		<button class="weapon-filter" [class.selected]="weaponTypeFilter == 'GreatSword'" (click)="weaponFilterClicked('GreatSword')">
-			<img src="assets/images/weapons/greatsword-icon.png">
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'Great Sword'" (click)="weaponFilterClicked('GreatSword')">
+			<img src="assets/images/weapons/greatsword-icon.png" alt="greatsword">
 		</button>
-		<button class="weapon-filter" [class.selected]="weaponTypeFilter == 'SwordAndShield'" (click)="weaponFilterClicked('SwordAndShield')">
-			<img src="assets/images/weapons/swordandshield-icon.png">
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'SwordAndShield'" (click)="weaponFilterClicked('SwordAndShield')">
+			<img src="assets/images/weapons/swordandshield-icon.png" alt="Sword and Shield">
 		</button>
-		<button class="weapon-filter" [class.selected]="weaponTypeFilter == 'DualBlades'" (click)="weaponFilterClicked('DualBlades')">
-			<img src="assets/images/weapons/dualblades-icon.png">
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'DualBlades'" (click)="weaponFilterClicked('DualBlades')">
+			<img src="assets/images/weapons/dualblades-icon.png" alt="Dual Blades">
 		</button>
-		<button class="weapon-filter" [class.selected]="weaponTypeFilter == 'LongSword'" (click)="weaponFilterClicked('LongSword')">
-			<img src="assets/images/weapons/longsword-icon.png">
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'LongSword'" (click)="weaponFilterClicked('LongSword')">
+			<img src="assets/images/weapons/longsword-icon.png" alt="Long Sword">
 		</button>
-		<button class="weapon-filter" [class.selected]="weaponTypeFilter == 'Hammer'" (click)="weaponFilterClicked('Hammer')">
-			<img src="assets/images/weapons/hammer-icon.png">
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'Hammer'" (click)="weaponFilterClicked('Hammer')">
+			<img src="assets/images/weapons/hammer-icon.png" alt="Hammer">
 		</button>
-		<button class="weapon-filter" [class.selected]="weaponTypeFilter == 'HuntingHorn'" (click)="weaponFilterClicked('HuntingHorn')">
-			<img src="assets/images/weapons/huntinghorn-icon.png">
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'HuntingHorn'" (click)="weaponFilterClicked('HuntingHorn')">
+			<img src="assets/images/weapons/huntinghorn-icon.png" alt="Hunting Horn">
 		</button>
-		<button class="weapon-filter" [class.selected]="weaponTypeFilter == 'Lance'" (click)="weaponFilterClicked('Lance')">
-			<img src="assets/images/weapons/lance-icon.png">
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'Lance'" (click)="weaponFilterClicked('Lance')">
+			<img src="assets/images/weapons/lance-icon.png" alt="Lance">
 		</button>
-		<button class="weapon-filter" [class.selected]="weaponTypeFilter == 'Gunlance'" (click)="weaponFilterClicked('Gunlance')">
-			<img src="assets/images/weapons/gunlance-icon.png">
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'Gunlance'" (click)="weaponFilterClicked('Gunlance')">
+			<img src="assets/images/weapons/gunlance-icon.png" alt="Gunlance">
 		</button>
-		<button class="weapon-filter" [class.selected]="weaponTypeFilter == 'SwitchAxe'" (click)="weaponFilterClicked('SwitchAxe')">
-			<img src="assets/images/weapons/switchaxe-icon.png">
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'SwitchAxe'" (click)="weaponFilterClicked('SwitchAxe')">
+			<img src="assets/images/weapons/switchaxe-icon.png" alt="Switch Axe">
 		</button>
-		<button class="weapon-filter" [class.selected]="weaponTypeFilter == 'ChargeBlade'" (click)="weaponFilterClicked('ChargeBlade')">
-			<img src="assets/images/weapons/chargeblade-icon.png">
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'ChargeBlade'" (click)="weaponFilterClicked('ChargeBlade')">
+			<img src="assets/images/weapons/chargeblade-icon.png" alt="Charge Blade">
 		</button>
-		<button class="weapon-filter" [class.selected]="weaponTypeFilter == 'InsectGlaive'" (click)="weaponFilterClicked('InsectGlaive')">
-			<img src="assets/images/weapons/insectglaive-icon.png">
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'InsectGlaive'" (click)="weaponFilterClicked('InsectGlaive')">
+			<img src="assets/images/weapons/insectglaive-icon.png" alt="Insect Glaive">
 		</button>
-		<button class="weapon-filter" [class.selected]="weaponTypeFilter == 'Bow'" (click)="weaponFilterClicked('Bow')">
-			<img src="assets/images/weapons/bow-icon.png">
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'Bow'" (click)="weaponFilterClicked('Bow')">
+			<img src="assets/images/weapons/bow-icon.png" alt="Bow">
 		</button>
-		<button class="weapon-filter" [class.selected]="weaponTypeFilter == 'LightBowgun'" (click)="weaponFilterClicked('LightBowgun')">
-			<img src="assets/images/weapons/lightbowgun-icon.png">
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'LightBowgun'" (click)="weaponFilterClicked('LightBowgun')">
+			<img src="assets/images/weapons/lightbowgun-icon.png" alt="LBG">
 		</button>
-		<button class="weapon-filter" [class.selected]="weaponTypeFilter == 'HeavyBowgun'" (click)="weaponFilterClicked('HeavyBowgun')">
-			<img src="assets/images/weapons/heavybowgun-icon.png">
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'HeavyBowgun'" (click)="weaponFilterClicked('HeavyBowgun')">
+			<img src="assets/images/weapons/heavybowgun-icon.png" alt="HBG">
 		</button>
 	</div>
 
 	<div class="sort-container" *ngIf="showSortContainer">
-		<button class="weapon-sort" [class.selected]="weaponTypeSort == 'ATK'" (click)="weaponSortByAttack()">
+		<button type="button" class="weapon-sort" [class.selected]="weaponTypeSort == 'ATK'" (click)="weaponSortByAttack()">
 			<!--<img src="assets/images/attack-icon.png" />-->
 			ATK
 		</button>
-		<button class="weapon-sort" [class.selected]="weaponTypeSort == 'AFN'" (click)="weaponSortByAffinity()">
+		<button type="button" class="weapon-sort" [class.selected]="weaponTypeSort == 'AFN'" (click)="weaponSortByAffinity()">
 			<!--<img src="assets/images/affinity-icon.png" />-->
 			AFN
 		</button>
-		<button class="weapon-sort" [class.selected]="weaponTypeSort == 'AIL'" (click)="weaponSortByAilment()">
+		<button type="button" class="weapon-sort" [class.selected]="weaponTypeSort == 'AIL'" (click)="weaponSortByAilment()">
 			AIL
 		</button>
-		<button class="weapon-sort" [class.selected]="weaponTypeSort == 'ELE'" (click)="weaponSortByElement()">
+		<button type="button" class="weapon-sort" [class.selected]="weaponTypeSort == 'ELE'" (click)="weaponSortByElement()">
 			ELE
 		</button>
 	</div>
@@ -82,19 +82,19 @@
 				</div>
 				<div class="slots">
 					<div *ngIf="item.slots[0]?.level">
-						<img [src]="'assets/images/slot-' + item?.slots[0]?.level + '-icon.png'">
+						<img [src]="'assets/images/slot-' + item?.slots[0]?.level + '-icon.png'" alt="slot">
 					</div>
 					<div *ngIf="item.slots[1]?.level">
-						<img [src]="'assets/images/slot-' + item?.slots[1]?.level + '-icon.png'">
+						<img [src]="'assets/images/slot-' + item?.slots[1]?.level + '-icon.png'" alt="slot">
 					</div>
 					<div *ngIf="item.slots[2]?.level">
-						<img [src]="'assets/images/slot-' + item?.slots[2]?.level + '-icon.png'">
+						<img [src]="'assets/images/slot-' + item?.slots[2]?.level + '-icon.png'" alt="slot">
 					</div>
 				</div>
 				<div class="type">
 					<span *ngIf="item.equipmentCategory == equipmentCategoryType.Armor">{{item.itemType}}</span>
 					<img *ngIf="item.equipmentCategory == equipmentCategoryType.Weapon"
-						 [src]="'assets/images/weapons/' + dataService.getWeaponTypeIcon(item.weaponType) + '-icon.png'" />
+						 [src]="'assets/images/weapons/' + dataService.getWeaponTypeIcon(item.weaponType) + '-icon.png'" alt="weapon" />
 					<span class="typeName" *ngIf="item.equipmentCategory == equipmentCategoryType.Weapon">{{dataService.getWeaponTypeName(item.weaponType)}}</span>
 				</div>
 				<div class="rarity" *ngIf="item.rarity">
@@ -105,37 +105,37 @@
 			<div class="stats-container">
 				<div class="stat-container">
 					<div class="icon-container">
-						<img src="assets/images/attack-icon.png">
+						<img src="assets/images/attack-icon.png" alt="attack">
 					</div>
 					<div class="stat-value">{{item.baseAttack}}</div>
 				</div>
 				<div class="stat-container">
 					<div class="icon-container">
-						<img src="assets/images/affinity-icon.png">
+						<img src="assets/images/affinity-icon.png" alt="affinity">
 					</div>
 					<div class="stat-value" [class.red]="item.baseAffinityPercent < 0">{{item.baseAffinityPercent}}%</div>
 				</div>
 				<div class="stat-container">
 					<div class="icon-container">
-						<img src="assets/images/defense-icon.png">
+						<img src="assets/images/defense-icon.png" alt="defense">
 					</div>
 					<div class="stat-value">{{item.baseDefense}}</div>
 				</div>
 				<div class="stat-container" *ngIf="item.ailment">
 					<div class="icon-container">
-						<img [src]="getAilmentIcon(item)">
+						<img [src]="getAilmentIcon(item)" alt="ailment">
 					</div>
 					<div class="stat-value" [style.color]="item.ailmentHidden ? 'gray' : 'white'">{{item.ailmentBaseAttack}}</div>
 				</div>
 				<div class="stat-container" *ngIf="item.element">
 					<div class="icon-container">
-						<img [src]="getElementIcon(item)">
+						<img [src]="getElementIcon(item)" alt="element">
 					</div>
 					<div class="stat-value" [style.color]="item.elementHidden ? 'gray' : 'white'">{{item.elementBaseAttack}}</div>
 				</div>
 				<div class="stat-container" *ngIf="item.sharpnessLevelsBar.length > 1">
 					<div class="icon-container">
-						<img src="assets/images/sharpness3-icon.png">
+						<img src="assets/images/sharpness3-icon.png" alt="sharpness">
 					</div>
 					<div class="stat-value" [ngClass]="['sharp-'+(item.sharpnessLevelsBar | maxSharpness:true)]">
 						{{(item.sharpnessLevelsBar | maxSharpness) * 10}} <i class="fas fa-circle fa-sm"></i>
@@ -143,23 +143,23 @@
 				</div>
 				<div class="stat-container" *ngIf="item.ammoCapacities?.deviation">
 					<div class="icon-container">
-						<img src="assets/images/deviation-icon.png">
+						<img src="assets/images/deviation-icon.png" alt="deviation">
 					</div>
 					<div class="stat-value">{{item.ammoCapacities.deviation[0]}}</div>
 				</div>
 				<div class="stat-container" *ngIf="item.ammoCapacities?.specialAmmo">
 					<div class="icon-container">
-						<img src="assets/images/special-ammo-icon.png">
+						<img src="assets/images/special-ammo-icon.png" alt="special ammo">
 					</div>
 					<div class="stat-value">{{item.ammoCapacities.specialAmmo}}</div>
 				</div>
 				<div class="stat-container" *ngIf="item.weaponType=='Gunlance'">
 					<div class="icon-container">
-						<img src="assets/images/special-ammo-icon.png">
+						<img src="assets/images/special-ammo-icon.png" alt="special ammo">
 					</div>
 					<div class="stat-value">{{item.otherData[0].value}}-{{item.otherData[0].data}}</div>
 				</div>
-				
+
 			</div>
 
 			<div class="skills-container">

@@ -1,30 +1,30 @@
 <div class="container">
 	<div *ngIf="showAmmoModsInfo" class="animated fadeIn fast">
-		<button (click)="setRecoil(1)" [ngClass]="{'recoil':recoilSuppresorMod>0}">
+		<button type="button" (click)="setRecoil(1)" [ngClass]="{'recoil':recoilSuppresorMod>0}">
 			<i class="fas fa-sign-out-alt fa-rotate-90"></i> 1
 		</button>
-		<button (click)="setRecoil(2)" [ngClass]="{'recoil':recoilSuppresorMod>1}">
+		<button type="button" (click)="setRecoil(2)" [ngClass]="{'recoil':recoilSuppresorMod>1}">
 			<i class="fas fa-sign-out-alt fa-rotate-90"></i> 2
 		</button>
-		<button (click)="setRecoil(3)" [ngClass]="{'recoil':recoilSuppresorMod>2}">
+		<button type="button" (click)="setRecoil(3)" [ngClass]="{'recoil':recoilSuppresorMod>2}">
 			<i class="fas fa-sign-out-alt fa-rotate-90"></i> 3
 		</button>
-		<button (click)="setReload(1)" [ngClass]="{'reload':reloadAssistMod>0}">
+		<button type="button" (click)="setReload(1)" [ngClass]="{'reload':reloadAssistMod>0}">
 			<i class="fas fa-angle-double-up"></i> 1
 		</button>
-		<button (click)="setReload(2)" [ngClass]="{'reload':reloadAssistMod>1}">
+		<button type="button" (click)="setReload(2)" [ngClass]="{'reload':reloadAssistMod>1}">
 			<i class="fas fa-angle-double-up"></i> 2
 		</button>
-		<button (click)="setReload(3)" [ngClass]="{'reload':reloadAssistMod>2}">
+		<button type="button" (click)="setReload(3)" [ngClass]="{'reload':reloadAssistMod>2}">
 			<i class="fas fa-angle-double-up"></i> 3
 		</button>
-		<button (click)="setDeviation(1)" [ngClass]="{'deviation':deviationSuppresorMod>0}">
+		<button type="button" (click)="setDeviation(1)" [ngClass]="{'deviation':deviationSuppresorMod>0}">
 			<i class="fas fa-compress-arrows-alt"></i> 1
 		</button>
-		<button (click)="setDeviation(2)" [ngClass]="{'deviation':deviationSuppresorMod>1}">
+		<button type="button" (click)="setDeviation(2)" [ngClass]="{'deviation':deviationSuppresorMod>1}">
 			<i class="fas fa-compress-arrows-alt"></i> 2
 		</button>
-		<button (click)="setDeviation(3)" [ngClass]="{'deviation':deviationSuppresorMod>2}">
+		<button type="button" (click)="setDeviation(3)" [ngClass]="{'deviation':deviationSuppresorMod>2}">
 			<i class="fas fa-compress-arrows-alt"></i> 3
 		</button>
 	</div>
@@ -51,7 +51,7 @@
 			<ng-container *ngFor="let ammo of ammoCapacities.ammo">
 				<tr *ngIf="!allZero2(ammo.levels)">
 					<td>
-						<img [src]="'assets/images/ammo/ammo-'+ammo.name+'-icon.png'" /> {{ammo.name|titlecase}}
+						<img [src]="'assets/images/ammo/ammo-'+ammo.name+'-icon.png'" alt="Bullet" /> {{ammo.name|titlecase}}
 					</td>
 					<td *ngFor="let level of ammo.levels">
 						<div *ngIf="!showAmmoModsInfo" class="animated fadeIn fast">

@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="search-container">
 		<input #searchBox (keyup)="search(searchBox.value)" placeholder="Search names, skills, monster" />
-		<button class="clear-button" (click)="resetSearchResults()">
+		<button type="button" class="clear-button" (click)="resetSearchResults()">
 			<i class="fas fa-times"></i>
 		</button>
 	</div>

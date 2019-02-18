@@ -107,10 +107,10 @@ export class SetListComponent implements OnInit {
 	}
 
 	downloadFile() {
-		let dateNow = new Date().toLocaleDateString("en-GB", {
-			year: "numeric",
-			month: "2-digit",
-			day: "2-digit",
+		const dateNow = new Date().toLocaleDateString('en-GB', {
+			year: 'numeric',
+			month: '2-digit',
+			day: '2-digit',
 		});
 		const fileName = `mhw-builder-save(${dateNow}).html`;
 		let fileString = '<html><head>'
@@ -144,25 +144,34 @@ export class SetListComponent implements OnInit {
 				.Blast {
 					color: #E6A400;
 				}
+				.weapon-img {
+					height: 20px;
+				}
 			</style>`
 			+ '</head><body>'
-			+ '<div class="container-fluid"><div class="row"><div class="col-md-6 col-xs-12">'
+			+ '<div class="container-fluid"><div class="row"><div class="col-md-4 col-12">'
 			+ '<h2>MHW-Builder</h2>'
-			+ '<ul>';
+			+ '<ul class="list-group">';
 		for (const item of this.savedSets) {
-			fileString += `<li>`
-				+ `<a href="https://neftalimich.github.io/mhw-builder-page?${item.hashString}">`
+			fileString += `<li class="list-group-item">`
+				// + `<img src="https://neftalimich.github.io/mhw-builder-page/assets/images/weapons/${item.weaponType}-icon.png" class="weapon-img" />`
+				+ `<a href="https://neftalimich.github.io/mhw-builder-page?${item.hashString}" class="text-decoration-none">`
 				+ `${item.setName}`
 				+ `</a> `
-				+ `${item.totalAttack}`
-				+ ` (<span class="${item.element}" title="${item.element}">${item.element ? item.elementAttack : ''}</span>`
-				+ `${item.ailment && item.element ? '/' : ''}`
-				+ `<span class="${item.ailment}" title="${item.ailment}">${item.ailment ? item.ailmentAttack : ''}</span>)`
-				+ ` - ${item.weaponType}`
-				+ `</li>`;
+				+ ` - <span class="text-capitalize">${item.weaponType} </span>`
+				+ `<span class="float-right">`
+				+ `<span>${item.totalAttack}</span>`;
+			if (item.element || item.ailment) {
+				fileString +=
+					` (<span class="${item.element}" title="${item.element}">${item.element ? item.elementAttack : ''}</span>`
+					+ `${item.ailment && item.element ? '/' : ''}`
+					+ `<span class="${item.ailment}" title="${item.ailment}">${item.ailment ? item.ailmentAttack : ''}</span>)`
+					+ `</span>`;
+			}
+			fileString += `</li>`;
 		}
 		fileString += '</ul>'
-			+ '<span class="text-muted float-right">By Neftalí Michelet (neftalimich)</span>'
+			+ '<span class="text-muted float-right" style="font-size:11px">By Neftalí Michelet (neftalimich)</span>'
 			+ '</div></div></div>'
 			+ '</body></html>';
 		const blob = new Blob([fileString], { type: 'text/html' });

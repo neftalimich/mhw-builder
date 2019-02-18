@@ -1,11 +1,11 @@
 <div class="container" (click)="clicked()" [class.selected]="selected" (pointerenter)="setTooltipAugmentation($event, augmentation)" (pointerleave)="clearTooltipAugmentation()">
-	<div class="slot-icon"><img [src]="'assets/images/augment-icon.png'"></div>
+	<div class="slot-icon"><img [src]="'assets/images/augment-icon.png'" alt="augment"></div>
 	<div class="selected-augmentation">
 		<span class="hidden-xs">{{augmentation?.name}}</span>
 		<span class="visible-xs">{{augmentation?.code}}</span>
 	</div>
 
-	<button class="clear-button" (click)="clearClicked($event)">
+	<button type="button" class="clear-button" (click)="clearClicked($event)">
 		<i class="fas fa-times"></i>
 	</button>
 </div>

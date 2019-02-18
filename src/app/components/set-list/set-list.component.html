@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="save-container">
 		<input #saveBox placeholder="Set Name" (keydown.enter)="save(saveBox.value)" />
-		<button type="submit" class="save-button save-color" (click)="save(saveBox.value)">
+		<button type="button" class="save-button save-color" (click)="save(saveBox.value)">
 			<i class="fas fa-save fa-lg" [hidden]="loading==1"></i>
 			<i class="fas fa-spinner fa-spin" [hidden]="loading!=1"></i>
 		</button>
@@ -10,7 +10,7 @@
 		<div [sortablejs]="savedSets" [sortablejsOptions]="eventOptions">
 			<div *ngFor="let item of savedSets; let i = index" class="scroll-item-container">
 				<div class="icon-container text-left">
-					<img [src]="'assets/images/weapons/'+item.weaponType+'-icon.png'" *ngIf="item.weaponType"/>
+					<img [src]="'assets/images/weapons/'+item.weaponType+'-icon.png'" *ngIf="item.weaponType" alt="weapon" />
 				</div>
 				<div class="name-container" (click)="select(item)" [ngClass]="{'sharp-2':i==selectedSetIndex}">
 					{{item.setName}} 
@@ -24,7 +24,7 @@
 					<span *ngIf="item.element || item.ailment">)</span>
 				</div>
 				<div class="buttons-container text-right">
-					<button (click)="remove(i)">
+					<button type="button" (click)="remove(i)">
 						<i class="fas fa-trash" [ngClass]="{'trash-color':item.confirm}"></i>
 					</button>
 					<button [hidden]="!item.confirm">
@@ -35,10 +35,10 @@
 		</div>
 	</div>
 	<div class="download-container text-center">
-		<button (click)="saveSets()" title="Save order of sets">
+		<button type="button" (click)="saveSets()" title="Save order of sets">
 			Save Order <i class="fas fa-save" [hidden]="loading==2"></i><i class="fas fa-spinner fa-spin" [hidden]="loading!=2"></i>
 		</button>
-		<button (click)="downloadFile()" title="Download file">
+		<button type="button" (click)="downloadFile()" title="Download file">
 			Download <i class="fas fa-file-download"></i>
 		</button>
 	</div>
