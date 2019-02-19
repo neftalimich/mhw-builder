@@ -14,7 +14,6 @@ import { AppDataProvider } from '../providers/app-data.provider';
 import { DamageType } from '../types/damage.type';
 import { EquipmentCategoryType } from '../types/equipment-category.type';
 import { ItemType } from '../types/item.type';
-import { SharpnessType } from '../types/sharpness.type';
 import { WeaponType } from '../types/weapon.type';
 
 @Injectable()
@@ -90,9 +89,9 @@ export class DataService {
 		});
 	}
 
-	getSharpnessModifier(damageType: DamageType, sharpnessType: SharpnessType): SharpnessModifierModel {
+	getSharpnessModifier(damageType: DamageType, colorIndex: number): SharpnessModifierModel {
 		return _.find(this.appDataProvider.appData.sharpnessModifiers, mod => {
-			return mod.damageType == damageType && mod.sharpnessType == sharpnessType;
+			return mod.damageType == damageType && mod.colorIndex == colorIndex;
 		});
 	}
 

@@ -2,61 +2,73 @@
 	{
 		"damageType": "Physical",
 		"sharpnessType": "Red",
+		"colorIndex": 0,
 		"value": 0.5
 	},
 	{
 		"damageType": "Physical",
 		"sharpnessType": "Orange",
+		"colorIndex": 1,
 		"value": 0.75
 	},
 	{
 		"damageType": "Physical",
 		"sharpnessType": "Yellow",
+		"colorIndex": 2,
 		"value": 1
 	},
 	{
 		"damageType": "Physical",
 		"sharpnessType": "Green",
+		"colorIndex": 3,
 		"value": 1.05
 	},
 	{
 		"damageType": "Physical",
 		"sharpnessType": "Blue",
+		"colorIndex": 4,
 		"value": 1.2
 	},
 	{
 		"damageType": "Physical",
 		"sharpnessType": "White",
+		"colorIndex": 5,
 		"value": 1.32
 	},
 	{
 		"damageType": "Elemental",
 		"sharpnessType": "Red",
+		"colorIndex": 1,
 		"value": 0.25
 	},
 	{
 		"damageType": "Elemental",
 		"sharpnessType": "Orange",
+		"colorIndex": 2,
 		"value": 0.5
 	},
 	{
 		"damageType": "Elemental",
 		"sharpnessType": "Yellow",
+		"colorIndex": 3,
 		"value": 0.75
 	},
 	{
 		"damageType": "Elemental",
 		"sharpnessType": "Green",
+		"colorIndex": 4,
 		"value": 1
 	},
 	{
 		"damageType": "Elemental",
 		"sharpnessType": "Blue",
+		"colorIndex": 5,
 		"value": 1.0625
 	},
 	{
 		"damageType": "Elemental",
 		"sharpnessType": "White",
+		"colorIndex": 6,
 		"value": 1.125
 	}
 ]

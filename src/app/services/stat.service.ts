@@ -11,7 +11,6 @@ import { DamageType } from '../types/damage.type';
 import { EldersealType } from '../types/elderseal.type';
 import { ElementType } from '../types/element.type';
 import { ItemType } from '../types/item.type';
-import { SharpnessType } from '../types/sharpness.type';
 import { WeaponType } from '../types/weapon.type';
 import { CalculationService } from './calculation.service';
 import { DataService } from './data.service';
@@ -240,52 +239,27 @@ export class StatService {
 			this.stats.sharpnessLevelsBar = weapon.sharpnessLevelsBar;
 			if (weapon.sharpnessLevelsBar && !isNaN(weapon.sharpnessLevelsBar[0])) {
 				let levelsToSubstract = 5 - (this.stats.passiveSharpness / 10);
-				let colorAux = weapon.sharpnessLevelsBar.length - 1;
+				let colorIndex = weapon.sharpnessLevelsBar.length - 1;
 				for (let i = weapon.sharpnessLevelsBar.length - 1; i >= 0; i--) {
 					if (levelsToSubstract > 0) {
 						const toSubstract = Math.min(weapon.sharpnessLevelsBar[i], levelsToSubstract);
 						if (toSubstract < weapon.sharpnessLevelsBar[i]) {
-							colorAux = i;
+							colorIndex = i;
 						} else if (toSubstract == weapon.sharpnessLevelsBar[i]) {
-							colorAux = i - 1;
+							colorIndex = i - 1;
 						}
 						levelsToSubstract -= toSubstract;
 					}
 					if (weapon.sharpnessLevelsBar[i] == 0) {
-						colorAux = i - 1;
+						colorIndex = i - 1;
 					}
 				}
-				let color: SharpnessType;
-				switch (colorAux) {
-					case 6:
-						color = SharpnessType.Purple;
-						break;
-					case 5:
-						color = SharpnessType.White;
-						break;
-					case 4:
-						color = SharpnessType.Blue;
-						break;
-					case 3:
-						color = SharpnessType.Green;
-						break;
-					case 2:
-						color = SharpnessType.Yellow;
-						break;
-					case 1:
-						color = SharpnessType.Orange;
-						break;
-					case 0:
-						color = SharpnessType.Red;
-						break;
-					default:
-						color = SharpnessType.Green;
-				}
-				const sharpnessModifier = this.dataService.getSharpnessModifier(DamageType.Physical, color);
+
+				const sharpnessModifier = this.dataService.getSharpnessModifier(DamageType.Physical, colorIndex);
 				if (sharpnessModifier) {
 					this.stats.effectivePhysicalSharpnessModifier = sharpnessModifier.value;
 				}
-				const ElementalSharpnessModifier = this.dataService.getSharpnessModifier(DamageType.Elemental, color);
+				const ElementalSharpnessModifier = this.dataService.getSharpnessModifier(DamageType.Elemental, colorIndex);
 				if (ElementalSharpnessModifier) {
 					this.stats.effectiveElementalSharpnessModifier = ElementalSharpnessModifier.value;
 				}
