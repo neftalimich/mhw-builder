@@ -2062,7 +2062,7 @@
 	{
 		"id": "goodLuck",
 		"name": "Good Luck",
-		"description": "Good chance of increased quest rewards. (No effect when joining mid-quest.)",
+		"description": "",
 		"levels": [
 			{
 				"description": "Good chance of increased quest rewards. (No effect when joining mid-quest.)"
@@ -2145,7 +2145,7 @@
 	{
 		"id": "greatLuck",
 		"name": "Great Luck",
-		"description": "Often increases the number of rewards received at the end of a quest. (Does not work if joining a quest in progress)",
+		"description": "",
 		"levels": [
 			{
 				"description": "Often increases the number of rewards received at the end of a quest. (Does not work if joining a quest in progress)"
@@ -2155,7 +2155,7 @@
 	{
 		"id": "igniIntensity",
 		"name": "Igni Intensity",
-		"description": "Only those who complete the rigorous witcher training are allowed to use the powerful magic of the Igni Sign.",
+		"description": "",
 		"levels": [
 			{
 				"description": "Only those who complete the rigorous witcher training are allowed to use the powerful magic of the Igni Sign."

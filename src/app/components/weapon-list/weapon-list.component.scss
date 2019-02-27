@@ -75,11 +75,15 @@ $listItemHeight: 66px;
 .sort-container {
 	grid-row: 3;
 	display: grid;
-	grid-template-columns: repeat(14, 1fr);
+	grid-template-columns: repeat(7, 1fr);
 
 	.selected > img {
 		background: $blue;
 		border-radius: 3px;
+	}
+
+	.selected > span {
+		color: $blue;
 	}
 
 	.weapon-sort {
@@ -246,9 +250,9 @@ $listItemHeight: 66px;
 		grid-template-columns: repeat(7, 1fr);
 	}
 
-	.sort-container {
+	/*.sort-container {
 		grid-template-columns: repeat(7,1fr);
-	}
+	}*/
 
 	.name-container > .type {
 		img {

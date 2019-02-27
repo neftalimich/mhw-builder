@@ -60,17 +60,26 @@
 	<div class="sort-container" *ngIf="showSortContainer">
 		<button type="button" class="weapon-sort" [class.selected]="weaponTypeSort == 'ATK'" (click)="weaponSortByAttack()">
 			<!--<img src="assets/images/attack-icon.png" />-->
-			ATK
+			<span>ATK</span>
 		</button>
 		<button type="button" class="weapon-sort" [class.selected]="weaponTypeSort == 'AFN'" (click)="weaponSortByAffinity()">
 			<!--<img src="assets/images/affinity-icon.png" />-->
-			AFN
+			<span>AFN</span>
 		</button>
 		<button type="button" class="weapon-sort" [class.selected]="weaponTypeSort == 'AIL'" (click)="weaponSortByAilment()">
-			AIL
+			<span>AIL</span>
 		</button>
 		<button type="button" class="weapon-sort" [class.selected]="weaponTypeSort == 'ELE'" (click)="weaponSortByElement()">
-			ELE
+			<span>ELE</span>
+		</button>
+		<button type="button" class="weapon-sort" [class.selected]="weaponTypeSort == 'DEF'" (click)="weaponSortByDefense()">
+			<span>DEF</span>
+		</button>
+		<button type="button" class="weapon-sort" [class.selected]="weaponTypeSort == 'SHARP'" (click)="weaponSortBySharpness()">
+			<span>SHARP</span>
+		</button>
+		<button type="button" class="weapon-sort" [class.selected]="weaponTypeSort == 'SLOT'" (click)="weaponSortBySlots()">
+			<span>SLOT</span>
 		</button>
 	</div>
 
@@ -133,7 +142,7 @@
 					</div>
 					<div class="stat-value" [style.color]="item.elementHidden ? 'gray' : 'white'">{{item.elementBaseAttack}}</div>
 				</div>
-				<div class="stat-container" *ngIf="item.sharpnessLevelsBar.length > 1">
+				<div class="stat-container" *ngIf="item.sharpnessLevelsBar.length > 1 && !item.sharpnessDataNeeded">
 					<div class="icon-container">
 						<img src="assets/images/sharpness3-icon.png" alt="sharpness">
 					</div>

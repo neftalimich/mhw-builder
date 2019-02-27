@@ -194,9 +194,9 @@ export class WeaponListComponent implements OnInit {
 	weaponSortByAilment() {
 		this.weaponTypeSort = 'AIL';
 		this.filteredItems.sort(function (item1, item2) {
-			if (item1.ailmentBaseAttack > item2.ailmentBaseAttack) {
+			if (item1.ailment && !item2.ailment || item1.ailmentBaseAttack > item2.ailmentBaseAttack) {
 				return -1;
-			} else if (item1.ailmentBaseAttack < item2.ailmentBaseAttack) {
+			} else if (!item1.ailment && item2.ailment || item1.ailmentBaseAttack < item2.ailmentBaseAttack) {
 				return 1;
 			} else {
 				return 0;
@@ -208,9 +208,89 @@ export class WeaponListComponent implements OnInit {
 	weaponSortByElement() {
 		this.weaponTypeSort = 'ELE';
 		this.filteredItems.sort(function (item1, item2) {
-			if (item1.elementBaseAttack > item2.elementBaseAttack) {
+			if (item1.element && !item2.element || item1.elementBaseAttack > item2.elementBaseAttack) {
 				return -1;
-			} else if (item1.elementBaseAttack < item2.elementBaseAttack) {
+			} else if (!item1.element && item2.element || item1.elementBaseAttack < item2.elementBaseAttack) {
+				return 1;
+			} else {
+				return 0;
+			}
+		});
+		this.virtualItems = this.filteredItems;
+	}
+
+	weaponSortByDefense() {
+		this.weaponTypeSort = 'DEF';
+		this.filteredItems.sort(function (item1, item2) {
+			if (item1.baseDefense > item2.baseDefense) {
+				return -1;
+			} else if (item1.baseDefense < item2.baseDefense) {
+				return 1;
+			} else {
+				return 0;
+			}
+		});
+		this.virtualItems = this.filteredItems;
+	}
+
+	weaponSortBySharpness() {
+		this.weaponTypeSort = 'SHARP';
+		this.filteredItems.sort(function (item1, item2) {
+			let sharp1 = -1;
+			let sharp2 = -1;
+			if (!item1.sharpnessDataNeeded && item1.sharpnessLevelsBar.length > 0) {
+				if (item1.sharpnessLevelsBar[item1.sharpnessLevelsBar.length - 1] > 0) {
+					sharp1 = item1.sharpnessLevelsBar.length * 100 + item1.sharpnessLevelsBar[item1.sharpnessLevelsBar.length - 1];
+				} else {
+					sharp1 = (item1.sharpnessLevelsBar.length - 1) * 100 + item1.sharpnessLevelsBar[item1.sharpnessLevelsBar.length - 2];
+				}
+			}
+			if (!item2.sharpnessDataNeeded && item2.sharpnessLevelsBar.length > 0) {
+				if (item2.sharpnessLevelsBar[item2.sharpnessLevelsBar.length - 1] > 0) {
+					sharp2 = item2.sharpnessLevelsBar.length * 100 + item2.sharpnessLevelsBar[item2.sharpnessLevelsBar.length - 1];
+				} else {
+					sharp2 = (item2.sharpnessLevelsBar.length - 1) * 100 + item2.sharpnessLevelsBar[item2.sharpnessLevelsBar.length - 2];
+				}
+			}
+			if (sharp1 > sharp2) {
+				return -1;
+			} else if (sharp1 < sharp2) {
+				return 1;
+			} else {
+				return 0;
+			}
+		});
+		this.virtualItems = this.filteredItems;
+	}
+
+	weaponSortBySlots() {
+		this.weaponTypeSort = 'SLOT';
+		this.filteredItems.sort(function (item1, item2) {
+			let slotValue1 = 0;
+			let slotValue2 = 0;
+
+			if (item1.slots.length > 0) {
+				slotValue1 += item1.slots[0].level * 100;
+			}
+			if (item1.slots.length > 1) {
+				slotValue1 += item1.slots[1].level * 10;
+			}
+			if (item1.slots.length > 2) {
+				slotValue1 += item1.slots[2].level;
+			}
+			if (item2.slots.length > 0) {
+				slotValue2 += item2.slots[0].level * 100;
+			}
+			if (item2.slots.length > 1) {
+				slotValue2 += item2.slots[1].level * 10;
+			}
+			if (item2.slots.length > 2) {
+				slotValue2 += item2.slots[2].level;
+			}
+
+			if (slotValue1 > slotValue2) {
+				return -1;
+			} else if (slotValue1 < slotValue2) {
 				return 1;
 			} else {
 				return 0;
