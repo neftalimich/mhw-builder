@@ -115,7 +115,7 @@ export class SlotService {
 			this.clearSlotItems(this.selectedItemSlot);
 
 			if (!item.equippedLevel && item.itemType == ItemType.Charm) {
-				item.equippedLevel = 1;
+				item.equippedLevel = item.levels;
 			}
 
 			this.equipmentService.addItem(item);

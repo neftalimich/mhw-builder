@@ -52,7 +52,7 @@ export class SetListComponent implements OnInit {
 			let setItem = this.savedSets.find(s => s.setName === setName);
 			if (setItem) {
 				setItem.hashString = location.hash;
-				setItem.weaponType = this.statService.stats.weaponType.toLowerCase();
+				setItem.weaponType = this.statService.stats.weaponType ? this.statService.stats.weaponType.toLowerCase().toLowerCase() : '';
 				setItem.totalAttack = this.statService.stats.totalAttack;
 				setItem.element = this.statService.stats.element;
 				setItem.elementAttack = this.statService.stats.totalElementAttack;
@@ -64,7 +64,7 @@ export class SetListComponent implements OnInit {
 				setItem = {
 					setName: setName,
 					hashString: location.hash,
-					weaponType: this.statService.stats.weaponType.toLowerCase(),
+					weaponType: this.statService.stats.weaponType ? this.statService.stats.weaponType.toLowerCase().toLowerCase() : '',
 					totalAttack: this.statService.stats.totalAttack,
 					element: this.statService.stats.element,
 					elementAttack: this.statService.stats.totalElementAttack,
