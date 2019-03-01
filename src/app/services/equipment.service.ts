@@ -5,12 +5,14 @@ import { DecorationModel } from '../models/decoration.model';
 import { ItemModel } from '../models/item.model';
 import { SkillService } from './skill.service';
 import { StatService } from './stat.service';
+import { ModificationModel } from '../models/modification.model';
 
 @Injectable()
 export class EquipmentService {
 	public items: ItemModel[];
 	public decorations: DecorationModel[];
 	public augmentations: AugmentationModel[];
+	public modifications: ModificationModel[];
 
 	constructor(
 		private skillService: SkillService,
@@ -19,6 +21,7 @@ export class EquipmentService {
 		this.items = [];
 		this.decorations = [];
 		this.augmentations = [];
+		this.modifications = [];
 
 		this.skillService.skillsUpdated$.subscribe(skills => {
 			this.statService.update(skills, this.items, this.augmentations);
@@ -52,6 +55,11 @@ export class EquipmentService {
 
 	removeAugmentation(augmentation: AugmentationModel) {
 		this.augmentations = _.reject(this.augmentations, a => a === augmentation);
+		this.updateSkills();
+	}
+
+	removeModification(modification: ModificationModel) {
+		this.modifications = _.reject(this.modifications, a => a === modification);
 		this.updateSkills();
 	}
 

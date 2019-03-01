@@ -38,6 +38,7 @@ import { TooltipService } from './services/tooltip.service';
 import { MaxSharpnessPipe } from './pipes/max-sharpness.pipe';
 import { SharpnessBarComponent } from './components/sharpness-bar/sharpness-bar.component';
 import { SetListComponent } from './components/set-list/set-list.component';
+import { ModificationSlotComponent } from './components/modification-slot/modification-slot.component';
 
 
 @NgModule({
@@ -65,7 +66,8 @@ import { SetListComponent } from './components/set-list/set-list.component';
 		TooltipComponent,
 		MaxSharpnessPipe,
 		SharpnessBarComponent,
-		SetListComponent
+		SetListComponent,
+		ModificationSlotComponent
 	],
 	imports: [
 		BrowserModule,

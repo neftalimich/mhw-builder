@@ -7,12 +7,14 @@ import { EquippedSkillModel } from '../models/equipped-skill.model';
 import { ItemModel } from '../models/item.model';
 import { SkillModel } from '../models/skill.model';
 import { StatDetailModel } from '../models/stat-detail.model';
+import { ModificationModel } from '../models/modification.model';
 
 @Injectable()
 export class TooltipService {
 	public itemChanged$ = new Subject<ItemModel>();
 	public decorationChanged$ = new Subject<DecorationModel>();
 	public augmentationChanged$ = new Subject<AugmentationModel>();
+	public modificationChanged$ = new Subject<ModificationModel>();
 	public equippedSkillChanged$ = new Subject<EquippedSkillModel>();
 	public equippedSetBonusChanged$ = new Subject<EquippedSetBonusModel>();
 	public skillChanged$ = new Subject<SkillModel>();
@@ -21,6 +23,7 @@ export class TooltipService {
 	public item: ItemModel;
 	public decoration: DecorationModel;
 	public augmentation: AugmentationModel;
+	public modification: ModificationModel;
 	public equippedSkill: EquippedSkillModel;
 	public equippedSetBonus: EquippedSetBonusModel;
 	public skill: SkillModel;
@@ -47,6 +50,14 @@ export class TooltipService {
 			this.reset();
 			this.augmentation = augmentation;
 			this.augmentationChanged$.next(augmentation);
+		}
+	}
+
+	setModification(modification: ModificationModel) {
+		if (modification != this.augmentation) {
+			this.reset();
+			this.modification = modification;
+			this.modificationChanged$.next(modification);
 		}
 	}
 

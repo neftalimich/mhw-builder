@@ -9,6 +9,7 @@ import { SlotService } from '../../services/slot.service';
 import { PointerType } from '../../types/pointer.type';
 import { EquipmentCategoryType } from '../../types/equipment-category.type';
 import { DataService } from '../../services/data.service';
+import { ModificationModel } from 'src/app/models/modification.model';
 
 @Component({
 	selector: 'mhw-builder-item-slot',
@@ -24,6 +25,7 @@ export class ItemSlotComponent implements OnInit {
 	item: ItemModel;
 
 	public augmentations = new Array<AugmentationModel>();
+	public modifications = new Array<ModificationModel>();
 	public selected: boolean;
 
 	constructor(

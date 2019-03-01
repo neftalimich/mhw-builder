@@ -4,21 +4,25 @@ import { Subject } from 'rxjs';
 import { AugmentationSlotComponent } from '../components/augmentation-slot/augmentation-slot.component';
 import { DecorationSlotComponent } from '../components/decoration-slot/decoration-slot.component';
 import { ItemSlotComponent } from '../components/item-slot/item-slot.component';
+import { ModificationSlotComponent } from '../components/modification-slot/modification-slot.component';
 import { AugmentationModel } from '../models/augmentation.model';
 import { DecorationModel } from '../models/decoration.model';
 import { ItemModel } from '../models/item.model';
+import { ModificationModel } from '../models/modification.model';
 import { SlotEventModel } from '../models/slot-event.model';
 import { EquipmentCategoryType } from '../types/equipment-category.type';
 import { ItemType } from '../types/item.type';
 import { EquipmentService } from './equipment.service';
+import { WeaponType } from '../types/weapon.type';
 
 @Injectable()
 export class SlotService {
-	public anySlotSelected$ = new Subject<ItemSlotComponent | DecorationSlotComponent | AugmentationSlotComponent>();
+	public anySlotSelected$ = new Subject<ItemSlotComponent | DecorationSlotComponent | AugmentationSlotComponent | ModificationSlotComponent>();
 
 	public itemSelected$ = new Subject<SlotEventModel<ItemSlotComponent, ItemModel>>();
 	public decorationSelected$ = new Subject<SlotEventModel<DecorationSlotComponent, DecorationModel>>();
 	public augmentationSelected$ = new Subject<SlotEventModel<AugmentationSlotComponent, AugmentationModel>>();
+	public modificationSelected$ = new Subject<SlotEventModel<ModificationSlotComponent, ModificationModel>>();
 	public itemLevelChanged$ = new Subject();
 
 	weaponSlot: ItemSlotComponent;
@@ -34,6 +38,7 @@ export class SlotService {
 	selectedItemSlot: ItemSlotComponent;
 	selectedDecorationSlot: DecorationSlotComponent;
 	selectedAugmentationSlot: AugmentationSlotComponent;
+	selectedModificationSlot: ModificationSlotComponent;
 
 	constructor(
 		private equipmentService: EquipmentService
@@ -89,6 +94,16 @@ export class SlotService {
 		}
 	}
 
+	selectModificationSlot(slot: ModificationSlotComponent) {
+		this.clearSlots();
+		this.selectedModificationSlot = slot;
+
+		if (this.selectedModificationSlot) {
+			this.selectedModificationSlot.selected = true;
+			this.anySlotSelected$.next(this.selectedModificationSlot);
+		}
+	}
+
 	clearItemSlot(slot: ItemSlotComponent) {
 		this.clearSlotItems(slot);
 
@@ -110,12 +125,19 @@ export class SlotService {
 		this.augmentationSelected$.next({ slot: slot, equipment: null });
 	}
 
+	clearModificationSlot(slot: ModificationSlotComponent) {
+		this.equipmentService.removeModification(slot.modification);
+		this.applySlotModification();
+		slot.modification = null;
+		this.modificationSelected$.next({ slot: slot, equipment: null });
+	}
+
 	selectItem(item: ItemModel) {
 		if (this.selectedItemSlot) {
 			this.clearSlotItems(this.selectedItemSlot);
 
 			if (!item.equippedLevel && item.itemType == ItemType.Charm) {
-				item.equippedLevel = 1;
+				item.equippedLevel = item.levels;
 			}
 
 			this.equipmentService.addItem(item);
@@ -139,6 +161,14 @@ export class SlotService {
 					];
 				} else {
 					this.selectedItemSlot.augmentations = [];
+				}
+
+				if (item.weaponType == WeaponType.LightBowgun || item.weaponType == WeaponType.HeavyBowgun) {
+					this.selectedItemSlot.modifications = [
+						new ModificationModel(),
+						new ModificationModel(),
+						new ModificationModel()
+					];
 				}
 			}
 
@@ -203,6 +233,33 @@ export class SlotService {
 				this.equipmentService.removeDecoration(this.weaponSlot.decorationSlots.last.decoration);
 			}
 		}
+	}
+
+	private applySlotModification() {
+		//const slotAugs = _.filter(this.equipmentService.augmentations, aug => aug.id == 4);
+		//const augDecorationSlot = _.find(this.weaponSlot.item.slots, slot => slot.augmentation);
+
+		//if (slotAugs && slotAugs.length) {
+		//	this.changeDetector.detectChanges();
+
+		//	if (augDecorationSlot) {
+		//		augDecorationSlot.level = slotAugs[0].levels[slotAugs.length - 1].slotLevel;
+		//		const decoSlot = this.weaponSlot.decorationSlots.last;
+		//		if (decoSlot && decoSlot.decoration && augDecorationSlot.level < decoSlot.decoration.level) {
+		//			this.clearDecorationSlot(decoSlot);
+		//		}
+		//	} else {
+		//		if (!this.weaponSlot.item.slots) {
+		//			this.weaponSlot.item.slots = [];
+		//		}
+		//		this.weaponSlot.item.slots.push({ level: slotAugs[0].levels[slotAugs.length - 1].slotLevel, augmentation: true });
+		//	}
+		//} else {
+		//	if (_.some(this.weaponSlot.item.slots, decorationSlot => decorationSlot.augmentation)) {
+		//		this.weaponSlot.item.slots = _.reject(this.weaponSlot.item.slots, decorationSlot => decorationSlot === augDecorationSlot);
+		//		this.equipmentService.removeDecoration(this.weaponSlot.decorationSlots.last.decoration);
+		//	}
+		//}
 	}
 
 	private clearSlotItems(slot: ItemSlotComponent) {
