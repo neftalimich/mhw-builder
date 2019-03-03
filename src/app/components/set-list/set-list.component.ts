@@ -34,6 +34,7 @@ export class SetListComponent implements OnInit {
 	}
 
 	ngOnInit() {
+		this.setService.importSet();
 		this.sets = this.setService.getSets();
 	}
 
@@ -72,8 +73,9 @@ export class SetListComponent implements OnInit {
 		});
 		const fileName = `mhw-builder-save(${dateNow}).html`;
 		let fileString = '<html><head>'
-			+ `<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">`
-			+ '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">';
+			+ `<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">`
+			+ '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">'
+			+ '<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">';
 		fileString += `<style>
 				.Fire {
 					color: #ff6666;
@@ -111,12 +113,14 @@ export class SetListComponent implements OnInit {
 			+ '<h2>MHW-Builder</h2>'
 			+ '<ul class="list-group">';
 		for (const item of this.sets) {
-			fileString += `<li class="list-group-item">`
+			fileString += `<li class="list-group-item" style="padding:8px!important">`
 				// + `<img src="https://neftalimich.github.io/mhw-builder-page/assets/images/weapons/${item.weaponType}-icon.png" class="weapon-img" />`
-				+ `<a href="https://neftalimich.github.io/mhw-builder-page?${item.hashString}" class="text-decoration-none">`
+				+ `<a href="https://neftalimich.github.io/mhw-builder-page?${item.hashString}" class="text-decoration-none" target="_blank">`
 				+ `${item.setName}`
 				+ `</a> `
-				+ ` - <span class="text-capitalize">${item.weaponType} </span>`
+				+ ` - <span class="text-capitalize">${item.weaponType}</span>`
+				+ `<a class="float-right ml-1 mt-1 text-secondary" href="https://neftalimich.github.io/mhw-builder-page?${item.hashString}i${item.setName}" target="_blank" title="Import">`
+				+ `<i class="fas fa-cloud-upload-alt fa-sm"></i></a>`
 				+ `<span class="float-right">`
 				+ `<span>${item.totalAttack}</span>`;
 			if (item.element || item.ailment) {
