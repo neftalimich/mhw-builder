@@ -23,7 +23,6 @@ export class SetService {
 		if (stringSets) {
 			try {
 				this.sets = JSON.parse(stringSets);
-				this.setsUpdated$.next(this.sets);
 			} catch (err) {
 				console.log('LocalStorage-Error:', stringSets);
 			}
@@ -79,6 +78,7 @@ export class SetService {
 		} else {
 			this.sets[index].confirm = true;
 		}
+		this.setsUpdated$.next(this.sets);
 	}
 
 	select(set: SavedSetModel): number {
