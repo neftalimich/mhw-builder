@@ -31,13 +31,15 @@ export class SetService {
 
 	importSet() {
 		const buildId = location.hash;
-		const itemGroupRegex = /(i[.]*[^i]*)/g;
-		const itemGroups = buildId.match(itemGroupRegex);
-		if (itemGroups.length > 7 && itemGroups[7].length > 1) {
-			const setName = itemGroups[7].substring(1, itemGroups[7].length);
-			itemGroups.splice(-1, 1);
-			this.location.replaceState(this.location.path(false), '#v1' + itemGroups.join(''));
-			this.save(setName + '_IMPORTED', false);
+		if (buildId.length > 0) {
+			const itemGroupRegex = /(i[.]*[^i]*)/g;
+			const itemGroups = buildId.match(itemGroupRegex);
+			if (itemGroups.length > 7 && itemGroups[7].length > 1) {
+				const setName = itemGroups[7].substring(1, itemGroups[7].length);
+				itemGroups.splice(-1, 1);
+				this.location.replaceState(this.location.path(false), '#v1' + itemGroups.join(''));
+				this.save(setName + '_IMPORTED', false);
+			}
 		}
 	}
 
