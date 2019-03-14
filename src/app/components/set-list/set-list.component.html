@@ -6,9 +6,9 @@
 			<i class="fas fa-spinner fa-spin" [hidden]="loading!=1"></i>
 		</button>
 	</div>
-	<div class="scroll-container" *ngIf="savedSets">
-		<div [sortablejs]="savedSets" [sortablejsOptions]="eventOptions">
-			<div *ngFor="let item of savedSets; let i = index" class="scroll-item-container">
+	<div class="scroll-container" *ngIf="sets">
+		<div [sortablejs]="sets" [sortablejsOptions]="eventOptions">
+			<div *ngFor="let item of sets; let i = index" class="scroll-item-container">
 				<div class="icon-container text-left">
 					<img [src]="'assets/images/weapons/'+item.weaponType+'-icon.png'" *ngIf="item.weaponType" alt="weapon" />
 				</div>
@@ -38,8 +38,11 @@
 		<button type="button" (click)="saveSets()" title="Save order of sets">
 			Save Order <i class="fas fa-save" [hidden]="loading==2"></i><i class="fas fa-spinner fa-spin" [hidden]="loading!=2"></i>
 		</button>
-		<button type="button" (click)="downloadFile()" title="Download file">
-			Download <i class="fas fa-file-download"></i>
+		<button type="button" (click)="downloadHtmlFile()" title="Download file">
+			HTML <i class="fas fa-file-download"></i>
+		</button>
+		<button type="button" (click)="downloadJsonFile()" title="Download file">
+			JSON <i class="fas fa-file-code"></i>
 		</button>
 	</div>
 </div>
