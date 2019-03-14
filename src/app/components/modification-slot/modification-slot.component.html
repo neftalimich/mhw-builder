@@ -1,5 +1,5 @@
 <div class="container" (click)="clicked()" [class.selected]="selected" (pointerenter)="setTooltipModification($event, modification)" (pointerleave)="clearTooltipModification()">
-	<div class="slot-icon"><img [src]="'assets/images/village-icon.png'" alt="augment"></div>
+	<div class="slot-icon"><img [src]="'assets/images/mod-icon.png'" alt="augment"></div>
 	<div class="selected-modification">
 		<span class="hidden-xs">{{modification?.name}}</span>
 		<span class="visible-xs">{{modification?.code}}</span>

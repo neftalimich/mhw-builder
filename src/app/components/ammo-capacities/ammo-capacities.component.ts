@@ -28,6 +28,9 @@ export class AmmoCapacitiesComponent implements OnInit {
 
 	constructor(private statService: StatService) {
 		this.statService.statsUpdated$.subscribe(stats => {
+			this.recoilSuppresorMod = 0;
+			this.reloadAssistMod = 0;
+			this.deviationSuppresorMod = 0;
 			this.setRecoil(Math.abs(stats.recoil));
 			this.setReload(Math.abs(stats.reload));
 			this.setDeviation(Math.abs(stats.deviation));
