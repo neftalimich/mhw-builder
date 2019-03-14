@@ -102,6 +102,9 @@ export class StatsModel {
 	ammoCapacitiesUp: AmmoCapacitiesModel;
 	ammoUp: number;
 	extraData: ExtraDataModel;
+	recoil: number;
+	reload: number;
+	deviation: number;
 
 	constructor() {
 		this.totalAttack = 0;
@@ -179,6 +182,10 @@ export class StatsModel {
 		this.passiveDefense = 0;
 		this.passiveHealth = 0;
 		this.passiveStamina = 0;
+
+		this.recoil = 0;
+		this.reload = 0;
+		this.deviation = 0;
 
 		this.fireResist = 0;
 		this.waterResist = 0;

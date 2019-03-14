@@ -4,6 +4,7 @@ import { Subject } from 'rxjs';
 import { AugmentationModel } from '../models/augmentation.model';
 import { EquippedSkillModel } from '../models/equipped-skill.model';
 import { ItemModel } from '../models/item.model';
+import { ModificationModel } from '../models/modification.model';
 import { SkillLevelModel } from '../models/skill-level.model';
 import { StatsModel } from '../models/stats.model';
 import { AilmentType } from '../types/ailment.type';
@@ -28,12 +29,13 @@ export class StatService {
 		private calcService: CalculationService
 	) { }
 
-	update(skills: EquippedSkillModel[], items: ItemModel[], augmentations: AugmentationModel[]) {
+	update(skills: EquippedSkillModel[], items: ItemModel[], augmentations: AugmentationModel[], modifications: ModificationModel[]) {
 		this.stats = new StatsModel();
 
 		this.updateItemStats(items);
 		this.updateSkillStats(skills);
 		this.updateAugmentations(augmentations);
+		this.updateModifications(modifications);
 
 		const weapon = _.find(items, item => item.weaponType != null);
 
@@ -158,6 +160,23 @@ export class StatService {
 					if (level.passiveAffinity) { this.stats.passiveAffinity += level.passiveAffinity; }
 					if (level.passiveDefense) { this.stats.passiveDefense += level.passiveDefense; }
 					if (level.healOnHitPercent) { this.stats.healOnHitPercent += level.healOnHitPercent; }
+				}
+			}
+		}
+	}
+
+	private updateModifications(modifications: ModificationModel[]) {
+		const modGroups = _.groupBy(modifications, 'id');
+
+		for (const key in modGroups) {
+			if (modGroups.hasOwnProperty(key)) {
+				const value = modGroups[key];
+
+				const level = value[0].levels[value.length - 1];
+				if (level) {
+					if (level.recoil) { this.stats.recoil += level.recoil; }
+					if (level.reload) { this.stats.reload += level.reload; }
+					if (level.deviation) { this.stats.deviation += level.deviation; }
 				}
 			}
 		}

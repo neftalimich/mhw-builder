@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, Observer, forkJoin } from 'rxjs';
+import { forkJoin, Observable, Observer } from 'rxjs';
 import { AmmoCapacitiesLoader } from '../data/loaders/ammo-capacities.loader';
 import { ArmorLoader } from '../data/loaders/armor.loader';
 import { AugmentationsLoader } from '../data/loaders/augmentations.loader';
@@ -7,6 +7,7 @@ import { CharmsLoader } from '../data/loaders/charms.loader';
 import { DecorationsLoader } from '../data/loaders/decorations.loader';
 import { MelodiesLoader } from '../data/loaders/melodies.loader';
 import { MelodyEffectLoader } from '../data/loaders/melodyEffect.loader';
+import { ModificationsLoader } from '../data/loaders/modifications.loader';
 import { SetBonusesLoader } from '../data/loaders/set-bonuses.loader';
 import { SharpnessModifiersLoader } from '../data/loaders/sharpness-modifiers.loader';
 import { SkillsLoader } from '../data/loaders/skills.loader';
@@ -24,6 +25,7 @@ export class AppDataProvider {
 		private charmsLoader: CharmsLoader,
 		private decorationsLoader: DecorationsLoader,
 		private augmentationsLoader: AugmentationsLoader,
+		private modificationsLoader: ModificationsLoader,
 		private skillsLoader: SkillsLoader,
 		private setBonusesLoader: SetBonusesLoader,
 		private sharpnessModifiersLoader: SharpnessModifiersLoader,
@@ -43,6 +45,7 @@ export class AppDataProvider {
 				this.charmsLoader.load('charms.tsv'),
 				this.decorationsLoader.load('decorations.tsv'),
 				this.augmentationsLoader.load('augmentations.json'),
+				this.modificationsLoader.load('modifications.json'),
 				this.skillsLoader.load('skills.json'),
 				this.setBonusesLoader.load('set-bonuses.json'),
 				this.sharpnessModifiersLoader.load('sharpness-modifiers.json', false),
@@ -56,13 +59,14 @@ export class AppDataProvider {
 				this.appData.charms = results[2];
 				this.appData.decorations = results[3];
 				this.appData.augmentations = results[4];
-				this.appData.skills = results[5];
-				this.appData.setBonuses = results[6];
-				this.appData.sharpnessModifiers = results[7];
-				this.appData.weaponModifiers = results[8];
-				this.appData.ammoCapacities = results[9];
-				this.appData.melodies = results[10];
-				this.appData.melodyEffect = results[11];
+				this.appData.modifications = results[5];
+				this.appData.skills = results[6];
+				this.appData.setBonuses = results[7];
+				this.appData.sharpnessModifiers = results[8];
+				this.appData.weaponModifiers = results[9];
+				this.appData.ammoCapacities = results[10];
+				this.appData.melodies = results[11];
+				this.appData.melodyEffect = results[12];
 
 				observer.next(true);
 				observer.complete();

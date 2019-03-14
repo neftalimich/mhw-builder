@@ -6,6 +6,7 @@ import { CharmsLoader } from './loaders/charms.loader';
 import { DecorationsLoader } from './loaders/decorations.loader';
 import { MelodiesLoader } from './loaders/melodies.loader';
 import { MelodyEffectLoader } from './loaders/melodyEffect.loader';
+import { ModificationsLoader } from './loaders/modifications.loader';
 import { SetBonusesLoader } from './loaders/set-bonuses.loader';
 import { SharpnessModifiersLoader } from './loaders/sharpness-modifiers.loader';
 import { SkillsLoader } from './loaders/skills.loader';
@@ -19,6 +20,7 @@ import { WeaponsLoader } from './loaders/weapons.loader';
 		CharmsLoader,
 		DecorationsLoader,
 		AugmentationsLoader,
+		ModificationsLoader,
 		SkillsLoader,
 		SetBonusesLoader,
 		SharpnessModifiersLoader,

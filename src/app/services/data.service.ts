@@ -5,6 +5,7 @@ import { AugmentationModel } from '../models/augmentation.model';
 import { DecorationModel } from '../models/decoration.model';
 import { ItemModel } from '../models/item.model';
 import { MelodiesModel } from '../models/melodies.model';
+import { ModificationModel } from '../models/modification.model';
 import { SetBonusModel } from '../models/set-bonus.model';
 import { SharpnessModifierModel } from '../models/sharpness-modifier.model';
 import { SkillReferenceModel } from '../models/skill-reference.model';
@@ -105,6 +106,14 @@ export class DataService {
 
 	getAugmentation(id: number): AugmentationModel {
 		return _.find(this.appDataProvider.appData.augmentations, augmentation => augmentation.id == id);
+	}
+
+	getModifications(): ModificationModel[] {
+		return this.appDataProvider.appData.modifications;
+	}
+
+	getModification(id: number): ModificationModel {
+		return _.find(this.appDataProvider.appData.modifications, modification => modification.id == id);
 	}
 
 	getWeaponTypeName(weaponType: WeaponType): string {

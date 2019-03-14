@@ -44,6 +44,10 @@ export class BuildService {
 			if (!this.loadingBuild) { this.updateBuildId(); }
 		});
 
+		this.slotService.modificationSelected$.subscribe(() => {
+			if (!this.loadingBuild) { this.updateBuildId(); }
+		});
+
 		this.slotService.itemLevelChanged$.subscribe(() => {
 			if (!this.loadingBuild) { this.updateBuildId(); }
 		});
@@ -72,7 +76,7 @@ export class BuildService {
 		const decoRegex = /(?<=d)([\d]+)/g;
 		const augRegex = /(?<=a)([\d]+)/g;
 		const kinsectRegex = /(?<=k)([\d]+)/g;
-		const modificationRegex = /(?<=m)([\d]+)/g;
+		const modRegex = /(?<=m)([\d]+)/g;
 		const elementRegex = /(?<=e)([\d]+)/g;
 		const levelRegex = /(?<=l)([\d]+)/g;
 
@@ -104,17 +108,17 @@ export class BuildService {
 				}
 			}
 
-			const kinsect = itemGroup.match(kinsectRegex);
-			if (kinsect) {
-				buildItem.kinsectId = parseInt(kinsect[0], 10);
-			}
-
-			const mods = itemGroup.match(modificationRegex);
+			const mods = itemGroup.match(modRegex);
 			if (mods) {
 				buildItem.modificationIds = [];
 				for (const mod of mods) {
 					buildItem.modificationIds.push(parseInt(mod, 10));
 				}
+			}
+
+			const kinsect = itemGroup.match(kinsectRegex);
+			if (kinsect) {
+				buildItem.kinsectId = parseInt(kinsect[0], 10);
 			}
 
 			const element = itemGroup.match(elementRegex);
@@ -196,6 +200,19 @@ export class BuildService {
 							}
 						}
 					}
+					if (buildItem.modificationIds) {
+						for (let i = 0; i < buildItem.modificationIds.length; i++) {
+							const modId = buildItem.modificationIds[i];
+							if (modId) {
+								const mod = this.dataService.getModification(modId);
+								if (mod) {
+									this.slotService.selectModificationSlot(slot.modificationSlots.toArray()[i]);
+									const newAug = Object.assign({}, mod);
+									this.slotService.selectModification(newAug);
+								}
+							}
+						}
+					}
 				}
 
 				this.changeDetector.detectChanges();
@@ -256,6 +273,11 @@ export class BuildService {
 				for (const aug of this.equipmentService.augmentations) {
 					if (aug.id) {
 						result += `a${aug.id}`;
+					}
+				}
+				for (const mod of this.equipmentService.modifications) {
+					if (mod.id) {
+						result += `m${mod.id}`;
 					}
 				}
 			}

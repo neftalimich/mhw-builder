@@ -2,7 +2,7 @@ $slotHeight: 30px;
 
 .container {
 	display: grid;
-	grid-template-columns: 40px auto 36px;
+	grid-template-columns: 36px auto 36px;
 	height: $slotHeight;
 	font-size: 14px;
 	cursor: pointer;
@@ -12,12 +12,13 @@ $slotHeight: 30px;
 
 	.slot-icon {
 		line-height: $slotHeight;
-		width: 40px;
+		width: 36px;
 		margin-left: 4px;
 		margin-top: 4px;
 
-		img{
+		img {
 			height: 25px;
+			width: auto;
 		}
 	}
 

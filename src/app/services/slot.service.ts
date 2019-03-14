@@ -109,6 +109,7 @@ export class SlotService {
 
 		slot.item = null;
 		slot.augmentations = [];
+		slot.modifications = [];
 		this.itemSelected$.next({ slot: slot, equipment: null });
 	}
 
@@ -127,7 +128,6 @@ export class SlotService {
 
 	clearModificationSlot(slot: ModificationSlotComponent) {
 		this.equipmentService.removeModification(slot.modification);
-		this.applySlotModification();
 		slot.modification = null;
 		this.modificationSelected$.next({ slot: slot, equipment: null });
 	}
@@ -169,6 +169,8 @@ export class SlotService {
 						new ModificationModel(),
 						new ModificationModel()
 					];
+				} else {
+					this.selectedItemSlot.modifications = [];
 				}
 			}
 
@@ -200,6 +202,18 @@ export class SlotService {
 			this.applySlotAugmentation();
 			this.selectedAugmentationSlot.augmentation = augmentation;
 			this.augmentationSelected$.next({ slot: this.selectedAugmentationSlot, equipment: augmentation });
+		}
+	}
+
+	selectModification(modification: ModificationModel) {
+		if (this.selectedModificationSlot) {
+			if (this.selectedModificationSlot.modification) {
+				this.equipmentService.removeModification(this.selectedModificationSlot.modification);
+			}
+
+			this.equipmentService.addModification(modification);
+			this.selectedModificationSlot.modification = modification;
+			this.modificationSelected$.next({ slot: this.selectedModificationSlot, equipment: modification });
 		}
 	}
 
@@ -235,33 +249,6 @@ export class SlotService {
 		}
 	}
 
-	private applySlotModification() {
-		//const slotAugs = _.filter(this.equipmentService.augmentations, aug => aug.id == 4);
-		//const augDecorationSlot = _.find(this.weaponSlot.item.slots, slot => slot.augmentation);
-
-		//if (slotAugs && slotAugs.length) {
-		//	this.changeDetector.detectChanges();
-
-		//	if (augDecorationSlot) {
-		//		augDecorationSlot.level = slotAugs[0].levels[slotAugs.length - 1].slotLevel;
-		//		const decoSlot = this.weaponSlot.decorationSlots.last;
-		//		if (decoSlot && decoSlot.decoration && augDecorationSlot.level < decoSlot.decoration.level) {
-		//			this.clearDecorationSlot(decoSlot);
-		//		}
-		//	} else {
-		//		if (!this.weaponSlot.item.slots) {
-		//			this.weaponSlot.item.slots = [];
-		//		}
-		//		this.weaponSlot.item.slots.push({ level: slotAugs[0].levels[slotAugs.length - 1].slotLevel, augmentation: true });
-		//	}
-		//} else {
-		//	if (_.some(this.weaponSlot.item.slots, decorationSlot => decorationSlot.augmentation)) {
-		//		this.weaponSlot.item.slots = _.reject(this.weaponSlot.item.slots, decorationSlot => decorationSlot === augDecorationSlot);
-		//		this.equipmentService.removeDecoration(this.weaponSlot.decorationSlots.last.decoration);
-		//	}
-		//}
-	}
-
 	private clearSlotItems(slot: ItemSlotComponent) {
 		this.equipmentService.removeItem(slot.item);
 
@@ -271,6 +258,10 @@ export class SlotService {
 
 		slot.augmentationSlots.forEach(as => {
 			this.equipmentService.removeAugmentation(as.augmentation);
+		});
+
+		slot.modificationSlots.forEach(md => {
+			this.equipmentService.removeModification(md.modification);
 		});
 	}
 
@@ -287,8 +278,13 @@ export class SlotService {
 			this.selectedAugmentationSlot.selected = false;
 		}
 
+		if (this.selectedModificationSlot) {
+			this.selectedModificationSlot.selected = false;
+		}
+
 		this.selectedItemSlot = null;
 		this.selectedDecorationSlot = null;
 		this.selectedAugmentationSlot = null;
+		this.selectedModificationSlot = null;
 	}
 }

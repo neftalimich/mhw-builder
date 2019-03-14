@@ -1,0 +1,22 @@
+<div class="container">
+	<div class="items-container">
+		<ul>
+			<li *ngFor="let mod of modifications" (click)="selectModification(mod)" (pointerenter)="setTooltipModification($event, mod)" (pointerleave)="clearTooltipModification()">
+				<div class="info-container">
+					<div class="name-container">
+						{{mod.name}}
+					</div>
+					<div class="stat-container">
+						<div class="description-value">
+							{{mod.description}}
+							<br />
+							<div *ngFor="let level of mod.levels">
+								{{level.description}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>

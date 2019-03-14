@@ -8,6 +8,7 @@ import { SetBonusModel } from './set-bonus.model';
 import { SharpnessModifierModel } from './sharpness-modifier.model';
 import { SkillModel } from './skill.model';
 import { WeaponModifierModel } from './weapon-modifier.model';
+import { ModificationModel } from './modification.model';
 
 export class AppDataModel {
 	weaponModifiers: WeaponModifierModel[];
@@ -19,6 +20,7 @@ export class AppDataModel {
 	skills: SkillModel[];
 	decorations: DecorationModel[];
 	augmentations: AugmentationModel[];
+	modifications: ModificationModel[];
 	ammoCapacities: AmmoCapacitiesModel[];
 	melodies: MelodiesModel[];
 	melodyEffect: MelodyEffectModel[];
@@ -33,6 +35,7 @@ export class AppDataModel {
 		this.skills = new Array<SkillModel>();
 		this.decorations = new Array<DecorationModel>();
 		this.augmentations = new Array<AugmentationModel>();
+		this.modifications = new Array<ModificationModel>();
 		this.ammoCapacities = new Array<AmmoCapacitiesModel>();
 		this.melodies = new Array<MelodiesModel>();
 		this.melodyEffect = new Array<MelodyEffectModel>();

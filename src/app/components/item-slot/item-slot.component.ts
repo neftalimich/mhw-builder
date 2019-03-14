@@ -1,15 +1,16 @@
 import { Component, Input, OnInit, QueryList, ViewChildren } from '@angular/core';
-import { ItemModel } from '../../models/item.model';
-import { TooltipService } from '../../services/tooltip.service';
-import { ItemType } from '../../types/item.type';
-import { DecorationSlotComponent } from '../decoration-slot/decoration-slot.component';
-import { AugmentationSlotComponent } from '../augmentation-slot/augmentation-slot.component';
-import { AugmentationModel } from '../../models/augmentation.model';
-import { SlotService } from '../../services/slot.service';
-import { PointerType } from '../../types/pointer.type';
-import { EquipmentCategoryType } from '../../types/equipment-category.type';
-import { DataService } from '../../services/data.service';
 import { ModificationModel } from 'src/app/models/modification.model';
+import { AugmentationModel } from '../../models/augmentation.model';
+import { ItemModel } from '../../models/item.model';
+import { DataService } from '../../services/data.service';
+import { SlotService } from '../../services/slot.service';
+import { TooltipService } from '../../services/tooltip.service';
+import { EquipmentCategoryType } from '../../types/equipment-category.type';
+import { ItemType } from '../../types/item.type';
+import { PointerType } from '../../types/pointer.type';
+import { AugmentationSlotComponent } from '../augmentation-slot/augmentation-slot.component';
+import { DecorationSlotComponent } from '../decoration-slot/decoration-slot.component';
+import { ModificationSlotComponent } from '../modification-slot/modification-slot.component';
 
 @Component({
 	selector: 'mhw-builder-item-slot',
@@ -21,6 +22,7 @@ export class ItemSlotComponent implements OnInit {
 
 	@ViewChildren(DecorationSlotComponent) decorationSlots: QueryList<DecorationSlotComponent>;
 	@ViewChildren(AugmentationSlotComponent) augmentationSlots: QueryList<AugmentationSlotComponent>;
+	@ViewChildren(ModificationSlotComponent) modificationSlots: QueryList<ModificationSlotComponent>;
 
 	item: ItemModel;
 

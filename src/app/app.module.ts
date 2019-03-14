@@ -2,8 +2,8 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
 import { HttpClientModule } from '@angular/common/http';
 import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { VirtualScrollerModule } from 'ngx-virtual-scroller';
 import { SortablejsModule } from 'angular-sortablejs';
+import { VirtualScrollerModule } from 'ngx-virtual-scroller';
 import { AppComponent } from './app.component';
 import { AmmoCapacitiesComponent } from './components/ammo-capacities/ammo-capacities.component';
 import { ArmorListComponent } from './components/armor-list/armor-list.component';
@@ -21,25 +21,27 @@ import { ItemDetailsComponent } from './components/item-details/item-details.com
 import { ItemSlotComponent } from './components/item-slot/item-slot.component';
 import { MelodiesComponent } from './components/melodies/melodies.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { ModificationDetailsComponent } from './components/modification-details/modification-details.component';
+import { ModificationSlotComponent } from './components/modification-slot/modification-slot.component';
+import { ModificationsListComponent } from './components/modifications-list/modifications-list.component';
 import { SetBonusDetailsComponent } from './components/set-bonus-details/set-bonus-details.component';
+import { SetListComponent } from './components/set-list/set-list.component';
+import { SharpnessBarComponent } from './components/sharpness-bar/sharpness-bar.component';
 import { SkillDetailsComponent } from './components/skill-details/skill-details.component';
 import { TooltipComponent } from './components/tooltip/tooltip.component';
 import { WeaponListComponent } from './components/weapon-list/weapon-list.component';
 import { DataModule } from './data/data.module';
+import { MaxSharpnessPipe } from './pipes/max-sharpness.pipe';
 import { AppDataProvider } from './providers/app-data.provider';
 import { BuildService } from './services/build.service';
 import { CalculationService } from './services/calculation.service';
 import { DataService } from './services/data.service';
 import { EquipmentService } from './services/equipment.service';
+import { SetService } from './services/set.service';
 import { SkillService } from './services/skill.service';
 import { SlotService } from './services/slot.service';
 import { StatService } from './services/stat.service';
 import { TooltipService } from './services/tooltip.service';
-import { MaxSharpnessPipe } from './pipes/max-sharpness.pipe';
-import { SharpnessBarComponent } from './components/sharpness-bar/sharpness-bar.component';
-import { SetListComponent } from './components/set-list/set-list.component';
-import { ModificationSlotComponent } from './components/modification-slot/modification-slot.component';
-
 
 @NgModule({
 	declarations: [
@@ -47,15 +49,18 @@ import { ModificationSlotComponent } from './components/modification-slot/modifi
 		ArmorListComponent,
 		WeaponListComponent,
 		AugmentationsListComponent,
+		ModificationsListComponent,
 		AmmoCapacitiesComponent,
 		MelodiesComponent,
 		DecorationListComponent,
 		CharmListComponent,
 		ItemDetailsComponent,
 		AugmentationDetailsComponent,
+		ModificationDetailsComponent,
 		DecorationDetailsComponent,
 		ItemSlotComponent,
 		AugmentationSlotComponent,
+		ModificationSlotComponent,
 		DecorationSlotComponent,
 		EquippedStatsComponent,
 		EquippedSkillsComponent,
@@ -66,8 +71,7 @@ import { ModificationSlotComponent } from './components/modification-slot/modifi
 		TooltipComponent,
 		MaxSharpnessPipe,
 		SharpnessBarComponent,
-		SetListComponent,
-		ModificationSlotComponent
+		SetListComponent
 	],
 	imports: [
 		BrowserModule,
@@ -87,6 +91,7 @@ import { ModificationSlotComponent } from './components/modification-slot/modifi
 		StatService,
 		CalculationService,
 		BuildService,
+		SetService,
 		AppDataProvider,
 		{ provide: APP_INITIALIZER, useFactory: appDataProviderFactory, deps: [AppDataProvider], multi: true }
 	],

@@ -54,7 +54,7 @@ export class TooltipService {
 	}
 
 	setModification(modification: ModificationModel) {
-		if (modification != this.augmentation) {
+		if (modification != this.modification) {
 			this.reset();
 			this.modification = modification;
 			this.modificationChanged$.next(modification);
@@ -97,6 +97,7 @@ export class TooltipService {
 		this.item = null;
 		this.decoration = null;
 		this.augmentation = null;
+		this.modification = null;
 		this.equippedSkill = null;
 		this.equippedSetBonus = null;
 		this.skill = null;

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import * as _ from 'lodash';
+import { StatService } from 'src/app/services/stat.service';
 import { AmmoCapacitiesModel } from '../../models/ammo-capacities.model';
 import { DeviationType, RecoilType, ReloadType } from '../../types/deviation.type';
 
@@ -25,10 +26,15 @@ export class AmmoCapacitiesComponent implements OnInit {
 	recoilType = RecoilType;
 	reloadType = ReloadType;
 
-	constructor() { }
+	constructor(private statService: StatService) {
+		this.statService.statsUpdated$.subscribe(stats => {
+			this.setRecoil(Math.abs(stats.recoil));
+			this.setReload(Math.abs(stats.reload));
+			this.setDeviation(Math.abs(stats.deviation));
+		});
+	}
 
 	ngOnInit() {
-
 	}
 
 	allZero(arr: number[]) {

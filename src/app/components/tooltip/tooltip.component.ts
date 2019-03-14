@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { ModificationModel } from 'src/app/models/modification.model';
 import { AugmentationModel } from '../../models/augmentation.model';
 import { DecorationModel } from '../../models/decoration.model';
 import { EquippedSetBonusModel } from '../../models/equipped-set-bonus.model';
@@ -20,6 +21,7 @@ export class TooltipComponent implements OnInit {
 	item: ItemModel;
 	decoration: DecorationModel;
 	augmentation: AugmentationModel;
+	modification: ModificationModel;
 	equippedSkill: EquippedSkillModel;
 	equippedSetBonus: EquippedSetBonusModel;
 	skill: SkillModel;
@@ -62,6 +64,16 @@ export class TooltipComponent implements OnInit {
 			} else {
 				this.reset();
 				this.augmentation = augmentation;
+				this.show();
+			}
+		});
+
+		this.tooltipService.modificationChanged$.subscribe(modification => {
+			if (!modification) {
+				this.hide();
+			} else {
+				this.reset();
+				this.modification = modification;
 				this.show();
 			}
 		});
@@ -112,6 +124,7 @@ export class TooltipComponent implements OnInit {
 		this.item = null;
 		this.decoration = null;
 		this.augmentation = null;
+		this.modification = null;
 		this.equippedSkill = null;
 		this.equippedSetBonus = null;
 		this.skill = null;

@@ -1,0 +1,122 @@
+[
+	{
+		"id": 1,
+		"code": "REC",
+		"name": "Recoil Suppressor",
+		"description": "Lowers the recoil when firing. Note that lower recoil also means higher rate of fire, essentially improving damage output. Effectiveness varies with what ammo type is being used.",
+		"levels": [
+			{
+				"description": "Recoil -1",
+				"recoil": -1
+			},
+			{
+				"description": "Recoil -2",
+				"recoil": -2
+			},
+			{
+				"description": "Recoil -3",
+				"recoil": -3	
+			}
+		]
+	},
+	{
+		"id": 2,
+		"code": "REL",
+		"name": "Reload Assist",
+		"description": "Speeds up reload times. Effectiveness varies with what ammo type is being used.",
+		"levels": [
+			{
+				"description": "Reload +1",
+				"reload": 1
+			},
+			{
+				"description": "Reload +2",
+				"reload": 2
+			},
+			{
+				"description": "Reload +3",
+				"reload": 3
+			}
+		]
+	},
+	{
+		"id": 3,
+		"code": "DEV",
+		"name": "Deviation Suppressor",
+		"description": "Lowers deviation. Can only be used if the bowgun has deviation.",
+		"levels": [
+			{
+				"description": "Deviation -1",
+				"deviation": -1
+			},
+			{
+				"description": "Deviation -2",
+				"deviation": -2
+			},
+			{
+				"description": "Deviation -3",
+				"deviation": -3
+			}
+		]
+	},
+	{
+		"id": 4,
+		"code": "CLO",
+		"name": "Close Range Up",
+		"description": "Adds an extra slot. Stack with other upgrades to increase the slot's level.",
+		"levels": [
+			{
+				"description": "Close +1",
+				"close": 1
+			},
+			{
+				"description": "Close +2",
+				"close": 2
+			},
+			{
+				"description": "Close +3",
+				"close": 3
+			}
+		]
+	},
+	{
+		"id": 5,
+		"code": "LNG",
+		"name": "Long Range Up",
+		"description": "Regain health as you land attacks. Stack with other upgrades to increase the amount of health regained.",
+		"levels": [
+			{
+				"description": "Long +1",
+				"long": 1
+			},
+			{
+				"description": "Heal on hit +15%",
+				"long": 2
+			},
+			{
+				"description": "Heal on hit +20%",
+				"long": 3
+			}
+		]
+	},
+	{
+		"id": 6,
+		"code": "SHI",
+		"name": "Shield",
+		"description": "Regain health as you land attacks. Stack with other upgrades to increase the amount of health regained.",
+		"levels": [
+			{
+				"description": "Shield +1",
+				"shield": 1
+			},
+			{
+				"description": "Shield +2",
+				"shield": 2
+			},
+			{
+				"description": "Shield +3",
+				"shield": 3
+			}
+		]
+	}
+]

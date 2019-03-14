@@ -7,6 +7,7 @@ import { EquippedSetBonusDetailModel } from '../models/equipped-set-bonus-detail
 import { EquippedSetBonusModel } from '../models/equipped-set-bonus.model';
 import { EquippedSkillModel } from '../models/equipped-skill.model';
 import { ItemModel } from '../models/item.model';
+import { ModificationModel } from '../models/modification.model';
 import { ItemType } from '../types/item.type';
 import { DataService } from './data.service';
 

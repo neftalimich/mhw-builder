@@ -13,7 +13,6 @@ import { SlotService } from './services/slot.service';
 import { EquipmentCategoryType } from './types/equipment-category.type';
 import { ItemType } from './types/item.type';
 import { PointerType } from './types/pointer.type';
-import { SetListComponent } from './components/set-list/set-list.component';
 
 @Component({
 	selector: 'mhw-builder-root',
@@ -110,6 +109,12 @@ export class AppComponent implements OnInit, AfterViewInit {
 		this.slotService.augmentationSelected$.subscribe(augmentation => {
 			if (this.itemListModal) {
 				this.itemListModal.isOpen = !augmentation;
+			}
+		});
+
+		this.slotService.modificationSelected$.subscribe(modification => {
+			if (this.itemListModal) {
+				this.itemListModal.isOpen = !modification;
 			}
 		});
 	}

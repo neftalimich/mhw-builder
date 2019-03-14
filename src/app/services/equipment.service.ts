@@ -3,9 +3,9 @@ import * as _ from 'lodash';
 import { AugmentationModel } from '../models/augmentation.model';
 import { DecorationModel } from '../models/decoration.model';
 import { ItemModel } from '../models/item.model';
+import { ModificationModel } from '../models/modification.model';
 import { SkillService } from './skill.service';
 import { StatService } from './stat.service';
-import { ModificationModel } from '../models/modification.model';
 
 @Injectable()
 export class EquipmentService {
@@ -24,7 +24,7 @@ export class EquipmentService {
 		this.modifications = [];
 
 		this.skillService.skillsUpdated$.subscribe(skills => {
-			this.statService.update(skills, this.items, this.augmentations);
+			this.statService.update(skills, this.items, this.augmentations, this.modifications);
 		});
 	}
 
@@ -40,6 +40,11 @@ export class EquipmentService {
 
 	addAugmentation(augmentation: AugmentationModel) {
 		this.augmentations.push(augmentation);
+		this.updateSkills();
+	}
+
+	addModification(modification: ModificationModel) {
+		this.modifications.push(modification);
 		this.updateSkills();
 	}
 
