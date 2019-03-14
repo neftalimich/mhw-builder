@@ -1,8 +1,7 @@
-import { Location } from '@angular/common';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { SortablejsOptions } from 'angular-sortablejs';
-import { BuildService } from 'src/app/services/build.service';
-import { StatService } from 'src/app/services/stat.service';
+import { SavedSetModel } from 'src/app/models/saved-set.model';
+import { SetService } from 'src/app/services/set.service';
 
 @Component({
 	selector: 'mhw-builder-set-list',
@@ -10,8 +9,7 @@ import { StatService } from 'src/app/services/stat.service';
 	styleUrls: ['./set-list.component.scss']
 })
 export class SetListComponent implements OnInit {
-
-	savedSets: SavedSetModel[] = [];
+	sets: SavedSetModel[] = [];
 	virtualItems: SavedSetModel[];
 	selectedSetIndex = -1;
 	loading = 0;
@@ -20,7 +18,9 @@ export class SetListComponent implements OnInit {
 
 	eventOptions: SortablejsOptions = {};
 
-	constructor(private location: Location, private buildService: BuildService, private statService: StatService) {
+	constructor(
+		private setService: SetService
+	) {
 		this.eventOptions = {
 			onUpdate: (event) => {
 				if (this.selectedSetIndex == event.oldIndex) {
@@ -28,54 +28,20 @@ export class SetListComponent implements OnInit {
 				}
 			}
 		};
+		this.setService.setsUpdated$.subscribe(sets => {
+			this.sets = sets;
+		});
 	}
 
 	ngOnInit() {
-		this.loadSets();
-	}
-
-	loadSets() {
-		const stringSets = localStorage.getItem('mhwSets');
-		if (stringSets) {
-			try {
-				this.savedSets = JSON.parse(stringSets);
-			} catch (err) {
-				console.log('LocalStorage-Error:', stringSets);
-			}
-		}
+		this.setService.importSet();
+		this.sets = this.setService.getSets();
 	}
 
 	save(setName: string) {
 		if (setName) {
 			this.loading = 1;
-			this.loadSets();
-			let setItem = this.savedSets.find(s => s.setName === setName);
-			if (setItem) {
-				setItem.hashString = location.hash;
-				setItem.weaponType = this.statService.stats.weaponType ? this.statService.stats.weaponType.toLowerCase().toLowerCase() : '';
-				setItem.totalAttack = this.statService.stats.totalAttack;
-				setItem.element = this.statService.stats.element;
-				setItem.elementAttack = this.statService.stats.totalElementAttack;
-				setItem.ailment = this.statService.stats.ailment;
-				setItem.ailmentAttack = this.statService.stats.totalAilmentAttack;
-				setItem.confirm = false;
-				this.selectedSetIndex = this.savedSets.indexOf(setItem);
-			} else {
-				setItem = {
-					setName: setName,
-					hashString: location.hash,
-					weaponType: this.statService.stats.weaponType ? this.statService.stats.weaponType.toLowerCase().toLowerCase() : '',
-					totalAttack: this.statService.stats.totalAttack,
-					element: this.statService.stats.element,
-					elementAttack: this.statService.stats.totalElementAttack,
-					ailment: this.statService.stats.ailment,
-					ailmentAttack: this.statService.stats.totalAilmentAttack,
-					confirm: false
-				};
-				this.savedSets.push(setItem);
-				this.selectedSetIndex = this.savedSets.length - 1;
-			}
-			localStorage.setItem('mhwSets', JSON.stringify(this.savedSets));
+			this.selectedSetIndex = this.setService.save(setName);
 			setTimeout(() => {
 				this.loading = 0;
 			}, 500);
@@ -84,29 +50,22 @@ export class SetListComponent implements OnInit {
 
 	saveSets() {
 		this.loading = 2;
-		localStorage.setItem('mhwSets', JSON.stringify(this.savedSets));
+		this.setService.saveSets();
 		setTimeout(() => {
 			this.loading = 0;
 		}, 500);
 	}
 
 	remove(index: number) {
-		if (this.savedSets[index].confirm) {
-			this.savedSets.splice(index, 1);
-			localStorage.setItem('mhwSets', JSON.stringify(this.savedSets));
-		} else {
-			this.savedSets[index].confirm = true;
-		}
+		this.setService.remove(index);
 	}
 
 	select(set: SavedSetModel) {
-		this.location.replaceState(this.location.path(false), set.hashString);
-		this.buildService.loadBuild(location.hash);
+		this.selectedSetIndex = this.setService.select(set);
 		this.saveBox.nativeElement.value = set.setName;
-		this.selectedSetIndex = this.savedSets.indexOf(set);
 	}
 
-	downloadFile() {
+	downloadHtmlFile() {
 		const dateNow = new Date().toLocaleDateString('en-GB', {
 			year: 'numeric',
 			month: '2-digit',
@@ -114,8 +73,9 @@ export class SetListComponent implements OnInit {
 		});
 		const fileName = `mhw-builder-save(${dateNow}).html`;
 		let fileString = '<html><head>'
-			+ `<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">`
-			+ '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">';
+			+ `<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">`
+			+ '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">'
+			+ '<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">';
 		fileString += `<style>
 				.Fire {
 					color: #ff6666;
@@ -152,13 +112,15 @@ export class SetListComponent implements OnInit {
 			+ '<div class="container-fluid"><div class="row"><div class="col-md-4 col-12">'
 			+ '<h2>MHW-Builder</h2>'
 			+ '<ul class="list-group">';
-		for (const item of this.savedSets) {
-			fileString += `<li class="list-group-item">`
+		for (const item of this.sets) {
+			fileString += `<li class="list-group-item" style="padding:8px!important">`
 				// + `<img src="https://neftalimich.github.io/mhw-builder-page/assets/images/weapons/${item.weaponType}-icon.png" class="weapon-img" />`
-				+ `<a href="https://neftalimich.github.io/mhw-builder-page?${item.hashString}" class="text-decoration-none">`
+				+ `<a href="https://neftalimich.github.io/mhw-builder-page?${item.hashString}" class="text-decoration-none" target="_blank">`
 				+ `${item.setName}`
 				+ `</a> `
-				+ ` - <span class="text-capitalize">${item.weaponType} </span>`
+				+ ` - <span class="text-capitalize">${item.weaponType}</span>`
+				+ `<a class="float-right ml-1 mt-1 text-secondary" href="https://neftalimich.github.io/mhw-builder-page?${item.hashString}i${item.setName}" target="_blank" title="Import">`
+				+ `<i class="fas fa-cloud-upload-alt fa-sm"></i></a>`
 				+ `<span class="float-right">`
 				+ `<span>${item.totalAttack}</span>`;
 			if (item.element || item.ailment) {
@@ -186,16 +148,25 @@ export class SetListComponent implements OnInit {
 			document.body.removeChild(a);
 		}
 	}
-}
 
-class SavedSetModel {
-	setName: string;
-	weaponType: string;
-	totalAttack: number;
-	element?: string;
-	elementAttack?: number;
-	ailment?: string;
-	ailmentAttack?: number;
-	hashString: string;
-	confirm: boolean;
+	downloadJsonFile() {
+		const dateNow = new Date().toLocaleDateString('en-GB', {
+			year: 'numeric',
+			month: '2-digit',
+			day: '2-digit',
+		});
+		const fileName = `mhw-builder-data(${dateNow}).json`;
+		const fileString = JSON.stringify(this.sets);
+		const blob = new Blob([fileString], { type: 'application/json' });
+		if (window.navigator && window.navigator.msSaveOrOpenBlob) {
+			window.navigator.msSaveOrOpenBlob(blob, fileName);
+		} else {
+			const a = document.createElement('a');
+			a.href = URL.createObjectURL(blob);
+			a.download = fileName;
+			document.body.appendChild(a);
+			a.click();
+			document.body.removeChild(a);
+		}
+	}
 }
