@@ -1,6 +1,5 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
-import { ModificationModel } from 'src/app/models/modification.model';
-import { AugmentationModel } from '../../models/augmentation.model';
+import { CommonLevelModel, CommonModel } from 'src/app/models/common.model';
 import { DecorationModel } from '../../models/decoration.model';
 import { EquippedSetBonusModel } from '../../models/equipped-set-bonus.model';
 import { EquippedSkillModel } from '../../models/equipped-skill.model';
@@ -20,8 +19,7 @@ export class TooltipComponent implements OnInit {
 
 	item: ItemModel;
 	decoration: DecorationModel;
-	augmentation: AugmentationModel;
-	modification: ModificationModel;
+	common: CommonModel;
 	equippedSkill: EquippedSkillModel;
 	equippedSetBonus: EquippedSetBonusModel;
 	skill: SkillModel;
@@ -63,7 +61,22 @@ export class TooltipComponent implements OnInit {
 				this.hide();
 			} else {
 				this.reset();
-				this.augmentation = augmentation;
+				let levels: CommonLevelModel[] = [];
+				for (let augLevel of augmentation.levels) {
+					let level: CommonLevelModel;
+					level = {
+						description: augLevel.description,
+						skills: augLevel.skills
+					};
+					levels.push(level);
+				}
+				this.common = {
+					id: augmentation.id,
+					code: augmentation.code,
+					name: augmentation.name,
+					description: augmentation.description,
+					levels: levels
+				};
 				this.show();
 			}
 		});
@@ -73,7 +86,22 @@ export class TooltipComponent implements OnInit {
 				this.hide();
 			} else {
 				this.reset();
-				this.modification = modification;
+				let levels: CommonLevelModel[] = [];
+				for (let modLevel of modification.levels) {
+					let level: CommonLevelModel;
+					level = {
+						description: modLevel.description,
+						skills: modLevel.skills
+					};
+					levels.push(level);
+				}
+				this.common = {
+					id: modification.id,
+					code: modification.code,
+					name: modification.name,
+					description: modification.description,
+					levels: levels
+				};
 				this.show();
 			}
 		});
@@ -123,8 +151,7 @@ export class TooltipComponent implements OnInit {
 	reset() {
 		this.item = null;
 		this.decoration = null;
-		this.augmentation = null;
-		this.modification = null;
+		this.common = null;
 		this.equippedSkill = null;
 		this.equippedSetBonus = null;
 		this.skill = null;

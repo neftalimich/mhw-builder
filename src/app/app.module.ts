@@ -7,11 +7,11 @@ import { VirtualScrollerModule } from 'ngx-virtual-scroller';
 import { AppComponent } from './app.component';
 import { AmmoCapacitiesComponent } from './components/ammo-capacities/ammo-capacities.component';
 import { ArmorListComponent } from './components/armor-list/armor-list.component';
-import { AugmentationDetailsComponent } from './components/augmentation-details/augmentation-details.component';
 import { AugmentationSlotComponent } from './components/augmentation-slot/augmentation-slot.component';
 import { AugmentationsListComponent } from './components/augmentations-list/augmentations-list.component';
 import { CalcDetailsComponent } from './components/calc-details/calc-details.component';
 import { CharmListComponent } from './components/charm-list/charm-list.component';
+import { CommonDetailsComponent } from './components/common-details/common-details.component';
 import { DecorationDetailsComponent } from './components/decoration-details/decoration-details.component';
 import { DecorationListComponent } from './components/decoration-list/decoration-list.component';
 import { DecorationSlotComponent } from './components/decoration-slot/decoration-slot.component';
@@ -21,7 +21,6 @@ import { ItemDetailsComponent } from './components/item-details/item-details.com
 import { ItemSlotComponent } from './components/item-slot/item-slot.component';
 import { MelodiesComponent } from './components/melodies/melodies.component';
 import { ModalComponent } from './components/modal/modal.component';
-import { ModificationDetailsComponent } from './components/modification-details/modification-details.component';
 import { ModificationSlotComponent } from './components/modification-slot/modification-slot.component';
 import { ModificationsListComponent } from './components/modifications-list/modifications-list.component';
 import { SetBonusDetailsComponent } from './components/set-bonus-details/set-bonus-details.component';
@@ -55,8 +54,7 @@ import { TooltipService } from './services/tooltip.service';
 		DecorationListComponent,
 		CharmListComponent,
 		ItemDetailsComponent,
-		AugmentationDetailsComponent,
-		ModificationDetailsComponent,
+		CommonDetailsComponent,
 		DecorationDetailsComponent,
 		ItemSlotComponent,
 		AugmentationSlotComponent,

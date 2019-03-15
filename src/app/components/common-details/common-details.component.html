@@ -1,10 +1,10 @@
 <div class="container">
-	<h3>{{modification?.name}}</h3>
+	<h3>{{common?.name}}</h3>
 	<hr>
-	<div>{{modification?.description}}</div>
+	<div>{{common?.description}}</div>
 	<br />
 	<ul>
-		<li *ngFor="let level of modification?.levels; let i = index">
+		<li *ngFor="let level of common?.levels; let i = index">
 			<div class="level">Lv {{i + 1}}</div>
 			<div class="level-description">{{level.description}}</div>
 		</li>

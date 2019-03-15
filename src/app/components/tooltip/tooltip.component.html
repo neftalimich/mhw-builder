@@ -2,8 +2,7 @@
 <div #container class="container" [hidden]="!visible">
 	<mhw-builder-item-details *ngIf="item" [item]="item"></mhw-builder-item-details>
 	<mhw-builder-decoration-details *ngIf="decoration" [decoration]="decoration"></mhw-builder-decoration-details>
-	<mhw-builder-augmentation-details *ngIf="augmentation" [augmentation]="augmentation"></mhw-builder-augmentation-details>
-	<mhw-builder-modification-details *ngIf="modification" [modification]="modification"></mhw-builder-modification-details>
+	<mhw-builder-common-details *ngIf="common" [common]="common"></mhw-builder-common-details>
 	<mhw-builder-skill-details *ngIf="equippedSkill || skill" [equippedSkill]="equippedSkill" [skill]="skill"></mhw-builder-skill-details>
 	<mhw-builder-set-bonus-details *ngIf="equippedSetBonus" [equippedSetBonus]="equippedSetBonus"></mhw-builder-set-bonus-details>
 	<mhw-builder-calc-details *ngIf="calc" [calc]="calc"></mhw-builder-calc-details>
