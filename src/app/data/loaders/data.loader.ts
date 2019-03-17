@@ -109,7 +109,7 @@ export abstract class DataLoader<T> {
 		return locale;
 	}
 
-	protected parseTextContent(content: string, columnParsers: ColumnParser[]): T[] {
+	protected parseTextContent(content: string, columnParsers: ColumnParser[] = []): T[] {
 		const result: Array<T> = [];
 		const rows = content.split('\n');
 		const headerColumns = rows[0].split(this.delimeter);

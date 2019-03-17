@@ -40,8 +40,13 @@ export class StatService {
 		const weapon = _.find(items, item => item.weaponType != null);
 
 		if (weapon) {
-			if (weapon.weaponType === WeaponType.HeavyBowgun || weapon.weaponType === WeaponType.LightBowgun) {
-				this.stats.ammoCapacities = weapon.ammoCapacities;
+			switch (weapon.weaponType) {
+				case WeaponType.HeavyBowgun:
+				case WeaponType.LightBowgun:
+					this.stats.ammoCapacities = weapon.ammoCapacities;
+					break;
+				default:
+					break;
 			}
 			this.stats.weaponType = weapon.weaponType;
 		}

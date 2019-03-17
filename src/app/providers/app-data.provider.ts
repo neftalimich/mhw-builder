@@ -14,6 +14,7 @@ import { SkillsLoader } from '../data/loaders/skills.loader';
 import { WeaponModifiersLoader } from '../data/loaders/weapon-modifiers.loader';
 import { WeaponsLoader } from '../data/loaders/weapons.loader';
 import { AppDataModel } from '../models/app-data.model';
+import { KinsectsLoader } from '../data/loaders/kinsects.loader';
 
 @Injectable()
 export class AppDataProvider {
@@ -26,6 +27,7 @@ export class AppDataProvider {
 		private decorationsLoader: DecorationsLoader,
 		private augmentationsLoader: AugmentationsLoader,
 		private modificationsLoader: ModificationsLoader,
+		private kinsectsLoader: KinsectsLoader,
 		private skillsLoader: SkillsLoader,
 		private setBonusesLoader: SetBonusesLoader,
 		private sharpnessModifiersLoader: SharpnessModifiersLoader,
@@ -46,6 +48,7 @@ export class AppDataProvider {
 				this.decorationsLoader.load('decorations.tsv'),
 				this.augmentationsLoader.load('augmentations.json'),
 				this.modificationsLoader.load('modifications.json'),
+				this.kinsectsLoader.load('kinsects.tsv'),
 				this.skillsLoader.load('skills.json'),
 				this.setBonusesLoader.load('set-bonuses.json'),
 				this.sharpnessModifiersLoader.load('sharpness-modifiers.json', false),
@@ -60,13 +63,14 @@ export class AppDataProvider {
 				this.appData.decorations = results[3];
 				this.appData.augmentations = results[4];
 				this.appData.modifications = results[5];
-				this.appData.skills = results[6];
-				this.appData.setBonuses = results[7];
-				this.appData.sharpnessModifiers = results[8];
-				this.appData.weaponModifiers = results[9];
-				this.appData.ammoCapacities = results[10];
-				this.appData.melodies = results[11];
-				this.appData.melodyEffect = results[12];
+				this.appData.kinsects = results[6];
+				this.appData.skills = results[7];
+				this.appData.setBonuses = results[8];
+				this.appData.sharpnessModifiers = results[9];
+				this.appData.weaponModifiers = results[10];
+				this.appData.ammoCapacities = results[11];
+				this.appData.melodies = results[12];
+				this.appData.melodyEffect = results[13];
 
 				observer.next(true);
 				observer.complete();

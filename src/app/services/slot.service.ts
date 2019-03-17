@@ -14,6 +14,7 @@ import { EquipmentCategoryType } from '../types/equipment-category.type';
 import { ItemType } from '../types/item.type';
 import { EquipmentService } from './equipment.service';
 import { WeaponType } from '../types/weapon.type';
+import { KinsectModel } from '../models/kinsect.model';
 
 @Injectable()
 export class SlotService {
@@ -65,7 +66,7 @@ export class SlotService {
 	}
 
 	selectItemSlot(slot: ItemSlotComponent) {
-		this.clearSlots();
+		this.clearSlotSelect();
 		this.selectedItemSlot = slot;
 
 		if (this.selectedItemSlot) {
@@ -75,7 +76,7 @@ export class SlotService {
 	}
 
 	selectDecorationSlot(slot: DecorationSlotComponent) {
-		this.clearSlots();
+		this.clearSlotSelect();
 		this.selectedDecorationSlot = slot;
 
 		if (this.selectedDecorationSlot) {
@@ -85,7 +86,7 @@ export class SlotService {
 	}
 
 	selectAugmentationSlot(slot: AugmentationSlotComponent) {
-		this.clearSlots();
+		this.clearSlotSelect();
 		this.selectedAugmentationSlot = slot;
 
 		if (this.selectedAugmentationSlot) {
@@ -95,7 +96,7 @@ export class SlotService {
 	}
 
 	selectModificationSlot(slot: ModificationSlotComponent) {
-		this.clearSlots();
+		this.clearSlotSelect();
 		this.selectedModificationSlot = slot;
 
 		if (this.selectedModificationSlot) {
@@ -265,7 +266,7 @@ export class SlotService {
 		});
 	}
 
-	private clearSlots() {
+	private clearSlotSelect() {
 		if (this.selectedItemSlot) {
 			this.selectedItemSlot.selected = false;
 		}

@@ -1,5 +1,6 @@
 export enum EquipmentCategoryType {
 	Weapon = 'Weapon',
 	Armor = 'Armor',
-	Charm = 'Charm'
+	Charm = 'Charm',
+	Kinsect = 'Kinsect'
 }

@@ -4,6 +4,7 @@ import { AmmoCapacitiesModel } from '../models/ammo-capacities.model';
 import { AugmentationModel } from '../models/augmentation.model';
 import { DecorationModel } from '../models/decoration.model';
 import { ItemModel } from '../models/item.model';
+import { KinsectModel } from '../models/kinsect.model';
 import { MelodiesModel } from '../models/melodies.model';
 import { ModificationModel } from '../models/modification.model';
 import { SetBonusModel } from '../models/set-bonus.model';
@@ -114,6 +115,14 @@ export class DataService {
 
 	getModification(id: number): ModificationModel {
 		return _.find(this.appDataProvider.appData.modifications, modification => modification.id == id);
+	}
+
+	getKinsects(): KinsectModel[] {
+		return this.appDataProvider.appData.kinsects;
+	}
+
+	getKinsect(id: number): KinsectModel {
+		return _.find(this.appDataProvider.appData.kinsects, kinsect => kinsect.id == id);
 	}
 
 	getWeaponTypeName(weaponType: WeaponType): string {

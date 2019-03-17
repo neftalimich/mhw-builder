@@ -3,6 +3,7 @@ import * as _ from 'lodash';
 import { AugmentationModel } from '../models/augmentation.model';
 import { DecorationModel } from '../models/decoration.model';
 import { ItemModel } from '../models/item.model';
+import { KinsectModel } from '../models/kinsect.model';
 import { ModificationModel } from '../models/modification.model';
 import { SkillService } from './skill.service';
 import { StatService } from './stat.service';
@@ -13,6 +14,7 @@ export class EquipmentService {
 	public decorations: DecorationModel[];
 	public augmentations: AugmentationModel[];
 	public modifications: ModificationModel[];
+	public kinsect: KinsectModel;
 
 	constructor(
 		private skillService: SkillService,
@@ -48,6 +50,10 @@ export class EquipmentService {
 		this.updateSkills();
 	}
 
+	addKinsect(kinsect: KinsectModel) {
+		this.kinsect = kinsect;
+	}
+
 	removeItem(item: ItemModel) {
 		this.items = _.reject(this.items, i => i === item);
 		this.updateSkills();
@@ -66,6 +72,10 @@ export class EquipmentService {
 	removeModification(modification: ModificationModel) {
 		this.modifications = _.reject(this.modifications, a => a === modification);
 		this.updateSkills();
+	}
+
+	removeKinsect() {
+		this.kinsect = null;
 	}
 
 	updateItemLevel() {

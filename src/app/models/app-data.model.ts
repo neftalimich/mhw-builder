@@ -2,13 +2,14 @@ import { AmmoCapacitiesModel } from './ammo-capacities.model';
 import { AugmentationModel } from './augmentation.model';
 import { DecorationModel } from './decoration.model';
 import { ItemModel } from './item.model';
+import { KinsectModel } from './kinsect.model';
 import { MelodiesModel } from './melodies.model';
 import { MelodyEffectModel } from './melody-effect.model';
+import { ModificationModel } from './modification.model';
 import { SetBonusModel } from './set-bonus.model';
 import { SharpnessModifierModel } from './sharpness-modifier.model';
 import { SkillModel } from './skill.model';
 import { WeaponModifierModel } from './weapon-modifier.model';
-import { ModificationModel } from './modification.model';
 
 export class AppDataModel {
 	weaponModifiers: WeaponModifierModel[];
@@ -21,6 +22,7 @@ export class AppDataModel {
 	decorations: DecorationModel[];
 	augmentations: AugmentationModel[];
 	modifications: ModificationModel[];
+	kinsects: KinsectModel[];
 	ammoCapacities: AmmoCapacitiesModel[];
 	melodies: MelodiesModel[];
 	melodyEffect: MelodyEffectModel[];
@@ -36,6 +38,7 @@ export class AppDataModel {
 		this.decorations = new Array<DecorationModel>();
 		this.augmentations = new Array<AugmentationModel>();
 		this.modifications = new Array<ModificationModel>();
+		this.kinsects = new Array<KinsectModel>();
 		this.ammoCapacities = new Array<AmmoCapacitiesModel>();
 		this.melodies = new Array<MelodiesModel>();
 		this.melodyEffect = new Array<MelodyEffectModel>();

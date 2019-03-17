@@ -4,6 +4,7 @@ import { ArmorLoader } from './loaders/armor.loader';
 import { AugmentationsLoader } from './loaders/augmentations.loader';
 import { CharmsLoader } from './loaders/charms.loader';
 import { DecorationsLoader } from './loaders/decorations.loader';
+import { KinsectsLoader } from './loaders/kinsects.loader';
 import { MelodiesLoader } from './loaders/melodies.loader';
 import { MelodyEffectLoader } from './loaders/melodyEffect.loader';
 import { ModificationsLoader } from './loaders/modifications.loader';
@@ -21,6 +22,7 @@ import { WeaponsLoader } from './loaders/weapons.loader';
 		DecorationsLoader,
 		AugmentationsLoader,
 		ModificationsLoader,
+		KinsectsLoader,
 		SkillsLoader,
 		SetBonusesLoader,
 		SharpnessModifiersLoader,
