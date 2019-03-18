@@ -2,10 +2,11 @@
 @import "../../../sass/common";
 
 $saveHeight: 38px;
+$filterHeight: 38px;
 
 .container {
 	display: grid;
-	grid-template-rows: $saveHeight auto 20px;
+	grid-template-rows: $saveHeight max-content auto 20px;
 	grid-row-gap: 4px;
 	height: 98%;
 
@@ -15,7 +16,7 @@ $saveHeight: 38px;
 		padding: 0 0 0 12px;
 		border-radius: 3px;
 		display: grid;
-		grid-template-columns: auto min-content;
+		grid-template-columns: auto min-content min-content;
 		margin-left: 20px;
 		margin-right: 20px;
 		margin-bottom: 5px;
@@ -38,6 +39,28 @@ $saveHeight: 38px;
 			height: $saveHeight;
 			width: 38px;
 			flex-grow: 0;
+		}
+	}
+
+	.filter-container {
+		grid-row: 2;
+		display: grid;
+		padding: 0 12px 0 12px;
+		grid-template-columns: repeat(14, 1fr);
+
+		.selected > img {
+			background: $blue;
+			border-radius: 3px;
+		}
+
+		.weapon-filter {
+			padding: 4px;
+			height: 48px;
+
+			img {
+				padding: 4px;
+				height: $filterHeight - 8;
+			}
 		}
 	}
 
@@ -85,7 +108,7 @@ $saveHeight: 38px;
 	}
 
 	.download-container {
-		grid-row: 3;
+		grid-row: 4;
 	}
 }
 
@@ -95,4 +118,12 @@ $saveHeight: 38px;
 
 .save-color {
 	color: powderblue;
+}
+
+@media only screen and (max-width: 716px) {
+	.container{
+		.filter-container {
+			grid-template-columns: repeat(7, 1fr);
+		}
+	}
 }

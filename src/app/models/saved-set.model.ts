@@ -1,6 +1,8 @@
+import { WeaponType } from '../types/weapon.type';
+
 export class SavedSetModel {
 	setName: string;
-	weaponType: string;
+	weaponType?: WeaponType;
 	totalAttack: number;
 	element?: string;
 	elementAttack?: number;

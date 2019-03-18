@@ -1,4 +1,4 @@
-import { SkillReferenceModel } from "./skill-reference.model";
+import { SkillReferenceModel } from './skill-reference.model';
 
 export class CommonModel {
 	id: number;

@@ -1,19 +1,68 @@
 <div class="container">
 	<div class="save-container">
 		<input #saveBox placeholder="Set Name" (keydown.enter)="save(saveBox.value)" />
+		<button type="button" class="filter-button" (click)="hideFilterContainer=!hideFilterContainer">
+			<i class="fas fa-filter"></i>
+		</button>
 		<button type="button" class="save-button save-color" (click)="save(saveBox.value)">
 			<i class="fas fa-save fa-lg" [hidden]="loading==1"></i>
 			<i class="fas fa-spinner fa-spin" [hidden]="loading!=1"></i>
 		</button>
 	</div>
+
+	<div class="filter-container" *ngIf="!hideFilterContainer">
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'Great Sword'" (click)="weaponFilterClicked('GreatSword')">
+			<img src="assets/images/weapons/greatsword-icon.png" alt="greatsword">
+		</button>
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'SwordAndShield'" (click)="weaponFilterClicked('SwordAndShield')">
+			<img src="assets/images/weapons/swordandshield-icon.png" alt="Sword and Shield">
+		</button>
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'DualBlades'" (click)="weaponFilterClicked('DualBlades')">
+			<img src="assets/images/weapons/dualblades-icon.png" alt="Dual Blades">
+		</button>
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'LongSword'" (click)="weaponFilterClicked('LongSword')">
+			<img src="assets/images/weapons/longsword-icon.png" alt="Long Sword">
+		</button>
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'Hammer'" (click)="weaponFilterClicked('Hammer')">
+			<img src="assets/images/weapons/hammer-icon.png" alt="Hammer">
+		</button>
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'HuntingHorn'" (click)="weaponFilterClicked('HuntingHorn')">
+			<img src="assets/images/weapons/huntinghorn-icon.png" alt="Hunting Horn">
+		</button>
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'Lance'" (click)="weaponFilterClicked('Lance')">
+			<img src="assets/images/weapons/lance-icon.png" alt="Lance">
+		</button>
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'Gunlance'" (click)="weaponFilterClicked('Gunlance')">
+			<img src="assets/images/weapons/gunlance-icon.png" alt="Gunlance">
+		</button>
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'SwitchAxe'" (click)="weaponFilterClicked('SwitchAxe')">
+			<img src="assets/images/weapons/switchaxe-icon.png" alt="Switch Axe">
+		</button>
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'ChargeBlade'" (click)="weaponFilterClicked('ChargeBlade')">
+			<img src="assets/images/weapons/chargeblade-icon.png" alt="Charge Blade">
+		</button>
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'InsectGlaive'" (click)="weaponFilterClicked('InsectGlaive')">
+			<img src="assets/images/weapons/insectglaive-icon.png" alt="Insect Glaive">
+		</button>
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'Bow'" (click)="weaponFilterClicked('Bow')">
+			<img src="assets/images/weapons/bow-icon.png" alt="Bow">
+		</button>
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'LightBowgun'" (click)="weaponFilterClicked('LightBowgun')">
+			<img src="assets/images/weapons/lightbowgun-icon.png" alt="LBG">
+		</button>
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'HeavyBowgun'" (click)="weaponFilterClicked('HeavyBowgun')">
+			<img src="assets/images/weapons/heavybowgun-icon.png" alt="HBG">
+		</button>
+	</div>
+
 	<div class="scroll-container" *ngIf="sets">
 		<div [sortablejs]="sets" [sortablejsOptions]="eventOptions">
-			<div *ngFor="let item of sets; let i = index" class="scroll-item-container">
+			<div *ngFor="let item of filteredItems; let i = index" class="scroll-item-container">
 				<div class="icon-container text-left">
-					<img [src]="'assets/images/weapons/'+item.weaponType+'-icon.png'" *ngIf="item.weaponType" alt="weapon" />
+					<img [src]="'assets/images/weapons/'+item.weaponType.toLowerCase()+'-icon.png'" *ngIf="item.weaponType" alt="weapon" />
 				</div>
 				<div class="name-container" (click)="select(item)" [ngClass]="{'sharp-2':i==selectedSetIndex}">
-					{{item.setName}} 
+					{{item.setName}}
 				</div>
 				<div class="stats-container text-right" (click)="select(item)">
 					<span>{{item.totalAttack}}</span>

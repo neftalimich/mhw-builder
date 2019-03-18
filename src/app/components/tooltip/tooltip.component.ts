@@ -61,8 +61,8 @@ export class TooltipComponent implements OnInit {
 				this.hide();
 			} else {
 				this.reset();
-				let levels: CommonLevelModel[] = [];
-				for (let augLevel of augmentation.levels) {
+				const levels: CommonLevelModel[] = [];
+				for (const augLevel of augmentation.levels) {
 					let level: CommonLevelModel;
 					level = {
 						description: augLevel.description,
@@ -86,8 +86,8 @@ export class TooltipComponent implements OnInit {
 				this.hide();
 			} else {
 				this.reset();
-				let levels: CommonLevelModel[] = [];
-				for (let modLevel of modification.levels) {
+				const levels: CommonLevelModel[] = [];
+				for (const modLevel of modification.levels) {
 					let level: CommonLevelModel;
 					level = {
 						description: modLevel.description,

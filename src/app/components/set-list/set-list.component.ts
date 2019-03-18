@@ -1,7 +1,9 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { SortablejsOptions } from 'angular-sortablejs';
+import * as _ from 'lodash';
 import { SavedSetModel } from 'src/app/models/saved-set.model';
 import { SetService } from 'src/app/services/set.service';
+import { WeaponType } from 'src/app/types/weapon.type';
 
 @Component({
 	selector: 'mhw-builder-set-list',
@@ -11,12 +13,16 @@ import { SetService } from 'src/app/services/set.service';
 export class SetListComponent implements OnInit {
 	sets: SavedSetModel[] = [];
 	virtualItems: SavedSetModel[];
+	filteredItems: SavedSetModel[];
 	selectedSetIndex = -1;
 	loading = 0;
 
 	@ViewChild('saveBox') saveBox: ElementRef;
 
 	eventOptions: SortablejsOptions = {};
+
+	weaponTypeFilter?: WeaponType;
+	hideFilterContainer = true;
 
 	constructor(
 		private setService: SetService
@@ -36,6 +42,7 @@ export class SetListComponent implements OnInit {
 	ngOnInit() {
 		this.setService.importSet();
 		this.sets = this.setService.getSets();
+		this.filteredItems = this.sets;
 	}
 
 	save(setName: string) {
@@ -63,6 +70,16 @@ export class SetListComponent implements OnInit {
 	select(set: SavedSetModel) {
 		this.selectedSetIndex = this.setService.select(set);
 		this.saveBox.nativeElement.value = set.setName;
+	}
+
+	weaponFilterClicked(weaponType: WeaponType) {
+		if (!this.weaponTypeFilter || this.weaponTypeFilter != weaponType) {
+			this.weaponTypeFilter = weaponType;
+			this.filteredItems = _.reject(this.sets, item => item.weaponType != this.weaponTypeFilter);
+		} else if (this.weaponTypeFilter == weaponType) {
+			this.weaponTypeFilter = null;
+			this.filteredItems = this.sets;
+		}
 	}
 
 	downloadHtmlFile() {
