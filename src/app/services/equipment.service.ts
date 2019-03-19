@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import * as _ from 'lodash';
 import { AugmentationModel } from '../models/augmentation.model';
 import { DecorationModel } from '../models/decoration.model';
+import { EquippedSkillModel } from '../models/equipped-skill.model';
 import { ItemModel } from '../models/item.model';
 import { KinsectModel } from '../models/kinsect.model';
 import { ModificationModel } from '../models/modification.model';
@@ -10,6 +11,7 @@ import { StatService } from './stat.service';
 
 @Injectable()
 export class EquipmentService {
+	public skills: EquippedSkillModel[];
 	public items: ItemModel[];
 	public decorations: DecorationModel[];
 	public augmentations: AugmentationModel[];
@@ -26,7 +28,8 @@ export class EquipmentService {
 		this.modifications = [];
 
 		this.skillService.skillsUpdated$.subscribe(skills => {
-			this.statService.update(skills, this.items, this.augmentations, this.modifications);
+			this.skills = skills;
+			this.statService.update(skills, this.items, this.augmentations, this.modifications, this.kinsect);
 		});
 	}
 
@@ -52,6 +55,7 @@ export class EquipmentService {
 
 	addKinsect(kinsect: KinsectModel) {
 		this.kinsect = kinsect;
+		this.statService.update(this.skills, this.items, this.augmentations, this.modifications, this.kinsect);
 	}
 
 	removeItem(item: ItemModel) {

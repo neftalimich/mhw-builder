@@ -4,26 +4,29 @@ import { Subject } from 'rxjs';
 import { AugmentationSlotComponent } from '../components/augmentation-slot/augmentation-slot.component';
 import { DecorationSlotComponent } from '../components/decoration-slot/decoration-slot.component';
 import { ItemSlotComponent } from '../components/item-slot/item-slot.component';
+import { KinsectSlotComponent } from '../components/kinsect-slot/kinsect-slot.component';
 import { ModificationSlotComponent } from '../components/modification-slot/modification-slot.component';
 import { AugmentationModel } from '../models/augmentation.model';
 import { DecorationModel } from '../models/decoration.model';
 import { ItemModel } from '../models/item.model';
+import { KinsectModel } from '../models/kinsect.model';
 import { ModificationModel } from '../models/modification.model';
 import { SlotEventModel } from '../models/slot-event.model';
 import { EquipmentCategoryType } from '../types/equipment-category.type';
 import { ItemType } from '../types/item.type';
-import { EquipmentService } from './equipment.service';
 import { WeaponType } from '../types/weapon.type';
-import { KinsectModel } from '../models/kinsect.model';
+import { EquipmentService } from './equipment.service';
 
 @Injectable()
 export class SlotService {
-	public anySlotSelected$ = new Subject<ItemSlotComponent | DecorationSlotComponent | AugmentationSlotComponent | ModificationSlotComponent>();
+	public anySlotSelected$ =
+		new Subject<ItemSlotComponent | DecorationSlotComponent | AugmentationSlotComponent | ModificationSlotComponent | KinsectSlotComponent>();
 
 	public itemSelected$ = new Subject<SlotEventModel<ItemSlotComponent, ItemModel>>();
 	public decorationSelected$ = new Subject<SlotEventModel<DecorationSlotComponent, DecorationModel>>();
 	public augmentationSelected$ = new Subject<SlotEventModel<AugmentationSlotComponent, AugmentationModel>>();
 	public modificationSelected$ = new Subject<SlotEventModel<ModificationSlotComponent, ModificationModel>>();
+	public kinsectSelected$ = new Subject<SlotEventModel<KinsectSlotComponent, KinsectModel>>();
 	public itemLevelChanged$ = new Subject();
 
 	weaponSlot: ItemSlotComponent;
@@ -40,6 +43,7 @@ export class SlotService {
 	selectedDecorationSlot: DecorationSlotComponent;
 	selectedAugmentationSlot: AugmentationSlotComponent;
 	selectedModificationSlot: ModificationSlotComponent;
+	selectedKinsectSlot: KinsectSlotComponent;
 
 	constructor(
 		private equipmentService: EquipmentService
@@ -105,6 +109,16 @@ export class SlotService {
 		}
 	}
 
+	selectKinsectSlot(slot: KinsectSlotComponent) {
+		this.clearSlotSelect();
+		this.selectedKinsectSlot = slot;
+
+		if (this.selectedKinsectSlot) {
+			this.selectedKinsectSlot.selected = true;
+			this.anySlotSelected$.next(this.selectedKinsectSlot);
+		}
+	}
+
 	clearItemSlot(slot: ItemSlotComponent) {
 		this.clearSlotItems(slot);
 
@@ -131,6 +145,12 @@ export class SlotService {
 		this.equipmentService.removeModification(slot.modification);
 		slot.modification = null;
 		this.modificationSelected$.next({ slot: slot, equipment: null });
+	}
+
+	clearKinsectSlot(slot: KinsectSlotComponent) {
+		this.equipmentService.removeKinsect();
+		slot.kinsect = null;
+		this.kinsectSelected$.next({ slot: slot, equipment: null });
 	}
 
 	selectItem(item: ItemModel) {
@@ -163,15 +183,22 @@ export class SlotService {
 				} else {
 					this.selectedItemSlot.augmentations = [];
 				}
-
-				if (item.weaponType == WeaponType.LightBowgun || item.weaponType == WeaponType.HeavyBowgun) {
-					this.selectedItemSlot.modifications = [
-						new ModificationModel(),
-						new ModificationModel(),
-						new ModificationModel()
-					];
-				} else {
-					this.selectedItemSlot.modifications = [];
+				this.selectedItemSlot.kinsect = null;
+				this.selectedItemSlot.modifications = [];
+				switch (item.weaponType) {
+					case WeaponType.InsectGlaive:
+						this.selectedItemSlot.kinsect = new KinsectModel();
+						break;
+					case WeaponType.HeavyBowgun:
+					case WeaponType.LightBowgun:
+						this.selectedItemSlot.modifications = [
+							new ModificationModel(),
+							new ModificationModel(),
+							new ModificationModel()
+						];
+						break;
+					default:
+						break;
 				}
 			}
 
@@ -215,6 +242,18 @@ export class SlotService {
 			this.equipmentService.addModification(modification);
 			this.selectedModificationSlot.modification = modification;
 			this.modificationSelected$.next({ slot: this.selectedModificationSlot, equipment: modification });
+		}
+	}
+
+	selectKinsect(kinsect: KinsectModel) {
+		if (this.selectedKinsectSlot) {
+			if (this.selectedKinsectSlot.kinsect) {
+				this.equipmentService.removeKinsect();
+			}
+
+			this.equipmentService.addKinsect(kinsect);
+			this.selectedKinsectSlot.kinsect = kinsect;
+			this.kinsectSelected$.next({ slot: this.selectedKinsectSlot, equipment: kinsect });
 		}
 	}
 
@@ -281,6 +320,10 @@ export class SlotService {
 
 		if (this.selectedModificationSlot) {
 			this.selectedModificationSlot.selected = false;
+		}
+
+		if (this.selectedKinsectSlot) {
+			this.selectedKinsectSlot.selected = false;
 		}
 
 		this.selectedItemSlot = null;

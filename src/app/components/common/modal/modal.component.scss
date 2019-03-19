@@ -1,4 +1,4 @@
-@import "../../../sass/variables";
+@import '../../../../sass/variables';
 
 $headerHeight: 36px;
 $containerPadding: 10px;
@@ -66,7 +66,7 @@ $containerVerticalMargin: 40px;
 
 @media only screen and (max-width: 768px) {
 	.container {
-		border:none;
+		border: none;
 		border-radius: 0;
 		margin: auto;
 		height: calc(100% - #{$appMargin} * 2.5);

@@ -1,4 +1,5 @@
 export enum ElementType {
+	None = 'None',
 	Fire = 'Fire',
 	Water = 'Water',
 	Thunder = 'Thunder',

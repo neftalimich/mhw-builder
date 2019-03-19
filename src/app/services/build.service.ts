@@ -4,8 +4,10 @@ import { Subject } from 'rxjs';
 import { ItemSlotComponent } from '../components/item-slot/item-slot.component';
 import { BuildItemModel, BuildModel } from '../models/build.model';
 import { ItemModel } from '../models/item.model';
+import { ElementType } from '../types/element.type';
 import { EquipmentCategoryType } from '../types/equipment-category.type';
 import { ItemType } from '../types/item.type';
+import { WeaponType } from '../types/weapon.type';
 import { DataService } from './data.service';
 import { EquipmentService } from './equipment.service';
 import { SlotService } from './slot.service';
@@ -45,6 +47,10 @@ export class BuildService {
 		});
 
 		this.slotService.modificationSelected$.subscribe(() => {
+			if (!this.loadingBuild) { this.updateBuildId(); }
+		});
+
+		this.slotService.kinsectSelected$.subscribe(() => {
 			if (!this.loadingBuild) { this.updateBuildId(); }
 		});
 
@@ -200,7 +206,7 @@ export class BuildService {
 							}
 						}
 					}
-					if (buildItem.modificationIds) {
+					if (item.weaponType == WeaponType.InsectGlaive && buildItem.modificationIds) {
 						for (let i = 0; i < buildItem.modificationIds.length; i++) {
 							const modId = buildItem.modificationIds[i];
 							if (modId) {
@@ -210,6 +216,26 @@ export class BuildService {
 									const newAug = Object.assign({}, mod);
 									this.slotService.selectModification(newAug);
 								}
+							}
+						}
+					}
+					if (item.weaponType == WeaponType.InsectGlaive && buildItem.kinsectId) {
+						const kinsect = this.dataService.getKinsect(buildItem.kinsectId);
+						if (kinsect) {
+							this.slotService.selectKinsectSlot(slot.kinsectSlot);
+							const newKinsect = Object.assign({}, kinsect);
+							this.slotService.selectKinsect(newKinsect);
+
+							if (buildItem.kinsectElementId) {
+								const keys = Object.keys(ElementType);
+								for (const key in keys) {
+									if (key == buildItem.kinsectElementId.toString()) {
+										const value = keys[key];
+										newKinsect.element = (<any>ElementType)[value]; // There must be a better way to do this...
+									}
+								}
+							} else {
+								newKinsect.element = ElementType.None;
 							}
 						}
 					}
@@ -269,15 +295,34 @@ export class BuildService {
 				result += `l${item.equippedLevel}`;
 			}
 
-			if (item.equipmentCategory == EquipmentCategoryType.Weapon && item.rarity >= 6) {
-				for (const aug of this.equipmentService.augmentations) {
-					if (aug.id) {
-						result += `a${aug.id}`;
+			if (item.equipmentCategory == EquipmentCategoryType.Weapon) {
+				if (item.rarity >= 6) {
+					for (const aug of this.equipmentService.augmentations) {
+						if (aug.id) {
+							result += `a${aug.id}`;
+						}
 					}
 				}
+
 				for (const mod of this.equipmentService.modifications) {
 					if (mod.id) {
 						result += `m${mod.id}`;
+					}
+				}
+
+				if(this.equipmentService.kinsect) {
+					result += `k${this.equipmentService.kinsect.id}`;
+
+					if (this.equipmentService.kinsect.element) {
+						const keys = Object.keys(ElementType);
+						let elementIndex = '0';
+						for (const key in keys) {
+							const value = keys[key];
+							if (this.equipmentService.kinsect.element == value) {
+								elementIndex = key;
+							}
+						}
+						result += `e${elementIndex}`;
 					}
 				}
 			}

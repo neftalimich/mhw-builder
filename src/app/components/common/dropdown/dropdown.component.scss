@@ -1,0 +1,19 @@
+$padding: 8px;
+
+.container {
+	position: relative;
+	top: 0px;
+	// width: 100px;
+	border-radius: 3px;
+	background-color: rgb(50, 50, 50);
+	border: 1px solid white;
+
+	::ng-deep > * {
+		// background-color: gray;
+		margin: 2px;
+	}
+
+	::ng-deep > *:hover {
+		background-color: #525252;
+	}
+}

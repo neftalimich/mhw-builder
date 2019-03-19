@@ -32,6 +32,10 @@
 		</button>
 	</div>
 
+	<div class="kinsect-container" *ngIf="kinsect">
+		<mhw-builder-kinsect-slot></mhw-builder-kinsect-slot>
+	</div>
+
 	<div class="augmentation-container" *ngIf="augmentations && augmentations.length">
 		<mhw-builder-augmentation-slot *ngFor="let aug of augmentations">
 		</mhw-builder-augmentation-slot>

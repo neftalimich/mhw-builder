@@ -15,6 +15,7 @@ import { ItemType } from '../types/item.type';
 import { WeaponType } from '../types/weapon.type';
 import { CalculationService } from './calculation.service';
 import { DataService } from './data.service';
+import { KinsectModel } from '../models/kinsect.model';
 
 @Injectable()
 export class StatService {
@@ -29,7 +30,7 @@ export class StatService {
 		private calcService: CalculationService
 	) { }
 
-	update(skills: EquippedSkillModel[], items: ItemModel[], augmentations: AugmentationModel[], modifications: ModificationModel[]) {
+	update(skills: EquippedSkillModel[], items: ItemModel[], augmentations: AugmentationModel[], modifications: ModificationModel[], kinsect: KinsectModel) {
 		this.stats = new StatsModel();
 
 		this.updateItemStats(items);
@@ -44,6 +45,9 @@ export class StatService {
 				case WeaponType.HeavyBowgun:
 				case WeaponType.LightBowgun:
 					this.stats.ammoCapacities = weapon.ammoCapacities;
+					break;
+				case WeaponType.InsectGlaive:
+					this.stats.kinsect = kinsect;
 					break;
 				default:
 					break;

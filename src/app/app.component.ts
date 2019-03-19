@@ -1,11 +1,11 @@
 import { Location } from '@angular/common';
 import { AfterViewInit, ChangeDetectorRef, Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { AugmentationSlotComponent } from './components/augmentation-slot/augmentation-slot.component';
+import { ModalComponent } from './components/common/modal/modal.component';
 import { DecorationSlotComponent } from './components/decoration-slot/decoration-slot.component';
 import { EquippedSkillsComponent } from './components/equipped-skills/equipped-skills.component';
 import { EquippedStatsComponent } from './components/equipped-stats/equipped-stats.component';
 import { ItemSlotComponent } from './components/item-slot/item-slot.component';
-import { ModalComponent } from './components/modal/modal.component';
 import { TooltipComponent } from './components/tooltip/tooltip.component';
 import { BuildService } from './services/build.service';
 import { DataService } from './services/data.service';
@@ -115,6 +115,12 @@ export class AppComponent implements OnInit, AfterViewInit {
 		this.slotService.modificationSelected$.subscribe(modification => {
 			if (this.itemListModal) {
 				this.itemListModal.isOpen = !modification;
+			}
+		});
+
+		this.slotService.kinsectSelected$.subscribe(kinsect => {
+			if (this.itemListModal) {
+				this.itemListModal.isOpen = !kinsect;
 			}
 		});
 	}

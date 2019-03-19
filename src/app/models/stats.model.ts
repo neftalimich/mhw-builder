@@ -3,6 +3,7 @@ import { ElementType } from '../types/element.type';
 import { WeaponType } from '../types/weapon.type';
 import { AmmoCapacitiesModel } from './ammo-capacities.model';
 import { ExtraDataModel } from './extra-data.model';
+import { KinsectModel } from './kinsect.model';
 
 export class StatsModel {
 	totalAttack: number;
@@ -105,6 +106,8 @@ export class StatsModel {
 	recoil: number;
 	reload: number;
 	deviation: number;
+
+	kinsect?: KinsectModel;
 
 	constructor() {
 		this.totalAttack = 0;

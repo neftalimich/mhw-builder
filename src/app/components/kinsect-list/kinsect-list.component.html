@@ -1,0 +1,65 @@
+<div class="container">
+	<div class="search-container">
+		<input #searchBox (keyup)="search(searchBox.value)" placeholder="Search names, kinsect types, dust types" />
+
+		<button class="clear-button" (click)="resetSearchResults()">
+			<i class="fas fa-times"></i>
+		</button>
+	</div>
+
+	<virtual-scroller id="kinsects-list" #itemList class="scroll-container" *ngIf="kinsects" [items]="filteredKinsects" (update)="onKinsectListUpdate($event)" [childHeight]="108">
+		<div *ngFor="let kinsect of virtualKinsects" class="scroll-item-container" (click)="selectKinsect(kinsect)">
+
+			<div class="name-container">
+				<div class="name">
+					{{kinsect.name}}
+				</div>
+				<div class="type">
+					{{kinsect.attackType}}
+				</div>
+				<div class="rarity" *ngIf="kinsect.rarity">
+					Rarity {{kinsect.rarity}}
+				</div>
+			</div>
+
+			<div class="stats-container">
+				<div class="stat-container">
+					<div class="icon-container">
+						<img src="assets/images/attack-type-icon.png">
+					</div>
+					<div class="stat-value">{{kinsect.attackType}}</div>
+				</div>
+				<div class="stat-container">
+					<div class="icon-container">
+						<img src="assets/images/dust-effect-icon.png">
+					</div>
+					<div class="stat-value">{{kinsect.dustEffect}}</div>
+				</div>
+				<div class="stat-container">
+					<div class="icon-container">
+						<img src="assets/images/element-damage-icon.png">
+					</div>
+					<div class="stat-value">{{kinsect.element}}</div>
+				</div>
+				<div class="stat-container">
+					<div class="icon-container">
+						<img src="assets/images/kinsect/power-icon.png">
+					</div>
+					<div class="stat-value">{{kinsect.power}}</div>
+				</div>
+				<div class="stat-container">
+					<div class="icon-container">
+						<img src="assets/images/kinsect/speed-icon.png">
+					</div>
+					<div class="stat-value">{{kinsect.speed}}</div>
+				</div>
+				<div class="stat-container">
+					<div class="icon-container">
+						<img src="assets/images/kinsect/heal-icon.png">
+					</div>
+					<div class="stat-value">{{kinsect.heal}}</div>
+				</div>
+			</div>
+		</div>
+	</virtual-scroller>
+</div>

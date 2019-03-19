@@ -1,0 +1,25 @@
+<div class="container" (click)="clicked()" [class.selected]="selected" (pointerenter)="setTooltipKinsect($event, kinsect)" (pointerleave)="clearTooltipKinsect()">
+	<div class="slot-icon"><img [src]="'assets/images/kinsect/culldrone-icon.png'"></div>
+	<div class="selected-kinsect">{{kinsect?.name}}</div>
+
+	<div class="element-slot" [hidden]="!kinsect" (click)="elementDropdown.toggle($event)">
+		<div class="element selected-element">
+			<div *ngIf="kinsect?.element != elementTypes.None" class="image-container">
+				<img [src]="getElementIcon(kinsect?.element)">
+			</div>
+			<span>{{kinsect?.element}}</span>
+		</div>
+		<mhw-builder-dropdown #elementDropdown>
+			<div class="element" *ngFor="let e of elements" (click)="selectElement(e.value)">
+				<div class="image-container">
+					<img [hidden]="e.value == elementTypes.None" [src]="getElementIcon(e.value)">
+				</div>
+				<span>{{e.value}}</span>
+			</div>
+		</mhw-builder-dropdown>
+	</div>
+
+	<button class="clear-button" (click)="clearClicked($event)">
+		<i class="fas fa-times"></i>
+	</button>
+</div>

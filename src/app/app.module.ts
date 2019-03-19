@@ -12,6 +12,7 @@ import { AugmentationsListComponent } from './components/augmentations-list/augm
 import { CalcDetailsComponent } from './components/calc-details/calc-details.component';
 import { CharmListComponent } from './components/charm-list/charm-list.component';
 import { CommonDetailsComponent } from './components/common-details/common-details.component';
+import { CommonModule } from './components/common/common.module';
 import { DecorationDetailsComponent } from './components/decoration-details/decoration-details.component';
 import { DecorationListComponent } from './components/decoration-list/decoration-list.component';
 import { DecorationSlotComponent } from './components/decoration-slot/decoration-slot.component';
@@ -19,8 +20,9 @@ import { EquippedSkillsComponent } from './components/equipped-skills/equipped-s
 import { EquippedStatsComponent } from './components/equipped-stats/equipped-stats.component';
 import { ItemDetailsComponent } from './components/item-details/item-details.component';
 import { ItemSlotComponent } from './components/item-slot/item-slot.component';
+import { KinsectListComponent } from './components/kinsect-list/kinsect-list.component';
+import { KinsectSlotComponent } from './components/kinsect-slot/kinsect-slot.component';
 import { MelodiesComponent } from './components/melodies/melodies.component';
-import { ModalComponent } from './components/modal/modal.component';
 import { ModificationSlotComponent } from './components/modification-slot/modification-slot.component';
 import { ModificationsListComponent } from './components/modifications-list/modifications-list.component';
 import { SetBonusDetailsComponent } from './components/set-bonus-details/set-bonus-details.component';
@@ -49,6 +51,7 @@ import { TooltipService } from './services/tooltip.service';
 		WeaponListComponent,
 		AugmentationsListComponent,
 		ModificationsListComponent,
+		KinsectListComponent,
 		AmmoCapacitiesComponent,
 		MelodiesComponent,
 		DecorationListComponent,
@@ -59,13 +62,13 @@ import { TooltipService } from './services/tooltip.service';
 		ItemSlotComponent,
 		AugmentationSlotComponent,
 		ModificationSlotComponent,
+		KinsectSlotComponent,
 		DecorationSlotComponent,
 		EquippedStatsComponent,
 		EquippedSkillsComponent,
 		CalcDetailsComponent,
 		SkillDetailsComponent,
 		SetBonusDetailsComponent,
-		ModalComponent,
 		TooltipComponent,
 		MaxSharpnessPipe,
 		SharpnessBarComponent,
@@ -76,7 +79,8 @@ import { TooltipService } from './services/tooltip.service';
 		HttpClientModule,
 		VirtualScrollerModule,
 		SortablejsModule.forRoot({ animation: 150 }),
-		DataModule
+		DataModule,
+		CommonModule
 	],
 	providers: [
 		Location,

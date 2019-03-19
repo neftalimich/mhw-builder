@@ -1,4 +1,5 @@
-import { Component, Input, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { Component, Input, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { KinsectModel } from 'src/app/models/kinsect.model';
 import { ModificationModel } from 'src/app/models/modification.model';
 import { AugmentationModel } from '../../models/augmentation.model';
 import { ItemModel } from '../../models/item.model';
@@ -10,6 +11,7 @@ import { ItemType } from '../../types/item.type';
 import { PointerType } from '../../types/pointer.type';
 import { AugmentationSlotComponent } from '../augmentation-slot/augmentation-slot.component';
 import { DecorationSlotComponent } from '../decoration-slot/decoration-slot.component';
+import { KinsectSlotComponent } from '../kinsect-slot/kinsect-slot.component';
 import { ModificationSlotComponent } from '../modification-slot/modification-slot.component';
 
 @Component({
@@ -23,11 +25,13 @@ export class ItemSlotComponent implements OnInit {
 	@ViewChildren(DecorationSlotComponent) decorationSlots: QueryList<DecorationSlotComponent>;
 	@ViewChildren(AugmentationSlotComponent) augmentationSlots: QueryList<AugmentationSlotComponent>;
 	@ViewChildren(ModificationSlotComponent) modificationSlots: QueryList<ModificationSlotComponent>;
+	@ViewChild(KinsectSlotComponent) kinsectSlot: KinsectSlotComponent;
 
 	item: ItemModel;
 
 	public augmentations = new Array<AugmentationModel>();
 	public modifications = new Array<ModificationModel>();
+	public kinsect: KinsectModel;
 	public selected: boolean;
 
 	constructor(

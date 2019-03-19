@@ -73,6 +73,9 @@ $equipmentHeight: 40px;
 	}
 }
 
+.kinsect-container {
+}
+
 .augmentation-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -83,7 +86,6 @@ $equipmentHeight: 40px;
 .modification-container {
 	display: grid;
 	grid-template-columns: repeat(3, minmax(100px, 1fr));
-	// grid-template-columns: repeat(3, 1fr);
 	grid-gap: 4px;
 }
 

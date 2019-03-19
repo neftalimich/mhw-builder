@@ -1,13 +1,11 @@
-import { Component, OnInit, Output, EventEmitter, Input, ViewChild, ElementRef, HostListener } from '@angular/core';
-import { SlotService } from '../../services/slot.service';
-import { DataService } from '../../services/data.service';
-import { TooltipService } from '../../services/tooltip.service';
-import { ItemType } from '../../types/item.type';
-import { DecorationModel } from '../../models/decoration.model';
-import { PointerType } from '../../types/pointer.type';
+import { Component, ElementRef, EventEmitter, HostListener, Input, OnInit, Output, ViewChild } from '@angular/core';
 import * as _ from 'lodash';
 import { VirtualScrollerComponent } from 'ngx-virtual-scroller';
+import { DecorationModel } from '../../models/decoration.model';
 import { SkillModel } from '../../models/skill.model';
+import { DataService } from '../../services/data.service';
+import { SlotService } from '../../services/slot.service';
+import { TooltipService } from '../../services/tooltip.service';
 
 @Component({
 	selector: 'mhw-builder-decoration-list',

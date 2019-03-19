@@ -1,0 +1,76 @@
+$slotHeight: 30px;
+$slotPadding: 4px;
+
+.container {
+	display: grid;
+	grid-template-columns: 40px min-content min-content auto 36px;
+	height: $slotHeight;
+	font-size: 14px;
+	cursor: pointer;
+	border-radius: 3px;
+	background-color: rgb(50,50,50);
+	padding: $slotPadding;
+
+	.slot-icon {
+		line-height: $slotHeight;
+		width: 40px;
+		margin-left: 4px;
+		margin-top: 4px;
+
+		img {
+			height: $slotHeight - $slotPadding * 2;
+		}
+	}
+
+	.selected-kinsect {
+		line-height: $slotHeight;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		padding-right: 16px;
+	}
+
+	.element-slot {
+		height: $slotHeight;
+		width: 100px;
+		background-color: rgb(41, 41, 41);
+		border-radius: 3px;
+		align-self: start;
+
+		.element {
+			$elementSize: 24px;
+			$elementSpacing: 4px;
+
+			display: flex;
+			margin: $elementSpacing;
+			height: $elementSize;
+
+			span {
+				padding: $elementSpacing;
+				line-height: $elementSize - $elementSpacing * 2;
+			}
+
+			.image-container {
+				$elementImagePadding: $elementSpacing / 2;
+
+				padding: $elementImagePadding;
+				height: $elementSize - $elementImagePadding * 2;
+				width: $elementSize - $elementImagePadding * 2;
+
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+
+	.clear-button {
+		grid-column: 5;
+		height: $slotHeight;
+	}
+}
+
+.selected {
+	background-color: #525252;
+}
