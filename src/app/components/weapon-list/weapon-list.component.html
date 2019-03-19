@@ -13,7 +13,7 @@
 	</div>
 
 	<div class="filter-container" *ngIf="itemType == 'Weapon' && !hideFilterContainer">
-		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'Great Sword'" (click)="weaponFilterClicked('GreatSword')">
+		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'GreatSword'" (click)="weaponFilterClicked('GreatSword')">
 			<img src="assets/images/weapons/greatsword-icon.png" alt="greatsword">
 		</button>
 		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'SwordAndShield'" (click)="weaponFilterClicked('SwordAndShield')">
