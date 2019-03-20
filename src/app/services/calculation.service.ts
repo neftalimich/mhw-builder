@@ -6,12 +6,16 @@ import { ExtraDataModel } from '../models/extra-data.model';
 import { SharpnessBarModel } from '../models/sharpness-bar.model';
 import { StatDetailModel } from '../models/stat-detail.model';
 import { StatsModel } from '../models/stats.model';
+import { KinsectModel } from '../models/kinsect.model';
+import { AttackType } from '../types/attack.type';
+import { ElementType } from '../types/element.type';
 
 @Injectable()
 export class CalculationService {
 	public attackCalcsUpdated$ = new Subject<StatDetailModel[]>();
 	public defenseCalcsUpdated$ = new Subject<StatDetailModel[]>();
 	public ammoUpdated$ = new Subject<AmmoCapacitiesModel>();
+	public kinsectUpdated$ = new Subject<KinsectModel>();
 	public sharpnessUpdated$ = new Subject<SharpnessBarModel>();
 	public extraDataUpdated$ = new Subject<ExtraDataModel>();
 
@@ -24,6 +28,7 @@ export class CalculationService {
 		this.buildAttackCalcs(stats);
 		this.buildDefenseCalcs(stats);
 		this.buildAmmoCapacities(stats);
+		this.buildKinsect(stats);
 		this.getSharpnessBar(stats);
 		this.getExtraData(stats);
 
@@ -31,6 +36,7 @@ export class CalculationService {
 		this.defenseCalcsUpdated$.next(this.defenseCalcs);
 
 		this.ammoUpdated$.next(stats.ammoCapacitiesUp);
+		this.kinsectUpdated$.next(stats.kinsect);
 		this.sharpnessUpdated$.next(this.sharpnessBar);
 		this.extraDataUpdated$.next(this.extraData);
 	}
@@ -719,6 +725,40 @@ export class CalculationService {
 								+= (ammo.levels[0].capacity < 3 && ammo.levels[0].capacity > 0 ? 1 : 0);
 						}
 					}
+				}
+			}
+		}
+	}
+
+	private buildKinsect(stats: StatsModel) {
+		if (stats.kinsect) {
+			if (stats.extraData) {
+				switch (stats.extraData.otherData[0].value) {
+					case 'Blunt':
+						if (stats.kinsect.attackType == AttackType.Blunt) {
+							// stats.kinsect.power += 2;
+						}
+						break;
+					case 'Sever':
+						if (stats.kinsect.attackType == AttackType.Sever) {
+							// stats.kinsect.power += 2;
+						}
+						break;
+					case 'Element':
+						if (stats.kinsect.element) {
+							// stats.kinsect.powerElement += 2;
+						}
+						break;
+					case 'Health':
+						// stats.kinsect.heal += 2;
+						break;
+					case 'Speed':
+						// stats.kinsect.speed += 2;
+						break;
+					case 'Stamina':
+						break;
+					default:
+						break;
 				}
 			}
 		}

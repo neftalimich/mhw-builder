@@ -4,15 +4,15 @@
 
 	<div class="element-slot" [hidden]="!kinsect" (click)="elementDropdown.toggle($event)">
 		<div class="element selected-element">
-			<div *ngIf="kinsect?.element != elementTypes.None" class="image-container">
-				<img [src]="getElementIcon(kinsect?.element)">
+			<div *ngIf="kinsect?.element && kinsect?.element != elementTypes.None" class="image-container">
+				<img *ngIf="kinsect?.element" [src]="getElementIcon(kinsect?.element)">
 			</div>
 			<span>{{kinsect?.element}}</span>
 		</div>
 		<mhw-builder-dropdown #elementDropdown>
 			<div class="element" *ngFor="let e of elements" (click)="selectElement(e.value)">
 				<div class="image-container">
-					<img [hidden]="e.value == elementTypes.None" [src]="getElementIcon(e.value)">
+					<img *ngIf="e.value != elementTypes.None" [src]="getElementIcon(e.value)">
 				</div>
 				<span>{{e.value}}</span>
 			</div>

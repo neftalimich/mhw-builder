@@ -30,9 +30,9 @@ export class KinsectSlotComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.elements = [];
-		for (const item in ElementType) {
-			this.elements.push({ key: item, value: item });
-		}
+		Object.keys(ElementType).map(key => {
+			this.elements.push({ key: key, value: key });
+		});
 	}
 
 	clicked() {
@@ -47,12 +47,12 @@ export class KinsectSlotComponent implements OnInit {
 
 	setTooltipKinsect(event: PointerEvent, kinsect: KinsectModel) {
 		if (event.pointerType == PointerType.Mouse) {
-			// this.tooltipService.setKinsect(kinsect);
+			this.tooltipService.setKinsect(kinsect);
 		}
 	}
 
 	clearTooltipKinsect() {
-		// this.tooltipService.setKinsect(null);
+		this.tooltipService.setKinsect(null);
 	}
 
 	selectElement(selectedElement: ElementType) {

@@ -14,4 +14,5 @@ export class KinsectModel {
 	power: number;
 	speed: number;
 	heal: number;
+	elementPower?: number;
 }

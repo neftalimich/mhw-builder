@@ -1,0 +1,8 @@
+<div class="container">
+	<ul class="striped-light">
+		<li *ngFor="let stat of stats">
+			<span class="name">{{stat.name}}</span>
+			<span class="value" [ngStyle]="{ color: stat.color }">{{stat.value}}</span>
+		</li>
+	</ul>
+</div>

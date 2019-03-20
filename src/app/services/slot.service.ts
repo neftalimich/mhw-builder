@@ -250,7 +250,6 @@ export class SlotService {
 			if (this.selectedKinsectSlot.kinsect) {
 				this.equipmentService.removeKinsect();
 			}
-
 			this.equipmentService.addKinsect(kinsect);
 			this.selectedKinsectSlot.kinsect = kinsect;
 			this.kinsectSelected$.next({ slot: this.selectedKinsectSlot, equipment: kinsect });

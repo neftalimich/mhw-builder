@@ -21,6 +21,10 @@ ul {
 	grid-template-columns: min-content auto min-content;
 }
 
+.kinsect-stats > div {
+	padding-right: 5px;
+}
+
 .ammo-stats > div {
 	color: $yellow;
 	text-align: center;

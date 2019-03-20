@@ -5,9 +5,10 @@ import { DecorationModel } from '../models/decoration.model';
 import { EquippedSetBonusModel } from '../models/equipped-set-bonus.model';
 import { EquippedSkillModel } from '../models/equipped-skill.model';
 import { ItemModel } from '../models/item.model';
+import { KinsectModel } from '../models/kinsect.model';
+import { ModificationModel } from '../models/modification.model';
 import { SkillModel } from '../models/skill.model';
 import { StatDetailModel } from '../models/stat-detail.model';
-import { ModificationModel } from '../models/modification.model';
 
 @Injectable()
 export class TooltipService {
@@ -15,6 +16,7 @@ export class TooltipService {
 	public decorationChanged$ = new Subject<DecorationModel>();
 	public augmentationChanged$ = new Subject<AugmentationModel>();
 	public modificationChanged$ = new Subject<ModificationModel>();
+	public kinsectChanged$ = new Subject<KinsectModel>();
 	public equippedSkillChanged$ = new Subject<EquippedSkillModel>();
 	public equippedSetBonusChanged$ = new Subject<EquippedSetBonusModel>();
 	public skillChanged$ = new Subject<SkillModel>();
@@ -24,6 +26,7 @@ export class TooltipService {
 	public decoration: DecorationModel;
 	public augmentation: AugmentationModel;
 	public modification: ModificationModel;
+	public kinsect: KinsectModel;
 	public equippedSkill: EquippedSkillModel;
 	public equippedSetBonus: EquippedSetBonusModel;
 	public skill: SkillModel;
@@ -58,6 +61,14 @@ export class TooltipService {
 			this.reset();
 			this.modification = modification;
 			this.modificationChanged$.next(modification);
+		}
+	}
+
+	setKinsect(kinsect: KinsectModel) {
+		if (kinsect != this.kinsect) {
+			this.reset();
+			this.kinsect = kinsect;
+			this.kinsectChanged$.next(kinsect);
 		}
 	}
 
@@ -98,6 +109,7 @@ export class TooltipService {
 		this.decoration = null;
 		this.augmentation = null;
 		this.modification = null;
+		this.kinsect = null;
 		this.equippedSkill = null;
 		this.equippedSetBonus = null;
 		this.skill = null;

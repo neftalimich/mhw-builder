@@ -20,6 +20,7 @@ import { EquippedSkillsComponent } from './components/equipped-skills/equipped-s
 import { EquippedStatsComponent } from './components/equipped-stats/equipped-stats.component';
 import { ItemDetailsComponent } from './components/item-details/item-details.component';
 import { ItemSlotComponent } from './components/item-slot/item-slot.component';
+import { KinsectDetailsComponent } from './components/kinsect-details/kinsect-details.component';
 import { KinsectListComponent } from './components/kinsect-list/kinsect-list.component';
 import { KinsectSlotComponent } from './components/kinsect-slot/kinsect-slot.component';
 import { MelodiesComponent } from './components/melodies/melodies.component';
@@ -59,6 +60,7 @@ import { TooltipService } from './services/tooltip.service';
 		ItemDetailsComponent,
 		CommonDetailsComponent,
 		DecorationDetailsComponent,
+		KinsectDetailsComponent,
 		ItemSlotComponent,
 		AugmentationSlotComponent,
 		ModificationSlotComponent,

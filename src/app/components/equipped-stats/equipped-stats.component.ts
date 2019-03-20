@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { KinsectModel } from 'src/app/models/kinsect.model';
 import { AmmoCapacitiesModel } from '../../models/ammo-capacities.model';
 import { ExtraDataModel } from '../../models/extra-data.model';
 import { SharpnessBarModel } from '../../models/sharpness-bar.model';
@@ -18,11 +19,13 @@ export class EquippedStatsComponent implements OnInit {
 	attackCalcs = new Array<StatDetailModel>();
 	defenseCalcs = new Array<StatDetailModel>();
 	ammoCapacities: AmmoCapacitiesModel;
+	kinsect: KinsectModel;
 	sharpnessBar: SharpnessBarModel;
 	extraData: ExtraDataModel;
 
 	attackVisible: boolean;
-	detailsVisible: boolean;
+	ammoVisible: boolean;
+	kinsectVisible: boolean;
 	defenseVisible: boolean;
 
 	constructor(
@@ -39,6 +42,10 @@ export class EquippedStatsComponent implements OnInit {
 			this.ammoCapacities = ammo;
 		});
 
+		this.calculationService.kinsectUpdated$.subscribe(kinsect => {
+			this.kinsect = kinsect;
+		});
+
 		this.calculationService.sharpnessUpdated$.subscribe(sharp => {
 			this.sharpnessBar = sharp;
 		});
@@ -52,7 +59,8 @@ export class EquippedStatsComponent implements OnInit {
 		});
 
 		this.attackVisible = true;
-		this.detailsVisible = true;
+		this.ammoVisible = true;
+		this.kinsectVisible = true;
 		this.defenseVisible = true;
 	}
 

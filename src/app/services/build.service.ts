@@ -310,16 +310,18 @@ export class BuildService {
 					}
 				}
 
-				if(this.equipmentService.kinsect) {
+				if (this.equipmentService.kinsect) {
 					result += `k${this.equipmentService.kinsect.id}`;
 
 					if (this.equipmentService.kinsect.element) {
 						const keys = Object.keys(ElementType);
 						let elementIndex = '0';
 						for (const key in keys) {
-							const value = keys[key];
-							if (this.equipmentService.kinsect.element == value) {
-								elementIndex = key;
+							if (keys.hasOwnProperty(key)) {
+								const value = keys[key];
+								if (this.equipmentService.kinsect.element == value) {
+									elementIndex = key;
+								}
 							}
 						}
 						result += `e${elementIndex}`;

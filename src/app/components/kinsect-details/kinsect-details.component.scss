@@ -1,0 +1,20 @@
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	list-style: none;
+}
+
+h3, h4, h5 {
+	margin: 0;
+}
+
+ul.striped-light {
+	li {
+		.value {
+			float: right;
+		}
+	}
+}

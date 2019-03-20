@@ -7,7 +7,7 @@
 		</button>
 	</div>
 
-	<virtual-scroller id="kinsects-list" #itemList class="scroll-container" *ngIf="kinsects" [items]="filteredKinsects" (update)="onKinsectListUpdate($event)" [childHeight]="108">
+	<virtual-scroller id="kinsects-list" #itemList class="scroll-container" *ngIf="kinsects" [items]="filteredKinsects" (update)="onKinsectListUpdate($event)" [childHeight]="20">
 		<div *ngFor="let kinsect of virtualKinsects" class="scroll-item-container" (click)="selectKinsect(kinsect)">
 
 			<div class="name-container">
@@ -15,7 +15,6 @@
 					{{kinsect.name}}
 				</div>
 				<div class="type">
-					{{kinsect.attackType}}
 				</div>
 				<div class="rarity" *ngIf="kinsect.rarity">
 					Rarity {{kinsect.rarity}}
@@ -39,7 +38,7 @@
 					<div class="icon-container">
 						<img src="assets/images/element-damage-icon.png">
 					</div>
-					<div class="stat-value">{{kinsect.element}}</div>
+					<div class="stat-value sharp-8">{{kinsect.elementPower}}</div>
 				</div>
 				<div class="stat-container">
 					<div class="icon-container">

@@ -33,9 +33,9 @@
 					Sharpness
 				</span>
 				<mhw-builder-sharpness-bar class="value"
-					[sharpnessLevels]="sharpnessBar.levels"
-					[handicraftLevel]="sharpnessBar.handicraftLevel"
-					[dataNeeded]="sharpnessBar.sharpnessDataNeeded">
+										   [sharpnessLevels]="sharpnessBar.levels"
+										   [handicraftLevel]="sharpnessBar.handicraftLevel"
+										   [dataNeeded]="sharpnessBar.sharpnessDataNeeded">
 				</mhw-builder-sharpness-bar>
 			</li>
 
@@ -59,13 +59,26 @@
 	</div>
 	<br />
 
+	<div class="kinsect-stats" *ngIf="kinsect">
+		<h4>
+			Kinsect
+			<span [hidden]="!kinsectVisible" (click)="kinsectVisible = !kinsectVisible"><i class="fas fa-minus-circle number"></i></span>
+			<span [hidden]="kinsectVisible" (click)="kinsectVisible = !kinsectVisible"><i class="fas fa-plus-circle number"></i></span>
+		</h4>
+		<div class="" [hidden]="!kinsectVisible">
+			<hr>
+			<mhw-builder-kinsect-details [kinsect]="kinsect"></mhw-builder-kinsect-details>
+		</div>
+		<br />
+	</div>
+
 	<div *ngIf="ammoCapacities">
 		<h4>
 			Ammo
-			<span [hidden]="!detailsVisible" (click)="detailsVisible = !detailsVisible"><i class="fas fa-minus-circle number"></i></span>
-			<span [hidden]="detailsVisible" (click)="detailsVisible = !detailsVisible"><i class="fas fa-plus-circle number"></i></span>
+			<span [hidden]="!ammoVisible" (click)="ammoVisible = !ammoVisible"><i class="fas fa-minus-circle number"></i></span>
+			<span [hidden]="ammoVisible" (click)="ammoVisible = !ammoVisible"><i class="fas fa-plus-circle number"></i></span>
 		</h4>
-		<div class="ammo-stats" [hidden]="!detailsVisible">
+		<div class="ammo-stats" [hidden]="!ammoVisible">
 			<hr>
 			<mhw-builder-ammo-capacities [ammoCapacities]="ammoCapacities"></mhw-builder-ammo-capacities>
 		</div>

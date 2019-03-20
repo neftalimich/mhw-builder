@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { CommonLevelModel, CommonModel } from 'src/app/models/common.model';
+import { KinsectModel } from 'src/app/models/kinsect.model';
 import { DecorationModel } from '../../models/decoration.model';
 import { EquippedSetBonusModel } from '../../models/equipped-set-bonus.model';
 import { EquippedSkillModel } from '../../models/equipped-skill.model';
@@ -20,6 +21,7 @@ export class TooltipComponent implements OnInit {
 	item: ItemModel;
 	decoration: DecorationModel;
 	common: CommonModel;
+	kinsect: KinsectModel;
 	equippedSkill: EquippedSkillModel;
 	equippedSetBonus: EquippedSetBonusModel;
 	skill: SkillModel;
@@ -106,6 +108,16 @@ export class TooltipComponent implements OnInit {
 			}
 		});
 
+		this.tooltipService.kinsectChanged$.subscribe(kinsect => {
+			if (!kinsect) {
+				this.hide();
+			} else {
+				this.reset();
+				this.kinsect = kinsect;
+				this.show();
+			}
+		});
+
 		this.tooltipService.equippedSkillChanged$.subscribe(equippedSkill => {
 			if (!equippedSkill) {
 				this.hide();
@@ -152,6 +164,7 @@ export class TooltipComponent implements OnInit {
 		this.item = null;
 		this.decoration = null;
 		this.common = null;
+		this.kinsect = null;
 		this.equippedSkill = null;
 		this.equippedSetBonus = null;
 		this.skill = null;
