@@ -95,7 +95,7 @@ export class SetListComponent implements OnInit {
 			day: '2-digit',
 		});
 		const fileName = `mhw-builder-save(${dateNow}).html`;
-		let fileString = `
+		const fileString = `
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="mhwApp">
@@ -174,13 +174,16 @@ export class SetListComponent implements OnInit {
                                     {{item.setName}}
                                 </a>
                                 <span style="font-size:14px;">
-                                    <a class="float-right ml-1 text-secondary" href="https://neftalimich.github.io/mhw-builder-page?{{item.hashString}}i{{item.setName}}" target="_blank" title="Import">
+                                    <a class="float-right ml-1 text-secondary" href="https://neftalimich.github.io/mhw-builder-page?{{item.hashString}}i{{item.setName}}"
+										target="_blank" title="Import">
                                         <i class="fas fa-cloud-upload-alt fa-sm"></i>
                                     </a>
                                     <span class="float-right">
                                         <span>{{item.totalAttack}}</span>
                                         <span ng-show="item.element || item.ailment">
-                                            (<span class="{{item.element}}" title="{{item.element}}">{{item.element ? item.elementAttack : ''}}</span>{{item.ailment && item.element ? '/' : ''}}<span class="{{item.ailment}}" title="{{item.ailment}}">{{item.ailment ? item.ailmentAttack : ''}}</span>)
+											(<span class="{{item.element}}" title="{{item.element}}">{{item.element ? item.elementAttack : ''}}</span><!--
+											-->{{item.ailment && item.element ? '/' : ''}}<!--
+											--><span class="{{item.ailment}}" title="{{item.ailment}}">{{item.ailment ? item.ailmentAttack : ''}}</span>)
                                         </span>
                                     </span>
                                 </span>
