@@ -76,6 +76,7 @@ export class SetService {
 			this.selectedSetIndex = this.sets.length - 1;
 		}
 		localStorage.setItem('mhwSets', JSON.stringify(this.sets));
+		console.log(this.sets);
 		this.setsUpdated$.next(this.sets);
 		return this.selectedSetIndex;
 	}

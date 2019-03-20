@@ -35,7 +35,9 @@ export class SetListComponent implements OnInit {
 			}
 		};
 		this.setService.setsUpdated$.subscribe(sets => {
+			console.log("updated",sets);
 			this.sets = sets;
+			this.filteredItems = _.reject(this.sets, item => item.weaponType != this.weaponTypeFilter);
 		});
 	}
 
