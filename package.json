@@ -26,7 +26,7 @@
     "ngx-virtual-scroller": "^1.0.16",
     "node-sass": "^4.11.0",
     "rxjs": "~6.3.3",
-    "sortablejs": "^1.8.0-rc1",
+    "sortablejs": "^1.8.4",
     "zone.js": "^0.8.27"
   },
   "devDependencies": {

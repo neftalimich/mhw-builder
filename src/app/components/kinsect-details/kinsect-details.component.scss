@@ -1,20 +1,39 @@
+@import "../../../sass/common";
+
 ul {
 	padding: 0;
 	margin: 0;
-}
-
-li {
-	list-style: none;
 }
 
 h3, h4, h5 {
 	margin: 0;
 }
 
-ul.striped-light {
-	li {
-		.value {
-			float: right;
-		}
+li {
+	list-style: none;
+	padding: 4px 4px;
+	cursor: default;
+	display: grid;
+	grid-gap: 4px;
+	grid-template-columns: min-content auto min-content;
+
+	.detail-icon {
+		grid-column: 1;
+		margin-right: 4px;
+		height: 1em;
+	}
+
+	.name {
+		grid-column: 2;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		text-align: left !important;
+	}
+
+	.value {
+		grid-column: 3;
+		white-space: nowrap;
+		text-align: right;
 	}
 }

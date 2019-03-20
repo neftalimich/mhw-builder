@@ -53,7 +53,7 @@ export class KinsectListComponent implements OnInit {
 
 			this.filteredKinsects = _.filter(this.kinsects, (k: KinsectModel) =>
 				k.name.toLocaleLowerCase().includes(query) ||
-				k.type.toString().toLocaleLowerCase().includes(query) ||
+				k.attackType.toString().toLocaleLowerCase().includes(query) ||
 				k.dustEffect.toString().toLocaleLowerCase().includes(query));
 		} else {
 			this.resetSearchResults();

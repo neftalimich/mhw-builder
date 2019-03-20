@@ -42,28 +42,30 @@ export class KinsectDetailsComponent implements OnInit {
 		this.stats = [];
 
 		this.stats.push({
+			icon: 'attack-type',
 			name: 'Attack Type',
 			value: this.kinsect.attackType
 		});
 
 		this.stats.push({
+			icon: 'dust-effect',
 			name: 'Dust Effect',
-			value: this.kinsect.dustEffect
+			value: this.kinsect.dustEffect,
+			class1: this.kinsect.dustEffect
 		});
 
 		let power = this.kinsect.power;
 		const powerDetail: StatDetailModel = {
+			icon: 'kinsect/power',
 			name: 'Power',
 			value: 'Lv '
 		};
 		if (this.kinsect.element != ElementType.None) {
 			this.stats.push({
-				name: 'Element Damage Type',
-				value: this.kinsect.element
-			});
-			this.stats.push({
+				icon: this.kinsect.element.toLowerCase(),
 				name: 'Element Power',
-				value: `Lv ${this.kinsect.elementPower}`
+				value: `Lv ${this.kinsect.elementPower}`,
+				class1: this.kinsect.element
 			});
 			power -= 1;
 			powerDetail.color = 'yellow';
@@ -72,11 +74,13 @@ export class KinsectDetailsComponent implements OnInit {
 		this.stats.push(powerDetail);
 
 		this.stats.push({
+			icon: '/kinsect/speed',
 			name: 'Speed',
 			value: `Lv ${this.kinsect.speed}`
 		});
 
 		this.stats.push({
+			icon: '/kinsect/heal',
 			name: 'Heal',
 			value: `Lv ${this.kinsect.heal}`
 		});

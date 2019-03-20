@@ -1,8 +1,11 @@
 <div class="container">
 	<ul class="striped-light">
 		<li *ngFor="let stat of stats">
+			<span *ngIf="stat.icon" class="detail-icon">
+				<img [src]="'assets/images/' + stat.icon + '-icon.png'" style="height:1em;margin:auto;padding-top:1px;" alt="stat icon">
+			</span>
 			<span class="name">{{stat.name}}</span>
-			<span class="value" [ngStyle]="{ color: stat.color }">{{stat.value}}</span>
+			<span class="value" [ngStyle]="{ color: stat.color }" [ngClass]="stat.class1">{{stat.value}}</span>
 		</li>
 	</ul>
 </div>
