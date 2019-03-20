@@ -5,6 +5,7 @@ import { ArmorLoader } from '../data/loaders/armor.loader';
 import { AugmentationsLoader } from '../data/loaders/augmentations.loader';
 import { CharmsLoader } from '../data/loaders/charms.loader';
 import { DecorationsLoader } from '../data/loaders/decorations.loader';
+import { KinsectsLoader } from '../data/loaders/kinsects.loader';
 import { MelodiesLoader } from '../data/loaders/melodies.loader';
 import { MelodyEffectLoader } from '../data/loaders/melodyEffect.loader';
 import { ModificationsLoader } from '../data/loaders/modifications.loader';
@@ -14,7 +15,6 @@ import { SkillsLoader } from '../data/loaders/skills.loader';
 import { WeaponModifiersLoader } from '../data/loaders/weapon-modifiers.loader';
 import { WeaponsLoader } from '../data/loaders/weapons.loader';
 import { AppDataModel } from '../models/app-data.model';
-import { KinsectsLoader } from '../data/loaders/kinsects.loader';
 
 @Injectable()
 export class AppDataProvider {
@@ -40,7 +40,7 @@ export class AppDataProvider {
 	}
 
 	load(): Observable<boolean> {
-		return Observable.create((observer: Observer<boolean>) => {
+		return new Observable((observer: Observer<boolean>) => {
 			forkJoin<any>(
 				this.weaponLoader.load('weapons.tsv'),
 				this.armorLoader.load('armor.tsv'),

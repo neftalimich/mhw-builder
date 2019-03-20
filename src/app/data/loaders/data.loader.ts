@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, forkJoin, Observer, of } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
-import { ColumnParser } from '../models/column-parser.model';
 import * as ld from 'lodash';
+import { forkJoin, Observable, Observer, of } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+import { ColumnParser } from '../models/column-parser.model';
 
 @Injectable()
 export abstract class DataLoader<T> {
@@ -23,7 +23,7 @@ export abstract class DataLoader<T> {
 
 		const ext = resourceName.split('.').pop();
 		if (ext.toLowerCase() === 'json') {
-			result = Observable.create((observer: Observer<T[]>) => {
+			result = new Observable((observer: Observer<T[]>) => {
 				forkJoin(
 					this.getResources(resourceName, true, withLocale)
 				).subscribe(results => {
@@ -37,7 +37,7 @@ export abstract class DataLoader<T> {
 				});
 			});
 		} else {
-			result = Observable.create((observer: Observer<T[]>) => {
+			result = new Observable((observer: Observer<T[]>) => {
 				forkJoin(
 					this.getResources(resourceName, false, withLocale)
 				).subscribe(results => {

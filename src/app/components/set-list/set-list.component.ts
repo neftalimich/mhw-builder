@@ -35,9 +35,12 @@ export class SetListComponent implements OnInit {
 			}
 		};
 		this.setService.setsUpdated$.subscribe(sets => {
-			console.log("updated",sets);
 			this.sets = sets;
-			this.filteredItems = _.reject(this.sets, item => item.weaponType != this.weaponTypeFilter);
+			if (this.weaponTypeFilter) {
+				this.filteredItems = _.reject(this.sets, item => item.weaponType != this.weaponTypeFilter);
+			} else {
+				this.filteredItems = this.sets;
+			}
 		});
 	}
 
@@ -66,7 +69,7 @@ export class SetListComponent implements OnInit {
 	}
 
 	remove(index: number) {
-		this.setService.remove(index);
+		this.setService.remove(this.sets.indexOf(this.filteredItems[index]));
 	}
 
 	select(set: SavedSetModel) {
@@ -74,7 +77,7 @@ export class SetListComponent implements OnInit {
 		this.saveBox.nativeElement.value = set.setName;
 	}
 
-	weaponFilterClicked(weaponType: WeaponType) {
+	weaponFilterClicked(weaponType?: WeaponType) {
 		if (!this.weaponTypeFilter || this.weaponTypeFilter != weaponType) {
 			this.weaponTypeFilter = weaponType;
 			this.filteredItems = _.reject(this.sets, item => item.weaponType != this.weaponTypeFilter);
