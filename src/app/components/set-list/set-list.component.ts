@@ -147,27 +147,27 @@ export class SetListComponent implements OnInit {
                 <div class="input-group mb-2">
                     <select class="custom-select" id="weaponFilter" ng-model="weaponFilter">
                         <option value="" selected></option>
-                        <option value="greatSword">GreatSword</option>
-                        <option value="swordShield">SwordShield</option>
-                        <option value="dualBlades">DualBlades</option>
-                        <option value="longSword">LongSword</option>
-                        <option value="hammer">Hammer</option>
-                        <option value="huntingHorn">HuntingHorn</option>
-                        <option value="lance">Lance</option>
-                        <option value="gunlance">Gunlance</option>
-                        <option value="switchAxe">SwitchAxe</option>
-                        <option value="chargeBlade">ChargeBlade</option>
-                        <option value="insectGlaive">InsectGlaive</option>
-                        <option value="bow">Bow</option>
-                        <option value="heavyBowGun">HBG</option>
-                        <option value="lightBowGun">LBG</option>
+                        <option value="GreatSword">GreatSword</option>
+                        <option value="SwordAndShield">SwordAndShield</option>
+                        <option value="DualBlades">DualBlades</option>
+                        <option value="LongSword">LongSword</option>
+                        <option value="Hammer">Hammer</option>
+                        <option value="HuntingHorn">HuntingHorn</option>
+                        <option value="Lance">Lance</option>
+                        <option value="Gunlance">Gunlance</option>
+                        <option value="SwitchAxe">SwitchAxe</option>
+                        <option value="ChargeBlade">ChargeBlade</option>
+                        <option value="InsectGlaive">InsectGlaive</option>
+                        <option value="Bow">Bow</option>
+                        <option value="HeavyBowgun">HeavyBowgun</option>
+                        <option value="LightBowgun">LightBowgun</option>
                     </select>
                     <div class="input-group-append">
                         <label class="input-group-text" for="inputGroupSelect02">Weapon</label>
                     </div>
                 </div>
                 <div class="card-columns">
-                    <div class="card" ng-repeat="(key,item) in sets | filter:(weaponFilter? {weaponType:weaponFilter}: '') track by $index" style="margin-bottom:.5rem;">
+                    <div class="card" ng-repeat="(key,item) in sets | filter:(weaponFilter? {weaponType:weaponFilter}: ''):(weaponFilter? true: false) track by $index" style="margin-bottom:.5rem;">
                         <div class="card-body" style="padding:6px;">
                             <h6 class="card-title" style="margin:0px;">
                                 <a href="https://neftalimich.github.io/mhw-builder-page?{{item.hashString}}" class="text-decoration-none" target="_blank">
