@@ -95,70 +95,121 @@ export class SetListComponent implements OnInit {
 			day: '2-digit',
 		});
 		const fileName = `mhw-builder-save(${dateNow}).html`;
-		let fileString = '<html><head>'
-			+ `<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">`
-			+ '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">'
-			+ '<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">';
-		fileString += `<style>
-				.Fire {
-					color: #ff6666;
-				}
-				.Water {
-					color: #66ccff;
-				}
-				.Thunder {
-					color: #ff9900;
-				}
-				.Ice {
-					color: #0099ff;
-				}
-				.Dragon {
-					color: #3cb05d;
-				}
-				.Poison {
-					color: #cc44ff;
-				}
-				.Sleep {
-					color: #9999ff;
-				}
-				.Paralysis {
-					color: #e6cb00;
-				}
-				.Blast {
-					color: #E6A400;
-				}
-				.weapon-img {
-					height: 20px;
-				}
-			</style>`
-			+ '</head><body>'
-			+ '<div class="container-fluid"><div class="row"><div class="col-md-4 col-12">'
-			+ '<h2>MHW-Builder</h2>'
-			+ '<ul class="list-group">';
-		for (const item of this.sets) {
-			fileString += `<li class="list-group-item" style="padding:8px!important">`
-				// + `<img src="https://neftalimich.github.io/mhw-builder-page/assets/images/weapons/${item.weaponType}-icon.png" class="weapon-img" />`
-				+ `<a href="https://neftalimich.github.io/mhw-builder-page?${item.hashString}" class="text-decoration-none" target="_blank">`
-				+ `${item.setName}`
-				+ `</a> `
-				+ ` - <span class="text-capitalize">${item.weaponType}</span>`
-				+ `<a class="float-right ml-1 mt-1 text-secondary" href="https://neftalimich.github.io/mhw-builder-page?${item.hashString}i${item.setName}" target="_blank" title="Import">`
-				+ `<i class="fas fa-cloud-upload-alt fa-sm"></i></a>`
-				+ `<span class="float-right">`
-				+ `<span>${item.totalAttack}</span>`;
-			if (item.element || item.ailment) {
-				fileString +=
-					` (<span class="${item.element}" title="${item.element}">${item.element ? item.elementAttack : ''}</span>`
-					+ `${item.ailment && item.element ? '/' : ''}`
-					+ `<span class="${item.ailment}" title="${item.ailment}">${item.ailment ? item.ailmentAttack : ''}</span>)`
-					+ `</span>`;
-			}
-			fileString += `</li>`;
-		}
-		fileString += '</ul>'
-			+ '<span class="text-muted float-right" style="font-size:11px">By Neftalí Michelet (neftalimich)</span>'
-			+ '</div></div></div>'
-			+ '</body></html>';
+		let fileString = `
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="mhwApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>MHW-Builder SetList</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.7/angular.min.js"></script>
+    <style>
+        a {
+            color: cornflowerblue;
+        }
+        .Fire {
+            color: #ff6666;
+        }
+        .Water {
+            color: #66ccff;
+        }
+        .Thunder {
+            color: #ff9900;
+        }
+        .Ice {
+            color: #0099ff;
+        }
+        .Dragon {
+            color: #3cb05d;
+        }
+        .Poison {
+            color: #cc44ff;
+        }
+        .Sleep {
+            color: #9999ff;
+        }
+        .Paralysis {
+            color: #e6cb00;
+        }
+        .Blast {
+            color: #E6A400;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid" ng-controller="SetListController">
+        <div class="row">
+            <div class="col-12">
+                <h2>MHW-Builder</h2>
+                <div class="input-group mb-2">
+                    <select class="custom-select" id="weaponFilter" ng-model="weaponFilter">
+                        <option value="" selected></option>
+                        <option value="greatSword">GreatSword</option>
+                        <option value="swordShield">SwordShield</option>
+                        <option value="dualBlades">DualBlades</option>
+                        <option value="longSword">LongSword</option>
+                        <option value="hammer">Hammer</option>
+                        <option value="huntingHorn">HuntingHorn</option>
+                        <option value="lance">Lance</option>
+                        <option value="gunlance">Gunlance</option>
+                        <option value="switchAxe">SwitchAxe</option>
+                        <option value="chargeBlade">ChargeBlade</option>
+                        <option value="insectGlaive">InsectGlaive</option>
+                        <option value="bow">Bow</option>
+                        <option value="heavyBowGun">HBG</option>
+                        <option value="lightBowGun">LBG</option>
+                    </select>
+                    <div class="input-group-append">
+                        <label class="input-group-text" for="inputGroupSelect02">Weapon</label>
+                    </div>
+                </div>
+                <div class="card-columns">
+                    <div class="card" ng-repeat="(key,item) in sets | filter:(weaponFilter? {weaponType:weaponFilter}: '') track by $index" style="margin-bottom:.5rem;">
+                        <div class="card-body" style="padding:6px;">
+                            <h6 class="card-title" style="margin:0px;">
+                                <a href="https://neftalimich.github.io/mhw-builder-page?{{item.hashString}}" class="text-decoration-none" target="_blank">
+                                    {{item.setName}}
+                                </a>
+                                <span style="font-size:14px;">
+                                    <a class="float-right ml-1 text-secondary" href="https://neftalimich.github.io/mhw-builder-page?{{item.hashString}}i{{item.setName}}" target="_blank" title="Import">
+                                        <i class="fas fa-cloud-upload-alt fa-sm"></i>
+                                    </a>
+                                    <span class="float-right">
+                                        <span>{{item.totalAttack}}</span>
+                                        <span ng-show="item.element || item.ailment">
+                                            (<span class="{{item.element}}" title="{{item.element}}">{{item.element ? item.elementAttack : ''}}</span>{{item.ailment && item.element ? '/' : ''}}<span class="{{item.ailment}}" title="{{item.ailment}}">{{item.ailment ? item.ailmentAttack : ''}}</span>)
+                                        </span>
+                                    </span>
+                                </span>
+                            </h6>
+                            <p class="card-text">
+                                <small class="text-muted text-capitalize">
+                                    {{item.weaponType}}
+                                </small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <span class="text-muted float-right" style="font-size:11px">By Neftalí Michelet (neftalimich)</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        var json = ${JSON.stringify(this.sets)};
+        var mhwApp = angular.module('mhwApp', []);
+        mhwApp.controller('SetListController', [
+            '$scope',
+            function ($scope) {
+                $scope.sets = json;
+            }
+        ]);
+    </script>
+</body>
+</html>
+		`;
 		const blob = new Blob([fileString], { type: 'text/html' });
 		if (window.navigator && window.navigator.msSaveOrOpenBlob) {
 			window.navigator.msSaveOrOpenBlob(blob, fileName);
