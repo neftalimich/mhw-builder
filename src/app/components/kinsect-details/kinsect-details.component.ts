@@ -30,8 +30,10 @@ export class KinsectDetailsComponent implements OnInit {
 
 	constructor(private statService: StatService) {
 		this.statService.statsUpdated$.subscribe(stats => {
-			this.kinsect = stats.kinsect;
-			this.setupStats();
+			if (stats.kinsect) {
+				this.kinsect = stats.kinsect;
+				this.setupStats();
+			}
 		});
 	}
 
@@ -60,7 +62,7 @@ export class KinsectDetailsComponent implements OnInit {
 			name: 'Power',
 			value: 'Lv '
 		};
-		if (this.kinsect.element != ElementType.None) {
+		if (this.kinsect.element && this.kinsect.element != ElementType.None) {
 			this.stats.push({
 				icon: this.kinsect.element.toLowerCase(),
 				name: 'Element Power',

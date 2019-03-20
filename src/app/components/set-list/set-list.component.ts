@@ -72,8 +72,9 @@ export class SetListComponent implements OnInit {
 		this.setService.remove(this.sets.indexOf(this.filteredItems[index]));
 	}
 
-	select(set: SavedSetModel) {
-		this.selectedSetIndex = this.setService.select(set);
+	select(set: SavedSetModel, index: number = 0) {
+		this.setService.select(set);
+		this.selectedSetIndex = index;
 		this.saveBox.nativeElement.value = set.setName;
 	}
 

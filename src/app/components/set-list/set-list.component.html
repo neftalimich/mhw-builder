@@ -64,7 +64,7 @@
 				<div class="name-container" (click)="select(item)" [ngClass]="{'sharp-2':i==selectedSetIndex}">
 					{{item.setName}}
 				</div>
-				<div class="stats-container text-right" (click)="select(item)">
+				<div class="stats-container text-right" (click)="select(item, i)">
 					<span>{{item.totalAttack}}</span>
 					<span *ngIf="item.element || item.ailment"> (</span>
 					<span [ngClass]="item.element" *ngIf="item.element">{{item.elementAttack}}</span>
