@@ -1,10 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MelodiesModel } from '../../models/melodies.model';
+import { MelodiesEffectParser } from '../parsers/melodies-effect.parser';
+import { MelodiesParser } from '../parsers/melodies.parser';
 import { TagsParser } from '../parsers/tags.parser';
 import { DataLoader } from './data.loader';
-import { MelodiesParser } from '../parsers/melodies.parser';
-import { MelodiesEffectParser } from '../parsers/melodies-effect.parser';
 
 @Injectable()
 export class MelodiesLoader extends DataLoader<MelodiesModel> {

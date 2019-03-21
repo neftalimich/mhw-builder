@@ -14,4 +14,3 @@ export class StatDetailModel {
 	class2?: string;
 	icon?: string;
 }
-

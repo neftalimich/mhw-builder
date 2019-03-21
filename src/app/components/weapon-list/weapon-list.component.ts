@@ -8,7 +8,6 @@ import { SlotService } from '../../services/slot.service';
 import { EquipmentCategoryType } from '../../types/equipment-category.type';
 import { ItemType } from '../../types/item.type';
 import { WeaponType } from '../../types/weapon.type';
-import { promise } from 'selenium-webdriver';
 
 @Component({
 	selector: 'mhw-builder-weapon-list',

@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AugmentationModel } from '../../models/augmentation.model';
 import { SlotService } from '../../services/slot.service';
 import { TooltipService } from '../../services/tooltip.service';
-import { PointerType } from '../../types/pointer.type';
 import { ItemType } from '../../types/item.type';
+import { PointerType } from '../../types/pointer.type';
 
 @Component({
 	selector: 'mhw-builder-augmentation-slot',

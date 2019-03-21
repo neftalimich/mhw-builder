@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding, HostListener, Input } from '@angular/core';
+import { Component, HostBinding, HostListener, Input, OnInit } from '@angular/core';
 
 @Component({
 	selector: 'mhw-builder-modal',

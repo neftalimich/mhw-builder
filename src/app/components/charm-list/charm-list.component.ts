@@ -1,12 +1,12 @@
-import { Component, OnInit, Input, ViewChild, ElementRef, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
 import * as _ from 'lodash';
-import { EquipmentCategoryType } from '../../types/equipment-category.type';
-import { ItemType } from '../../types/item.type';
 import { VirtualScrollerComponent } from 'ngx-virtual-scroller';
 import { ItemModel } from '../../models/item.model';
-import { SlotService } from '../../services/slot.service';
-import { DataService } from '../../services/data.service';
 import { SkillModel } from '../../models/skill.model';
+import { DataService } from '../../services/data.service';
+import { SlotService } from '../../services/slot.service';
+import { EquipmentCategoryType } from '../../types/equipment-category.type';
+import { ItemType } from '../../types/item.type';
 
 @Component({
 	selector: 'mhw-builder-charm-list',

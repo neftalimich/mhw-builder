@@ -1,9 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { SharpnessModel } from 'src/app/models/sharpness-model';
+import { Component, Input, OnInit } from '@angular/core';
 import { SharpnessBarModel } from 'src/app/models/sharpness-bar.model';
-import { PointerType } from 'src/app/types/pointer.type';
+import { SharpnessModel } from 'src/app/models/sharpness-model';
 import { StatDetailModel } from 'src/app/models/stat-detail.model';
 import { TooltipService } from 'src/app/services/tooltip.service';
+import { PointerType } from 'src/app/types/pointer.type';
 
 @Component({
 	selector: 'mhw-builder-sharpness-bar',

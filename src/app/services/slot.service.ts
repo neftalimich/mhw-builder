@@ -125,6 +125,7 @@ export class SlotService {
 		slot.item = null;
 		slot.augmentations = [];
 		slot.modifications = [];
+		slot.kinsect = null;
 		this.itemSelected$.next({ slot: slot, equipment: null });
 	}
 
@@ -329,5 +330,6 @@ export class SlotService {
 		this.selectedDecorationSlot = null;
 		this.selectedAugmentationSlot = null;
 		this.selectedModificationSlot = null;
+		this.selectedKinsectSlot = null;
 	}
 }

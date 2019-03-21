@@ -79,6 +79,7 @@ export class SetListComponent implements OnInit {
 	}
 
 	weaponFilterClicked(weaponType?: WeaponType) {
+		this.selectedSetIndex = -1;
 		if (!this.weaponTypeFilter || this.weaponTypeFilter != weaponType) {
 			this.weaponTypeFilter = weaponType;
 			this.filteredItems = _.reject(this.sets, item => item.weaponType != this.weaponTypeFilter);

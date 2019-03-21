@@ -1,13 +1,13 @@
 import { HttpClient } from '@angular/common/http';
-import { DataLoader } from './data.loader';
-import { ItemModel } from '../../models/item.model';
-import { SlotsParser } from '../parsers/slots.parser';
-import { TagsParser } from '../parsers/tags.parser';
-import { SkillReferencesParser } from '../parsers/skill-references.parser';
 import { Injectable } from '@angular/core';
 import * as _ from 'lodash';
-import { ItemType } from '../../types/item.type';
+import { ItemModel } from '../../models/item.model';
 import { EquipmentCategoryType } from '../../types/equipment-category.type';
+import { ItemType } from '../../types/item.type';
+import { SkillReferencesParser } from '../parsers/skill-references.parser';
+import { SlotsParser } from '../parsers/slots.parser';
+import { TagsParser } from '../parsers/tags.parser';
+import { DataLoader } from './data.loader';
 
 @Injectable()
 export class CharmsLoader extends DataLoader<ItemModel> {

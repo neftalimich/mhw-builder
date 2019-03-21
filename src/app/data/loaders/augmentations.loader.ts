@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { DataLoader } from './data.loader';
+import { Injectable } from '@angular/core';
 import { AugmentationModel } from '../../models/augmentation.model';
+import { DataLoader } from './data.loader';
 
 @Injectable()
 export class AugmentationsLoader extends DataLoader<AugmentationModel> {

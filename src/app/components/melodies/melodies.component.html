@@ -3,7 +3,7 @@
 		<thead>
 			<tr>
 				<td>
-					Notes: 
+					Notes:
 					<span *ngFor="let note of weaponMelodies.notes; let i = index">
 						<img [src]="'assets/images/notes/' + note + '-icon.png'" class="note" alt="note">
 					</span>
@@ -20,7 +20,7 @@
 					<span *ngFor="let note of melody">
 						<img class="note" [src]="'assets/images/notes/' + weaponMelodies.notes[note-1] + '-icon.png'" alt="note">
 						&nbsp;
-					</span> 
+					</span>
 				</td>
 			</tr>
 		</tbody>

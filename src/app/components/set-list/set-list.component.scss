@@ -65,7 +65,7 @@ $filterHeight: 38px;
 	}
 
 	.scroll-container {
-		grid-row:3;
+		grid-row: 3;
 		overflow-y: auto;
 		border-radius: 3px;
 
@@ -122,7 +122,7 @@ $filterHeight: 38px;
 }
 
 @media only screen and (max-width: 716px) {
-	.container{
+	.container {
 		.filter-container {
 			grid-template-columns: repeat(7, 1fr);
 		}

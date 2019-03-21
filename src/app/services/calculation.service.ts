@@ -3,12 +3,11 @@ import { Subject } from 'rxjs';
 import { AmmoCapacitiesModel } from '../models/ammo-capacities.model';
 import { CalculationVariableModel } from '../models/calculation-variable.model';
 import { ExtraDataModel } from '../models/extra-data.model';
+import { KinsectModel } from '../models/kinsect.model';
 import { SharpnessBarModel } from '../models/sharpness-bar.model';
 import { StatDetailModel } from '../models/stat-detail.model';
 import { StatsModel } from '../models/stats.model';
-import { KinsectModel } from '../models/kinsect.model';
 import { AttackType } from '../types/attack.type';
-import { ElementType } from '../types/element.type';
 
 @Injectable()
 export class CalculationService {

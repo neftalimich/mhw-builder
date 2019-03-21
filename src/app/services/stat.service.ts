@@ -4,6 +4,7 @@ import { Subject } from 'rxjs';
 import { AugmentationModel } from '../models/augmentation.model';
 import { EquippedSkillModel } from '../models/equipped-skill.model';
 import { ItemModel } from '../models/item.model';
+import { KinsectModel } from '../models/kinsect.model';
 import { ModificationModel } from '../models/modification.model';
 import { SkillLevelModel } from '../models/skill-level.model';
 import { StatsModel } from '../models/stats.model';
@@ -15,7 +16,6 @@ import { ItemType } from '../types/item.type';
 import { WeaponType } from '../types/weapon.type';
 import { CalculationService } from './calculation.service';
 import { DataService } from './data.service';
-import { KinsectModel } from '../models/kinsect.model';
 
 @Injectable()
 export class StatService {

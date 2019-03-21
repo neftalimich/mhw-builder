@@ -1,8 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { EquippedSkillModel } from '../../models/equipped-skill.model';
-import { SkillModel } from '../../models/skill.model';
-import { TooltipService } from '../../services/tooltip.service';
 import { EquippedSetBonusModel } from '../../models/equipped-set-bonus.model';
+import { TooltipService } from '../../services/tooltip.service';
 
 @Component({
 	selector: 'mhw-builder-set-bonus-details',

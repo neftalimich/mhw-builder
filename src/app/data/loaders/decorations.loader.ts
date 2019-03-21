@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
-import { DataLoader } from './data.loader';
+import { Injectable } from '@angular/core';
 import { ItemModel } from '../../models/item.model';
 import { SkillReferencesParser } from '../parsers/skill-references.parser';
-import { Injectable } from '@angular/core';
+import { DataLoader } from './data.loader';
 
 @Injectable()
 export class DecorationsLoader extends DataLoader<ItemModel> {
