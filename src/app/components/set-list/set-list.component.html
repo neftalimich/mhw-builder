@@ -84,13 +84,16 @@
 		</div>
 	</div>
 	<div class="download-container text-center">
-		<button type="button" (click)="saveSets()" title="Save order of sets">
-			Save Order <i class="fas fa-save" [hidden]="loading==2"></i><i class="fas fa-spinner fa-spin" [hidden]="loading!=2"></i>
+		<button type="button" (click)="sortSets()" title="Sort sets">
+			Sort <i class="fas fa-sort-amount-up" [hidden]="loading==3"></i><i class="fas fa-spinner fa-spin" [hidden]="loading!=3"></i>
 		</button>
-		<button type="button" (click)="downloadHtmlFile()" title="Download file">
+		<button type="button" (click)="saveSets()" title="Save order of sets">
+			Order <i class="fas fa-save" [hidden]="loading==2"></i><i class="fas fa-spinner fa-spin" [hidden]="loading!=2"></i>
+		</button>
+		<button type="button" (click)="downloadHtmlFile()" title="Download Html">
 			HTML <i class="fas fa-file-download"></i>
 		</button>
-		<button type="button" (click)="downloadJsonFile()" title="Download file">
+		<button type="button" (click)="downloadJsonFile()" title="Download Json">
 			JSON <i class="fas fa-file-code"></i>
 		</button>
 	</div>

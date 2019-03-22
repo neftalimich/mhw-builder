@@ -2,6 +2,7 @@ import { Location } from '@angular/common';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { SavedSetModel } from '../models/saved-set.model';
+import { WeaponType } from '../types/weapon.type';
 import { BuildService } from './build.service';
 import { StatService } from './stat.service';
 
@@ -82,6 +83,120 @@ export class SetService {
 
 	saveSets() {
 		localStorage.setItem('mhwSets', JSON.stringify(this.sets));
+		this.setsUpdated$.next(this.sets);
+	}
+
+	sortSets() {
+		this.sets.sort((a, b) => {
+			let w1 = 0;
+			let w2 = 0;
+
+			switch (a.weaponType) {
+				case WeaponType.GreatSword:
+					w1 = 1;
+					break;
+				case WeaponType.SwordAndShield:
+					w1 = 2;
+					break;
+				case WeaponType.DualBlades:
+					w1 = 3;
+					break;
+				case WeaponType.LongSword:
+					w1 = 4;
+					break;
+				case WeaponType.Hammer:
+					w1 = 5;
+					break;
+				case WeaponType.HuntingHorn:
+					w1 = 6;
+					break;
+				case WeaponType.Lance:
+					w1 = 7;
+					break;
+				case WeaponType.Gunlance:
+					w1 = 8;
+					break;
+				case WeaponType.SwitchAxe:
+					w1 = 9;
+					break;
+				case WeaponType.ChargeBlade:
+					w1 = 10;
+					break;
+				case WeaponType.InsectGlaive:
+					w1 = 11;
+					break;
+				case WeaponType.Bow:
+					w1 = 12;
+					break;
+				case WeaponType.LightBowgun:
+					w1 = 13;
+					break;
+				case WeaponType.HeavyBowgun:
+					w1 = 14;
+					break;
+				default:
+					w1 = 0;
+					break;
+			}
+			switch (b.weaponType) {
+				case WeaponType.GreatSword:
+					w2 = 1;
+					break;
+				case WeaponType.SwordAndShield:
+					w2 = 2;
+					break;
+				case WeaponType.DualBlades:
+					w2 = 3;
+					break;
+				case WeaponType.LongSword:
+					w2 = 4;
+					break;
+				case WeaponType.Hammer:
+					w2 = 5;
+					break;
+				case WeaponType.HuntingHorn:
+					w2 = 6;
+					break;
+				case WeaponType.Lance:
+					w2 = 7;
+					break;
+				case WeaponType.Gunlance:
+					w2 = 8;
+					break;
+				case WeaponType.SwitchAxe:
+					w2 = 9;
+					break;
+				case WeaponType.ChargeBlade:
+					w2 = 10;
+					break;
+				case WeaponType.InsectGlaive:
+					w2 = 11;
+					break;
+				case WeaponType.Bow:
+					w2 = 12;
+					break;
+				case WeaponType.LightBowgun:
+					w2 = 13;
+					break;
+				case WeaponType.HeavyBowgun:
+					w2 = 14;
+					break;
+				default:
+					w2 = 0;
+					break;
+			}
+
+			if (w1 > w2) {
+				return 1;
+			}
+			if (w1 < w2) {
+				return -1;
+			}
+			if (w1 == w2) {
+				return a.setName.localeCompare(b.setName);
+			}
+		});
+
 		this.setsUpdated$.next(this.sets);
 	}
 

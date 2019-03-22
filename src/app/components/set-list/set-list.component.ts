@@ -68,6 +68,14 @@ export class SetListComponent implements OnInit {
 		}, 500);
 	}
 
+	sortSets() {
+		this.loading = 3;
+		this.setService.sortSets();
+		setTimeout(() => {
+			this.loading = 0;
+		}, 500);
+	}
+
 	remove(index: number) {
 		this.setService.remove(this.sets.indexOf(this.filteredItems[index]));
 	}
