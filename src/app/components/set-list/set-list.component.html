@@ -61,7 +61,7 @@
 				<div class="icon-container text-left">
 					<img [src]="'assets/images/weapons/'+item.weaponType.toLowerCase()+'-icon.png'" *ngIf="item.weaponType" alt="weapon" />
 				</div>
-				<div class="name-container" (click)="select(item)" [ngClass]="{'sharp-2':i==selectedSetIndex}">
+				<div class="name-container" (click)="select(item, i)" [ngClass]="{'sharp-2':i==selectedSetIndex}">
 					{{item.setName}}
 				</div>
 				<div class="stats-container text-right" (click)="select(item, i)">

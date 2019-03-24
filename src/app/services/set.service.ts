@@ -88,103 +88,8 @@ export class SetService {
 
 	sortSets() {
 		this.sets.sort((a, b) => {
-			let w1 = 0;
-			let w2 = 0;
-
-			switch (a.weaponType) {
-				case WeaponType.GreatSword:
-					w1 = 1;
-					break;
-				case WeaponType.SwordAndShield:
-					w1 = 2;
-					break;
-				case WeaponType.DualBlades:
-					w1 = 3;
-					break;
-				case WeaponType.LongSword:
-					w1 = 4;
-					break;
-				case WeaponType.Hammer:
-					w1 = 5;
-					break;
-				case WeaponType.HuntingHorn:
-					w1 = 6;
-					break;
-				case WeaponType.Lance:
-					w1 = 7;
-					break;
-				case WeaponType.Gunlance:
-					w1 = 8;
-					break;
-				case WeaponType.SwitchAxe:
-					w1 = 9;
-					break;
-				case WeaponType.ChargeBlade:
-					w1 = 10;
-					break;
-				case WeaponType.InsectGlaive:
-					w1 = 11;
-					break;
-				case WeaponType.Bow:
-					w1 = 12;
-					break;
-				case WeaponType.LightBowgun:
-					w1 = 13;
-					break;
-				case WeaponType.HeavyBowgun:
-					w1 = 14;
-					break;
-				default:
-					w1 = 0;
-					break;
-			}
-			switch (b.weaponType) {
-				case WeaponType.GreatSword:
-					w2 = 1;
-					break;
-				case WeaponType.SwordAndShield:
-					w2 = 2;
-					break;
-				case WeaponType.DualBlades:
-					w2 = 3;
-					break;
-				case WeaponType.LongSword:
-					w2 = 4;
-					break;
-				case WeaponType.Hammer:
-					w2 = 5;
-					break;
-				case WeaponType.HuntingHorn:
-					w2 = 6;
-					break;
-				case WeaponType.Lance:
-					w2 = 7;
-					break;
-				case WeaponType.Gunlance:
-					w2 = 8;
-					break;
-				case WeaponType.SwitchAxe:
-					w2 = 9;
-					break;
-				case WeaponType.ChargeBlade:
-					w2 = 10;
-					break;
-				case WeaponType.InsectGlaive:
-					w2 = 11;
-					break;
-				case WeaponType.Bow:
-					w2 = 12;
-					break;
-				case WeaponType.LightBowgun:
-					w2 = 13;
-					break;
-				case WeaponType.HeavyBowgun:
-					w2 = 14;
-					break;
-				default:
-					w2 = 0;
-					break;
-			}
+			let w1 = this.getWeaponTypeIndex(a.weaponType);
+			let w2 = this.getWeaponTypeIndex(b.weaponType);
 
 			if (w1 > w2) {
 				return 1;
@@ -215,5 +120,60 @@ export class SetService {
 		this.buildService.loadBuild(location.hash);
 		this.selectedSetIndex = this.sets.indexOf(set);
 		return this.selectedSetIndex;
+	}
+
+	private getWeaponTypeIndex(weaponType?: WeaponType): number {
+		if (weaponType == null) {
+			return -1;
+		}
+		let weaponTypeIndex = -1;
+		switch (weaponType) {
+			case WeaponType.GreatSword:
+				weaponTypeIndex = 0;
+				break;
+			case WeaponType.SwordAndShield:
+				weaponTypeIndex = 1;
+				break;
+			case WeaponType.DualBlades:
+				weaponTypeIndex = 2;
+				break;
+			case WeaponType.LongSword:
+				weaponTypeIndex = 3;
+				break;
+			case WeaponType.Hammer:
+				weaponTypeIndex = 4;
+				break;
+			case WeaponType.HuntingHorn:
+				weaponTypeIndex = 5;
+				break;
+			case WeaponType.Lance:
+				weaponTypeIndex = 6;
+				break;
+			case WeaponType.Gunlance:
+				weaponTypeIndex = 7;
+				break;
+			case WeaponType.SwitchAxe:
+				weaponTypeIndex = 8;
+				break;
+			case WeaponType.ChargeBlade:
+				weaponTypeIndex = 9;
+				break;
+			case WeaponType.InsectGlaive:
+				weaponTypeIndex = 10;
+				break;
+			case WeaponType.Bow:
+				weaponTypeIndex = 11;
+				break;
+			case WeaponType.LightBowgun:
+				weaponTypeIndex = 12;
+				break;
+			case WeaponType.HeavyBowgun:
+				weaponTypeIndex = 13;
+				break;
+			default:
+				weaponTypeIndex = -1;
+				break;
+		}
+		return weaponTypeIndex;
 	}
 }
