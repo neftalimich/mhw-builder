@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { SortablejsOptions } from 'angular-sortablejs';
 import * as _ from 'lodash';
 import { SavedSetModel } from 'src/app/models/saved-set.model';
@@ -10,7 +10,7 @@ import { WeaponType } from 'src/app/types/weapon.type';
 	templateUrl: './set-list.component.html',
 	styleUrls: ['./set-list.component.scss']
 })
-export class SetListComponent implements OnInit {
+export class SetListComponent implements AfterViewInit {
 	sets: SavedSetModel[] = [];
 	virtualItems: SavedSetModel[];
 	filteredItems: SavedSetModel[];
@@ -44,7 +44,7 @@ export class SetListComponent implements OnInit {
 		});
 	}
 
-	ngOnInit() {
+	ngAfterViewInit() {
 		this.setService.importSet();
 		this.sets = this.setService.getSets();
 		this.filteredItems = this.sets;
@@ -183,7 +183,7 @@ export class SetListComponent implements OnInit {
                                     {{item.setName}}
                                 </a>
                                 <span style="font-size:14px;">
-                                    <a class="float-right ml-1 text-secondary" href="https://neftalimich.github.io/mhw-builder-page?{{item.hashString}}i{{item.setName}}"
+                                    <a class="float-right ml-1 text-secondary" href="https://neftalimich.github.io/mhw-builder-page?{{item.hashString}}i{{item.setName | uppercase}}"
 										target="_blank" title="Import">
                                         <i class="fas fa-cloud-upload-alt fa-sm"></i>
                                     </a>

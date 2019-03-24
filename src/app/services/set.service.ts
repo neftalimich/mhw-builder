@@ -39,6 +39,7 @@ export class SetService {
 				const setName = itemGroups[7].substring(1, itemGroups[7].length);
 				itemGroups.splice(-1, 1);
 				this.location.replaceState(this.location.path(false), '#v1' + itemGroups.join(''));
+				this.buildService.loadBuild('#v1' + itemGroups.join(''));
 				this.save(setName + '_IMPORTED', false);
 			}
 		}
@@ -88,8 +89,8 @@ export class SetService {
 
 	sortSets() {
 		this.sets.sort((a, b) => {
-			let w1 = this.getWeaponTypeIndex(a.weaponType);
-			let w2 = this.getWeaponTypeIndex(b.weaponType);
+			const w1 = this.getWeaponTypeIndex(a.weaponType);
+			const w2 = this.getWeaponTypeIndex(b.weaponType);
 
 			if (w1 > w2) {
 				return 1;
