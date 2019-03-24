@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { SortablejsOptions } from 'angular-sortablejs';
 import * as _ from 'lodash';
 import { SavedSetModel } from 'src/app/models/saved-set.model';
@@ -10,7 +10,7 @@ import { WeaponType } from 'src/app/types/weapon.type';
 	templateUrl: './set-list.component.html',
 	styleUrls: ['./set-list.component.scss']
 })
-export class SetListComponent implements AfterViewInit {
+export class SetListComponent implements OnInit, AfterViewInit {
 	sets: SavedSetModel[] = [];
 	virtualItems: SavedSetModel[];
 	filteredItems: SavedSetModel[];
@@ -44,10 +44,13 @@ export class SetListComponent implements AfterViewInit {
 		});
 	}
 
-	ngAfterViewInit() {
-		this.setService.importSet();
+	ngOnInit() {
 		this.sets = this.setService.getSets();
 		this.filteredItems = this.sets;
+	}
+
+	ngAfterViewInit() {
+		this.setService.importSet();
 	}
 
 	save(setName: string) {

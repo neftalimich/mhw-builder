@@ -160,7 +160,6 @@ export class BuildService {
 					build.charm = buildItem;
 					break;
 			}
-
 			index++;
 		}
 
@@ -206,38 +205,47 @@ export class BuildService {
 							}
 						}
 					}
-					if (item.weaponType == WeaponType.InsectGlaive && buildItem.modificationIds) {
-						for (let i = 0; i < buildItem.modificationIds.length; i++) {
-							const modId = buildItem.modificationIds[i];
-							if (modId) {
-								const mod = this.dataService.getModification(modId);
-								if (mod) {
-									this.slotService.selectModificationSlot(slot.modificationSlots.toArray()[i]);
-									const newAug = Object.assign({}, mod);
-									this.slotService.selectModification(newAug);
-								}
-							}
-						}
-					}
-					if (item.weaponType == WeaponType.InsectGlaive && buildItem.kinsectId) {
-						const kinsect = this.dataService.getKinsect(buildItem.kinsectId);
-						if (kinsect) {
-							this.slotService.selectKinsectSlot(slot.kinsectSlot);
-							const newKinsect = Object.assign({}, kinsect);
-							this.slotService.selectKinsect(newKinsect);
 
-							if (buildItem.kinsectElementId) {
-								const keys = Object.keys(ElementType);
-								for (const key in keys) {
-									if (key == buildItem.kinsectElementId.toString()) {
-										const value = keys[key];
-										newKinsect.element = (<any>ElementType)[value]; // There must be a better way to do this...
+					switch (item.weaponType) {
+						case WeaponType.InsectGlaive:
+							if (buildItem.kinsectId) {
+								const kinsect = this.dataService.getKinsect(buildItem.kinsectId);
+								if (kinsect) {
+									this.slotService.selectKinsectSlot(slot.kinsectSlot);
+									const newKinsect = Object.assign({}, kinsect);
+									this.slotService.selectKinsect(newKinsect);
+									if (buildItem.kinsectElementId) {
+										const keys = Object.keys(ElementType);
+										for (const key in keys) {
+											if (key == buildItem.kinsectElementId.toString()) {
+												const value = keys[key];
+												newKinsect.element = (<any>ElementType)[value]; // There must be a better way to do this...
+											}
+										}
+									} else {
+										newKinsect.element = ElementType.None;
 									}
 								}
-							} else {
-								newKinsect.element = ElementType.None;
 							}
-						}
+							break;
+						case WeaponType.LightBowgun:
+						case WeaponType.HeavyBowgun:
+							if (buildItem.modificationIds) {
+								for (let i = 0; i < buildItem.modificationIds.length; i++) {
+									const modId = buildItem.modificationIds[i];
+									if (modId) {
+										const mod = this.dataService.getModification(modId);
+										if (mod) {
+											this.slotService.selectModificationSlot(slot.modificationSlots.toArray()[i]);
+											const newAug = Object.assign({}, mod);
+											this.slotService.selectModification(newAug);
+										}
+									}
+								}
+							}
+							break;
+						default:
+							break;
 					}
 				}
 
