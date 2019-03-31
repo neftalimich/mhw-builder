@@ -41,6 +41,12 @@ li {
 		grid-column: 1;
 		margin-right: 4px;
 		height: 1em;
+
+		img {
+			height: 1em;
+			margin: auto;
+			padding-top: 1px;
+		}
 	}
 
 	.name {

@@ -105,37 +105,4 @@ export class SharpnessBarComponent implements OnInit {
 		this.sharpnessBar.sharpnessDataNeeded = this.dataNeeded;
 		this.sharpnessBar.color = this.dataNeeded ? 'red' : 'white';
 	}
-
-	showSharpDetails(event: PointerEvent) {
-		if (event.pointerType == PointerType.Mouse) {
-			this.setSharpTooltip(this.sharpnessBar);
-		}
-	}
-
-	showOnClickSharpDetails() {
-		this.setSharpTooltip(this.sharpnessBar);
-	}
-
-	clearSharpDetails() {
-		this.tooltipService.setCalc(null);
-	}
-
-	private setSharpTooltip(sharp: SharpnessBarModel) {
-		if (sharp.levels) {
-			const sharpDetail: StatDetailModel = {
-				name: 'Sharpness',
-				value: sharp.tooltipTemplate,
-				calculationTemplate: sharp.tooltipTemplate,
-				calculationVariables: [],
-				info: []
-			};
-			if (sharp.sharpnessDataNeeded) {
-				sharpDetail.info.push('Missing data for this weapon! Sharpness values are probably incorrect!');
-			}
-
-			this.tooltipService.setCalc(sharpDetail);
-		} else {
-			this.clearSharpDetails();
-		}
-	}
 }

@@ -13,7 +13,7 @@
 					<i class="far fa-question-circle"></i>
 				</span>
 				<span *ngIf="calc.icon" class="detail-icon">
-					<img [src]="'assets/images/' + calc.icon + '-icon.png'" style="height:1em;margin:auto;padding-top:1px;" alt="stat icon">
+					<img [src]="'assets/images/' + calc.icon + '-icon.png'" alt="stat icon">
 				</span>
 				<span class="name">{{calc.name}}</span>
 				<span class="value">
@@ -25,9 +25,10 @@
 					<span *ngIf="calc.extra1 || calc.extra2">)</span>
 				</span>
 			</li>
-			<li *ngIf="sharpnessBar && sharpnessBar.levels">
+			<li *ngIf="sharpnessBar && sharpnessBar.levels" (pointerenter)="showSharpDetails($event)"
+				(pointerleave)="clearSharpDetails()" (click)="showOnClickSharpDetails()">
 				<span class="detail-icon" [ngClass]="sharpnessBar.color">
-					<img [src]="'assets/images/sharpness3-icon.png'" style="height:1em;margin:auto;padding-top:1px;" alt="sharpness">
+					<img [src]="'assets/images/sharpness3-icon.png'" alt="sharpness">
 				</span>
 				<span class="name">
 					Sharpness
@@ -41,7 +42,9 @@
 
 			<li *ngIf="extraData && extraData.otherData[0].value">
 				<span class="detail-icon">
-					<!--<i class="far fa-question-circle"></i>-->
+				</span>
+				<span *ngIf="extraData.icon" class="detail-icon">
+					<img [src]="'assets/images/' + calc.icon + '-icon.png'" alt="stat icon">
 				</span>
 				<span class="name">
 					<span *ngIf="extraData.weaponType=='Bow'">Coatings</span>
@@ -95,7 +98,7 @@
 		<ul class="defense-stats striped">
 			<li *ngFor="let calc of defenseCalcs" (pointerenter)="showCalcDetails($event, calc)" (pointerleave)="clearCalcDetails()">
 				<span *ngIf="calc.icon" class="detail-icon">
-					<img [src]="'assets/images/' + calc.icon + '-icon.png'" style="height:1em;margin:auto;padding-top:1px;" alt="stat icon">
+					<img [src]="'assets/images/' + calc.icon + '-icon.png'" alt="stat icon">
 				</span>
 				<span class="name">{{calc.name}}</span>
 				<span class="value">{{calc.value}}</span>

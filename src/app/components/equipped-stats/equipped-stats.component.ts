@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { KinsectModel } from 'src/app/models/kinsect.model';
 import { AmmoCapacitiesModel } from '../../models/ammo-capacities.model';
 import { ExtraDataModel } from '../../models/extra-data.model';
@@ -7,6 +7,7 @@ import { StatDetailModel } from '../../models/stat-detail.model';
 import { CalculationService } from '../../services/calculation.service';
 import { TooltipService } from '../../services/tooltip.service';
 import { PointerType } from '../../types/pointer.type';
+import { SharpnessBarComponent } from '../sharpness-bar/sharpness-bar.component';
 
 @Component({
 	selector: 'mhw-builder-equipped-stats',
@@ -27,6 +28,8 @@ export class EquippedStatsComponent implements OnInit {
 	ammoVisible: boolean;
 	kinsectVisible: boolean;
 	defenseVisible: boolean;
+
+	@ViewChild(SharpnessBarComponent) sharpnessBarComponent: SharpnessBarComponent;
 
 	constructor(
 		private calculationService: CalculationService,
@@ -84,18 +87,18 @@ export class EquippedStatsComponent implements OnInit {
 		}
 	}
 
-	showSharpDetails(event: PointerEvent, sharp: SharpnessBarModel) {
+	showSharpDetails(event: PointerEvent) {
 		if (event.pointerType == PointerType.Mouse) {
-			this.setSharpTooltip(sharp);
+			this.setSharpTooltip(this.sharpnessBarComponent.sharpnessBar);
 		}
+	}
+
+	showOnClickSharpDetails() {
+		this.setSharpTooltip(this.sharpnessBarComponent.sharpnessBar);
 	}
 
 	clearSharpDetails() {
 		this.tooltipService.setCalc(null);
-	}
-
-	showOnClickSharpDetails(sharp: SharpnessBarModel) {
-		this.setSharpTooltip(sharp);
 	}
 
 	private setSharpTooltip(sharp: SharpnessBarModel) {

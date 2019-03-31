@@ -6,6 +6,13 @@
 			<span class="name" [ngStyle]="{ color: stat.color }">{{stat.name}}</span>
 			<span class="value" [ngStyle]="{ color: stat.color }">{{stat.value}}</span>
 		</li>
+		<li *ngIf="item.sharpnessLevelsBar && item.sharpnessLevelsBar.length > 1">
+			<span class="name">Max Sharpness</span>
+			<span class="value">
+				{{(item.sharpnessLevelsBar | maxSharpness) * 10}}
+				<i class="fas fa-circle fa-sm" [ngClass]="['sharp-'+(item.sharpnessLevelsBar | maxSharpness:true)]"></i>
+			</span>
+		</li>
 	</ul>
 
 	<div class="slots-container">

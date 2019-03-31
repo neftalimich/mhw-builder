@@ -99,18 +99,24 @@ export class ItemDetailsComponent implements OnInit {
 					name: '',
 					value: ''
 				};
-				if (this.item.weaponType == WeaponType.Bow) {
-					auxDetail.name = 'Coatings';
-				} else if (this.item.weaponType == WeaponType.ChargeBlade || this.item.weaponType == WeaponType.SwitchAxe) {
-					auxDetail.name = 'Phial Type';
-				} else if (this.item.weaponType == WeaponType.Gunlance) {
-					auxDetail.name = 'Shell Type';
-				} else if (this.item.weaponType == WeaponType.InsectGlaive) {
-					auxDetail.name = 'Boost Type';
-				} else {
-					auxDetail.name = 'Other Data';
+				switch (this.item.weaponType) {
+					case WeaponType.Bow:
+						auxDetail.name = 'Coatings';
+						break;
+					case WeaponType.ChargeBlade:
+					case WeaponType.SwitchAxe:
+						auxDetail.name = 'Phial Type';
+						break;
+					case WeaponType.Gunlance:
+						auxDetail.name = 'Shell Type';
+						break;
+					case WeaponType.InsectGlaive:
+						auxDetail.name = 'Boost Type';
+						break;
+					default:
+						auxDetail.name = 'Other Data';
+						break;
 				}
-
 				for (const other of this.item.otherData) {
 					auxDetail.value += `${other.value}${other.data ? '-' + other.data : ''}	`;
 					if (this.item.otherData.length > 1) {

@@ -1,11 +1,10 @@
-<div (pointerenter)="showSharpDetails($event)"
-	 (pointerleave)="clearSharpDetails()" (click)="showOnClickSharpDetails()">
-	<i class="fas fa-circle fa-sm" [ngClass]="['sharp-' + sharpnessBar.maxColorSharp]"></i>
-	<div class="text-right sharp-box" style="display:inline-block; padding-left:5px;">
-		<span *ngFor="let sharp of sharpnessBar.sharps; let i = index" [ngClass]="['sharp-bg-' + sharp.colorIndex, sharp.active ? 'sharp-active':'sharp-none', sharp.last ? 'sharp-active-last':'', sharp.first ? 'sharp-active-first':'']"
-			  [ngStyle]="{'width.px': (sharp.level * sharpnessBar.widthModifier)}">
-		</span>
-		<span class="sharp-bg-7 sharp-none" [ngStyle]="{'width.px': (sharpnessBar.empty * sharpnessBar.widthModifier)}">
-		</span>
-	</div>
+<div style="display:inline-block;position:relative;margin-right:-1px;z-index:10;" [ngClass]="['sharp-' + sharpnessBar.maxColorSharp]">
+	<i class="fas fa-filter fa-rotate-90 fa-sm" style="padding-top:2px;"></i>
+</div>
+<div class="text-right sharp-box" style="display:inline-block;position:relative;z-index:9;">
+	<span *ngFor="let sharp of sharpnessBar.sharps; let i = index" [ngClass]="['sharp-bg-' + sharp.colorIndex, sharp.active ? 'sharp-active':'sharp-none', sharp.last ? 'sharp-active-last':'', sharp.first ? 'sharp-active-first':'']"
+		  [ngStyle]="{'width.px': (sharp.level * sharpnessBar.widthModifier)}">
+	</span>
+	<span class="sharp-bg-7 sharp-none" [ngStyle]="{'width.px': (sharpnessBar.empty * sharpnessBar.widthModifier)}">
+	</span>
 </div>
