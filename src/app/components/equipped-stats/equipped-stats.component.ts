@@ -29,7 +29,7 @@ export class EquippedStatsComponent implements OnInit {
 	kinsectVisible: boolean;
 	defenseVisible: boolean;
 
-	@ViewChild(SharpnessBarComponent) sharpnessBarComponent: SharpnessBarComponent;
+	@ViewChild(SharpnessBarComponent, { static: false }) sharpnessBarComponent: SharpnessBarComponent;
 
 	constructor(
 		private calculationService: CalculationService,

@@ -17,7 +17,7 @@ export class SetListComponent implements OnInit, AfterViewInit {
 	selectedSetIndex = -1;
 	loading = 0;
 
-	@ViewChild('saveBox') saveBox: ElementRef;
+	@ViewChild('saveBox', { static: true }) saveBox: ElementRef;
 
 	eventOptions: SortablejsOptions = {};
 

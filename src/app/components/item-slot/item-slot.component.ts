@@ -25,7 +25,7 @@ export class ItemSlotComponent implements OnInit {
 	@ViewChildren(DecorationSlotComponent) decorationSlots: QueryList<DecorationSlotComponent>;
 	@ViewChildren(AugmentationSlotComponent) augmentationSlots: QueryList<AugmentationSlotComponent>;
 	@ViewChildren(ModificationSlotComponent) modificationSlots: QueryList<ModificationSlotComponent>;
-	@ViewChild(KinsectSlotComponent) kinsectSlot: KinsectSlotComponent;
+	@ViewChild(KinsectSlotComponent, { static: false }) kinsectSlot: KinsectSlotComponent;
 
 	item: ItemModel;
 

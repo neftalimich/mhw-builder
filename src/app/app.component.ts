@@ -24,21 +24,21 @@ export class AppComponent implements OnInit, AfterViewInit {
 	public equipmentCategoryTypes = EquipmentCategoryType;
 	public itemTypes = ItemType;
 
-	@ViewChild(EquippedStatsComponent) equippedStatsComponent: EquippedStatsComponent;
-	@ViewChild(EquippedSkillsComponent) equippedSkillsComponent: EquippedSkillsComponent;
-	@ViewChild(TooltipComponent) tooltipComponent: TooltipComponent;
-	@ViewChild('weaponSlot') weaponSlot: ItemSlotComponent;
-	@ViewChild('headSlot') headSlot: ItemSlotComponent;
-	@ViewChild('chestSlot') chestSlot: ItemSlotComponent;
-	@ViewChild('handsSlot') handsSlot: ItemSlotComponent;
-	@ViewChild('legsSlot') legsSlot: ItemSlotComponent;
-	@ViewChild('feetSlot') feetSlot: ItemSlotComponent;
-	@ViewChild('charmSlot') charmSlot: ItemSlotComponent;
+	@ViewChild(EquippedStatsComponent, { static: true }) equippedStatsComponent: EquippedStatsComponent;
+	@ViewChild(EquippedSkillsComponent, { static: true }) equippedSkillsComponent: EquippedSkillsComponent;
+	@ViewChild(TooltipComponent, { static: true }) tooltipComponent: TooltipComponent;
+	@ViewChild('weaponSlot', { static: true }) weaponSlot: ItemSlotComponent;
+	@ViewChild('headSlot', { static: true }) headSlot: ItemSlotComponent;
+	@ViewChild('chestSlot', { static: true }) chestSlot: ItemSlotComponent;
+	@ViewChild('handsSlot', { static: true }) handsSlot: ItemSlotComponent;
+	@ViewChild('legsSlot', { static: true }) legsSlot: ItemSlotComponent;
+	@ViewChild('feetSlot', { static: true }) feetSlot: ItemSlotComponent;
+	@ViewChild('charmSlot', { static: true }) charmSlot: ItemSlotComponent;
 
-	@ViewChild('itemListModal') itemListModal: ModalComponent;
-	@ViewChild('changeLogModal') changeLogModal: ModalComponent;
-	@ViewChild('setListModal') setListModal: ModalComponent;
-	@ViewChild('contributorsModal') contributorsModal: ModalComponent;
+	@ViewChild('itemListModal', { static: true }) itemListModal: ModalComponent;
+	@ViewChild('changeLogModal', { static: true }) changeLogModal: ModalComponent;
+	@ViewChild('setListModal', { static: true }) setListModal: ModalComponent;
+	@ViewChild('contributorsModal', { static: true }) contributorsModal: ModalComponent;
 
 	equipmentVisible = true;
 	statsVisible = true;

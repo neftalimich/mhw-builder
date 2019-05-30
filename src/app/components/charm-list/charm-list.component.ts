@@ -25,8 +25,8 @@ export class CharmListComponent implements OnInit {
 	}
 	get itemType(): ItemType { return this._itemType; }
 
-	@ViewChild('searchBox') searchBox: ElementRef;
-	@ViewChild('itemList') itemList: VirtualScrollerComponent;
+	@ViewChild('searchBox', { static: true }) searchBox: ElementRef;
+	@ViewChild('itemList', { static: false }) itemList: VirtualScrollerComponent;
 
 	items: ItemModel[];
 	filteredItems: ItemModel[];

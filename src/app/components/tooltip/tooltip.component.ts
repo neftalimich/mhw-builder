@@ -16,7 +16,7 @@ import { WeaponType } from '../../types/weapon.type';
 	styleUrls: ['./tooltip.component.scss']
 })
 export class TooltipComponent implements OnInit {
-	@ViewChild('container') container: ElementRef;
+	@ViewChild('container', { static: true }) container: ElementRef;
 
 	item: ItemModel;
 	decoration: DecorationModel;

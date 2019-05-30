@@ -24,8 +24,8 @@ export class DecorationListComponent implements OnInit {
 
 	@Output() decorationSelected = new EventEmitter<DecorationModel>();
 
-	@ViewChild('searchBox') searchBox: ElementRef;
-	@ViewChild('decorationList') decorationList: VirtualScrollerComponent;
+	@ViewChild('searchBox', { static: true }) searchBox: ElementRef;
+	@ViewChild('decorationList', { static: false }) decorationList: VirtualScrollerComponent;
 
 	decorations: DecorationModel[];
 	filteredDecorations: DecorationModel[];

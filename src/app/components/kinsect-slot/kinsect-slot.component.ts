@@ -21,7 +21,7 @@ export class KinsectSlotComponent implements OnInit {
 
 	public selected: boolean;
 
-	@ViewChild(DropdownComponent) elementDropdown: DropdownComponent;
+	@ViewChild(DropdownComponent, { static: true }) elementDropdown: DropdownComponent;
 
 	constructor(
 		private slotService: SlotService,

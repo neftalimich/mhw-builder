@@ -8,7 +8,7 @@ import { Component, ContentChildren, ElementRef, OnInit, QueryList, ViewChild } 
 export class DropdownComponent implements OnInit {
 	isOpen = false;
 
-	@ViewChild('container') container: ElementRef;
+	@ViewChild('container', { static: true }) container: ElementRef;
 	@ContentChildren(ElementRef, { descendants: true }) items: QueryList<ElementRef>;
 
 	constructor() { }

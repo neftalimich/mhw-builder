@@ -13,8 +13,8 @@ import { SlotService } from '../../services/slot.service';
 })
 export class KinsectListComponent implements OnInit {
 
-	@ViewChild('searchBox') searchBox: ElementRef;
-	@ViewChild('itemList') itemList: VirtualScrollerComponent;
+	@ViewChild('searchBox', { static: true }) searchBox: ElementRef;
+	@ViewChild('itemList', { static: false }) itemList: VirtualScrollerComponent;
 
 	kinsects: KinsectModel[];
 	filteredKinsects: KinsectModel[];
