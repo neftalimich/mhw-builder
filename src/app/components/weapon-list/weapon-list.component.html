@@ -83,7 +83,7 @@
 		</button>
 	</div>
 
-	<virtual-scroller id="items-list" #itemList class="scroll-container" *ngIf="items" [items]="filteredItems" (vsUpdate)="onItemListUpdate($event)" [childHeight]="108">
+	<virtual-scroller id="items-list" #itemList class="scroll-container" *ngIf="items" [items]="filteredItems" (vsUpdate)="onItemListUpdate($event)">
 		<div *ngFor="let item of virtualItems" class="scroll-item-container" (click)="selectItem(item)">
 			<div class="name-container">
 				<div class="name" [ngClass]="'ver-'+ item.version">
