@@ -11,6 +11,10 @@ Version 2 - Page: https://neftalimich.github.io/mhw-builder-page/
 
 Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## Production server
+
+Run `ng build --prod --base-href /mhw-builder-page/` 
+
 ## Discord Chat
 
 https://discord.gg/4s7yqFg
