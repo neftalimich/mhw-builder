@@ -30,6 +30,7 @@ import { SetBonusDetailsComponent } from './components/set-bonus-details/set-bon
 import { SetListComponent } from './components/set-list/set-list.component';
 import { SharpnessBarComponent } from './components/sharpness-bar/sharpness-bar.component';
 import { SkillDetailsComponent } from './components/skill-details/skill-details.component';
+import { ToolListComponent } from './components/tool-list/tool-list.component';
 import { TooltipComponent } from './components/tooltip/tooltip.component';
 import { WeaponListComponent } from './components/weapon-list/weapon-list.component';
 import { DataModule } from './data/data.module';
@@ -57,6 +58,7 @@ import { TooltipService } from './services/tooltip.service';
 		MelodiesComponent,
 		DecorationListComponent,
 		CharmListComponent,
+		ToolListComponent,
 		ItemDetailsComponent,
 		CommonDetailsComponent,
 		DecorationDetailsComponent,

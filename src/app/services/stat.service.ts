@@ -32,7 +32,6 @@ export class StatService {
 
 	update(skills: EquippedSkillModel[], items: ItemModel[], augmentations: AugmentationModel[], modifications: ModificationModel[], kinsect: KinsectModel) {
 		this.stats = new StatsModel();
-
 		this.updateItemStats(items);
 		this.updateSkillStats(skills);
 		this.updateAugmentations(augmentations);
@@ -64,29 +63,31 @@ export class StatService {
 
 	private updateItemStats(items: ItemModel[]) {
 		for (const item of items) {
-			if (item.baseAttack) { this.stats.attack += item.baseAttack; }
-			if (item.baseAffinityPercent) { this.stats.affinity += item.baseAffinityPercent; }
-			if (item.itemType == ItemType.Weapon) {
-				if (item.baseDefense) {
-					this.stats.defense += item.baseDefense;
-					this.stats.maxDefense += item.baseDefense;
-					this.stats.augmentedDefense += item.baseDefense;
+			if (item.itemType != ItemType.Tool) {
+				if (item.baseAttack) { this.stats.attack += item.baseAttack; }
+				if (item.baseAffinityPercent) { this.stats.affinity += item.baseAffinityPercent; }
+				if (item.itemType == ItemType.Weapon) {
+					if (item.baseDefense) {
+						this.stats.defense += item.baseDefense;
+						this.stats.maxDefense += item.baseDefense;
+						this.stats.augmentedDefense += item.baseDefense;
+					}
+				} else {
+					if (item.baseDefense) { this.stats.defense += item.baseDefense; }
+					if (item.maxDefense) { this.stats.maxDefense += item.maxDefense; }
+					if (item.augmentedDefense) { this.stats.augmentedDefense += item.augmentedDefense; }
 				}
-			} else {
-				if (item.baseDefense) { this.stats.defense += item.baseDefense; }
-				if (item.maxDefense) { this.stats.maxDefense += item.maxDefense; }
-				if (item.augmentedDefense) { this.stats.augmentedDefense += item.augmentedDefense; }
+				if (item.fireResist) { this.stats.fireResist += item.fireResist; }
+				if (item.waterResist) { this.stats.waterResist += item.waterResist; }
+				if (item.thunderResist) { this.stats.thunderResist += item.thunderResist; }
+				if (item.iceResist) { this.stats.iceResist += item.iceResist; }
+				if (item.dragonResist) { this.stats.dragonResist += item.dragonResist; }
+				if (item.element) { this.stats.element = item.element; }
+				if (item.elementBaseAttack) { this.stats.baseElementAttack += item.elementBaseAttack; }
+				if (item.ailment) { this.stats.ailment = item.ailment; }
+				if (item.ailmentBaseAttack) { this.stats.baseAilmentAttack += item.ailmentBaseAttack; }
+				if (item.elderseal) { this.stats.elderseal = item.elderseal; }
 			}
-			if (item.fireResist) { this.stats.fireResist += item.fireResist; }
-			if (item.waterResist) { this.stats.waterResist += item.waterResist; }
-			if (item.thunderResist) { this.stats.thunderResist += item.thunderResist; }
-			if (item.iceResist) { this.stats.iceResist += item.iceResist; }
-			if (item.dragonResist) { this.stats.dragonResist += item.dragonResist; }
-			if (item.element) { this.stats.element = item.element; }
-			if (item.elementBaseAttack) { this.stats.baseElementAttack += item.elementBaseAttack; }
-			if (item.ailment) { this.stats.ailment = item.ailment; }
-			if (item.ailmentBaseAttack) { this.stats.baseAilmentAttack += item.ailmentBaseAttack; }
-			if (item.elderseal) { this.stats.elderseal = item.elderseal; }
 		}
 	}
 

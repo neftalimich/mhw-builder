@@ -1,3 +1,3 @@
-id	type	name	duration	recharge slots	description
+id	toolType	name	duration	recharge	slots	description
 1	Mantle	Ghillie Mantle	120	300	3;2	Conceals you from enemy view temporarily. The effect expires if you perform an attack or take damage.
 2	Mantle	Glider Mantle	180	120	3	Increases jump airtime and grants the power to ride strong winds. Also makes it easier to mount monsters.

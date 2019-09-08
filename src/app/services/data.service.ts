@@ -17,6 +17,7 @@ import { DamageType } from '../types/damage.type';
 import { EquipmentCategoryType } from '../types/equipment-category.type';
 import { ItemType } from '../types/item.type';
 import { WeaponType } from '../types/weapon.type';
+import { ToolModel } from '../models/tool.model';
 
 @Injectable()
 export class DataService {
@@ -59,6 +60,10 @@ export class DataService {
 
 	getCharms(): ItemModel[] {
 		return this.appDataProvider.appData.charms;
+	}
+
+	getTools(): ItemModel[] {
+		return this.appDataProvider.appData.tools;
 	}
 
 	getDecorations(level?: number): DecorationModel[] {
