@@ -11,6 +11,7 @@ import { ModificationsLoader } from './loaders/modifications.loader';
 import { SetBonusesLoader } from './loaders/set-bonuses.loader';
 import { SharpnessModifiersLoader } from './loaders/sharpness-modifiers.loader';
 import { SkillsLoader } from './loaders/skills.loader';
+import { ToolLoader } from './loaders/tool.loader';
 import { WeaponModifiersLoader } from './loaders/weapon-modifiers.loader';
 import { WeaponsLoader } from './loaders/weapons.loader';
 
@@ -29,7 +30,8 @@ import { WeaponsLoader } from './loaders/weapons.loader';
 		WeaponModifiersLoader,
 		AmmoCapacitiesLoader,
 		MelodiesLoader,
-		MelodyEffectLoader
+		MelodyEffectLoader,
+		ToolLoader
 	],
 })
 export class DataModule { }

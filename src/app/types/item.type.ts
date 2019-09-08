@@ -6,6 +6,7 @@ export enum ItemType {
 	Legs = 'Legs',
 	Feet = 'Feet',
 	Charm = 'Charm',
+	Tool = 'Tool',
 	Decoration = 'Decoration',
 	Augmentation = 'Augmentation',
 	Modification = 'Modification',

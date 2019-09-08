@@ -162,6 +162,8 @@ export class DataService {
 				return EquipmentCategoryType.Weapon;
 			case ItemType.Charm:
 				return EquipmentCategoryType.Charm;
+			case ItemType.Tool:
+				return EquipmentCategoryType.Tool;
 			case ItemType.Head:
 			case ItemType.Chest:
 			case ItemType.Hands:

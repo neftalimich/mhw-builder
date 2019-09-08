@@ -34,6 +34,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 	@ViewChild('legsSlot', { static: true }) legsSlot: ItemSlotComponent;
 	@ViewChild('feetSlot', { static: true }) feetSlot: ItemSlotComponent;
 	@ViewChild('charmSlot', { static: true }) charmSlot: ItemSlotComponent;
+	@ViewChild('toolSlot', { static: true }) toolSlot: ItemSlotComponent;
 
 	@ViewChild('itemListModal', { static: true }) itemListModal: ModalComponent;
 	@ViewChild('changeLogModal', { static: true }) changeLogModal: ModalComponent;
@@ -76,6 +77,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 			this.legsSlot,
 			this.feetSlot,
 			this.charmSlot,
+			this.toolSlot,
 			this.changeDetector
 		);
 

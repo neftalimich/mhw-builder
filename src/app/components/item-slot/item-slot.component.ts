@@ -64,7 +64,6 @@ export class ItemSlotComponent implements OnInit {
 
 	getItemIconName(): string {
 		let assetPath;
-
 		switch (this.dataService.getEquipmentCategory(this.slotName)) {
 			case EquipmentCategoryType.Armor:
 				assetPath = `armor/${this.slotName.toLowerCase()}-icon`;
@@ -78,6 +77,9 @@ export class ItemSlotComponent implements OnInit {
 				break;
 			case EquipmentCategoryType.Charm:
 				assetPath = 'armor/charm-icon';
+				break;
+			case EquipmentCategoryType.Tool:
+				assetPath = 'armor/tool-icon';
 				break;
 		}
 

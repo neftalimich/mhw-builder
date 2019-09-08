@@ -36,6 +36,7 @@ export class SlotService {
 	legsSlot: ItemSlotComponent;
 	feetSlot: ItemSlotComponent;
 	charmSlot: ItemSlotComponent;
+	toolSlot: ItemSlotComponent;
 
 	changeDetector: ChangeDetectorRef;
 
@@ -57,6 +58,7 @@ export class SlotService {
 		legsSlot: ItemSlotComponent,
 		feetSlot: ItemSlotComponent,
 		charmSlot: ItemSlotComponent,
+		toolSlot: ItemSlotComponent,
 		changeDetector: ChangeDetectorRef
 	) {
 		this.weaponSlot = weaponSlot;
@@ -66,6 +68,7 @@ export class SlotService {
 		this.legsSlot = legsSlot;
 		this.feetSlot = feetSlot;
 		this.charmSlot = charmSlot;
+		this.toolSlot = toolSlot;
 		this.changeDetector = changeDetector;
 	}
 
