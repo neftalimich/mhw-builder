@@ -1,10 +1,16 @@
-<div style="display:inline-block;position:relative;margin-right:-1px;z-index:10;" [ngClass]="['sharp-' + sharpnessBar.maxColorSharp]">
-	<i class="fas fa-filter fa-rotate-90 fa-sm" style="padding-top:2px;"></i>
+<div style="display:inline-block;position:relative;margin-right:-1px;z-index:10;">
+	<i class="fas fa-filter fa-rotate-90 fa-sm sharp-8" style="padding-top:2px;"></i>
 </div>
+
 <div class="text-right sharp-box" style="display:inline-block;position:relative;z-index:9;">
-	<span *ngFor="let sharp of sharpnessBar.sharps; let i = index" [ngClass]="['sharp-bg-' + sharp.colorIndex, sharp.active ? 'sharp-active':'sharp-none', sharp.last ? 'sharp-active-last':'', sharp.first ? 'sharp-active-first':'']"
-		  [ngStyle]="{'width.px': (sharp.level * sharpnessBar.widthModifier)}">
-	</span>
-	<span class="sharp-bg-7 sharp-none" [ngStyle]="{'width.px': (sharpnessBar.empty * sharpnessBar.widthModifier)}">
+	<span *ngFor="let sharp of sharpnessBar.sharps; let i = index">
+		<span *ngIf="sharp.level > 0"
+			  [ngClass]="['sharp-bg-' + sharp.colorIndex]"
+			  [ngStyle]="{'width.px': (sharp.level * sharpnessBar.widthModifier)}">
+		</span>
+		<span *ngIf="sharpnessBar.levels[i] > sharp.level"
+			  [ngClass]="['sharp-bg-' + sharp.colorIndex]" style="height:3px !important;"
+			  [ngStyle]="{'width.px': ((sharpnessBar.levels[i] - sharp.level) * sharpnessBar.widthModifier)}">
+		</span>
 	</span>
 </div>

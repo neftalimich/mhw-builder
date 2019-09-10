@@ -264,6 +264,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 740	Hammer	8	Kjárr Hammer "Thunder"	988	15	0	Thunder	450						false	13;10;3;3;8;3		kulve;kjarr;thunder	criticalElement-1		52
 741	Hammer	8	Kjárr Hammer "Ice"	988	10	0	Ice	480						false	17;7;2;2;8;4		kulve;kjarr;ice	criticalElement-1		52
 742	Hammer	8	Kjárr Hammer "Water"	1040	10	0	Water	390						false	6;5;6;12;7;4		kulve;kjarr;water	criticalElement-1		52
+800	Hammer	9	Black Gane III	1352	0	0				Blast	360	true		false	9;8;7;6;5;3;2	1;1	ore;blast			100
 241	HeavyBowgun	6	Arma Destroyer III	255	0	0								false			tzitzi-ya-ku			10
 248	HeavyBowgun	6	Baan Roar III	270	0	20								false			radobaan			10
 238	HeavyBowgun	6	Chrome Assault II	255	0	0								false		1;1	ore			10

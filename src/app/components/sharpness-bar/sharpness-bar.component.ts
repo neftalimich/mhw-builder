@@ -83,6 +83,14 @@ export class SharpnessBarComponent implements OnInit {
 				};
 				this.sharpnessBar.sharps.push(sharpnessAux);
 			}
+			if (levelsToAdd == 0 && this._sharpnessLevels[i] == 0) {
+				const sharpnessAux: SharpnessModel = {
+					colorIndex: i,
+					level: 0,
+					active: false
+				};
+				this.sharpnessBar.sharps.push(sharpnessAux);
+			}
 			levelsToAdd -= aux;
 
 			// When handicraft is not needed
@@ -91,14 +99,15 @@ export class SharpnessBarComponent implements OnInit {
 				this._sharpnessLevels[i] -= toSubstract2;
 				total -= toSubstract2;
 			}
+
 			this.sharpnessBar.tooltipTemplate =
 				`| <span class="sharp-${i}">${this._sharpnessLevels[i] * 10}</span> ${this.sharpnessBar.tooltipTemplate}`;
 		}
 
 		this.sharpnessBar.sharps = this.sharpnessBar.sharps.reverse();
 		this.sharpnessBar.empty = sharpnessEmpty;
-		this.sharpnessBar.widthModifier = 3.5;
-		this.sharpnessBar.levelsMissing = 6 - this._sharpnessLevels.length;
+		this.sharpnessBar.widthModifier = 5;
+		this.sharpnessBar.levelsMissing = 7 - this._sharpnessLevels.length;
 		this.sharpnessBar.tooltipTemplate +=
 			` | = <span class="sharp-8"> ${((total - sharpnessEmpty) * 10)}`
 			+ ` [<span class="sharp-${this.sharpnessBar.maxColorSharp}">${this.sharpnessBar.maxLevelSharp * 10}<i class="fas fa-circle fa-sm"></i></span>]</span>`;
