@@ -613,9 +613,19 @@ export class CalculationService {
 	private buildDefenseCalcs(stats: StatsModel) {
 		this.defenseCalcs = [];
 
+		let defValue = '';
+		for (let i = 0; i < stats.defense.length; i++) {
+			defValue += stats.defense[i];
+			if (i < stats.defense.length - 2) {
+				defValue += ' ➝ ';
+			} else if (i < stats.defense.length - 1) {
+				defValue += ' ➟ ';
+			}
+		}
+
 		this.defenseCalcs.push({
 			name: 'Defense',
-			value: `${(stats.defense + stats.passiveDefense)} ➝ ${(stats.maxDefense + stats.passiveDefense)} ➟ ${(stats.augmentedDefense + stats.passiveDefense)}`,
+			value: defValue,
 			icon: 'defense'
 		});
 

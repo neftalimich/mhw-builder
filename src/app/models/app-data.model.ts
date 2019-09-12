@@ -27,7 +27,6 @@ export class AppDataModel {
 	ammoCapacities: AmmoCapacitiesModel[];
 	melodies: MelodiesModel[];
 	melodyEffect: MelodyEffectModel[];
-	
 
 	constructor() {
 		this.weaponModifiers = new Array<WeaponModifierModel>();

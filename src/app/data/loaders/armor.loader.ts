@@ -6,6 +6,7 @@ import { EquipmentCategoryType } from '../../types/equipment-category.type';
 import { SkillReferencesParser } from '../parsers/skill-references.parser';
 import { SlotsParser } from '../parsers/slots.parser';
 import { TagsParser } from '../parsers/tags.parser';
+import { ValuesParser } from '../parsers/values.parser';
 import { DataLoader } from './data.loader';
 
 @Injectable()
@@ -20,9 +21,14 @@ export class ArmorLoader extends DataLoader<ItemModel> {
 	protected parse(content: string): ItemModel[] {
 		const items = this.parseTextContent(content, [
 			{
+				columnName: 'defense',
+				parser: new ValuesParser()
+			},
+			{
 				columnName: 'slots',
 				parser: new SlotsParser()
-			},
+			}
+			,
 			{
 				columnName: 'tags',
 				parser: new TagsParser()
@@ -36,7 +42,6 @@ export class ArmorLoader extends DataLoader<ItemModel> {
 		_.each(items, item => {
 			item.equipmentCategory = EquipmentCategoryType.Armor;
 		});
-
 		return items;
 	}
 }

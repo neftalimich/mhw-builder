@@ -1,6 +1,6 @@
 import { DataParser } from './data-parser';
 
-export class CapacitiesParser extends DataParser<number> {
+export class ValuesParser extends DataParser<number> {
 	parse(data: string): number[] {
 		const result = [];
 		const aux = data.split(';');

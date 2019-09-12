@@ -67,15 +67,15 @@ export class StatService {
 				if (item.baseAttack) { this.stats.attack += item.baseAttack; }
 				if (item.baseAffinityPercent) { this.stats.affinity += item.baseAffinityPercent; }
 				if (item.itemType == ItemType.Weapon) {
-					if (item.baseDefense) {
-						this.stats.defense += item.baseDefense;
-						this.stats.maxDefense += item.baseDefense;
-						this.stats.augmentedDefense += item.baseDefense;
+					if (item.defense) {
+						for (let i = 0; i < this.stats.defense.length; i++) {
+							this.stats.defense[i] += item.defense[0];
+						}
 					}
 				} else {
-					if (item.baseDefense) { this.stats.defense += item.baseDefense; }
-					if (item.maxDefense) { this.stats.maxDefense += item.maxDefense; }
-					if (item.augmentedDefense) { this.stats.augmentedDefense += item.augmentedDefense; }
+					for (let i = 0; i < this.stats.defense.length; i++) {
+						this.stats.defense[i] += item.defense[i];
+					}
 				}
 				if (item.fireResist) { this.stats.fireResist += item.fireResist; }
 				if (item.waterResist) { this.stats.waterResist += item.waterResist; }

@@ -23,7 +23,6 @@ export class ToolListComponent implements OnInit {
 	@Input()
 	set itemType(itemType: ItemType) {
 		this._itemType = itemType;
-		console.log("itemtype",itemType)
 		this.loadItems();
 	}
 	get itemType(): ItemType { return this._itemType; }
@@ -63,7 +62,6 @@ export class ToolListComponent implements OnInit {
 
 	loadItems() {
 		this.items = this.dataService.getTools();
-		console.log("tools", this.items);
 		this.resetSearchResults();
 		setTimeout(() => this.searchBox.nativeElement.focus(), 250);
 	}
@@ -79,13 +77,9 @@ export class ToolListComponent implements OnInit {
 	}
 
 	applyToolFilter() {
-		//if (this.filteredItems && this.toolTypeFilter && this.itemType == ItemType.Tool) {
-		//	this.filteredItems = _.reject(this.filteredItems, item => item.type != this.toolTypeFilter);
-		//}
 	}
 
 	selectItem(item: ItemModel) {
-		console.log("tool", item);
 		const newItem = Object.assign({}, item);
 		this.slotService.selectItem(newItem);
 	}

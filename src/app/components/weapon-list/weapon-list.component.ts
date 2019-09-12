@@ -221,9 +221,9 @@ export class WeaponListComponent implements OnInit {
 	weaponSortByDefense() {
 		this.weaponTypeSort = 'DEF';
 		this.filteredItems.sort(function (item1, item2) {
-			if (item1.baseDefense > item2.baseDefense) {
+			if (item1.defense > item2.defense) {
 				return -1;
-			} else if (item1.baseDefense < item2.baseDefense) {
+			} else if (item1.defense < item2.defense) {
 				return 1;
 			} else {
 				return 0;

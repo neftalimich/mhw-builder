@@ -97,3 +97,4 @@ id	name	level	skills	rarity
 97	Pierce Jewel 3	3	piercingShots-1	8
 98	Dragonseal Jewel 3	3	eldersealBoost-1	7
 99	Blastcoat Jewel 3	3	blastFunctionality-1	7
+800	TEST +4	4	attackBoost-2;defenseBoost-1	7

@@ -134,10 +134,19 @@ export class ItemDetailsComponent implements OnInit {
 			});
 		}
 
-		if (this.item.baseDefense) {
+		if (this.item.defense) {
+			let value = '';
+			for (let i = 0; i < this.item.defense.length; i++) {
+				value += this.item.defense[i];
+				if (i < this.item.defense.length - 2) {
+					value += ' ➝ ';
+				} else if (i < this.item.defense.length - 1) {
+					value += ' ➟ ';
+				}
+			}
 			this.stats.push({
 				name: 'Defense',
-				value: this.item.baseDefense + (this.item.maxDefense ? ' ➝ ' + this.item.maxDefense + ' ➟ ' + this.item.augmentedDefense : '')
+				value: value
 			});
 		}
 

@@ -78,9 +78,7 @@ export class StatsModel {
 	elderseal: string;
 	eldersealLevelBoost: number;
 
-	defense: number;
-	maxDefense: number;
-	augmentedDefense: number;
+	defense: number[];
 	passiveDefense: number;
 	passiveHealth: number;
 	passiveStamina: number;
@@ -179,9 +177,7 @@ export class StatsModel {
 		this.elderseal = null;
 		this.eldersealLevelBoost = 0;
 
-		this.defense = 0;
-		this.maxDefense = 0;
-		this.augmentedDefense = 0;
+		this.defense = [0, 0, 0];
 		this.passiveDefense = 0;
 		this.passiveHealth = 0;
 		this.passiveStamina = 0;
