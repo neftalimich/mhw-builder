@@ -54,6 +54,10 @@ export class DataService {
 		return _.find(this.appDataProvider.appData.charms, charm => charm.id === id);
 	}
 
+	getTool(id: number): ItemModel {
+		return _.find(this.appDataProvider.appData.tools, tool => tool.id === id);
+	}
+
 	getArmorByType(type: ItemType): ItemModel[] {
 		return _.filter(this.appDataProvider.appData.armor, armor => armor.itemType === type);
 	}

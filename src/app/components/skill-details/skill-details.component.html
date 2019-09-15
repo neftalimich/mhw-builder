@@ -40,6 +40,10 @@
 				<img src="assets/images/armor/charm-icon.png" [hidden]="!(equippedSkill.charmCount == 0)" class="armor-icon info-opaque" alt="charm">
 				<img src="assets/images/armor/charm-icon-gold.png" [hidden]="!(equippedSkill.charmCount > 0)" class="armor-icon" alt="charm">
 			</td>
+			<td [hidden]="equippedSkill.isSetBonus">
+				<img src="assets/images/armor/tool-icon.png" [hidden]="!(equippedSkill.toolCount == 0)" class="armor-icon info-opaque" alt="tool">
+				<img src="assets/images/armor/tool-icon-gold.png" [hidden]="!(equippedSkill.toolCount > 0)" class="armor-icon" alt="tool">
+			</td>
 		</tr>
 		<tr [hidden]="equippedSkill.isSetBonus">
 			<td>
@@ -62,6 +66,9 @@
 			</td>
 			<td>
 				<span [ngClass]="{'info-opaque':equippedSkill.charmCount==0}">{{equippedSkill.charmCount}}</span>
+			</td>
+			<td>
+				<span [ngClass]="{'info-opaque':equippedSkill.toolCount==0}">{{equippedSkill.toolCount}}</span>
 			</td>
 		</tr>
 	</table>

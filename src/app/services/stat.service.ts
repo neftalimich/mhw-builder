@@ -73,8 +73,10 @@ export class StatService {
 						}
 					}
 				} else {
-					for (let i = 0; i < this.stats.defense.length; i++) {
-						this.stats.defense[i] += item.defense[i];
+					if (item.defense) {
+						for (let i = 0; i < this.stats.defense.length; i++) {
+							this.stats.defense[i] += item.defense[i];
+						}
 					}
 				}
 				if (item.fireResist) { this.stats.fireResist += item.fireResist; }

@@ -15,6 +15,7 @@ export class EquippedSkillModel {
 	legsCount: number; // Waist
 	feetCount: number; // Legs
 	charmCount: number; // Charm
+	toolCount: number; // Tool
 
 	isSetBonus: boolean;
 
@@ -26,6 +27,7 @@ export class EquippedSkillModel {
 		this.legsCount = 0;
 		this.feetCount = 0;
 		this.charmCount = 0;
+		this.toolCount = 0;
 		this.isSetBonus = false;
 	}
 }

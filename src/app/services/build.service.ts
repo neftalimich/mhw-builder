@@ -70,6 +70,7 @@ export class BuildService {
 		this.loadBuildSlot(build.legs, this.slotService.legsSlot);
 		this.loadBuildSlot(build.feet, this.slotService.feetSlot);
 		this.loadBuildSlot(build.charm, this.slotService.charmSlot);
+		this.loadBuildSlot(build.tool, this.slotService.toolSlot);
 
 		this.slotService.selectItemSlot(null);
 		this.changeDetector.detectChanges();
@@ -159,6 +160,9 @@ export class BuildService {
 				case 7:
 					build.charm = buildItem;
 					break;
+				case 8:
+					build.tool = buildItem;
+					break;
 			}
 			index++;
 		}
@@ -178,6 +182,9 @@ export class BuildService {
 					break;
 				case EquipmentCategoryType.Charm:
 					item = this.dataService.getCharm(buildItem.itemId);
+					break;
+				case EquipmentCategoryType.Tool:
+					item = this.dataService.getTool(buildItem.itemId);
 					break;
 			}
 
@@ -277,8 +284,9 @@ export class BuildService {
 		const legs = this.equipmentService.items.find(item => item.itemType == ItemType.Legs);
 		const feet = this.equipmentService.items.find(item => item.itemType == ItemType.Feet);
 		const charm = this.equipmentService.items.find(item => item.itemType == ItemType.Charm);
+		const tool = this.equipmentService.items.find(item => item.itemType == ItemType.Tool);
 
-		let buildId = 'v1';
+		let buildId = 'v2';
 
 		this.changeDetector.detectChanges();
 
@@ -289,6 +297,7 @@ export class BuildService {
 		buildId += this.getItemBuildString(legs);
 		buildId += this.getItemBuildString(feet);
 		buildId += this.getItemBuildString(charm);
+		buildId += this.getItemBuildString(tool);
 
 		this.buildIdUpdated$.next(buildId);
 	}

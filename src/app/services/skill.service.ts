@@ -225,6 +225,8 @@ export class SkillService {
 			equippedSkill.feetCount += actualCount;
 		} else if (itemType == ItemType.Charm) {
 			equippedSkill.charmCount += actualCount;
+		} else if (itemType == ItemType.Tool) {
+			equippedSkill.toolCount += actualCount;
 		}
 	}
 }

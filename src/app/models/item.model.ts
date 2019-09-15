@@ -48,7 +48,7 @@ export class ItemModel {
 	skills?: SkillReferenceModel[];
 
 	tags?: string[];
-	version: number;
+	color: number;
 
 	equippedLevel?: number;
 }

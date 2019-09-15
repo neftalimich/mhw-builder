@@ -206,7 +206,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
 	clearAllItems() {
 		if (confirm('Are you sure you want to clear all items?')) {
-			this.buildService.loadBuild('#v1iiiiiii');
+			this.buildService.loadBuild('#v1iiiiiiii');
 		} else {
 		}
 	}

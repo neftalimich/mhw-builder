@@ -1,4 +1,4 @@
-id	itemType	rarity	name	defense	fireResist	waterResist	thunderResist	iceResist	dragonResist	skills	slots	tags	version
+id	itemType	rarity	name	defense	fireResist	waterResist	thunderResist	iceResist	dragonResist	skills	slots	tags	vColor
 332	Chest	5	Aloy's Body Alpha	46;68;84	1	1	1	1	1	marathonRunner-2;anjanathWill	1;1		10
 457	Chest	5	Dodogama Mail Alpha	48;70;86	2	0	-3	0	2	blastAttack-2			10
 458	Chest	5	Dodogama Mail Beta	48;70;86	2	0	-3	0	2	blastAttack-1	1		10
@@ -429,4 +429,4 @@ id	itemType	rarity	name	defense	fireResist	waterResist	thunderResist	iceResist	d
 501	Legs	8	Zorah Spine Gamma	78;78;92	4	-3	-1	-2	-3	bombardier-2;criticalEye-1;zorahMagdarosMastery	3;2	magdaros	50
 526	Legs	8	Geralt's Torso Alpha	70;76;90	2	1	-2	-1	3	bombardier-2;weaknessExploit-1;witchersKnowledge	2	witcher	60
 531	Legs	8	Ciri's Torso Alpha	70;76;90	-2	-1	2	1	3	freeElemAmmoUp-1;evadeExtender-2	2	witcher	60
-800	Legs	10	TEST+	70;76;90	-2	-1	2	1	3	freeElemAmmoUp-1;evadeExtender-2	4;2	etiqueta	60
+800	Head	9	Yelmo de Jagras Alfa +	116;124;124	-2	2	-1	-1	1	speedEating-2;attackBoost-2	2	Jagras	100

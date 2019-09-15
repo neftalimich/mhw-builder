@@ -32,14 +32,21 @@ export class SetService {
 
 	importSet() {
 		const buildId = location.hash;
+		const buildV = buildId.substring(0, 3);
 		if (buildId.length > 0) {
 			const itemGroupRegex = /(i[.]*[^i]*)/g;
 			const itemGroups = buildId.match(itemGroupRegex);
-			if (itemGroups.length > 7 && itemGroups[7].length > 1) {
-				const setName = itemGroups[7].substring(1, itemGroups[7].length);
+			let itemGroupsLenght = 0;
+			if ( buildV == '#v2') {
+				itemGroupsLenght = 8;
+			} else if (buildId.substring(0, 3) == '#v1') {
+				itemGroupsLenght = 7;
+			}
+			if (itemGroups.length > itemGroupsLenght && itemGroups[itemGroupsLenght].length > 1) {
+				const setName = itemGroups[itemGroupsLenght].substring(1, itemGroups[itemGroupsLenght].length);
 				itemGroups.splice(-1, 1);
-				this.location.replaceState(this.location.path(false), '#v1' + itemGroups.join(''));
-				this.buildService.loadBuild('#v1' + itemGroups.join(''));
+				this.location.replaceState(this.location.path(false), buildV + itemGroups.join(''));
+				this.buildService.loadBuild(buildV + itemGroups.join(''));
 				this.save(setName + '_IMPORTED', false);
 			}
 		}
