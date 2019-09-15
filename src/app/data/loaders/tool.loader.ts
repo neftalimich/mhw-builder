@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import * as _ from 'lodash';
 import { ToolModel } from '../../models/tool.model';
 import { EquipmentCategoryType } from '../../types/equipment-category.type';
-import { ItemType } from '../../types/item.type';
 import { SlotsParser } from '../parsers/slots.parser';
 import { DataLoader } from './data.loader';
 
@@ -24,7 +23,6 @@ export class ToolLoader extends DataLoader<ToolModel> {
 			}
 		]);
 		_.each(items, tool => {
-			tool.itemType = ItemType.Tool;
 			tool.equipmentCategory = EquipmentCategoryType.Tool;
 		});
 		return items;

@@ -70,7 +70,8 @@ export class BuildService {
 		this.loadBuildSlot(build.legs, this.slotService.legsSlot);
 		this.loadBuildSlot(build.feet, this.slotService.feetSlot);
 		this.loadBuildSlot(build.charm, this.slotService.charmSlot);
-		this.loadBuildSlot(build.tool, this.slotService.toolSlot);
+		this.loadBuildSlot(build.tool1, this.slotService.tool1Slot);
+		this.loadBuildSlot(build.tool2, this.slotService.tool2Slot);
 
 		this.slotService.selectItemSlot(null);
 		this.changeDetector.detectChanges();
@@ -161,7 +162,10 @@ export class BuildService {
 					build.charm = buildItem;
 					break;
 				case 8:
-					build.tool = buildItem;
+					build.tool1 = buildItem;
+					break;
+				case 9:
+					build.tool2 = buildItem;
 					break;
 			}
 			index++;
@@ -184,7 +188,7 @@ export class BuildService {
 					item = this.dataService.getCharm(buildItem.itemId);
 					break;
 				case EquipmentCategoryType.Tool:
-					item = this.dataService.getTool(buildItem.itemId);
+					item = this.dataService.getTool(buildItem.itemId, slot.slotName);
 					break;
 			}
 
@@ -284,7 +288,8 @@ export class BuildService {
 		const legs = this.equipmentService.items.find(item => item.itemType == ItemType.Legs);
 		const feet = this.equipmentService.items.find(item => item.itemType == ItemType.Feet);
 		const charm = this.equipmentService.items.find(item => item.itemType == ItemType.Charm);
-		const tool = this.equipmentService.items.find(item => item.itemType == ItemType.Tool);
+		const tool1 = this.equipmentService.items.find(item => item.itemType == ItemType.Tool1);
+		const tool2 = this.equipmentService.items.find(item => item.itemType == ItemType.Tool2);
 
 		let buildId = 'v2';
 
@@ -297,7 +302,8 @@ export class BuildService {
 		buildId += this.getItemBuildString(legs);
 		buildId += this.getItemBuildString(feet);
 		buildId += this.getItemBuildString(charm);
-		buildId += this.getItemBuildString(tool);
+		buildId += this.getItemBuildString(tool1);
+		buildId += this.getItemBuildString(tool2);
 
 		this.buildIdUpdated$.next(buildId);
 	}

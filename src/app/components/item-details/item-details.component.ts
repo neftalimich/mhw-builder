@@ -134,6 +134,17 @@ export class ItemDetailsComponent implements OnInit {
 			});
 		}
 
+		if (this.item.itemType == ItemType.Tool1 || this.item.itemType == ItemType.Tool2) {
+			this.stats.push({
+				name: 'Duration',
+				value: this.item.duration
+			});
+			this.stats.push({
+				name: 'Recharge',
+				value: this.item.recharge
+			});
+		}
+
 		if (this.item.defense) {
 			let value = '';
 			for (let i = 0; i < this.item.defense.length; i++) {

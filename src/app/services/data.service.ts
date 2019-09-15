@@ -17,7 +17,6 @@ import { DamageType } from '../types/damage.type';
 import { EquipmentCategoryType } from '../types/equipment-category.type';
 import { ItemType } from '../types/item.type';
 import { WeaponType } from '../types/weapon.type';
-import { ToolModel } from '../models/tool.model';
 
 @Injectable()
 export class DataService {
@@ -54,8 +53,10 @@ export class DataService {
 		return _.find(this.appDataProvider.appData.charms, charm => charm.id === id);
 	}
 
-	getTool(id: number): ItemModel {
-		return _.find(this.appDataProvider.appData.tools, tool => tool.id === id);
+	getTool(id: number, type: ItemType): ItemModel {
+		let tool = _.find(this.appDataProvider.appData.tools, tool => tool.id === id);
+		tool.itemType = type;
+		return tool;
 	}
 
 	getArmorByType(type: ItemType): ItemModel[] {
@@ -66,8 +67,12 @@ export class DataService {
 		return this.appDataProvider.appData.charms;
 	}
 
-	getTools(): ItemModel[] {
-		return this.appDataProvider.appData.tools;
+	getTools(type: ItemType): ItemModel[] {
+		let items = this.appDataProvider.appData.tools.map(x => Object.assign({}, x));
+		_.each(items, tool => {
+			tool.itemType = type;
+		});
+		return items;
 	}
 
 	getDecorations(level?: number): DecorationModel[] {
@@ -171,7 +176,8 @@ export class DataService {
 				return EquipmentCategoryType.Weapon;
 			case ItemType.Charm:
 				return EquipmentCategoryType.Charm;
-			case ItemType.Tool:
+			case ItemType.Tool1:
+			case ItemType.Tool2:
 				return EquipmentCategoryType.Tool;
 			case ItemType.Head:
 			case ItemType.Chest:

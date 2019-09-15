@@ -63,7 +63,7 @@ export class StatService {
 
 	private updateItemStats(items: ItemModel[]) {
 		for (const item of items) {
-			if (item.itemType != ItemType.Tool) {
+			if (item.itemType != ItemType.Tool1 && item.itemType != ItemType.Tool2) {
 				if (item.baseAttack) { this.stats.attack += item.baseAttack; }
 				if (item.baseAffinityPercent) { this.stats.affinity += item.baseAffinityPercent; }
 				if (item.itemType == ItemType.Weapon) {

@@ -6,7 +6,8 @@ export class BuildModel {
 	legs: BuildItemModel;
 	feet: BuildItemModel;
 	charm: BuildItemModel;
-	tool: BuildItemModel;
+	tool1: BuildItemModel;
+	tool2: BuildItemModel;
 }
 
 export class BuildItemModel {

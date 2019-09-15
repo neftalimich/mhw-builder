@@ -38,9 +38,9 @@ export class SetService {
 			const itemGroups = buildId.match(itemGroupRegex);
 			let itemGroupsLenght = 0;
 			if ( buildV == '#v2') {
-				itemGroupsLenght = 8;
+				itemGroupsLenght = 9;
 			} else if (buildId.substring(0, 3) == '#v1') {
-				itemGroupsLenght = 7;
+				itemGroupsLenght = 8;
 			}
 			if (itemGroups.length > itemGroupsLenght && itemGroups[itemGroupsLenght].length > 1) {
 				const setName = itemGroups[itemGroupsLenght].substring(1, itemGroups[itemGroupsLenght].length);

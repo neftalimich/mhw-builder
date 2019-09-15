@@ -1,13 +1,10 @@
-import { Component, ElementRef, EventEmitter, HostListener, Input, OnInit, Output, ViewChild } from '@angular/core';
-import * as _ from 'lodash';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { VirtualScrollerComponent } from 'ngx-virtual-scroller';
 import { ItemModel } from '../../models/item.model';
-import { SkillModel } from '../../models/skill.model';
 import { DataService } from '../../services/data.service';
 import { SlotService } from '../../services/slot.service';
 import { EquipmentCategoryType } from '../../types/equipment-category.type';
 import { ItemType } from '../../types/item.type';
-import { WeaponType } from '../../types/weapon.type';
 import { ToolType } from '../../types/tool.type';
 
 @Component({
@@ -61,7 +58,7 @@ export class ToolListComponent implements OnInit {
 	}
 
 	loadItems() {
-		this.items = this.dataService.getTools();
+		this.items = this.dataService.getTools(this._itemType);
 		this.resetSearchResults();
 		setTimeout(() => this.searchBox.nativeElement.focus(), 250);
 	}

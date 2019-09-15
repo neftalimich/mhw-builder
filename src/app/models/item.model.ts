@@ -47,6 +47,10 @@ export class ItemModel {
 	dragonResist: number;
 	skills?: SkillReferenceModel[];
 
+	// tool properties
+	duration: number;
+	recharge: number;
+
 	tags?: string[];
 	color: number;
 

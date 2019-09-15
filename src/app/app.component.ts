@@ -34,7 +34,8 @@ export class AppComponent implements OnInit, AfterViewInit {
 	@ViewChild('legsSlot', { static: true }) legsSlot: ItemSlotComponent;
 	@ViewChild('feetSlot', { static: true }) feetSlot: ItemSlotComponent;
 	@ViewChild('charmSlot', { static: true }) charmSlot: ItemSlotComponent;
-	@ViewChild('toolSlot', { static: true }) toolSlot: ItemSlotComponent;
+	@ViewChild('tool1Slot', { static: true }) tool1Slot: ItemSlotComponent;
+	@ViewChild('tool2Slot', { static: true }) tool2Slot: ItemSlotComponent;
 
 	@ViewChild('itemListModal', { static: true }) itemListModal: ModalComponent;
 	@ViewChild('changeLogModal', { static: true }) changeLogModal: ModalComponent;
@@ -77,7 +78,8 @@ export class AppComponent implements OnInit, AfterViewInit {
 			this.legsSlot,
 			this.feetSlot,
 			this.charmSlot,
-			this.toolSlot,
+			this.tool1Slot,
+			this.tool2Slot,
 			this.changeDetector
 		);
 
@@ -206,7 +208,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
 	clearAllItems() {
 		if (confirm('Are you sure you want to clear all items?')) {
-			this.buildService.loadBuild('#v1iiiiiiii');
+			this.buildService.loadBuild('#v2iiiiiiiii');
 		} else {
 		}
 	}
