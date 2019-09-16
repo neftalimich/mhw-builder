@@ -29,7 +29,7 @@ export class SkillDetailsComponent implements OnInit {
 			color = 'rgb(134, 255, 134)';
 		}
 		if (level == Math.min(this.equippedSkill.equippedCount, this.equippedSkill.totalLevelCount)) {
-			color = 'yellow';
+			color = '#87cefa';
 		}
 		return color;
 	}

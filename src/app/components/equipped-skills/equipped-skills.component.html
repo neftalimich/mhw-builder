@@ -16,7 +16,9 @@
 					<!--{{skill.equippedCount}}/{{skill.totalLevelCount}}-->
 					<span class="skill-box" style="display:inline-block;position:relative;">
 						<span *ngFor="let key of getMinCount(skill.equippedCount, skill.totalLevelCount) | numbersArr">
-							<span class="skill-bg-0">
+							<span *ngIf="skill.isSetBonus" class="skill-bg-setbonus">
+							</span>
+							<span *ngIf="!skill.isSetBonus" class="skill-bg-0">
 							</span>
 						</span>
 						<span *ngFor="let key of getMinCount(getMaxCount(skill.equippedTool1Count, skill.equippedTool2Count), skill.totalLevelCount - skill.equippedCount) | numbersArr">
@@ -42,7 +44,18 @@
 					<span class="name">{{setBonus.name}}</span>
 					<div class="value">
 						<span class="" *ngFor="let level of setBonus.details" [style.color]="getSetBonusColor(setBonus.equippedCount, level.requiredCount)">
-							{{setBonus.equippedCount}}/{{level.requiredCount}}
+							<!--{{setBonus.equippedCount}}/{{level.requiredCount}}-->
+							<span class="skill-box" style="display:inline-block;position:relative;">
+								<span *ngFor="let key of getMinCount(setBonus.equippedCount, level.requiredCount) | numbersArr">
+									<span class="skill-bg-setbonus">
+									</span>
+								</span>
+								<span *ngFor="let key of (level.requiredCount - getMinCount(setBonus.equippedCount, level.requiredCount)) | numbersArr">
+									<span class="skill-bg-2">
+									</span>
+								</span>
+							</span>
+							<br />
 						</span>
 					</div>
 				</li>

@@ -61,6 +61,7 @@ export class SetService {
 		let setItem = this.sets.find(s => s.setName === setName);
 		if (setItem && overwrite) {
 			setItem.hashString = location.hash;
+			setItem.hashString = setItem.hashString.replace('#v1', '#v2');
 			setItem.weaponType = this.statService.stats.weaponType;
 			setItem.totalAttack = this.statService.stats.totalAttack;
 			setItem.element = this.statService.stats.element;
@@ -72,7 +73,7 @@ export class SetService {
 		} else {
 			setItem = {
 				setName: setName,
-				hashString: location.hash,
+				hashString: location.hash.replace('#v1', '#v2'),
 				weaponType: this.statService.stats.weaponType,
 				totalAttack: this.statService.stats.totalAttack,
 				element: this.statService.stats.element,
