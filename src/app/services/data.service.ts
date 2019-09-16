@@ -54,9 +54,9 @@ export class DataService {
 	}
 
 	getTool(id: number, type: ItemType): ItemModel {
-		let tool = _.find(this.appDataProvider.appData.tools, tool => tool.id === id);
-		tool.itemType = type;
-		return tool;
+		const item = _.find(this.appDataProvider.appData.tools, tool => tool.id === id);
+		item.itemType = type;
+		return item;
 	}
 
 	getArmorByType(type: ItemType): ItemModel[] {
@@ -68,7 +68,7 @@ export class DataService {
 	}
 
 	getTools(type: ItemType): ItemModel[] {
-		let items = this.appDataProvider.appData.tools.map(x => Object.assign({}, x));
+		const items = this.appDataProvider.appData.tools.map(x => Object.assign({}, x));
 		_.each(items, tool => {
 			tool.itemType = type;
 		});

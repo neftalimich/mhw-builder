@@ -429,4 +429,13 @@ id	itemType	rarity	name	defense	fireResist	waterResist	thunderResist	iceResist	d
 501	Legs	8	Zorah Spine Gamma	78;78;92	4	-3	-1	-2	-3	bombardier-2;criticalEye-1;zorahMagdarosMastery	3;2	magdaros	50
 526	Legs	8	Geralt's Torso Alpha	70;76;90	2	1	-2	-1	3	bombardier-2;weaknessExploit-1;witchersKnowledge	2	witcher	60
 531	Legs	8	Ciri's Torso Alpha	70;76;90	-2	-1	2	1	3	freeElemAmmoUp-1;evadeExtender-2	2	witcher	60
-800	Head	9	Yelmo de Jagras Alfa +	116;124;124	-2	2	-1	-1	1	speedEating-2;attackBoost-2	2	Jagras	100
+801	Head	9	Bone Helm Alpha +	114;124;134	2	0	2	0	2	healthBoost-2;partbreaker-1	3	bone	0
+802	Chest	9	Bone Mail Alpha +	114;124;134	2	0	2	0	2	attackBoost-2;healthBoost-1	2	bone	0
+803	Hands	9	Bone Vambraces Alpha +	114;124;134	2	0	2	0	2	slugger-2;attackBoost-1	2	bone	0
+804	Legs	9	Bone Coil Alpha +	114;124;134	2	0	2	0	2	hornMaestro-1;partbreaker-1	3	bone	0
+805	Feet	9	Bone Greaves Alpha +	114;124;134	2	0	2	0	2	slugger-1;hornMaestro-1	3	bone	0
+806	Head	9	Bone Helm Beta +	114;124;134	2	0	2	0	2	healthBoost-1;partbreaker-1	4	bone	0
+807	Chest	9	Bone Mail Beta +	114;124;134	2	0	2	0	2	attackBoost-2	4;1	bone	0
+808	Hands	9	Bone Vambraces Beta +	114;124;134	2	0	2	0	2	slugger-2	4;1	bone	0
+809	Legs	9	Bone Coil Betaa +	114;124;134	2	0	2	0	2	hornMaestro-1	4;1	bone	0
+810	Feet	9	Bone Greaves Beta +	114;124;134	2	0	2	0	2	slugger-1	4	bone	0

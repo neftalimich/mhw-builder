@@ -39,7 +39,17 @@
 					<div class="icon-container">
 						<img src="assets/images/defense-icon.png" alt="defense">
 					</div>
-					<div class="stat-value">{{item.baseDefense}} ➝ {{item.maxDefense}} ➟ {{item.augmentedDefense}}</div>
+					<div class="stat-value">
+						<span *ngFor="let def of item.defense; let i = index">
+							{{def}}
+							<span *ngIf="i < item.defense.length - 2">
+								 ➝
+							</span>
+							<span *ngIf="i == item.defense.length -2">
+								 ➟
+							</span>
+						</span>
+					</div>
 				</div>
 				<div class="stat-container">
 					<div class="icon-container">

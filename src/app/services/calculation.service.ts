@@ -615,7 +615,7 @@ export class CalculationService {
 
 		let defValue = '';
 		for (let i = 0; i < stats.defense.length; i++) {
-			defValue += stats.defense[i];
+			defValue += Math.round(stats.defense[i] * (1 + stats.passiveDefensePercent / 100) + stats.passiveDefense);
 			if (i < stats.defense.length - 2) {
 				defValue += ' ➝ ';
 			} else if (i < stats.defense.length - 1) {

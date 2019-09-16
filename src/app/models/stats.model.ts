@@ -80,6 +80,7 @@ export class StatsModel {
 
 	defense: number[];
 	passiveDefense: number;
+	passiveDefensePercent: number;
 	passiveHealth: number;
 	passiveStamina: number;
 
@@ -179,6 +180,7 @@ export class StatsModel {
 
 		this.defense = [0, 0, 0];
 		this.passiveDefense = 0;
+		this.passiveDefensePercent = 0;
 		this.passiveHealth = 0;
 		this.passiveStamina = 0;
 

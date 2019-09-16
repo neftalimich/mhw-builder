@@ -47,6 +47,7 @@ export class SkillLevelModel {
 	passiveWeaponChargeReductionPercent: number;
 
 	passiveDefense: number;
+	passiveDefensePercent: number;
 	passiveHealth: number;
 	passiveStamina: number;
 

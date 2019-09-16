@@ -63,12 +63,8 @@
 		"description": "Increases affinity.",
 		"levels": [
 			{
-				"description": "Affinity +3%",
-				"passiveAffinity": 3
-			},
-			{
-				"description": "Affinity +6%",
-				"passiveAffinity": 6
+				"description": "Affinity +5%",
+				"passiveAffinity": 5
 			},
 			{
 				"description": "Affinity +10%",
@@ -89,6 +85,10 @@
 			{
 				"description": "Affinity +30%",
 				"passiveAffinity": 30
+			},
+			{
+				"description": "Affinity +40%",
+				"passiveAffinity": 40
 			}
 		]
 	},
@@ -98,15 +98,15 @@
 		"description": "Increases the affinity of attacks that exploit a monster weak spot.",
 		"levels": [
 			{
-				"description": "Attacks that hit weak spots have 15% increased affinity.",
+				"description": "Attacks that hit weak spots have 10% increased affinity, with an extra 5% on wounded parts.",
 				"weakPointAffinity": 15
 			},
 			{
-				"description": "Attacks that hit weak spots have 30% increased affinity.",
+				"description": "Attacks that hit weak spots have 15% increased affinity, with an extra 15% on wounded parts.",
 				"weakPointAffinity": 30
 			},
 			{
-				"description": "Attacks that hit weak spots have 50% increased affinity.",
+				"description": "Attacks that hit weak spots have 30% increased affinity, with an extra 20% on wounded parts.",
 				"weakPointAffinity": 50
 			}
 		]
@@ -117,20 +117,20 @@
 		"description": "Prevents knockbacks and other reactions to small damage.",
 		"levels": [
 			{
-				"description": "Prevents knockbacks."
+				"description": "Prevents knockbacks. Increases some Kinsect extract effects."
 			},
 			{
-				"description": "Prevents standard knockbacks. Tripping is reduced to a knockback instead."
+				"description": "Prevents standard knockbacks. Tripping is reduced to a knockback. Increases some Kinsect extract effects."
 			},
 			{
-				"description": "Prevents knockbacks and tripping."
+				"description": "Prevents knockbacks and tripping.Increaes some Kinsect extract effects."
 			}
 		]
 	},
 	{
 		"id": "maximumMight",
 		"name": "Maximum Might",
-		"description": "Increases affinity when stamina is full.",
+		"description": "Increases affinity as long asstamina is kept full for a period of time.",
 		"levels": [
 			{
 				"description": "While active, increases affinity by 10%.",
@@ -143,6 +143,14 @@
 			{
 				"description": "While active, increases affinity by 30%.",
 				"activeAffinity": 30
+			},
+			{
+				"description": "While active, increases affinity by 40%.",
+				"activeAffinity": 40
+			},
+			{
+				"description": "While active, increases affinity by 50%.",
+				"activeAffinity": 50
 			}
 		]
 	},
@@ -152,29 +160,39 @@
 		"description": "Increases attack power and affinity when large monsters become enraged.",
 		"levels": [
 			{
-				"description": "While active, grants attack +4 and increases affinity by 3%",
-				"activeAffinity": 3,
+				"description": "While active, grants attack +4 and increases affinity by 5%",
+				"activeAffinity": 5,
 				"activeAttack": 4
 			},
 			{
-				"description": "While active, grants attack +8 and increases affinity by 6%",
-				"activeAffinity": 6,
+				"description": "While active, grants attack +8 and increases affinity by 5%",
+				"activeAffinity": 5,
 				"activeAttack": 8
 			},
 			{
-				"description": "While active, grants attack +12 and increases affinity by 9%",
-				"activeAffinity": 9,
+				"description": "While active, grants attack +12 and increases affinity by 7%",
+				"activeAffinity": 7,
 				"activeAttack": 12
 			},
 			{
-				"description": "While active, grants attack +16 and increases affinity by 12%",
-				"activeAffinity": 12,
+				"description": "While active, grants attack +16 and increases affinity by 7%",
+				"activeAffinity": 7,
 				"activeAttack": 16
 			},
 			{
-				"description": "While active, grants attack +20 and increases affinity by 15%",
-				"activeAffinity": 15,
+				"description": "While active, grants attack +20 and increases affinity by 10%",
+				"activeAffinity": 10,
 				"activeAttack": 20
+			},
+			{
+				"description": "While active, grants attack +24 and increases affinity by 15%",
+				"activeAffinity": 15,
+				"activeAttack": 24
+			},
+			{
+				"description": "While active, grants attack +28 and increases affinity by 20%",
+				"activeAffinity": 20,
+				"activeAttack": 28
 			}
 		]
 	},
@@ -366,6 +384,9 @@
 		"levels": [
 			{
 				"description": "Increases the power of normal ammo and normal arrows."
+			},
+			{
+				"description": "Greatly increases the power of normal ammo and normal arrows."
 			}
 		]
 	},
@@ -451,7 +472,7 @@
 		"levels": [
 			{
 				"description": "Powers up non-elemental weapons you have equipped.",
-				"elementlessBoostPercent": 10
+				"elementlessBoostPercent": 5
 			}
 		]
 	},
@@ -464,7 +485,7 @@
 				"description": "Slightly reduces the effects of weak monster roars."
 			},
 			{
-				"description": "Reduces the effects of weak monster roars"
+				"description": "Reduces the effects of weak monster roars."
 			},
 			{
 				"description": "Nullifies weak monster roars."
@@ -503,6 +524,11 @@
 				"description": "Dragon attack +10%. Bonus: +100",
 				"passiveDragonAttack": 100,
 				"passiveDragonAttackPercent": 10
+			},
+			{
+				"description": "Dragon attack +20%. Bonus: +100",
+				"passiveDragonAttack": 100,
+				"passiveDragonAttackPercent": 20
 			}
 		]
 	},
@@ -532,6 +558,11 @@
 				"description": "Thunder attack +10%. Bonus: +100",
 				"passiveThunderAttack": 100,
 				"passiveThunderAttackPercent": 10
+			},
+			{
+				"description": "Thunder attack +20%. Bonus: +100",
+				"passiveThunderAttack": 100,
+				"passiveThunderAttackPercent": 20
 			}
 		]
 	},
@@ -561,6 +592,11 @@
 				"description": "Fire attack +10%. Bonus: +100",
 				"passiveFireAttack": 100,
 				"passiveFireAttackPercent": 10
+			},
+			{
+				"description": "Fire attack +20%. Bonus: +100",
+				"passiveFireAttack": 100,
+				"passiveFireAttackPercent": 20
 			}
 		]
 	},
@@ -590,6 +626,11 @@
 				"description": "Water attack +10%. Bonus: +100",
 				"passiveWaterAttack": 100,
 				"passiveWaterAttackPercent": 10
+			},
+			{
+				"description": "Water attack +20%. Bonus: +100",
+				"passiveWaterAttack": 100,
+				"passiveWaterAttackPercent": 20
 			}
 		]
 	},
@@ -619,6 +660,11 @@
 				"description": "Ice attack +10%. Bonus: +100",
 				"passiveIceAttack": 100,
 				"passiveIceAttackPercent": 10
+			},
+			{
+				"description": "Ice attack +20%. Bonus: +100",
+				"passiveIceAttack": 100,
+				"passiveIceAttackPercent": 20
 			}
 		]
 	},
@@ -641,6 +687,11 @@
 				"description": "Poison buildup +20%. Bonus +10.",
 				"passivePoisonAttack": 10,
 				"passivePoisonBuildupPercent": 20
+			},
+			{
+				"description": "Poison buildup +30%. Bonus +10.",
+				"passivePoisonAttack": 10,
+				"passivePoisonBuildupPercent": 30
 			}
 		]
 	},
@@ -663,6 +714,11 @@
 				"description": "Blast buildup +20%. Bonus +10.",
 				"passiveBlastAttack": 10,
 				"passiveBlastBuildupPercent": 20
+			},
+			{
+				"description": "Blast buildup +30%. Bonus +10.",
+				"passiveBlastAttack": 10,
+				"passiveBlastBuildupPercent": 30
 			}
 		]
 	},
@@ -685,6 +741,11 @@
 				"description": "Paralysis buildup +20%. Bonus +10.",
 				"passiveParalysisAttack": 10,
 				"passiveParalysisBuildupPercent": 20
+			},
+			{
+				"description": "Paralysis buildup +30%. Bonus +10.",
+				"passiveParalysisAttack": 10,
+				"passiveParalysisBuildupPercent": 30
 			}
 		]
 	},
@@ -707,6 +768,11 @@
 				"description": "Sleep buildup +20%. Bonus +10.",
 				"passiveSleepAttack": 10,
 				"passiveSleepBuildupPercent": 20
+			},
+			{
+				"description": "Sleep buildup +30%. Bonus +10.",
+				"passiveSleepAttack": 10,
+				"passiveSleepBuildupPercent": 30
 			}
 		]
 	},
@@ -792,24 +858,24 @@
 		"description": "Temporarily increases affinity and reduces stamina depletion when certain conditions are met.",
 		"levels": [
 			{
-				"description": "While active, increases affinity by 10% and reduces stamina depletion by 10%",
+				"description": "While active, increases affinity by 10% and reduces stamina depletion by 30%",
 				"activeAffinity": 10,
-				"activeStaminaDepletionReductionPercent": 10
+				"activeStaminaDepletionReductionPercent": 30
 			},
 			{
-				"description": "While active, increases affinity by 20% and reduces stamina depletion by 10%",
+				"description": "While active, increases affinity by 20% and reduces stamina depletion by 30%",
 				"activeAffinity": 20,
-				"activeStaminaDepletionReductionPercent": 10
+				"activeStaminaDepletionReductionPercent": 30
 			},
 			{
-				"description": "While active, increases affinity by 30% and reduces stamina depletion by 30%",
+				"description": "While active, increases affinity by 30% and reduces stamina depletion by 50%",
 				"activeAffinity": 30,
-				"activeStaminaDepletionReductionPercent": 30
+				"activeStaminaDepletionReductionPercent": 50
 			},
 			{
-				"description": "While active, increases affinity by 40% and reduces stamina depletion by 30%",
+				"description": "While active, increases affinity by 40% and reduces stamina depletion by 50%",
 				"activeAffinity": 40,
-				"activeStaminaDepletionReductionPercent": 30
+				"activeStaminaDepletionReductionPercent": 50
 			},
 			{
 				"description": "While active, increases affinity by 50% and reduces stamina depletion by 50%",
@@ -834,13 +900,13 @@
 		"description": "Allows long swords, dual blades, insect glaives, switch axes, and charge blades to stay powered up longer.",
 		"levels": [
 			{
-				"description": "Bonus duration +10%"
+				"description": "Slightly increases the duration weapons are powered up."
 			},
 			{
-				"description": "Bonus duration +20%"
+				"description": "Increases the duration weapons are power up."
 			},
 			{
-				"description": "Bonus duration +30%"
+				"description": "Greatly increases the duration weapons are powered up."
 			}
 		]
 	},
@@ -850,12 +916,12 @@
 		"description": "Grants protection against all elemental blights.",
 		"levels": [
 			{
-				"description": "Reduces the duration of all elemental blights by 30%.",
-				"elementalBlightResistPercent": 30
+				"description": "Reduces the duration of all elemental blights by 50%.",
+				"elementalBlightResistPercent": 50
 			},
 			{
-				"description": "Reduces the duration of all elemental blights by 60%.",
-				"elementalBlightResistPercent": 60
+				"description": "Reduces the duration of all elemental blights by 75%.",
+				"elementalBlightResistPercent": 75
 			},
 			{
 				"description": "Nullifies all elemental blights",
@@ -866,14 +932,14 @@
 	{
 		"id": "poisonResistance",
 		"name": "Poison Resistance",
-		"description": "Grants protection against the effects of poison.",
+		"description": "Reduce damae while poisoned.",
 		"levels": [
 			{
-				"description": "Reduces the duration of poison by 30%.",
+				"description": "Reduces the number of times you take poison damage.",
 				"passivePoisonResistPercent": 30
 			},
 			{
-				"description": "Reduces the duration of poison by 60%.",
+				"description": "Greatly reduces the number of times you take poison damage.",
 				"passivePoisonResistPercent": 60
 			},
 			{
@@ -1037,13 +1103,13 @@
 		"description": "Grants protection against Defense Down.",
 		"levels": [
 			{
-				"description": "Reduces the duration of Defense Down by 30%."
+				"description": "Reduces the duration of Defense Down by 50%."
 			},
 			{
-				"description": "Reduces the duration of Defense Down by 30%."
+				"description": "Reduces the duration of Defense Down by 75%."
 			},
 			{
-				"description": "Reduces the duration of Defense Down by 30%."
+				"description": "Prevents Defense Down."
 			}
 		]
 	},
@@ -1167,13 +1233,19 @@
 		"description": "Makes it easier to stun monsters.",
 		"levels": [
 			{
-				"description": "Stun power +10%"
-			},
-			{
 				"description": "Stun power +20%"
 			},
 			{
 				"description": "Stun power +30%"
+			},
+			{
+				"description": "Stun power +40%"
+			},
+			{
+				"description": "Stun power +50%"
+			},
+			{
+				"description": "Stun power +60%"
 			}
 		]
 	},
@@ -1280,12 +1352,14 @@
 				"passiveDefense": 10
 			},
 			{
-				"description": "Defense +15",
-				"passiveDefense": 15
+				"description": "Defense 5% Bonus: +10",
+				"passiveDefense": 10,
+				"passiveDefensePercent": 5
 			},
 			{
-				"description": "Defense +20. All Elemental Resistances +3.",
+				"description": "Defense 5% Bonus: +20. All Elemental Resistances +3.",
 				"passiveDefense": 20,
+				"passiveDefensePercent": 5,
 				"passiveFireResist": 3,
 				"passiveWaterResist": 3,
 				"passiveThunderResist": 3,
@@ -1293,8 +1367,9 @@
 				"passiveDragonResist": 3
 			},
 			{
-				"description": "Defense +25. All Elemental Resistances +3.",
-				"passiveDefense": 25,
+				"description": "Defense 8% Bonus +20. All Elemental Resistances +3.",
+				"passiveDefense": 20,
+				"passiveDefensePercent": 8,
 				"passiveFireResist": 3,
 				"passiveWaterResist": 3,
 				"passiveThunderResist": 3,
@@ -1302,22 +1377,24 @@
 				"passiveDragonResist": 3
 			},
 			{
-				"description": "Defense +30. All Elemental Resistances +3.",
-				"passiveDefense": 30,
-				"passiveFireResist": 3,
-				"passiveWaterResist": 3,
-				"passiveThunderResist": 3,
-				"passiveIceResist": 3,
-				"passiveDragonResist": 3
-			},
-			{
-				"description": "Defense +35. All Elemental Resistances +3.",
+				"description": "Defense 8% Bonus +35. All Elemental Resistances +5.",
 				"passiveDefense": 35,
-				"passiveFireResist": 3,
-				"passiveWaterResist": 3,
-				"passiveThunderResist": 3,
-				"passiveIceResist": 3,
-				"passiveDragonResist": 3
+				"passiveDefensePercent": 8,
+				"passiveFireResist": 5,
+				"passiveWaterResist": 5,
+				"passiveThunderResist": 5,
+				"passiveIceResist": 5,
+				"passiveDragonResist": 5
+			},
+			{
+				"description": "Defense 10% Bonus +35. All Elemental Resistances +5.",
+				"passiveDefense": 35,
+				"passiveDefensePercent": 10,
+				"passiveFireResist": 5,
+				"passiveWaterResist": 5,
+				"passiveThunderResist": 5,
+				"passiveIceResist": 5,
+				"passiveDragonResist": 5
 			}
 		]
 	},
@@ -1327,13 +1404,13 @@
 		"description": "Increases certain attacks' ability to exhaust monsters.",
 		"levels": [
 			{
-				"description": "Exhaust power +10%"
-			},
-			{
 				"description": "Exhaust power +20%"
 			},
 			{
 				"description": "Exhaust power +30%"
+			},
+			{
+				"description": "Exhaust power +40%"
 			}
 		]
 	},
@@ -1434,10 +1511,10 @@
 		"description": "Reduces maximum stamina depletion over time.",
 		"levels": [
 			{
-				"description": "Extends the time until your stamina cap decreases by 30%."
+				"description": "Extends the time until your stamina cap decreases by 50%."
 			},
 			{
-				"description": "Extends the time until your stamina cap decreases by 60%."
+				"description": "Extends the time until your stamina cap decreases by 100%."
 			},
 			{
 				"description": "Prevents your stamina cap from decreasing."
@@ -1450,26 +1527,26 @@
 		"description": "Increases the firepower of ballistae and cannons.",
 		"levels": [
 			{
-				"description": "Firepower +10%"
+				"description": "Firepower +50%"
 			},
 			{
-				"description": "Firepower +20%"
+				"description": "Firepower +100%"
 			}
 		]
 	},
 	{
-		"id": "sporepuffExpert",
-		"name": "Sporepuff Expert",
-		"description": "Recover health when using sporepuffs.",
+		"id": "survivalExpert",
+		"name": "Survival Expert",
+		"description": "Extra health is recovered from enviromental interactables like Sporepuff or Wiggly Litchi.",
 		"levels": [
 			{
-				"description": "Sporepuffs restore 20 health."
+				"description": "Interactables restore an additional 50 health."
 			},
 			{
-				"description": "Sporepuffs restore 35 health."
+				"description": "Interactables restore an additional 80 health."
 			},
 			{
-				"description": "Sporepuffs restore 60 health."
+				"description": "Interactables restore an additional 100 health."
 			}
 		]
 	},
@@ -1495,8 +1572,8 @@
 		"description": "Increases the damage caused by jumping attacks.",
 		"levels": [
 			{
-				"description": "Jumping attack power +10%",
-				"jumpingAttackPercent": 10
+				"description": "Jumping attack power +30%",
+				"jumpingAttackPercent": 30
 			}
 		]
 	},
@@ -1544,17 +1621,17 @@
 	},
 	{
 		"id": "aquaticExpert",
-		"name": "Aquatic Expert",
-		"description": "Improves mobility in water.",
+		"name": "Aquatic/Polar Expert",
+		"description": "Lets you more freely in water. Also prevents you being slowed down by terrain effects, such as deep snow.",
 		"levels": [
 			{
-				"description": "Prevents water from slowing movement."
+				"description": "Prevents lowered movement speed."
 			},
 			{
-				"description": "Prevents water from slowing movement and improves evasion while in water."
+				"description": "Increases your evade windows and prevents lowered movement speed."
 			},
 			{
-				"description": "Prevents water from slowing movement and greatly improves evasion while in water."
+				"description": "Greatly increases evade window and prevents lowered movement spreed."
 			}
 		]
 	},
@@ -1600,6 +1677,12 @@
 		"levels": [
 			{
 				"description": "Activates 25% of the time."
+			},
+			{
+				"description": "Activates 50% of the time."
+			},
+			{
+				"description": "Activates 75% of the time."
 			}
 		]
 	},
@@ -1610,6 +1693,9 @@
 		"levels": [
 			{
 				"description": "Extends melody effect duration and increases health recovery."
+			},
+			{
+				"description": "Greatly increases the effect duration of hunting horn melodies."
 			}
 		]
 	},
@@ -1619,13 +1705,16 @@
 		"description": "Reduces the recharge time for specialized tools.",
 		"levels": [
 			{
-				"description": "Shortens time until reuse by 5%."
+				"description": "Shortens time until reuse by 10%.",
+				"toolRechargeReduce": 0.10
 			},
 			{
-				"description": "Shortens time until reuse by 10%."
+				"description": "Shortens time until reuse by 20%.",
+				"toolRechargeReduce": 0.20
 			},
 			{
-				"description": "Shortens time until reuse by 20%."
+				"description": "Shortens time until reuse by 30%.",
+				"toolRechargeReduce": 0.30
 			}
 		]
 	},
@@ -1694,6 +1783,25 @@
 		]
 	},
 	{
+		"id": "offensiveGuard",
+		"name": "Offensive Guard",
+		"description": "Temporarily increases attack power after executing a perfectly-timed guard.",
+		"levels": [
+			{
+				"description": "While active increases attac power by 5%.",
+				"activeAttackPercent": 5
+			},
+			{
+				"description": "While active increases attac power by 10%.",
+				"activeAttackPercent": 10
+			},
+			{
+				"description": "While active increases attac power by 15%.",
+				"activeAttackPercent": 15
+			}
+		]
+	},
+	{
 		"id": "capacityBoost",
 		"name": "Capacity Boost",
 		"description": "Increases the gunlance's shell capacity and charge blade's phial capacity.",
@@ -1757,6 +1865,12 @@
 			},
 			{
 				"description": "Explosive power +30%"
+			},
+			{
+				"description": "Explosive power +40%"
+			},
+			{
+				"description": "Explosive power +50%"
 			}
 		]
 	},
@@ -1882,29 +1996,29 @@
 		"description": "Increases attack power and defense when health drops to 35% or lower.",
 		"levels": [
 			{
-				"description": "While active, increases attack power by 5% and increases defense by 15 points.",
+				"description": "While active, increases defense by 50 points.",
+				"activeAttackPercent": 0,
+				"activeDefense": 50
+			},
+			{
+				"description": "While active, increases attack power by 5% and increases defense by 50 points.",
 				"activeAttackPercent": 5,
-				"activeDefense": 15
+				"activeDefense": 50
 			},
 			{
-				"description": "While active, increases attack power by 10% and increases defense by 20 points.",
+				"description": "While active, increases attack power by 5% and increases defense by 100 points.",
+				"activeAttackPercent": 5,
+				"activeDefense": 100
+			},
+			{
+				"description": "While active, increases attack power by 10% and increases defense by 100 points.",
 				"activeAttackPercent": 10,
-				"activeDefense": 20
+				"activeDefense": 100
 			},
 			{
-				"description": "While active, increases attack power by 15% and increases defense by 25 points.",
+				"description": "While active, increases attack power by 15% and increases defense by 100 points.",
 				"activeAttackPercent": 15,
-				"activeDefense": 25
-			},
-			{
-				"description": "While active, increases attack power by 20% and increases defense by 30 points.",
-				"activeAttackPercent": 20,
-				"activeDefense": 30
-			},
-			{
-				"description": "While active, increases attack power by 30% and increases defense by 40 points.",
-				"activeAttackPercent": 30,
-				"activeDefense": 15
+				"activeDefense": 100
 			}
 		]
 	},
@@ -2026,6 +2140,9 @@
 		"levels": [
 			{
 				"description": "Increases the power of piercing ammo and Dragon Piercer."
+			},
+			{
+				"description": "Greatly increases the power of piercing ammo and Dragon Piercer."
 			}
 		]
 	},
@@ -2076,6 +2193,9 @@
 		"levels": [
 			{
 				"description": "Increases the power of spread ammo and power shot arrows."
+			},
+			{
+				"description": "Greatly increases the power of spread ammo and power shot arrows."
 			}
 		]
 	},

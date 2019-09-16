@@ -1,103 +1,104 @@
 id	rarity	name	levels	skills	
-225	5	Poison Charm	3	poisonResistance-1
-226	7	Attack Charm	3	attackBoost-1
-227	6	Defense Charm	3	defenseBoost-1
+225	7	Poison Charm	3	poisonResistance-1
+226	11	Attack Charm	4	attackBoost-1
+227	10	Defense Charm	5	defenseBoost-1
 228	7	Paralysis Charm	3	paralysisResistance-1
 229	7	Sleep Charm	3	sleepResistance-1
 230	6	Stun Charm	3	stunResistance-1
-231	6	Windproof Charm	3	windproof-1
+231	12	Windproof Charm	4	windproof-1
 232	7	Health Charm	3	healthBoost-1
 233	7	Recovery Charm	3	recoveryUp-1
 234	7	Fire Charm	3	fireResistance-1
 235	7	Water Charm	3	waterResistance-1
 236	7	Thunder Charm	3	thunderResistance-1
-237	7	Blaze Charm	3	fireAttack-1
-238	7	Flood Charm	3	waterAttack-1
-239	7	Shock Charm	3	thunderAttack-1
-240	7	Venom Charm	3	poisonAttack-1
-241	7	Immobilize Charm	3	paralysisAttack-1
-242	7	Tranq Charm	3	sleepAttack-1
+237	11	Blaze Charm	5	fireAttack-1
+238	11	Flood Charm	5	waterAttack-1
+239	11	Shock Charm	5	thunderAttack-1
+240	11	Venom Charm	4	poisonAttack-1
+241	11	Immobilize Charm	4	paralysisAttack-1
+242	11	Tranq Charm	4	sleepAttack-1
 243	7	KO Charm	3	slugger-1
 244	5	Enervate Charm	3	staminaThief-1
 245	7	Artillery Charm	3	artillery-1
 246	5	Hungerless Charm	3	hungerResistance-1
-247	7	Ironside Charm	3	guard-1
-248	7	Friendship Charm	3	wideRange-1
+247	12	Ironside Charm	5	guard-1
+248	12	Friendship Charm	5	wideRange-1
 249	5	Extension Charm	3	itemProlonger-1
 250	5	Glutton's Charm	3	speedEating-1
 251	5	Blessing Charm	3	divineBlessing-1
-252	5	Rally Charm	3	palicoRally-1
-253	5	Botany Charm	3	botanist-1
+252	9	Rally Charm	5	palicoRally-1
+253	7	Botany Charm	4	botanist-1
 254	5	Geology Charm	3	geologist-1
 255	5	Slinger Charm	3	slingerCapacity-1
 256	5	Stealth Charm	3	stealth-1
-257	5	Smoke Charm	3	sporepuffExpert-1
+257	5	Survival Charm	3	survivalExpert-1
 258	5	Mirewalker Charm	3	aquaticExpert-1
 259	5	Insect Charm	3	entomologist-1
 260	5	Intimidator Charm	3	intimidator-1
-261	5	Heavy Artillery Charm	3	heavyArtillery-1
-262	5	Light Eater's Charm	3	freeMeal-1
-263	5	Tracker Charm	3	scenthound-1
+261	5	Heavy Artillery Charm	2	heavyArtillery-1
+262	5	Light Eater's Charm	1	freeMeal-1
+263	5	Tracker Charm	1	scenthound-1
 264	6	Fortification Charm	1	fortify-1
-265	5	Performer's Charm	1	hornMaestro-1
+265	9	Performer's Charm	2	hornMaestro-1
 266	5	Capacity Charm	1	capacityBoost-1
 267	6	Bleed Charm	3	bleedingResistance-1
 268	6	Speed Heal Charm	3	recoverySpeed-1
 269	6	Ice Charm	3	iceResistance-1
 270	6	Blight Charm	3	blightResistance-1
-271	6	Frost Charm	3	iceAttack-1
-272	7	Master's Charm	3	criticalEye-1
-273	6	Evasion Charm	3	evadeWindow-1
+271	12	Frost Charm	5	iceAttack-1
+272	11	Master's Charm	4	criticalEye-1
+273	12	Evasion Charm	4	evadeWindow-1
 274	8	Sheath Charm	3	quickSheath-1
 275	6	Whetstone Charm	3	speedSharpening-1
 276	6	Blast Charm	3	blastResistance-1
 277	6	Dragon Charm	3	dragonResistance-1
-278	8	Wyrmsbane Charm	3	dragonAttack-1
-279	8	Demolition Charm	3	blastAttack-1
+278	12	Wyrmsbane Charm	5	dragonAttack-1
+279	11	Demolition Charm	4	blastAttack-1
 280	7	Draw Charm	2	criticalDraw-1
-281	6	Trickshot Charm	2	specialAmmoBoost-1
-282	8	Marathon Charm	2	marathonRunner-1
-283	7	Fitness Charm	3	constitution-1
-284	6	Surge Charm	2	staminaSurge-1
-285	6	Leaping Charm	2	evadeExtender-1
+281	6	Special Shot Charm	2	specialAmmoBoost-1
+282	12	Marathon Charm	3	marathonRunner-1
+283	11	Fitness Charm	4	constitution-1
+284	9	Surge Charm	3	staminaSurge-1
+285	9	Leaping Charm	3	evadeExtender-1
 286	7	Bombardier Charm	3	bombardier-1
-287	8	Mushroom Charm	2	mushroomancer-1
-288	7	Awakening Charm	2	freeElemAmmoUp-1
-289	8	Handicraft Charm	3	handicraft-1
+287	11	Mushroom Charm	3	mushroomancer-1
+288	12	Awakening Charm	3	freeElemAmmoUp-1
+289	12	Handicraft Charm	4	handicraft-1
 290	5	Mud Puppy Charm	1	muckResistance-1;leapOfFaith-1
 291	5	Trickshot Charm	1	dungmaster-1;blindsider-1
 292	5	Hunter's Life Charm	1	bbqMaster-1;masterFisher-1
 293	5	Procurer's Charm	1	proTransporter-1;honeyHunter-1
 294	5	Gatherer's Charm	1	masterGatherer-1;carvingPro-1
 295	7	Guard Charm	3	ironSkin-1
-296	8	Earplugs Charm	3	earplugs-1
-297	7	Tremor Charm	2	tremorResistance-1
+296	10	Earplugs Charm	4	earplugs-1
+297	9	Tremor Charm	3	tremorResistance-1
 298	8	Exploiter Charm	2	weaknessExploit-1
-299	7	Focus Charm	2	focus-1
-300	8	Breaker Charm	2	partbreaker-1
-301	7	Fury Charm	2	resentment-1
-302	7	Grit Charm	2	heroics-1
+299	12	Focus Charm	3	focus-1
+300	11	Breaker Charm	3	partbreaker-1
+301	11	Fury Charm	4	resentment-1
+302	11	Grit Charm	4	heroics-1
 303	7	Maintenance Charm	3	toolSpecialist-1
-304	8	Power Charm	2	latentPower-1
-305	8	Challenger Charm	2	agitator-1
+304	11	Power Charm	4	latentPower-1
+305	11	Challenger Charm	4	agitator-1
 306	8	Unscathed Charm	2	peakPerformance-1
 307	8	Mighty Charm	2	maximumMight-1
-308	8	Impact Charm	2	flinchFree-1
+308	11	Impact Charm	3	flinchFree-1
 309	8	Miasma Charm	3	effluviaResistance-1
-310	7	Normal Shots Charm	1	normalShots-1
+310	11	Normal Shots Charm	2	normalShots-1
 311	7	Clearmind Charm	1	heatGuard-1;effluvialExpert-1
 312	7	Rider's Charm	1	masterMounter-1;jumpMaster-1
 313	7	Surveyor's Charm	1	scoutflyRangeUp-1;scholar-1
-314	8	Critical Charm	1	criticalBoost-1
-315	8	Invigorate Charm	2	powerProlonger-1
+314	12	Critical Charm	2	criticalBoost-1
+315	11	Invigorate Charm	3	powerProlonger-1
 316	8	Poison Coating Charm	1	poisonFunctionality-1
 317	8	Para Coating Charm	1	paraFunctionality-1
 318	8	Sleep Coating Charm	1	sleepFunctionality-1
 319	8	Blast Coating Charm	1	blastFunctionality-1
 320	8	Geomancy Charm	1	foragersLuck-1;detector-1
 341	8	Bulwark Charm	1	guardUp-1;resuscitate-1
-342	8	Dispersal Charm	1	spreadPowerShots-1
+342	11	Dispersal Charm	2	spreadPowerShots-1
 343	8	Fair Wind Charm	1	attackBoost-1;divineBlessing-1
 344	8	Gale Charm	1	affinitySliding-1;airborne-1
-345	8	Penetration Charm	1	piercingShots-1
+345	11	Penetration Charm	2	piercingShots-1
 346	8	Wyrmslayer Charm	1	eldersealBoost-1;dragonAttack-1
+347	12	Guardian Charm	3	offensiveGuard-1

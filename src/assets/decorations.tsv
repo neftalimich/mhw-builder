@@ -1,100 +1,154 @@
-id	name	level	skills	rarity
-1	Antidote Jewel 1	1	poisonResistance-1	5
-2	Antipara Jewel 1	1	paralysisResistance-1	5
-3	Pep Jewel 1	1	sleepResistance-1	5
-4	Steadfast Jewel 1	1	stunResistance-1	6
-5	Antiblast Jewel 1	1	blastResistance-1	5
-6	Def Lock Jewel 1	1	ironSkin-1	5
-7	Fire Res Jewel 1	1	fireResistance-1	5
-8	Water Res Jewel 1	1	waterResistance-1	5
-9	Thunder Res Jewel 1	1	thunderResistance-1	5
-10	Ice Res Jewel 1	1	iceResistance-1	5
-11	Dragon Res Jewel 1	1	dragonResistance-1	5
-12	Attack Jewel 1	1	attackBoost-1	7
-13	Blaze Jewel 1	1	fireAttack-1	6
-14	Stream Jewel 1	1	waterAttack-1	6
-15	Bolt Jewel 1	1	thunderAttack-1	6
-16	Frost Jewel 1	1	iceAttack-1	6
-17	Dragon Jewel 1	1	dragonAttack-1	6
-18	Venom Jewel 1	1	poisonAttack-1	6
-19	Expert Jewel 1	1	criticalEye-1	6
-20	Sheath Jewel 1	1	quickSheath-1	6
-21	Stonethrower Jewel 1	1	slingerCapacity-1	6
-22	Enduring Jewel 1	1	itemProlonger-1	6
-23	Gobbler Jewel 1	1	speedEating-1	6
-24	Resistor Jewel 1	1	blightResistance-1	6
-25	Vitality Jewel 1	1	healthBoost-1	6
-26	Grinder Jewel 1	1	speedSharpening-1	6
-27	Defense Jewel 1	1	defenseBoost-1	6
-28	Drain Jewel 1	1	staminaThief-1	6
-29	Friendship Jewel 1	1	wideRange-1	6
-30	Meowster Jewel 1	1	palicoRally-1	5
-31	Crisis Jewel 1	1	resuscitate-1	5
-32	Scent Jewel 1	1	scenthound-1	5
-33	Intimidator Jewel 1	1	intimidator-1	5
-34	Hungerless Jewel 1	1	hungerResistance-1	5
-35	Heavy Artillery Jewel 1	1	heavyArtillery-1	5
-36	Smoke Jewel 1	1	sporepuffExpert-1	5
-37	Geology Jewel 1	1	geologist-1	5
-38	Tip Toe Jewel 1	1	stealth-1	5
-39	Fortitude Jewel 1	1	fortify-1	5
-40	Specimen Jewel 1	1	entomologist-1	5
-41	Miasma Jewel 1	1	effluviaResistance-1	5
-42	Protection Jewel 1	1	divineBlessing-1	5
-43	Mirewalker Jewel 1	1	aquaticExpert-1	5
-44	Botany Jewel 1	1	botanist-1	5
-45	Suture Jewel 1	1	bleedingResistance-1	5
-46	Satiated Jewel 1	1	freeMeal-1	5
-47	Sonorous Jewel 1	1	hornMaestro-1	6
-48	Maintenance Jewel 1	1	toolSpecialist-1	5
-69	Fungiform Jewel 1	1	mushroomancer-1	8
-72	Trueshot Jewel 1	1	specialAmmoBoost-1	7
-73	Sleep Jewel 1	1	sleepAttack-1	7
-74	Recovery Jewel 1	1	recoverySpeed-1	6
-75	Paralyzer Jewel 1	1	paralysisAttack-1	7
-76	Medicine Jewel 1	1	recoveryUp-1	6
-77	Ironwall Jewel 1	1	guard-1	7
-78	Bomber Jewel 1	1	bombardier-1	6
-79	Blast Jewel 1	1	blastAttack-1	7
-80	Artillery Jewel 1	1	artillery-1	8
-49	Critical Jewel 2	2	criticalBoost-1	8
-50	Flight Jewel 2	2	airborne-1	5
-51	Slider Jewel 2	2	affinitySliding-1	6
-52	Tenderizer Jewel 2	2	weaknessExploit-1	6
-53	KO Jewel 2	2	slugger-1	6
-54	Mighty Jewel 2	2	maximumMight-1	7
-55	Mighty Bow Jewel 2	2	bowChargePlus-1	8
-56	Fast Charge Jewel 2	2	focus-1	8
-57	Destroyer Jewel 2	2	partbreaker-1	6
-58	Elementless Jewel 2	2	nonElementalBoost-1	6
-59	Evasion Jewel 2	2	evadeWindow-1	6
-60	Footing Jewel 2	2	tremorResistance-1	6
-61	Wind Resist Jewel 2	2	windproof-1	6
-62	Potential Jewel 2	2	heroics-1	7
-71	Mind's Eye Jewel 2	2	mindsEyeBallistics-1	8
-81	Throttle Jewel 2	2	latentPower-1	7
-82	Sprinter Jewel 2	2	marathonRunner-1	8
-83	Shield Jewel 2	2	guardUp-1	7
-84	Sharp Jewel 2	2	protectivePolish-1	7
-85	Refresh Jewel 2	2	staminaSurge-1	7
-86	Physique Jewel 2	2	constitution-1	6
-87	Magazine Jewel 2	2	capacityBoost-1	7
-88	Jumping Jewel 2	2	evadeExtender-1	6
-89	Furor Jewel 2	2	resentment-1	7
-90	Flawless Jewel 2	2	peakPerformance-1	7
-91	Enhancer Jewel 2	2	powerProlonger-1	7
-92	Draw Jewel 2	2	criticalDraw-1	8
-94	Challenger Jewel 2	2	agitator-1	7
-63	Earplugs Jewel 3	3	earplugs-1	6
-64	Handicraft Jewel 3	3	handicraft-1	8
-65	Poisoncoat Jewel 3	3	poisonFunctionality-1	6
-66	Brace Jewel 3	3	flinchFree-1	6
-67	Paracoat Jewel 3	3	paraFunctionality-1	7
-68	Forceshot Jewel 3	3	normalShots-1	7
-70	Spread Jewel 3	3	spreadPowerShots-1	8
-95	Sleepcoat Jewel 3	3	sleepFunctionality-1	7
-96	Release Jewel 3	3	freeElemAmmoUp-1	8
-97	Pierce Jewel 3	3	piercingShots-1	8
-98	Dragonseal Jewel 3	3	eldersealBoost-1	7
-99	Blastcoat Jewel 3	3	blastFunctionality-1	7
-800	Joya de salud/saciante 4	4	freeMeal-1;marathonRunner-1	10
+id	rarity	name	level	skills
+1	5	Antidote Jewel 1	1	poisonResistance-1
+2	5	Antipara Jewel 1	1	paralysisResistance-1
+3	5	Pep Jewel 1	1	sleepResistance-1
+4	6	Steadfast Jewel 1	1	stunResistance-1
+5	5	Antiblast Jewel 1	1	blastResistance-1
+6	5	Def Lock Jewel 1	1	ironSkin-1
+7	5	Fire Res Jewel 1	1	fireResistance-1
+8	5	Water Res Jewel 1	1	waterResistance-1
+9	5	Thunder Res Jewel 1	1	thunderResistance-1
+10	5	Ice Res Jewel 1	1	iceResistance-1
+11	5	Dragon Res Jewel 1	1	dragonResistance-1
+12	7	Attack Jewel 1	1	attackBoost-1
+13	6	Blaze Jewel 1	1	fireAttack-1
+14	6	Stream Jewel 1	1	waterAttack-1
+15	6	Bolt Jewel 1	1	thunderAttack-1
+16	6	Frost Jewel 1	1	iceAttack-1
+17	6	Dragon Jewel 1	1	dragonAttack-1
+18	6	Venom Jewel 1	1	poisonAttack-1
+19	6	Expert Jewel 1	1	criticalEye-1
+20	6	Sheath Jewel 1	1	quickSheath-1
+21	6	Stonethrower Jewel 1	1	slingerCapacity-1
+22	6	Enduring Jewel 1	1	itemProlonger-1
+23	6	Gobbler Jewel 1	1	speedEating-1
+24	6	Resistor Jewel 1	1	blightResistance-1
+25	6	Vitality Jewel 1	1	healthBoost-1
+26	6	Grinder Jewel 1	1	speedSharpening-1
+27	6	Defense Jewel 1	1	defenseBoost-1
+28	6	Drain Jewel 1	1	staminaThief-1
+29	6	Friendship Jewel 1	1	wideRange-1
+30	5	Meowster Jewel 1	1	palicoRally-1
+31	5	Crisis Jewel 1	1	resuscitate-1
+32	5	Scent Jewel 1	1	scenthound-1
+33	5	Intimidator Jewel 1	1	intimidator-1
+34	5	Hungerless Jewel 1	1	hungerResistance-1
+35	5	Heavy Artillery Jewel 1	1	heavyArtillery-1
+36	5	Survival Jewel 1	1	survivalExpert-1
+37	5	Geology Jewel 1	1	geologist-1
+38	5	Tip Toe Jewel 1	1	stealth-1
+39	5	Fortitude Jewel 1	1	fortify-1
+40	5	Specimen Jewel 1	1	entomologist-1
+41	5	Miasma Jewel 1	1	effluviaResistance-1
+42	5	Protection Jewel 1	1	divineBlessing-1
+43	5	Mirewalker Jewel 1	1	aquaticExpert-1
+44	5	Botany Jewel 1	1	botanist-1
+45	5	Suture Jewel 1	1	bleedingResistance-1
+46	5	Satiated Jewel 1	1	freeMeal-1
+47	6	Sonorous Jewel 1	1	hornMaestro-1
+48	5	Maintenance Jewel 1	1	toolSpecialist-1
+69	8	Fungiform Jewel 1	1	mushroomancer-1
+72	7	Trueshot Jewel 1	1	specialAmmoBoost-1
+73	7	Sleep Jewel 1	1	sleepAttack-1
+74	6	Recovery Jewel 1	1	recoverySpeed-1
+75	7	Paralyzer Jewel 1	1	paralysisAttack-1
+76	6	Medicine Jewel 1	1	recoveryUp-1
+77	7	Ironwall Jewel 1	1	guard-1
+78	6	Bomber Jewel 1	1	bombardier-1
+79	7	Blast Jewel 1	1	blastAttack-1
+80	8	Artillery Jewel 1	1	artillery-1
+49	8	Critical Jewel 2	2	criticalBoost-1
+50	5	Flight Jewel 2	2	airborne-1
+51	6	Slider Jewel 2	2	affinitySliding-1
+52	6	Tenderizer Jewel 2	2	weaknessExploit-1
+53	6	KO Jewel 2	2	slugger-1
+54	7	Mighty Jewel 2	2	maximumMight-1
+55	8	Mighty Bow Jewel 2	2	bowChargePlus-1
+56	8	Fast Charge Jewel 2	2	focus-1
+57	6	Destroyer Jewel 2	2	partbreaker-1
+58	6	Elementless Jewel 2	2	nonElementalBoost-1
+59	6	Evasion Jewel 2	2	evadeWindow-1
+60	6	Footing Jewel 2	2	tremorResistance-1
+61	6	Wind Resist Jewel 2	2	windproof-1
+62	7	Potential Jewel 2	2	heroics-1
+71	8	Mind's Eye Jewel 2	2	mindsEyeBallistics-1
+81	7	Throttle Jewel 2	2	latentPower-1
+82	8	Sprinter Jewel 2	2	marathonRunner-1
+83	7	Shield Jewel 2	2	guardUp-1
+84	7	Sharp Jewel 2	2	protectivePolish-1
+85	7	Refresh Jewel 2	2	staminaSurge-1
+86	6	Physique Jewel 2	2	constitution-1
+87	7	Magazine Jewel 2	2	capacityBoost-1
+88	6	Jumping Jewel 2	2	evadeExtender-1
+89	7	Furor Jewel 2	2	resentment-1
+90	7	Flawless Jewel 2	2	peakPerformance-1
+91	7	Enhancer Jewel 2	2	powerProlonger-1
+92	8	Draw Jewel 2	2	criticalDraw-1
+94	7	Challenger Jewel 2	2	agitator-1
+63	6	Earplugs Jewel 3	3	earplugs-1
+64	8	Handicraft Jewel 3	3	handicraft-1
+65	6	Poisoncoat Jewel 3	3	poisonFunctionality-1
+66	6	Brace Jewel 3	3	flinchFree-1
+67	7	Paracoat Jewel 3	3	paraFunctionality-1
+68	7	Forceshot Jewel 3	3	normalShots-1
+70	8	Spread Jewel 3	3	spreadPowerShots-1
+95	7	Sleepcoat Jewel 3	3	sleepFunctionality-1
+96	8	Release Jewel 3	3	freeElemAmmoUp-1
+97	8	Pierce Jewel 3	3	piercingShots-1
+98	7	Dragonseal Jewel 3	3	eldersealBoost-1
+99	7	Blastcoat Jewel 3	3	blastFunctionality-1
+101	5	Antidote Jewel+ 4	4	poisonResistance-2
+102	5	Antipara Jewel+ 4	4	paralysisResistance-2
+103	5	Pep Jewel+ 4	4	sleepResistance-2
+104	6	Steadfast Jewel+ 4	4	stunResistance-2
+105	5	Antiblast Jewel+ 4	4	blastResistance-2
+106	5	Def Lock Jewel+ 4	4	ironSkin-2
+107	5	Fire Res Jewel+ 4	4	fireResistance-2
+108	5	Water Res Jewel+ 4	4	waterResistance-2
+109	5	Thunder Res Jewel+ 4	4	thunderResistance-2
+110	5	Ice Res Jewel+ 4	4	iceResistance-2
+111	5	Dragon Res Jewel+ 4	4	dragonResistance-2
+112	7	Attack Jewel+ 4	4	attackBoost-2
+113	6	Blaze Jewel+ 4	4	fireAttack-2
+114	6	Stream Jewel+ 4	4	waterAttack-2
+115	6	Bolt Jewel+ 4	4	thunderAttack-2
+116	6	Frost Jewel+ 4	4	iceAttack-2
+117	6	Dragon Jewel+ 4	4	dragonAttack-2
+118	6	Venom Jewel+ 4	4	poisonAttack-2
+119	6	Expert Jewel+ 4	4	criticalEye-2
+120	6	Sheath Jewel+ 4	1	quickSheath-2
+121	6	Stonethrower Jewel+ 4	4	slingerCapacity-2
+122	6	Enduring Jewel+ 4	4	itemProlonger-2
+123	6	Gobbler Jewel+ 4	4	speedEating-2
+124	6	Resistor Jewel+ 4	4	blightResistance-2
+125	6	Vitality Jewel+ 4	4	healthBoost-2
+126	6	Grinder Jewel+ 4	4	speedSharpening-2
+127	6	Defense Jewel+ 4	4	defenseBoost-2
+128	6	Drain Jewel+ 4	4	staminaThief-2
+129	6	Friendship Jewel+ 4	4	wideRange-2
+130	5	Meowster Jewel+ 4	4	palicoRally-2
+133	5	Intimidator Jewel+ 4	4	intimidator-2
+134	5	Hungerless Jewel+ 4	4	hungerResistance-2
+135	5	Heavy Artillery Jewel+ 4	4	heavyArtillery-2
+136	5	Survival Jewel+ 4	4	survivalExpert-2
+137	5	Geology Jewel+ 4	4	geologist-2
+138	5	Tip Toe Jewel+ 4	4	stealth-2
+140	5	Specimen Jewel+ 4	4	entomologist-2
+141	5	Miasma Jewel+ 4	4	effluviaResistance-2
+142	5	Protection Jewel+ 4	4	divineBlessing-2
+143	5	Mirewalker Jewel+ 4	4	aquaticExpert-2
+144	5	Botany Jewel+ 4	4	botanist-2
+145	5	Suture Jewel+ 4	4	bleedingResistance-2
+146	5	Satiated Jewel+ 4	4	freeMeal-2
+147	6	Sonorous Jewel+ 4	4	hornMaestro-2
+148	5	Maintenance Jewel+ 4	4	toolSpecialist-2
+169	8	Fungiform Jewel+ 4	4	mushroomancer-2
+172	7	Trueshot Jewel+ 4	4	specialAmmoBoost-2
+173	7	Sleep Jewel+ 4	4	sleepAttack-2
+174	6	Recovery Jewel+ 4	4	recoverySpeed-2
+175	7	Paralyzer Jewel+ 4	4	paralysisAttack-2
+176	6	Medicine Jewel+ 4	4	recoveryUp-2
+177	7	Ironwall Jewel+ 4	4	guard-2
+178	6	Bomber Jewel+ 4	4	bombardier-2
+179	7	Blast Jewel+ 4	4	blastAttack-2
+180	8	Artillery Jewel+ 4	4	artillery-2

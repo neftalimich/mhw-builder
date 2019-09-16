@@ -143,6 +143,7 @@ export class StatService {
 				if (level.passiveStunBuildupPercent) { this.stats.passiveStunBuildupPercent += level.passiveStunBuildupPercent; }
 
 				if (level.passiveDefense) { this.stats.passiveDefense += level.passiveDefense; }
+				if (level.passiveDefensePercent) { this.stats.passiveDefensePercent += level.passiveDefensePercent; }
 				if (level.passiveHealth) { this.stats.passiveHealth += level.passiveHealth; }
 				if (level.passiveStamina) { this.stats.passiveStamina += level.passiveStamina; }
 
