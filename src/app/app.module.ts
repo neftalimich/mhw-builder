@@ -35,6 +35,7 @@ import { TooltipComponent } from './components/tooltip/tooltip.component';
 import { WeaponListComponent } from './components/weapon-list/weapon-list.component';
 import { DataModule } from './data/data.module';
 import { MaxSharpnessPipe } from './pipes/max-sharpness.pipe';
+import { NumbersArrPipe } from './pipes/numberArr.pipe';
 import { AppDataProvider } from './providers/app-data.provider';
 import { BuildService } from './services/build.service';
 import { CalculationService } from './services/calculation.service';
@@ -75,6 +76,7 @@ import { TooltipService } from './services/tooltip.service';
 		SetBonusDetailsComponent,
 		TooltipComponent,
 		MaxSharpnessPipe,
+		NumbersArrPipe,
 		SharpnessBarComponent,
 		SetListComponent
 	],

@@ -12,7 +12,23 @@
 			<li *ngFor="let skill of skills" [style.color]="getSkillCountColor(skill)" (pointerenter)="showSkillDetails($event, skill)" (pointerleave)="clearSkillDetails()" (click)="showOnClickSkillDetails(skill)">
 				<span class="detail-icon"><i class="far fa-question-circle"></i></span>
 				<span class="name">{{skill.name}}</span>
-				<span class="value">{{skill.equippedCount}}/{{skill.totalLevelCount}}</span>
+				<span class="value">
+					<!--{{skill.equippedCount}}/{{skill.totalLevelCount}}-->
+					<span class="skill-box" style="display:inline-block;position:relative;">
+						<span *ngFor="let key of getMinCount(skill.equippedCount, skill.totalLevelCount) | numbersArr">
+							<span class="skill-bg-0">
+							</span>
+						</span>
+						<span *ngFor="let key of getMinCount(getMaxCount(skill.equippedTool1Count, skill.equippedTool2Count), skill.totalLevelCount - skill.equippedCount) | numbersArr">
+							<span class="skill-bg-1">
+							</span>
+						</span>
+						<span *ngFor="let key of (skill.totalLevelCount - skill.equippedCount - getMaxCount(skill.equippedTool1Count, skill.equippedTool2Count)) | numbersArr">
+							<span class="skill-bg-2">
+							</span>
+						</span>
+					</span>
+				</span>
 			</li>
 		</ul>
 

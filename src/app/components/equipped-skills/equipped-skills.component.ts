@@ -48,12 +48,22 @@ export class EquippedSkillsComponent implements OnInit {
 		});
 	}
 
+	getMinCount(tool1Count: number, tool2Count: number) {
+		return Math.min(tool1Count, tool2Count);
+	}
+
+	getMaxCount(tool1Count: number, tool2Count: number) {
+		return Math.max(tool1Count, tool2Count);
+	}
+
 	getSkillCountColor(skill: EquippedSkillModel): string {
 		if (skill.isSetBonus) {
 			return '#F0E68C';
 		} else if (skill.equippedCount > skill.totalLevelCount) {
-			return '#e4ff1a';
+			return '#ffa07a';
 		} else if (skill.equippedCount == skill.totalLevelCount) {
+			return '#87cefa';
+		} else if (skill.equippedCount + Math.max(skill.equippedTool1Count, skill.equippedTool2Count) >= skill.totalLevelCount) {
 			return '#86ff86';
 		}
 

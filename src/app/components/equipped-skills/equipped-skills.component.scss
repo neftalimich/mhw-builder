@@ -10,7 +10,7 @@ li {
 	padding: 4px 4px;
 	cursor: default;
 	display: grid;
-	grid-template-columns: min-content auto min-content;
+	grid-template-columns: min-content 50% min-content;
 	grid-gap: 4px;
 
 	.detail-icon {
@@ -27,5 +27,49 @@ li {
 
 	.value {
 		grid-column: 3;
+		white-space: nowrap;
 	}
+}
+
+.skill-box {
+	height: 10px !important;
+	text-align: left !important;
+}
+
+.skill-box span {
+	display: inline-block !important;
+	height: 100%;
+}
+
+.skill-bg-0 {
+	background-color: #87cefa;
+	color: #87cefa;
+	width: 12px !important;
+	border-color: #87cefa;
+	border-width: 2px;
+	border-style: solid;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.skill-bg-1 {
+	background-color: #86ff86;
+	color: #86ff86;
+	width: 12px !important;
+	border-color: #86ff86;
+	border-width: 2px;
+	border-style: solid;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.skill-bg-2 {
+	background-color: #C0C0C0;
+	color: #C0C0C0;
+	border-color: #C0C0C0;
+	border-width: 2px;
+	border-style: solid;
+	width: 12px !important;
+	margin-left: 2px;
+	margin-right: 2px;
 }

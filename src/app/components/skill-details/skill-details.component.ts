@@ -24,6 +24,13 @@ export class SkillDetailsComponent implements OnInit {
 	}
 
 	getLevelColor(level: number): string {
-		return Math.min(this.equippedSkill.equippedCount, this.equippedSkill.totalLevelCount) == level ? '#86ff86' : 'white';
+		let color = 'white';
+		if (level == Math.min(this.equippedSkill.equippedCount + Math.max(this.equippedSkill.equippedTool1Count, this.equippedSkill.equippedTool2Count), this.equippedSkill.totalLevelCount)) {
+			color = 'rgb(134, 255, 134)';
+		}
+		if (level == Math.min(this.equippedSkill.equippedCount, this.equippedSkill.totalLevelCount)) {
+			color = 'yellow';
+		}
+		return color;
 	}
 }

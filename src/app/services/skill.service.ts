@@ -92,12 +92,24 @@ export class SkillService {
 					equippedSkill.id = skill.id;
 					equippedSkill.name = skill.name;
 					equippedSkill.description = skill.description;
-					equippedSkill.equippedCount = equippedCount;
+					if (decoration.itemType == ItemType.Tool1) {
+						equippedSkill.equippedTool1Count = equippedCount;
+					} else if (decoration.itemType == ItemType.Tool2) {
+						equippedSkill.equippedTool2Count = equippedCount;
+					} else {
+						equippedSkill.equippedCount = equippedCount;
+					}
 					equippedSkill.totalLevelCount = skill.levels.length;
 					this.countSkillItemPart(equippedSkill, equippedCount, decoration.itemType);
 					equippedSkills.push(equippedSkill);
 				} else {
-					equippedSkill.equippedCount += equippedCount;
+					if (decoration.itemType == ItemType.Tool1) {
+						equippedSkill.equippedTool1Count += equippedCount;
+					} else if (decoration.itemType == ItemType.Tool2) {
+						equippedSkill.equippedTool2Count += equippedCount;
+					} else {
+						equippedSkill.equippedCount += equippedCount;
+					}
 					this.countSkillItemPart(equippedSkill, equippedCount, decoration.itemType);
 				}
 			}

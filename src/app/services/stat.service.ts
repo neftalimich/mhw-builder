@@ -98,8 +98,11 @@ export class StatService {
 			let level: SkillLevelModel;
 
 			if (equippedSkill.equippedCount) {
-				const levelIndex = equippedSkill.equippedCount <= equippedSkill.skill.levels.length
-					? equippedSkill.equippedCount - 1 : equippedSkill.skill.levels.length - 1;
+				const levelIndex =
+					Math.min(
+						equippedSkill.equippedCount + Math.max(equippedSkill.equippedTool1Count, equippedSkill.equippedTool2Count),
+						equippedSkill.skill.levels.length
+					) - 1;
 				level = equippedSkill.skill.levels[levelIndex];
 			}
 
