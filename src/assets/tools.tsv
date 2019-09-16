@@ -1,4 +1,20 @@
 id	toolType	rarity	name	duration	recharge	slots	description
-1	Mantle	10	Ghillie Mantle	120	300	3;2	Conceals you from enemy view temporarily. The effect expires if you perform an attack or take damage.
-2	Mantle	10	Glider Mantle	180	120	3	Increases jump airtime and grants the power to ride strong winds. Also makes it easier to mount monsters.
-3	Mantle	10	Vitality	120	360	4;2	TEST
+1	Mantle	10	Vitality Mantle +	120	360	4;2	Absorbs a fixed percentage of damage received from monsters; its effects diminish if the damage taken exceeds its limits. (Adds additional Health Bar.)
+2	Mantle	10	Rocksteady Mantle +	90	360	1;1	Eliminates damage reactions, prevents wind effects, protects your hearing, and grants tremor resistance. You also receive less damage from attacks.
+3	Mantle	10	Temporal Mantle +	120	300	1;1	Nullifies damage from powerful attacks by automatically evading. 6 times ¿?
+4	Mantle	10	Evasion Mantle +	90	300	2;2	Increases the invulnerability window while evading and grants a temporary attack boost for evading a monster attack at the very last moment.
+5	Mantle	10	Impact Mantle +	90	360	3;2	Adds a stun effect to most attacks or increases the potency of an existing stun effect.
+6	Mantle	10	Apothecary Mantle +	60	210	3;2	Increases the probability of triggering status buildup when attacking with weapons that induce abnormal statuses.
+7	Mantle	10	Inmunity Mantle +	120	210	3;2	Removes and nullifies all abnormal status effects for the duration of the effect.
+8	Mantle	10	Ghillie Mantle +	120	300	3;3	Conceals you from enemy view temporarily. The effect expires if you perform an attack or take damage.
+9	Mantle	10	Challenger Mantle +	180	300	3;3	Prompts monsters to target you more often and makes them easier to lure. The effect expires if you are attacked.
+10	Mantle	10	Glider Mantle +	180	120	4;4	Increases jump airtime and grants the power to ride strong winds. Also makes it easier to mount monsters.
+11	Mantle	10	Bandit Mantle +	180	210	3;1	Causes monsters to drop rare trade-in items when you attack them.
+12	Mantle	10	Fireproof Mantle +	180	210	2;2	Reduces fire damage, Other status unknown.
+13	Mantle	10	Waterproof Mantle +	180	210	2;2	Reduces water damage, Other status unknown.
+14	Mantle	10	Thunderproof Mantle +	180	210	2;2	Reduces thunder damage, Other status unknown.
+15	Mantle	10	Iceproof Mantle +	180	210	2;2	Reduces ice damage, Other status unknown.
+16	Mantle	10	Dragonproof Mantle +	180	210	2;2	Reduces dragon damage, Other status unknown.
+50	Booster	10	Health Booster +	60	150		Places a smoker that gradually restores your health.
+51	Booster	10	Affinity Booster +	60	180		Places a smoker that increases affinity.
+52	Booster	10	Cleanser Booster +	60	150		Places a smoker that removes any abnormal status effects and elemental blights.
