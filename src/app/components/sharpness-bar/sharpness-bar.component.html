@@ -3,14 +3,12 @@
 </div>
 
 <div class="text-right sharp-box" style="display:inline-block;position:relative;z-index:9;">
-	<span *ngFor="let sharp of sharpnessBar.sharps; let i = index">
-		<span *ngIf="sharp.level > 0"
-			  [ngClass]="['sharp-bg-' + sharp.colorIndex]"
-			  [ngStyle]="{'width.px': (sharp.level * sharpnessBar.widthModifier)}">
+	<span *ngFor="let colorIndex of (7 | numbersArr)">
+		<span [ngClass]="['sharp-bg-' + colorIndex]"
+			  [ngStyle]="{'width.px': (getLevel(colorIndex) * sharpnessBar.widthModifier)}">
 		</span>
-		<span *ngIf="sharpnessBar.levels[i] > sharp.level"
-			  [ngClass]="['sharp-bg-' + sharp.colorIndex]" style="height:3px !important;"
-			  [ngStyle]="{'width.px': ((sharpnessBar.levels[i] - sharp.level) * sharpnessBar.widthModifier)}">
+		<span [ngClass]="['sharp-bg-' + colorIndex]" style="height:3px !important;"
+			  [ngStyle]="{'width.px': ((sharpnessBar.levels[colorIndex]- getLevel(colorIndex)) * sharpnessBar.widthModifier)}">
 		</span>
 	</span>
 </div>

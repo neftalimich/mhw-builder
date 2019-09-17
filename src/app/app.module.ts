@@ -75,10 +75,10 @@ import { TooltipService } from './services/tooltip.service';
 		SkillDetailsComponent,
 		SetBonusDetailsComponent,
 		TooltipComponent,
+		SharpnessBarComponent,
+		SetListComponent,
 		MaxSharpnessPipe,
 		NumbersArrPipe,
-		SharpnessBarComponent,
-		SetListComponent
 	],
 	imports: [
 		BrowserModule,

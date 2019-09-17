@@ -114,4 +114,15 @@ export class SharpnessBarComponent implements OnInit {
 		this.sharpnessBar.sharpnessDataNeeded = this.dataNeeded;
 		this.sharpnessBar.color = this.dataNeeded ? 'red' : 'white';
 	}
+
+	getLevel(colorIndex: number) {
+		let sharpsFiltered = this.sharpnessBar.sharps.filter(item => {
+			return item['colorIndex'].toString().indexOf(colorIndex.toString()) != -1;
+		});
+		let level = 0
+		for (const sharp of sharpsFiltered) {
+			level += sharp.level;
+		}
+		return level;
+	}
 }
