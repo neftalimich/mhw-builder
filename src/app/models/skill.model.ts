@@ -4,5 +4,7 @@ export class SkillModel {
 	id: string;
 	name: string;
 	description: string;
+	maxLevel?: number;
+	raiseSkillId?: string;
 	levels: SkillLevelModel[];
 }

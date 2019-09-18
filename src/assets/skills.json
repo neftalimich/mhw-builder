@@ -131,6 +131,7 @@
 		"id": "maximumMight",
 		"name": "Maximum Might",
 		"description": "Increases affinity as long asstamina is kept full for a period of time.",
+		"maxLevel": 3,
 		"levels": [
 			{
 				"description": "While active, increases affinity by 10%.",
@@ -158,6 +159,7 @@
 		"id": "agitator",
 		"name": "Agitator",
 		"description": "Increases attack power and affinity when large monsters become enraged.",
+		"maxLevel": 5,
 		"levels": [
 			{
 				"description": "While active, grants attack +4 and increases affinity by 5%",
@@ -1008,10 +1010,10 @@
 		"description": "Reduces stun duration.",
 		"levels": [
 			{
-				"description": "Reduces the duration of stun by 30%."
+				"description": "Reduces the duration of stun by 60%."
 			},
 			{
-				"description": "Reduces the duration of stun by 60%."
+				"description": "Reduces the duration of stun by 90%."
 			},
 			{
 				"description": "Prevents stun."
@@ -1231,6 +1233,7 @@
 		"id": "slugger",
 		"name": "Slugger",
 		"description": "Makes it easier to stun monsters.",
+		"maxLevel": 3,
 		"levels": [
 			{
 				"description": "Stun power +20%"
@@ -1674,6 +1677,7 @@
 		"id": "freeMeal",
 		"name": "Free Meal",
 		"description": "Gives you a predetermined chance of consuming a food or drink item for free.",
+		"maxLevel": 1,
 		"levels": [
 			{
 				"description": "Activates 25% of the time."
@@ -1856,6 +1860,7 @@
 		"id": "bombardier",
 		"name": "Bombardier",
 		"description": "Increases the damage of explosive items.",
+		"maxLevel": 3,
 		"levels": [
 			{
 				"description": "Explosive power +10%"
@@ -2279,6 +2284,17 @@
 		"levels": [
 			{
 				"description": "Only those who complete the rigorous witcher training are allowed to use the powerful magic of the Igni Sign."
+			}
+		]
+	},
+	{
+		"id": "freeMealSecret",
+		"name": "Free Meal Secret",
+		"description": "",
+		"raiseSkillId": "freeMeal",
+		"levels": [
+			{
+				"description": "Raises the maximum level of Free Meal Skill"
 			}
 		]
 	}

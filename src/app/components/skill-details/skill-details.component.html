@@ -6,7 +6,10 @@
 	<ul>
 		<li *ngFor="let level of skill?.levels; let i = index" [style.color]="getLevelColor(i + 1)">
 			<div class="level">Lv {{i + 1}}</div>
-			<div class="level-description">{{level.description}}</div>
+			<div class="level-description">
+				{{level.description}}
+				<i *ngIf="i+1 > skill?.maxLevel" class="fas fa-chevron-up" style="color: plum;"></i>
+			</div>
 		</li>
 	</ul>
 	<hr />

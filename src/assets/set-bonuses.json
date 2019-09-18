@@ -220,5 +220,25 @@
 				"pieces": 4
 			}
 		]
+	},
+	{
+		"id": "anjanathDominance",
+		"name": "Anjanath Dominance",
+		"setLevels": [
+			{
+				"id": "staminaCapUp",
+				"pieces": 2
+			}
+		]
+	},
+	{
+		"id": "tigrexEssence",
+		"name": "Anjanath Dominance",
+		"setLevels": [
+			{
+				"id": "freeMealSecret",
+				"pieces": 3
+			}
+		]
 	}
 ]

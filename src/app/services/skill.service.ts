@@ -61,7 +61,7 @@ export class SkillService {
 					equippedSkill.name = skill.name;
 					equippedSkill.description = skill.description;
 					equippedSkill.equippedCount = equippedCount;
-					equippedSkill.totalLevelCount = skill.levels.length;
+					equippedSkill.totalLevelCount = skill.maxLevel ? skill.maxLevel : skill.levels.length;
 					this.countSkillItemPart(equippedSkill, equippedCount, item.itemType);
 					equippedSkills.push(equippedSkill);
 				} else {
@@ -87,6 +87,7 @@ export class SkillService {
 				const equippedCount = itemSkill.level;
 				if (!equippedSkill) {
 					const skill = this.dataService.getSkill(itemSkill.id);
+
 					equippedSkill = new EquippedSkillModel();
 					equippedSkill.skill = skill;
 					equippedSkill.id = skill.id;
@@ -99,7 +100,7 @@ export class SkillService {
 					} else {
 						equippedSkill.equippedCount = equippedCount;
 					}
-					equippedSkill.totalLevelCount = skill.levels.length;
+					equippedSkill.totalLevelCount = skill.maxLevel ? skill.maxLevel : skill.levels.length;
 					this.countSkillItemPart(equippedSkill, equippedCount, decoration.itemType);
 					equippedSkills.push(equippedSkill);
 				} else {
@@ -165,6 +166,13 @@ export class SkillService {
 						equippedSkill.equippedCount = 1;
 						equippedSkill.totalLevelCount = skill.levels.length;
 						equippedSkills.push(equippedSkill);
+
+						if (skill.raiseSkillId) {
+							const equippedSkillToRaise = _.find(equippedSkills, es => es.id == skill.raiseSkillId);
+							if (equippedSkillToRaise) {
+								equippedSkillToRaise.totalLevelCount = equippedSkillToRaise.skill.levels.length;
+							}
+						}
 					}
 				}
 			}

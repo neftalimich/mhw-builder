@@ -116,10 +116,10 @@ export class SharpnessBarComponent implements OnInit {
 	}
 
 	getLevel(colorIndex: number) {
-		let sharpsFiltered = this.sharpnessBar.sharps.filter(item => {
+		const sharpsFiltered = this.sharpnessBar.sharps.filter(item => {
 			return item['colorIndex'].toString().indexOf(colorIndex.toString()) != -1;
 		});
-		let level = 0
+		let level = 0;
 		for (const sharp of sharpsFiltered) {
 			level += sharp.level;
 		}

@@ -499,12 +499,12 @@ id	itemType	rarity	name	defense	fireResist	waterResist	thunderResist	iceResist	d
 868	Hands	9	Girros Vambraces Beta +	116;122;134	0	-3	2	0	1	freeElemAmmoUp-1;effluviaResistance-1	4	girros	0
 869	Legs	9	Girros Coil Beta +	116;122;134	0	-3	2	0	1	effluvialExpert-1	4;2	girros	0
 870	Feet	9	Girros Greaves Beta +	116;122;134	0	-3	2	0	1	paralysisAttack-2	4	girros	0
-871	Head	9	Dodogama Headgear Alpha +	120;130;140	2	0	-3	0	2	blastResistance-2;bombardier-1	3	dodogama	0
+871	Head	9	Dodogama Helm Alpha +	120;130;140	2	0	-3	0	2	blastResistance-2;bombardier-1	3	dodogama	0
 872	Chest	9	Dodogama Mail Alpha +	120;130;140	2	0	-3	0	2	blastAttack-2;artillery-1	2	dodogama	0
 873	Hands	9	Dodogama Vambraces Alpha +	120;130;140	2	0	-3	0	2	bombardier-2;blastAttack-1	2	dodogama	0
 874	Legs	9	Dodogama Coil Alpha +	120;130;140	2	0	-3	0	2	artillery-2;blastResistance-1	2;1	dodogama	0
 875	Feet	9	Dodogama Greaves Alpha +	120;130;140	2	0	-3	0	2	capacityBoost-1;blastAttack-1	2;1	dodogama	0
-876	Head	9	Dodogama Headgear Beta +	120;130;140	2	0	-3	0	2	blastResistance-2	4	dodogama	0
+876	Head	9	Dodogama Helm Beta +	120;130;140	2	0	-3	0	2	blastResistance-2	4	dodogama	0
 877	Chest	9	Dodogama Mail Beta +	120;130;140	2	0	-3	0	2	blastAttack-2	4	dodogama	0
 878	Hands	9	Dodogama Vambraces Beta +	120;130;140	2	0	-3	0	2	bombardier-1;blastAttack-1	4	dodogama	0
 879	Legs	9	Dodogama Coil Beta +	120;130;140	2	0	-3	0	2	artillery-2	4;1	dodogama	0
@@ -519,3 +519,118 @@ id	itemType	rarity	name	defense	fireResist	waterResist	thunderResist	iceResist	d
 888	Hands	9	Kulu Vambraces Alpha +	116;122;134	0	-3	0	1	0	criticalBoost-1	4	kulu	0
 889	Legs	9	Kulu Coil Alpha +	116;122;134	0	-3	0	1	0	itemProlonger-2	4;1	kulu	0
 890	Feet	9	Kulu Greaves Alpha +	116;122;134	0	-3	0	1	0	criticalEye-1;itemProlonger-1	4	kulu	0
+891	Head	9	Pukei Hat Alpha +	118;128;138	0	3	-3	0	1	survivalExpert-2;poisonResistance-1	2;2	pukei	0
+892	Chest	9	Pukei Mail Alpha +	118;128;138	0	3	-3	0	1	itemProlonger-2;peakPerformance-1	2	pukei	0
+893	Hands	9	Pukei Braces Alpha +	118;128;138	0	3	-3	0	1	peakPerformance-2;survivalExpert-1	1	pukei	0
+894	Legs	9	Pukei Coil Alpha +	118;128;138	0	3	-3	0	1	poisonAttack-2;itemProlonger-1	3	pukei	0
+895	Feet	9	Pukei Greaves Alpha +	118;128;138	0	3	-3	0	1	poisonResistance-2;poisonAttack-2	3	pukei	0
+896	Head	9	Pukei Hat Beta +	118;128;138	0	3	-3	0	1	survivalExpert-2	4;1;1	pukei	0
+897	Chest	9	Pukei Mail Beta +	118;128;138	0	3	-3	0	1	itemProlonger-1;peakPerformance-1	4	pukei	0
+898	Hands	9	Pukei Braces Beta +	118;128;138	0	3	-3	0	1	peakPerformance-1;survivalExpert-1	4	pukei	0
+899	Legs	9	Pukei Coil Beta +	118;128;138	0	3	-3	0	1	poisonAttack-1;itemProlonger-1	4;1	pukei	0
+900	Feet	9	Pukei Greaves Beta +	118;128;138	0	3	-3	0	1	poisonResistance-2	4;2	pukei	0
+901	Head	9	Pukei Lagoon Hat Alpha +	132;142;152	0	3	-2	-3	0	criticalDraw-2;itemProlonger-1	1	coral;pukei	0
+902	Chest	9	Pukei Lagoon Mail Alpha +	132;142;152	0	3	-2	-3	0	powerProlonger-1;criticalDraw-1	2	coral;pukei	0
+903	Hands	9	Pukei Lagoon Vambraces Alpha +	132;142;152	0	3	-2	-3	0	partbreaker-1;powerProlonger-1	1	coral;pukei	0
+904	Legs	9	Pukei Lagoon Coil Alpha +	132;142;152	0	3	-2	-3	0	waterAttack-2;partbreaker-1	2	coral;pukei	0
+905	Feet	9	Pukei Lagoon Greaves Alpha +	132;142;152	0	3	-2	-3	0	itemProlonger-2;waterAttack-2	1	coral;pukei	0
+906	Head	9	Pukei Lagoon Hat Beta +	132;142;152	0	3	-2	-3	0	criticalDraw-1;itemProlonger-1	4	coral;pukei	0
+907	Chest	9	Pukei Lagoon Mail Beta +	132;142;152	0	3	-2	-3	0	powerProlonger-1	4;1	coral;pukei	0
+908	Hands	9	Pukei Lagoon Vambraces Beta +	132;142;152	0	3	-2	-3	0	partbreaker-1	4;1	coral;pukei	0
+909	Legs	9	Pukei Lagoon Coil Beta +	132;142;152	0	3	-2	-3	0	waterAttack-1;partbreaker-1	4	coral;pukei	0
+910	Feet	9	Pukei Lagoon Greaves Beta +	132;142;152	0	3	-2	-3	0	itemProlonger-2	4;1	coral;pukei	0
+911	Head	9	Barroth Helm Alpha +	118;128;138	-3	-1	3	-1	0	guard-2;marathonRunner-1	2	barroth	0
+912	Chest	9	Barroth Mail Alpha +	118;128;138	-3	-1	3	-1	0	staminaThief-2;agitator-1	1;1	barroth	0
+913	Hands	9	Barroth Vambraces Alpha +	118;128;138	-3	-1	3	-1	0	marathonRunner-1;guard-1	3;1	barroth	0
+914	Legs	9	Barroth Coil Alpha +	118;128;138	-3	-1	3	-1	0	agitator-2;guard-1	1	barroth	0
+915	Feet	9	Barroth Greaves Alpha +	118;128;138	-3	-1	3	-1	0	stunResistance-2;marathonRunner-1	3;1	barroth	0
+916	Head	9	Barroth Helm Beta +	118;128;138	-3	-1	3	-1	0	guard-2	4;1	barroth	0
+917	Chest	9	Barroth Mail Beta +	118;128;138	-3	-1	3	-1	0	staminaThief-2	4;1	barroth	0
+918	Hands	9	Barroth Vambraces Beta +	118;128;138	-3	-1	3	-1	0	marathonRunner-1	4;2	barroth	0
+919	Legs	9	Barroth Coil Beta +	118;128;138	-3	-1	3	-1	0	agitator-2	4	barroth	0
+920	Feet	9	Barroth Greaves Beta +	118;128;138	-3	-1	3	-1	0	stunResistance-2	4;2;1	barroth	0
+921	Head	9	Jyura Helm Alpha +	118;128;138	-1	2	-3	0	0	latentPower-2;focus-1	1;1	jyura	0
+922	Chest	9	Jyura Mail Alpha +	118;128;139	-1	2	-3	0	0	latentPower-1;waterAttack-2	2	jyura	0
+923	Hands	9	Jyura Vambraces Alpha +	118;128;140	-1	2	-3	0	0	waterAttack-2;iceResistance-1	2;1	jyura	0
+924	Legs	9	Jyura Coil Alpha +	118;128;141	-1	2	-3	0	0	iceResistance-2;latentPower-1	3	jyura	0
+925	Feet	9	Jyura Greaves Alpha +	118;128;142	-1	2	-3	0	0	focus-2;waterAttack-1	2	jyura	0
+926	Head	9	Jyura Helm Beta +	118;128;143	-1	2	-3	0	0	latentPower-1;focus-1	4;1	jyura	0
+927	Chest	9	Jyura Mail Beta +	118;128;144	-1	2	-3	0	0	latentPower-1;waterAttack-1	4	jyura	0
+928	Hands	9	Jyura Vambraces Beta +	118;128;145	-1	2	-3	0	0	waterAttack-2	4;2	jyura	0
+929	Legs	9	Jyura Coil Beta +	118;128;146	-1	2	-3	0	0	iceResistance-2	4;1	jyura	0
+930	Feet	9	Jyura Greaves Beta +	118;128;147	-1	2	-3	0	0	focus-1;waterAttack-1	4;1	jyura	0
+931	Head	9	Beo Helm Alpha +	118;128;138	-3	0	-2	3	2	aquaticExpert-2;earplugs-1	2	beotodus	0
+932	Chest	9	Beo Mail Alpha +	118;128;138	-3	0	-2	3	2	staminaSurge-1;iceAttack-2	3	beotodus	0
+933	Hands	9	Beo Vambraces Alpha +	118;128;138	-3	0	-2	3	2	iceAttack-2;healthBoost-1	3	beotodus	0
+934	Legs	9	Beo Coil Alpha +	118;128;138	-3	0	-2	3	2	healthBoost-2;earplugs-2	2	beotodus	0
+935	Feet	9	Beo Greaves Alpha +	118;128;138	-3	0	-2	3	2	earplugs-2;iceAttack-1	2	beotodus	0
+936	Head	9	Beo Helm Beta +	118;128;138	-3	0	-2	3	2	aquaticExpert-2	4;1	beotodus
+937	Chest	9	Beo Mail Beta +	118;128;138	-3	0	-2	3	2	staminaSurge-1	4;2	beotodus
+938	Hands	9	Beo Vambraces Beta +	118;128;138	-3	0	-2	3	2	iceAttack-2	4	beotodus
+939	Legs	9	Beo Coil Beta +	118;128;138	-3	0	-2	3	2	healthBoost-2;earplugs-1	4;1	beotodus
+940	Feet	9	Beo Greaves Beta +	118;128;138	-3	0	-2	3	2	earplugs-2	4	beotodus
+941	Head	9	Kadachi Hat Alpha +	120;130;140	0	-3	3	0	0	constitution-2;evadeExtender-1	2	kadachi	0
+942	Chest	9	Kadachi Mail Alpha +	120;130;140	0	-3	3	0	0	jumpMaster-1;constitution-1	2;1	kadachi	0
+943	Hands	9	Kadachi Vambraces Alpha +	120;130;140	0	-3	3	0	0	evadeExtender-2;thunderAttack-2	2;2	kadachi	0
+944	Legs	9	Kadachi Coil Alpha +	120;130;140	0	-3	3	0	0	thunderAttack-2;thunderResistance-1	3;1	kadachi	0
+945	Feet	9	Kadachi Greaves Alpha +	120;130;140	0	-3	3	0	0	thunderResistance-2;constitution-1	3;1	kadachi	0
+946	Head	9	Kadachi Hat Beta +	120;130;140	0	-3	3	0	0	constitution-1;evadeExtender-1	4;1	kadachi	0
+947	Chest	9	Kadachi Mail Beta +	120;130;140	0	-3	3	0	0	jumpMaster-1	4;2	kadachi	0
+948	Hands	9	Kadachi Vambraces Beta +	120;130;140	0	-3	3	0	0	evadeExtender-1;thunderAttack-2	4;2	kadachi	0
+949	Legs	9	Kadachi Coil Beta +	120;130;140	0	-3	3	0	0	thunderAttack-2	4;1	kadachi	0
+950	Feet	9	Kadachi Greaves Beta +	120;130;140	0	-3	3	0	0	thunderResistance-2	4;1;1	kadachi	0
+951	Head	9	Viper Kadachi Hat Alpha +	132;142;152	1	3	-3	-2	1	evadeExtender-2;paralysisAttack-1	1	viper;kadachi	0
+952	Chest	9	Viper Kadachi Mail Alpha +	132;142;152	1	3	-3	-2	1	quickSheath-1;evadeExtender-1	1;1	viper;kadachi	0
+953	Hands	9	Viper Kadachi Braces Alpha +	132;142;152	1	3	-3	-2	1	poisonAttack-2;evadeWindow-1	2	viper;kadachi	0
+954	Legs	9	Viper Kadachi Coil Alpha +	132;142;152	1	3	-3	-2	1	constitution-1;quickSheath-1	2	viper;kadachi	0
+955	Feet	9	Viper Kadachi Greaves Alpha +	132;142;152	1	3	-3	-2	1	evadeWindow-1;constitution-1	2	viper;kadachi	0
+956	Head	9	Viper Kadachi Hat Beta +	132;142;152	1	3	-3	-2	1	evadeExtender-1;paralysisAttack-1	4	viper;kadachi	0
+957	Chest	9	Viper Kadachi Mail Beta +	132;142;152	1	3	-3	-2	1	quickSheath-1	4;1	viper;kadachi	0
+958	Hands	9	Viper Kadachi Braces Beta +	132;142;152	1	3	-3	-2	1	poisonAttack-1;evadeWindow-1	4	viper;kadachi	0
+959	Legs	9	Viper Kadachi Coil Beta +	132;142;152	1	3	-3	-2	1	constitution-1	4;1	viper;kadachi	0
+960	Feet	9	Viper Kadachi Greaves Beta +	132;142;152	1	3	-3	-2	1	evadeWindow-1	4;1	viper;kadachi	0
+961	Head	9	High Metal Helm Alpha +	128;138;148	0	-1	-2	3	0	iceResistance-2;earplugs-2	2	metal	0
+962	Chest	9	High Metal Mail Alpha +	128;138;148	0	-1	-2	3	0	earplugs-2;iceAttack-1	2	metal	0
+963	Hands	9	High Metal Braces Alpha +	128;138;148	0	-1	-2	3	0	defenseBoost-2;iceAttack-2	2;1	metal	0
+964	Legs	9	High Metal Coil Alpha +	128;138;148	0	-1	-2	3	0	capacityBoost-1;defenseBoost-2	2;2	metal	0
+965	Feet	9	High Metal Greaves Alpha +	128;138;148	0	-1	-2	3	0	heavyArtillery-2;iceResistance-1	2;2;1	metal	0
+966	Head	9	High Metal Helm Beta +	128;138;148	0	-1	-2	3	0	iceResistance-2;earplugs-1	4;1	metal	0
+967	Chest	9	High Metal Mail Beta +	128;138;148	0	-1	-2	3	0	earplugs-1;iceAttack-1	4;1	metal	0
+968	Hands	9	High Metal Braces Beta +	128;138;148	0	-1	-2	3	0	defenseBoost-2;iceAttack-1	4;1	metal	0
+969	Legs	9	High Metal Coil Beta +	128;138;148	0	-1	-2	3	0	capacityBoost-1;defenseBoost-1	4;2	metal	0
+970	Feet	9	High Metal Greaves Beta +	128;138;148	0	-1	-2	3	0	heavyArtillery-1;iceResistance-1	4;3	metal	0
+971	Head	9	Banbaro Helm Alpha +	130;140;150	-2	2	-1	3	-3	resentment-2;mushroomancer-1	2	banbaro	0
+972	Chest	9	Banbaro Mail Alpha +	130;140;150	-2	2	-1	3	-3	speedEating-1;offensiveGuard-1	3	banbaro	0
+973	Hands	9	Banbaro Vambraces Alpha +	130;140;150	-2	2	-1	3	-3	offensiveGuard-1;healthBoost-2	2	banbaro	0
+974	Legs	9	Banbaro Coil Alpha +	130;140;150	-2	2	-1	3	-3	mushroomancer-1;offensiveGuard-1	3	banbaro	0
+975	Feet	9	Banbaro Greaves Alpha +	130;140;150	-2	2	-1	3	-3	mushroomancer-1;speedEating-1	3	banbaro	0
+976	Head	9	Banbaro Helm Beta +	130;140;150	-2	2	-1	3	-3	resentment-2	4;1	banbaro
+977	Chest	9	Banbaro Mail Beta +	130;140;150	-2	2	-1	3	-3	speedEating-1	4;1	banbaro
+978	Hands	9	Banbaro Vambraces Beta +	130;140;150	-2	2	-1	3	-3	offensiveGuard-1;healthBoost-1	4	banbaro
+979	Legs	9	Banbaro Coil Beta +	130;140;150	-2	2	-1	3	-3	mushroomancer-1	4;1	banbaro
+980	Feet	9	Banbaro Greaves Beta +	130;140;150	-2	2	-1	3	-3	mushroomancer-1	4;1	banbaro
+981	Head	9	Anja Helm Alpha +	132;142;152	3	-3	-1	-1	0	fireAttack-2;fireResistance-1;anjanathDominance	3	anjanath	0
+982	Chest	9	Anja Mail Alpha +	132;142;152	3	-3	-1	-1	0	marathonRunner-2;specialAmmoBoost-1;anjanathDominance	1;1	anjanath	0
+983	Hands	9	Anja Vambraces Alpha +	132;142;152	3	-3	-1	-1	0	specialAmmoBoost-1;fireAttack-2;anjanathDominance	2	anjanath	0
+984	Legs	9	Anja Coil Alpha +	132;142;152	3	-3	-1	-1	0	fireResistance-2;artillery-1;anjanathDominance	3;1	anjanath	0
+985	Feet	9	Anja Greaves Alpha +	132;142;152	3	-3	-1	-1	0	artillery-2;marathonRunner-1;anjanathDominance	2	anjanath	0
+986	Head	9	Anja Helm Beta +	132;142;152	3	-3	-1	-1	0	fireAttack-2;anjanathDominance	4	anjanath	0
+987	Chest	9	Anja Mail Beta +	132;142;152	3	-3	-1	-1	0	marathonRunner-1;specialAmmoBoost-1;anjanathDominance	4;1	anjanath	0
+988	Hands	9	Anja Vambraces Beta +	132;142;152	3	-3	-1	-1	0	specialAmmoBoost-1;fireAttack-1;anjanathDominance	4	anjanath	0
+989	Legs	9	Anja Coil Beta +	132;142;152	3	-3	-1	-1	0	fireResistance-2;anjanathDominance	4;2	anjanath	0
+990	Feet	9	Anja Greaves Beta +	132;142;152	3	-3	-1	-1	0	artillery-2;anjanathDominance	4;1	anjanath	0
+991	Head	11	Fulgur Anja Helm Alpha +	146;156;166	-1	-1	2	-3	0	weaknessExploit-1;resuscitate-1;anjanathDominance	2;1	fulgur;anjanath	0
+992	Chest	11	Fulgur Anja Mail Alpha +	146;156;166	-1	-1	2	-3	0	flinchFree-1;stunResistance-2;anjanathDominance	3	fulgur;anjanath	0
+993	Hands	11	Fulgur Anja Vambraces Alpha +	146;156;166	-1	-1	2	-3	0	itemProlonger-2;thunderAttack-2;anjanathDominance	2	fulgur;anjanath	0
+994	Legs	11	Fulgur Anja Coil Alpha +	146;156;166	-1	-1	2	-3	0	weaknessExploit-2;itemProlonger-1;anjanathDominance	1	fulgur;anjanath	0
+995	Feet	11	Fulgur Anja Greaves Alpha +	146;156;166	-1	-1	2	-3	0	thunderAttack-2;specialAmmoBoost-1;anjanathDominance	2;1	fulgur;anjanath	0
+996	Head	11	Fulgur Anja Helm Beta +	146;156;166	-1	-1	2	-3	0	weaknessExploit-1;anjanathDominance	4;2	fulgur;anjanath	0
+997	Chest	11	Fulgur Anja Mail Beta +	146;156;166	-1	-1	2	-3	0	flinchFree-1;stunResistance-1;anjanathDominance	4	fulgur;anjanath	0
+998	Hands	11	Fulgur Anja Vambraces Beta +	146;156;166	-1	-1	2	-3	0	itemProlonger-2;anjanathDominance	4;2	fulgur;anjanath	0
+999	Legs	11	Fulgur Anja Coil Beta +	146;156;166	-1	-1	2	-3	0	weaknessExploit-1;itemProlonger-1	4;1	fulgur;anjanath	0
+1000	Feet	11	Fulgur Anja Greaves Beta +	146;156;166	-1	-1	2	-3	0	thunderAttack-2;anjanathDominance	4;1	fulgur;anjanath	0
+1001	Head	20	TEST	200;200;200	10	10	10	10	10	tigrexEssence	4;4;4	test	0
+1002	Chest	20	TEST	200;200;200	10	10	10	10	10	tigrexEssence	4;4;4	test	0
+1003	Hands	20	TEST	200;200;200	10	10	10	10	10	tigrexEssence	4;4;4	test	0
+1004	Legs	20	TEST	200;200;200	10	10	10	10	10	tigrexEssence	4;4;4	test	0
+1005	Feet	20	TEST	200;200;200	10	10	10	10	10	tigrexEssence	4;4;4	test	0
