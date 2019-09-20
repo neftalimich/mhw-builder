@@ -2216,6 +2216,16 @@
 		]
 	},
 	{
+		"id": "speedCrawler",
+		"name": "Speed Crawler",
+		"description": "Increases movement speed while crouching.",
+		"levels": [
+			{
+				"description": "Increases movement speed while crouching."
+			}
+		]
+	},
+	{
 		"id": "adrenaline",
 		"name": "Adrenaline",
 		"description": "Temporarily reduces stamina depletion when health is at 40% or lower.",
@@ -2284,6 +2294,50 @@
 		"levels": [
 			{
 				"description": "Only those who complete the rigorous witcher training are allowed to use the powerful magic of the Igni Sign."
+			}
+		]
+	},
+	{
+		"id": "bombardierSecret",
+		"name": "Bombardier Secret",
+		"description": "",
+		"raiseSkillId": "bombardier",
+		"levels": [
+			{
+				"description": "Raises the maximum level of Bombardier Skill"
+			}
+		]
+	},
+	{
+		"id": "sluggerSecret",
+		"name": "Slugger Secret",
+		"description": "",
+		"raiseSkillId": "slugger",
+		"levels": [
+			{
+				"description": "Raises the maximum level of Slugger Skill"
+			}
+		]
+	},
+	{
+		"id": "maximumMightSecret",
+		"name": "Maximum Might Secret",
+		"description": "",
+		"raiseSkillId": "maximumMight",
+		"levels": [
+			{
+				"description": "Raises the maximum level of Maximum Might Skill"
+			}
+		]
+	},
+	{
+		"id": "agitatorSecret",
+		"name": "Agitator Secret",
+		"description": "",
+		"raiseSkillId": "agitator",
+		"levels": [
+			{
+				"description": "Raises the maximum level of Agitator Skill"
 			}
 		]
 	},

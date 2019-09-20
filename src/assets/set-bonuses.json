@@ -232,12 +232,142 @@
 		]
 	},
 	{
+		"id": "rathianEssence",
+		"name": "Rathian Essence",
+		"setLevels": [
+			{
+				"id": "poisonDurationUp",
+				"pieces": 2
+			}
+		]
+	},
+	{
+		"id": "ancientDivinity",
+		"name": "Ancient Divinity",
+		"setLevels": [
+			{
+				"id": "criticalStatus",
+				"pieces": 2
+			}
+		]
+	},
+	{
+		"id": "commissionAlchemy",
+		"name": "Commission Alchemy",
+		"setLevels": [
+			{
+				"id": "bombardierSecret",
+				"pieces": 3
+			}
+		]
+	},
+	{
+		"id": "bariothHiddenArt",
+		"name": "Barioth Hidden Art",
+		"setLevels": [
+			{
+				"id": "punishingDraw",
+				"pieces": 2
+			}
+		]
+	},
+	{
+		"id": "rathalosEssence",
+		"name": "Rathalos Essence",
+		"setLevels": [
+			{
+				"id": "mindsEyeBallistics",
+				"pieces": 3
+			}
+		]
+	},
+	{
+		"id": "diablosAmbition",
+		"name": "Diablos Ambition",
+		"setLevels": [
+			{
+				"id": "sluggerSecret",
+				"pieces": 3
+			}
+		]
+	},
+	{
+		"id": "legianaAmbition",
+		"name": "Legiana Ambition",
+		"setLevels": [
+			{
+				"id": "bowChargePlus",
+				"pieces": 3
+			}
+		]
+	},
+	{
+		"id": "odogaronEssence",
+		"name": "Odogaron Essence",
+		"setLevels": [
+			{
+				"id": "protectivePolish",
+				"pieces": 3
+			}
+		]
+	},
+	{
+		"id": "uragaanAmbition",
+		"name": "Uragaan Ambition",
+		"setLevels": [
+			{
+				"id": "guardUp",
+				"pieces": 2
+			}
+		]
+	},
+	{
+		"id": "nargacugaEssence",
+		"name": "Nargacuga Essence",
+		"setLevels": [
+			{
+				"id": "razorSharpSpareShot",
+				"pieces": 3
+			}
+		]
+	},
+	{
+		"id": "glavenusEssence",
+		"name": "Glavenus Essence",
+		"setLevels": [
+			{
+				"id": "maximumMightSecret",
+				"pieces": 3
+			}
+		]
+	},
+	{
+		"id": "brachydiosEssence",
+		"name": "Brachydios Essence",
+		"setLevels": [
+			{
+				"id": "agitatorSecret",
+				"pieces": 3
+			}
+		]
+	},
+	{
 		"id": "tigrexEssence",
-		"name": "Anjanath Dominance",
+		"name": "Tigrex Essence",
 		"setLevels": [
 			{
 				"id": "freeMealSecret",
 				"pieces": 3
+			}
+		]
+	},
+	{
+		"id": "instructorsGuidance",
+		"name": "Instructor's Guidance",
+		"setLevels": [
+			{
+				"id": "captureMaster",
+				"pieces": 2
 			}
 		]
 	}
