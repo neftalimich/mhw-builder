@@ -7,14 +7,16 @@ ul {
 
 li {
 	list-style: none;
-	padding: 4px 4px;
+	padding: 2px 4px;
 	cursor: default;
 	display: grid;
-	grid-template-columns: min-content 50% min-content;
+	grid-template-columns: min-content 45% min-content;
 	grid-gap: 4px;
 
 	.detail-icon {
 		grid-column: 1;
+		display: inline-block !important;
+		position:relative;
 		margin-right: 4px;
 	}
 
@@ -83,4 +85,9 @@ li {
 	width: 12px !important;
 	margin-left: 2px;
 	margin-right: 2px;
+}
+
+.setBonus-header {
+	background-color: #444444;
+	border-radius: 2px;
 }

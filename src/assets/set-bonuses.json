@@ -370,5 +370,19 @@
 				"pieces": 2
 			}
 		]
+	},
+	{
+		"id": "velkhanaDivinity",
+		"name": "Velkhana Divinity",
+		"setLevels": [
+			{
+				"id": "criticalElement",
+				"pieces": 2
+			},
+			{
+				"id": "frostcraft",
+				"pieces": 4
+			}
+		]
 	}
 ]

@@ -20,6 +20,8 @@ export class SkillLevelModel {
 	ammoUp: number;
 	eldersealLevelBoost: number;
 
+	activeElementAttack?: number;
+	activeElementAttackPercent?: number;
 	passiveFireAttack: number;
 	passiveFireAttackPercent: number;
 	passiveWaterAttack: number;
@@ -31,6 +33,8 @@ export class SkillLevelModel {
 	passiveDragonAttack: number;
 	passiveDragonAttackPercent: number;
 
+	activeBlightAttack?: number;
+	activeAilmentAttackBuildUpPercent?: number;
 	passivePoisonAttack: number;
 	passivePoisonBuildupPercent: number;
 	passiveSleepAttack: number;

@@ -43,10 +43,10 @@
 						<span *ngFor="let def of item.defense; let i = index">
 							{{def}}
 							<span *ngIf="i < item.defense.length - 2">
-								 ➝
+								 |<!--➝-->
 							</span>
 							<span *ngIf="i == item.defense.length -2">
-								 ➟
+								 |<!--➟-->
 							</span>
 						</span>
 					</div>

@@ -536,7 +536,7 @@ export class CalculationService {
 			extra1:
 				stats.totalAilmentAttack ?
 					this.getAilmentAverage(
-						stats.totalAilmentAttack,
+						stats.totalAilmentAttack * (1 + stats.activeAilmentAttackBuildUpPercent / 100),
 						Math.max(stats.criticalStatus ? totalAffinityPotential : 0, 0),
 						1.2,
 						stats.effectiveElementalSharpnessModifier,
@@ -547,7 +547,7 @@ export class CalculationService {
 			extra2:
 				stats.totalElementAttack ?
 					this.getElementAverage(
-						stats.totalElementAttack,
+						stats.totalElementAttack + stats.activeElementAttack,
 						Math.max(stats.criticalElement ? totalAffinityPotential : 0, 0),
 						stats.critElementModifier,
 						stats.effectiveElementalSharpnessModifier,

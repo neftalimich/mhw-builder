@@ -1792,15 +1792,15 @@
 		"description": "Temporarily increases attack power after executing a perfectly-timed guard.",
 		"levels": [
 			{
-				"description": "While active increases attac power by 5%.",
+				"description": "While active increases attack power by 5%.",
 				"activeAttackPercent": 5
 			},
 			{
-				"description": "While active increases attac power by 10%.",
+				"description": "While active increases attack power by 10%.",
 				"activeAttackPercent": 10
 			},
 			{
-				"description": "While active increases attac power by 15%.",
+				"description": "While active increases attack power by 15%.",
 				"activeAttackPercent": 15
 			}
 		]
@@ -2226,6 +2226,26 @@
 		]
 	},
 	{
+		"id": "speedCrawler",
+		"name": "Speed Crawler",
+		"description": "Increases movement speed while crouching.",
+		"levels": [
+			{
+				"description": "Increases movement speed while crouching."
+			}
+		]
+	},
+	{
+		"id": "frostcraft",
+		"name": "Frostcraft",
+		"description": "An aura of frost builds when your weapon is sheathed, raising attack. Wanes each melee hit or shot fired.",
+		"levels": [
+			{
+				"description": "An aura of frost builds when your weapon is sheathed, raising attack. Wanes each melee hit or shot fired."
+			}
+		]
+	},
+	{
 		"id": "adrenaline",
 		"name": "Adrenaline",
 		"description": "Temporarily reduces stamina depletion when health is at 40% or lower.",
@@ -2236,13 +2256,27 @@
 		]
 	},
 	{
-		"id": "staminaCapUp",
-		"name": "Stamina Cap Up",
-		"description": "Increases stamina cap.",
+		"id": "coalescence",
+		"name": "Coalescence",
+		"description": "Temporarily enhances attacks after recovering from blights or abnormal statuses.",
 		"levels": [
 			{
-				"description": "Increases stamina cap.",
-				"passiveStamina": 50
+				"description": "While active, grants Attack + 12, Element attack power +30, and Status buildup +5%",
+				"activeAttack": 12,
+				"activeElementAttack": 30,
+				"activeAilmentAttackBuildUpPercent": 5
+			},
+			{
+				"description": "While active, grants Attack + 15, Element attack power +60, and Status buildup +10%",
+				"activeAttack": 15,
+				"activeElementAttack": 60,
+				"activeAilmentAttackBuildUpPercent": 10
+			},
+			{
+				"description": "While active, grants Attack + 18, Element attack power +90, and Status buildup +15%",
+				"activeAttack": 18,
+				"activeElementAttack": 90,
+				"activeAilmentAttackBuildUpPercent": 15
 			}
 		]
 	},

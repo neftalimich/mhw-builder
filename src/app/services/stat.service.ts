@@ -103,6 +103,10 @@ export class StatService {
 			}
 
 			if (level) {
+
+				if (level.activeElementAttack) { this.stats.activeElementAttack += level.activeElementAttack; }
+				if (level.activeAilmentAttackBuildUpPercent) { this.stats.activeAilmentAttackBuildUpPercent += level.activeAilmentAttackBuildUpPercent; }
+
 				if (level.passiveAttack) { this.stats.passiveAttack += level.passiveAttack; }
 				if (level.activeAttack) { this.stats.activeAttack += level.activeAttack; }
 				if (level.elementlessBoostPercent) { this.stats.elementlessBoostPercent += level.elementlessBoostPercent; }

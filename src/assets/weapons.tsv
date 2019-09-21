@@ -631,4 +631,388 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	ele
 795	SwordAndShield	8	Kjárr Slicer "Stream"	238	10	0	Ice	300						false	10;3;6;8;4;9	1	kulve;kjarr;ice	criticalElement-1		52
 796	SwordAndShield	8	Kjárr Slicer "Water"	252	15	0	Water	330						false	16;7;2;2;9;4	1	kulve;kjarr;water	criticalElement-1		52
 797	SwordAndShield	8	Witcher's Silver Sword+	266	0	0	Dragon	330					High	false	25;2;2;2;3;11	1	witcher;dragon			60
-801	Hammer	9	Kurogane III	1352	0	0				Blast	360	true		false	12;3;3;6;5;8;3	1;1	iron;blast			0
+1001	Bow	11	Dragon Perforator III	312	0	0	Thunder	240	true							2;2				0
+1002	Bow	11	Usurper's Rumble+	312	0	0	Thunder	210	false							2				0
+1003	Bow	12	Despot's Earlybolt	324	0	0	Thunder	240	false							2				0
+1004	Bow	12	Ruinous Doom	324	0	0	Dragon	240	false							1;1				0
+1005	Bow	11	Accursed Arc	348	-25	0				Blast	240	true								0
+1006	Bow	11	Tsali Flier	288	0	0				Blast	360	false				1				0
+1007	Bow	12	Lunatic Arrow	324	10	0	Dragon	300	true							2;1				0
+1008	Bow	12	Silver Wrathbow	312	20	0	Fire	330	false							1				0
+1009	Bow	11	Night Flight	300	20	0	Water	240	true							1				0
+1010	Bow	11	Mist Glacia	276	0	0	Ice	450	false							1				0
+1011	Bow	11	Hunter's Bravebow III	312	0	35	Water	390	true							3				0
+1012	Bow	11	Iceflinger	324	0	0	Ice	210	false							4				0
+1013	Bow	12	Alluring Evelia	336	0	0	Ice	240	false							4				0
+1014	Bow	11	Acidic Arrow II	336	0	0	Thunder	240	true							1;1				0
+1015	Bow	11	Deathbow Vaal Velos	300	0	0	Dragon	330	false							2;1				0
+1016	Bow	11	Hydra Planula	312	10	0	Water	240	false							1				0
+1017	Bow	12	Black Planula	324	10	0	Water	270	false							1				0
+1018	Bow	11	Fellbow Crimson Storm	300	15	0	Dragon	360	true							1				0
+1019	Bow	11	Dragonseal Aldbow II	264	0	0	Dragon	480	false							1;1				0
+1020	Bow	12	Dawning Insight	336	0	30	Dragon	270	true							1				0
+1021	Bow	11	Daora's Toxotes	300	10	0	Ice	270	false							2;1				0
+1022	Bow	11	Neo Hunter Bow	312	0	0				Blast	180	false				4				0
+1023	Bow	12	Fate's Thread	336	-20	0	Dragon	270	false											0
+1024	Bow	12	Soulfire Arch 'Blaze'	312	20	0				Blast	180	false				2;1				0
+1025	Bow	12	Soulfire Arch 'Ruin'	336	0	0				Blast	120	false				2;2				0
+1026	Bow	12	Soulfire Arch 'Styx'	312	10	0				Blast	240	false								0
+1027	ChargeBlade	11	Chrome Fortress III	972	0	0	Thunder	360	true					true	0;0;0;0;0;0;0	1;1				0
+1028	ChargeBlade	11	Usurper's Lightning+	900	0	0	Thunder	360	false					true	0;0;0;0;0;0;0	2				0
+1029	ChargeBlade	12	Despot's Thundergale	936	0	0	Thunder	390	false					true	0;0;0;0;0;0;0	2				0
+1030	ChargeBlade	12	Ruinous Devastation	1044	0	0	Dragon	210	false					true	0;0;0;0;0;0;0	1				0
+1031	ChargeBlade	12	Hellsire Blade	972	20	0	Fire	330	false					true	0;0;0;0;0;0;0	2				0
+1032	ChargeBlade	11	Elder Wolf Fang	900	30	0	Ice	360	false					true	0;0;0;0;0;0;0					0
+1033	ChargeBlade	12	Luna Eostre	1044	10	0				Poison	420	false		true	0;0;0;0;0;0;0	2;2				0
+1034	ChargeBlade	11	Wild Force III	972	0	35				Blast	330	true		true	0;0;0;0;0;0;0	3				0
+1035	ChargeBlade	11	Ice Guardian	936	0	0	Ice	210	false					true	0;0;0;0;0;0;0	4				0
+1036	ChargeBlade	12	Regal Daruq	972	0	0	Ice	240	false					true	0;0;0;0;0;0;0	4				0
+1037	ChargeBlade	11	The Melting Grasp	1044	0	0				Paralysis	270	true		true	0;0;0;0;0;0;0	4				0
+1038	ChargeBlade	11	Glavenus Bardred	1936	0	0	Fire	390	false					true	0;0;0;0;0;0;0	1				0
+1039	ChargeBlade	11	Accursed Arms	1008	-30	0				Sleep	240	true		true	0;0;0;0;0;0;0	1				0
+1040	ChargeBlade	11	Volatile Blade	936	0	0				Blast	390	false		true	0;0;0;0;0;0;0	1				0
+1041	ChargeBlade	11	Deathaxe Vaal Aspida	900	0	0	Dragon	420	false					true	0;0;0;0;0;0;0	2;2				0
+1042	ChargeBlade	11	Hydros Kardia	972	10	0	Water	330	false					true	0;0;0;0;0;0;0					0
+1043	ChargeBlade	11	Grudge	864	30	0	Dragon	330	false					true	0;0;0;0;0;0;0					0
+1044	ChargeBlade	11	Dragonseal Blade II	864	0	0	Dragon	510	false					true	0;0;0;0;0;0;0	1;1				0
+1045	ChargeBlade	12	Inescapable Karma	1008	0	30	Dragon	390	true					true	0;0;0;0;0;0;0	1;1				0
+1046	ChargeBlade	11	Magda Manus Reforged	1008	-10	45				Blast	330	false		true	0;0;0;0;0;0;0	2				0
+1047	ChargeBlade	11	Daora's Worldbearer	936	15	0	Ice	240	false					true	0;0;0;0;0;0;0	2;1				0
+1048	ChargeBlade	12	Fate's Curtain	1008	-30	0	Dragon	270	false					true	0;0;0;0;0;0;0					0
+1049	ChargeBlade	12	Soulfire Brand 'Blaze'	900	20	0				Blast	180	false		true	0;0;0;0;0;0;0	2;1				0
+1050	ChargeBlade	12	Soulfire Brand 'Ruin'	972	0	0				Blast	150	false		true	0;0;0;0;0;0;0	2;2				0
+1051	ChargeBlade	12	Soulfire Brand 'Styx'	900	10	0				Blast	240	false		true	0;0;0;0;0;0;0	3;3				0
+1050	ChargeBlade	12	Soulfire Brand 'Ruin'	972	0	0				Blast	150	false		true	0;0;0;0;0;0;0	2;2				0
+1051	ChargeBlade	12	Soulfire Brand 'Styx'	900	10	0				Blast	240	false		true	0;0;0;0;0;0;0	3;3				0
+1052	DualBlades	11	Chrome Cross III	364	0	0				Poison	360	true		true	0;0;0;0;0;0;0	1;1				0
+1053	DualBlades	11	Usurper's Fulgur+	350	0	0	Thunder	210	false					true	0;0;0;0;0;0;0	2				0
+1054	DualBlades	12	Despot's Blitz	364	0	0	Thunder	240	false					true	0;0;0;0;0;0;0	2				0
+1055	DualBlades	12	Ruinous Decimation	406	0	0	Dragon	180	false					true	0;0;0;0;0;0;0	1				0
+1056	DualBlades	11	Blazing Warhawks	336	-10	0				Blast	180	false		true	0;0;0;0;0;0;0	1				0
+1057	DualBlades	12	Bazel Bombers	364	-10	0				Blast	240	false		true	0;0;0;0;0;0;0	1				0
+1058	DualBlades	11	Mountain Blizzarioths	350	25	0	Ice	270	false					true	0;0;0;0;0;0;0					0
+1059	DualBlades	11	Accursed Chain	406	-30	0				Sleep	210	true		true	0;0;0;0;0;0;0	1				0
+1060	DualBlades	12	Wyvern Strife	378	15	0				Poison	360	false		true	0;0;0;0;0;0;0	2				0
+1061	DualBlades	11	Holy Guild Knight	350	0	0	Water	210	false					true	0;0;0;0;0;0;0	3				0
+1062	DualBlades	11	Hulking Choppers III	392	0	35				Blast	270	true		true	0;0;0;0;0;0;0	3				0
+1063	DualBlades	11	Icefeather	364	0	0	Ice	180	false					true	0;0;0;0;0;0;0	4				0
+1064	DualBlades	12	Untouched Hel	378	0	0	Ice	210	false					true	0;0;0;0;0;0;0	4				0
+1065	DualBlades	11	The Stripping Shears	406	0	0				Paralysis	210	true		true	0;0;0;0;0;0;0	4				0
+1066	DualBlades	11	Wolf Tessen	378	20	0				Poison	210	false		true	0;0;0;0;0;0;0	3				0
+1067	DualBlades	11	Smoldering Kingdoms	364	0	0	Fire	240	false					true	0;0;0;0;0;0;0	1				0
+1068	DualBlades	11	Death Row	336	20	0	Dragon	300	false					true	0;0;0;0;0;0;0					0
+1069	DualBlades	11	Enduring Surrender	336	0	0	Dragon	510	false					true	0;0;0;0;0;0;0	1;1				0
+1070	DualBlades	12	Boundless Farsight	392	0	30	Dragon	330	true					true	0;0;0;0;0;0;0	1;1				0
+1071	DualBlades	11	Wunderkirins	336	0	0	Thunder	450	false					true	0;0;0;0;0;0;0					0
+1072	DualBlades	11	Magdaros Volcancross	392	-20	0				Blast	240	false		true	0;0;0;0;0;0;0	2				0
+1073	DualBlades	11	Blizzard and Blaze	364	10	0	Ice	330	false					true	0;0;0;0;0;0;0	2				0
+1074	DualBlades	12	Consummate Pair	392	-15	0	Dragon	210	false					true	0;0;0;0;0;0;0					0
+1075	DualBlades	12	Soulfire Fangs 'Blaze'	350	20	0				Blast	120	false		true	0;0;0;0;0;0;0	2;1				0
+1076	DualBlades	12	Soulfire Fangs 'Ruin'	378	0	0				Blast	90	false		true	0;0;0;0;0;0;0	2;2				0
+1077	DualBlades	12	Soulfire Fangs 'Styx'	350	10	0				Blast	150	false		true	0;0;0;0;0;0;0	3;3				0
+1078	DualBlades	11	Downy Paradise	364	0	0				Sleep	180	false		true	0;0;0;0;0;0;0					0
+1075	DualBlades	12	Soulfire Fangs 'Blaze'	350	20	0				Blast	120	false		true	0;0;0;0;0;0;0	2;1				0
+1076	DualBlades	12	Soulfire Fangs 'Ruin'	378	0	0				Blast	90	false		true	0;0;0;0;0;0;0	2;2				0
+1077	DualBlades	12	Soulfire Fangs 'Styx'	350	10	0				Blast	150	false		true	0;0;0;0;0;0;0	3;3				0
+1078	DualBlades	11	Downy Paradise	364	0	0				Sleep	180	false		true	0;0;0;0;0;0;0					0
+1079	GreatSword	11	Chrome Deathscythe III	1248	0	0				Poison	540	true		true	0;0;0;0;0;0;0	1;1				0
+1080	GreatSword	12	Ruinous Atrocity	1344	0	0	Dragon	240	false					true	0;0;0;0;0;0;0	1				0
+1081	GreatSword	11	Severing Bolt II	1200	0	0	Thunder	510	false					true	0;0;0;0;0;0;0	2;1				0
+1082	GreatSword	11	Paladire	1200	35	0	Ice	540	false					true	0;0;0;0;0;0;0					0
+1083	GreatSword	12	Rathalos Gleamsword	1296	25	0	Fire	390	false					true	0;0;0;0;0;0;0	2				0
+1084	GreatSword	11	Ogre's Jaw III	1344	0	35	Ice	480	true					true	0;0;0;0;0;0;0	3				0
+1085	GreatSword	11	Icewing	1248	0	0	Ice	330	false					true	0;0;0;0;0;0;0	4				0
+1086	GreatSword	12	Winged Seraphyd	1296	0	0	Ice	450	false					true	0;0;0;0;0;0;0	4				0
+1087	GreatSword	11	Tigrex Great Sword	1344	-20	0				Blast	450	true		true	0;0;0;0;0;0;0					0
+1088	GreatSword	11	Accursed Blade	1344	-30	0				Sleep	330	true		true	0;0;0;0;0;0;0					0
+1089	GreatSword	12	Wildbite	1392	-30	0				Sleep	390	true		true	0;0;0;0;0;0;0					0
+1090	GreatSword	11	Monstrous Madness	1104	0	0	Dragon	420	false					true	0;0;0;0;0;0;0	2;2				0
+1091	GreatSword	12	Don Monstro	1200	0	0	Dragon	570	false					true	0;0;0;0;0;0;0	2;2				0
+1092	GreatSword	11	Fulguration's Edge	1248	25	0	Thunder	360	false					true	0;0;0;0;0;0;0					0
+1093	GreatSword	11	Acid Shredder II	1392	0	0				Paralysis	420	true		true	0;0;0;0;0;0;0	4				0
+1094	GreatSword	11	Brach Attack	1200	0	0				Blast	570	false		true	0;0;0;0;0;0;0	1				0
+1095	GreatSword	11	Dragonseal Sword II	1152	0	0	Dragon	720	false					true	0;0;0;0;0;0;0	1;1				0
+1096	GreatSword	12	Immovable Dharma	1344	0	30	Dragon	540	true					true	0;0;0;0;0;0;0	1;1				0
+1097	GreatSword	11	Emperor Thundersword	1152	0	0	Thunder	720	false					true	0;0;0;0;0;0;0					0
+1098	GreatSword	11	Magdaros Volcanblade	1344	-20	45				Blast	580	false		true	0;0;0;0;0;0;0	2				0
+1099	GreatSword	11	Daora's Tugbril Beg	1248	15	0	Ice	330	false					true	0;0;0;0;0;0;0	2				0
+1100	GreatSword	11	Ultra Wyvern Jawblade	1392	0	40				Blast	360	true		true	0;0;0;0;0;0;0	4				0
+1101	GreatSword	12	Consummate Blade	1344	-30	0	Dragon	390	false					true	0;0;0;0;0;0;0					0
+1102	GreatSword	12	Soulfire Edge 'Blaze'	1200	25	0				Blast	390	false		true	0;0;0;0;0;0;0	2;1				0
+1103	GreatSword	12	Soulfire Edge 'Ruin'	1296	0	0				Blast	330	false		true	0;0;0;0;0;0;0	2;2				0
+1104	GreatSword	12	Soulfire Edge 'Styx'	1200	15	0				Blast	480	false		true	0;0;0;0;0;0;0	3;3				0
+1105	GreatSword	11	Xiphias Gladius	1152	0	0	Ice	690	false					true	0;0;0;0;0;0;0	1				0
+1106	Gunlance	12	Ruinous Eradication	667	0	0	Dragon	210	false					true	0;0;0;0;0;0;0	2				0
+1107	Gunlance	11	Chrome Halberd III	598	0	0				Blast	360	true		true	0;0;0;0;0;0;0	1;1				0
+1108	Gunlance	11	Blackwing Gunlance II	621	25	0				Poison	240	false		true	0;0;0;0;0;0;0	3				0
+1109	Gunlance	11	Crimson Hornet	598	15	0				Paralysis	330	false		true	0;0;0;0;0;0;0	1				0
+1110	Gunlance	12	Chariot Gun	621	20	0	Fire	330	false					true	0;0;0;0;0;0;0	2				0
+1111	Gunlance	12	Queen's Panoply	667	15	0				Poison	450	false		true	0;0;0;0;0;0;0	1				0
+1112	Gunlance	11	Ambermarch	575	30	0	Ice	330	false					true	0;0;0;0;0;0;0					0
+1113	Gunlance	11	Dragonpike 'Quake' III	644	0	35	Thunder	360	true					true	0;0;0;0;0;0;0	3				0
+1114	Gunlance	11	Eisritter	598	0	0	Ice	240	false					true	0;0;0;0;0;0;0	4				0
+1115	Gunlance	12	Vorpal Icefort	621	0	0	Ice	270	false					true	0;0;0;0;0;0;0	4				0
+1116	Gunlance	11	Bazelpride	598	-10	0				Blast	270	false		true	0;0;0;0;0;0;0	1;1				0
+1117	Gunlance	11	Tigrex Gunlance	644	-15	0				Blast	360	true		true	0;0;0;0;0;0;0					0
+1118	Gunlance	11	Accursed Blast	644	-30	0				Sleep	240	true		true	0;0;0;0;0;0;0					0
+1119	Gunlance	12	Flamebite	667	-30	0				Sleep	270	true		true	0;0;0;0;0;0;0					0
+1120	Gunlance	11	Deathlance Vaal Spysa	575	0	0	Dragon	510	false					true	0;0;0;0;0;0;0	2;2				0
+1121	Gunlance	11	Acid Buster II	667	0	0				Paralysis	330	true		true	0;0;0;0;0;0;0	4				0
+1122	Gunlance	11	Usurper's Roar+	575	0	0	Thunder	300	false					true	0;0;0;0;0;0;0	2				0
+1123	Gunlance	12	Despot's Phlogiston	598	0	0	Thunder	450	false					true	0;0;0;0;0;0;0	2				0
+1124	Gunlance	11	Dragonseal Gunlance II	552	0	0	Dragon	660	false					true	0;0;0;0;0;0;0	1;1				0
+1125	Gunlance	12	Broken Silence	644	0	30	Dragon	510	true					true	0;0;0;0;0;0;0	1;1				0
+1126	Gunlance	11	Magda Lahat Reforged	644	-10	45				Blast	450	false		true	0;0;0;0;0;0;0	2				0
+1127	Gunlance	11	Hydra Ephyra	621	15	0	Water	330	false					true	0;0;0;0;0;0;0					0
+1128	Gunlance	12	Black Ephyra	644	15	0	Water	390	false					true	0;0;0;0;0;0;0					0
+1129	Gunlance	11	Daora's Tempest	598	10	0	Ice	270	false					true	0;0;0;0;0;0;0	3				0
+1130	Gunlance	12	Consummate Gunlance	644	-30	0	Dragon	390	false					true	0;0;0;0;0;0;0					0
+1131	Gunlance	12	Soulfire Talon 'Blaze'	575	20	0				Blast	270	false		true	0;0;0;0;0;0;0	2;1				0
+1132	Gunlance	12	Soulfire Talon 'Ruin'	621	0	0				Blast	210	false		true	0;0;0;0;0;0;0	2;2				0
+1133	Gunlance	12	Soulfire Talon 'Styx'	575	10	0				Blast	330	false		true	0;0;0;0;0;0;0	3;3				0
+1134	Gunlance	11	Gajalaka Firepike	621	0	30	Dragon	450	true					true	0;0;0;0;0;0;0	4				0
+1135	Hammer	11	Kurogane III	1352	0	0				Blast	360	true		true	12;3;3;6;5;8;3	1;1				0
+1136	Hammer	12	Leonid Starcrusher	1404	20	0	Fire	420	false					true	0;0;0;0;0;0;0	2				0
+1137	Hammer	12	Ruinous Obliteration	1508	0	0	Dragon	180	false					true	0;0;0;0;0;0;0	1				0
+1138	Hammer	11	Pykrete Punisher	1300	0	0	Ice	510	false					true	0;0;0;0;0;0;0	3				0
+1139	Hammer	11	Aqua Florescence	1300	0	0	Water	600	false					true	0;0;0;0;0;0;0	2;1				0
+1140	Hammer	11	Night Eternal	1248	20	0				Poison	450	true		true	0;0;0;0;0;0;0					0
+1141	Hammer	11	Usurper's Thunder+	1300	0	0	Thunder	420	false					true	0;0;0;0;0;0;0	2				0
+1142	Hammer	12	Despot's Crackle	1352	0	0	Thunder	450	false					true	0;0;0;0;0;0;0	2				0
+1143	Hammer	11	Earth Ender III	1456	0	35	Thunder	450	true					true	0;0;0;0;0;0;0	3				0
+1144	Hammer	11	Iceshaker	1352	0	0	Ice	300	false					true	0;0;0;0;0;0;0	4				0
+1145	Hammer	12	Victorious Northlein	1404	0	0	Ice	330	false					true	0;0;0;0;0;0;0	4				0
+1146	Hammer	11	Pandemonium's Wrath	1248	0	0	Dragon	1420	false					true	0;0;0;0;0;0;0	2;2				0
+1147	Hammer	12	Pandemonium Unleashed	1352	0	0	Dragon	510	false					true	0;0;0;0;0;0;0	2;2				0
+1148	Hammer	11	Tigrex Hammer	1456	-20	0				Blast	330	true		true	0;0;0;0;0;0;0					0
+1149	Hammer	11	Glavenus's Uruga	1352	0	0	Fire	330	false					true	0;0;0;0;0;0;0	1				0
+1150	Hammer	11	Blackwing Deathblow II	1404	25	0				Poison	240	false		true	0;0;0;0;0;0;0	3				0
+1151	Hammer	11	The Grinding Mallet	1508	0	0				Paralysis	330	true		true	0;0;0;0;0;0;0	4				0
+1152	Hammer	11	Brachy Tailhammer	1352	0	0				Blast	510	false		true	0;0;0;0;0;0;0	1				0
+1153	Hammer	11	Dragonseal Hammer II	1248	0	0	Dragon	660	false					true	0;0;0;0;0;0;0	1;1				0
+1154	Hammer	12	Dawning Tranquility	1456	0	30	Dragon	480	true					true	0;0;0;0;0;0;0	1;1				0
+1155	Hammer	11	Magda Floga Reforged	1456	-20	45				Blast	450	false		true	0;0;0;0;0;0;0	2				0
+1156	Hammer	11	Daora's Hyperborea	1352	15	0	Ice	210	false					true	0;0;0;0;0;0;0	2				0
+1157	Hammer	11	Binding Coffin	1352	0	40				Paralysis	240	false		true	0;0;0;0;0;0;0	4				0
+1158	Hammer	12	Consummate Hammer	1456	-30	0	Dragon	360	false					true	0;0;0;0;0;0;0					0
+1159	Hammer	12	Soulfire Heel 'Blaze'	1300	20	0				Blast	270	false		true	0;0;0;0;0;0;0	2;1				0
+1160	Hammer	12	Soulfire Heel 'Ruin'	1404	0	0				Blast	210	false		true	0;0;0;0;0;0;0	2;2				0
+1161	Hammer	12	Soulfire Heel 'Styx'	1300	10	0				Blast	330	false		true	0;0;0;0;0;0;0	3;3				0
+1162	Hammer	11	Bristly Inferno	1352	0	0				Poison	360	false		true	0;0;0;0;0;0;0					0
+1163	HeavyBowgun	11	Fatal Assault III	420	0	0								true	0;0;0;0;0;0;0	1;1				0
+1164	HeavyBowgun	12	Ruinous Destruction	465	0	0								true	0;0;0;0;0;0;0	1				0
+1165	HeavyBowgun	11	Baleful Night	390	20	0								true	0;0;0;0;0;0;0					0
+1166	HeavyBowgun	11	Mightning+	405	0	0								true	0;0;0;0;0;0;0	2				0
+1167	HeavyBowgun	12	Loyal Thunder	420	0	0								true	0;0;0;0;0;0;0	2				0
+1168	HeavyBowgun	11	Franz Glacia	405	0	0								true	0;0;0;0;0;0;0	1				0
+1169	HeavyBowgun	11	Accursed Bellow	450	-20	0								true	0;0;0;0;0;0;0					0
+1170	HeavyBowgun	11	Fulguration's Roar	435	-10	0								true	0;0;0;0;0;0;0	1				0
+1171	HeavyBowgun	11	Cartilage Blaster III	420	0	30								true	0;0;0;0;0;0;0	3				0
+1172	HeavyBowgun	11	Iceroar	420	0	0								true	0;0;0;0;0;0;0	4				0
+1173	HeavyBowgun	12	Righteous Varka	435	0	0								true	0;0;0;0;0;0;0	4				0
+1174	HeavyBowgun	11	Atom Cannon	405	0	0								true	0;0;0;0;0;0;0	1				0
+1175	HeavyBowgun	11	The Guttering Gasp	435	0	0								true	0;0;0;0;0;0;0	4				0
+1176	HeavyBowgun	11	Dragonseal Cannon II	405	0	0								true	0;0;0;0;0;0;0	1;1				0
+1177	HeavyBowgun	12	Solemn Reflection	450	0	0								true	0;0;0;0;0;0;0	1;1				0
+1178	HeavyBowgun	11	Shining Quiver	405	0	0								true	0;0;0;0;0;0;0	1				0
+1179	HeavyBowgun	11	Magda Gemitus Vulcan	450	-20	50								true	0;0;0;0;0;0;0	2				0
+1180	HeavyBowgun	11	Hydros Laimos	420	10	0								true	0;0;0;0;0;0;0	1;1				0
+1181	HeavyBowgun	11	Teostra's Firestorm	420	0	0								true	0;0;0;0;0;0;0					0
+1182	HeavyBowgun	12	Endless Famine	450	-25	0								true	0;0;0;0;0;0;0					0
+1183	HeavyBowgun	12	Soulfire Roar 'Blaze'	420	20	0								true	0;0;0;0;0;0;0	2;1				0
+1184	HeavyBowgun	12	Soulfire Roar 'Ruin'	435	0	0								true	0;0;0;0;0;0;0	2;2				0
+1185	HeavyBowgun	12	Soulfire Roar 'Styx'	420	10	0								true	0;0;0;0;0;0;0	3;3				0
+1186	HuntingHorn	11	Sforzando III	1092	0	0				Paralysis	360	true		true	0;0;0;0;0;0;0	1;1				0
+1187	HuntingHorn	11	Wolf Shamisen	1134	25	0				Poison	240	false		true	0;0;0;0;0;0;0	3				0
+1188	HuntingHorn	12	Ruinous Desolation	1218	0	0	Dragon	210	false					true	0;0;0;0;0;0;0	1				0
+1189	HuntingHorn	11	Usurper's Growl+	1050	0	0	Thunder	330	false					true	0;0;0;0;0;0;0	2				0
+1190	HuntingHorn	12	Despot's Thunderclap	1092	0	0	Thunder	450	false					true	0;0;0;0;0;0;0	2				0
+1191	HuntingHorn	11	Tigrex Horn	1176	-20	0				Blast	330	true		true	0;0;0;0;0;0;0					0
+1192	HuntingHorn	11	Accursed Wail	1176	-30	0				Sleep	210	true		true	0;0;0;0;0;0;0					0
+1193	HuntingHorn	12	Ogrebite	1218	-30	0				Sleep	270	true		true	0;0;0;0;0;0;0					0
+1194	HuntingHorn	12	Gold Chordmaker	1134	25	0	Fire	420	false					true	0;0;0;0;0;0;0	2				0
+1195	HuntingHorn	11	Cry in the Night	1008	20	0				Poison	600	true		true	0;0;0;0;0;0;0					0
+1196	HuntingHorn	11	Lilim Glacia	1008	0	0	Ice	600	false					true	0;0;0;0;0;0;0					0
+1197	HuntingHorn	11	Mad Bone Horn III	1176	0	35	Ice	330	true					true	0;0;0;0;0;0;0	3				0
+1198	HuntingHorn	11	Icespiel	1092	0	0	Ice	240	false					true	0;0;0;0;0;0;0	4				0
+1199	HuntingHorn	12	Sonorous Eisfyl	1134	0	0	Ice	270	false					true	0;0;0;0;0;0;0	4				0
+1200	HuntingHorn	11	Glavenus Horn	1092	0	0	Fire	330	false					true	0;0;0;0;0;0;0	1				0
+1201	HuntingHorn	11	The Rasping Ballad	1218	0	0				Paralysis	330	true		true	0;0;0;0;0;0;0	4				0
+1202	HuntingHorn	11	Rooksearer Drum	1008	-10	0				Blast	240	false		true	0;0;0;0;0;0;0	2;2				0
+1203	HuntingHorn	12	Bazel Valdi Rooksearer	1092	-10	0				Blast	300	false		true	0;0;0;0;0;0;0	2;2				0
+1204	HuntingHorn	11	Queen's Flute II	1092	0	0				Paralysis	420	false		true	0;0;0;0;0;0;0	4;1				0
+1205	HuntingHorn	11	Dragonseal Aldhorn II	1008	0	0	Dragon	720	false					true	0;0;0;0;0;0;0	1;1				0
+1206	HuntingHorn	12	Austere Paradise	1176	0	30	Dragon	510	true					true	0;0;0;0;0;0;0	1;1				0
+1207	HuntingHorn	11	Thunderwail Feyhorn	1008	0	0	Thunder	660	false					true	0;0;0;0;0;0;0					0
+1208	HuntingHorn	11	Hydros Horn	1134	10	0	Water	450	false					true	0;0;0;0;0;0;0	1				0
+1209	HuntingHorn	11	Teostra's Musica	1092	10	0				Blast	420	false		true	0;0;0;0;0;0;0					0
+1210	HuntingHorn	12	Fate's Dirge	1176	-30	0	Dragon	330	false					true	0;0;0;0;0;0;0					0
+1211	HuntingHorn	12	Soulfire Chorus 'Blaze'	1050	20	0				Blast	270	false		true	0;0;0;0;0;0;0	2;1				0
+1212	HuntingHorn	12	Soulfire Chorus 'Ruin'	1134	0	0				Blast	210	false		true	0;0;0;0;0;0;0	2;2				0
+1213	HuntingHorn	12	Soulfire Chorus 'Styx'	1050	10	0				Blast	330	false		true	0;0;0;0;0;0;0	3;3				0
+1214	InsectGlaive	11	Chrome Trident III	806	0	0				Blast	360	true		true	0;0;0;0;0;0;0	1;1				0
+1215	InsectGlaive	11	Royal Bolt Scepter+	775	0	0	Thunder	270	false					true	0;0;0;0;0;0;0	2				0
+1216	InsectGlaive	12	Despot's Twinbolt	806	0	0	Thunder	360	false					true	0;0;0;0;0;0;0	2				0
+1217	InsectGlaive	12	Ruinous Catastrophe	899	0	0	Dragon	180	false					true	0;0;0;0;0;0;0	1				0
+1218	InsectGlaive	12	Blossomajesty	837	20	0	Fire	270	false					true	0;0;0;0;0;0;0	2				0
+1219	InsectGlaive	11	Fenrir Storm	775	25	0	Ice	360	false					true	0;0;0;0;0;0;0					0
+1220	InsectGlaive	11	Glavenus Helldait	806	0	0	Fire	360	false					true	0;0;0;0;0;0;0	1				0
+1221	InsectGlaive	11	Aerial Magus III	837	0	35				Paralysis	300	true		true	0;0;0;0;0;0;0	3				0
+1222	InsectGlaive	11	Icescepter	806	0	0	Ice	210	false					true	0;0;0;0;0;0;0	4				0
+1223	InsectGlaive	12	Wise Fylos	837	0	0	Ice	240	false					true	0;0;0;0;0;0;0	4				0
+1224	InsectGlaive	11	Deathstaff Vaal Entoma	775	0	0	Dragon	420	false					true	0;0;0;0;0;0;0	2;2				0
+1225	InsectGlaive	11	Hydros Arcana	837	10	0	Water	330	false					true	0;0;0;0;0;0;0	1				0
+1226	InsectGlaive	11	Fulguration's Tower	806	15	0	Thunder	270	false					true	0;0;0;0;0;0;0					0
+1227	InsectGlaive	11	Accursed Rod	868	-30	0				Sleep	210	true		true	0;0;0;0;0;0;0	1				0
+1228	InsectGlaive	11	The Trickling Spiral	899	0	0				Paralysis	210	true		true	0;0;0;0;0;0;0	4				0
+1229	InsectGlaive	11	Deadline	744	25	0	Dragon	300	false					true	0;0;0;0;0;0;0					0
+1230	InsectGlaive	11	Dragonseal Aldstaff II	744	0	0	Dragon	480	false					true	0;0;0;0;0;0;0	1;1				0
+1231	InsectGlaive	12	Infinite Wisdom	868	0	30	Dragon	390	true					true	0;0;0;0;0;0;0	1;1				0
+1232	InsectGlaive	11	Celestial Spire	744	0	0	Thunder	450	false					true	0;0;0;0;0;0;0					0
+1233	InsectGlaive	11	Daora's Samudra	806	10	0	Ice	240	false					true	0;0;0;0;0;0;0	2				0
+1234	InsectGlaive	12	Fate's Wing	868	-25	0	Dragon	270	false					true	0;0;0;0;0;0;0					0
+1235	InsectGlaive	12	Soulfire Reach 'Blaze'	775	20	0				Blast	180	false		true	0;0;0;0;0;0;0	2;1				0
+1236	InsectGlaive	12	Soulfire Reach 'Ruin'	837	0	0				Blast	150	false		true	0;0;0;0;0;0;0	2;2				0
+1237	InsectGlaive	12	Soulfire Reach 'Styx'	775	10	0				Blast	240	false		true	0;0;0;0;0;0;0	3;3				0
+1238	Lance	11	Chrome Drill III	598	0	0				Paralysis	360	true		true	0;0;0;0;0;0;0	1;1				0
+1239	Lance	11	Incessant Wolf	621	25	0				Poison	240	false		true	0;0;0;0;0;0;0	3				0
+1240	Lance	12	Ruinous Perdition	667	0	0	Dragon	180	false					true	0;0;0;0;0;0;0	1				0
+1241	Lance	11	Sabertooth	575	30	0	Ice	420	false					true	0;0;0;0;0;0;0					0
+1242	Lance	11	Thunderpierce II	575	0	0	Thunder	420	false					true	0;0;0;0;0;0;0	2;1				0
+1243	Lance	12	Silver Prominence	621	20	0	Fire	390	false					true	0;0;0;0;0;0;0	2				0
+1244	Lance	11	Grand Halberd III	644	0	35				Poison	330	true		true	0;0;0;0;0;0;0	3				0
+1245	Lance	11	Iceborer	598	0	0	Ice	330	false					true	0;0;0;0;0;0;0	4				0
+1246	Lance	12	Knightly Ectis	621	0	0	Ice	360	false					true	0;0;0;0;0;0;0	4				0
+1247	Lance	11	Love's Tragedy	552	0	0	Dragon	360	false					true	0;0;0;0;0;0;0	2;2				0
+1248	Lance	12	Love's End	575	0	0	Dragon	480	false					true	0;0;0;0;0;0;0	2;2				0
+1249	Lance	11	Glavenus Granat	598	0	0	Fire	480	false					true	0;0;0;0;0;0;0	1				0
+1250	Lance	11	Hydros Ullr	621	10	0	Water	390	false					true	0;0;0;0;0;0;0					0
+1251	Lance	11	Tigrex Lance	644	-20	0				Blast	330	true		true	0;0;0;0;0;0;0					0
+1252	Lance	11	Accursed Stinger	644	-30	0				Sleep	300	true		true	0;0;0;0;0;0;0					0
+1253	Lance	12	Backbite	667	-30	0				Sleep	330	true		true	0;0;0;0;0;0;0					0
+1254	Lance	11	The Solvent Spindle	667	0	0				Paralysis	330	true		true	0;0;0;0;0;0;0	4				0
+1255	Lance	11	Dragonseal Aldspear II	552	0	0	Dragon	630	false					true	0;0;0;0;0;0;0	1;1				0
+1256	Lance	12	Unblinking Gatekeeper	644	0	30	Dragon	510	true					true	0;0;0;0;0;0;0	1;1				0
+1257	Lance	11	Blasting Siegespear	575	-10	0				Blast	270	false		true	0;0;0;0;0;0;0	1;1				0
+1258	Lance	12	Bazel Rocket Rooksearer	598	-10	0				Blast	330	false		true	0;0;0;0;0;0;0	1;1				0
+1259	Lance	11	Naar Thunderlance	529	10	0	Thunder	600	false					true	0;0;0;0;0;0;0					0
+1260	Lance	11	Daora's Regulus	598	10	0	Ice	270	false					true	0;0;0;0;0;0;0	2				0
+1261	Lance	11	Lost Babel	598	0	40	Fire	360	true					true	0;0;0;0;0;0;0	4				0
+1262	Lance	12	Fate's Spindle	644	-30	0	Dragon	360	false					true	0;0;0;0;0;0;0					0
+1263	Lance	12	Soulfire Spike 'Blaze'	575	20	0				Blast	270	false		true	0;0;0;0;0;0;0	2;1				0
+1264	Lance	12	Soulfire Spike 'Ruin'	621	0	0				Blast	210	false		true	0;0;0;0;0;0;0	2;2				0
+1265	Lance	12	Soulfire Spike 'Styx'	575	10	0				Blast	330	false		true	0;0;0;0;0;0;0	3;3				0
+1266	Lance	11	Shining Star Lance	598	0	0				Paralysis	300	false		true	0;0;0;0;0;0;0					0
+1267	Lance	11	Sweeping Gale Lance	598	0	0				Sleep	270	false		true	0;0;0;0;0;0;0					0
+1268	LightBowgun	11	Crossblitzer III	338	0	0								true	0;0;0;0;0;0;0	1;1				0
+1269	LightBowgun	11	Blackwing Bowgun II	351	25	0								true	0;0;0;0;0;0;0	3				0
+1270	LightBowgun	12	Ruinous Cataclysm	351	0	0								true	0;0;0;0;0;0;0	1;1				0
+1271	LightBowgun	11	Acid Blitz II	325	0	0								true	0;0;0;0;0;0;0	1;1				0
+1272	LightBowgun	11	Bazelcore	364	-10	0								true	0;0;0;0;0;0;0	2;1				0
+1273	LightBowgun	11	Accursed Fire	351	-20	0								true	0;0;0;0;0;0;0	2;1				0
+1274	LightBowgun	12	Argent Ray	351	20	0								true	0;0;0;0;0;0;0	1				0
+1275	LightBowgun	11	Usurper's Crime+	325	0	0								true	0;0;0;0;0;0;0	2				0
+1276	LightBowgun	12	Despot's Wildfire	338	0	0								true	0;0;0;0;0;0;0	2				0
+1277	LightBowgun	11	Blizzard Volley	312	30	0								true	0;0;0;0;0;0;0					0
+1278	LightBowgun	11	Breakshot III	338	0	30								true	0;0;0;0;0;0;0	3				0
+1279	LightBowgun	11	Icehawk	338	0	0								true	0;0;0;0;0;0;0	4				0
+1280	LightBowgun	12	Graceful Almaria	351	0	0								true	0;0;0;0;0;0;0	4				0
+1281	LightBowgun	11	Gulgoleth's Despair	325	0	0								true	0;0;0;0;0;0;0	2;2				0
+1282	LightBowgun	12	Gulgoleth's Ruin	338	0	0								true	0;0;0;0;0;0;0	2;2				0
+1283	LightBowgun	11	Ghost	312	35	0								true	0;0;0;0;0;0;0	1				0
+1284	LightBowgun	11	Dragonseal Bowgun II	325	0	0								true	0;0;0;0;0;0;0	1;1				0
+1285	LightBowgun	12	Fading Blossom	377	0	0								true	0;0;0;0;0;0;0	1;1				0
+1286	LightBowgun	11	God's Isle	312	0	0								true	0;0;0;0;0;0;0	1				0
+1287	LightBowgun	11	Mythical Three-Evils	325	0	0								true	0;0;0;0;0;0;0					0
+1288	LightBowgun	11	Hydra Actinula	338	15	0								true	0;0;0;0;0;0;0					0
+1289	LightBowgun	12	Black Actinula	364	15	0								true	0;0;0;0;0;0;0					0
+1290	LightBowgun	11	Daora's Yellowjacket	338	10	0								true	0;0;0;0;0;0;0	2				0
+1291	LightBowgun	11	Neo Cross Bowgun	338	0	40								true	0;0;0;0;0;0;0	4				0
+1292	LightBowgun	12	Diregun 'Dementia'	364	-25	0								true	0;0;0;0;0;0;0					0
+1293	LightBowgun	12	Soulfire Rasp 'Blaze'	338	20	0								true	0;0;0;0;0;0;0	2;1				0
+1294	LightBowgun	12	Soulfire Rasp 'Ruin'	351	0	0								true	0;0;0;0;0;0;0	2;2				0
+1295	LightBowgun	12	Soulfire Rasp 'Styx'	338	10	0								true	0;0;0;0;0;0;0	3;3				0
+1296	LongSword	11	Iron Eschaton III	858	0	0	Water	270	true					true	0;0;0;0;0;0;0	1;1				0
+1297	LongSword	11	Daito Wolf	891	25	0				Poison	240	false		true	0;0;0;0;0;0;0	3				0
+1298	LongSword	11	Usurper Boltslicer+	825	0	0	Thunder	300	false					true	0;0;0;0;0;0;0	2				0
+1299	LongSword	12	Despot's Boltbreaker	858	0	0	Thunder	450	false					true	0;0;0;0;0;0;0	2				0
+1300	LongSword	12	Ruinous Extermination	957	0	0	Dragon	180	false					true	0;0;0;0;0;0;0	1				0
+1301	LongSword	11	Deepest Night	792	20	0				Poison	540	true		true	0;0;0;0;0;0;0					0
+1302	LongSword	12	Wyvern Blade 'Luna'	957	10	0				Poison	1420	false		true	0;0;0;0;0;0;0	1				0
+1303	LongSword	12	Wyvern Blade 'Pale'	891	20	0	Fire	420	false					true	0;0;0;0;0;0;0	2				0
+1304	LongSword	11	Grand Khopesh III	924	0	35				Sleep	300	true		true	0;0;0;0;0;0;0	3				0
+1305	LongSword	11	Icebrink	858	0	0	Ice	240	false					true	0;0;0;0;0;0;0	4				0
+1306	LongSword	12	Reverent Elusarca	891	0	0	Ice	270	false					true	0;0;0;0;0;0;0	4				0
+1307	LongSword	11	Tigrine Need	924	-20	0				Blast	330	true		true	0;0;0;0;0;0;0					0
+1308	LongSword	11	Tigerfang	924	-30	0				Sleep	240	true		true	0;0;0;0;0;0;0					0
+1309	LongSword	12	Ravenbite	957	-30	0				Sleep	390	true		true	0;0;0;0;0;0;0					0
+1310	LongSword	11	Rooksearer Long Sword	792	-10	0				Blast	240	false		true	0;0;0;0;0;0;0	1;1				0
+1311	LongSword	12	Bazel Prozio Rooksearer	858	-10	0				Blast	300	false		true	0;0;0;0;0;0;0	1;1				0
+1312	LongSword	11	Deathblade Vaal Grosser	825	0	0	Dragon	480	false					true	0;0;0;0;0;0;0	3;2				0
+1313	LongSword	11	Acid Scimitar II	957	0	0				Paralysis	390	true		true	0;0;0;0;0;0;0	4				0
+1314	LongSword	11	Apsara Glacia	792	0	0	Ice	540	false					true	0;0;0;0;0;0;0					0
+1315	LongSword	11	Dragonseal Aldblade II	792	0	0	Dragon	630	false					true	0;0;0;0;0;0;0	1;1				0
+1316	LongSword	12	Radiant Flow	924	0	30	Dragon	450	true					true	0;0;0;0;0;0;0	1;1				0
+1317	LongSword	11	Magdaros Volcansword	924	-20	45				Blast	480	false		true	0;0;0;0;0;0;0	2				0
+1318	LongSword	11	Hydra Tornaria	858	15	0	Water	210	false					true	0;0;0;0;0;0;0					0
+1319	LongSword	12	Black Tornaria	924	15	0	Water	270	false					true	0;0;0;0;0;0;0					0
+1320	LongSword	11	Imperial Flickerflame	858	10	0				Blast	360	false		true	0;0;0;0;0;0;0					0
+1321	LongSword	11	Hellish Slasher	924	0	40	Dragon	180	true					true	0;0;0;0;0;0;0	4				0
+1322	LongSword	12	Consummate Katana	924	-30	0	Dragon	330	false					true	0;0;0;0;0;0;0					0
+1323	LongSword	12	Soulfire Lash 'Blaze'	825	20	0				Blast	270	false		true	0;0;0;0;0;0;0	2;1				0
+1324	LongSword	12	Soulfire Lash 'Ruin'	891	0	0				Blast	210	false		true	0;0;0;0;0;0;0	2;2				0
+1325	LongSword	12	Soulfire Lash 'Styx'	825	10	0				Blast	330	false		true	0;0;0;0;0;0;0	3;3				0
+1326	SwitchAxe	11	Chrome Machina III	945	0	0				Poison	510	true		true	0;0;0;0;0;0;0	1;1				0
+1327	SwitchAxe	11	Blackwing Switch Axe II	945	25	0				Poison	240	false		true	0;0;0;0;0;0;0	3				0
+1328	SwitchAxe	12	Ruinous Light	1015	0	0	Dragon	210	false					true	0;0;0;0;0;0;0	1				0
+1329	SwitchAxe	11	Hector Glacia	840	0	0	Ice	540	false					true	0;0;0;0;0;0;0					0
+1330	SwitchAxe	11	Thundercleave II	875	0	0	Thunder	420	false					true	0;0;0;0;0;0;0	2;1				0
+1331	SwitchAxe	11	Night's Crescent	840	20	0				Poison	540	true		true	0;0;0;0;0;0;0					0
+1332	SwitchAxe	11	Accursed Raider	980	-30	0				Sleep	270	true		true	0;0;0;0;0;0;0	1				0
+1333	SwitchAxe	11	Amber Hoarfrost	875	30	0	Ice	390	false					true	0;0;0;0;0;0;0					0
+1334	SwitchAxe	11	Bazelheart	875	-15	0				Blast	270	false		true	0;0;0;0;0;0;0	2;1				0
+1335	SwitchAxe	12	Silver Rathbringer	945	20	0	Fire	300	false					true	0;0;0;0;0;0;0	2				0
+1336	SwitchAxe	12	Golden Crescent	1015	15	0				Poison	390	false		true	0;0;0;0;0;0;0	1				0
+1337	SwitchAxe	11	Mighty Gear III	945	10	35								true	0;0;0;0;0;0;0	3				0
+1338	SwitchAxe	11	Icerood	910	0	0	Ice	270	false					true	0;0;0;0;0;0;0	4				0
+1339	SwitchAxe	12	Wicked Niddoq	945	0	0	Ice	300	false					true	0;0;0;0;0;0;0	4				0
+1340	SwitchAxe	11	Deathedge Vaal Demios	875	0	0	Dragon	510	false					true	0;0;0;0;0;0;0	2;2				0
+1341	SwitchAxe	11	Acid Smasher II	1015	0	0				Paralysis	390	true		true	0;0;0;0;0;0;0	4				0
+1342	SwitchAxe	11	Fulguration's Bite	910	20	0	Thunder	270	false					true	0;0;0;0;0;0;0					0
+1343	SwitchAxe	11	Dragonseal Axe II	840	0	0	Dragon	600	false					true	0;0;0;0;0;0;0	1;1				0
+1344	SwitchAxe	12	Evanescent Glow	980	0	30	Dragon	510	true					true	0;0;0;0;0;0;0	1;1				0
+1345	SwitchAxe	11	Archbeast Kirin	840	0	0	Thunder	540	false					true	0;0;0;0;0;0;0					0
+1346	SwitchAxe	11	Hydra Strobila	910	15	0	Water	210	false					true	0;0;0;0;0;0;0					0
+1347	SwitchAxe	12	Black Strobila	980	15	0	Water	270	false					true	0;0;0;0;0;0;0					0
+1348	SwitchAxe	11	Teostra's Hellebarde	910	10	0				Blast	360	false		true	0;0;0;0;0;0;0					0
+1349	SwitchAxe	12	Saligia Vileaxe	980	-30	0	Dragon	330	false					true	0;0;0;0;0;0;0					0
+1350	SwitchAxe	12	Soulfire Scourge 'Blaze'	875	20	0				Blast	270	false		true	0;0;0;0;0;0;0	2;1				0
+1351	SwitchAxe	12	Soulfire Scourge 'Ruin'	945	0	0				Blast	210	false		true	0;0;0;0;0;0;0	2;2				0
+1352	SwitchAxe	12	Soulfire Scourge 'Styx'	875	10	0				Blast	330	false		true	0;0;0;0;0;0;0	3;3				0
+1353	SwordAndShield	11	Chrome Knight Sword III	364	0	0				Sleep	330	true		true	0;0;0;0;0;0;0	1;1				0
+1354	SwordAndShield	12	Shining Wyvern Blade	378	20	0	Fire	390	false					true	0;0;0;0;0;0;0	2				0
+1355	SwordAndShield	11	Legendary Bang	364	0	35	Thunder	450	true					true	0;0;0;0;0;0;0	3				0
+1356	SwordAndShield	11	Nardebosche	350	30	0	Ice	330	false					true	0;0;0;0;0;0;0					0
+1357	SwordAndShield	11	Nephilim Glacia	336	0	0	Ice	480	false					true	0;0;0;0;0;0;0	1				0
+1358	SwordAndShield	12	Lunatic Rose	406	10	0				Poison	360	false		true	0;0;0;0;0;0;0	1				0
+1359	SwordAndShield	11	Booming Barrage	350	0	0				Blast	360	false		true	0;0;0;0;0;0;0	1				0
+1360	SwordAndShield	11	Flash in the Night	336	20	0				Poison	390	true		true	0;0;0;0;0;0;0					0
+1361	SwordAndShield	11	Radobaan Os III	392	0	35				Paralysis	360	true		true	0;0;0;0;0;0;0	3				0
+1362	SwordAndShield	11	Icegale	364	0	0	Ice	210	false					true	0;0;0;0;0;0;0	4				0
+1363	SwordAndShield	12	Noble Ana Palas	378	0	0	Ice	270	false					true	0;0;0;0;0;0;0	4				0
+1364	SwordAndShield	11	Acid Razor II	406	0	0				Paralysis	210	true		true	0;0;0;0;0;0;0	4				0
+1365	SwordAndShield	11	Tigrex Sword	392	-20	0				Blast	300	true		true	0;0;0;0;0;0;0					0
+1366	SwordAndShield	11	Accursed Claw	392	-30	0				Sleep	180	true		true	0;0;0;0;0;0;0					0
+1367	SwordAndShield	12	Stonebite	406	-30	0				Sleep	210	true		true	0;0;0;0;0;0;0					0
+1368	SwordAndShield	11	Usurper's Firebolt+	350	0	0	Thunder	330	false					true	0;0;0;0;0;0;0	2				0
+1369	SwordAndShield	12	Despot's Crookbolt	364	0	0	Thunder	360	false					true	0;0;0;0;0;0;0	2				0
+1370	SwordAndShield	11	Fulguration's Talon	364	15	0	Thunder	270	false					true	0;0;0;0;0;0;0					0
+1371	SwordAndShield	11	Dragonseal Aldsword II	336	0	0	Dragon	540	false					true	0;0;0;0;0;0;0	1;1				0
+1372	SwordAndShield	12	Manifested Lotus	392	0	30	Dragon	450	true					true	0;0;0;0;0;0;0	1;1				0
+1373	SwordAndShield	11	Ephemeral Fulminator	336	0	0	Thunder	510	false					true	0;0;0;0;0;0;0					0
+1374	SwordAndShield	11	Hydros Discus	378	10	0	Water	360	false					true	0;0;0;0;0;0;0	1				0
+1375	SwordAndShield	11	Teostra's Medal	364	15	0				Blast	270	false		true	0;0;0;0;0;0;0					0
+1376	SwordAndShield	12	Fate's Shear	392	-20	0	Dragon	240	false					true	0;0;0;0;0;0;0					0
+1377	SwordAndShield	12	Soulfire Barb 'Blaze'	350	20	0				Blast	180	false		true	0;0;0;0;0;0;0	2;1				0
+1378	SwordAndShield	12	Soulfire Barb 'Ruin'	378	0	0				Blast	150	false		true	0;0;0;0;0;0;0	2;2				0
+1379	SwordAndShield	12	Soulfire Barb 'Styx'	350	10	0				Blast	240	false		true	0;0;0;0;0;0;0	3;3				0

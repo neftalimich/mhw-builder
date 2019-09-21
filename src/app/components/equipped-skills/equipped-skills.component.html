@@ -10,10 +10,12 @@
 		<hr>
 		<ul class="striped">
 			<li *ngFor="let skill of skills" [style.color]="getSkillCountColor(skill)" (pointerenter)="showSkillDetails($event, skill)" (pointerleave)="clearSkillDetails()" (click)="showOnClickSkillDetails(skill)">
-				<span class="detail-icon"><i class="far fa-question-circle"></i></span>
+				<span class="detail-icon">
+					<i class="far fa-question-circle"></i>
+				</span>
 				<span class="name">{{skill.name}}</span>
 				<span class="value">
-					<!--{{skill.equippedCount}}/{{skill.totalLevelCount}}-->
+					[{{skill.equippedCount}}]
 					<span class="skill-box" style="display:inline-block;position:relative;">
 						<span *ngFor="let key of getMinCount(skill.equippedCount, skill.totalLevelCount) | numbersArr">
 							<span *ngIf="skill.isSetBonus" class="skill-bg-setbonus">
@@ -38,27 +40,47 @@
 			<br />
 			<h4>Set Bonuses</h4>
 			<hr>
-			<ul class="striped">
-				<li *ngFor="let setBonus of setBonuses" (pointerenter)="showSetBonusDetails($event, setBonus)" (pointerleave)="clearSetBonusDetails()" (click)="showOnClickSetBonusDetails(setBonus)">
-					<span class="detail-icon"><i class="far fa-question-circle"></i></span>
-					<span class="name">{{setBonus.name}}</span>
-					<div class="value">
-						<span class="" *ngFor="let level of setBonus.details" [style.color]="getSetBonusColor(setBonus.equippedCount, level.requiredCount)">
-							<!--{{setBonus.equippedCount}}/{{level.requiredCount}}-->
+			<ul class="">
+				<ng-container *ngFor="let setBonus of setBonuses">
+					<li class="setBonus-header" (pointerenter)="showSetBonusDetails($event, setBonus)" (pointerleave)="clearSetBonusDetails()" (click)="showOnClickSetBonusDetails(setBonus)">
+						<span class="detail-icon">
+							<i class="far fa-question-circle"></i>
+						</span>
+						<span class="name">{{setBonus.name}}</span>
+						<div class="value">
+							[
+							<span [style.color]="getSetBonusColor(setBonus.equippedCount, setBonus.details[setBonus.details.length-1].requiredCount)">
+								{{setBonus.equippedCount}}
+							</span>
+							]
+							 / 
+							[
+							<span *ngFor="let level of setBonus.details; let i=index">
+								<span [style.color]="getSetBonusColor(setBonus.equippedCount, level.requiredCount)">
+									{{level.requiredCount}}
+								</span>
+								<span *ngIf="i < setBonus.details.length - 1">|</span>
+							</span>
+							]
+						</div>
+					</li>
+					<li *ngFor="let level of setBonus.details; let i=index">
+						<span class="detail-icon" style="width:16px;"></span>
+						<span class="name" [style.color]="getSetBonusColor(setBonus.equippedCount, level.requiredCount)">{{level.skill.name}}</span>
+						<div class="value">
 							<span class="skill-box" style="display:inline-block;position:relative;">
 								<span *ngFor="let key of getMinCount(setBonus.equippedCount, level.requiredCount) | numbersArr">
 									<span class="skill-bg-setbonus">
 									</span>
 								</span>
 								<span *ngFor="let key of (level.requiredCount - getMinCount(setBonus.equippedCount, level.requiredCount)) | numbersArr">
-									<span class="skill-bg-2">
+									<span class="skill-bg-inactive">
 									</span>
 								</span>
 							</span>
-							<br />
-						</span>
-					</div>
-				</li>
+						</div>
+					</li>
+				</ng-container>
 			</ul>
 		</div>
 	</div>

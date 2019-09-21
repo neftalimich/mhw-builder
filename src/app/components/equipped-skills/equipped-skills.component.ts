@@ -72,11 +72,11 @@ export class EquippedSkillsComponent implements OnInit {
 
 	getSetBonusColor(equippedCount: number, requiredCount: number): string {
 		if (equippedCount > requiredCount) {
-			return '#e4ff1a';
+			return '#ffa07a';
 		} else if (equippedCount == requiredCount) {
-			return '#F0E68C';
+			return '#87cefa';
 		}
-		return 'white';
+		return 'rgba(200,200,200,0.5)';
 	}
 
 	showSkillDetails(event: PointerEvent, equippedSkill: EquippedSkillModel) {
