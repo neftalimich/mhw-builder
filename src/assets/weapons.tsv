@@ -1,4 +1,4 @@
-id	weaponType	rarity	name	baseAttack	baseAffinityPercent	baseDefense	element	elementBaseAttack	elementHidden	ailment	ailmentBaseAttack	ailmentHidden	elderseal	sharpnessDataNeeded	sharpnessLevelsBar	slots	tags	skills	otherData	vColor
+id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	elementBaseAttack	elementHidden	ailment	ailmentBaseAttack	ailmentHidden	elderseal	sharpnessDataNeeded	sharpnessLevelsBar	slots	tags	skills	otherData	vColor
 256	Bow	6	Alloy Bow II	204	0	0	Thunder	150	true					false		2;2	ore;thunder		Close;Power	10
 288	Bow	6	Aloy's War Bow	192	30	0	Thunder	240	true					false		3	thunder		Close;Paralysis;Poison	10
 268	Bow	6	Anja Arch III	240	-20	0	Fire	390						false			anjanath;fire		Close;Power;Blast	10

@@ -2246,6 +2246,17 @@
 		]
 	},
 	{
+		"id": "staminaCapUp",
+		"name": "Stamina Cap Up",
+		"description": "Increases stamina cap.",
+		"levels": [
+			{
+				"description": "Increases stamina cap.",
+				"passiveStamina": 50
+			}
+		]
+	},
+	{
 		"id": "coalescence",
 		"name": "Coalescence",
 		"description": "Temporarily enhances attacks after recovering from blights or abnormal statuses.",
