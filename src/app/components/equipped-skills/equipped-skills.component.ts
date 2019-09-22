@@ -59,11 +59,11 @@ export class EquippedSkillsComponent implements OnInit {
 	getSkillCountColor(skill: EquippedSkillModel): string {
 		if (skill.isSetBonus) {
 			return '#F0E68C';
-		} else if (skill.equippedCount > skill.totalLevelCount) {
+		} else if (skill.equippedArmorCount > skill.totalLevelCount) {
 			return '#ffa07a';
-		} else if (skill.equippedCount == skill.totalLevelCount) {
+		} else if (skill.equippedArmorCount == skill.totalLevelCount) {
 			return '#87cefa';
-		} else if (skill.equippedCount + Math.max(skill.equippedTool1Count, skill.equippedTool2Count) >= skill.totalLevelCount) {
+		} else if (skill.equippedCount + skill.equippedToolActiveCount >= skill.totalLevelCount) {
 			return '#86ff86';
 		}
 

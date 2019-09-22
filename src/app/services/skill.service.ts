@@ -27,6 +27,12 @@ export class SkillService {
 		const equippedSkills = new Array<EquippedSkillModel>();
 		const equippedSetBonuses = new Array<EquippedSetBonusModel>();
 
+		for (const item of items) {
+			for (const decoration of decorations.filter(d => d.itemType == item.itemType)) {
+				decoration.active = item.active;
+			}
+		}
+
 		// IMPROVEMENT: this code loops through items several times.
 		this.addItemSkills(items, equippedSkills);
 		this.addDecorationSkills(decorations, equippedSkills);
@@ -60,11 +66,13 @@ export class SkillService {
 					equippedSkill.id = skill.id;
 					equippedSkill.name = skill.name;
 					equippedSkill.description = skill.description;
+					equippedSkill.equippedArmorCount = equippedCount;
 					equippedSkill.equippedCount = equippedCount;
 					equippedSkill.totalLevelCount = skill.maxLevel ? skill.maxLevel : skill.levels.length;
 					this.countSkillItemPart(equippedSkill, equippedCount, item.itemType);
 					equippedSkills.push(equippedSkill);
 				} else {
+					equippedSkill.equippedArmorCount += equippedCount;
 					equippedSkill.equippedCount += equippedCount;
 					this.countSkillItemPart(equippedSkill, equippedCount, item.itemType);
 				}
@@ -94,23 +102,43 @@ export class SkillService {
 					equippedSkill.name = skill.name;
 					equippedSkill.description = skill.description;
 					if (decoration.itemType == ItemType.Tool1) {
-						equippedSkill.equippedTool1Count = equippedCount;
+						if (decoration.active) {
+							equippedSkill.equippedToolActiveCount = equippedCount;
+						} else {
+							equippedSkill.equippedTool1Count = equippedCount;
+						}
 					} else if (decoration.itemType == ItemType.Tool2) {
-						equippedSkill.equippedTool2Count = equippedCount;
+						if (decoration.active) {
+							equippedSkill.equippedToolActiveCount = equippedCount;
+						} else {
+							equippedSkill.equippedTool2Count = equippedCount;
+						}
 					} else {
-						equippedSkill.equippedCount = equippedCount;
+						equippedSkill.equippedArmorCount = equippedCount;
 					}
+					equippedSkill.equippedCount = equippedSkill.equippedArmorCount + equippedSkill.equippedToolActiveCount;
+
 					equippedSkill.totalLevelCount = skill.maxLevel ? skill.maxLevel : skill.levels.length;
 					this.countSkillItemPart(equippedSkill, equippedCount, decoration.itemType);
 					equippedSkills.push(equippedSkill);
 				} else {
 					if (decoration.itemType == ItemType.Tool1) {
-						equippedSkill.equippedTool1Count += equippedCount;
+						if (decoration.active) {
+							equippedSkill.equippedToolActiveCount += equippedCount;
+						} else {
+							equippedSkill.equippedTool1Count += equippedCount;
+						}
 					} else if (decoration.itemType == ItemType.Tool2) {
-						equippedSkill.equippedTool2Count += equippedCount;
+						if (decoration.active) {
+							equippedSkill.equippedToolActiveCount += equippedCount;
+						} else {
+							equippedSkill.equippedTool2Count += equippedCount;
+						}
 					} else {
-						equippedSkill.equippedCount += equippedCount;
+						equippedSkill.equippedArmorCount += equippedCount;
 					}
+					equippedSkill.equippedCount = equippedSkill.equippedArmorCount + equippedSkill.equippedToolActiveCount;
+
 					this.countSkillItemPart(equippedSkill, equippedCount, decoration.itemType);
 				}
 			}

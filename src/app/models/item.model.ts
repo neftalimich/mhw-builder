@@ -55,4 +55,5 @@ export class ItemModel {
 	color: number;
 
 	equippedLevel?: number;
+	active: boolean;
 }

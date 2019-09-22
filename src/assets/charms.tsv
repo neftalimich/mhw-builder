@@ -102,3 +102,4 @@ id	rarity	name	levels	skills
 345	11	Penetration Charm	2	piercingShots-1
 346	8	Wyrmslayer Charm	1	eldersealBoost-1;dragonAttack-1
 347	12	Guardian Charm	3	offensiveGuard-1
+500	11	Adamantine Charm	1	nonElementalBoost-1;bludgeoner-1

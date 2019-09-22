@@ -5,9 +5,11 @@ export class EquippedSkillModel {
 	id: string;
 	name: string;
 	description: string;
-	equippedCount: number;
+	equippedArmorCount: number;
 	equippedTool1Count: number;
 	equippedTool2Count: number;
+	equippedToolActiveCount: number;
+	equippedCount: number;
 	totalLevelCount: number;
 
 	weaponCount: number; // Weapon
@@ -32,8 +34,10 @@ export class EquippedSkillModel {
 		this.toolCount = 0;
 		this.isSetBonus = false;
 
-		this.equippedCount = 0;
+		this.equippedArmorCount = 0;
 		this.equippedTool1Count = 0;
 		this.equippedTool2Count = 0;
+		this.equippedToolActiveCount = 0;
+		this.equippedCount = 0;
 	}
 }

@@ -123,7 +123,7 @@
 				"description": "Prevents standard knockbacks. Tripping is reduced to a knockback. Increases some Kinsect extract effects."
 			},
 			{
-				"description": "Prevents knockbacks and tripping.Increaes some Kinsect extract effects."
+				"description": "Prevents knockbacks and tripping. Increaes some Kinsect extract effects."
 			}
 		]
 	},
@@ -2212,16 +2212,6 @@
 			{
 				"description": "Boosts Elderseal one level.",
 				"eldersealLevelBoost": 1
-			}
-		]
-	},
-	{
-		"id": "speedCrawler",
-		"name": "Speed Crawler",
-		"description": "Increases movement speed while crouching.",
-		"levels": [
-			{
-				"description": "Increases movement speed while crouching."
 			}
 		]
 	},

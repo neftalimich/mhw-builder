@@ -105,7 +105,7 @@ $listItemHeight: 66px;
 	.scroll-item-container {
 		min-height: 90px;
 		display: grid;
-		grid-template-rows: min-content max-content max-content;
+		grid-template-rows: min-content min-content;
 		grid-gap: 4px;
 		border-radius: 3px;
 		background-color: #323232;
@@ -173,7 +173,7 @@ $listItemHeight: 66px;
 
 		.stats-container {
 			display: grid;
-			grid-template-columns: repeat(3, 1fr);
+			grid-template-columns: repeat(2, 1fr);
 			grid-gap: 4px;
 
 			.stat-container {
@@ -201,40 +201,6 @@ $listItemHeight: 66px;
 					white-space: nowrap;
 					text-overflow: ellipsis;
 					overflow: hidden;
-				}
-			}
-		}
-
-		.skills-container {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			grid-gap: 4px;
-			font-size: 12px;
-
-			.skill-container {
-				background-color: #272727;
-				border-radius: 3px;
-				display: grid;
-				grid-template-columns: min-content auto;
-
-				.count {
-					height: 26px;
-					// width: 26px;
-					line-height: 26px;
-					text-align: center;
-					padding: 0 8px;
-					font-weight: 900;
-				}
-
-				.name {
-					border-left: 1px solid #323232;
-					line-height: 26px;
-					text-align: center;
-					font-size: 12px;
-					white-space: nowrap;
-					text-overflow: ellipsis;
-					overflow: hidden;
-					padding: 0 8px;
 				}
 			}
 		}

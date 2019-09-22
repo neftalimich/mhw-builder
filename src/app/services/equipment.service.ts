@@ -86,6 +86,10 @@ export class EquipmentService {
 		this.updateSkills();
 	}
 
+	updateItemActive() {
+		this.updateSkills();
+	}
+
 	private updateSkills() {
 		this.skillService.updateSkills(this.items, this.decorations, this.augmentations);
 	}

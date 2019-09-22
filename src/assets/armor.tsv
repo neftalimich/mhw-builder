@@ -879,13 +879,23 @@ id	itemType	rarity	name	defense	fireResist	waterResist	thunderResist	iceResist	d
 1248	Hands	11	Black Belt Vambraces Beta +	142;150;158	1	1	1	1	2	wideRange-2;instructorsGuidance	4;1	arena;coins	0
 1249	Legs	11	Black Belt Coil Beta +	142;150;158	1	1	1	1	2	recoveryUp-2;instructorsGuidance	4;1	arena;coins	0
 1250	Feet	11	Black Belt Greaves Beta +	142;150;158	1	1	1	1	2	wideRange-2;instructorsGuidance	4;2	arena;coins	0
-1251	Head	12	Rimeguard Helm Alpha +	154;162;170	-3	2	-1	4	-1	divineBlessing-2;coalescence-1;velkhanaDivinity	3;2	velkhana	0
-1252	Chest	12	Rimeguard Mail Alpha +	154;162;170	-3	2	-1	4	-1	quickSheath-2;criticalDraw-1;velkhanaDivinity	1	velkhana	0
-1253	Hands	12	Rimeguard Vambraces Alpha +	154;162;170	-3	2	-1	4	-1	quickSheath-1;flinchFree-2;velkhanaDivinity	1	velkhana	0
-1254	Legs	12	Rimeguard Coil Alpha +	154;162;170	-3	2	-1	4	-1	flinchFree-1;coalescence-1;velkhanaDivinity	2;1	velkhana	0
-1255	Feet	12	Rimeguard Greaves Alpha +	154;162;170	-3	2	-1	4	-1	criticalDraw-2;coalescence-1;velkhanaDivinity	1;1	velkhana	0
-1256	Head	12	Rimeguard Helm Beta +	154;162;170	-3	2	-1	4	-1	divineBlessing-2;velkhanaDivinity	4;2	velkhana	0
-1257	Chest	12	Rimeguard Mail Beta +	154;162;170	-3	2	-1	4	-1	quickSheath-2;velkhanaDivinity	4;1	velkhana	0
-1258	Hands	12	Rimeguard Vambraces Beta +	154;162;170	-3	2	-1	4	-1	quickSheath-1;flinchFree-1;velkhanaDivinity	4	velkhana	0
-1259	Legs	12	Rimeguard Coil Beta +	154;162;170	-3	2	-1	4	-1	flinchFree-1;velkhanaDivinity	4;1	velkhana	0
-1260	Feet	12	Rimeguard Greaves Beta +	154;162;170	-3	2	-1	4	-1	criticalDraw-2;velkhanaDivinity	4;1	velkhana	0
+1251	Head	11	Seething Bazel Helm Alpha +	154;162;170	3	1	-2	-4	-2	earplugs-2;blastAttack-2;bazelgeuseAmbition	2;1	bazelgeuse	0
+1252	Chest	11	Seething Bazel Mail Alpha +	154;162;170	3	1	-2	-4	-2	guard-2;blastResistance-2;bazelgeuseAmbition	1;1	bazelgeuse	0
+1253	Hands	11	Seething Bazel Vambraces Alpha +	154;162;170	3	1	-2	-4	-2	criticalDraw-2;earplugs-1;bazelgeuseAmbition	3	bazelgeuse	0
+1254	Legs	11	Seething Bazel Coil Alpha +	154;162;170	3	1	-2	-4	-2	bombardier-2;criticalDraw-1;bazelgeuseAmbition	3	bazelgeuse	0
+1255	Feet	11	Seething Bazel Greaves Alpha +	154;162;170	3	1	-2	-4	-2	earplugs-2;jumpMaster-1;bazelgeuseAmbition	3	bazelgeuse	0
+1256	Head	11	Seething Bazel Helm Beta +	154;162;170	3	1	-2	-4	-2	earplugs-2;blastAttack-1;bazelgeuseAmbition	4;1	bazelgeuse	0
+1257	Chest	11	Seething Bazel Mail Beta +	154;162;170	3	1	-2	-4	-2	guard-2;bazelgeuseAmbition	4;1;1	bazelgeuse	0
+1258	Hands	11	Seething Bazel Vambraces Beta +	154;162;170	3	1	-2	-4	-2	criticalDraw-2;bazelgeuseAmbition	4;3	bazelgeuse	0
+1259	Legs	11	Seething Bazel Coil Beta +	154;162;170	3	1	-2	-4	-2	bombardier-2;bazelgeuseAmbition	4;2	bazelgeuse	0
+1260	Feet	11	Seething Bazel Greaves Beta +	154;162;170	3	1	-2	-4	-2	earplugs-1;jumpMaster-1;bazelgeuseAmbition	4;2	bazelgeuse	0
+1261	Head	12	Rimeguard Helm Alpha +	154;162;170	-3	2	-1	4	-1	divineBlessing-2;coalescence-1;velkhanaDivinity	3;2	velkhana	0
+1262	Chest	12	Rimeguard Mail Alpha +	154;162;170	-3	2	-1	4	-1	quickSheath-2;criticalDraw-1;velkhanaDivinity	1	velkhana	0
+1263	Hands	12	Rimeguard Vambraces Alpha +	154;162;170	-3	2	-1	4	-1	quickSheath-1;flinchFree-2;velkhanaDivinity	1	velkhana	0
+1264	Legs	12	Rimeguard Coil Alpha +	154;162;170	-3	2	-1	4	-1	flinchFree-1;coalescence-1;velkhanaDivinity	2;1	velkhana	0
+1265	Feet	12	Rimeguard Greaves Alpha +	154;162;170	-3	2	-1	4	-1	criticalDraw-2;coalescence-1;velkhanaDivinity	1;1	velkhana	0
+1266	Head	12	Rimeguard Helm Beta +	154;162;170	-3	2	-1	4	-1	divineBlessing-2;velkhanaDivinity	4;2	velkhana	0
+1267	Chest	12	Rimeguard Mail Beta +	154;162;170	-3	2	-1	4	-1	quickSheath-2;velkhanaDivinity	4;1	velkhana	0
+1268	Hands	12	Rimeguard Vambraces Beta +	154;162;170	-3	2	-1	4	-1	quickSheath-1;flinchFree-1;velkhanaDivinity	4	velkhana	0
+1269	Legs	12	Rimeguard Coil Beta +	154;162;170	-3	2	-1	4	-1	flinchFree-1;velkhanaDivinity	4;1	velkhana	0
+1270	Feet	12	Rimeguard Greaves Beta +	154;162;170	-3	2	-1	4	-1	criticalDraw-2;velkhanaDivinity	4;1	velkhana	0

@@ -10,4 +10,5 @@ export class DecorationModel {
 
 	itemId: number;
 	itemType: ItemType;
+	active: boolean;
 }

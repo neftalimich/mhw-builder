@@ -62,6 +62,17 @@ $equipmentHeight: 40px;
 		}
 	}
 
+	.active-container {
+		grid-column: 3;
+		display: grid;
+		grid-template-columns: min-content;
+
+		.active-button {
+			grid-column: 1;
+			height: $equipmentHeight;
+		}
+	}
+
 	.info-button {
 		grid-column: 4;
 		height: $equipmentHeight;

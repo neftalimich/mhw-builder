@@ -196,7 +196,7 @@ h4 {
 	color: #bbb;
 }
 
-.sharp-null{
+.sharp-null {
 	color: $yellow;
 }
 
@@ -216,6 +216,22 @@ h4 {
 	color: #fb9865;
 }
 
+.rarity-9 {
+	color: rgb(225,76,112);
+}
+
+.rarity-10 {
+	color: rgb(40,175,255);
+}
+
+.rarity-11 {
+	color: rgb(255,221,17);
+}
+
+.rarity-12 {
+	color: rgb(230,235,255);
+}
+
 .vcolor-50 {
 	color: lightsalmon;
 }
@@ -226,6 +242,10 @@ h4 {
 
 .vcolor-60 {
 	color: lightpink;
+}
+
+.text-white{
+	color: white !important;
 }
 
 /* Animations */

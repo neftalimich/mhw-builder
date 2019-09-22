@@ -28,6 +28,7 @@ export class SlotService {
 	public modificationSelected$ = new Subject<SlotEventModel<ModificationSlotComponent, ModificationModel>>();
 	public kinsectSelected$ = new Subject<SlotEventModel<KinsectSlotComponent, KinsectModel>>();
 	public itemLevelChanged$ = new Subject();
+	public itemActiveChanged$ = new Subject();
 
 	weaponSlot: ItemSlotComponent;
 	headSlot: ItemSlotComponent;
@@ -167,6 +168,11 @@ export class SlotService {
 			if (!item.equippedLevel && item.itemType == ItemType.Charm) {
 				item.equippedLevel = item.levels;
 			}
+			if (item.itemType == ItemType.Tool1 || item.itemType == ItemType.Tool2) {
+				item.active = false;
+			} else {
+				item.active = true;
+			}
 
 			this.equipmentService.addItem(item);
 			this.selectedItemSlot.item = item;
@@ -266,6 +272,19 @@ export class SlotService {
 	updateItemLevel() {
 		this.itemLevelChanged$.next();
 		this.equipmentService.updateItemLevel();
+	}
+
+	activeItemTool(itemType: ItemType, active: boolean) {
+		if (active) {
+			if (itemType == ItemType.Tool1 && this.tool2Slot.item) {
+				this.tool2Slot.item.active = false;
+			}
+			if (itemType == ItemType.Tool2 && this.tool1Slot.item) {
+				this.tool1Slot.item.active = false;
+			}
+		}
+		this.itemActiveChanged$.next();
+		this.equipmentService.updateItemActive();
 	}
 
 	private applySlotAugmentation() {

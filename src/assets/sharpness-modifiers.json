@@ -39,7 +39,7 @@
 		"damageType": "Physical",
 		"sharpnessType": "Purple",
 		"colorIndex": 6,
-		"value": 1.40
+		"value": 1.39
 	},
 	{
 		"damageType": "Elemental",
@@ -75,12 +75,12 @@
 		"damageType": "Elemental",
 		"sharpnessType": "White",
 		"colorIndex": 5,
-		"value": 1.125
+		"value": 1.15
 	},
 	{
 		"damageType": "Elemental",
 		"sharpnessType": "Purple",
 		"colorIndex": 6,
-		"value": 1.200
+		"value": 1.25
 	}
 ]

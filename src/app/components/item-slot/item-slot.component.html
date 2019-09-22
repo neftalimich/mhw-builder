@@ -4,7 +4,7 @@
 		 (pointerleave)="clearTooltipItem()"
 		 [class.selected]="selected">
 
-		<!-- <div class="slot-name">{{slotName}}</div> -->
+		<!--<div class="slot-name">{{slotName}}</div>-->
 		<div class="slot-icon" (click)="equipmentSlotClicked()">
 			<img [src]="getItemIconName()" alt="slot icon">
 		</div>
@@ -21,6 +21,11 @@
 
 			<button type="button" class="level-up-button" (click)="levelUpClicked($event)">
 				<i class="fas fa-plus"></i>
+			</button>
+		</div>
+		<div *ngIf="item && (slotName=='Tool1' || slotName=='Tool2')" class="active-container">
+			<button type="button" class="active-button" (click)="activeClicked($event)">
+				<i class="fas fa-lg" [ngClass]="{'fa-toggle-on text-white': item?.active, 'fa-toggle-off': !item?.active}"></i>
 			</button>
 		</div>
 		<button type="button" class="info-button" (click)="showOnClickTooltipItem()" aria-label="info">

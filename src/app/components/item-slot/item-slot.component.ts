@@ -62,6 +62,12 @@ export class ItemSlotComponent implements OnInit {
 		}
 	}
 
+	activeClicked(event: Event) {
+		event.stopPropagation();
+		this.item.active = !this.item.active;
+		this.slotService.activeItemTool(this.item.itemType, this.item.active);
+	}
+
 	getItemIconName(): string {
 		let assetPath;
 		switch (this.dataService.getEquipmentCategory(this.slotName)) {
