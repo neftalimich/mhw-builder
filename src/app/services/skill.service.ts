@@ -192,6 +192,7 @@ export class SkillService {
 						equippedSkill.feetCount = feetCount;
 						equippedSkill.isSetBonus = true;
 						equippedSkill.equippedCount = 1;
+						equippedSkill.equippedArmorCount = 1;
 						equippedSkill.totalLevelCount = skill.levels.length;
 						equippedSkills.push(equippedSkill);
 

@@ -71,9 +71,7 @@ export class EquippedSkillsComponent implements OnInit {
 	}
 
 	getSetBonusColor(equippedCount: number, requiredCount: number): string {
-		if (equippedCount > requiredCount) {
-			return '#ffa07a';
-		} else if (equippedCount == requiredCount) {
+		if (equippedCount >= requiredCount) {
 			return '#87cefa';
 		}
 		return 'rgba(200,200,200,0.5)';

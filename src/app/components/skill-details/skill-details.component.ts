@@ -17,13 +17,17 @@ export class SkillDetailsComponent implements OnInit {
 		private tooltipService: TooltipService
 	) { }
 
-	ngOnInit() { }
+	ngOnInit() {
+	}
 
 	clearSkill() {
 		this.tooltipService.setEquippedSkill(null);
 	}
 
 	getLevelColor(level: number): string {
+		if (this.equippedSkill.requiredCount) {
+			return '#87cefa';
+		}
 		let color = 'white';
 		if (level == Math.min(this.equippedSkill.equippedArmorCount + this.equippedSkill.equippedToolActiveCount, this.equippedSkill.totalLevelCount)) {
 			color = 'rgb(134, 255, 134)';

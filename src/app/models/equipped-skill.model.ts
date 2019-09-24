@@ -22,6 +22,7 @@ export class EquippedSkillModel {
 	toolCount: number; // Tool
 
 	isSetBonus: boolean;
+	requiredCount?: number;
 
 	constructor() {
 		this.weaponCount = 0;
