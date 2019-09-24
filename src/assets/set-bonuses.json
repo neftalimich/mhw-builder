@@ -394,5 +394,15 @@
 				"pieces": 4
 			}
 		]
+	},
+	{
+		"id": "vaalSoulvein",
+		"name": "Vaal Soulvein",
+		"setLevels": [
+			{
+				"id": "superRecovery",
+				"pieces": 2
+			}
+		]
 	}
 ]
