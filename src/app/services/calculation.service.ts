@@ -23,6 +23,56 @@ export class CalculationService {
 	sharpnessBar = new SharpnessBarModel;
 	extraData = new ExtraDataModel;
 
+	constructor() {
+		this.defenseCalcs.push({
+			name: 'Defense',
+			value: '',
+			icon: 'defense'
+		});
+
+		this.defenseCalcs.push({
+			name: 'Health',
+			value: '100',
+			icon: 'health'
+		});
+
+		this.defenseCalcs.push({
+			name: 'Stamina',
+			value: '100',
+			icon: 'stamina'
+		});
+
+		this.defenseCalcs.push({
+			name: 'Fire Resist',
+			value: '',
+			icon: 'fire'
+		});
+
+		this.defenseCalcs.push({
+			name: 'Water Resist',
+			value: '',
+			icon: 'water'
+		});
+
+		this.defenseCalcs.push({
+			name: 'Thunder Resist',
+			value: '',
+			icon: 'thunder'
+		});
+
+		this.defenseCalcs.push({
+			name: 'Ice Resist',
+			value: '',
+			icon: 'ice'
+		});
+
+		this.defenseCalcs.push({
+			name: 'Dragon Resist',
+			value: '',
+			icon: 'dragon'
+		});
+	}
+
 	updateCalcs(stats: StatsModel) {
 		this.buildAttackCalcs(stats);
 		this.buildDefenseCalcs(stats);
@@ -611,7 +661,6 @@ export class CalculationService {
 	}
 
 	private buildDefenseCalcs(stats: StatsModel) {
-		this.defenseCalcs = [];
 
 		let defValue = '';
 		for (let i = 0; i < stats.defense.length; i++) {
@@ -623,57 +672,26 @@ export class CalculationService {
 			}
 		}
 
-		this.defenseCalcs.push({
-			name: 'Defense',
-			value: defValue,
-			icon: 'defense'
-		});
-
+		// Defense [0]
+		this.defenseCalcs[0].value = defValue;
+		// Health [1]
 		if (stats.passiveHealth) {
-			this.defenseCalcs.push({
-				name: 'Health',
-				value: 100 + stats.passiveHealth,
-				icon: 'health'
-			});
+			this.defenseCalcs[1].value = 100 + stats.passiveHealth;
 		}
-
+		// Stamina [2]
 		if (stats.passiveStamina) {
-			this.defenseCalcs.push({
-				name: 'Stamina',
-				value: 100 + stats.passiveStamina,
-				icon: 'stamina'
-			});
+			this.defenseCalcs[2].value = 100 + stats.passiveStamina;
 		}
-
-		this.defenseCalcs.push({
-			name: 'Fire Resist',
-			value: stats.fireResist + stats.passiveFireResist,
-			icon: 'fire'
-		});
-
-		this.defenseCalcs.push({
-			name: 'Water Resist',
-			value: stats.waterResist + stats.passiveWaterResist,
-			icon: 'water'
-		});
-
-		this.defenseCalcs.push({
-			name: 'Thunder Resist',
-			value: stats.thunderResist + stats.passiveThunderResist,
-			icon: 'thunder'
-		});
-
-		this.defenseCalcs.push({
-			name: 'Ice Resist',
-			value: stats.iceResist + stats.passiveIceResist,
-			icon: 'ice'
-		});
-
-		this.defenseCalcs.push({
-			name: 'Dragon Resist',
-			value: stats.dragonResist + stats.passiveDragonResist,
-			icon: 'dragon'
-		});
+		// Fire [3]
+		this.defenseCalcs[3].value = stats.fireResist + stats.passiveFireResist;
+		// Water [4]
+		this.defenseCalcs[4].value = stats.waterResist + stats.passiveWaterResist;
+		// Thunder [5]
+		this.defenseCalcs[5].value = stats.thunderResist + stats.passiveThunderResist;
+		// Ice [6]
+		this.defenseCalcs[6].value = stats.iceResist + stats.passiveIceResist;
+		// Dragon [7]
+		this.defenseCalcs[7].value = stats.dragonResist + stats.passiveDragonResist;
 	}
 
 	private buildAmmoCapacities(stats: StatsModel) {
