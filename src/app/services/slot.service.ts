@@ -215,6 +215,15 @@ export class SlotService {
 					this.selectedItemSlot.augmentations = [
 						new AugmentationModel()
 					];
+				} else if (item.rarity == 10) {
+					this.selectedItemSlot.upgradesContainer = new UpgradesContainerModel();
+					this.selectedItemSlot.upgradesContainer.slots = 7;
+				} else if (item.rarity == 11) {
+					this.selectedItemSlot.upgradesContainer = new UpgradesContainerModel();
+					this.selectedItemSlot.upgradesContainer.slots = 5;
+				} else if (item.rarity == 12) {
+					this.selectedItemSlot.upgradesContainer = new UpgradesContainerModel();
+					this.selectedItemSlot.upgradesContainer.slots = 4;
 				} else {
 					this.selectedItemSlot.augmentations = [];
 				}

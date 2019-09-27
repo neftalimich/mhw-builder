@@ -33,7 +33,7 @@ export class ItemSlotComponent implements OnInit {
 	item: ItemModel;
 
 	public augmentations = new Array<AugmentationModel>();
-	public upgradesContainer = UpgradesContainerModel;
+	public upgradesContainer = new UpgradesContainerModel;
 	public modifications = new Array<ModificationModel>();
 	public kinsect: KinsectModel;
 	public selected: boolean;

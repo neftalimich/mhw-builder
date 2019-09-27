@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { UpgradeModel } from '../../models/upgrade.model';
+import { UpgradesContainerModel } from '../../models/upgrades-contrainer.model';
 import { DataService } from '../../services/data.service';
 import { SlotService } from '../../services/slot.service';
 import { TooltipService } from '../../services/tooltip.service';
-import { PointerType } from '../../types/pointer.type';
 
 @Component({
 	selector: 'mhw-builder-upgrades-list',
@@ -12,6 +12,16 @@ import { PointerType } from '../../types/pointer.type';
 })
 export class UpgradesListComponent implements OnInit {
 	upgrades: UpgradeModel[];
+
+	private _slots: number;
+
+	@Input()
+	set slots(slots: number) {
+		this._slots = slots;
+	}
+	get slots(): number { return this._slots; }
+
+	@Output() upgradesContainerSelected = new EventEmitter<UpgradesContainerModel>();
 
 	constructor(
 		private dataService: DataService,

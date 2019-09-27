@@ -1,10 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { UpgradeModel } from '../../models/upgrade.model';
+import { Component, Input, OnInit } from '@angular/core';
+import { UpgradesContainerModel } from '../../models/upgrades-contrainer.model';
 import { SlotService } from '../../services/slot.service';
 import { TooltipService } from '../../services/tooltip.service';
 import { ItemType } from '../../types/item.type';
-import { PointerType } from '../../types/pointer.type';
-import { UpgradesContainerModel } from '../../models/upgrades-contrainer.model';
 
 @Component({
 	selector: 'mhw-builder-upgrade-slot',
@@ -15,6 +13,8 @@ export class UpgradeSlotComponent implements OnInit {
 	slotName = ItemType.Upgrade;
 
 	upgradesContainer: UpgradesContainerModel;
+
+	@Input() slots: number;
 
 	public selected: boolean;
 
