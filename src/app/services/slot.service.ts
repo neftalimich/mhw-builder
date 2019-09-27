@@ -6,25 +6,29 @@ import { DecorationSlotComponent } from '../components/decoration-slot/decoratio
 import { ItemSlotComponent } from '../components/item-slot/item-slot.component';
 import { KinsectSlotComponent } from '../components/kinsect-slot/kinsect-slot.component';
 import { ModificationSlotComponent } from '../components/modification-slot/modification-slot.component';
+import { UpgradeSlotComponent } from '../components/upagrade-slot/upgrade-slot.component';
 import { AugmentationModel } from '../models/augmentation.model';
 import { DecorationModel } from '../models/decoration.model';
 import { ItemModel } from '../models/item.model';
 import { KinsectModel } from '../models/kinsect.model';
 import { ModificationModel } from '../models/modification.model';
 import { SlotEventModel } from '../models/slot-event.model';
+import { UpgradesContainerModel } from '../models/upgrades-contrainer.model';
 import { EquipmentCategoryType } from '../types/equipment-category.type';
 import { ItemType } from '../types/item.type';
 import { WeaponType } from '../types/weapon.type';
 import { EquipmentService } from './equipment.service';
+import { UpgradeModel } from '../models/upgrade.model';
 
 @Injectable()
 export class SlotService {
 	public anySlotSelected$ =
-		new Subject<ItemSlotComponent | DecorationSlotComponent | AugmentationSlotComponent | ModificationSlotComponent | KinsectSlotComponent>();
+		new Subject<ItemSlotComponent | DecorationSlotComponent | AugmentationSlotComponent | UpgradeSlotComponent | ModificationSlotComponent | KinsectSlotComponent>();
 
 	public itemSelected$ = new Subject<SlotEventModel<ItemSlotComponent, ItemModel>>();
 	public decorationSelected$ = new Subject<SlotEventModel<DecorationSlotComponent, DecorationModel>>();
 	public augmentationSelected$ = new Subject<SlotEventModel<AugmentationSlotComponent, AugmentationModel>>();
+	public upgradeSelected$ = new Subject<SlotEventModel<UpgradeSlotComponent, UpgradesContainerModel>>();
 	public modificationSelected$ = new Subject<SlotEventModel<ModificationSlotComponent, ModificationModel>>();
 	public kinsectSelected$ = new Subject<SlotEventModel<KinsectSlotComponent, KinsectModel>>();
 	public itemLevelChanged$ = new Subject();
@@ -45,6 +49,7 @@ export class SlotService {
 	selectedItemSlot: ItemSlotComponent;
 	selectedDecorationSlot: DecorationSlotComponent;
 	selectedAugmentationSlot: AugmentationSlotComponent;
+	selectedUpgradeSlot: UpgradeSlotComponent;
 	selectedModificationSlot: ModificationSlotComponent;
 	selectedKinsectSlot: KinsectSlotComponent;
 
@@ -106,6 +111,16 @@ export class SlotService {
 		}
 	}
 
+	selectUpgradeSlot(slot: UpgradeSlotComponent) {
+		this.clearSlotSelect();
+		this.selectedUpgradeSlot = slot;
+
+		if (this.selectedUpgradeSlot) {
+			this.selectedUpgradeSlot.selected = true;
+			this.anySlotSelected$.next(this.selectedUpgradeSlot);
+		}
+	}
+
 	selectModificationSlot(slot: ModificationSlotComponent) {
 		this.clearSlotSelect();
 		this.selectedModificationSlot = slot;
@@ -147,6 +162,13 @@ export class SlotService {
 		this.applySlotAugmentation();
 		slot.augmentation = null;
 		this.augmentationSelected$.next({ slot: slot, equipment: null });
+	}
+
+	clearUpgradeSlot(slot: UpgradeSlotComponent) {
+		this.equipmentService.removeUpgrade();
+		//this.applySlotUpgrade();
+		slot.upgradesContainer = null;
+		this.upgradeSelected$.next({ slot: slot, equipment: null });
 	}
 
 	clearModificationSlot(slot: ModificationSlotComponent) {
@@ -243,6 +265,19 @@ export class SlotService {
 			this.applySlotAugmentation();
 			this.selectedAugmentationSlot.augmentation = augmentation;
 			this.augmentationSelected$.next({ slot: this.selectedAugmentationSlot, equipment: augmentation });
+		}
+	}
+
+	selectUpgrade(upgradesContainer: UpgradesContainerModel) {
+		if (this.selectedUpgradeSlot) {
+			if (this.selectedUpgradeSlot.upgradesContainer) {
+				this.equipmentService.removeUpgrade();
+			}
+
+			this.equipmentService.addUpgrade(upgradesContainer);
+			//this.applySlotUpgrade();
+			this.selectedUpgradeSlot.upgradesContainer = upgradesContainer;
+			this.upgradeSelected$.next({ slot: this.selectedUpgradeSlot, equipment: upgradesContainer });
 		}
 	}
 

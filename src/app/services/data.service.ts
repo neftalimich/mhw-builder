@@ -11,6 +11,7 @@ import { SetBonusModel } from '../models/set-bonus.model';
 import { SharpnessModifierModel } from '../models/sharpness-modifier.model';
 import { SkillReferenceModel } from '../models/skill-reference.model';
 import { SkillModel } from '../models/skill.model';
+import { UpgradeModel } from '../models/upgrade.model';
 import { WeaponModifierModel } from '../models/weapon-modifier.model';
 import { AppDataProvider } from '../providers/app-data.provider';
 import { DamageType } from '../types/damage.type';
@@ -121,6 +122,10 @@ export class DataService {
 
 	getAugmentation(id: number): AugmentationModel {
 		return _.find(this.appDataProvider.appData.augmentations, augmentation => augmentation.id == id);
+	}
+
+	getUpgrades(): UpgradeModel[] {
+		return this.appDataProvider.appData.upgrades;
 	}
 
 	getModifications(): ModificationModel[] {

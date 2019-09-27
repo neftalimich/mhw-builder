@@ -12,10 +12,11 @@ import { ModificationsLoader } from '../data/loaders/modifications.loader';
 import { SetBonusesLoader } from '../data/loaders/set-bonuses.loader';
 import { SharpnessModifiersLoader } from '../data/loaders/sharpness-modifiers.loader';
 import { SkillsLoader } from '../data/loaders/skills.loader';
-import { ToolLoader } from '../data/loaders/tool.loader';
+import { ToolsLoader } from '../data/loaders/tools.loader';
 import { WeaponModifiersLoader } from '../data/loaders/weapon-modifiers.loader';
 import { WeaponsLoader } from '../data/loaders/weapons.loader';
 import { AppDataModel } from '../models/app-data.model';
+import { UpgradesLoader } from '../data/loaders/upgrades.loader';
 
 @Injectable()
 export class AppDataProvider {
@@ -36,7 +37,8 @@ export class AppDataProvider {
 		private ammoCapacitiesLoader: AmmoCapacitiesLoader,
 		private melodiesLoader: MelodiesLoader,
 		private melodyEffectLoader: MelodyEffectLoader,
-		private toolsLoader: ToolLoader
+		private toolsLoader: ToolsLoader,
+		private upgradesLoader: UpgradesLoader
 	) {
 		this.appData = new AppDataModel();
 	}
@@ -58,7 +60,8 @@ export class AppDataProvider {
 				this.ammoCapacitiesLoader.load('ammo-capacities.json', false),
 				this.melodiesLoader.load('melodies.tsv', false),
 				this.melodyEffectLoader.load('melody-effect.tsv', false),
-				this.toolsLoader.load('tools.tsv', false)
+				this.toolsLoader.load('tools.tsv', false),
+				this.upgradesLoader.load('upgrades.json'),
 			).subscribe(results => {
 				this.appData.weapons = results[0];
 				this.appData.armor = results[1];
@@ -75,6 +78,7 @@ export class AppDataProvider {
 				this.appData.melodies = results[12];
 				this.appData.melodyEffect = results[13];
 				this.appData.tools = results[14];
+				this.appData.upgrades = results[15];
 
 				observer.next(true);
 				observer.complete();

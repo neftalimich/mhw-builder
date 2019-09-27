@@ -1,0 +1,22 @@
+<div class="container">
+	<div class="items-container">
+		<ul>
+			<li *ngFor="let aug of augmentations" (click)="selectAugmentation(aug)" (pointerenter)="setTooltipAugmentation($event, aug)" (pointerleave)="clearTooltipAugmentation()">
+				<div class="info-container">
+					<div class="name-container">
+						{{aug.name}}
+					</div>
+					<div class="stat-container">
+						<div class="description-value">
+							{{aug.description}}
+							<br />
+							<div *ngFor="let level of aug.levels">
+								{{level.description}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>

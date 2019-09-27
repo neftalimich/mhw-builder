@@ -3,6 +3,7 @@ import { KinsectModel } from 'src/app/models/kinsect.model';
 import { ModificationModel } from 'src/app/models/modification.model';
 import { AugmentationModel } from '../../models/augmentation.model';
 import { ItemModel } from '../../models/item.model';
+import { UpgradesContainerModel } from '../../models/upgrades-contrainer.model';
 import { DataService } from '../../services/data.service';
 import { SlotService } from '../../services/slot.service';
 import { TooltipService } from '../../services/tooltip.service';
@@ -13,6 +14,7 @@ import { AugmentationSlotComponent } from '../augmentation-slot/augmentation-slo
 import { DecorationSlotComponent } from '../decoration-slot/decoration-slot.component';
 import { KinsectSlotComponent } from '../kinsect-slot/kinsect-slot.component';
 import { ModificationSlotComponent } from '../modification-slot/modification-slot.component';
+import { UpgradeSlotComponent } from '../upagrade-slot/upgrade-slot.component';
 
 @Component({
 	selector: 'mhw-builder-item-slot',
@@ -24,12 +26,14 @@ export class ItemSlotComponent implements OnInit {
 
 	@ViewChildren(DecorationSlotComponent) decorationSlots: QueryList<DecorationSlotComponent>;
 	@ViewChildren(AugmentationSlotComponent) augmentationSlots: QueryList<AugmentationSlotComponent>;
+	@ViewChildren(UpgradeSlotComponent) upgradeSlots: QueryList<UpgradeSlotComponent>;
 	@ViewChildren(ModificationSlotComponent) modificationSlots: QueryList<ModificationSlotComponent>;
 	@ViewChild(KinsectSlotComponent, { static: false }) kinsectSlot: KinsectSlotComponent;
 
 	item: ItemModel;
 
 	public augmentations = new Array<AugmentationModel>();
+	public upgradesContainer = UpgradesContainerModel;
 	public modifications = new Array<ModificationModel>();
 	public kinsect: KinsectModel;
 	public selected: boolean;

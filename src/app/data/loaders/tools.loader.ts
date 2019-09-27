@@ -7,7 +7,7 @@ import { SlotsParser } from '../parsers/slots.parser';
 import { DataLoader } from './data.loader';
 
 @Injectable()
-export class ToolLoader extends DataLoader<ToolModel> {
+export class ToolsLoader extends DataLoader<ToolModel> {
 
 	constructor(
 		protected http: HttpClient

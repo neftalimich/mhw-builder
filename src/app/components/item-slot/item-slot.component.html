@@ -46,6 +46,11 @@
 		</mhw-builder-augmentation-slot>
 	</div>
 
+	<div class="augmentation-container" *ngIf="upgradesContainer.slots>0">
+		<mhw-builder-augmentation-slot>
+		</mhw-builder-augmentation-slot>
+	</div>
+
 	<div class="modification-container" *ngIf="modifications && modifications.length">
 		<mhw-builder-modification-slot *ngFor="let mod of modifications">
 		</mhw-builder-modification-slot>

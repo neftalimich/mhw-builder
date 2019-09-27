@@ -32,6 +32,8 @@ import { SharpnessBarComponent } from './components/sharpness-bar/sharpness-bar.
 import { SkillDetailsComponent } from './components/skill-details/skill-details.component';
 import { ToolListComponent } from './components/tool-list/tool-list.component';
 import { TooltipComponent } from './components/tooltip/tooltip.component';
+import { UpgradeSlotComponent } from './components/upagrade-slot/upgrade-slot.component';
+import { UpgradesListComponent } from './components/upgrades-list/upgrades-list.component';
 import { WeaponListComponent } from './components/weapon-list/weapon-list.component';
 import { DataModule } from './data/data.module';
 import { MaxSharpnessPipe } from './pipes/max-sharpness.pipe';
@@ -53,6 +55,7 @@ import { TooltipService } from './services/tooltip.service';
 		ArmorListComponent,
 		WeaponListComponent,
 		AugmentationsListComponent,
+		UpgradesListComponent,
 		ModificationsListComponent,
 		KinsectListComponent,
 		AmmoCapacitiesComponent,
@@ -66,6 +69,7 @@ import { TooltipService } from './services/tooltip.service';
 		KinsectDetailsComponent,
 		ItemSlotComponent,
 		AugmentationSlotComponent,
+		UpgradeSlotComponent,
 		ModificationSlotComponent,
 		KinsectSlotComponent,
 		DecorationSlotComponent,

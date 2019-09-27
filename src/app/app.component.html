@@ -99,10 +99,11 @@
 								[itemType]="slotService.selectedItemSlot?.slotName"></mhw-builder-charm-list>
 
 		<mhw-builder-tool-list *ngIf="slotService.selectedItemSlot && dataService.getEquipmentCategory(slotService.selectedItemSlot.slotName) == equipmentCategoryTypes.Tool"
-								[itemType]="slotService.selectedItemSlot?.slotName"></mhw-builder-tool-list>
+							   [itemType]="slotService.selectedItemSlot?.slotName"></mhw-builder-tool-list>
 
 		<mhw-builder-decoration-list *ngIf="slotService.selectedDecorationSlot" [decorationLevel]="slotService.selectedDecorationSlot?.level"></mhw-builder-decoration-list>
 		<mhw-builder-augmentations-list *ngIf="slotService.selectedAugmentationSlot"></mhw-builder-augmentations-list>
+		<mhw-builder-upgrades-list *ngIf="slotService.selectedUpgradeSlot"></mhw-builder-upgrades-list>
 		<mhw-builder-modifications-list *ngIf="slotService.selectedModificationSlot"></mhw-builder-modifications-list>
 		<mhw-builder-kinsect-list *ngIf="slotService.selectedKinsectSlot"></mhw-builder-kinsect-list>
 	</mhw-builder-modal>

@@ -6,6 +6,8 @@ import { EquippedSkillModel } from '../models/equipped-skill.model';
 import { ItemModel } from '../models/item.model';
 import { KinsectModel } from '../models/kinsect.model';
 import { ModificationModel } from '../models/modification.model';
+import { UpgradeModel } from '../models/upgrade.model';
+import { UpgradesContainerModel } from '../models/upgrades-contrainer.model';
 import { SkillService } from './skill.service';
 import { StatService } from './stat.service';
 
@@ -15,6 +17,7 @@ export class EquipmentService {
 	public items: ItemModel[];
 	public decorations: DecorationModel[];
 	public augmentations: AugmentationModel[];
+	public upgradesContainer: UpgradesContainerModel;
 	public modifications: ModificationModel[];
 	public kinsect: KinsectModel;
 
@@ -47,6 +50,10 @@ export class EquipmentService {
 		this.augmentations.push(augmentation);
 		this.updateSkills();
 	}
+	addUpgrade(upgradesContainer: UpgradesContainerModel) {
+		this.upgradesContainer = upgradesContainer;
+		this.updateSkills();
+	}
 
 	addModification(modification: ModificationModel) {
 		this.modifications.push(modification);
@@ -70,6 +77,11 @@ export class EquipmentService {
 
 	removeAugmentation(augmentation: AugmentationModel) {
 		this.augmentations = _.reject(this.augmentations, a => a === augmentation);
+		this.updateSkills();
+	}
+
+	removeUpgrade() {
+		this.upgradesContainer = null;
 		this.updateSkills();
 	}
 
