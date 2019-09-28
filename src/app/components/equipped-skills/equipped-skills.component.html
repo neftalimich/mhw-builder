@@ -30,6 +30,10 @@
 								<span class="skill-bg-inactive">
 								</span>
 							</span>
+							<span *ngFor="let key of (7 - skill.totalLevelCount) | numbersArr">
+								<span class="skill-bg-transparent">
+								</span>
+							</span>
 						</span>
 					</span>
 				</li>
@@ -46,14 +50,14 @@
 						<span class="detail-icon">
 							<i class="far fa-question-circle"></i>
 						</span>
-						<span class="name">{{setBonus.name}}</span>
-						<div class="value">
+						<span class="name">
+							{{setBonus.name}} &nbsp;
 							[
 							<span [style.color]="getSetBonusColor(setBonus.equippedCount, setBonus.details[setBonus.details.length-1].requiredCount)">
 								{{setBonus.equippedCount}}
 							</span>
 							]
-							 / 
+							/
 							[
 							<span *ngFor="let level of setBonus.details; let i=index">
 								<span [style.color]="getSetBonusColor(setBonus.equippedCount, level.requiredCount)">
@@ -62,10 +66,12 @@
 								<span *ngIf="i < setBonus.details.length - 1">|</span>
 							</span>
 							]
+						</span>
+						<div class="value">
 						</div>
 					</li>
 					<li *ngFor="let level of setBonus.details; let i=index" [style.color]="getSetBonusColor(setBonus.equippedCount, level.requiredCount)" (pointerenter)="showSkillDetails($event, level)" (pointerleave)="clearSkillDetails()" (click)="showOnClickSkillDetails(level)">
-						<span class="detail-icon" style="width:16px;">
+						<span class="detail-icon">
 						</span>
 						<span class="name">
 							<i class="far fa-question-circle"></i>&nbsp;{{level.skill.name}}
@@ -78,6 +84,10 @@
 								</span>
 								<span *ngFor="let key of (level.requiredCount - getMinCount(setBonus.equippedCount, level.requiredCount)) | numbersArr">
 									<span class="skill-bg-inactive">
+									</span>
+								</span>
+								<span *ngFor="let key of (5 - level.requiredCount) | numbersArr">
+									<span class="skill-bg-transparent">
 									</span>
 								</span>
 							</span>

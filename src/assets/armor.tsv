@@ -929,3 +929,13 @@ id	itemType	rarity	name	defense	fireResist	waterResist	thunderResist	iceResist	d
 1498	Hands	12	Blackveil Hazak Braces Beta +	156;164;172	-2	4	1	1	-3	recoveryUp-2;vaalSoulvein	4;1;1	vaal;hazak	0
 1499	Legs	12	Blackveil Hazak Coil Beta +	156;164;172	-2	4	1	1	-3	speedEating-2;vaalSoulvein	4;2	vaal;hazak	0
 1500	Feet	12	Blackveil Hazak Greaves Beta +	156;164;172	-2	4	1	1	-3	effluviaResistance-2;vaalSoulvein	4;3	vaal;hazak	0
+1501	Head	12	Namielle Cowl Alpha +	158;166;174	-3	4	3	0	-2	constitution-3;maximumMight-1;namielleDivinity	1	namielle	0
+1502	Chest	12	Namielle Cloak Alpha +	158;166;174	-3	4	3	0	-2	blightResistance-2;toolSpecialist-1;namielleDivinity	2;2	namielle	0
+1503	Hands	12	Namielle Gloves Alpha +	158;166;174	-3	4	3	0	-2	toolSpecialist-2;maximumMight-1;namielleDivinity	1	namielle	0
+1504	Legs	12	Namielle Coil Alpha +	158;166;174	-3	4	3	0	-2	constitution-2;staminaSurge-1;namielleDivinity	1;1;1	namielle	0
+1505	Feet	12	Namielle Greaves Alpha +	158;166;174	-3	4	3	0	-2	staminaSurge-2;blightResistance-1;namielleDivinity	2;1	namielle	0
+1506	Head	12	Namielle Cowl Beta +	158;166;174	-3	4	3	0	-2	constitution-2;maximumMight-1;namielleDivinity	4	namielle	0
+1507	Chest	12	Namielle Cloak Beta +	158;166;174	-3	4	3	0	-2	blightResistance-1;toolSpecialist-1;namielleDivinity	4;2	namielle	0
+1508	Hands	12	Namielle Gloves Beta +	158;166;174	-3	4	3	0	-2	toolSpecialist-2;namielleDivinity	4	namielle	0
+1509	Legs	12	Namielle Coil Beta +	158;166;174	-3	4	3	0	-2	constitution-1;staminaSurge-1;namielleDivinity	4;1;1	namielle	0
+1510	Feet	12	Namielle Greaves Beta +	158;166;174	-3	4	3	0	-2	staminaSurge-2;namielleDivinity	4;2	namielle	0

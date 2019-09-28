@@ -404,5 +404,19 @@
 				"pieces": 2
 			}
 		]
+	},
+	{
+		"id": "namielleDivinity",
+		"name": "Namielle Divinity",
+		"setLevels": [
+			{
+				"id": "elementAcceleration",
+				"pieces": 2
+			},
+			{
+				"id": "trueElementAcceleration",
+				"pieces": 4
+			}
+		]
 	}
 ]

@@ -2339,7 +2339,7 @@
 		"raiseSkillId": "bombardier",
 		"levels": [
 			{
-				"description": "Raises the maximum level of Bombardier Skill"
+				"description": "Raises the maximum level of Bombardier Skill."
 			}
 		]
 	},
@@ -2350,7 +2350,7 @@
 		"raiseSkillId": "slugger",
 		"levels": [
 			{
-				"description": "Raises the maximum level of Slugger Skill"
+				"description": "Raises the maximum level of Slugger Skill."
 			}
 		]
 	},
@@ -2361,7 +2361,7 @@
 		"raiseSkillId": "maximumMight",
 		"levels": [
 			{
-				"description": "Raises the maximum level of Maximum Might Skill"
+				"description": "Raises the maximum level of Maximum Might Skill."
 			}
 		]
 	},
@@ -2372,7 +2372,7 @@
 		"raiseSkillId": "agitator",
 		"levels": [
 			{
-				"description": "Raises the maximum level of Agitator Skill"
+				"description": "Raises the maximum level of Agitator Skill."
 			}
 		]
 	},
@@ -2383,7 +2383,27 @@
 		"raiseSkillId": "freeMeal",
 		"levels": [
 			{
-				"description": "Raises the maximum level of Free Meal Skill"
+				"description": "Raises the maximum level of Free Meal Skill."
+			}
+		]
+	},
+	{
+		"id": "elementAcceleration",
+		"name": "Element Acceleration",
+		"description": "",
+		"levels": [
+			{
+				"description": "Continually attacking a monster activates Free Element/Ammo Up Lv2 and increases elemental damage."
+			}
+		]
+	},
+	{
+		"id": "trueElementAcceleration",
+		"name": "True Element Acceleration",
+		"description": "",
+		"levels": [
+			{
+				"description": "Continually attacking a monster activates Free Element/Ammo Up Lv3 and increases elemental damage."
 			}
 		]
 	}

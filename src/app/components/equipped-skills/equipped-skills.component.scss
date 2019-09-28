@@ -10,13 +10,13 @@ li {
 	padding: 2px 4px;
 	cursor: default;
 	display: grid;
-	grid-template-columns: min-content 45% min-content;
+	grid-template-columns: min-content auto min-content;
 	grid-gap: 4px;
 
 	.detail-icon {
 		grid-column: 1;
 		display: inline-block !important;
-		position:relative;
+		position: relative;
 		margin-right: 4px;
 	}
 
@@ -69,6 +69,17 @@ li {
 	background-color: #C0C0C0;
 	color: #C0C0C0;
 	border-color: #C0C0C0;
+	border-width: 2px;
+	border-style: solid;
+	width: 12px !important;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.skill-bg-transparent {
+	background-color: transparent;
+	color: transparent;
+	border-color: transparent;
 	border-width: 2px;
 	border-style: solid;
 	width: 12px !important;
