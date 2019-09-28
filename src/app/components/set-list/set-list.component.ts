@@ -1,5 +1,4 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { SortablejsOptions } from 'angular-sortablejs';
 import * as _ from 'lodash';
 import { SavedSetModel } from 'src/app/models/saved-set.model';
 import { SetService } from 'src/app/services/set.service';
@@ -19,21 +18,12 @@ export class SetListComponent implements OnInit, AfterViewInit {
 
 	@ViewChild('saveBox', { static: true }) saveBox: ElementRef;
 
-	eventOptions: SortablejsOptions = {};
-
 	weaponTypeFilter?: WeaponType;
 	hideFilterContainer = true;
 
 	constructor(
 		private setService: SetService
 	) {
-		this.eventOptions = {
-			onUpdate: (event) => {
-				if (this.selectedSetIndex == event.oldIndex) {
-					this.selectedSetIndex = event.newIndex;
-				}
-			}
-		};
 		this.setService.setsUpdated$.subscribe(sets => {
 			this.sets = sets;
 			if (this.weaponTypeFilter) {

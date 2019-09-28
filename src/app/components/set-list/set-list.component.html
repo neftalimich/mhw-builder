@@ -56,30 +56,28 @@
 	</div>
 
 	<div class="scroll-container" *ngIf="sets">
-		<div [sortablejs]="sets" [sortablejsOptions]="eventOptions">
-			<div *ngFor="let item of filteredItems; let i = index" class="scroll-item-container">
-				<div class="icon-container text-left">
-					<img [src]="'assets/images/weapons/'+item.weaponType.toLowerCase()+'-icon.png'" *ngIf="item.weaponType" alt="weapon" />
-				</div>
-				<div class="name-container" (click)="select(item, i)" [ngClass]="{'sharp-2':i==selectedSetIndex}">
-					{{item.setName}}
-				</div>
-				<div class="stats-container text-right" (click)="select(item, i)">
-					<span>{{item.totalAttack}}</span>
-					<span *ngIf="item.element || item.ailment"> (</span>
-					<span [ngClass]="item.element" *ngIf="item.element">{{item.elementAttack}}</span>
-					<span *ngIf="item.element && item.ailment">/</span>
-					<span [ngClass]="item.ailment" *ngIf="item.ailment">{{item.ailmentAttack}}</span>
-					<span *ngIf="item.element || item.ailment">)</span>
-				</div>
-				<div class="buttons-container text-right">
-					<button type="button" (click)="remove(i)">
-						<i class="fas fa-trash" [ngClass]="{'trash-color':item.confirm}"></i>
-					</button>
-					<button [hidden]="!item.confirm">
-						<i class="fas fa-times" (click)="item.confirm=false"></i>
-					</button>
-				</div>
+		<div *ngFor="let item of filteredItems; let i = index" class="scroll-item-container">
+			<div class="icon-container text-left">
+				<img [src]="'assets/images/weapons/'+item.weaponType.toLowerCase()+'-icon.png'" *ngIf="item.weaponType" alt="weapon" />
+			</div>
+			<div class="name-container" (click)="select(item, i)" [ngClass]="{'sharp-2':i==selectedSetIndex}">
+				{{item.setName}}
+			</div>
+			<div class="stats-container text-right" (click)="select(item, i)">
+				<span>{{item.totalAttack}}</span>
+				<span *ngIf="item.element || item.ailment"> (</span>
+				<span [ngClass]="item.element" *ngIf="item.element">{{item.elementAttack}}</span>
+				<span *ngIf="item.element && item.ailment">/</span>
+				<span [ngClass]="item.ailment" *ngIf="item.ailment">{{item.ailmentAttack}}</span>
+				<span *ngIf="item.element || item.ailment">)</span>
+			</div>
+			<div class="buttons-container text-right">
+				<button type="button" (click)="remove(i)">
+					<i class="fas fa-trash" [ngClass]="{'trash-color':item.confirm}"></i>
+				</button>
+				<button [hidden]="!item.confirm">
+					<i class="fas fa-times" (click)="item.confirm=false"></i>
+				</button>
 			</div>
 		</div>
 	</div>

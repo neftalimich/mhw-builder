@@ -2,7 +2,6 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
 import { HttpClientModule } from '@angular/common/http';
 import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { SortablejsModule } from 'angular-sortablejs';
 import { VirtualScrollerModule } from 'ngx-virtual-scroller';
 import { AppComponent } from './app.component';
 import { AmmoCapacitiesComponent } from './components/ammo-capacities/ammo-capacities.component';
@@ -88,7 +87,6 @@ import { TooltipService } from './services/tooltip.service';
 		BrowserModule,
 		HttpClientModule,
 		VirtualScrollerModule,
-		SortablejsModule.forRoot({ animation: 150 }),
 		DataModule,
 		CommonModule
 	],
