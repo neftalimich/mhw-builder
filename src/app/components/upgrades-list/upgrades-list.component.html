@@ -2,7 +2,7 @@
 	<table class="upgrades-table">
 		<thead>
 			<tr>
-				<th class="text-left">[{{upgradesContainer.used}}/{{slots}}]</th>
+				<th class="text-left">[{{upgradeContainer.used}}/{{upgradeContainer.slots}}]</th>
 				<th class="text-center">Lv1</th>
 				<th class="text-center">Lv2</th>
 				<th class="text-center">Lv3</th>
@@ -21,17 +21,17 @@
 		<tfoot>
 			<tr>
 				<td colspan="4" class="text-center" style="background-color:#323232!important;">
-					<span *ngFor="let detail of upgradesContainer.upgradesDetail; let i = index">
+					<span *ngFor="let detail of upgradeContainer.upgradeDetails; let i = index">
 						<span *ngFor="let key of detail.totalSlots | numbersArr">
 							<span [class]="'hex-o-'+i" style="font-size: 30px;">&#x2B22;</span>
 						</span>
 					</span>
-					<span *ngFor="let key of (slots - upgradesContainer.used) | numbersArr">
+					<span *ngFor="let key of (upgradeContainer.slots - upgradeContainer.used) | numbersArr">
 						<span class="hex-gray" style="font-size: 30px;">&#x2B22;</span>
 					</span>
 				</td>
-				<td class="text-center">
-					<button type="button" (click)="selectAugmentation()">OK</button>
+				<td class="text-center" (click)="selectAugmentation()" style="cursor:pointer;">
+					<button type="button">OK</button>
 				</td>
 			</tr>
 		</tfoot>

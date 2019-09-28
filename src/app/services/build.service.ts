@@ -4,6 +4,7 @@ import { Subject } from 'rxjs';
 import { ItemSlotComponent } from '../components/item-slot/item-slot.component';
 import { BuildItemModel, BuildModel } from '../models/build.model';
 import { ItemModel } from '../models/item.model';
+import { UpgradeContainerModel, UpgradeDetailModel } from '../models/upgrade-container.model';
 import { ElementType } from '../types/element.type';
 import { EquipmentCategoryType } from '../types/equipment-category.type';
 import { ItemType } from '../types/item.type';
@@ -46,6 +47,10 @@ export class BuildService {
 			if (!this.loadingBuild) { this.updateBuildId(); }
 		});
 
+		this.slotService.upgradeSelected$.subscribe(() => {
+			if (!this.loadingBuild) { this.updateBuildId(); }
+		});
+
 		this.slotService.modificationSelected$.subscribe(() => {
 			if (!this.loadingBuild) { this.updateBuildId(); }
 		});
@@ -83,6 +88,7 @@ export class BuildService {
 		const itemRegex = /(?<=i)([\d]+)/g;
 		const decoRegex = /(?<=d)([\d]+)/g;
 		const augRegex = /(?<=a)([\d]+)/g;
+		const upgRegex = /(?<=u)([\d]+)/g;
 		const kinsectRegex = /(?<=k)([\d]+)/g;
 		const modRegex = /(?<=m)([\d]+)/g;
 		const elementRegex = /(?<=e)([\d]+)/g;
@@ -114,6 +120,17 @@ export class BuildService {
 				for (const aug of augs) {
 					buildItem.augmentationIds.push(parseInt(aug, 10));
 				}
+			}
+
+			const upgs = itemGroup.match(upgRegex);
+			if (upgs) {
+				buildItem.upgradesLevels = [];
+				buildItem.upgradesLevels.push(parseInt(upgs.toString().substring(0, 1), 10)); // Attack
+				buildItem.upgradesLevels.push(parseInt(upgs.toString().substring(1, 2), 10)); // Affinity
+				buildItem.upgradesLevels.push(parseInt(upgs.toString().substring(2, 3), 10)); // Defense
+				buildItem.upgradesLevels.push(parseInt(upgs.toString().substring(3, 4), 10)); // Slots
+				buildItem.upgradesLevels.push(parseInt(upgs.toString().substring(4, 5), 10)); // Health
+				buildItem.upgradesLevels.push(parseInt(upgs.toString().substring(5, 6), 10)); // Element/Ailment
 			}
 
 			const mods = itemGroup.match(modRegex);
@@ -215,6 +232,59 @@ export class BuildService {
 								}
 							}
 						}
+					}
+
+					if (buildItem.upgradesLevels) {
+						const upgrades = this.dataService.getUpgrades();
+						const upgradeContainer = new UpgradeContainerModel();
+
+						if (item.rarity == 10) {
+							upgradeContainer.slots = 7;
+						} else if (item.rarity == 11) {
+							upgradeContainer.slots = 5;
+						} else if (item.rarity == 12) {
+							upgradeContainer.slots = 4;
+						}
+
+						for (let i = 0; i < buildItem.upgradesLevels.length; i++) {
+							const detail = new UpgradeDetailModel;
+							detail.type = upgrades[i].type;
+							detail.level = buildItem.upgradesLevels[i];
+							if (detail.level > 0) {
+								detail.requiredSlots = upgrades[i].levels[buildItem.upgradesLevels[i] - 1].requiredSlots;
+								detail.totalSlots = upgrades[i].levels[buildItem.upgradesLevels[i] - 1].totalSlots;
+
+								detail.passiveAttack = upgrades[i].levels[buildItem.upgradesLevels[i] - 1].passiveAttack;
+								detail.passiveAffinity = upgrades[i].levels[buildItem.upgradesLevels[i] - 1].passiveAffinity;
+								detail.passiveDefense = upgrades[i].levels[buildItem.upgradesLevels[i] - 1].passiveDefense;
+								detail.slotLevel = upgrades[i].levels[buildItem.upgradesLevels[i] - 1].slotLevel;
+								detail.healOnHitPercent = upgrades[i].levels[buildItem.upgradesLevels[i] - 1].healOnHitPercent;
+								detail.passiveElement = upgrades[i].levels[buildItem.upgradesLevels[i] - 1].passiveElement;
+								detail.passiveAilment = upgrades[i].levels[buildItem.upgradesLevels[i] - 1].passiveAilment;
+
+								upgradeContainer.used += detail.totalSlots;
+							} else {
+								detail.requiredSlots = 0;
+								detail.totalSlots = 0;
+
+								detail.passiveAttack = 0;
+								detail.passiveAffinity = 0;
+								detail.passiveDefense = 0;
+								detail.slotLevel = 0;
+								detail.healOnHitPercent = 0;
+								detail.passiveElement = 0;
+								detail.passiveAilment = 0;
+							}
+							upgradeContainer.upgradeDetails.push(detail);
+						}
+
+						slot.upgradeSlot.slots = upgradeContainer.slots;
+						slot.upgradeSlot.upgradeContainer = upgradeContainer;
+
+						this.slotService.selectUpgradeSlot(slot.upgradeSlot);
+
+						const newUpg = Object.assign({}, upgradeContainer);
+						this.slotService.selectUpgradeContainer(newUpg);
 					}
 
 					switch (item.weaponType) {
@@ -323,6 +393,12 @@ export class BuildService {
 					for (const aug of this.equipmentService.augmentations) {
 						if (aug.id) {
 							result += `a${aug.id}`;
+						}
+					}
+					if (this.equipmentService.upgradeContainer) {
+						result += 'u';
+						for (const detail of this.equipmentService.upgradeContainer.upgradeDetails) {
+							result += `${detail.level}`;
 						}
 					}
 				}

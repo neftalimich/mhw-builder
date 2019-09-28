@@ -1,5 +1,5 @@
-import { AugmentationType } from "../types/augmentation.type";
-import { SkillReferenceModel } from "./skill-reference.model";
+import { AugmentationType } from '../types/augmentation.type';
+import { SkillReferenceModel } from './skill-reference.model';
 
 export class UpgradeModel {
 	id: number;
@@ -23,6 +23,6 @@ export class UpgradeLevelModel {
 	passiveElement: number;
 	passiveAilment: number;
 	healOnHitPercent: number;
-	
+
 	skills: SkillReferenceModel[];
 }

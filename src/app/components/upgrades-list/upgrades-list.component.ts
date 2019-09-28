@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { UpgradeContainerModel, UpgradeDetailModel } from '../../models/upgrade-container.model';
 import { UpgradeLevelModel, UpgradeModel } from '../../models/upgrade.model';
-import { UpgradeDetailModel, UpgradesContainerModel } from '../../models/upgrades-contrainer.model';
 import { DataService } from '../../services/data.service';
 import { SlotService } from '../../services/slot.service';
 import { TooltipService } from '../../services/tooltip.service';
@@ -13,42 +13,38 @@ import { TooltipService } from '../../services/tooltip.service';
 export class UpgradesListComponent implements OnInit {
 	upgrades: UpgradeModel[];
 
-	private _slots: number;
-	private _upgradesContainer: UpgradesContainerModel;
+	private _upgradeContainer: UpgradeContainerModel;
 
 	@Input()
-	set slots(slots: number) {
-		this._slots = slots;
+	set upgradeContainer(upgradeContainer: UpgradeContainerModel) {
+		console.log(upgradeContainer);
+		if (upgradeContainer) {
+			this._upgradeContainer = upgradeContainer;
+		}
 	}
-	get slots(): number { return this._slots; }
+	get upgradeContainer(): UpgradeContainerModel { return this._upgradeContainer; }
 
-	set upgradesContainer(upgradesContainer: UpgradesContainerModel) {
-		this._upgradesContainer = upgradesContainer;
-	}
-	get upgradesContainer(): UpgradesContainerModel { return this._upgradesContainer; }
-
-	@Output() upgradesContainerSelected = new EventEmitter<UpgradesContainerModel>();
+	@Output() upgradeContainerSelected = new EventEmitter<UpgradeContainerModel>();
 
 	constructor(
 		private dataService: DataService,
 		private slotService: SlotService,
 		private tooltipService: TooltipService
 	) {
-		this.upgradesContainer = new UpgradesContainerModel();
-		this.upgradesContainer.used = 0;
-		this.upgradesContainer.slots = this.slots;
-		this.upgradesContainer.hasCustomUpgrades = false;
+		console.log(this.upgradeContainer);
 	}
 
 	ngOnInit(): void {
 		this.loadItems();
-		for (let cAug of this.upgrades) {
-			let newDetail = new UpgradeDetailModel();
-			newDetail.type = cAug.type;
-			newDetail.level = 0;
-			newDetail.requiredSlots = 0;
-			newDetail.totalSlots = 0;
-			this.upgradesContainer.upgradeDetails.push(newDetail);
+		if (this.upgradeContainer.upgradeDetails.length == 0) {
+			for (const cAug of this.upgrades) {
+				const newDetail = new UpgradeDetailModel();
+				newDetail.type = cAug.type;
+				newDetail.level = 0;
+				newDetail.requiredSlots = 0;
+				newDetail.totalSlots = 0;
+				this.upgradeContainer.upgradeDetails.push(newDetail);
+			}
 		}
 	}
 
@@ -57,36 +53,35 @@ export class UpgradesListComponent implements OnInit {
 	}
 
 	selectAugmentation() {
-		const upgradesContainer = JSON.parse(JSON.stringify(this.upgradesContainer));
-		this.slotService.selectUpgradesContainer(upgradesContainer);
+		const newUpg = Object.assign({}, this.upgradeContainer);
+		this.slotService.selectUpgradeContainer(newUpg);
 	}
 
 	selectAugLevel(augIndex: number, level: number) {
-		let auxAug = this.upgradesContainer.upgradeDetails[augIndex];
-		let auxLevel = this.upgrades[augIndex].levels[level - 1];
+		const auxAug = this.upgradeContainer.upgradeDetails[augIndex];
+		const auxLevel = this.upgrades[augIndex].levels[level - 1];
 		if (auxAug.level == level) {
 			auxAug.level = level - 1;
 			if (level > 1) {
-				let auxDown = this.upgrades[augIndex].levels[level - 2];
-				this.upgradesContainer.used -= auxAug.totalSlots;
-				this.upgradesContainer.used += auxDown.totalSlots;
+				const auxDown = this.upgrades[augIndex].levels[level - 2];
+				this.upgradeContainer.used -= auxAug.totalSlots;
+				this.upgradeContainer.used += auxDown.totalSlots;
 
 				this.updatePassiveStats(auxAug, auxDown);
 			} else {
-				this.upgradesContainer.used -= auxAug.totalSlots;
+				this.upgradeContainer.used -= auxAug.totalSlots;
 
 				this.clearPassiveStats(auxAug, auxLevel);
 			}
 		} else {
-			if (this.upgradesContainer.used - auxAug.totalSlots + auxLevel.totalSlots <= this.slots) {
-				this.upgradesContainer.used -= auxAug.totalSlots;
-				this.upgradesContainer.used += auxLevel.totalSlots;
+			if (this.upgradeContainer.used - auxAug.totalSlots + auxLevel.totalSlots <= this.upgradeContainer.slots) {
+				this.upgradeContainer.used -= auxAug.totalSlots;
+				this.upgradeContainer.used += auxLevel.totalSlots;
 
 				auxAug.level = level;
 				this.updatePassiveStats(auxAug, auxLevel);
 			}
 		}
-		console.log(this.upgradesContainer.upgradeDetails);
 	}
 
 	updatePassiveStats(aug: UpgradeDetailModel, level: UpgradeLevelModel) {
@@ -114,13 +109,13 @@ export class UpgradesListComponent implements OnInit {
 	}
 
 	getHexagonClass(augIndex: number, levelIndex: number) {
-		let auxAug = this.upgradesContainer.upgradeDetails[augIndex];
-		let auxLevel = this.upgrades[augIndex].levels[levelIndex];
+		const auxAug = this.upgradeContainer.upgradeDetails[augIndex];
+		const auxLevel = this.upgrades[augIndex].levels[levelIndex];
 
 		if (levelIndex + 1 <= auxAug.level) {
 			return 'hex-o-' + augIndex;
 		} else {
-			if (this.upgradesContainer.used - auxAug.totalSlots + auxLevel.totalSlots <= this.slots) {
+			if (this.upgradeContainer.used - auxAug.totalSlots + auxLevel.totalSlots <= this.upgradeContainer.slots) {
 				return 'hex-' + augIndex;
 			} else {
 				return 'hex-' + augIndex;
@@ -129,13 +124,13 @@ export class UpgradesListComponent implements OnInit {
 	}
 
 	getBackgroundColor(augIndex: number, levelIndex: number) {
-		let auxAug = this.upgradesContainer.upgradeDetails[augIndex];
-		let auxLevel = this.upgrades[augIndex].levels[levelIndex];
+		const auxAug = this.upgradeContainer.upgradeDetails[augIndex];
+		const auxLevel = this.upgrades[augIndex].levels[levelIndex];
 
 		if (levelIndex + 1 <= auxAug.level) {
 			return '#525252';
 		} else {
-			if (this.upgradesContainer.used - auxAug.totalSlots + auxLevel.totalSlots <= this.slots) {
+			if (this.upgradeContainer.used - auxAug.totalSlots + auxLevel.totalSlots <= this.upgradeContainer.slots) {
 				return '';
 			} else {
 				return '#1E1E1E';

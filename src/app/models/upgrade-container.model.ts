@@ -1,6 +1,6 @@
-import { AugmentationType } from "../types/augmentation.type";
+import { AugmentationType } from '../types/augmentation.type';
 
-export class UpgradesContainerModel {
+export class UpgradeContainerModel {
 	slots: number;
 	used: number;
 	hasCustomUpgrades: boolean;
@@ -26,6 +26,7 @@ export class UpgradeDetailModel {
 	passiveAffinity: number;
 	passiveDefense: number;
 	healOnHitPercent: number;
+	slotLevel: number;
 	passiveElement: number;
 	passiveAilment: number;
 
@@ -33,6 +34,7 @@ export class UpgradeDetailModel {
 		this.passiveAttack = 0;
 		this.passiveAffinity = 0;
 		this.passiveDefense = 0;
+		this.slotLevel = 0;
 		this.healOnHitPercent = 0;
 		this.passiveElement = 0;
 		this.passiveAilment = 0;

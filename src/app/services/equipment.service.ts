@@ -6,8 +6,7 @@ import { EquippedSkillModel } from '../models/equipped-skill.model';
 import { ItemModel } from '../models/item.model';
 import { KinsectModel } from '../models/kinsect.model';
 import { ModificationModel } from '../models/modification.model';
-import { UpgradeModel } from '../models/upgrade.model';
-import { UpgradesContainerModel } from '../models/upgrades-contrainer.model';
+import { UpgradeContainerModel } from '../models/upgrade-container.model';
 import { SkillService } from './skill.service';
 import { StatService } from './stat.service';
 
@@ -17,7 +16,7 @@ export class EquipmentService {
 	public items: ItemModel[];
 	public decorations: DecorationModel[];
 	public augmentations: AugmentationModel[];
-	public upgradesContainer: UpgradesContainerModel;
+	public upgradeContainer: UpgradeContainerModel;
 	public modifications: ModificationModel[];
 	public kinsect: KinsectModel;
 
@@ -32,7 +31,7 @@ export class EquipmentService {
 
 		this.skillService.skillsUpdated$.subscribe(skills => {
 			this.skills = skills;
-			this.statService.update(skills, this.items, this.augmentations, this.modifications, this.kinsect);
+			this.statService.update(skills, this.items, this.augmentations, this.upgradeContainer, this.modifications, this.kinsect);
 		});
 	}
 
@@ -50,9 +49,9 @@ export class EquipmentService {
 		this.augmentations.push(augmentation);
 		this.updateSkills();
 	}
-	addUpgrade(upgradesContainer: UpgradesContainerModel) {
-		this.upgradesContainer = upgradesContainer;
-		this.updateSkills();
+	addUpgrade(upgradeContainer: UpgradeContainerModel) {
+		this.upgradeContainer = upgradeContainer;
+		this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.modifications, this.kinsect);
 	}
 
 	addModification(modification: ModificationModel) {
@@ -62,7 +61,7 @@ export class EquipmentService {
 
 	addKinsect(kinsect: KinsectModel) {
 		this.kinsect = kinsect;
-		this.statService.update(this.skills, this.items, this.augmentations, this.modifications, this.kinsect);
+		this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.modifications, this.kinsect);
 	}
 
 	removeItem(item: ItemModel) {
@@ -81,7 +80,7 @@ export class EquipmentService {
 	}
 
 	removeUpgrade() {
-		this.upgradesContainer = null;
+		this.upgradeContainer = null;
 		this.updateSkills();
 	}
 

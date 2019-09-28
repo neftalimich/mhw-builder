@@ -3,7 +3,7 @@ import { KinsectModel } from 'src/app/models/kinsect.model';
 import { ModificationModel } from 'src/app/models/modification.model';
 import { AugmentationModel } from '../../models/augmentation.model';
 import { ItemModel } from '../../models/item.model';
-import { UpgradesContainerModel } from '../../models/upgrades-contrainer.model';
+import { UpgradeContainerModel } from '../../models/upgrade-container.model';
 import { DataService } from '../../services/data.service';
 import { SlotService } from '../../services/slot.service';
 import { TooltipService } from '../../services/tooltip.service';
@@ -26,14 +26,14 @@ export class ItemSlotComponent implements OnInit {
 
 	@ViewChildren(DecorationSlotComponent) decorationSlots: QueryList<DecorationSlotComponent>;
 	@ViewChildren(AugmentationSlotComponent) augmentationSlots: QueryList<AugmentationSlotComponent>;
-	@ViewChildren(UpgradeSlotComponent) upgradeSlots: QueryList<UpgradeSlotComponent>;
+	@ViewChild(UpgradeSlotComponent, { static: false }) upgradeSlot: UpgradeSlotComponent;
 	@ViewChildren(ModificationSlotComponent) modificationSlots: QueryList<ModificationSlotComponent>;
 	@ViewChild(KinsectSlotComponent, { static: false }) kinsectSlot: KinsectSlotComponent;
 
 	item: ItemModel;
 
 	public augmentations = new Array<AugmentationModel>();
-	public upgradesContainer = new UpgradesContainerModel;
+	public upgradeContainer = new UpgradeContainerModel;
 	public modifications = new Array<ModificationModel>();
 	public kinsect: KinsectModel;
 	public selected: boolean;
@@ -44,7 +44,8 @@ export class ItemSlotComponent implements OnInit {
 		private tooltipService: TooltipService
 	) { }
 
-	ngOnInit() { }
+	ngOnInit() {
+	}
 
 	equipmentSlotClicked() {
 		this.slotService.selectItemSlot(this);

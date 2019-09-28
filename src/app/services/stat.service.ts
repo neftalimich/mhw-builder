@@ -8,6 +8,7 @@ import { KinsectModel } from '../models/kinsect.model';
 import { ModificationModel } from '../models/modification.model';
 import { SkillLevelModel } from '../models/skill-level.model';
 import { StatsModel } from '../models/stats.model';
+import { UpgradeContainerModel, UpgradeDetailModel } from '../models/upgrade-container.model';
 import { AilmentType } from '../types/ailment.type';
 import { DamageType } from '../types/damage.type';
 import { EldersealType } from '../types/elderseal.type';
@@ -30,11 +31,14 @@ export class StatService {
 		private calcService: CalculationService
 	) { }
 
-	update(skills: EquippedSkillModel[], items: ItemModel[], augmentations: AugmentationModel[], modifications: ModificationModel[], kinsect: KinsectModel) {
+	update(skills: EquippedSkillModel[], items: ItemModel[], augmentations: AugmentationModel[], upgradeContainer: UpgradeContainerModel, modifications: ModificationModel[], kinsect: KinsectModel) {
 		this.stats = new StatsModel();
 		this.updateItemStats(items);
 		this.updateSkillStats(skills);
 		this.updateAugmentations(augmentations);
+		if (upgradeContainer && upgradeContainer.upgradeDetails) {
+			this.updateUpgrades(upgradeContainer.upgradeDetails);
+		}
 		this.updateModifications(modifications);
 
 		const weapon = _.find(items, item => item.weaponType != null);
@@ -177,6 +181,28 @@ export class StatService {
 					if (level.passiveDefense) { this.stats.passiveDefense += level.passiveDefense; }
 					if (level.healOnHitPercent) { this.stats.healOnHitPercent += level.healOnHitPercent; }
 				}
+			}
+		}
+	}
+
+	private updateUpgrades(upgradeDetails: UpgradeDetailModel[]) {
+		for (const detail of upgradeDetails) {
+			if (detail.passiveAttack) { this.stats.passiveAttack += detail.passiveAttack; }
+			if (detail.passiveAffinity) { this.stats.passiveAffinity += detail.passiveAffinity; }
+			if (detail.passiveDefense) { this.stats.passiveDefense += detail.passiveDefense; }
+			if (detail.healOnHitPercent) { this.stats.healOnHitPercent += detail.healOnHitPercent; }
+			if (detail.passiveElement) {
+				this.stats.passiveFireAttack += detail.passiveElement;
+				this.stats.passiveWaterAttack += detail.passiveElement;
+				this.stats.passiveThunderAttack += detail.passiveElement;
+				this.stats.passiveIceAttack += detail.passiveElement;
+				this.stats.passiveDragonAttack += detail.passiveElement;
+			}
+			if (detail.passiveAilment) {
+				this.stats.passivePoisonAttack += detail.passiveAilment;
+				this.stats.passiveSleepAttack += detail.passiveAilment;
+				this.stats.passiveParalysisAttack += detail.passiveAilment;
+				this.stats.passiveBlastAttack += detail.passiveAilment;
 			}
 		}
 	}

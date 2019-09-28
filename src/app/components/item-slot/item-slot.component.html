@@ -46,8 +46,8 @@
 		</mhw-builder-augmentation-slot>
 	</div>
 
-	<div class="augmentation-container" *ngIf="upgradesContainer.slots>0">
-		<mhw-builder-upgrade-slot>
+	<div class="augmentation-container" *ngIf="upgradeContainer.slots>0">
+		<mhw-builder-upgrade-slot [slots]="upgradeContainer.slots">
 		</mhw-builder-upgrade-slot>
 	</div>
 

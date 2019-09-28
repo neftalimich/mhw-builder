@@ -13,12 +13,11 @@ import { ItemModel } from '../models/item.model';
 import { KinsectModel } from '../models/kinsect.model';
 import { ModificationModel } from '../models/modification.model';
 import { SlotEventModel } from '../models/slot-event.model';
-import { UpgradesContainerModel } from '../models/upgrades-contrainer.model';
+import { UpgradeContainerModel } from '../models/upgrade-container.model';
 import { EquipmentCategoryType } from '../types/equipment-category.type';
 import { ItemType } from '../types/item.type';
 import { WeaponType } from '../types/weapon.type';
 import { EquipmentService } from './equipment.service';
-import { UpgradeModel } from '../models/upgrade.model';
 
 @Injectable()
 export class SlotService {
@@ -28,7 +27,7 @@ export class SlotService {
 	public itemSelected$ = new Subject<SlotEventModel<ItemSlotComponent, ItemModel>>();
 	public decorationSelected$ = new Subject<SlotEventModel<DecorationSlotComponent, DecorationModel>>();
 	public augmentationSelected$ = new Subject<SlotEventModel<AugmentationSlotComponent, AugmentationModel>>();
-	public upgradeSelected$ = new Subject<SlotEventModel<UpgradeSlotComponent, UpgradesContainerModel>>();
+	public upgradeSelected$ = new Subject<SlotEventModel<UpgradeSlotComponent, UpgradeContainerModel>>();
 	public modificationSelected$ = new Subject<SlotEventModel<ModificationSlotComponent, ModificationModel>>();
 	public kinsectSelected$ = new Subject<SlotEventModel<KinsectSlotComponent, KinsectModel>>();
 	public itemLevelChanged$ = new Subject();
@@ -166,8 +165,8 @@ export class SlotService {
 
 	clearUpgradeSlot(slot: UpgradeSlotComponent) {
 		this.equipmentService.removeUpgrade();
-		//this.applySlotUpgrade();
-		slot.upgradesContainer = null;
+		this.applySlotUpgrade(0);
+		slot.upgradeContainer = null;
 		this.upgradeSelected$.next({ slot: slot, equipment: null });
 	}
 
@@ -216,14 +215,14 @@ export class SlotService {
 						new AugmentationModel()
 					];
 				} else if (item.rarity == 10) {
-					this.selectedItemSlot.upgradesContainer = new UpgradesContainerModel();
-					this.selectedItemSlot.upgradesContainer.slots = 7;
+					this.selectedItemSlot.upgradeContainer = new UpgradeContainerModel();
+					this.selectedItemSlot.upgradeContainer.slots = 7;
 				} else if (item.rarity == 11) {
-					this.selectedItemSlot.upgradesContainer = new UpgradesContainerModel();
-					this.selectedItemSlot.upgradesContainer.slots = 5;
+					this.selectedItemSlot.upgradeContainer = new UpgradeContainerModel();
+					this.selectedItemSlot.upgradeContainer.slots = 5;
 				} else if (item.rarity == 12) {
-					this.selectedItemSlot.upgradesContainer = new UpgradesContainerModel();
-					this.selectedItemSlot.upgradesContainer.slots = 4;
+					this.selectedItemSlot.upgradeContainer = new UpgradeContainerModel();
+					this.selectedItemSlot.upgradeContainer.slots = 4;
 				} else {
 					this.selectedItemSlot.augmentations = [];
 				}
@@ -277,16 +276,16 @@ export class SlotService {
 		}
 	}
 
-	selectUpgradesContainer(upgradesContainer: UpgradesContainerModel) {
+	selectUpgradeContainer(upgradeContainer: UpgradeContainerModel) {
 		if (this.selectedUpgradeSlot) {
-			if (this.selectedUpgradeSlot.upgradesContainer) {
+			if (this.selectedUpgradeSlot.upgradeContainer) {
 				this.equipmentService.removeUpgrade();
 			}
 
-			this.equipmentService.addUpgrade(upgradesContainer);
-			//this.applySlotUpgrade();
-			this.selectedUpgradeSlot.upgradesContainer = upgradesContainer;
-			this.upgradeSelected$.next({ slot: this.selectedUpgradeSlot, equipment: upgradesContainer });
+			this.equipmentService.addUpgrade(upgradeContainer);
+			this.applySlotUpgrade(upgradeContainer.upgradeDetails[3].level);
+			this.selectedUpgradeSlot.upgradeContainer = upgradeContainer;
+			this.upgradeSelected$.next({ slot: this.selectedUpgradeSlot, equipment: upgradeContainer });
 		}
 	}
 
@@ -358,6 +357,31 @@ export class SlotService {
 		}
 	}
 
+	private applySlotUpgrade(slotLevel: number) {
+		const augDecorationSlot = _.find(this.weaponSlot.item.slots, slot => slot.augmentation);
+
+		if (slotLevel > 0) {
+			this.changeDetector.detectChanges();
+			if (augDecorationSlot) {
+				augDecorationSlot.level = slotLevel;
+				const decoSlot = this.weaponSlot.decorationSlots.last;
+				if (decoSlot && decoSlot.decoration && augDecorationSlot.level < decoSlot.decoration.level) {
+					this.clearDecorationSlot(decoSlot);
+				}
+			} else {
+				if (!this.weaponSlot.item.slots) {
+					this.weaponSlot.item.slots = [];
+				}
+				this.weaponSlot.item.slots.push({ level: slotLevel, augmentation: true });
+			}
+		} else {
+			if (_.some(this.weaponSlot.item.slots, decorationSlot => decorationSlot.augmentation)) {
+				this.weaponSlot.item.slots = _.reject(this.weaponSlot.item.slots, decorationSlot => decorationSlot === augDecorationSlot);
+				this.equipmentService.removeDecoration(this.weaponSlot.decorationSlots.last.decoration);
+			}
+		}
+	}
+
 	private clearSlotItems(slot: ItemSlotComponent) {
 		this.equipmentService.removeItem(slot.item);
 
@@ -387,6 +411,10 @@ export class SlotService {
 			this.selectedAugmentationSlot.selected = false;
 		}
 
+		if (this.selectedUpgradeSlot) {
+			this.selectedUpgradeSlot.selected = false;
+		}
+
 		if (this.selectedModificationSlot) {
 			this.selectedModificationSlot.selected = false;
 		}
@@ -398,6 +426,7 @@ export class SlotService {
 		this.selectedItemSlot = null;
 		this.selectedDecorationSlot = null;
 		this.selectedAugmentationSlot = null;
+		this.selectedUpgradeSlot = null;
 		this.selectedModificationSlot = null;
 		this.selectedKinsectSlot = null;
 	}

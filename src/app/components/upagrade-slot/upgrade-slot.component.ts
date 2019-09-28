@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { UpgradesContainerModel } from '../../models/upgrades-contrainer.model';
+import { UpgradeContainerModel } from '../../models/upgrade-container.model';
 import { SlotService } from '../../services/slot.service';
 import { TooltipService } from '../../services/tooltip.service';
 import { ItemType } from '../../types/item.type';
@@ -12,7 +12,7 @@ import { ItemType } from '../../types/item.type';
 export class UpgradeSlotComponent implements OnInit {
 	slotName = ItemType.Upgrade;
 
-	upgradesContainer: UpgradesContainerModel;
+	upgradeContainer: UpgradeContainerModel;
 
 	@Input() slots: number;
 
@@ -21,9 +21,11 @@ export class UpgradeSlotComponent implements OnInit {
 	constructor(
 		private slotService: SlotService,
 		private tooltipService: TooltipService
-	) { }
+	) {
+	}
 
-	ngOnInit(): void { }
+	ngOnInit(): void {
+	}
 
 	clicked() {
 		this.slotService.selectUpgradeSlot(this);
@@ -32,16 +34,5 @@ export class UpgradeSlotComponent implements OnInit {
 	clearClicked(event: Event) {
 		event.stopPropagation();
 		this.slotService.clearUpgradeSlot(this);
-		//this.clearTooltipUpgrade();
 	}
-
-	//setTooltipUpgrade(event: PointerEvent, upgrade: UpgradeModel) {
-	//	if (event.pointerType == PointerType.Mouse) {
-	//		this.tooltipService.setUpgrade(upgrade);
-	//	}
-	//}
-
-	//clearTooltipUpgrade() {
-	//	this.tooltipService.setUpgrade(null);
-	//}
 }
