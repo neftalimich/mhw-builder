@@ -283,7 +283,12 @@ export class SlotService {
 			}
 
 			this.equipmentService.addUpgrade(upgradeContainer);
-			this.applySlotUpgrade(upgradeContainer.upgradeDetails[3].level);
+
+			if (upgradeContainer.upgradeDetails.length > 0) {
+				this.applySlotUpgrade(upgradeContainer.upgradeDetails[3].level);
+			} else {
+				this.applySlotUpgrade(0);
+			}
 			this.selectedUpgradeSlot.upgradeContainer = upgradeContainer;
 			this.upgradeSelected$.next({ slot: this.selectedUpgradeSlot, equipment: upgradeContainer });
 		}

@@ -17,7 +17,6 @@ export class UpgradesListComponent implements OnInit {
 
 	@Input()
 	set upgradeContainer(upgradeContainer: UpgradeContainerModel) {
-		console.log(upgradeContainer);
 		if (upgradeContainer) {
 			this._upgradeContainer = upgradeContainer;
 		}
@@ -31,12 +30,11 @@ export class UpgradesListComponent implements OnInit {
 		private slotService: SlotService,
 		private tooltipService: TooltipService
 	) {
-		console.log(this.upgradeContainer);
 	}
 
 	ngOnInit(): void {
 		this.loadItems();
-		if (this.upgradeContainer.upgradeDetails.length == 0) {
+		if (this.upgradeContainer.upgradeDetails && this.upgradeContainer.upgradeDetails.length == 0) {
 			for (const cAug of this.upgrades) {
 				const newDetail = new UpgradeDetailModel();
 				newDetail.type = cAug.type;
@@ -53,7 +51,7 @@ export class UpgradesListComponent implements OnInit {
 	}
 
 	selectAugmentation() {
-		const newUpg = Object.assign({}, this.upgradeContainer);
+		const newUpg = JSON.parse(JSON.stringify(this.upgradeContainer));
 		this.slotService.selectUpgradeContainer(newUpg);
 	}
 

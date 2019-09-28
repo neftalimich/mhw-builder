@@ -12,9 +12,10 @@ import { ItemType } from '../../types/item.type';
 export class UpgradeSlotComponent implements OnInit {
 	slotName = ItemType.Upgrade;
 
+	@Input()
+	slots: number;
+	@Input()
 	upgradeContainer: UpgradeContainerModel;
-
-	@Input() slots: number;
 
 	public selected: boolean;
 

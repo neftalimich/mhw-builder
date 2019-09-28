@@ -283,7 +283,7 @@ export class BuildService {
 
 						this.slotService.selectUpgradeSlot(slot.upgradeSlot);
 
-						const newUpg = Object.assign({}, upgradeContainer);
+						const newUpg = JSON.parse(JSON.stringify(upgradeContainer));
 						this.slotService.selectUpgradeContainer(newUpg);
 					}
 
@@ -400,6 +400,8 @@ export class BuildService {
 						for (const detail of this.equipmentService.upgradeContainer.upgradeDetails) {
 							result += `${detail.level}`;
 						}
+					} else {
+						result += 'u00000';
 					}
 				}
 
