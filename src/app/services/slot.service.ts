@@ -277,7 +277,7 @@ export class SlotService {
 		}
 	}
 
-	selectUpgrade(upgradesContainer: UpgradesContainerModel) {
+	selectUpgradesContainer(upgradesContainer: UpgradesContainerModel) {
 		if (this.selectedUpgradeSlot) {
 			if (this.selectedUpgradeSlot.upgradesContainer) {
 				this.equipmentService.removeUpgrade();

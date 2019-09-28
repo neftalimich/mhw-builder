@@ -1,21 +1,22 @@
 <div class="container" (click)="clicked()" [class.selected]="selected">
 	<div class="slot-icon"><img [src]="'assets/images/village-icon.png'" alt="augment"></div>
 	<div class="selected-augmentation">
-		<span *ngIf="upgradesContainer?.upgradesLevels">
-			<span *ngFor="let level of upgradesContainer.upgradesLevels; let i = index">
-				<span *ngFor="let key of level.totalSlots | numbersArr">
-					<span [class]="'hex-'+i" style="font-size: 30px;">&#x2B22;</span>
-				</span>
-			</span>
-			<span *ngFor="let key of (slots - upgradesContainer.used) | numbersArr">
-				<span class="hex-gray" style="font-size: 30px;">&#x2B22;</span>
+		{{slots}}
+		<!--<span *ngIf="upgradesContainer?.upgradesLevels">
+		<span *ngFor="let level of upgradesContainer.upgradesLevels; let i = index">
+			<span *ngFor="let key of level.totalSlots | numbersArr">
+				<span [class]="'hex-'+i" style="font-size: 30px;">&#x2B22;</span>
 			</span>
 		</span>
-		<span *ngIf="!upgradesContainer?.upgradesLevels">
-			<span *ngFor="let key of slots | numbersArr">
-				<span class="hex-gray" style="font-size: 30px;">&#x2B22;</span>
-			</span>
+		<span *ngFor="let key of (slots - upgradesContainer.used) | numbersArr">
+			<span class="hex-gray" style="font-size: 30px;">&#x2B22;</span>
 		</span>
+	</span>
+	<span *ngIf="!upgradesContainer?.upgradesLevels">
+		<span *ngFor="let key of slots | numbersArr">
+			<span class="hex-gray" style="font-size: 30px;">&#x2B22;</span>
+		</span>
+	</span>-->
 	</div>
 
 	<button type="button" class="clear-button" (click)="clearClicked($event)">

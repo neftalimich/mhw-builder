@@ -4,19 +4,19 @@ export class UpgradesContainerModel {
 	slots: number;
 	used: number;
 	hasCustomUpgrades: boolean;
-	upgradesLevels: UpgradeLevelModel[];
+	upgradeDetails: UpgradeDetailModel[];
 	customUpgrades: string[];
 
 	constructor() {
 		this.slots = 0;
 		this.used = 0;
 		this.hasCustomUpgrades = false;
-		this.upgradesLevels = new Array<UpgradeLevelModel>();
+		this.upgradeDetails = new Array<UpgradeDetailModel>();
 		this.customUpgrades = ['', '', '', '', ''];
 	}
 }
 
-export class UpgradeLevelModel {
+export class UpgradeDetailModel {
 	type: AugmentationType;
 	level: number;
 	requiredSlots: number;
