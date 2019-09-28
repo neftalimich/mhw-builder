@@ -19,6 +19,18 @@ export class UpgradesListComponent implements OnInit {
 	set upgradeContainer(upgradeContainer: UpgradeContainerModel) {
 		if (upgradeContainer) {
 			this._upgradeContainer = upgradeContainer;
+
+			this.loadItems();
+			if (this.upgradeContainer.upgradeDetails && this.upgradeContainer.upgradeDetails.length == 0) {
+				for (const cAug of this.upgrades) {
+					const newDetail = new UpgradeDetailModel();
+					newDetail.type = cAug.type;
+					newDetail.level = 0;
+					newDetail.requiredSlots = 0;
+					newDetail.totalSlots = 0;
+					this.upgradeContainer.upgradeDetails.push(newDetail);
+				}
+			}
 		}
 	}
 	get upgradeContainer(): UpgradeContainerModel { return this._upgradeContainer; }
@@ -33,25 +45,14 @@ export class UpgradesListComponent implements OnInit {
 	}
 
 	ngOnInit(): void {
-		this.loadItems();
-		if (this.upgradeContainer.upgradeDetails && this.upgradeContainer.upgradeDetails.length == 0) {
-			for (const cAug of this.upgrades) {
-				const newDetail = new UpgradeDetailModel();
-				newDetail.type = cAug.type;
-				newDetail.level = 0;
-				newDetail.requiredSlots = 0;
-				newDetail.totalSlots = 0;
-				this.upgradeContainer.upgradeDetails.push(newDetail);
-			}
-		}
 	}
 
 	loadItems() {
 		this.upgrades = this.dataService.getUpgrades();
 	}
 
-	selectAugmentation() {
-		const newUpg = JSON.parse(JSON.stringify(this.upgradeContainer));
+	selectUpgrade() {
+		const newUpg = Object.assign({}, this.upgradeContainer);
 		this.slotService.selectUpgradeContainer(newUpg);
 	}
 

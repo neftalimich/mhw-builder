@@ -146,6 +146,12 @@ export class SlotService {
 		slot.item = null;
 		slot.augmentations = [];
 		slot.modifications = [];
+		if (slot.upgradeContainer) {
+			slot.upgradeContainer.slots = 0;
+			slot.upgradeContainer.used = 0;
+			slot.upgradeContainer.hasCustomUpgrades = false;
+			this.clearUpgradeContainer(slot.upgradeContainer);
+		}
 		slot.kinsect = null;
 		this.itemSelected$.next({ slot: slot, equipment: null });
 	}
@@ -166,8 +172,27 @@ export class SlotService {
 	clearUpgradeSlot(slot: UpgradeSlotComponent) {
 		this.equipmentService.removeUpgrade();
 		this.applySlotUpgrade(0);
-		slot.upgradeContainer = null;
+		if (slot.upgradeContainer) {
+			slot.upgradeContainer.used = 0;
+			this.clearUpgradeContainer(slot.upgradeContainer);
+		}
 		this.upgradeSelected$.next({ slot: slot, equipment: null });
+	}
+
+	clearUpgradeContainer(upgradeContainer: UpgradeContainerModel) {
+		for (const detail of upgradeContainer.upgradeDetails) {
+			detail.level = 0;
+			detail.totalSlots = 0;
+			detail.requiredSlots = 0;
+
+			detail.passiveAttack = 0;
+			detail.passiveAffinity = 0;
+			detail.passiveDefense = 0;
+			detail.slotLevel = 0;
+			detail.healOnHitPercent = 0;
+			detail.passiveElement = 0;
+			detail.passiveAilment = 0;
+		}
 	}
 
 	clearModificationSlot(slot: ModificationSlotComponent) {
@@ -199,6 +224,9 @@ export class SlotService {
 			this.selectedItemSlot.item = item;
 
 			if (item.equipmentCategory == EquipmentCategoryType.Weapon) {
+				this.selectedItemSlot.upgradeContainer = new UpgradeContainerModel();
+				this.selectedItemSlot.upgradeContainer.slots = 0;
+				this.selectedItemSlot.augmentations = [];
 				if (item.rarity == 6) {
 					this.selectedItemSlot.augmentations = [
 						new AugmentationModel(),
@@ -215,17 +243,14 @@ export class SlotService {
 						new AugmentationModel()
 					];
 				} else if (item.rarity == 10) {
-					this.selectedItemSlot.upgradeContainer = new UpgradeContainerModel();
+					
 					this.selectedItemSlot.upgradeContainer.slots = 7;
 				} else if (item.rarity == 11) {
-					this.selectedItemSlot.upgradeContainer = new UpgradeContainerModel();
 					this.selectedItemSlot.upgradeContainer.slots = 5;
 				} else if (item.rarity == 12) {
-					this.selectedItemSlot.upgradeContainer = new UpgradeContainerModel();
 					this.selectedItemSlot.upgradeContainer.slots = 4;
-				} else {
-					this.selectedItemSlot.augmentations = [];
 				}
+
 				this.selectedItemSlot.kinsect = null;
 				this.selectedItemSlot.modifications = [];
 				switch (item.weaponType) {

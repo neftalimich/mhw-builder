@@ -234,7 +234,7 @@ export class BuildService {
 						}
 					}
 
-					if (buildItem.upgradesLevels) {
+					if (buildItem.upgradesLevels && slot.upgradeSlot) {
 						const upgrades = this.dataService.getUpgrades();
 						const upgradeContainer = new UpgradeContainerModel();
 
@@ -244,6 +244,8 @@ export class BuildService {
 							upgradeContainer.slots = 5;
 						} else if (item.rarity == 12) {
 							upgradeContainer.slots = 4;
+						} else {
+							upgradeContainer.slots = 0;
 						}
 
 						for (let i = 0; i < buildItem.upgradesLevels.length; i++) {
@@ -281,10 +283,12 @@ export class BuildService {
 						slot.upgradeSlot.slots = upgradeContainer.slots;
 						slot.upgradeSlot.upgradeContainer = upgradeContainer;
 
+
 						this.slotService.selectUpgradeSlot(slot.upgradeSlot);
 
 						const newUpg = JSON.parse(JSON.stringify(upgradeContainer));
 						this.slotService.selectUpgradeContainer(newUpg);
+
 					}
 
 					switch (item.weaponType) {
