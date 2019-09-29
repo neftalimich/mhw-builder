@@ -16,7 +16,8 @@ export class BuildItemModel {
 	kinsectElementId?: number;
 	decorationIds?: number[];
 	augmentationIds?: number[];
-	upgradesLevels: number[];
+	upgradeLevels: number[];
+	customLevels: number[];
 	level?: number;
 	modificationIds: number[];
 }

@@ -36,6 +36,7 @@ export class ItemModel {
 	elementAttackIncreaseCapOverride: number;
 	elderseal?: EldersealType;
 	otherData?: OtherDataModel[];
+	hasCustomUpgrades?: boolean;
 	ammoCapacities?: AmmoCapacitiesModel;
 	melodies?: MelodiesModel;
 

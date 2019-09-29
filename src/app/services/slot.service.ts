@@ -226,7 +226,9 @@ export class SlotService {
 			if (item.equipmentCategory == EquipmentCategoryType.Weapon) {
 				this.selectedItemSlot.upgradeContainer = new UpgradeContainerModel();
 				this.selectedItemSlot.upgradeContainer.slots = 0;
+				this.selectedItemSlot.upgradeContainer.hasCustomUpgrades = item.hasCustomUpgrades;
 				this.selectedItemSlot.augmentations = [];
+
 				if (item.rarity == 6) {
 					this.selectedItemSlot.augmentations = [
 						new AugmentationModel(),
@@ -243,7 +245,6 @@ export class SlotService {
 						new AugmentationModel()
 					];
 				} else if (item.rarity == 10) {
-					
 					this.selectedItemSlot.upgradeContainer.slots = 7;
 				} else if (item.rarity == 11) {
 					this.selectedItemSlot.upgradeContainer.slots = 5;

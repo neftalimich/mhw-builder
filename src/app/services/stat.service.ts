@@ -36,8 +36,8 @@ export class StatService {
 		this.updateItemStats(items);
 		this.updateSkillStats(skills);
 		this.updateAugmentations(augmentations);
-		if (upgradeContainer && upgradeContainer.upgradeDetails) {
-			this.updateUpgrades(upgradeContainer.upgradeDetails);
+		if (upgradeContainer) {
+			this.updateUpgrades(upgradeContainer);
 		}
 		this.updateModifications(modifications);
 
@@ -185,8 +185,8 @@ export class StatService {
 		}
 	}
 
-	private updateUpgrades(upgradeDetails: UpgradeDetailModel[]) {
-		for (const detail of upgradeDetails) {
+	private updateUpgrades(upgradeContainer: UpgradeContainerModel) {
+		for (const detail of upgradeContainer.upgradeDetails) {
 			if (detail.passiveAttack) { this.stats.passiveAttack += detail.passiveAttack; }
 			if (detail.passiveAffinity) { this.stats.passiveAffinity += detail.passiveAffinity; }
 			if (detail.passiveDefense) { this.stats.passiveDefense += detail.passiveDefense; }
@@ -205,6 +205,24 @@ export class StatService {
 				this.stats.passiveBlastAttack += detail.passiveAilment;
 			}
 		}
+
+		const upgradePassiveAttack = upgradeContainer.customUpgrades.filter(custom => custom == 'Attack').length;
+		const upgradePassiveAffinity = upgradeContainer.customUpgrades.filter(custom => custom == 'Affinity').length;
+		const upgradePassiveAilmentElement = upgradeContainer.customUpgrades.filter(custom => custom == 'Element').length * 10;
+
+		this.stats.passiveAttack += upgradePassiveAttack;
+		this.stats.passiveAffinity += upgradePassiveAffinity;
+
+		this.stats.passiveFireAttack += upgradePassiveAilmentElement;
+		this.stats.passiveWaterAttack += upgradePassiveAilmentElement;
+		this.stats.passiveThunderAttack += upgradePassiveAilmentElement;
+		this.stats.passiveIceAttack += upgradePassiveAilmentElement;
+		this.stats.passiveDragonAttack += upgradePassiveAilmentElement;
+
+		this.stats.passivePoisonAttack += upgradePassiveAilmentElement;
+		this.stats.passiveSleepAttack += upgradePassiveAilmentElement;
+		this.stats.passiveParalysisAttack += upgradePassiveAilmentElement;
+		this.stats.passiveBlastAttack += upgradePassiveAilmentElement;
 	}
 
 	private updateModifications(modifications: ModificationModel[]) {

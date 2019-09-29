@@ -2,7 +2,7 @@ $slotHeight: 30px;
 
 .container {
 	display: grid;
-	grid-template-columns: 36px auto 36px;
+	grid-template-columns: 36px min-content auto 36px;
 	height: $slotHeight;
 	font-size: 14px;
 	cursor: pointer;
@@ -22,7 +22,15 @@ $slotHeight: 30px;
 		}
 	}
 
-	.selected-augmentation {
+	.selected-upgrade {
+		line-height: $slotHeight;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	.selected-custom {
+		padding-left: 5px;
 		line-height: $slotHeight;
 		overflow: hidden;
 		white-space: nowrap;

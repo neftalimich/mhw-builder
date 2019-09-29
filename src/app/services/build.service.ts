@@ -89,6 +89,7 @@ export class BuildService {
 		const decoRegex = /(?<=d)([\d]+)/g;
 		const augRegex = /(?<=a)([\d]+)/g;
 		const upgRegex = /(?<=u)([\d]+)/g;
+		const custRegex = /(?<=c)([\d]+)/g;
 		const kinsectRegex = /(?<=k)([\d]+)/g;
 		const modRegex = /(?<=m)([\d]+)/g;
 		const elementRegex = /(?<=e)([\d]+)/g;
@@ -124,13 +125,21 @@ export class BuildService {
 
 			const upgs = itemGroup.match(upgRegex);
 			if (upgs) {
-				buildItem.upgradesLevels = [];
-				buildItem.upgradesLevels.push(parseInt(upgs.toString().substring(0, 1), 10)); // Attack
-				buildItem.upgradesLevels.push(parseInt(upgs.toString().substring(1, 2), 10)); // Affinity
-				buildItem.upgradesLevels.push(parseInt(upgs.toString().substring(2, 3), 10)); // Defense
-				buildItem.upgradesLevels.push(parseInt(upgs.toString().substring(3, 4), 10)); // Slots
-				buildItem.upgradesLevels.push(parseInt(upgs.toString().substring(4, 5), 10)); // Health
-				buildItem.upgradesLevels.push(parseInt(upgs.toString().substring(5, 6), 10)); // Element/Ailment
+				buildItem.upgradeLevels = [];
+				buildItem.upgradeLevels.push(parseInt(upgs.toString().substring(0, 1), 10)); // Attack
+				buildItem.upgradeLevels.push(parseInt(upgs.toString().substring(1, 2), 10)); // Affinity
+				buildItem.upgradeLevels.push(parseInt(upgs.toString().substring(2, 3), 10)); // Defense
+				buildItem.upgradeLevels.push(parseInt(upgs.toString().substring(3, 4), 10)); // Slots
+				buildItem.upgradeLevels.push(parseInt(upgs.toString().substring(4, 5), 10)); // Health
+				buildItem.upgradeLevels.push(parseInt(upgs.toString().substring(5, 6), 10)); // Element/Ailment
+			}
+
+			const customs = itemGroup.match(custRegex);
+			if (customs) {
+				buildItem.customLevels = [];
+				buildItem.customLevels.push(parseInt(customs.toString().substring(0, 1), 10)); // Attack
+				buildItem.customLevels.push(parseInt(customs.toString().substring(1, 2), 10)); // Affinity
+				buildItem.customLevels.push(parseInt(customs.toString().substring(2, 3), 10)); // Element
 			}
 
 			const mods = itemGroup.match(modRegex);
@@ -234,10 +243,10 @@ export class BuildService {
 						}
 					}
 
-					if (buildItem.upgradesLevels && slot.upgradeSlot) {
+					if (buildItem.upgradeLevels && slot.upgradeSlot) {
 						const upgrades = this.dataService.getUpgrades();
 						const upgradeContainer = new UpgradeContainerModel();
-
+						upgradeContainer.hasCustomUpgrades = item.hasCustomUpgrades;
 						if (item.rarity == 10) {
 							upgradeContainer.slots = 7;
 						} else if (item.rarity == 11) {
@@ -248,21 +257,21 @@ export class BuildService {
 							upgradeContainer.slots = 0;
 						}
 
-						for (let i = 0; i < buildItem.upgradesLevels.length; i++) {
+						for (let i = 0; i < buildItem.upgradeLevels.length; i++) {
 							const detail = new UpgradeDetailModel;
 							detail.type = upgrades[i].type;
-							detail.level = buildItem.upgradesLevels[i];
+							detail.level = buildItem.upgradeLevels[i];
 							if (detail.level > 0) {
-								detail.requiredSlots = upgrades[i].levels[buildItem.upgradesLevels[i] - 1].requiredSlots;
-								detail.totalSlots = upgrades[i].levels[buildItem.upgradesLevels[i] - 1].totalSlots;
+								detail.requiredSlots = upgrades[i].levels[buildItem.upgradeLevels[i] - 1].requiredSlots;
+								detail.totalSlots = upgrades[i].levels[buildItem.upgradeLevels[i] - 1].totalSlots;
 
-								detail.passiveAttack = upgrades[i].levels[buildItem.upgradesLevels[i] - 1].passiveAttack;
-								detail.passiveAffinity = upgrades[i].levels[buildItem.upgradesLevels[i] - 1].passiveAffinity;
-								detail.passiveDefense = upgrades[i].levels[buildItem.upgradesLevels[i] - 1].passiveDefense;
-								detail.slotLevel = upgrades[i].levels[buildItem.upgradesLevels[i] - 1].slotLevel;
-								detail.healOnHitPercent = upgrades[i].levels[buildItem.upgradesLevels[i] - 1].healOnHitPercent;
-								detail.passiveElement = upgrades[i].levels[buildItem.upgradesLevels[i] - 1].passiveElement;
-								detail.passiveAilment = upgrades[i].levels[buildItem.upgradesLevels[i] - 1].passiveAilment;
+								detail.passiveAttack = upgrades[i].levels[buildItem.upgradeLevels[i] - 1].passiveAttack;
+								detail.passiveAffinity = upgrades[i].levels[buildItem.upgradeLevels[i] - 1].passiveAffinity;
+								detail.passiveDefense = upgrades[i].levels[buildItem.upgradeLevels[i] - 1].passiveDefense;
+								detail.slotLevel = upgrades[i].levels[buildItem.upgradeLevels[i] - 1].slotLevel;
+								detail.healOnHitPercent = upgrades[i].levels[buildItem.upgradeLevels[i] - 1].healOnHitPercent;
+								detail.passiveElement = upgrades[i].levels[buildItem.upgradeLevels[i] - 1].passiveElement;
+								detail.passiveAilment = upgrades[i].levels[buildItem.upgradeLevels[i] - 1].passiveAilment;
 
 								upgradeContainer.used += detail.totalSlots;
 							} else {
@@ -280,15 +289,28 @@ export class BuildService {
 							upgradeContainer.upgradeDetails.push(detail);
 						}
 
+						if (buildItem.customLevels) {
+							let idx = 0;
+							for (let i = 0; i < buildItem.customLevels[0]; i++) {
+								upgradeContainer.customUpgrades[idx] = 'Attack';
+								idx += 1;
+							}
+							for (let i = 0; i < buildItem.customLevels[1]; i++) {
+								upgradeContainer.customUpgrades[idx] = 'Affinity';
+								idx += 1;
+							}
+							for (let i = 0; i < buildItem.customLevels[2]; i++) {
+								upgradeContainer.customUpgrades[idx] = 'Element';
+								idx += 1;
+							}
+						}
+
 						slot.upgradeSlot.slots = upgradeContainer.slots;
 						slot.upgradeSlot.upgradeContainer = upgradeContainer;
 
-
 						this.slotService.selectUpgradeSlot(slot.upgradeSlot);
-
 						const newUpg = JSON.parse(JSON.stringify(upgradeContainer));
 						this.slotService.selectUpgradeContainer(newUpg);
-
 					}
 
 					switch (item.weaponType) {
@@ -404,8 +426,12 @@ export class BuildService {
 						for (const detail of this.equipmentService.upgradeContainer.upgradeDetails) {
 							result += `${detail.level}`;
 						}
+						const countAttack = this.equipmentService.upgradeContainer.customUpgrades.filter(custom => custom == 'Attack').length;
+						const countAffinity = this.equipmentService.upgradeContainer.customUpgrades.filter(custom => custom == 'Affinity').length;
+						const countElement = this.equipmentService.upgradeContainer.customUpgrades.filter(custom => custom == 'Element').length;
+						result += 'c' + countAttack + countAffinity + countElement;
 					} else {
-						result += 'u00000';
+						result += 'u00000c000';
 					}
 				}
 

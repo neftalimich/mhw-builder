@@ -15,16 +15,25 @@
 
 .upgrades-table tr:hover td:first-child {
 	border-left: 3px solid rgba(79,192,210,1);
+	background-color: #4E4E4E;
+}
+
+.bg-52 {
+	background-color: #525252 !important;
 }
 
 @media only screen and (min-width: 716px) {
-	.upgrades-table tr:hover td {
+	.upgrades-table td:hover {
 		background-color: #4E4E4E;
 	}
 }
 
 .border-left-blue {
 	border-left: 3px solid darken(rgba(79,192,210,1),30%);
+}
+
+.selected {
+	background-color: #4E4E4E !important;
 }
 
 $attack: #f1666b;

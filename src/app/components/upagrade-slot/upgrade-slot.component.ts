@@ -36,4 +36,16 @@ export class UpgradeSlotComponent implements OnInit {
 		event.stopPropagation();
 		this.slotService.clearUpgradeSlot(this);
 	}
+
+	getCustomColor(augType: string) {
+		if (augType == 'Attack') {
+			return '0';
+		} else if (augType == 'Affinity') {
+			return '1';
+		} else if (augType == 'Element') {
+			return '5';
+		} else {
+			return 'gray';
+		}
+	}
 }

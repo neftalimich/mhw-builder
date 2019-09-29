@@ -12,7 +12,7 @@
 		<tbody>
 			<tr *ngFor="let aug of upgrades; let augIndex = index" class="">
 				<td class="border-left-blue">{{aug.type}}</td>
-				<td *ngFor="let level of aug.levels; let levelIndex = index" (click)="selectAugLevel(augIndex, levelIndex + 1)" class="text-center" style="cursor:pointer;" [style.background-color]="getBackgroundColor(augIndex, levelIndex)">
+				<td *ngFor="let level of aug.levels; let levelIndex = index" (click)="selectUpgLevel(augIndex, levelIndex + 1)" class="text-center" style="cursor:pointer;" [style.background-color]="getBackgroundColor(augIndex, levelIndex)">
 					<!--[{{level.requiredSlots}}] {{getLevelColor(augIndex, levelIndex)}}-->
 					<span *ngFor="let key of level.requiredSlots | numbersArr" [class]="getHexagonClass(augIndex,levelIndex)" style="font-size:28px;">&#x2B22;</span>
 				</td>
@@ -20,7 +20,7 @@
 		</tbody>
 		<tfoot>
 			<tr>
-				<td colspan="4" class="text-center" style="background-color:#323232!important;">
+				<td colspan="4" class="text-center border-left-blue" style="background-color:#323232!important;">
 					<span *ngFor="let detail of upgradeContainer.upgradeDetails; let i = index">
 						<span *ngFor="let key of detail.totalSlots | numbersArr">
 							<span [class]="'hex-o-'+i" style="font-size: 30px;">&#x2B22;</span>
@@ -30,8 +30,63 @@
 						<span class="hex-gray" style="font-size: 30px;">&#x2B22;</span>
 					</span>
 				</td>
-				<td class="text-center" (click)="selectUpgrade()" style="cursor:pointer;">
-					<button type="button">OK</button>
+				<td class="text-center bg-52" (click)="selectUpgrade()" style="cursor:pointer;">
+					<button type="button" class="text-white">OK</button>
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+	<br />
+	<table class="upgrades-table" *ngIf="upgradeContainer.hasCustomUpgrades">
+		<thead>
+			<tr>
+				<th class="text-left">Custom Upgrades</th>
+				<th>I</th>
+				<th>II</th>
+				<th>III</th>
+				<th>IV</th>
+				<th>V</th>
+				<th>Total</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="border-left-blue">Attack Upgrade</td>
+				<td class="text-center" (click)="selectCustomUpg('Attack',0)" [class.selected]="upgradeContainer.customUpgrades[0]=='Attack'" style="cursor:pointer;">+1</td>
+				<td class="text-center" (click)="selectCustomUpg('Attack',1)" [class.selected]="upgradeContainer.customUpgrades[1]=='Attack'" style="cursor:pointer;">+1</td>
+				<td class="text-center" (click)="selectCustomUpg('Attack',2)" [class.selected]="upgradeContainer.customUpgrades[2]=='Attack'" style="cursor:pointer;">+1</td>
+				<td class="text-center" (click)="selectCustomUpg('Attack',3)" [class.selected]="upgradeContainer.customUpgrades[3]=='Attack'" style="cursor:pointer;">+1</td>
+				<td class="text-center" (click)="selectCustomUpg('Attack',4)" [class.selected]="upgradeContainer.customUpgrades[4]=='Attack'" style="cursor:pointer;">+1</td>
+				<td class="text-center bg-52">+{{countCustomUpg('Attack')}}</td>
+			</tr>
+			<tr>
+				<td class="border-left-blue">Affinity Upgrade</td>
+				<td class="text-center" (click)="selectCustomUpg('Affinity',0)" [class.selected]="upgradeContainer.customUpgrades[0]=='Affinity'" style="cursor:pointer;">+1</td>
+				<td class="text-center" (click)="selectCustomUpg('Affinity',1)" [class.selected]="upgradeContainer.customUpgrades[1]=='Affinity'" style="cursor:pointer;">+1</td>
+				<td class="text-center" (click)="selectCustomUpg('Affinity',2)" [class.selected]="upgradeContainer.customUpgrades[2]=='Affinity'" style="cursor:pointer;">+1</td>
+				<td class="text-center" (click)="selectCustomUpg('Affinity',3)" [class.selected]="upgradeContainer.customUpgrades[3]=='Affinity'" style="cursor:pointer;">+1</td>
+				<td class="text-center" (click)="selectCustomUpg('Affinity',4)" [class.selected]="upgradeContainer.customUpgrades[4]=='Affinity'" style="cursor:pointer;">+1</td>
+				<td class="text-center bg-52">+{{countCustomUpg('Affinity')}}</td>
+			</tr>
+			<tr>
+				<td class="border-left-blue">Element Upgrade</td>
+				<td class="text-center" (click)="selectCustomUpg('Element',0)" [class.selected]="upgradeContainer.customUpgrades[0]=='Element'" style="cursor:pointer;">+10</td>
+				<td class="text-center" (click)="selectCustomUpg('Element',1)" [class.selected]="upgradeContainer.customUpgrades[1]=='Element'" style="cursor:pointer;">+10</td>
+				<td class="text-center" (click)="selectCustomUpg('Element',2)" [class.selected]="upgradeContainer.customUpgrades[2]=='Element'" style="cursor:pointer;">+10</td>
+				<td class="text-center" (click)="selectCustomUpg('Element',3)" [class.selected]="upgradeContainer.customUpgrades[3]=='Element'" style="cursor:pointer;">+10</td>
+				<td class="text-center" (click)="selectCustomUpg('Element',4)" [class.selected]="upgradeContainer.customUpgrades[4]=='Element'" style="cursor:pointer;">+10</td>
+				<td class="text-center bg-52">+{{countCustomUpg('Element')*10}}</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="6" class="text-center border-left-blue" style="background-color:#323232!important;">
+					<span *ngFor="let custom of upgradeContainer.customUpgrades; let i = index">
+						<span [ngClass]="'hex-'+getCustomColor(custom)" style="font-size: 25px;">&#9672;</span>
+					</span>
+				</td>
+				<td class="text-center bg-52" (click)="selectUpgrade()" style="cursor:pointer;">
+					<button type="button" class="text-white">OK</button>
 				</td>
 			</tr>
 		</tfoot>

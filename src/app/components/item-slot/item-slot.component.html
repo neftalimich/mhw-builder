@@ -1,14 +1,15 @@
 <div class="container">
-	<div class="item-container"
-		 (pointerenter)="setTooltipItem($event)"
-		 (pointerleave)="clearTooltipItem()"
-		 [class.selected]="selected">
+	<div class="item-container" [class.selected]="selected">
 
 		<!--<div class="slot-name">{{slotName}}</div>-->
 		<div class="slot-icon" (click)="equipmentSlotClicked()">
 			<img [src]="getItemIconName()" alt="slot icon">
 		</div>
-		<div class="selected-item" (click)="equipmentSlotClicked()">{{item?.name}}</div>
+		<div class="selected-item" (click)="equipmentSlotClicked()"
+			 (pointerenter)="setTooltipItem($event)"
+			 (pointerleave)="clearTooltipItem()">
+			{{item?.name}}
+		</div>
 
 		<div *ngIf="item?.levels" class="levels-container">
 			<button type="button" class="level-down-button" (click)="levelDownClicked($event)">

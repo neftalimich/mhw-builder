@@ -1,6 +1,6 @@
 <div class="container" (click)="clicked()" [class.selected]="selected">
-	<div class="slot-icon"><img [src]="'assets/images/village-icon.png'" alt="augment"></div>
-	<div class="selected-augmentation">
+	<div class="slot-icon"><img [src]="'assets/images/augment-icon.png'" alt="augment"></div>
+	<div class="selected-upgrade">
 		<span *ngIf="upgradeContainer?.upgradeDetails">
 			<span *ngFor="let detail of upgradeContainer.upgradeDetails; let i = index">
 				<span *ngFor="let key of detail.totalSlots | numbersArr">
@@ -16,6 +16,13 @@
 				<span class="hex-gray" style="font-size: 30px;">&#x2B22;</span>
 			</span>
 		</span>
+	</div>
+	<div class="selected-custom">
+		<div *ngIf="upgradeContainer.hasCustomUpgrades">
+			<span *ngFor="let custom of upgradeContainer.customUpgrades; let i = index">
+				<span [ngClass]="'hex-' + getCustomColor(custom)" style="font-size: 15px;">&#9672;</span>
+			</span>
+		</div>
 	</div>
 
 	<button type="button" class="clear-button" (click)="clearClicked($event)">

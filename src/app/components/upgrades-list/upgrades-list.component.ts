@@ -4,6 +4,7 @@ import { UpgradeLevelModel, UpgradeModel } from '../../models/upgrade.model';
 import { DataService } from '../../services/data.service';
 import { SlotService } from '../../services/slot.service';
 import { TooltipService } from '../../services/tooltip.service';
+import { AugmentationType } from '../../types/augmentation.type';
 
 @Component({
 	selector: 'mhw-builder-upgrades-list',
@@ -18,13 +19,13 @@ export class UpgradesListComponent implements OnInit {
 	@Input()
 	set upgradeContainer(upgradeContainer: UpgradeContainerModel) {
 		if (upgradeContainer) {
-			this._upgradeContainer = upgradeContainer;
+			this._upgradeContainer = JSON.parse(JSON.stringify(upgradeContainer));
 
-			this.loadItems();
+			this.loadUpgrades();
 			if (this.upgradeContainer.upgradeDetails && this.upgradeContainer.upgradeDetails.length == 0) {
-				for (const cAug of this.upgrades) {
+				for (const cUpg of this.upgrades) {
 					const newDetail = new UpgradeDetailModel();
-					newDetail.type = cAug.type;
+					newDetail.type = cUpg.type;
 					newDetail.level = 0;
 					newDetail.requiredSlots = 0;
 					newDetail.totalSlots = 0;
@@ -47,7 +48,7 @@ export class UpgradesListComponent implements OnInit {
 	ngOnInit(): void {
 	}
 
-	loadItems() {
+	loadUpgrades() {
 		this.upgrades = this.dataService.getUpgrades();
 	}
 
@@ -56,29 +57,29 @@ export class UpgradesListComponent implements OnInit {
 		this.slotService.selectUpgradeContainer(newUpg);
 	}
 
-	selectAugLevel(augIndex: number, level: number) {
-		const auxAug = this.upgradeContainer.upgradeDetails[augIndex];
+	selectUpgLevel(augIndex: number, level: number) {
+		const auxUpg = this.upgradeContainer.upgradeDetails[augIndex];
 		const auxLevel = this.upgrades[augIndex].levels[level - 1];
-		if (auxAug.level == level) {
-			auxAug.level = level - 1;
+		if (auxUpg.level == level) {
+			auxUpg.level = level - 1;
 			if (level > 1) {
 				const auxDown = this.upgrades[augIndex].levels[level - 2];
-				this.upgradeContainer.used -= auxAug.totalSlots;
+				this.upgradeContainer.used -= auxUpg.totalSlots;
 				this.upgradeContainer.used += auxDown.totalSlots;
 
-				this.updatePassiveStats(auxAug, auxDown);
+				this.updatePassiveStats(auxUpg, auxDown);
 			} else {
-				this.upgradeContainer.used -= auxAug.totalSlots;
+				this.upgradeContainer.used -= auxUpg.totalSlots;
 
-				this.clearPassiveStats(auxAug, auxLevel);
+				this.clearPassiveStats(auxUpg, auxLevel);
 			}
 		} else {
-			if (this.upgradeContainer.used - auxAug.totalSlots + auxLevel.totalSlots <= this.upgradeContainer.slots) {
-				this.upgradeContainer.used -= auxAug.totalSlots;
+			if (this.upgradeContainer.used - auxUpg.totalSlots + auxLevel.totalSlots <= this.upgradeContainer.slots) {
+				this.upgradeContainer.used -= auxUpg.totalSlots;
 				this.upgradeContainer.used += auxLevel.totalSlots;
 
-				auxAug.level = level;
-				this.updatePassiveStats(auxAug, auxLevel);
+				auxUpg.level = level;
+				this.updatePassiveStats(auxUpg, auxLevel);
 			}
 		}
 	}
@@ -107,33 +108,57 @@ export class UpgradesListComponent implements OnInit {
 		aug.passiveAilment = 0;
 	}
 
-	getHexagonClass(augIndex: number, levelIndex: number) {
-		const auxAug = this.upgradeContainer.upgradeDetails[augIndex];
-		const auxLevel = this.upgrades[augIndex].levels[levelIndex];
+	getHexagonClass(upgIndex: number, levelIndex: number) {
+		const auxUpg = this.upgradeContainer.upgradeDetails[upgIndex];
+		const auxLevel = this.upgrades[upgIndex].levels[levelIndex];
 
-		if (levelIndex + 1 <= auxAug.level) {
-			return 'hex-o-' + augIndex;
+		if (levelIndex + 1 <= auxUpg.level) {
+			return 'hex-o-' + upgIndex;
 		} else {
-			if (this.upgradeContainer.used - auxAug.totalSlots + auxLevel.totalSlots <= this.upgradeContainer.slots) {
-				return 'hex-' + augIndex;
+			if (this.upgradeContainer.used - auxUpg.totalSlots + auxLevel.totalSlots <= this.upgradeContainer.slots) {
+				return 'hex-' + upgIndex;
 			} else {
-				return 'hex-' + augIndex;
+				return 'hex-' + upgIndex;
 			}
 		}
 	}
 
-	getBackgroundColor(augIndex: number, levelIndex: number) {
-		const auxAug = this.upgradeContainer.upgradeDetails[augIndex];
-		const auxLevel = this.upgrades[augIndex].levels[levelIndex];
+	getBackgroundColor(upgIndex: number, levelIndex: number) {
+		const auxUpg = this.upgradeContainer.upgradeDetails[upgIndex];
+		const auxLevel = this.upgrades[upgIndex].levels[levelIndex];
 
-		if (levelIndex + 1 <= auxAug.level) {
+		if (levelIndex + 1 <= auxUpg.level) {
 			return '#525252';
 		} else {
-			if (this.upgradeContainer.used - auxAug.totalSlots + auxLevel.totalSlots <= this.upgradeContainer.slots) {
+			if (this.upgradeContainer.used - auxUpg.totalSlots + auxLevel.totalSlots <= this.upgradeContainer.slots) {
 				return '';
 			} else {
 				return '#1E1E1E';
 			}
+		}
+	}
+
+	selectCustomUpg(augType: string, levelIndex: number) {
+		if (this.upgradeContainer.customUpgrades[levelIndex] == augType) {
+			this.upgradeContainer.customUpgrades[levelIndex] = '';
+		} else {
+			this.upgradeContainer.customUpgrades[levelIndex] = augType;
+		}
+	}
+
+	countCustomUpg(augType: string) {
+		return this.upgradeContainer.customUpgrades.filter(custom => custom == augType).length;
+	}
+
+	getCustomColor(augType: string) {
+		if (augType == 'Attack') {
+			return '0';
+		} else if (augType == 'Affinity') {
+			return '1';
+		} else if (augType == 'Element') {
+			return '5';
+		} else {
+			return 'gray';
 		}
 	}
 }
