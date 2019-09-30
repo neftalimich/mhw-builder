@@ -1001,67 +1001,67 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2520	ChargeBlade	12	Soulfire Brand 'Blaze'	900	20	0				Blast	180	false		false	11;3;9;3;3;9;2	2;1	lunastra;teostra;blast		Impact		0
 2521	ChargeBlade	12	Soulfire Brand 'Ruin'	972	0	0				Blast	150	false		false	11;3;9;3;3;9;2	2;2	lunastra;nergigante;blast		Impact		0
 2522	ChargeBlade	12	Soulfire Brand 'Styx'	900	10	0				Blast	240	false		false	11;3;9;3;3;9;2	3;3	lunastra;xeno;jiva;blast		Impact		0
-2525	InsectGlaive	11	Chrome Trident III	806	0	0				Blast	360	true		false	11;3;3;6;5;9;3	1;1	ore;blast		Sever Boost	true	0
+2525	InsectGlaive	11	Chrome Trident III	806	0	0				Blast	360	true		false	11;3;3;6;5;9;3	1;1	ore;blast		Sever	true	0
 2528	InsectGlaive	12	Despot's Twinbolt	806	0	0	Thunder	360	false					false	11;3;9;3;3;9;2	2	zinogre;thunder		Spirit & Strength Boost		0
-2529	InsectGlaive	12	Ruinous Catastrophe	899	0	0	Dragon	180	false					false	8;3;3;11;4;16;0	1	nergigante;dragon		Sever Boost		0
-2532	InsectGlaive	12	Blossomajesty	837	20	0	Fire	270	false					false	12;3;3;6;5;8;3	2	rathalos;fire		Sever Boost		0
-2534	InsectGlaive	10	Yatir al-Nasr II	775	20	0				Sleep	300	true		false	10;3;3;11;4;9;0		kuluyaku;sleep		Speed Boost	true	0
-2536	InsectGlaive	10	Electrorod	775	0	0				Blast	360	false		false	8;3;3;11;4;11;0	1	brachydios;blast		Blunt Boost		0
-2538	InsectGlaive	10	Diving Destroyer II	806	0	0	Thunder	390	true					false	8;3;3;11;4;11;0	3	tzitziyaku;thunder		Speed Boost	true	0
-2540	InsectGlaive	10	Hidden Cane II	713	15	0				Poison	360	true		false	13;2;2;7;4;3;9	1	nargacuga;poison		Sever Boost	true	0
+2529	InsectGlaive	12	Ruinous Catastrophe	899	0	0	Dragon	180	false					false	8;3;3;11;4;16;0	1	nergigante;dragon		Sever		0
+2532	InsectGlaive	12	Blossomajesty	837	20	0	Fire	270	false					false	12;3;3;6;5;8;3	2	rathalos;fire		Sever		0
+2534	InsectGlaive	10	Yatir al-Nasr II	775	20	0				Sleep	300	true		false	10;3;3;11;4;9;0		kuluyaku;sleep		Speed	true	0
+2536	InsectGlaive	10	Electrorod	775	0	0				Blast	360	false		false	8;3;3;11;4;11;0	1	brachydios;blast		Blunt		0
+2538	InsectGlaive	10	Diving Destroyer II	806	0	0	Thunder	390	true					false	8;3;3;11;4;11;0	3	tzitziyaku;thunder		Speed	true	0
+2540	InsectGlaive	10	Hidden Cane II	713	15	0				Poison	360	true		false	13;2;2;7;4;3;9	1	nargacuga;poison		Sever	true	0
 2544	InsectGlaive	11	Fenrir Storm	775	25	0	Ice	360	false					false	10;3;3;11;4;9;0		element;ice		Element Boost		0
 2546	InsectGlaive	10	Datura Storm II	744	0	0				Poison	450	false		false	11;3;3;6;5;7;5	2;1	pukei;poison		Stamina Upgrade & Healing	true	0
-2548	InsectGlaive	10	Nyx Blade II	744	0	0				Sleep	300	false		false	6;8;3;3;8;12;0	2	nightshade;paolumu;sleep		Speed Boost	true	0
+2548	InsectGlaive	10	Nyx Blade II	744	0	0				Sleep	300	false		false	6;8;3;3;8;12;0	2	nightshade;paolumu;sleep		Speed	true	0
 2550	InsectGlaive	10	Gama Magus II	744	0	0				Blast	210	false		false	14;3;3;6;5;6;3	3;2	dodogama;blast		Stamina Upgrade & Healing	true	0
 2553	InsectGlaive	11	Glavenus Helldait	806	0	0	Fire	360	false					false	11;3;3;6;5;9;3	1	glavenus;fire		Spirit & Strength Boost		0
 2556	InsectGlaive	11	Aerial Magus III	837	0	35				Paralysis	300	true		false	7;10;4;5;9;5;0	3	bone;paralysis		Spirit & Strength Boost	true	0
-2558	InsectGlaive	12	Wise Fylos	837	0	0	Ice	240	false					false	13;3;3;6;5;5;5	4	velkhana;ice		Speed Boost		0
-2559	InsectGlaive	11	Deathstaff Vaal Entoma	775	0	0	Dragon	420	false					false	7;8;3;3;8;11;0	2;2	vaal;hazak;dragon		Blunt Boost	true	0
+2558	InsectGlaive	12	Wise Fylos	837	0	0	Ice	240	false					false	13;3;3;6;5;5;5	4	velkhana;ice		Speed		0
+2559	InsectGlaive	11	Deathstaff Vaal Entoma	775	0	0	Dragon	420	false					false	7;8;3;3;8;11;0	2;2	vaal;hazak;dragon		Blunt	true	0
 2560	InsectGlaive	11	Hydros Arcana	837	10	0	Water	330	false					false	7;3;3;11;4;12;0	1	namielle;water		Spirit & Strength Boost	true	0
-2562	InsectGlaive	10	Lohenspire	837	-20	0	Fire	450	false					false	7;10;4;5;9;5;0		anjanath;fire		Blunt Boost		0
+2562	InsectGlaive	10	Lohenspire	837	-20	0	Fire	450	false					false	7;10;4;5;9;5;0		anjanath;fire		Blunt		0
 2565	InsectGlaive	11	Fulguration's Tower	806	15	0	Thunder	270	false					false	7;10;4;5;9;5;0		fulgur;anjanath;thunder		Stamina Upgrade & Healing		0
 2568	InsectGlaive	10	Laguna Glaive II	744	0	0	Water	450	false					false	11;3;3;6;5;7;5	2;1	element;water		Element Boost	true	0
-2570	InsectGlaive	10	Rex Rod II	837	-15	0				Blast	240	true		false	5;3;3;11;4;14;0	1	tigrex;blast		Blunt Boost	true	0
-2571	InsectGlaive	11	Accursed Rod	868	-30	0				Sleep	210	true		false	9;2;3;9;9;4;4	1	brute;tigrex;sleep		Speed Boost	true	0
+2570	InsectGlaive	10	Rex Rod II	837	-15	0				Blast	240	true		false	5;3;3;11;4;14;0	1	tigrex;blast		Blunt	true	0
+2571	InsectGlaive	11	Accursed Rod	868	-30	0				Sleep	210	true		false	9;2;3;9;9;4;4	1	brute;tigrex;sleep		Speed	true	0
 2573	InsectGlaive	10	Thanatos Glaive	899	-30	25	Ice	240	true					false	7;5;9;7;7;4;1	2	diablos;ice		Stamina Upgrade & Healing	true	0
-2575	InsectGlaive	11	The Trickling Spiral	899	0	0				Paralysis	210	true		false	6;5;11;9;6;2;1	4	acidic;glavenus;paralysis		Sever Boost		0
-2577	InsectGlaive	10	Beo Glaive II	775	0	0	Ice	420	false					false	9;3;3;11;4;10;0	2;1	beotodus;ice		Blunt Boost	true	0
-2579	InsectGlaive	10	Kadachi Fury II	713	10	0	Thunder	360	false					false	12;3;9;3;3;8;2	1	tobi;kadachi;thunder		Speed Boost	true	0
-2581	InsectGlaive	10	Kadachi Vipertail II	775	10	0				Paralysis	240	false		false	12;3;9;3;3;8;2	1;1	viper;kadachi;paralysis		Speed Boost	true	0
-2583	InsectGlaive	10	Cruelty	713	35	0	Fire	330	true					false	10;8;3;3;8;13;0	2	odogaron;fire		Speed Boost		0
+2575	InsectGlaive	11	The Trickling Spiral	899	0	0				Paralysis	210	true		false	6;5;11;9;6;2;1	4	acidic;glavenus;paralysis		Sever		0
+2577	InsectGlaive	10	Beo Glaive II	775	0	0	Ice	420	false					false	9;3;3;11;4;10;0	2;1	beotodus;ice		Blunt	true	0
+2579	InsectGlaive	10	Kadachi Fury II	713	10	0	Thunder	360	false					false	12;3;9;3;3;8;2	1	tobi;kadachi;thunder		Speed	true	0
+2581	InsectGlaive	10	Kadachi Vipertail II	775	10	0				Paralysis	240	false		false	12;3;9;3;3;8;2	1;1	viper;kadachi;paralysis		Speed	true	0
+2583	InsectGlaive	10	Cruelty	713	35	0	Fire	330	true					false	10;8;3;3;8;13;0	2	odogaron;fire		Speed		0
 2585	InsectGlaive	11	Deadline	744	25	0	Dragon	300	false					false	10;8;3;3;8;13;0		ebony;odogaron;dragon		Spirit & Strength Boost	true	0
 2587	InsectGlaive	11	Dragonseal Aldstaff II	744	0	0	Dragon	480	false					false	6;6;6;10;9;3;0	1;1	dragonbone;dragon		Element Boost		0
 2588	InsectGlaive	12	Infinite Wisdom	868	0	30	Dragon	390	true					false	16;3;3;6;5;4;3	1;1	shara;ishvalda;dragon		Spirit & Strength Boost		0
 2589	InsectGlaive	11	Celestial Spire	744	0	0	Thunder	450	false					false	5;8;3;3;8;13;0		kirin;thunder		Element Boost		0
 2590	InsectGlaive	11	Daora's Samudra	806	10	0	Ice	240	false					false	13;3;3;6;5;7;3	2	blacksteel;ice		Stamina Upgrade & Healing		0
 2591	InsectGlaive	12	Fate's Wing	868	-25	0	Dragon	270	false					false	15;3;3;6;5;5;3		deviljho;dragon		Stamina Upgrade & Healing		0
-2592	InsectGlaive	12	Soulfire Reach 'Blaze'	775	20	0				Blast	180	false		false	11;3;9;3;3;9;2	2;1	lunastra;teostra;blast		Speed Boost		0
-2593	InsectGlaive	12	Soulfire Reach 'Ruin'	837	0	0				Blast	150	false		false	11;3;9;3;3;9;2	2;2	lunastra;nergigante;blast		Speed Boost		0
-2594	InsectGlaive	12	Soulfire Reach 'Styx'	775	10	0				Blast	240	false		false	11;3;9;3;3;9;2	3;3	lunastra;xeno;jiva;blast		Speed Boost		0
-2597	LightBowgun	11	Crossblitzer III	338	0	0								false		1;1	ore;		Pls add ammo pls		0
-2599	LightBowgun	11	Blackwing Bowgun II	351	25	0								false		3	yiang;garuga;		Pls add ammo pls		0
+2592	InsectGlaive	12	Soulfire Reach 'Blaze'	775	20	0				Blast	180	false		false	11;3;9;3;3;9;2	2;1	lunastra;teostra;blast		Speed		0
+2593	InsectGlaive	12	Soulfire Reach 'Ruin'	837	0	0				Blast	150	false		false	11;3;9;3;3;9;2	2;2	lunastra;nergigante;blast		Speed		0
+2594	InsectGlaive	12	Soulfire Reach 'Styx'	775	10	0				Blast	240	false		false	11;3;9;3;3;9;2	3;3	lunastra;xeno;jiva;blast		Speed		0
+2597	LightBowgun	11	Crossblitzer III	338	0	0								false		1;1	ore;		Pls add ammo pls	true	0
+2599	LightBowgun	11	Blackwing Bowgun II	351	25	0								false		3	yiang;garuga;		Pls add ammo pls	true	0
 2600	LightBowgun	12	Ruinous Cataclysm	351	0	0								false		1;1	nergigante;		Pls add ammo pls		0
-2603	LightBowgun	10	Nightmare's Seed II	312	15	0								false		2	paolumu;		Pls add ammo pls		0
-2606	LightBowgun	11	Acid Blitz II	325	0	0								false		1;1	glavenus;		Pls add ammo pls		0
-2607	LightBowgun	11	Bazelcore	364	-10	0								false		2;1	bazelgeuse;		Pls add ammo pls		0
-2609	LightBowgun	10	Saber's Howl II	338	0	0								false		3;2	jagras;		Pls add ammo pls		0
-2612	LightBowgun	11	Accursed Fire	351	-20	0								false		2;1	tigrex;		Pls add ammo pls		0
-2615	LightBowgun	12	Argent Ray	351	20	0								false		1	rathalos;		Pls add ammo pls		0
+2603	LightBowgun	10	Nightmare's Seed II	312	15	0								false		2	paolumu;		Pls add ammo pls	true	0
+2606	LightBowgun	11	Acid Blitz II	325	0	0								false		1;1	glavenus;		Pls add ammo pls	true	0
+2607	LightBowgun	11	Bazelcore	364	-10	0								false		2;1	bazelgeuse;		Pls add ammo pls	true	0
+2609	LightBowgun	10	Saber's Howl II	338	0	0								false		3;2	jagras;		Pls add ammo pls	true	0
+2612	LightBowgun	11	Accursed Fire	351	-20	0								false		2;1	tigrex;		Pls add ammo pls	true	0
+2615	LightBowgun	12	Argent Ray	351	20	0								false		1	rathalos;		Pls add ammo pls	true	0
 2619	LightBowgun	12	Despot's Wildfire	338	0	0								false		2	thunder;element;		Pls add ammo pls		0
 2623	LightBowgun	11	Blizzard Volley	312	30	0								false			ice;element;		Pls add ammo pls		0
-2625	LightBowgun	10	Laguna Blitz II	325	0	0								false		2;1	coral;pukei;		Pls add ammo pls		0
-2628	LightBowgun	11	Breakshot III	338	0	30								false		3	bone;		Pls add ammo pls		0
+2625	LightBowgun	10	Laguna Blitz II	325	0	0								false		2;1	coral;pukei;		Pls add ammo pls	true	0
+2628	LightBowgun	11	Breakshot III	338	0	30								false		3	bone;		Pls add ammo pls	true	0
 2630	LightBowgun	12	Graceful Almaria	351	0	0								false		4	velkhana;		Pls add ammo pls		0
 2632	LightBowgun	12	Gulgoleth's Ruin	338	0	0								false		2;2	vaal;hazak;		Pls add ammo pls		0
-2635	LightBowgun	10	Fulgurshot II	351	-20	0								false			anjanath;		Pls add ammo pls		0
-2638	LightBowgun	10	Beo Shooter II	338	0	0								false		2;1	jyuratodus;		Pls add ammo pls		0
-2640	LightBowgun	10	Hidden Bullet II	325	20	0								false			nargacuga;		Pls add ammo pls		0
-2642	LightBowgun	10	Fireshatter II	325	0	0								false		3;2	lavasioth;		Pls add ammo pls		0
-2644	LightBowgun	10	Mammoth Bowgun II	345	0	0								false		4	banbaro;		Pls add ammo pls		0
-2646	LightBowgun	10	Barroth Bazooka II	351	-20	30								false		2;2	barroth;		Pls add ammo pls		0
-2648	LightBowgun	10	Brachydios Shot II	325	0	0								false		1	brachydios;		Pls add ammo pls		0
+2635	LightBowgun	10	Fulgurshot II	351	-20	0								false			anjanath;		Pls add ammo pls	true	0
+2638	LightBowgun	10	Beo Shooter II	338	0	0								false		2;1	jyuratodus;		Pls add ammo pls	true	0
+2640	LightBowgun	10	Hidden Bullet II	325	20	0								false			nargacuga;		Pls add ammo pls	true	0
+2642	LightBowgun	10	Fireshatter II	325	0	0								false		3;2	lavasioth;		Pls add ammo pls	true	0
+2644	LightBowgun	10	Mammoth Bowgun II	345	0	0								false		4	banbaro;		Pls add ammo pls	true	0
+2646	LightBowgun	10	Barroth Bazooka II	351	-20	30								false		2;2	barroth;		Pls add ammo pls	true	0
+2648	LightBowgun	10	Brachydios Shot II	325	0	0								false		1	brachydios;		Pls add ammo pls	true	0
 2651	LightBowgun	11	Ghost	312	35	0								false		1	odogaron;		Pls add ammo pls		0
-2653	LightBowgun	11	Dragonseal Bowgun II	325	0	0								false		1;1	dragonbone;		Pls add ammo pls		0
+2653	LightBowgun	11	Dragonseal Bowgun II	325	0	0								false		1;1	dragonbone;		Pls add ammo pls	true	0
 2654	LightBowgun	12	Fading Blossom	377	0	0								false		1;1	shara;ishvalda;		Pls add ammo pls		0
 2655	LightBowgun	11	God's Isle	312	0	0								false		1	workshop;		Pls add ammo pls		0
 2656	LightBowgun	11	Mythical Three-Evils	325	0	0								false			kirin;		Pls add ammo pls		0
@@ -1072,68 +1072,68 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2662	LightBowgun	12	Soulfire Rasp 'Blaze'	338	20	0								false		2;1	lunastra;teostra;		Pls add ammo pls		0
 2663	LightBowgun	12	Soulfire Rasp 'Ruin'	351	0	0								false		2;2	lunastra;nergigante;		Pls add ammo pls		0
 2664	LightBowgun	12	Soulfire Rasp 'Styx'	338	10	0								false		3;3	lunastra;xeno;jiva;		Pls add ammo pls		0
-2667	HeavyBowgun	11	Fatal Assault III	420	0	0								false		1;1	ore;		Ammo Goes here		0
-2669	HeavyBowgun	10	Icicle Assault II	360	30	0								false		1	barioth;		Ammo Goes here		0
+2667	HeavyBowgun	11	Fatal Assault III	420	0	0								false		1;1	ore;		Ammo Goes here	true	0
+2669	HeavyBowgun	10	Icicle Assault II	360	30	0								false		1	barioth;		Ammo Goes here	true	0
 2670	HeavyBowgun	12	Ruinous Destruction	465	0	0								false		1	nergigante;		Ammo Goes here		0
-2673	HeavyBowgun	10	Nightmare Cannon II	375	0	0								false		2	water;element;		Ammo Goes here		0
+2673	HeavyBowgun	10	Nightmare Cannon II	375	0	0								false		2	water;element;		Ammo Goes here	true	0
 2676	HeavyBowgun	11	Baleful Night	390	20	0								false			nargacuga;		Ammo Goes here		0
-2678	HeavyBowgun	10	Deadeye Destroyer II	390	0	0								false		3	tzitziyaku;		Ammo Goes here		0
+2678	HeavyBowgun	10	Deadeye Destroyer II	390	0	0								false		3	tzitziyaku;		Ammo Goes here	true	0
 2681	HeavyBowgun	12	Loyal Thunder	420	0	0								false		2	zinogre;		Ammo Goes here		0
 2684	HeavyBowgun	11	Franz Glacia	405	0	0								false		1	legiana;		Ammo Goes here		0
 2686	HeavyBowgun	10	Gluttonous Direcannon	405	0	0								false		1	jagras;		Ammo Goes here		0
 2689	HeavyBowgun	11	Accursed Bellow	450	-20	0								false			tigrex;		Ammo Goes here		0
 2693	HeavyBowgun	11	Fulguration's Roar	435	-10	0								false		1	anjanath;		Ammo Goes here		0
-2696	HeavyBowgun	11	Cartilage Blaster III	420	0	30								false		3	bone;		Ammo Goes here		0
+2696	HeavyBowgun	11	Cartilage Blaster III	420	0	30								false		3	bone;		Ammo Goes here	true	0
 2698	HeavyBowgun	12	Righteous Varka	435	0	0								false		4	velkhana;		Ammo Goes here		0
 2700	HeavyBowgun	10	Hornking Blazooka	435	-20	35								false		1	diablos;		Ammo Goes here		0
 2703	HeavyBowgun	10	Laguna Blaster II	375	0	0								false		2;1	pukei;		Ammo Goes here		0
-2705	HeavyBowgun	10	Baan Bazooka II	390	0	35								false			radobaan;		Ammo Goes here		0
+2705	HeavyBowgun	10	Baan Bazooka II	390	0	35								false			radobaan;		Ammo Goes here	true	0
 2707	HeavyBowgun	11	Atom Cannon	405	0	0								false		1	brachydios;		Ammo Goes here		0
-2709	HeavyBowgun	10	Gama Turret II	375	0	0								false		1	dodogama;		Ammo Goes here		0
+2709	HeavyBowgun	10	Gama Turret II	375	0	0								false		1	dodogama;		Ammo Goes here	true	0
 2712	HeavyBowgun	11	The Guttering Gasp	435	0	0								false		4	glavenus;		Ammo Goes here		0
 2715	HeavyBowgun	10	Crimson Kadachi Lion II	390	15	0								false		1	tobi;kadachi;		Ammo Goes here		0
-2717	HeavyBowgun	11	Dragonseal Cannon II	405	0	0								false		1;1	dragonbone;		Ammo Goes here		0
+2717	HeavyBowgun	11	Dragonseal Cannon II	405	0	0								false		1;1	dragonbone;		Ammo Goes here	true	0
 2718	HeavyBowgun	12	Solemn Reflection	450	0	0								false		1;1	shara;ishvalda;		Ammo Goes here		0
 2719	HeavyBowgun	11	Shining Quiver	405	0	0								false		1	kirin;		Ammo Goes here		0
-2720	HeavyBowgun	11	Magda Gemitus Vulcan	450	-20	50								false		2	zorah;magdaros;		Ammo Goes here		0
-2721	HeavyBowgun	11	Hydros Laimos	420	10	0								false		1;1	namielle;		Ammo Goes here		0
+2720	HeavyBowgun	11	Magda Gemitus Vulcan	450	-20	50								false		2	zorah;magdaros;		Ammo Goes here	true	0
+2721	HeavyBowgun	11	Hydros Laimos	420	10	0								false		1;1	namielle;		Ammo Goes here	true	0
 2722	HeavyBowgun	11	Teostra's Firestorm	420	0	0								false			blacksteel;		Ammo Goes here		0
 2723	HeavyBowgun	12	Endless Famine	450	-25	0								false			deviljho;		Ammo Goes here		0
 2724	HeavyBowgun	12	Soulfire Roar 'Blaze'	420	20	0								false		2;1	lunastra;teostra;		Ammo Goes here		0
 2725	HeavyBowgun	12	Soulfire Roar 'Ruin'	435	0	0								false		2;2	lunastra;nergigante;		Ammo Goes here		0
 2726	HeavyBowgun	12	Soulfire Roar 'Styx'	420	10	0								false		3;3	lunastra;xeno;jiva;		Ammo Goes here		0
-2729	Bow	11	Dragon Perforator III	312	0	0	Thunder	240	true					false		2;2	ore;thunder		Close Range;Power		0
-2732	Bow	12	Despot's Earlybolt	324	0	0	Thunder	240	false					false		2	zinogre;thunder		Close Range;Power		0
-2733	Bow	12	Ruinous Doom	324	0	0	Dragon	240	false					false		1;1	nergigante;dragon		Close Range;Power		0
-2735	Bow	10	Alqaws al-Nasr II	300	25	0				Blast	330	true		false			kuluyaku;blast		Close Range;Paralysis;Sleep;Blast		0
-2738	Bow	11	Accursed Arc	348	-25	0				Blast	240	true		false			tigrex;blast		Close Range;Power;Sleep		0
-2740	Bow	11	Tsali Flier	288	0	0				Blast	360	false		false		1	brachydios;blast		Close Range;Blast		0
-2742	Bow	10	Gigantomachy	312	0	35	Fire	210	false					false		4	uragaan;fire		Close Range;Sleep;Blast		0
-2745	Bow	12	Lunatic Arrow	324	10	0	Dragon	300	true					false		2;1	rathian;dragon		Close Range;Power;Poison		0
-2748	Bow	12	Silver Wrathbow	312	20	0	Fire	330	false					false		1	rathalos;fire		Close Range;Power;Poison		0
-2751	Bow	10	Laguna Shot II	288	0	0	Water	330	false					false		2;1	element;water		Close Range;Power		0
-2753	Bow	10	Icicle Blizzard II	276	25	0	Ice	300	false					false		1	barioth;ice		Close Range;Power		0
-2756	Bow	11	Night Flight	300	20	0	Water	240	true					false		1	nargacuga;water		Close Range;Power;Poison		0
-2759	Bow	11	Mist Glacia	276	0	0	Ice	450	false					false		1	legiana;ice		Close Range;Power;Poison;Sleep		0
-2762	Bow	11	Hunter's Bravebow III	312	0	35	Water	390	true					false		3	bone;water		Close Range;Paralysis;Poison		0
-2764	Bow	12	Alluring Evelia	336	0	0	Ice	240	false					false		4	velkhana;ice		Close Range;Power		0
-2766	Bow	10	Mammoth Greatbow II	312	0	0	Ice	180	true					false		4	banbaro;ice		Close Range;Power;Poison;Sleep		0
-2768	Bow	10	Glavenus Arrow II	300	0	0	Fire	390	false					false		1;1	glavenus;fire		Close Range;Power;Poison;Blast		0
-2770	Bow	11	Acidic Arrow II	336	0	0	Thunder	240	true					false		1;1	acidic;glavenus;thunder		Close Range;Paralysis;Blast		0
-2771	Bow	11	Deathbow Vaal Velos	300	0	0	Dragon	330	false					false		2;1	vaal;hazak;dragon		Close Range;Power;Sleep		0
-2773	Bow	12	Black Planula	324	10	0	Water	270	false					false		1	namielle;water		Close Range;Power;Paralysis		0
-2775	Bow	10	Cera Cyclord	324	-15	30	Ice	210	true					false		4	diablos;ice		Close Range;Power;Paralysis		0
-2777	Bow	10	Datura Squall II	288	0	0				Blast	300	true		false		2;1	pukei;blast		Close Range;Paralysis;Poison		0
-2779	Bow	10	Nightmare String II	288	0	0	Fire	240	true					false		2	nightshade;paolumu;fire		Close Range;Paralysis;Sleep		0
-2781	Bow	10	Anjanath Flamebow II	312	-20	0	Fire	450	false					false			anjanath;fire		Close Range;Power;Blast		0
-2783	Bow	10	Fulguring Bow II	300	20	0	Thunder	180	false					false	 	1	fulgur;anjanath;thunder		Close Range;Power;Paralysis		0
-2785	Bow	10	Thundering Strikebow	264	15	0	Thunder	330	false					false		1	tobi;kadachi;thunder		Close Range;Power;Paralysis		0
-2788	Bow	11	Fellbow Crimson Storm	300	15	0	Dragon	360	true					false		1	viper;kadachi;dragon		Close Range;Paralysis;Poison		0
-2790	Bow	11	Dragonseal Aldbow II	264	0	0	Dragon	480	false					false		1;1	dragonbone;dragon		Close Range;Paralysis;Sleep		0
-2791	Bow	12	Dawning Insight	336	0	30	Dragon	270	true					false		1	shara;ishvalda;dragon		Close Range;Power;Sleep		0
-2792	Bow	11	Daora's Toxotes	300	10	0	Ice	270	false					false		2;1	blacksteel;ice		Close Range;Power		0
-2793	Bow	11	Neo Hunter Bow	312	0	0				Blast	180	false		false		4	workshop;blast		Close Range;Paralysis;Poison;Sleep;Blast		0
-2794	Bow	12	Fate's Thread	336	-20	0	Dragon	270	false					false			deviljho;dragon		Close Range;Power;Poison		0
-2795	Bow	12	Soulfire Arch 'Blaze'	312	20	0				Blast	180	false		false		2;1	lunastra;teostra;blast		Close Range;Power		0
-2796	Bow	12	Soulfire Arch 'Ruin'	336	0	0				Blast	120	false		false		2;2	lunastra;nergigante;blast		Close Range;Power;Poison;Sleep		0
-2797	Bow	12	Soulfire Arch 'Styx'	312	10	0				Blast	240	false		false			lunastra;xeno;jiva;blast		Close Range;Power		0
+2729	Bow	11	Dragon Perforator III	312	0	0	Thunder	240	true					false		2;2	ore;thunder		Close;Power	true	0
+2732	Bow	12	Despot's Earlybolt	324	0	0	Thunder	240	false					false		2	zinogre;thunder		Close;Power		0
+2733	Bow	12	Ruinous Doom	324	0	0	Dragon	240	false					false		1;1	nergigante;dragon		Close;Power		0
+2735	Bow	10	Alqaws al-Nasr II	300	25	0				Blast	330	true		false			kuluyaku;blast		Close;Paralysis;Sleep;Blast	true	0
+2738	Bow	11	Accursed Arc	348	-25	0				Blast	240	true		false			tigrex;blast		Close;Power;Sleep	true	0
+2740	Bow	11	Tsali Flier	288	0	0				Blast	360	false		false		1	brachydios;blast		Close;Blast		0
+2742	Bow	10	Gigantomachy	312	0	35	Fire	210	false					false		4	uragaan;fire		Close;Sleep;Blast	true	0
+2745	Bow	12	Lunatic Arrow	324	10	0	Dragon	300	true					false		2;1	rathian;dragon		Close;Power;Poison		0
+2748	Bow	12	Silver Wrathbow	312	20	0	Fire	330	false					false		1	rathalos;fire		Close;Power;Poison		0
+2751	Bow	10	Laguna Shot II	288	0	0	Water	330	false					false		2;1	element;water		Close;Power	true	0
+2753	Bow	10	Icicle Blizzard II	276	25	0	Ice	300	false					false		1	barioth;ice		Close;Power	true	0
+2756	Bow	11	Night Flight	300	20	0	Water	240	true					false		1	nargacuga;water		Close;Power;Poison		0
+2759	Bow	11	Mist Glacia	276	0	0	Ice	450	false					false		1	legiana;ice		Close;Power;Poison;Sleep		0
+2762	Bow	11	Hunter's Bravebow III	312	0	35	Water	390	true					false		3	bone;water		Close;Paralysis;Poison	true	0
+2764	Bow	12	Alluring Evelia	336	0	0	Ice	240	false					false		4	velkhana;ice		Close;Power		0
+2766	Bow	10	Mammoth Greatbow II	312	0	0	Ice	180	true					false		4	banbaro;ice		Close;Power;Poison;Sleep	true	0
+2768	Bow	10	Glavenus Arrow II	300	0	0	Fire	390	false					false		1;1	glavenus;fire		Close;Power;Poison;Blast	true	0
+2770	Bow	11	Acidic Arrow II	336	0	0	Thunder	240	true					false		1;1	acidic;glavenus;thunder		Close;Paralysis;Blast	true	0
+2771	Bow	11	Deathbow Vaal Velos	300	0	0	Dragon	330	false					false		2;1	vaal;hazak;dragon		Close;Power;Sleep	true	0
+2773	Bow	12	Black Planula	324	10	0	Water	270	false					false		1	namielle;water		Close;Power;Paralysis		0
+2775	Bow	10	Cera Cyclord	324	-15	30	Ice	210	true					false		4	diablos;ice		Close;Power;Paralysis		0
+2777	Bow	10	Datura Squall II	288	0	0				Blast	300	true		false		2;1	pukei;blast		Close;Paralysis;Poison	true	0
+2779	Bow	10	Nightmare String II	288	0	0	Fire	240	true					false		2	nightshade;paolumu;fire		Close;Paralysis;Sleep	true	0
+2781	Bow	10	Anjanath Flamebow II	312	-20	0	Fire	450	false					false			anjanath;fire		Close;Power;Blast	true	0
+2783	Bow	10	Fulguring Bow II	300	20	0	Thunder	180	false					false	 	1	fulgur;anjanath;thunder		Close;Power;Paralysis	true	0
+2785	Bow	10	Thundering Strikebow	264	15	0	Thunder	330	false					false		1	tobi;kadachi;thunder		Close;Power;Paralysis	true	0
+2788	Bow	11	Fellbow Crimson Storm	300	15	0	Dragon	360	true					false		1	viper;kadachi;dragon		Close;Paralysis;Poison		0
+2790	Bow	11	Dragonseal Aldbow II	264	0	0	Dragon	480	false					false		1;1	dragonbone;dragon		Close;Paralysis;Sleep		0
+2791	Bow	12	Dawning Insight	336	0	30	Dragon	270	true					false		1	shara;ishvalda;dragon		Close;Power;Sleep		0
+2792	Bow	11	Daora's Toxotes	300	10	0	Ice	270	false					false		2;1	blacksteel;ice		Close;Power		0
+2793	Bow	11	Neo Hunter Bow	312	0	0				Blast	180	false		false		4	workshop;blast		Close;Paralysis;Poison;Sleep;Blast		0
+2794	Bow	12	Fate's Thread	336	-20	0	Dragon	270	false					false			deviljho;dragon		Close;Power;Poison		0
+2795	Bow	12	Soulfire Arch 'Blaze'	312	20	0				Blast	180	false		false		2;1	lunastra;teostra;blast		Close;Power		0
+2796	Bow	12	Soulfire Arch 'Ruin'	336	0	0				Blast	120	false		false		2;2	lunastra;nergigante;blast		Close;Power;Poison;Sleep		0
+2797	Bow	12	Soulfire Arch 'Styx'	312	10	0				Blast	240	false		false			lunastra;xeno;jiva;blast		Close;Power		0
