@@ -4,6 +4,11 @@ export class MelodiesModel {
 	id: number;
 	notes: string[];
 	melodies: number[][];
-	melodiesEffect: number[];
-	melodyEffect: MelodyEffectModel[];
+	melodiesEffect: MelodyEffectModel[];
+	melodyEffects: MelodiesDetailModel[];
+}
+
+export class MelodiesDetailModel {
+	melody: number[];
+	effects: MelodyEffectModel[];
 }

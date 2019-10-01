@@ -3,22 +3,30 @@
 		<thead>
 			<tr>
 				<td>
-					Notes:
+					Notes: &nbsp;
 					<span *ngFor="let note of weaponMelodies.notes; let i = index">
-						<img [src]="'assets/images/notes/' + note + '-icon.png'" class="note" alt="note">
+						<span [ngClass]="'note-' + getNoteClass(note)" style="font-size:20px;font-weight:bold;">
+							<span *ngIf="i < 3">{{getNoteSymbol(note)}}</span>
+						</span>
+						&nbsp;
 					</span>
 				</td>
 				<td></td>
 			</tr>
 		</thead>
 		<tbody>
-			<tr *ngFor="let melody of weaponMelodies.melodies; let i = index">
+			<tr *ngFor="let melodyEffect of weaponMelodies.melodyEffects; let i = index">
 				<td>
-					{{weaponMelodies.melodyEffect[i].name}}
+					<span *ngFor="let effect of melodyEffect.effects; let effectIndex = index">
+						<span *ngIf="effectIndex > 0"> +</span>
+						{{effect.name}} <span *ngIf="effect.level">({{effect.level}})</span>
+					</span>
 				</td>
 				<td>
-					<span *ngFor="let note of melody">
-						<img class="note" [src]="'assets/images/notes/' + weaponMelodies.notes[note-1] + '-icon.png'" alt="note">
+					<span *ngFor="let note of melodyEffect.melody">
+						<span [ngClass]="'note-' + getNoteClass(weaponMelodies.notes[note-1])" style="font-size:18px;">
+							{{getNoteSymbol(weaponMelodies.notes[note-1])}}
+						</span>
 						&nbsp;
 					</span>
 				</td>

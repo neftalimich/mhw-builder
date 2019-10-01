@@ -1,5 +1,15 @@
 $borderStyle: 1px dashed rgb(88, 88, 88);
 
+$green: #5dab76;
+$blue: #5b7efe;
+$lblue: #5bc3e3;
+$yellow: #dac04c;
+$orange: #d99e6d;
+$red: #d74e67;
+$purple: #988db6;
+$kakhi: #f6f0bb;
+
+
 table {
 	width: 100%;
 	font-size: 12px;
@@ -19,4 +29,36 @@ table {
 .note {
 	height: 16px;
 	width: auto;
+}
+
+.note-g {
+	color: $green;
+}
+
+.note-b {
+	color: $blue;
+}
+
+.note-lb {
+	color: $lblue;
+}
+
+.note-y {
+	color: $yellow;
+}
+
+.note-o {
+	color: $orange;
+}
+
+.note-r {
+	color: $red;
+}
+
+.note-p {
+	color: $purple !important;
+}
+
+.note-k {
+	color: $kakhi;
 }

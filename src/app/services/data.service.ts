@@ -5,7 +5,7 @@ import { AugmentationModel } from '../models/augmentation.model';
 import { DecorationModel } from '../models/decoration.model';
 import { ItemModel } from '../models/item.model';
 import { KinsectModel } from '../models/kinsect.model';
-import { MelodiesModel } from '../models/melodies.model';
+import { MelodiesDetailModel, MelodiesModel } from '../models/melodies.model';
 import { ModificationModel } from '../models/modification.model';
 import { SetBonusModel } from '../models/set-bonus.model';
 import { SharpnessModifierModel } from '../models/sharpness-modifier.model';
@@ -208,9 +208,15 @@ export class DataService {
 		if (weaponType == WeaponType.HuntingHorn) {
 			result = this.appDataProvider.appData.melodies.find(c => c.id === weaponId);
 			if (result) {
-				result.melodyEffect = [];
-				for (const melody of result.melodiesEffect) {
-					result.melodyEffect.push(this.appDataProvider.appData.melodyEffect.find(m => m.id == melody));
+				result.melodyEffects = [];
+				for (let i = 0; i < result.melodies.length; i++) {
+					const melodyEffect = new MelodiesDetailModel();
+					melodyEffect.melody = result.melodies[i];
+					melodyEffect.effects = result.melodiesEffect.filter(e => e.index == i);
+					for (const effect of melodyEffect.effects) {
+						effect.name = this.appDataProvider.appData.melodyEffect.find(m => m.id == effect.id).name;
+					}
+					result.melodyEffects.push(melodyEffect);
 				}
 			}
 		}

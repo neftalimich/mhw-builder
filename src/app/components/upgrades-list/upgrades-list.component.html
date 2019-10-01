@@ -2,7 +2,7 @@
 	<table class="upgrades-table">
 		<thead>
 			<tr>
-				<th class="text-left">[{{upgradeContainer.used}}/{{upgradeContainer.slots}}]</th>
+				<th class="text-center">upgradeContainer.used}}/{{upgradeContainer.slots}}]</th>
 				<th class="text-center">Lv1</th>
 				<th class="text-center">Lv2</th>
 				<th class="text-center">Lv3</th>
@@ -40,7 +40,7 @@
 	<table class="upgrades-table" *ngIf="upgradeContainer.hasCustomUpgrades">
 		<thead>
 			<tr>
-				<th class="text-left">Custom Upgrades</th>
+				<th class="text-left">Custom</th>
 				<th>I</th>
 				<th>II</th>
 				<th>III</th>
@@ -51,7 +51,7 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td class="border-left-blue">Attack Upgrade</td>
+				<td class="border-left-blue">Attack</td>
 				<td class="text-center" (click)="selectCustomUpg('Attack',0)" [class.selected]="upgradeContainer.customUpgrades[0]=='Attack'" style="cursor:pointer;">+1</td>
 				<td class="text-center" (click)="selectCustomUpg('Attack',1)" [class.selected]="upgradeContainer.customUpgrades[1]=='Attack'" style="cursor:pointer;">+1</td>
 				<td class="text-center" (click)="selectCustomUpg('Attack',2)" [class.selected]="upgradeContainer.customUpgrades[2]=='Attack'" style="cursor:pointer;">+1</td>
@@ -60,7 +60,7 @@
 				<td class="text-center bg-52">+{{countCustomUpg('Attack')}}</td>
 			</tr>
 			<tr>
-				<td class="border-left-blue">Affinity Upgrade</td>
+				<td class="border-left-blue">Affinity</td>
 				<td class="text-center" (click)="selectCustomUpg('Affinity',0)" [class.selected]="upgradeContainer.customUpgrades[0]=='Affinity'" style="cursor:pointer;">+1</td>
 				<td class="text-center" (click)="selectCustomUpg('Affinity',1)" [class.selected]="upgradeContainer.customUpgrades[1]=='Affinity'" style="cursor:pointer;">+1</td>
 				<td class="text-center" (click)="selectCustomUpg('Affinity',2)" [class.selected]="upgradeContainer.customUpgrades[2]=='Affinity'" style="cursor:pointer;">+1</td>
@@ -69,7 +69,7 @@
 				<td class="text-center bg-52">+{{countCustomUpg('Affinity')}}</td>
 			</tr>
 			<tr>
-				<td class="border-left-blue">Element Upgrade</td>
+				<td class="border-left-blue">Element</td>
 				<td class="text-center" (click)="selectCustomUpg('Element',0)" [class.selected]="upgradeContainer.customUpgrades[0]=='Element'" style="cursor:pointer;">+10</td>
 				<td class="text-center" (click)="selectCustomUpg('Element',1)" [class.selected]="upgradeContainer.customUpgrades[1]=='Element'" style="cursor:pointer;">+10</td>
 				<td class="text-center" (click)="selectCustomUpg('Element',2)" [class.selected]="upgradeContainer.customUpgrades[2]=='Element'" style="cursor:pointer;">+10</td>

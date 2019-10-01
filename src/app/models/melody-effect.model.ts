@@ -1,4 +1,6 @@
 export class MelodyEffectModel {
-	id: number;
-	name: string;
+	id: string;
+	name?: string;
+	level?: string;
+	index?: number;
 }
