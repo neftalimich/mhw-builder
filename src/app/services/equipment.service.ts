@@ -97,7 +97,8 @@ export class EquipmentService {
 		this.updateSkills();
 	}
 
-	updateItemActive() {
+	updateItemActive(isSomeToolActive: boolean) {
+		this.skillService.isSomeToolActive = isSomeToolActive;
 		this.updateSkills();
 	}
 

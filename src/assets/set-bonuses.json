@@ -382,6 +382,16 @@
 		]
 	},
 	{
+		"id": "deviljhoEssence",
+		"name": "Deviljho Essence",
+		"setLevels": [
+			{
+				"id": "staminaThiefSecrect",
+				"pieces": 3
+			}
+		]
+	},
+	{
 		"id": "velkhanaDivinity",
 		"name": "Velkhana Divinity",
 		"setLevels": [
@@ -406,6 +416,16 @@
 		]
 	},
 	{
+		"id": "kirinDivinity",
+		"name": "Kirin Divinity",
+		"setLevels": [
+			{
+				"id": "greatLuck",
+				"pieces": 3
+			}
+		]
+	},
+	{
 		"id": "namielleDivinity",
 		"name": "Namielle Divinity",
 		"setLevels": [
@@ -416,6 +436,20 @@
 			{
 				"id": "trueElementAcceleration",
 				"pieces": 4
+			}
+		]
+	},
+	{
+		"id": "sharaIshvaldaDivinity",
+		"name": "Shara Ishvalda Divinity",
+		"setLevels": [
+			{
+				"id": "gaiasVeil",
+				"pieces": 4
+			},
+			{
+				"id": "trueGaiasVeil",
+				"pieces": 5
 			}
 		]
 	}

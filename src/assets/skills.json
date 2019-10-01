@@ -1405,6 +1405,7 @@
 		"id": "staminaThief",
 		"name": "Stamina Thief",
 		"description": "Increases certain attacks' ability to exhaust monsters.",
+		"maxLevel": 3,
 		"levels": [
 			{
 				"description": "Exhaust power +20%"
@@ -1414,6 +1415,12 @@
 			},
 			{
 				"description": "Exhaust power +40%"
+			},
+			{
+				"description": "Exhaust power +50%"
+			},
+			{
+				"description": "Exhaust power +60%"
 			}
 		]
 	},
@@ -2388,6 +2395,17 @@
 		]
 	},
 	{
+		"id": "staminaThiefSecrect",
+		"name": "Stamina Thief Secrect",
+		"description": "",
+		"raiseSkillId": "staminaThief",
+		"levels": [
+			{
+				"description": "Raises the maximum level of Stamina Thief Skill."
+			}
+		]
+	},
+	{
 		"id": "elementAcceleration",
 		"name": "Element Acceleration",
 		"description": "",
@@ -2404,6 +2422,26 @@
 		"levels": [
 			{
 				"description": "Continually attacking a monster activates Free Element/Ammo Up Lv3 and increases elemental damage."
+			}
+		]
+	},
+	{
+		"id": "gaiasVeil",
+		"name": "Gaia's Veil",
+		"description": "",
+		"levels": [
+			{
+				"description": "While wearing a mantle, gain Windproof Lv3, Earplugs Lv3, Tremor Resistance Lv3, and Flinch Free."
+			}
+		]
+	},
+	{
+		"id": "trueGaiasVeil",
+		"name": "True Gaia's Veil",
+		"description": "",
+		"levels": [
+			{
+				"description": "While wearing a mantle, gain Windproof Lv5, Earplugs Lv5, Tremor Resistance Lv3, and Flinch Free."
 			}
 		]
 	}

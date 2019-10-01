@@ -22,6 +22,7 @@ export class EquippedSkillModel {
 	toolCount: number; // Tool
 
 	isSetBonus: boolean;
+	isNatureBonus: boolean;
 	requiredCount?: number;
 
 	constructor() {
@@ -33,12 +34,14 @@ export class EquippedSkillModel {
 		this.feetCount = 0;
 		this.charmCount = 0;
 		this.toolCount = 0;
-		this.isSetBonus = false;
 
 		this.equippedArmorCount = 0;
 		this.equippedTool1Count = 0;
 		this.equippedTool2Count = 0;
 		this.equippedToolActiveCount = 0;
 		this.equippedCount = 0;
+
+		this.isSetBonus = false;
+		this.isNatureBonus = false;
 	}
 }

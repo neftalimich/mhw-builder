@@ -358,7 +358,7 @@ export class SlotService {
 			}
 		}
 		this.itemActiveChanged$.next();
-		this.equipmentService.updateItemActive();
+		this.equipmentService.updateItemActive(active);
 	}
 
 	private applySlotAugmentation() {

@@ -17,10 +17,12 @@ export class SkillService {
 
 	public skills: EquippedSkillModel[];
 	public setBonuses: EquippedSetBonusModel[];
+	public isSomeToolActive?: boolean;
 
 	constructor(
 		private dataService: DataService
 	) {
+		this.isSomeToolActive = false;
 	}
 
 	updateSkills(items: ItemModel[], decorations: DecorationModel[], augmentations: AugmentationModel[]) {
@@ -200,6 +202,61 @@ export class SkillService {
 							const equippedSkillToRaise = _.find(equippedSkills, es => es.id == skill.raiseSkillId);
 							if (equippedSkillToRaise) {
 								equippedSkillToRaise.totalLevelCount = equippedSkillToRaise.skill.levels.length;
+							}
+						}
+					}
+					if (this.isSomeToolActive) {
+						let natureSkills = [];
+						if (setLevel.id == 'gaiasVeil') {
+							natureSkills = [
+								{ id: 'windproof', level: 3 },
+								{ id: 'earplugs', level: 3 },
+								{ id: 'tremorResistance', level: 3 },
+								{ id: 'flinchFree', level: 3 }
+							];
+						} else if (setLevel.id == 'trueGaiasVeil') {
+							natureSkills = [
+								{ id: 'windproof', level: 5 },
+								{ id: 'earplugs', level: 5 },
+								{ id: 'tremorResistance', level: 3 },
+								{ id: 'flinchFree', level: 3 }
+							];
+						}
+
+						if (natureSkills.length > 0) {
+							for (const nature of natureSkills) {
+								let natureEquippedSkill = _.find(equippedSkills, (es: { id: string; }) => es.id == nature.id);
+
+								if (!natureEquippedSkill) {
+									const skill = this.dataService.getSkill(nature.id);
+									natureEquippedSkill = new EquippedSkillModel();
+									natureEquippedSkill.skill = skill;
+									natureEquippedSkill.id = skill.id;
+									natureEquippedSkill.name = skill.name;
+									natureEquippedSkill.description = skill.description;
+									natureEquippedSkill.isNatureBonus = true;
+									natureEquippedSkill.equippedCount = nature.level;
+									natureEquippedSkill.equippedArmorCount = nature.level;
+									natureEquippedSkill.totalLevelCount = skill.levels.length;
+									equippedSkills.push(natureEquippedSkill);
+
+									if (skill.raiseSkillId) {
+										const equippedSkillToRaise = _.find(equippedSkills, es => es.id == skill.raiseSkillId);
+										if (equippedSkillToRaise) {
+											equippedSkillToRaise.totalLevelCount = equippedSkillToRaise.skill.levels.length;
+										}
+									}
+								} else {
+									if (!natureEquippedSkill.isNatureBonus) {
+										if (natureEquippedSkill.equippedCount > nature.level) {
+											natureEquippedSkill.isNatureBonus = false;
+										} else {
+											natureEquippedSkill.isNatureBonus = true;
+										}
+									}
+									natureEquippedSkill.equippedCount = Math.max(natureEquippedSkill.equippedCount, nature.level);
+									natureEquippedSkill.equippedArmorCount = Math.max(natureEquippedSkill.equippedArmorCount, nature.level);
+								}
 							}
 						}
 					}
