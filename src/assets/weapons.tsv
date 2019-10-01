@@ -818,41 +818,41 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2164	Hammer	12	Soulfire Heel 'Ruin'	1404	0	0				Blast	210	false		false	12;3;9;3;3;8;2	2;2	lunastra;nergigante;blast				0
 2165	Hammer	12	Soulfire Heel 'Styx'	1300	10	0				Blast	330	false		false	12;3;9;3;3;8;2	3;3	lunastra;xeno;jiva;blast				0
 2166	Hammer	11	Bristly Inferno	1352	0	0				Poison	360	false		false	6;3;3;11;4;13;0		workshop;poison				0
-2169	HuntingHorn	11	Sforzando III	1092	0	0				Paralysis	360	true		false	12;3;3;6;5;8;3	1;1	ore;paralysis		Attack Up (L);Health Boost (L);Defense Up (L);Wind Pressure Negated;Impact Echo Wave;Max Stamina Up + Recovery	true	0
-2171	HuntingHorn	11	Wolf Shamisen	1134	25	0				Poison	240	false		false	15;3;9;3;3;5;2	3	yian;garuga;poison		Health Rec. (S);Affinity Up and Health Rec. (S);Earplugs (L);Echo Wave 'Dragon';Extended Health Recovery		0
-2172	HuntingHorn	12	Ruinous Desolation	1218	0	0	Dragon	210	false					false	8;3;3;11;4;16;0	1	nergigante;dragon		Health Rec. (S);Affinity Up and Health Rec. (S);Earplugs (L);Echo Wave 'Dragon';Extended Health Recovery		0
-2176	HuntingHorn	12	Despot's Thunderclap	1092	0	0	Thunder	450	false					false	12;3;9;3;3;8;2	2	element;thunder		Health Rec. (S);Health Rec. (L);Scoutfly Power Up;Earplugs (L);Affinity Up and Health Rec. (S);Speed Boost + Evade Window Up		0
-2178	HuntingHorn	10	Taghrid al-Nasr II	1092	25	0				Sleep	420	true		false	11;3;3;11;4;8;0		kuluyaku;sleep		Stamina Use Reduced (L);Wind Pressure Negated;Defense Up (L);Tool Use Drain Reduced (L);Scoutfly Power Up;Stun Negated;Max Stamina Up + Recovery	true	0
-2181	HuntingHorn	11	Tigrex Horn	1176	-20	0				Blast	330	true		false	6;3;3;11;4;13;0		tigrex;blast		Attack Up (L);Scoutfly Power Up;Muck/Water/Deep Snow Res;Envir. Damage Negated;Earplugs (S);Impact Echo Wave;Speed Boost + Evade Window Up		0
-2183	HuntingHorn	12	Ogrebite	1218	-30	0				Sleep	270	true		false	9;2;3;9;9;4;4		brute;tigrex;sleep		Attack Up (L);Health Rec. (S);Recovery Speed (L);Impact Echo Wave;Extended Health Recovery		0
-2186	HuntingHorn	12	Gold Chordmaker	1134	25	0	Fire	420	false					false	12;3;3;6;5;8;3	2	rathian;fire		Stamina Use Reduced (L);All Wind Pressure Negated;Defense Up (L);Ice Res Boost (L);Sonic Waves;Max Stamina Up + Recovery;Elemental Effectiveness Up		0
-2189	HuntingHorn	10	Laguna Drum II	1008	0	0	Water	540	false					false	12;3;3;6;5;6;5	2;1	element;water		Attack Up (L);Scoutfly Power Up;Muck/Water/Deep Snow Res;Envir. Damage Negated;Earplugs (S);Impact Echo Wave;Speed Boost + Evade Window Up	true	0
-2192	HuntingHorn	11	Cry in the Night	1008	20	0				Poison	600	true		false	14;2;2;7;4;3;8		nargacuga;poison		Stamina Use Reduced (L);Wind Pressure Negated;Defense Up (L);Tool Use Drain Reduced (L);Scoutfly Power Up;Stun Negated;Max Stamina Up + Recovery		0
-2195	HuntingHorn	11	Lilim Glacia	1008	0	0	Ice	600	false					false	6;2;3;9;9;7;4		legiana;ice		Stamina Use Reduced (L);Wind Pressure Negated;Defense Up (L);Health Rec. (S);Health Rec. (M) + Antidote;Max Stamina Up + Recovery;Extended Health Recovery		0
-2198	HuntingHorn	11	Mad Bone Horn III	1176	0	35	Ice	330	true					false	9;10;4;5;7;5;0	3	bone;ice		Attack Up (L);Scoutfly Power Up;Muck/Water/Deep Snow Res;Envir. Damage Negated;Earplugs (S);Impact Echo Wave;Speed Boost + Evade Window Up	true	0
-2200	HuntingHorn	12	Sonorous Eisfyl	1134	0	0	Ice	270	false					false	14;3;3;6;5;4;5	4	velkhana;ice		Attack Up (L);Health Boost (L);Wind Pressure Negated;Defense Up (L);Impact Echo Wave;Max Stamina Up + Recovery		0
-2202	HuntingHorn	10	Gama Chorus II	1008	0	0				Blast	270	false		false	14;3;3;6;5;6;3	3;2	dodogama;blast		Attack Up (L);Health Boost (L);Defense Up (L);Wind Pressure Negated;Impact Echo Wave;Max Stamina Up + Recovery	true	0
-2205	HuntingHorn	11	Glavenus Horn	1092	0	0	Fire	330	false					false	12;3;3;6;5;8;3	1	glavenus;fire		Attack Up (L);Health Rec. (S);Recovery Speed (L);Impact Echo Wave;Extended Health Recovery		0
-2207	HuntingHorn	10	Anjanath Hum II	1134	-20	0	Fire	600	false					false	8;10;4;5;8;5;0		anjanath;fire		Stamina Use Reduced (L);Wind Pressure Negated;Defense Up (L);Health Rec. (S);Health Rec. (M) + Antidote;Max Stamina Up + Recovery;Extended Health Recovery	true	0
-2209	HuntingHorn	10	Fulguring Horn II	1050	20	0	Thunder	330	false					false	8;10;4;5;8;5;0	1	fulgur;anjanath;thunder		Attack Up (L);Health Boost (L);Defense Up (L);Wind Pressure Negated;Impact Echo Wave;Max Stamina Up + Recovery	true	0
-2211	HuntingHorn	11	The Rasping Ballad	1218	0	0				Paralysis	330	true		false	6;5;11;9;6;2;1	4	acidic;glavenus;paralysis		All Melody Effects Extended;Knockbacks Negated;Attack Up (L);Impact Echo Wave;Echo Wave 'Dragon'		0
-2213	HuntingHorn	10	Datura Maestro II	1008	0	0				Poison	660	false		false	12;3;3;6;5;6;5	2;1	pukei;poison		Health Rec. (S);Health Rec. (L);Scoutfly Power Up;Earplugs (L);Affinity Up and Health Rec. (S);Speed Boost + Evade Window Up	true	0
-2215	HuntingHorn	10	Icicle Horn II	1050	30	0	Ice	360	false					false	11;3;3;11;4;8;0	1	barrioth;ice		Attack Up (S);Attack Up (S);Attack Up (S);Fire Res Boost (L);Sonic Waves;Impact Echo Wave;Elemental Effectiveness Up	true	0
-2217	HuntingHorn	10	Lumu Drone II	1050	10	0	Water	690	true					false	14;3;3;6;5;6;3	3;1	paolumu;water		Stamina Use Reduced (L);Wind Pressure Negated;Defense Up (L);Health Rec. (S);Health Rec. (M) + Antidote;Max Stamina Up + Recovery;Extended Health Recovery	true	0
-2219	HuntingHorn	10	Nyx Barone II	1008	0	0				Sleep	450	false		false	6;3;3;11;4;13;0	2	nightshade;paolumu;sleep		Scoutfly Power Up;Abnormal Status Atk. Increased ;All Ailments Negated;Divine Protection;Echo Wave 'Dragon';Speed Boost + Evade Window Up	true	0
-2221	HuntingHorn	12	Bazel Valdi Rooksearer	1092	-10	0				Blast	300	false		false	16;3;3;6;5;2;5	2;2	bazelgeuse;blast		Attack Up (L);Health Rec. (S);Recovery Speed (L);Impact Echo Wave;Extended Health Recovery		0
-2223	HuntingHorn	11	Queen's Flute II	1092	0	0				Paralysis	420	false		false	13;3;3;6;5;7;3	4;1	vespoid;paralysis		Stamina Use Reduced (L);All Wind Pressure Negated;Defense Up (L);Ice Res Boost (L);Sonic Waves;Max Stamina Up + Recovery;Elemental Effectiveness Up		0
-2225	HuntingHorn	10	Baan Rattle II	1050	0	35				Sleep	330	false		false	11;3;3;11;4;8;0		radobaan;sleep		Attack Up (S);Attack Up (S);Attack Up (S);Fire Res Boost (L);Sonic Waves;Impact Echo Wave;Elemental Effectiveness Up	true	0
-2227	HuntingHorn	10	Brachydios Horn II	1050	0	0				Blast	510	false		false	8;3;3;11;4;11;0	1	brachydios;blast		Stamina Use Reduced (L);Wind Pressure Negated;Defense Up (L);Tool Use Drain Reduced (L);Scoutfly Power Up;Stun Negated;Max Stamina Up + Recovery	true	0
-2229	HuntingHorn	11	Dragonseal Aldhorn II	1008	0	0	Dragon	720	false					false	13;10;3;3;8;3;0	1;1	dragonbone;dragon		Scoutfly Power Up;Paralysis Negated;Tremors Negated;Water Res Boost (L);Dragon Res Boost (L);Elemental Attack Boost;Sonic Waves	true	0
-2230	HuntingHorn	12	Austere Paradise	1176	0	30	Dragon	510	true					false	17;3;3;6;5;3;3	1;1	shara;ishvalda;dragon		Defense Up (L);Attack and Defense Up (S);Attack and Defense Up (S);All Wind Pressure Negated;Stamina Use Reduced (L);Echo Wave 'Dragon';Max Stamina Up + Recovery		0
-2231	HuntingHorn	11	Thunderwail Feyhorn	1008	0	0	Thunder	660	false					false	6;8;3;3;8;12;0		kirin;thunder		Health Rec. (S);Recovery Speed (S);Divine Protection;Thunder Res Boost (L);Elemental Attack Boost;Sonic Waves;Extended Health Recovery	true	0
-2232	HuntingHorn	11	Hydros Horn	1134	10	0	Water	450	false					false	7;8;3;2;9;11;0	1	namielle;water		Sonic Waves;Blight Res Up;Elemental Attack Boost;Blight Negated;Earplugs (S) / Wind Pressure Negated;Echo Wave 'Dragon';Elemental Effectiveness Up	true	0
-2233	HuntingHorn	11	Teostra's Musica	1092	10	0				Blast	420	false		false	10;8;3;3;8;8;0		blacksteel;blast		Scoutfly Power Up;Abnormal Status Atk. Increased ;All Ailments Negated;Divine Protection;Echo Wave 'Dragon';Speed Boost + Evade Window Up		0
-2234	HuntingHorn	12	Fate's Dirge	1176	-30	0	Dragon	330	false					false	16;3;3;6;5;4;3		deviljho;dragon		Attack Up (L);Health Boost (L);Defense Up (L);Wind Pressure Negated;Impact Echo Wave;Max Stamina Up + Recovery		0
-2235	HuntingHorn	12	Soulfire Chorus 'Blaze'	1050	20	0				Blast	270	false		false	12;3;9;3;3;8;2	2;1	lunastra;teostra;blast		All Melody Effects Extended;Knockbacks Negated;Attack Up (L);Impact Echo Wave;Echo Wave 'Dragon'		0
-2236	HuntingHorn	12	Soulfire Chorus 'Ruin'	1134	0	0				Blast	210	false		false	12;3;9;3;3;8;2	2;2	lunastra;nergigante;blast		Health Rec. (S);Affinity Up and Health Rec. (S);Earplugs (L);Echo Wave 'Dragon';Extended Health Recovery		0
-2237	HuntingHorn	12	Soulfire Chorus 'Styx'	1050	10	0				Blast	330	false		false	12;3;9;3;3;8;2	3;3	lunastra;xeno;jiva;blast		Defense Up (L);Attack and Defense Up (S);Attack and Defense Up (S);All Wind Pressure Negated;Stamina Use Reduced (L);Echo Wave 'Dragon';Max Stamina Up + Recovery		0
+2169	HuntingHorn	11	Sforzando III	1092	0	0				Paralysis	360	true		false	12;3;3;6;5;8;3	1;1	ore;paralysis			true	0
+2171	HuntingHorn	11	Wolf Shamisen	1134	25	0				Poison	240	false		false	15;3;9;3;3;5;2	3	yian;garuga;poison				0
+2172	HuntingHorn	12	Ruinous Desolation	1218	0	0	Dragon	210	false					false	8;3;3;11;4;16;0	1	nergigante;dragon				0
+2176	HuntingHorn	12	Despot's Thunderclap	1092	0	0	Thunder	450	false					false	12;3;9;3;3;8;2	2	element;thunder				0
+2178	HuntingHorn	10	Taghrid al-Nasr II	1092	25	0				Sleep	420	true		false	11;3;3;11;4;8;0		kuluyaku;sleep			true	0
+2181	HuntingHorn	11	Tigrex Horn	1176	-20	0				Blast	330	true		false	6;3;3;11;4;13;0		tigrex;blast				0
+2183	HuntingHorn	12	Ogrebite	1218	-30	0				Sleep	270	true		false	9;2;3;9;9;4;4		brute;tigrex;sleep				0
+2186	HuntingHorn	12	Gold Chordmaker	1134	25	0	Fire	420	false					false	12;3;3;6;5;8;3	2	rathian;fire				0
+2189	HuntingHorn	10	Laguna Drum II	1008	0	0	Water	540	false					false	12;3;3;6;5;6;5	2;1	element;water			true	0
+2192	HuntingHorn	11	Cry in the Night	1008	20	0				Poison	600	true		false	14;2;2;7;4;3;8		nargacuga;poison				0
+2195	HuntingHorn	11	Lilim Glacia	1008	0	0	Ice	600	false					false	6;2;3;9;9;7;4		legiana;ice				0
+2198	HuntingHorn	11	Mad Bone Horn III	1176	0	35	Ice	330	true					false	9;10;4;5;7;5;0	3	bone;ice			true	0
+2200	HuntingHorn	12	Sonorous Eisfyl	1134	0	0	Ice	270	false					false	14;3;3;6;5;4;5	4	velkhana;ice				0
+2202	HuntingHorn	10	Gama Chorus II	1008	0	0				Blast	270	false		false	14;3;3;6;5;6;3	3;2	dodogama;blast			true	0
+2205	HuntingHorn	11	Glavenus Horn	1092	0	0	Fire	330	false					false	12;3;3;6;5;8;3	1	glavenus;fire				0
+2207	HuntingHorn	10	Anjanath Hum II	1134	-20	0	Fire	600	false					false	8;10;4;5;8;5;0		anjanath;fire			true	0
+2209	HuntingHorn	10	Fulguring Horn II	1050	20	0	Thunder	330	false					false	8;10;4;5;8;5;0	1	fulgur;anjanath;thunder			true	0
+2211	HuntingHorn	11	The Rasping Ballad	1218	0	0				Paralysis	330	true		false	6;5;11;9;6;2;1	4	acidic;glavenus;paralysis				0
+2213	HuntingHorn	10	Datura Maestro II	1008	0	0				Poison	660	false		false	12;3;3;6;5;6;5	2;1	pukei;poison			true	0
+2215	HuntingHorn	10	Icicle Horn II	1050	30	0	Ice	360	false					false	11;3;3;11;4;8;0	1	barrioth;ice			true	0
+2217	HuntingHorn	10	Lumu Drone II	1050	10	0	Water	690	true					false	14;3;3;6;5;6;3	3;1	paolumu;water			true	0
+2219	HuntingHorn	10	Nyx Barone II	1008	0	0				Sleep	450	false		false	6;3;3;11;4;13;0	2	nightshade;paolumu;sleep			true	0
+2221	HuntingHorn	12	Bazel Valdi Rooksearer	1092	-10	0				Blast	300	false		false	16;3;3;6;5;2;5	2;2	bazelgeuse;blast				0
+2223	HuntingHorn	11	Queen's Flute II	1092	0	0				Paralysis	420	false		false	13;3;3;6;5;7;3	4;1	vespoid;paralysis				0
+2225	HuntingHorn	10	Baan Rattle II	1050	0	35				Sleep	330	false		false	11;3;3;11;4;8;0		radobaan;sleep			true	0
+2227	HuntingHorn	10	Brachydios Horn II	1050	0	0				Blast	510	false		false	8;3;3;11;4;11;0	1	brachydios;blast			true	0
+2229	HuntingHorn	11	Dragonseal Aldhorn II	1008	0	0	Dragon	720	false					false	13;10;3;3;8;3;0	1;1	dragonbone;dragon			true	0
+2230	HuntingHorn	12	Austere Paradise	1176	0	30	Dragon	510	true					false	17;3;3;6;5;3;3	1;1	shara;ishvalda;dragon				0
+2231	HuntingHorn	11	Thunderwail Feyhorn	1008	0	0	Thunder	660	false					false	6;8;3;3;8;12;0		kirin;thunder			true	0
+2232	HuntingHorn	11	Hydros Horn	1134	10	0	Water	450	false					false	7;8;3;2;9;11;0	1	namielle;water			true	0
+2233	HuntingHorn	11	Teostra's Musica	1092	10	0				Blast	420	false		false	10;8;3;3;8;8;0		blacksteel;blast				0
+2234	HuntingHorn	12	Fate's Dirge	1176	-30	0	Dragon	330	false					false	16;3;3;6;5;4;3		deviljho;dragon				0
+2235	HuntingHorn	12	Soulfire Chorus 'Blaze'	1050	20	0				Blast	270	false		false	12;3;9;3;3;8;2	2;1	lunastra;teostra;blast				0
+2236	HuntingHorn	12	Soulfire Chorus 'Ruin'	1134	0	0				Blast	210	false		false	12;3;9;3;3;8;2	2;2	lunastra;nergigante;blast				0
+2237	HuntingHorn	12	Soulfire Chorus 'Styx'	1050	10	0				Blast	330	false		false	12;3;9;3;3;8;2	3;3	lunastra;xeno;jiva;blast				0
 2240	Lance	11	Chrome Drill III	598	0	0				Paralysis	360	true		false	12;3;3;6;5;8;3	1;1	ore;paralysis			true	0
 2242	Lance	11	Incessant Wolf	621	25	0				Poison	240	false		false	15;3;9;3;3;5;2	3	yian;garuga;poison				0
 2243	Lance	12	Ruinous Perdition	667	0	0	Dragon	180	false					false	8;3;4;10;3;17;0	1	nergigante;dragon				0
