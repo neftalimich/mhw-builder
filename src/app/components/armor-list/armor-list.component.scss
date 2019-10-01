@@ -15,10 +15,10 @@ $listItemHeight: 66px;
 .search-container {
 	grid-row: 1;
 	background-color: rgb(50,50,50);
-	padding: 0 0 0 12px;	
+	padding: 0 0 0 12px;
 	border-radius: 3px;
 	display: grid;
-	grid-template-columns: auto min-content;
+	grid-template-columns: auto min-content min-content;
 	height: $searchHeight;
 
 	input {
@@ -31,6 +31,11 @@ $listItemHeight: 66px;
 
 	input:focus {
 		outline: none;
+	}
+
+	.iceborne-button {
+		padding-top: 4px;
+		height: $searchHeight;
 	}
 
 	.clear-button {

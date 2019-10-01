@@ -979,13 +979,53 @@ id	itemType	rarity	name	defense	fireResist	waterResist	thunderResist	iceResist	d
 1548	Hands	12	Namielle Gloves Beta +	158;166;174	-3	4	3	0	-2	toolSpecialist-2;namielleDivinity	4	namielle	0
 1549	Legs	12	Namielle Coil Beta +	158;166;174	-3	4	3	0	-2	constitution-1;staminaSurge-1;namielleDivinity	4;1;1	namielle	0
 1550	Feet	12	Namielle Greaves Beta +	158;166;174	-3	4	3	0	-2	staminaSurge-2;namielleDivinity	4;2	namielle	0
-1551	Head	12	Shara Ishvalda Helm Alpha +	162;170;178	0	-2	3	-3	0	recoveryUp-2;partbreaker-1;sharaIshvaldaDivinity	3;1	shara;ishvalda	0
-1552	Chest	12	Shara Ishvalda Mail Alpha +	162;170;178	0	-2	3	-3	0	coalescence-2;healthBoost-1;sharaIshvaldaDivinity	3;2	shara;ishvalda	0
-1553	Hands	12	Shara Ishvalda Braces Alpha +	162;170;178	0	-2	3	-3	0	criticalBoost-2;coalescence-1;sharaIshvaldaDivinity	1	shara;ishvalda	0
-1554	Legs	12	Shara Ishvalda Coil Alpha +	162;170;178	0	-2	3	-3	0	healthBoost-2;recoveryUp-1;sharaIshvaldaDivinity	3;2	shara;ishvalda	0
-1555	Feet	12	Shara Ishvalda Greaves Alpha +	162;170;178	0	-2	3	-3	0	partbreaker-2;defenseBoost-2;sharaIshvaldaDivinity	1;1;1	shara;ishvalda	0
-1556	Head	12	Shara Ishvalda Helm Beta +	162;170;178	0	-2	3	-3	0	recoveryUp-2;sharaIshvaldaDivinity	4;2	shara;ishvalda	0
-1557	Chest	12	Shara Ishvalda Mail Beta +	162;170;178	0	-2	3	-3	0	coalescence-2;sharaIshvaldaDivinity	4;2	shara;ishvalda	0
-1558	Hands	12	Shara Ishvalda Braces Beta +	162;170;178	0	-2	3	-3	0	criticalBoost-2;sharaIshvaldaDivinity	4	shara;ishvalda	0
-1559	Legs	12	Shara Ishvalda Coil Beta +	162;170;178	0	-2	3	-3	0	healthBoost-2;sharaIshvaldaDivinity	4;3	shara;ishvalda	0
-1560	Feet	12	Shara Ishvalda Greaves Beta +	162;170;178	0	-2	3	-3	0	partbreaker-1;defenseBoost-1;sharaIshvaldaDivinity	4;2;1	shara;ishvalda	0
+1551	Head	11	Guild Palace Helm Alpha +									workshop	0
+1552	Chest	11	Guild Palace Mail Alpha +									workshop	0
+1553	Hands	11	Guild Palace Vambraces Alpha +									workshop	0
+1554	Legs	11	Guild Palace Coil Alpha +									workshop	0
+1555	Feet	11	Guild Palace Greaves Alpha +									workshop	0
+1556	Head	11	Guild Palace Helm Beta +									workshop	0
+1557	Chest	11	Guild Palace Mail Beta +									workshop	0
+1558	Hands	11	Guild Palace Vambraces Beta +									workshop	0
+1559	Legs	11	Guild Palace Coil Beta +									workshop	0
+1560	Feet	11	Guild Palace Greaves Beta +									workshop	0
+1561	Head	12	Shara Ishvalda Helm Alpha +	162;170;178	0	-2	3	-3	0	recoveryUp-2;partbreaker-1;sharaIshvaldaDivinity	3;1	shara;ishvalda	0
+1562	Chest	12	Shara Ishvalda Mail Alpha +	162;170;178	0	-2	3	-3	0	coalescence-2;healthBoost-1;sharaIshvaldaDivinity	3;2	shara;ishvalda	0
+1563	Hands	12	Shara Ishvalda Braces Alpha +	162;170;178	0	-2	3	-3	0	criticalBoost-2;coalescence-1;sharaIshvaldaDivinity	1	shara;ishvalda	0
+1564	Legs	12	Shara Ishvalda Coil Alpha +	162;170;178	0	-2	3	-3	0	healthBoost-2;recoveryUp-1;sharaIshvaldaDivinity	3;2	shara;ishvalda	0
+1565	Feet	12	Shara Ishvalda Greaves Alpha +	162;170;178	0	-2	3	-3	0	partbreaker-2;defenseBoost-2;sharaIshvaldaDivinity	1;1;1	shara;ishvalda	0
+1566	Head	12	Shara Ishvalda Helm Beta +	162;170;178	0	-2	3	-3	0	recoveryUp-2;sharaIshvaldaDivinity	4;2	shara;ishvalda	0
+1567	Chest	12	Shara Ishvalda Mail Beta +	162;170;178	0	-2	3	-3	0	coalescence-2;sharaIshvaldaDivinity	4;2	shara;ishvalda	0
+1568	Hands	12	Shara Ishvalda Braces Beta +	162;170;178	0	-2	3	-3	0	criticalBoost-2;sharaIshvaldaDivinity	4	shara;ishvalda	0
+1569	Legs	12	Shara Ishvalda Coil Beta +	162;170;178	0	-2	3	-3	0	healthBoost-2;sharaIshvaldaDivinity	4;3	shara;ishvalda	0
+1570	Feet	12	Shara Ishvalda Greaves Beta +	162;170;178	0	-2	3	-3	0	partbreaker-1;defenseBoost-1;sharaIshvaldaDivinity	4;2;1	shara;ishvalda	0
+1571	Head	12	Zorah Helm Alpha +									zorah;magdaros	0
+1572	Chest	12	Zorah Mail Alpha +									zorah;magdaros	0
+1573	Hands	12	Zorah Vambraces Alpha +									zorah;magdaros	0
+1574	Legs	12	Zorah Coil Alpha +									zorah;magdaros	0
+1575	Feet	12	Zorah Greaves Alpha +									zorah;magdaros	0
+1576	Head	12	Zorah Helm Beta +									zorah;magdaros	0
+1577	Chest	12	Zorah Mail Beta +									zorah;magdaros	0
+1578	Hands	12	Zorah Vambraces Beta +									zorah;magdaros	0
+1579	Legs	12	Zorah Coil Beta +									zorah;magdaros	0
+1580	Feet	12	Zorah Greaves Beta +									zorah;magdaros	0
+1581	Head	12	Yian Garuga Helm Alpha +									yian;garuga	0
+1582	Chest	12	Yian Garuga Mail Alpha +									yian;garuga	0
+1583	Hands	12	Yian Garuga Vambraces Alpha +									yian;garuga	0
+1584	Legs	12	Yian Garuga Coil Alpha +									yian;garuga	0
+1585	Feet	12	Yian Garuga Greaves Alpha +									yian;garuga	0
+1586	Head	12	Yian Garuga Helm Beta +									yian;garuga	0
+1587	Chest	12	Yian Garuga Mail Beta +									yian;garuga	0
+1588	Hands	12	Yian Garuga Vambraces Beta +									yian;garuga	0
+1589	Legs	12	Yian Garuga Coil Beta +									yian;garuga	0
+1590	Feet	12	Yian Garuga Greaves Beta +									yian;garuga	0
+1591	Head	12	Zinogre Helm Alpha +									zinogre	0
+1592	Chest	12	Zinogre Mail Alpha +									zinogre	0
+1593	Hands	12	Zinogre Vambraces Alpha +									zinogre	0
+1594	Legs	12	Zinogre Coil Alpha +									zinogre	0
+1595	Feet	12	Zinogre Greaves Alpha +									zinogre	0
+1596	Head	12	Zinogre Helm Beta +									zinogre	0
+1597	Chest	12	Zinogre Mail Beta +									zinogre	0
+1598	Hands	12	Zinogre Vambraces Beta +									zinogre	0
+1599	Legs	12	Zinogre Coil Beta +									zinogre	0
+1600	Feet	12	Zinogre Greaves Beta +									zinogre	0

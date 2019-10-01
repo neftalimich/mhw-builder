@@ -90,16 +90,18 @@ id	rarity	name	levels	skills
 313	7	Surveyor's Charm	1	scoutflyRangeUp-1;scholar-1
 314	12	Critical Charm	2	criticalBoost-1
 315	11	Invigorate Charm	3	powerProlonger-1
-316	8	Poison Coating Charm	1	poisonFunctionality-1
-317	8	Para Coating Charm	1	paraFunctionality-1
-318	8	Sleep Coating Charm	1	sleepFunctionality-1
-319	8	Blast Coating Charm	1	blastFunctionality-1
-320	8	Geomancy Charm	1	foragersLuck-1;detector-1
-341	8	Bulwark Charm	1	guardUp-1;resuscitate-1
-342	11	Dispersal Charm	2	spreadPowerShots-1
-343	8	Fair Wind Charm	1	attackBoost-1;divineBlessing-1
-344	8	Gale Charm	1	affinitySliding-1;airborne-1
-345	11	Penetration Charm	2	piercingShots-1
-346	8	Wyrmslayer Charm	1	eldersealBoost-1;dragonAttack-1
-347	12	Guardian Charm	3	offensiveGuard-1
-500	11	Adamantine Charm	1	nonElementalBoost-1;bludgeoner-1
+316	11	Penetration Charm	2	piercingShots-1
+317	11	Dispersal Charm	2	spreadPowerShots-1
+318	8	Poison Coating Charm	1	poisonFunctionality-1
+319	8	Para Coating Charm	1	paraFunctionality-1
+320	8	Sleep Coating Charm	1	sleepFunctionality-1
+321	8	Blast Coating Charm	1	blastFunctionality-1
+322	8	Geomancy Charm	1	foragersLuck-1;detector-1
+323	8	Gale Charm	1	affinitySliding-1;airborne-1
+324	8	Wyrmslayer Charm	1	eldersealBoost-1;dragonAttack-1
+325	8	Bulwark Charm	1	guardUp-1;resuscitate-1
+326	12	Guardian Charm	3	offensiveGuard-1
+327	12	Phoenix Charm	2	coalescence-1
+500	8	Fair Wind Charm	1	attackBoost-1;divineBlessing-1
+501	11	Adamantine Charm	1	nonElementalBoost-1;bludgeoner-1
+502	11	Razor Sharp Charm	1	razorSharpSpareShot-1

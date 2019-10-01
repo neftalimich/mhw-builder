@@ -15,8 +15,8 @@ import { ItemType } from '../../types/item.type';
 })
 export class ArmorListComponent implements OnInit {
 	public equipmentCategoryType = EquipmentCategoryType;
-
 	private _itemType: ItemType;
+	private _onlyIceborne: boolean;
 
 	@Input()
 	set itemType(itemType: ItemType) {
@@ -24,6 +24,17 @@ export class ArmorListComponent implements OnInit {
 		this.loadItems();
 	}
 	get itemType(): ItemType { return this._itemType; }
+
+	@Input()
+	set onlyIceborne(onlyIceborne: boolean) {
+		this._onlyIceborne = onlyIceborne;
+		if (onlyIceborne) {
+			this.applyIceborneFilter();
+		} else {
+			this.resetSearchResults();
+		}
+	}
+	get onlyIceborne(): boolean { return this._onlyIceborne; }
 
 	@ViewChild('searchBox', { static: true }) searchBox: ElementRef;
 	@ViewChild('itemList', { static: false }) itemList: VirtualScrollerComponent;
@@ -80,6 +91,7 @@ export class ArmorListComponent implements OnInit {
 					}
 				}
 			}
+			this.applyIceborneFilter();
 		} else {
 			this.resetSearchResults();
 		}
@@ -88,6 +100,13 @@ export class ArmorListComponent implements OnInit {
 	resetSearchResults() {
 		this.searchBox.nativeElement.value = null;
 		this.filteredItems = this.items;
+		this.applyIceborneFilter();
+	}
+
+	applyIceborneFilter() {
+		if (this.onlyIceborne) {
+			this.filteredItems = _.reject(this.filteredItems, item => item.id < 1000);
+		}
 	}
 
 	onItemListUpdate(items: ItemModel[]) {

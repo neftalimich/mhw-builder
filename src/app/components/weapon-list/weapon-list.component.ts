@@ -18,6 +18,7 @@ export class WeaponListComponent implements OnInit {
 	public itemTypes = ItemType;
 	public equipmentCategoryType = EquipmentCategoryType;
 	private _itemType: ItemType;
+	private _onlyIceborne: boolean;
 
 	@Input()
 	set itemType(itemType: ItemType) {
@@ -25,6 +26,17 @@ export class WeaponListComponent implements OnInit {
 		this.loadItems();
 	}
 	get itemType(): ItemType { return this._itemType; }
+
+	@Input()
+	set onlyIceborne(onlyIceborne: boolean) {
+		this._onlyIceborne = onlyIceborne;
+		if (onlyIceborne) {
+			this.applyIceborneFilter();
+		} else {
+			this.resetSearchResults();
+		}
+	}
+	get onlyIceborne(): boolean { return this._onlyIceborne; }
 
 	@Output() itemSelected = new EventEmitter<ItemModel>();
 
@@ -121,6 +133,13 @@ export class WeaponListComponent implements OnInit {
 	applyWeaponFilter() {
 		if (this.filteredItems && this.weaponTypeFilter && this.itemType == ItemType.Weapon) {
 			this.filteredItems = _.reject(this.filteredItems, item => item.weaponType != this.weaponTypeFilter);
+		}
+		this.applyIceborneFilter();
+	}
+
+	applyIceborneFilter() {
+		if (this.onlyIceborne) {
+			this.filteredItems = _.reject(this.filteredItems, item => item.id < 1000);
 		}
 	}
 

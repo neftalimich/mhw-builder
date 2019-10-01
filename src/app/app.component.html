@@ -90,10 +90,10 @@
 
 	<mhw-builder-modal #itemListModal>
 		<mhw-builder-weapon-list *ngIf="slotService.selectedItemSlot && dataService.getEquipmentCategory(slotService.selectedItemSlot.slotName) == equipmentCategoryTypes.Weapon"
-								 [itemType]="slotService.selectedItemSlot?.slotName"></mhw-builder-weapon-list>
+								 [itemType]="slotService.selectedItemSlot?.slotName" [onlyIceborne]="slotService.onlyIceborne"></mhw-builder-weapon-list>
 
 		<mhw-builder-armor-list *ngIf="slotService.selectedItemSlot && dataService.getEquipmentCategory(slotService.selectedItemSlot.slotName) == equipmentCategoryTypes.Armor"
-								[itemType]="slotService.selectedItemSlot?.slotName"></mhw-builder-armor-list>
+								[itemType]="slotService.selectedItemSlot?.slotName" [onlyIceborne]="slotService.onlyIceborne"></mhw-builder-armor-list>
 
 		<mhw-builder-charm-list *ngIf="slotService.selectedItemSlot && dataService.getEquipmentCategory(slotService.selectedItemSlot.slotName) == equipmentCategoryTypes.Charm"
 								[itemType]="slotService.selectedItemSlot?.slotName"></mhw-builder-charm-list>

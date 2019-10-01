@@ -52,9 +52,13 @@ export class SlotService {
 	selectedModificationSlot: ModificationSlotComponent;
 	selectedKinsectSlot: KinsectSlotComponent;
 
+	onlyIceborne: boolean;
+
 	constructor(
 		private equipmentService: EquipmentService
-	) { }
+	) {
+		this.onlyIceborne = true;
+	}
 
 	initialize(
 		weaponSlot: ItemSlotComponent,
