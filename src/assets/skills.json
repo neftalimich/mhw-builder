@@ -1749,6 +1749,7 @@
 		"id": "artillery",
 		"name": "Artillery",
 		"description": "Strengthens explosive attacks like gunlance shells, Wyvern's Fire, charge blade phial attacks, and sticky ammo.",
+		"maxLevel": 3,
 		"levels": [
 			{
 				"description": "Increases power of each attack by 10% and reduces Wyvern's Fire cooldown by 15%."
@@ -1758,6 +1759,12 @@
 			},
 			{
 				"description": "Increases power of each attack by 30% and reduces Wyvern's Fire cooldown by 50%."
+			},
+			{
+				"description": "Increases power of each attack by 40% and reduces Wyvern's Fire cooldown by 60%."
+			},
+			{
+				"description": "Increases power of each attack by 50% and reduces Wyvern's Fire cooldown by 70%."
 			}
 		]
 	},
@@ -2442,6 +2449,17 @@
 		"levels": [
 			{
 				"description": "While wearing a mantle, gain Windproof Lv5, Earplugs Lv5, Tremor Resistance Lv3, and Flinch Free."
+			}
+		]
+	},
+	{
+		"id": "artillerySecret",
+		"name": "Artillery Secrect",
+		"description": "",
+		"raiseSkillId": "artillery",
+		"levels": [
+			{
+				"description": "Raises the maximum level of Artillery Skill."
 			}
 		]
 	}

@@ -15,7 +15,7 @@
 			},
 			{
 				"description": "Recoil -3",
-				"recoil": -3	
+				"recoil": -3
 			}
 		]
 	},
@@ -116,6 +116,96 @@
 			{
 				"description": "Shield +3",
 				"shield": 3
+			}
+		]
+	},
+	{
+		"id": 7,
+		"code": "SCO",
+		"name": "Special Scope",
+		"description": "Enables an even deadlier Critical Range when readying the special scope. Does not Stack. (HBG Only)",
+		"levels": [
+			{
+				"description": "Scope +1"
+			}
+		]
+	},
+	{
+		"id": 8,
+		"code": "EVR",
+		"name": "Evading Reload",
+		"description": "Reload ammo while performing an evasive slide. Equipping two or more increases amount reloaded. (LHB Only)",
+		"levels": [
+			{
+				"description": "Evading Reload +1",
+				"evadingReload": 1
+			},
+			{
+				"description": "Evading Reload +2",
+				"evadingReload": 2
+			},
+			{
+				"description": "Evading Reload +3",
+				"evadingReload": 3
+			},
+			{
+				"description": "Evading Reload +4",
+				"evadingReload": 4
+			}
+		]
+	},
+	{
+		"id": 9,
+		"code": "HEART",
+		"name": "Wyvernheart Mod",
+		"description": "Icreases Wyvernheart poer as succesive hit a monster. Does not stack.",
+		"levels": [
+			{
+				"description": "Wyvernheart+"
+			}
+		]
+	},
+	{
+		"id": 10,
+		"code": "SNIPE",
+		"name": "Wyvernsnipe Mod",
+		"description": "Wyvernsnipe rounds no longer penetrate, but become extremely effective against weak points. Does not stack.",
+		"levels": [
+			{
+				"description": "Wyvernsnipe+"
+			}
+		]
+	},
+	{
+		"id": 11,
+		"code": "BLAST",
+		"name": "Wyvernblast Mod",
+		"description": "Enables Wyvernblast Counter. A Forward firing mine that detonates inmediately or on impact. Does not stack.",
+		"levels": [
+			{
+				"description": "Wyvernblast+"
+			}
+		]
+	},
+	{
+		"id": 12,
+		"code": "PBARREL",
+		"name": "Power Barrel",
+		"description": "Enchances piercing damage and boosts stun and exhaust effects. Only one barrel type can be equipped. Does not stack.",
+		"levels": [
+			{
+				"description": "Power Barrel"
+			}
+		]
+	},
+	{
+		"id": 13,
+		"code": "LBARREL",
+		"name": "Long Barrel",
+		"description": "Enchances ammo speed, extending both maximum and critical range. Only one barrel type can be equipped. Does not stack.",
+		"levels": [
+			{
+				"description": "Long Barrel"
 			}
 		]
 	}

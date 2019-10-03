@@ -999,16 +999,16 @@ id	itemType	rarity	name	defense	fireResist	waterResist	thunderResist	iceResist	d
 1568	Hands	12	Shara Ishvalda Braces Beta +	162;170;178	0	-2	3	-3	0	criticalBoost-2;sharaIshvaldaDivinity	4	shara;ishvalda	0
 1569	Legs	12	Shara Ishvalda Coil Beta +	162;170;178	0	-2	3	-3	0	healthBoost-2;sharaIshvaldaDivinity	4;3	shara;ishvalda	0
 1570	Feet	12	Shara Ishvalda Greaves Beta +	162;170;178	0	-2	3	-3	0	partbreaker-1;defenseBoost-1;sharaIshvaldaDivinity	4;2;1	shara;ishvalda	0
-1571	Head	12	Zorah Helm Alpha +									zorah;magdaros	0
-1572	Chest	12	Zorah Mail Alpha +									zorah;magdaros	0
-1573	Hands	12	Zorah Vambraces Alpha +									zorah;magdaros	0
-1574	Legs	12	Zorah Coil Alpha +									zorah;magdaros	0
-1575	Feet	12	Zorah Greaves Alpha +									zorah;magdaros	0
-1576	Head	12	Zorah Helm Beta +									zorah;magdaros	0
-1577	Chest	12	Zorah Mail Beta +									zorah;magdaros	0
-1578	Hands	12	Zorah Vambraces Beta +									zorah;magdaros	0
-1579	Legs	12	Zorah Coil Beta +									zorah;magdaros	0
-1580	Feet	12	Zorah Greaves Beta +									zorah;magdaros	0
+1571	Head	12	Zorah Headgear Alpha +	160;168;176	4	-3	-1	-2	-3	flinchFree-1;artillery-2;zorahMagdarosEssence	2;2	zorah;magdaros	0
+1572	Chest	12	Zorah Hide Alpha +	160;168;176	4	-3	-1	-2	-3	tremorResistance-2;artillery-2;zorahMagdarosEssence	3;1	zorah;magdaros	0
+1573	Hands	12	Zorah Claws Alpha +	160;168;176	4	-3	-1	-2	-3	flinchFree-2;freeMeal-1;zorahMagdarosEssence	1;1	zorah;magdaros	0
+1574	Legs	12	Zorah Spine Alpha +	160;168;176	4	-3	-1	-2	-3	tremorResistance-1;artillery-1;zorahMagdarosEssence	3;2	zorah;magdaros	0
+1575	Feet	12	Zorah Spurs Alpha +	160;168;176	4	-3	-1	-2	-3	earplugs-1;handicraft-1;zorahMagdarosEssence	3;1	zorah;magdaros	0
+1576	Head	12	Zorah Headgear Beta +	160;168;176	4	-3	-1	-2	-3	flinchFree-1;zorahMagdarosEssence	4;2;1	zorah;magdaros	0
+1577	Chest	12	Zorah Hide Beta +	160;168;176	4	-3	-1	-2	-3	tremorResistance-2;zorahMagdarosEssence	4;2	zorah;magdaros	0
+1578	Hands	12	Zorah Claws Beta +	160;168;176	4	-3	-1	-2	-3	flinchFree-2;zorahMagdarosEssence	4;1	zorah;magdaros	0
+1579	Legs	12	Zorah Spine Beta +	160;168;176	4	-3	-1	-2	-3	tremorResistance-1;zorahMagdarosEssence	4;3	zorah;magdaros	0
+1580	Feet	12	Zorah Spurs Beta +	160;168;176	4	-3	-1	-2	-3	earplugs-1;zorahMagdarosEssence	4;3	zorah;magdaros	0
 1581	Head	12	Yian Garuga Helm Alpha +									yian;garuga	0
 1582	Chest	12	Yian Garuga Mail Alpha +									yian;garuga	0
 1583	Hands	12	Yian Garuga Vambraces Alpha +									yian;garuga	0

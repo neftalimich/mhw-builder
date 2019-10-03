@@ -1038,40 +1038,40 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2592	InsectGlaive	12	Soulfire Reach 'Blaze'	775	20	0				Blast	180	false		false	11;3;9;3;3;9;2	2;1	lunastra;teostra;blast		Speed		0
 2593	InsectGlaive	12	Soulfire Reach 'Ruin'	837	0	0				Blast	150	false		false	11;3;9;3;3;9;2	2;2	lunastra;nergigante;blast		Speed		0
 2594	InsectGlaive	12	Soulfire Reach 'Styx'	775	10	0				Blast	240	false		false	11;3;9;3;3;9;2	3;3	lunastra;xeno;jiva;blast		Speed		0
-2597	LightBowgun	11	Crossblitzer III	338	0	0								false		1;1	ore;		Pls add ammo pls	true	0
-2599	LightBowgun	11	Blackwing Bowgun II	351	25	0								false		3	yiang;garuga;		Pls add ammo pls	true	0
-2600	LightBowgun	12	Ruinous Cataclysm	351	0	0								false		1;1	nergigante;		Pls add ammo pls		0
-2603	LightBowgun	10	Nightmare's Seed II	312	15	0								false		2	paolumu;		Pls add ammo pls	true	0
-2606	LightBowgun	11	Acid Blitz II	325	0	0								false		1;1	glavenus;		Pls add ammo pls	true	0
-2607	LightBowgun	11	Bazelcore	364	-10	0								false		2;1	bazelgeuse;		Pls add ammo pls	true	0
-2609	LightBowgun	10	Saber's Howl II	338	0	0								false		3;2	jagras;		Pls add ammo pls	true	0
-2612	LightBowgun	11	Accursed Fire	351	-20	0								false		2;1	tigrex;		Pls add ammo pls	true	0
-2615	LightBowgun	12	Argent Ray	351	20	0								false		1	rathalos;		Pls add ammo pls	true	0
-2619	LightBowgun	12	Despot's Wildfire	338	0	0								false		2	thunder;element;		Pls add ammo pls		0
-2623	LightBowgun	11	Blizzard Volley	312	30	0								false			ice;element;		Pls add ammo pls		0
-2625	LightBowgun	10	Laguna Blitz II	325	0	0								false		2;1	coral;pukei;		Pls add ammo pls	true	0
-2628	LightBowgun	11	Breakshot III	338	0	30								false		3	bone;		Pls add ammo pls	true	0
-2630	LightBowgun	12	Graceful Almaria	351	0	0								false		4	velkhana;		Pls add ammo pls		0
-2632	LightBowgun	12	Gulgoleth's Ruin	338	0	0								false		2;2	vaal;hazak;		Pls add ammo pls		0
-2635	LightBowgun	10	Fulgurshot II	351	-20	0								false			anjanath;		Pls add ammo pls	true	0
-2638	LightBowgun	10	Beo Shooter II	338	0	0								false		2;1	jyuratodus;		Pls add ammo pls	true	0
-2640	LightBowgun	10	Hidden Bullet II	325	20	0								false			nargacuga;		Pls add ammo pls	true	0
-2642	LightBowgun	10	Fireshatter II	325	0	0								false		3;2	lavasioth;		Pls add ammo pls	true	0
-2644	LightBowgun	10	Mammoth Bowgun II	345	0	0								false		4	banbaro;		Pls add ammo pls	true	0
-2646	LightBowgun	10	Barroth Bazooka II	351	-20	30								false		2;2	barroth;		Pls add ammo pls	true	0
-2648	LightBowgun	10	Brachydios Shot II	325	0	0								false		1	brachydios;		Pls add ammo pls	true	0
-2651	LightBowgun	11	Ghost	312	35	0								false		1	odogaron;		Pls add ammo pls		0
-2653	LightBowgun	11	Dragonseal Bowgun II	325	0	0								false		1;1	dragonbone;		Pls add ammo pls	true	0
-2654	LightBowgun	12	Fading Blossom	377	0	0								false		1;1	shara;ishvalda;		Pls add ammo pls		0
-2655	LightBowgun	11	God's Isle	312	0	0								false		1	workshop;		Pls add ammo pls		0
-2656	LightBowgun	11	Mythical Three-Evils	325	0	0								false			kirin;		Pls add ammo pls		0
-2658	LightBowgun	12	Black Actinula	364	15	0								false			namielle;		Pls add ammo pls		0
-2659	LightBowgun	11	Daora's Yellowjacket	338	10	0								false		2	blacksteel;		Pls add ammo pls		0
-2660	LightBowgun	11	Neo Cross Bowgun	338	0	40								false		4	workshop;		Pls add ammo pls		0
-2661	LightBowgun	12	Diregun 'Dementia'	364	-25	0								false			deviljho;		Pls add ammo pls		0
-2662	LightBowgun	12	Soulfire Rasp 'Blaze'	338	20	0								false		2;1	lunastra;teostra;		Pls add ammo pls		0
-2663	LightBowgun	12	Soulfire Rasp 'Ruin'	351	0	0								false		2;2	lunastra;nergigante;		Pls add ammo pls		0
-2664	LightBowgun	12	Soulfire Rasp 'Styx'	338	10	0								false		3;3	lunastra;xeno;jiva;		Pls add ammo pls		0
+2597	LightBowgun	11	Crossblitzer III	338	0	0								false		1;1	ore;			true	0
+2599	LightBowgun	11	Blackwing Bowgun II	351	25	0								false		3	yiang;garuga;			true	0
+2600	LightBowgun	12	Ruinous Cataclysm	351	0	0								false		1;1	nergigante;				0
+2603	LightBowgun	10	Nightmare's Seed II	312	15	0								false		2	paolumu;			true	0
+2606	LightBowgun	11	Acid Blitz II	325	0	0								false		1;1	glavenus;			true	0
+2607	LightBowgun	11	Bazelcore	364	-10	0								false		2;1	bazelgeuse;			true	0
+2609	LightBowgun	10	Saber's Howl II	338	0	0								false		3;2	jagras;			true	0
+2612	LightBowgun	11	Accursed Fire	351	-20	0								false		2;1	tigrex;			true	0
+2615	LightBowgun	12	Argent Ray	351	20	0								false		1	rathalos;			true	0
+2619	LightBowgun	12	Despot's Wildfire	338	0	0								false		2	thunder;element;				0
+2623	LightBowgun	11	Blizzard Volley	312	30	0								false			ice;element;				0
+2625	LightBowgun	10	Laguna Blitz II	325	0	0								false		2;1	coral;pukei;			true	0
+2628	LightBowgun	11	Breakshot III	338	0	30								false		3	bone;			true	0
+2630	LightBowgun	12	Graceful Almaria	351	0	0								false		4	velkhana;				0
+2632	LightBowgun	12	Gulgoleth's Ruin	338	0	0								false		2;2	vaal;hazak;				0
+2635	LightBowgun	10	Fulgurshot II	351	-20	0								false			anjanath;			true	0
+2638	LightBowgun	10	Beo Shooter II	338	0	0								false		2;1	jyuratodus;			true	0
+2640	LightBowgun	10	Hidden Bullet II	325	20	0								false			nargacuga;			true	0
+2642	LightBowgun	10	Fireshatter II	325	0	0								false		3;2	lavasioth;			true	0
+2644	LightBowgun	10	Mammoth Bowgun II	345	0	0								false		4	banbaro;			true	0
+2646	LightBowgun	10	Barroth Bazooka II	351	-20	30								false		2;2	barroth;			true	0
+2648	LightBowgun	10	Brachydios Shot II	325	0	0								false		1	brachydios;			true	0
+2651	LightBowgun	11	Ghost	312	35	0								false		1	odogaron;				0
+2653	LightBowgun	11	Dragonseal Bowgun II	325	0	0								false		1;1	dragonbone;			true	0
+2654	LightBowgun	12	Fading Blossom	377	0	0								false		1;1	shara;ishvalda;				0
+2655	LightBowgun	11	God's Isle	312	0	0								false		1	workshop;				0
+2656	LightBowgun	11	Mythical Three-Evils	325	0	0								false			kirin;				0
+2658	LightBowgun	12	Black Actinula	364	15	0								false			namielle;				0
+2659	LightBowgun	11	Daora's Yellowjacket	338	10	0								false		2	blacksteel;				0
+2660	LightBowgun	11	Neo Cross Bowgun	338	0	40								false		4	workshop;				0
+2661	LightBowgun	12	Diregun 'Dementia'	364	-25	0								false			deviljho;				0
+2662	LightBowgun	12	Soulfire Rasp 'Blaze'	338	20	0								false		2;1	lunastra;teostra;				0
+2663	LightBowgun	12	Soulfire Rasp 'Ruin'	351	0	0								false		2;2	lunastra;nergigante;				0
+2664	LightBowgun	12	Soulfire Rasp 'Styx'	338	10	0								false		3;3	lunastra;xeno;jiva;				0
 2667	HeavyBowgun	11	Fatal Assault III	420	0	0								false		1;1	ore;		Ammo Goes here	true	0
 2669	HeavyBowgun	10	Icicle Assault II	360	30	0								false		1	barioth;		Ammo Goes here	true	0
 2670	HeavyBowgun	12	Ruinous Destruction	465	0	0								false		1	nergigante;		Ammo Goes here		0

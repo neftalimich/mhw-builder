@@ -452,5 +452,15 @@
 				"pieces": 5
 			}
 		]
+	},
+	{
+		"id": "zorahMagdarosEssence",
+		"name": "Zorah Magdaros Essence",
+		"setLevels": [
+			{
+				"id": "artillerySecret",
+				"pieces": 3
+			}
+		]
 	}
 ]

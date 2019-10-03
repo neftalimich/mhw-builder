@@ -56,7 +56,9 @@ export class EquipmentService {
 
 	addModification(modification: ModificationModel) {
 		this.modifications.push(modification);
-		this.updateSkills();
+		if (modification.id < 4) {
+			this.updateSkills();
+		}
 	}
 
 	addKinsect(kinsect: KinsectModel) {

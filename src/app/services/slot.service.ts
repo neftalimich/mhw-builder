@@ -263,12 +263,25 @@ export class SlotService {
 						this.selectedItemSlot.kinsect = new KinsectModel();
 						break;
 					case WeaponType.HeavyBowgun:
+						this.selectedItemSlot.modifications = [
+							new ModificationModel(),
+							new ModificationModel(),
+							new ModificationModel()
+						];
+						if (item.rarity >= 10) {
+							this.selectedItemSlot.modifications.push(new ModificationModel());
+						}
+						break;
 					case WeaponType.LightBowgun:
 						this.selectedItemSlot.modifications = [
 							new ModificationModel(),
 							new ModificationModel(),
 							new ModificationModel()
 						];
+						if (item.rarity >= 10) {
+							this.selectedItemSlot.modifications.push(new ModificationModel());
+							this.selectedItemSlot.modifications.push(new ModificationModel());
+						}
 						break;
 					default:
 						break;

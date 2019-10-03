@@ -424,14 +424,18 @@ export class BuildService {
 					if (this.equipmentService.upgradeContainer) {
 						result += 'u';
 						for (const detail of this.equipmentService.upgradeContainer.upgradeDetails) {
-							result += `${detail.level}`;
+							if (detail.level) {
+								result += `${detail.level}`;
+							} else {
+								result += '0';
+							}
 						}
 						const countAttack = this.equipmentService.upgradeContainer.customUpgrades.filter(custom => custom == 'Attack').length;
 						const countAffinity = this.equipmentService.upgradeContainer.customUpgrades.filter(custom => custom == 'Affinity').length;
 						const countElement = this.equipmentService.upgradeContainer.customUpgrades.filter(custom => custom == 'Element').length;
 						result += 'c' + countAttack + countAffinity + countElement;
 					} else {
-						result += 'u00000c000';
+						result += 'u0000000c00000';
 					}
 				}
 
