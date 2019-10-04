@@ -93,6 +93,9 @@
 				<div class="name" [ngClass]="'vcolor-'+ item.color">
 					{{item.name}}
 				</div>
+				<div class="upgrade">
+					<img *ngIf="item.hasCustomUpgrades" src="assets/images/custom-upgrade.png" alt="upgrade"/>
+				</div>
 				<div class="slots">
 					<div *ngIf="item.slots[0]?.level">
 						<img [src]="'assets/images/slot-' + item?.slots[0]?.level + '-icon.png'" alt="slot">
@@ -172,7 +175,12 @@
 					</div>
 					<div class="stat-value">{{item.otherData[0].value}}-{{item.otherData[0].data}}</div>
 				</div>
-
+				<div class="stat-container" *ngIf="item.elderseal">
+					<div class="icon-container">
+						<img *ngIf="item.elderseal" src="assets/images/elderseal.png" alt="elderseal" />
+					</div>
+					<div class="stat-value">{{item.elderseal}}</div>
+				</div>
 			</div>
 
 			<div class="skills-container">

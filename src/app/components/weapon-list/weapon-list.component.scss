@@ -110,7 +110,7 @@ $listItemHeight: 66px;
 	.scroll-item-container {
 		min-height: 90px;
 		display: grid;
-		grid-template-rows: min-content max-content max-content;
+		grid-template-rows: min-content max-content max-content max-content;
 		grid-gap: 4px;
 		border-radius: 3px;
 		background-color: #323232;
@@ -121,7 +121,7 @@ $listItemHeight: 66px;
 		.name-container {
 			height: 32px;
 			display: grid;
-			grid-template-columns: auto max-content max-content max-content;
+			grid-template-columns: auto max-content max-content max-content max-content;
 			grid-gap: 8px;
 
 			.name {
@@ -130,6 +130,13 @@ $listItemHeight: 66px;
 				text-overflow: ellipsis;
 				overflow: hidden;
 				padding-left: 4px;
+			}
+
+			.upgrade {
+				img {
+					height: 16px;
+					margin: 6px 0;
+				}
 			}
 
 			.slots {

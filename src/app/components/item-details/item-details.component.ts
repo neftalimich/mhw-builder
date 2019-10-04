@@ -93,7 +93,15 @@ export class ItemDetailsComponent implements OnInit {
 					value: this.item.elementBaseAttack,
 					color: this.item.elementHidden ? 'grey' : 'white'
 				});
-			}
+
+				if (this.item.elderseal) {
+					this.stats.push({
+						name: 'Elderseal',
+						value: this.item.elderseal
+					});
+				}
+			}		
+
 			if (this.item.otherData && this.item.otherData[0].value) {
 				const auxDetail: StatDetailModel = {
 					name: '',
@@ -187,6 +195,11 @@ export class ItemDetailsComponent implements OnInit {
 				value: this.item.dragonResist || 0
 			});
 		}
+
+		this.stats.push({
+			name: 'Tags',
+			value: this.item.tags.join(' | ')
+		});	
 	}
 
 

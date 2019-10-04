@@ -638,7 +638,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 1807	GreatSword	10	Jagras Deathclaw II	1248	0	0	Water	600	true					false	11;8;3;3;8;7;0	3;3	jagras;water			true	0
 1809	GreatSword	10	Mammoth Greataxe II	1344	0	0	Ice	600	true					false	9;5;5;8;13;0;0	4	banbaro;ice			true	0
 1811	GreatSword	10	Naaga Guillotine II	1152	25	0				Paralysis	510	false		false	7;6;6;10;8;3;0		girros;paralysis			true	0
-1813	GreatSword	10	Hidden Blade II	1152	25	0				Poison	660	true		false	14;2;2;7;4;3;8	1	nergacuga;poison			true	0
+1813	GreatSword	10	Hidden Blade II	1152	25	0				Poison	660	true		false	14;2;2;7;4;3;8	1	nargacuga;poison			true	0
 1815	GreatSword	10	Pyre Cleaver II	1200	0	0	Fire	660	false					false	10;10;4;5;7;4;0	4;2	lavasioth;fire			true	0
 1817	GreatSword	10	Glavenus Blaze II	1200	0	0	Fire	450	false					false	13;3;3;6;5;7;3	1;1	glavenus;fire			true	0
 1819	GreatSword	10	Datura Hellspine II	1152	0	0				Poison	660	false		false	12;3;3;6;5;6;5	2;1	pukei;poison			true	0
