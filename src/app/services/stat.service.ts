@@ -22,7 +22,7 @@ import { DataService } from './data.service';
 export class StatService {
 	public statsUpdated$ = new Subject<StatsModel>();
 
-	readonly defaultElementAttackIncreaseCap = 0.3;
+	readonly defaultElementAttackIncreaseCap = 10.0;
 
 	stats = new StatsModel();
 

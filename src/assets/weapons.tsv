@@ -784,7 +784,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2094	Hammer	11	Kurogane III	1352	0	0				Blast	360	true		false	12;3;3;6;5;8;3	1;1	ore;blast			true	0
 2097	Hammer	12	Leonid Starcrusher	1404	20	0	Fire	420	false					false	13;3;3;6;5;7;3	2	rathalos;fire				0
 2098	Hammer	12	Ruinous Obliteration	1508	0	0	Dragon	180	false					false	8;3;3;11;4;11;0	1	nergigante;dragon				0
-2100	Hammer	11	Pykrete Punisher	1300	0	0	Ice	510	false					false	6;8;3;3;8;12;0	3	workshop;ice		TBD		0
+2100	Hammer	11	Pykrete Punisher	1300	0	0	Ice	510	false					false	6;8;3;3;8;12;0	3	workshop;ice				0
 2104	Hammer	11	Aqua Florescence	1300	0	0	Water	600	false					false	12;3;3;6;5;6;5	2;1	element;water				0
 2107	Hammer	10	Glacial Bash III	1248	25	0	Ice	360	false					false	11;3;3;11;4;8;0	1	barioth;ice			true	0
 2109	Hammer	10	Naaga Matraca II	1248	20	0				Paralysis	510	false		false	7;6;6;10;8;3;0		girros;paralysis			true	0
@@ -808,7 +808,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2151	Hammer	11	Brachy Tailhammer	1352	0	0				Blast	510	false		false	9;3;3;11;4;10;0	1	brachydios;blast				0
 2153	Hammer	10	Anja Fiercemaul II	1404	-20	0	Fire	600	false					false	8;10;4;5;8;5;0		anjanath;fire			true	0
 2155	Hammer	10	Grinding Fulgur II	1300	20	0	Thunder	330	false					false	8;10;4;5;8;5;0	1	fulgur;anjanath;thunder			true	0
-2157	Hammer	11	Dragonseal Hammer II	1248	0	0	Dragon	660	false					false	13;10;3;3;8;3;0	1;1	dragonbone;dragon				0
+2157	Hammer	11	Dragonseal Hammer II	1248	0	0	Dragon	660	false				Average	false	13;10;3;3;8;3;0	1;1	dragonbone;dragon			true	0
 2158	Hammer	12	Dawning Tranquility	1456	0	30	Dragon	480	true					false	17;3;3;6;5;3;3	1;1	shara;ishvalda;dragon				0
 2159	Hammer	11	Magda Floga Reforged	1456	-20	45				Blast	450	false		false	14;4;4;7;7;2;2	2	zorah;magdaros;blast				0
 2160	Hammer	11	Daora's Hyperborea	1352	15	0	Ice	210	false					false	13;3;3;6;5;7;3	2	blacksteel;ice				0

@@ -435,7 +435,7 @@ export class BuildService {
 						const countElement = this.equipmentService.upgradeContainer.customUpgrades.filter(custom => custom == 'Element').length;
 						result += 'c' + countAttack + countAffinity + countElement;
 					} else {
-						result += 'u0000000c00000';
+						result += 'u00000c00000';
 					}
 				}
 
