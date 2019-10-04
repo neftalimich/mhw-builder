@@ -1,4 +1,5 @@
-$slotHeight: 30px;
+$slotHeight: 28px;
+$slotPadding: 2px;
 
 .container {
 	display: grid;
@@ -8,13 +9,17 @@ $slotHeight: 30px;
 	cursor: pointer;
 	border-radius: 3px;
 	background-color: rgb(50,50,50);
-	padding: 4px;
+	padding: $slotPadding;
 
 	.slot-icon {
 		line-height: $slotHeight;
 		width: 36px;
 		margin-left: 4px;
-		margin-top: 4px;
+		margin-top: $slotPadding;
+		img {
+			height: $slotHeight - $slotPadding * 2;
+			width: auto;
+		}
 	}
 
 	.selected-augmentation {

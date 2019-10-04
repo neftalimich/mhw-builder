@@ -858,6 +858,7 @@
 		"id": "latentPower",
 		"name": "Latent Power",
 		"description": "Temporarily increases affinity and reduces stamina depletion when certain conditions are met.",
+		"maxLevel": 5,
 		"levels": [
 			{
 				"description": "While active, increases affinity by 10% and reduces stamina depletion by 30%",
@@ -882,6 +883,16 @@
 			{
 				"description": "While active, increases affinity by 50% and reduces stamina depletion by 50%",
 				"activeAffinity": 50,
+				"activeStaminaDepletionReductionPercent": 50
+			},
+			{
+				"description": "While active, increases affinity by 50% and reduces stamina depletion by 50%. Triggers easier.",
+				"activeAffinity": 50,
+				"activeStaminaDepletionReductionPercent": 50
+			},
+			{
+				"description": "While active, increases affinity by 60% and reduces stamina depletion by 50%. Triggers easier.",
+				"activeAffinity": 60,
 				"activeStaminaDepletionReductionPercent": 50
 			}
 		]
@@ -2460,6 +2471,17 @@
 		"levels": [
 			{
 				"description": "Raises the maximum level of Artillery Skill."
+			}
+		]
+	},
+	{
+		"id": "latentPowerSecret",
+		"name": "Latent Power Secrect",
+		"description": "",
+		"raiseSkillId": "latentPower",
+		"levels": [
+			{
+				"description": "Raises the maximum level of Latent Power Skill."
 			}
 		]
 	}

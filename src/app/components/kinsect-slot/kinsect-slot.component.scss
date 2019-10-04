@@ -1,5 +1,5 @@
-$slotHeight: 30px;
-$slotPadding: 4px;
+$slotHeight: 28px;
+$slotPadding: 2px;
 
 .container {
 	display: grid;
@@ -13,12 +13,13 @@ $slotPadding: 4px;
 
 	.slot-icon {
 		line-height: $slotHeight;
-		width: 40px;
+		width: 36px;
 		margin-left: 4px;
-		margin-top: 4px;
+		margin-top: $slotPadding;
 
 		img {
 			height: $slotHeight - $slotPadding * 2;
+			width:auto;
 		}
 	}
 

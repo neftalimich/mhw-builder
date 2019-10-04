@@ -1,8 +1,8 @@
-$equipmentHeight: 40px;
+$equipmentHeight: 38px;
 
 .container {
 	width: 100%;
-	margin-bottom: 12px;
+	margin-bottom: 10px;
 	display: grid;
 	grid-template-rows: $equipmentHeight + 16 auto auto;
 	grid-gap: 4px;

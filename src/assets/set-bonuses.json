@@ -462,5 +462,15 @@
 				"pieces": 3
 			}
 		]
+	},
+	{
+		"id": "zinogreEssence",
+		"name": "Zinogre Essence",
+		"setLevels": [
+			{
+				"id": "latentPowerSecret",
+				"pieces": 3
+			}
+		]
 	}
 ]
