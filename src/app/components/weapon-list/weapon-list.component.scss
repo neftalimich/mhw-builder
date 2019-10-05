@@ -115,7 +115,7 @@ $listItemHeight: 66px;
 		border-radius: 3px;
 		background-color: #323232;
 		margin-bottom: 4px;
-		padding: 4px 8px;
+		padding: 4px 6px;
 		cursor: pointer;
 
 		.name-container {
@@ -266,23 +266,39 @@ $listItemHeight: 66px;
 		grid-template-columns: repeat(7,1fr);
 	}*/
 
-	.name-container > .type {
-		img {
-			display: inline !important;
+	.name-container {
+		grid-gap: 6px !important;
+
+		.name {
+			padding-left: 0px !important;
 		}
 
-		.typeName {
-			display: none !important;
-		}
-	}
-
-	.name-container > .rarity {
-		.r1 {
-			display: none !important;
+		.slots {
+			grid-gap: 3px !important;
 		}
 
-		.r2 {
-			display: inline !important;
+		.type {
+			padding: 0px 6px !important;
+
+			img {
+				display: inline !important;
+			}
+
+			.typeName {
+				display: none !important;
+			}
+		}
+
+		.rarity {
+			padding: 0px 6px !important;
+
+			.r1 {
+				display: none !important;
+			}
+
+			.r2 {
+				display: inline !important;
+			}
 		}
 	}
 }

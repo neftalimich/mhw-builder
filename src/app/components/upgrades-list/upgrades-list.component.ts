@@ -4,7 +4,6 @@ import { UpgradeLevelModel, UpgradeModel } from '../../models/upgrade.model';
 import { DataService } from '../../services/data.service';
 import { SlotService } from '../../services/slot.service';
 import { TooltipService } from '../../services/tooltip.service';
-import { AugmentationType } from '../../types/augmentation.type';
 
 @Component({
 	selector: 'mhw-builder-upgrades-list',
@@ -32,6 +31,8 @@ export class UpgradesListComponent implements OnInit {
 					this.upgradeContainer.upgradeDetails.push(newDetail);
 				}
 			}
+
+			this.checkUpgrades();
 		}
 	}
 	get upgradeContainer(): UpgradeContainerModel { return this._upgradeContainer; }
@@ -48,12 +49,25 @@ export class UpgradesListComponent implements OnInit {
 	ngOnInit(): void {
 	}
 
+	checkUpgrades() {
+		if (this.upgradeContainer.used > this.upgradeContainer.slots) {
+			for (let i = 0; i < this.upgradeContainer.upgradeDetails.length; i++) {
+				const detail = this.upgradeContainer.upgradeDetails[i];
+				if (detail.level > 0) {
+					this.selectUpgLevel(i, detail.level);
+					this.checkUpgrades();
+					break;
+				}
+			}
+		}
+	}
+
 	loadUpgrades() {
 		this.upgrades = this.dataService.getUpgrades();
 	}
 
 	selectUpgrade() {
-		const newUpg = Object.assign({}, this.upgradeContainer);
+		const newUpg = JSON.parse(JSON.stringify(this.upgradeContainer));
 		this.slotService.selectUpgradeContainer(newUpg);
 	}
 

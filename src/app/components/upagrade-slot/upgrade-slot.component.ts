@@ -29,6 +29,7 @@ export class UpgradeSlotComponent implements OnInit {
 	}
 
 	clicked() {
+		this.upgradeContainer.slots = this.slots;
 		this.slotService.selectUpgradeSlot(this);
 	}
 

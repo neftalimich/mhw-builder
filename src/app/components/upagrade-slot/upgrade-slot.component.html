@@ -18,7 +18,7 @@
 		</span>
 	</div>
 	<div class="selected-custom">
-		<div *ngIf="upgradeContainer.hasCustomUpgrades">
+		<div *ngIf="upgradeContainer?.hasCustomUpgrades">
 			<span *ngFor="let custom of upgradeContainer.customUpgrades; let i = index">
 				<span [ngClass]="'hex-' + getCustomColor(custom)" style="font-size: 15px;">&#9672;</span>
 			</span>
