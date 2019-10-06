@@ -472,5 +472,67 @@
 				"pieces": 3
 			}
 		]
+	},
+	{
+		"id": "goldenRathianEssence",
+		"name": "Golden Rathian Essence",
+		"setLevels": [
+			{
+				"id": "divineBlessingSecret",
+				"pieces": 2
+			},
+			{
+				"id": "trueCriticalStatus",
+				"pieces": 4
+			}
+		]
+	},
+	{
+		"id": "silverRathalosEssence",
+		"name": "Silver Rathalos Essence",
+		"setLevels": [
+			{
+				"id": "slingerAmmoSecret",
+				"pieces": 2
+			},
+			{
+				"id": "trueCriticalStatus",
+				"pieces": 4
+			}
+		]
+	},
+	{
+		"id": "lunastraEssence",
+		"name": "Lunastra Essence",
+		"setLevels": [
+			{
+				"id": "toolSpecialistSecret",
+				"pieces": 3
+			}
+		]
+	},
+	{
+		"id": "nergiganteAmbition",
+		"name": "Nergigante Ambition",
+		"setLevels": [
+			{
+				"id": "hastenRecovery",
+				"pieces": 2
+			}
+		]
+	},
+	{
+		"id": "guildPride",
+		"name": "Guild Pride",
+		"setLevels": [
+			{
+				"id": "goodLuck",
+				"pieces": 2
+			},
+			{
+				"id": "carvingMaster",
+				"pieces": 4
+			}
+		]
 	}
 ]

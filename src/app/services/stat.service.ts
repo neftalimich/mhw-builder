@@ -123,7 +123,10 @@ export class StatService {
 
 				if (level.passiveCriticalBoostPercent) { this.stats.passiveCriticalBoostPercent += level.passiveCriticalBoostPercent; }
 				if (level.criticalElement) { this.stats.criticalElement = true; }
-				if (level.criticalStatus) { this.stats.criticalStatus = true; }
+				if (level.criticalStatus) {
+					this.stats.criticalStatus = true;
+					this.stats.criticalStatusPercent = level.criticalStatusPercent;
+				}
 
 				if (level.passiveFireAttack) { this.stats.passiveFireAttack += level.passiveFireAttack; }
 				if (level.passiveWaterAttack) { this.stats.passiveWaterAttack += level.passiveWaterAttack; }

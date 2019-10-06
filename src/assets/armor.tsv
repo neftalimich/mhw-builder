@@ -96,8 +96,8 @@ id	itemType	rarity	name	defense	fireResist	waterResist	thunderResist	iceResist	d
 420	Feet	5	Lumu Greaves Beta	44;66;82	-3	2	0	1	0	windproof-1	1;1	paolumu	10
 409	Feet	5	Rathian Greaves Alpha	46;68;84	2	0	-2	0	-3	recoveryUp-2			10
 410	Feet	5	Rathian Greaves Beta	46;68;84	2	0	-2	0	-3	recoveryUp-1	1		10
-389	Feet	6	Baan Greaves Alpha 	46;66;78	0	2	0	-1	-2	bleedingResistance-1		radobaan	10
-390	Feet	6	Baan Greaves Beta 	46;66;78	0	2	0	-1	-2	bleedingResistance-2		radobaan	10
+389	Feet	6	Baan Greaves Alpha	46;66;78	0	2	0	-1	-2	bleedingResistance-1		radobaan	10
+390	Feet	6	Baan Greaves Beta	46;66;78	0	2	0	-1	-2	bleedingResistance-2		radobaan	10
 373	Feet	6	Brigade Boots Alpha	52;72;84	1	0	2	0	2	scholar-1;geologist-1	1		10
 351	Feet	6	Brigade Boots Beta	52;72;84	1	0	2	0	2	scholar-1	3		10
 208	Feet	6	Diablos Greaves Alpha	54;74;86	3	-2	0	-3	2	tremorResistance-2;slugger-1;diablosMastery			10
@@ -181,8 +181,8 @@ id	itemType	rarity	name	defense	fireResist	waterResist	thunderResist	iceResist	d
 422	Hands	5	Lumu Vambraces Beta	44;66;82	-3	2	0	1	0	artillery-1	1	paolumu	10
 411	Hands	5	Rathian Vambraces Alpha	46;68;84	2	0	-2	0	-3	poisonAttack-2			10
 412	Hands	5	Rathian Vambraces Beta	46;68;84	2	0	-2	0	-3	poisonAttack-1	1		10
-391	Hands	6	Baan Vambraces Alpha 	46;66;78	0	2	0	-1	-2	sleepAttack-2;guard-1		radobaan	10
-392	Hands	6	Baan Vambraces Beta 	46;66;78	0	2	0	-1	-2	sleepAttack-1;guard-1	1	radobaan	10
+391	Hands	6	Baan Vambraces Alpha	46;66;78	0	2	0	-1	-2	sleepAttack-2;guard-1		radobaan	10
+392	Hands	6	Baan Vambraces Beta	46;66;78	0	2	0	-1	-2	sleepAttack-1;guard-1	1	radobaan	10
 374	Hands	6	Brigade Vambraces Alpha	52;72;84	1	0	2	0	2	heavyArtillery-2;divineBlessing-1			10
 349	Hands	6	Brigade Vambraces Beta	52;72;84	1	0	2	0	2	heavyArtillery-2	1		10
 120	Hands	6	Diablos Vambraces Alpha	54;74;86	3	-2	0	-3	2	heroics-2;tremorResistance-1;diablosMastery			10
@@ -267,8 +267,8 @@ id	itemType	rarity	name	defense	fireResist	waterResist	thunderResist	iceResist	d
 424	Head	5	Lumu Hat Beta	44;66;82	-3	2	0	1	0	staminaSurge-1	2	paolumu	10
 413	Head	5	Rathian Helm Alpha	46;68;84	2	0	-2	0	-3	healthBoost-2;poisonAttack-1			10
 414	Head	5	Rathian Helm Beta	46;68;84	2	0	-2	0	-3	healthBoost-1;poisonAttack-1	1		10
-393	Head	6	Baan Helm Alpha 	46;66;78	0	2	0	-1	-2	tremorResistance-2		radobaan	10
-394	Head	6	Baan Helm Beta 	46;66;78	0	2	0	-1	-2	tremorResistance-1	2	radobaan	10
+393	Head	6	Baan Helm Alpha	46;66;78	0	2	0	-1	-2	tremorResistance-2		radobaan	10
+394	Head	6	Baan Helm Beta	46;66;78	0	2	0	-1	-2	tremorResistance-1	2	radobaan	10
 375	Head	6	Brigade Lobos Alpha	52;72;84	1	0	2	0	2	recoverySpeed-2;hornMaestro-1			10
 347	Head	6	Brigade Lobos Beta	52;72;84	1	0	2	0	2	recoverySpeed-2	1		10
 30	Head	6	Diablos Helm Alpha	54;74;86	3	-2	0	-3	2	criticalDraw-2;heroics-1;diablosMastery			10
@@ -356,8 +356,8 @@ id	itemType	rarity	name	defense	fireResist	waterResist	thunderResist	iceResist	d
 426	Legs	5	Lumu Coil Beta	44;66;82	-3	2	0	1	0	divineBlessing-1	1	paolumu	10
 415	Legs	5	Rathian Coil Alpha	46;68;84	2	0	-2	0	-3	poisonResistance-2;healthBoost-1			10
 416	Legs	5	Rathian Coil Beta	46;68;84	2	0	-2	0	-3	poisonResistance-1;healthBoost-1	1		10
-395	Legs	6	Baan Coil Alpha 	46;66;78	0	2	0	-1	-2	guard-2		radobaan	10
-396	Legs	6	Baan Coil Beta 	46;66;78	0	2	0	-1	-2	guard-1	2	radobaan	10
+395	Legs	6	Baan Coil Alpha	46;66;78	0	2	0	-1	-2	guard-2		radobaan	10
+396	Legs	6	Baan Coil Beta	46;66;78	0	2	0	-1	-2	guard-1	2	radobaan	10
 376	Legs	6	Brigade Coil Alpha	52;72;84	1	0	2	0	2	geologist-2;recoverySpeed-1			10
 350	Legs	6	Brigade Coil Beta	52;72;84	1	0	2	0	2	geologist-2	1		10
 164	Legs	6	Diablos Coil Alpha	54;74;86	3	-2	0	-3	2	marathonRunner-2;criticalDraw-1;diablosMastery			10
@@ -869,163 +869,223 @@ id	itemType	rarity	name	defense	fireResist	waterResist	thunderResist	iceResist	d
 1438	Hands	10	Tigrex Braces Beta +	142;153;174	2	0	-3	0	-2	speedEating-2;attackBoost-1;tigrexEssence	4	tigrex	0
 1439	Legs	10	Tigrex Tassets Beta +	142;153;174	2	0	-3	0	-2	earplugs-1;tigrexEssence	4;2;1	tigrex	0
 1440	Feet	10	Tigrex Greaves Beta +	142;153;174	2	0	-3	0	-2	speedEating-1;tigrexEssence	4;2	tigrex	0
-1441	Head	11	Black Belt Helm Alpha +	150;158;174	1	1	1	1	2	marathonRunner-2;mushroomancer-1;instructorsGuidance	3	arena;coins	0
-1442	Chest	11	Black Belt Mail Alpha +	150;158;174	1	1	1	1	2	mushroomancer-2;wideRange-1;instructorsGuidance	1;1;1	arena;coins	0
-1443	Hands	11	Black Belt Vambraces Alpha +	150;158;174	1	1	1	1	2	wideRange-2;hornMaestro-2;instructorsGuidance	3	arena;coins	0
-1444	Legs	11	Black Belt Coil Alpha +	150;158;174	1	1	1	1	2	recoveryUp-2;marathonRunner-1;instructorsGuidance	3	arena;coins	0
-1445	Feet	11	Black Belt Greaves Alpha +	150;158;174	1	1	1	1	2	wideRange-2;recoveryUp-1;instructorsGuidance	2;2	arena;coins	0
-1446	Head	11	Black Belt Helm Beta +	150;158;174	1	1	1	1	2	marathonRunner-2;instructorsGuidance	4;2	arena;coins	0
-1447	Chest	11	Black Belt Mail Beta +	150;158;174	1	1	1	1	2	mushroomancer-2;instructorsGuidance	4;1;1	arena;coins	0
-1448	Hands	11	Black Belt Vambraces Beta +	150;158;174	1	1	1	1	2	wideRange-2;instructorsGuidance	4;1	arena;coins	0
-1449	Legs	11	Black Belt Coil Beta +	150;158;174	1	1	1	1	2	recoveryUp-2;instructorsGuidance	4;1	arena;coins	0
-1450	Feet	11	Black Belt Greaves Beta +	150;158;174	1	1	1	1	2	wideRange-2;instructorsGuidance	4;2	arena;coins	0
-1451	Head	11	Dober Helm Alpha +	152;160;176	-2	0	-1	-1	4	freeElemAmmoUp-2;staminaSurge-1	1	bone	0
-1452	Chest	11	Dober Mail Alpha +	152;160;176	-2	0	-1	-1	4	attackBoost-2;effluviaResistance-1	1;1;1	bone	0
-1453	Hands	11	Dober Vambraces Alpha +	152;160;176	-2	0	-1	-1	4	staminaSurge-2;mushroomancer-1	2;1	bone	0
-1454	Legs	11	Dober Coil Alpha +	152;160;176	-2	0	-1	-1	4	attackBoost-2;stunResistance-2	2;1	bone	0
-1455	Feet	11	Dober Greaves Alpha +	152;160;176	-2	0	-1	-1	4	attackBoost-2;mushroomancer-2	2	bone	0
-1456	Head	11	Dober Helm Beta +	152;160;176	-2	0	-1	-1	4	freeElemAmmoUp-2	4	bone	0
-1457	Chest	11	Dober Mail Beta +	152;160;176	-2	0	-1	-1	4	attackBoost-1;effluviaResistance-1	4;1;1	bone	0
-1458	Hands	11	Dober Vambraces Beta +	152;160;176	-2	0	-1	-1	4	staminaSurge-1;mushroomancer-1	4;1	bone	0
-1459	Legs	11	Dober Coil Beta +	152;160;176	-2	0	-1	-1	4	attackBoost-1;stunResistance-1	4;2	bone	0
-1460	Feet	11	Dober Greaves Beta +	152;160;176	-2	0	-1	-1	4	attackBoost-1;mushroomancer-1	4;2	bone	0
-1461	Head	11	Damascus Helm Alpha +	152;160;176	4	-2	0	0	0	defenseBoost-3;speedSharpening-2	3	mineral	0
-1462	Chest	11	Damascus Mail Alpha +	152;160;176	4	-2	0	0	0	focus-2;defenseBoost-2	3;1	mineral	0
-1463	Hands	11	Damascus Vambraces Alpha +	152;160;176	4	-2	0	0	0	handicraft-2;speedSharpening-1	2;1	mineral	0
-1464	Legs	11	Damascus Coil Alpha +	152;160;176	4	-2	0	0	0	focus-1;guard-1	3;2	mineral	0
-1465	Feet	11	Damascus Greaves Alpha +	152;160;176	4	-2	0	0	0	defenseBoost-2;guard-2	2;1	mineral	0
-1466	Head	11	Damascus Helm Beta +	152;160;176	4	-2	0	0	0	defenseBoost-3	4;1;1	mineral	0
-1467	Chest	11	Damascus Mail Beta +	152;160;176	4	-2	0	0	0	focus-2	4;2;1	mineral	0
-1468	Hands	11	Damascus Vambraces Beta +	152;160;176	4	-2	0	0	0	handicraft-2	4;1	mineral	0
-1469	Legs	11	Damascus Coil Beta +	152;160;176	4	-2	0	0	0	focus-1	4;3;1	mineral	0
-1470	Feet	11	Damascus Greaves Beta +	152;160;176	4	-2	0	0	0	defenseBoost-2;guard-1	4;2	mineral	0
-1471	Head	11	Seething Bazel Helm Alpha +	154;162;178	3	1	-2	-4	-2	earplugs-2;blastAttack-2;bazelgeuseAmbition	2;1	bazelgeuse	0
-1472	Chest	11	Seething Bazel Mail Alpha +	154;162;178	3	1	-2	-4	-2	guard-2;blastResistance-2;bazelgeuseAmbition	1;1	bazelgeuse	0
-1473	Hands	11	Seething Bazel Vambraces Alpha +	154;162;178	3	1	-2	-4	-2	criticalDraw-2;earplugs-1;bazelgeuseAmbition	3	bazelgeuse	0
-1474	Legs	11	Seething Bazel Coil Alpha +	154;162;178	3	1	-2	-4	-2	bombardier-2;criticalDraw-1;bazelgeuseAmbition	3	bazelgeuse	0
-1475	Feet	11	Seething Bazel Greaves Alpha +	154;162;178	3	1	-2	-4	-2	earplugs-2;jumpMaster-1;bazelgeuseAmbition	3	bazelgeuse	0
-1476	Head	11	Seething Bazel Helm Beta +	154;162;178	3	1	-2	-4	-2	earplugs-2;blastAttack-1;bazelgeuseAmbition	4;1	bazelgeuse	0
-1477	Chest	11	Seething Bazel Mail Beta +	154;162;178	3	1	-2	-4	-2	guard-2;bazelgeuseAmbition	4;1;1	bazelgeuse	0
-1478	Hands	11	Seething Bazel Vambraces Beta +	154;162;178	3	1	-2	-4	-2	criticalDraw-2;bazelgeuseAmbition	4;3	bazelgeuse	0
-1479	Legs	11	Seething Bazel Coil Beta +	154;162;178	3	1	-2	-4	-2	bombardier-2;bazelgeuseAmbition	4;2	bazelgeuse	0
-1480	Feet	11	Seething Bazel Greaves Beta +	154;162;178	3	1	-2	-4	-2	earplugs-1;jumpMaster-1;bazelgeuseAmbition	4;2	bazelgeuse	0
-1481	Head	11	Savage Jho Helm Alpha +	156;164;180	2	1	-3	1	-3	partbreaker-1;handicraft-2;deviljhoEssence	1	deviljho	0
-1482	Chest	11	Savage Jho Mail Alpha +	156;164;180	2	1	-3	1	-3	speedEating-1;handicraft-2;deviljhoEssence	2	deviljho	0
-1483	Hands	11	Savage Jho Vambraces Alpha +	156;164;180	2	1	-3	1	-3	staminaThief-2;partbreaker-1;deviljhoEssence	2	deviljho	0
-1484	Legs	11	Savage Jho Faulds Alpha +	156;164;180	2	1	-3	1	-3	staminaThief-2;handicraft-1;deviljhoEssence	1	deviljho	0
-1485	Feet	11	Savage Jho Greaves Alpha +	156;164;180	2	1	-3	1	-3	speedEating-2;staminaThief-1;deviljhoEssence	2;2	deviljho	0
-1486	Head	11	Savage Jho Helm Beta +	156;164;180	2	1	-3	1	-3	partbreaker-1;deviljhoEssence	4;3	deviljho	0
-1487	Chest	11	Savage Jho Mail Beta +	156;164;180	2	1	-3	1	-3	speedEating-1;deviljhoEssence	4;2;2	deviljho	0
-1488	Hands	11	Savage Jho Vambraces Beta +	156;164;180	2	1	-3	1	-3	staminaThief-2;deviljhoEssence	4	deviljho	0
-1489	Legs	11	Savage Jho Faulds Beta +	156;164;180	2	1	-3	1	-3	staminaThief-2;deviljhoEssence	4;1	deviljho	0
-1490	Feet	11	Savage Jho Greaves Beta +	156;164;180	2	1	-3	1	-3	speedEating-1;staminaThief-1;deviljhoEssence	4;2	deviljho	0
-1491	Head	12	Rimeguard Helm Alpha +	154;160;172	-3	2	-1	4	-1	divineBlessing-2;coalescence-1;velkhanaDivinity	3;2	velkhana	0
-1492	Chest	12	Rimeguard Mail Alpha +	154;160;172	-3	2	-1	4	-1	quickSheath-2;criticalDraw-1;velkhanaDivinity	1	velkhana	0
-1493	Hands	12	Rimeguard Vambraces Alpha +	154;160;172	-3	2	-1	4	-1	quickSheath-1;flinchFree-2;velkhanaDivinity	1	velkhana	0
-1494	Legs	12	Rimeguard Coil Alpha +	154;160;172	-3	2	-1	4	-1	flinchFree-1;coalescence-1;velkhanaDivinity	2;1	velkhana	0
-1495	Feet	12	Rimeguard Greaves Alpha +	154;160;172	-3	2	-1	4	-1	criticalDraw-2;coalescence-1;velkhanaDivinity	1;1	velkhana	0
-1496	Head	12	Rimeguard Helm Beta +	154;160;172	-3	2	-1	4	-1	divineBlessing-2;velkhanaDivinity	4;2	velkhana	0
-1497	Chest	12	Rimeguard Mail Beta +	154;160;172	-3	2	-1	4	-1	quickSheath-2;velkhanaDivinity	4;1	velkhana	0
-1498	Hands	12	Rimeguard Vambraces Beta +	154;160;172	-3	2	-1	4	-1	quickSheath-1;flinchFree-1;velkhanaDivinity	4	velkhana	0
-1499	Legs	12	Rimeguard Coil Beta +	154;160;172	-3	2	-1	4	-1	flinchFree-1;velkhanaDivinity	4;1	velkhana	0
-1500	Feet	12	Rimeguard Greaves Beta +	154;160;172	-3	2	-1	4	-1	criticalDraw-2;velkhanaDivinity	4;1	velkhana	0
-1501	Head	12	Blackveil Hazak Helm Alpha +	156;162;174	-2	4	1	1	-3	peakPerformance-2;dragonAttack-2;vaalSoulvein	1	vaal;hazak	0
-1502	Chest	12	Blackveil Hazak Mail Alpha +	156;162;174	-2	4	1	1	-3	recoverySpeed-2;dragonAttack-2;vaalSoulvein	3;1	vaal;hazak	0
-1503	Hands	12	Blackveil Hazak Braces Alpha +	156;162;174	-2	4	1	1	-3	recoveryUp-2;speedEating-1;vaalSoulvein	2;1;1	vaal;hazak	0
-1504	Legs	12	Blackveil Hazak Coil Alpha +	156;162;174	-2	4	1	1	-3	speedEating-2;peakPerformance-1;vaalSoulvein	2;1	vaal;hazak	0
-1505	Feet	12	Blackveil Hazak Greaves Alpha +	156;162;174	-2	4	1	1	-3	effluviaResistance-2;dragonAttack-2;vaalSoulvein	3;2	vaal;hazak	0
-1506	Head	12	Blackveil Hazak Helm Beta +	156;162;174	-2	4	1	1	-3	peakPerformance-2;vaalSoulvein	4;1	vaal;hazak	0
-1507	Chest	12	Blackveil Hazak Mail Beta +	156;162;174	-2	4	1	1	-3	recoverySpeed-2;dragonAttack-1;vaalSoulvein	4;2	vaal;hazak	0
-1508	Hands	12	Blackveil Hazak Braces Beta +	156;162;174	-2	4	1	1	-3	recoveryUp-2;vaalSoulvein	4;1;1	vaal;hazak	0
-1509	Legs	12	Blackveil Hazak Coil Beta +	156;162;174	-2	4	1	1	-3	speedEating-2;vaalSoulvein	4;2	vaal;hazak	0
-1510	Feet	12	Blackveil Hazak Greaves Beta +	156;162;174	-2	4	1	1	-3	effluviaResistance-2;vaalSoulvein	4;3	vaal;hazak	0
-1511	Head	12	Kaiser Crown Alpha +	156;162;174	3	-3	1	-3	1	latentPower-2;criticalEye-2;teostraTechnique	1	teostra	0
-1512	Chest	12	Kaiser Mail Alpha +	156;162;174	3	-3	1	-3	1	latentPower-1;specialAmmoBoost-2;teostraTechnique	2;1	teostra	0
-1513	Hands	12	Kaiser Vambraces Alpha +	156;162;174	3	-3	1	-3	1	weaknessExploit-2;heatGuard-1;teostraTechnique	2	teostra	0
-1514	Legs	12	Kaiser Coil Alpha +	156;162;174	3	-3	1	-3	1	blastAttack-2;weaknessExploit-1;teostraTechnique	3	teostra	0
-1515	Feet	12	Kaiser Greaves Alpha +	156;162;174	3	-3	1	-3	1	latentPower-2;blastAttack-2;teostraTechnique	2	teostra	0
-1516	Head	12	Kaiser Crown Beta +	156;162;174	3	-3	1	-3	1	latentPower-1;criticalEye-2;teostraTechnique	4	teostra	0
-1517	Chest	12	Kaiser Mail Beta +	156;162;174	3	-3	1	-3	1	latentPower-1;teostraTechnique	4;1;1	teostra	0
-1518	Hands	12	Kaiser Vambraces Beta +	156;162;174	3	-3	1	-3	1	weaknessExploit-1;heatGuard-1;teostraTechnique	4;3	teostra	0
-1519	Legs	12	Kaiser Coil Beta +	156;162;174	3	-3	1	-3	1	blastAttack-2;teostraTechnique	4;2;1	teostra	0
-1520	Feet	12	Kaiser Greaves Beta +	156;162;174	3	-3	1	-3	1	latentPower-2;blastAttack-1;teostraTechnique	4	teostra	0
-1521	Head	12	Kushala Glare Alpha +	156;162;174	0	2	-3	4	-2	iceAttack-2;evadeWindow-2;kushalaDaoraFlight	2	kushala;daora	0
-1522	Chest	12	Kushala Cista Alpha +	156;162;174	0	2	-3	4	-2	handicraft-3;kushalaDaoraFlight	1	kushala;daora	0
-1523	Hands	12	Kushala Grip Alpha +	156;162;174	0	2	-3	4	-2	evadeWindow-3;kushalaDaoraFlight	1	kushala;daora	0
-1524	Legs	12	Kushala Cocoon Alpha +	156;162;174	0	2	-3	4	-2	iceAttack-3;evadeExtender-1;kushalaDaoraFlight	2	kushala;daora	0
-1525	Feet	12	Kushala Crus Alpha +	156;162;174	0	2	-3	4	-2	evadeExtender-2;handicraft-2;kushalaDaoraFlight	1	kushala;daora	0
-1526	Head	12	Kushala Glare Beta +	156;162;174	0	2	-3	4	-2	iceAttack-2;evadeWindow-1;kushalaDaoraFlight	4;1	kushala;daora	0
-1527	Chest	12	Kushala Cista Beta +	156;162;174	0	2	-3	4	-2	handicraft-2;kushalaDaoraFlight	4;2	kushala;daora	0
-1528	Hands	12	Kushala Grip Beta +	156;162;174	0	2	-3	4	-2	evadeWindow-2;kushalaDaoraFlight	4;2	kushala;daora	0
-1529	Legs	12	Kushala Cocoon Beta +	156;162;174	0	2	-3	4	-2	iceAttack-3;kushalaDaoraFlight	4;1	kushala;daora	0
-1530	Feet	12	Kushala Crus Beta +	156;162;174	0	2	-3	4	-2	evadeExtender-2;kushalaDaoraFlight	4;3	kushala;daora	0
-1531	Head	12	Kirin Horn Alpha +	154;160;172	-3	-2	4	-2	2	marathonRunner-2;divineBlessing-2;kirinDivinity	3;1	kirin	0
-1532	Chest	12	Kirin Jacket Alpha +	154;160;172	-3	-2	4	-2	2	criticalEye-3;divineBlessing-1;kirinDivinity	3;2	kirin	0
-1533	Hands	12	Kirin Longarms Alpha +	154;160;172	-3	-2	4	-2	2	thunderAttack-3;marathonRunner-1;kirinDivinity	3;2	kirin	0
-1534	Legs	12	Kirin Hoop Alpha +	154;160;172	-3	-2	4	-2	2	blightResistance-2;freeElemAmmoUp-1;kirinDivinity	2	kirin	0
-1535	Feet	12	Kirin Guards Alpha +	154;160;172	-3	-2	4	-2	2	freeElemAmmoUp-2;criticalEye-2;kirinDivinity	1	kirin	0
-1536	Head	12	Kirin Horn Beta +	154;160;172	-3	-2	4	-2	2	marathonRunner-2;kirinDivinity	4;1;1	kirin	0
-1537	Chest	12	Kirin Jacket Beta +	154;160;172	-3	-2	4	-2	2	criticalEye-2;divineBlessing-1;kirinDivinity	4;2	kirin	0
-1538	Hands	12	Kirin Longarms Beta +	154;160;172	-3	-2	4	-2	2	thunderAttack-3;kirinDivinity	4;2;2	kirin	0
-1539	Legs	12	Kirin Hoop Beta +	154;160;172	-3	-2	4	-2	2	blightResistance-2;kirinDivinity	4;1;1	kirin	0
-1540	Feet	12	Kirin Guards Beta +	154;160;172	-3	-2	4	-2	2	freeElemAmmoUp-2;kirinDivinity	4	kirin	0
-1541	Head	12	Namielle Cowl Alpha +	158;164;176	-3	4	3	0	-2	constitution-3;maximumMight-1;namielleDivinity	1	namielle	0
-1542	Chest	12	Namielle Cloak Alpha +	158;164;176	-3	4	3	0	-2	blightResistance-2;toolSpecialist-1;namielleDivinity	2;2	namielle	0
-1543	Hands	12	Namielle Gloves Alpha +	158;164;176	-3	4	3	0	-2	toolSpecialist-2;maximumMight-1;namielleDivinity	1	namielle	0
-1544	Legs	12	Namielle Coil Alpha +	158;164;176	-3	4	3	0	-2	constitution-2;staminaSurge-1;namielleDivinity	1;1;1	namielle	0
-1545	Feet	12	Namielle Greaves Alpha +	158;164;176	-3	4	3	0	-2	staminaSurge-2;blightResistance-1;namielleDivinity	2;1	namielle	0
-1546	Head	12	Namielle Cowl Beta +	158;164;176	-3	4	3	0	-2	constitution-2;maximumMight-1;namielleDivinity	4	namielle	0
-1547	Chest	12	Namielle Cloak Beta +	158;164;176	-3	4	3	0	-2	blightResistance-1;toolSpecialist-1;namielleDivinity	4;2	namielle	0
-1548	Hands	12	Namielle Gloves Beta +	158;164;176	-3	4	3	0	-2	toolSpecialist-2;namielleDivinity	4	namielle	0
-1549	Legs	12	Namielle Coil Beta +	158;164;176	-3	4	3	0	-2	constitution-1;staminaSurge-1;namielleDivinity	4;1;1	namielle	0
-1550	Feet	12	Namielle Greaves Beta +	158;164;176	-3	4	3	0	-2	staminaSurge-2;namielleDivinity	4;2	namielle	0
-1551	Head	11	Guild Palace Helm Alpha +	154;162;178								workshop	0
-1552	Chest	11	Guild Palace Mail Alpha +	154;162;178								workshop	0
-1553	Hands	11	Guild Palace Vambraces Alpha +	154;162;178								workshop	0
-1554	Legs	11	Guild Palace Coil Alpha +	154;162;178								workshop	0
-1555	Feet	11	Guild Palace Greaves Alpha +	154;162;178								workshop	0
-1556	Head	11	Guild Palace Helm Beta +	154;162;178								workshop	0
-1557	Chest	11	Guild Palace Mail Beta +	154;162;178								workshop	0
-1558	Hands	11	Guild Palace Vambraces Beta +	154;162;178								workshop	0
-1559	Legs	11	Guild Palace Coil Beta +	154;162;178								workshop	0
-1560	Feet	11	Guild Palace Greaves Beta +	154;162;178								workshop	0
-1561	Head	12	Shara Ishvalda Helm Alpha +	162;168;180	0	-2	3	-3	0	recoveryUp-2;partbreaker-1;sharaIshvaldaDivinity	3;1	shara;ishvalda	0
-1562	Chest	12	Shara Ishvalda Mail Alpha +	162;168;180	0	-2	3	-3	0	coalescence-2;healthBoost-1;sharaIshvaldaDivinity	3;2	shara;ishvalda	0
-1563	Hands	12	Shara Ishvalda Braces Alpha +	162;168;180	0	-2	3	-3	0	criticalBoost-2;coalescence-1;sharaIshvaldaDivinity	1	shara;ishvalda	0
-1564	Legs	12	Shara Ishvalda Coil Alpha +	162;168;180	0	-2	3	-3	0	healthBoost-2;recoveryUp-1;sharaIshvaldaDivinity	3;2	shara;ishvalda	0
-1565	Feet	12	Shara Ishvalda Greaves Alpha +	162;168;180	0	-2	3	-3	0	partbreaker-2;defenseBoost-2;sharaIshvaldaDivinity	1;1;1	shara;ishvalda	0
-1566	Head	12	Shara Ishvalda Helm Beta +	162;168;180	0	-2	3	-3	0	recoveryUp-2;sharaIshvaldaDivinity	4;2	shara;ishvalda	0
-1567	Chest	12	Shara Ishvalda Mail Beta +	162;168;180	0	-2	3	-3	0	coalescence-2;sharaIshvaldaDivinity	4;2	shara;ishvalda	0
-1568	Hands	12	Shara Ishvalda Braces Beta +	162;168;180	0	-2	3	-3	0	criticalBoost-2;sharaIshvaldaDivinity	4	shara;ishvalda	0
-1569	Legs	12	Shara Ishvalda Coil Beta +	162;168;180	0	-2	3	-3	0	healthBoost-2;sharaIshvaldaDivinity	4;3	shara;ishvalda	0
-1570	Feet	12	Shara Ishvalda Greaves Beta +	162;168;180	0	-2	3	-3	0	partbreaker-1;defenseBoost-1;sharaIshvaldaDivinity	4;2;1	shara;ishvalda	0
-1571	Head	12	Zorah Headgear Alpha +	160;166;178	4	-3	-1	-2	-3	flinchFree-1;artillery-2;zorahMagdarosEssence	2;2	zorah;magdaros	0
-1572	Chest	12	Zorah Hide Alpha +	160;166;178	4	-3	-1	-2	-3	tremorResistance-2;artillery-2;zorahMagdarosEssence	3;1	zorah;magdaros	0
-1573	Hands	12	Zorah Claws Alpha +	160;166;178	4	-3	-1	-2	-3	flinchFree-2;freeMeal-1;zorahMagdarosEssence	1;1	zorah;magdaros	0
-1574	Legs	12	Zorah Spine Alpha +	160;166;178	4	-3	-1	-2	-3	tremorResistance-1;artillery-1;zorahMagdarosEssence	3;2	zorah;magdaros	0
-1575	Feet	12	Zorah Spurs Alpha +	160;166;178	4	-3	-1	-2	-3	earplugs-1;handicraft-1;zorahMagdarosEssence	3;1	zorah;magdaros	0
-1576	Head	12	Zorah Headgear Beta +	160;166;178	4	-3	-1	-2	-3	flinchFree-1;zorahMagdarosEssence	4;2;1	zorah;magdaros	0
-1577	Chest	12	Zorah Hide Beta +	160;166;178	4	-3	-1	-2	-3	tremorResistance-2;zorahMagdarosEssence	4;2	zorah;magdaros	0
-1578	Hands	12	Zorah Claws Beta +	160;166;178	4	-3	-1	-2	-3	flinchFree-2;zorahMagdarosEssence	4;1	zorah;magdaros	0
-1579	Legs	12	Zorah Spine Beta +	160;166;178	4	-3	-1	-2	-3	tremorResistance-1;zorahMagdarosEssence	4;3	zorah;magdaros	0
-1580	Feet	12	Zorah Spurs Beta +	160;166;178	4	-3	-1	-2	-3	earplugs-1;zorahMagdarosEssence	4;3	zorah;magdaros	0
-1581	Head	11	Yian Garuga Helm Alpha +	154;162;178								yian;garuga	0
-1582	Chest	11	Yian Garuga Mail Alpha +	154;162;178								yian;garuga	0
-1583	Hands	11	Yian Garuga Vambraces Alpha +	154;162;178								yian;garuga	0
-1584	Legs	11	Yian Garuga Coil Alpha +	154;162;178								yian;garuga	0
-1585	Feet	11	Yian Garuga Greaves Alpha +	154;162;178								yian;garuga	0
-1586	Head	11	Yian Garuga Helm Beta +	154;162;178								yian;garuga	0
-1587	Chest	11	Yian Garuga Mail Beta +	154;162;178								yian;garuga	0
-1588	Hands	11	Yian Garuga Vambraces Beta +	154;162;178								yian;garuga	0
-1589	Legs	11	Yian Garuga Coil Beta +	154;162;178								yian;garuga	0
-1590	Feet	11	Yian Garuga Greaves Beta +	154;162;178								yian;garuga	0
-1591	Head	11	Zinogre Helm Alpha +	158;166;182	-1	-1	4	-4	1	powerProlonger-2;criticalBoost-1;zinogreEssence	1	zinogre	0
-1592	Chest	11	Zinogre Mail Alpha +	158;166;182	-1	-1	4	-4	1	latentPower-3;normalShots-1;zinogreEssence	3	zinogre	0
-1593	Hands	11	Zinogre Braces Alpha +	158;166;182	-1	-1	4	-4	1	recoverySpeed-2;latentPower-2;zinogreEssence	2;1	zinogre	0
-1594	Legs	11	Zinogre Coil Alpha +	158;166;182	-1	-1	4	-4	1	powerProlonger-1;thunderAttack-2;zinogreEssence	2	zinogre	0
-1595	Feet	11	Zinogre Greaves Alpha +	158;166;182	-1	-1	4	-4	1	thunderAttack-3;latentPower-2;zinogreEssence	1	zinogre	0
-1596	Head	11	Zinogre Helm Beta +	158;166;182	-1	-1	4	-4	1	powerProlonger-1;criticalBoost-1;zinogreEssence	4	zinogre	0
-1597	Chest	11	Zinogre Mail Beta +	158;166;182	-1	-1	4	-4	1	latentPower-3;zinogreEssence	4	zinogre	0
-1598	Hands	11	Zinogre Braces Beta +	158;166;182	-1	-1	4	-4	1	recoverySpeed-1;latentPower-2;zinogreEssence	4;2	zinogre	0
-1599	Legs	11	Zinogre Coil Beta +	158;166;182	-1	-1	4	-4	1	powerProlonger-1;zinogreEssence	4;2	zinogre	0
-1600	Feet	11	Zinogre Greaves Beta +	158;166;182	-1	-1	4	-4	1	thunderAttack-1;latentPower-2;zinogreEssence	4;1	zinogre	0
+1441	Head	11	Rex Roar Helm Alpha +	158;166;182	3	-4	-2	0	0	attackBoost-3;freeMeal-1;tigrexEssence	3	brute;tigrex	0
+1442	Chest	11	Rex Roar Mail Alpha +	158;166;182	3	-4	-2	0	0	attackBoost-3;weaknessExploit-1;tigrexEssence	3	brute;tigrex	0
+1443	Hands	11	Rex Roar Braces Alpha +	158;166;182	3	-4	-2	0	0	healthBoost-3;attackBoost-2;tigrexEssence	3	brute;tigrex	0
+1444	Legs	11	Rex Roar Tassets Alpha +	158;166;182	3	-4	-2	0	0	recoveryUp-3;weaknessExploit-1;tigrexEssence	2	brute;tigrex	0
+1445	Feet	11	Rex Roar Greaves Alpha +	158;166;182	3	-4	-2	0	0	agitator-3;weaknessExploit-1;tigrexEssence	1	brute;tigrex	0
+1446	Head	11	Rex Roar Helm Beta +	158;166;182	3	-4	-2	0	0	attackBoost-2;freeMeal-1;tigrexEssence	4	brute;tigrex	0
+1447	Chest	11	Rex Roar Mail Beta +	158;166;182	3	-4	-2	0	0	attackBoost-2;weaknessExploit-1;tigrexEssence	4;1	brute;tigrex	0
+1448	Hands	11	Rex Roar Braces Beta +	158;166;182	3	-4	-2	0	0	healthBoost-2;attackBoost-2;tigrexEssence	4	brute;tigrex	0
+1449	Legs	11	Rex Roar Tassets Beta +	158;166;182	3	-4	-2	0	0	recoveryUp-2;weaknessExploit-1;tigrexEssence	4	brute;tigrex	0
+1450	Feet	11	Rex Roar Greaves Beta +	158;166;182	3	-4	-2	0	0	agitator-2;weaknessExploit-1;tigrexEssence	4	brute;tigrex	0
+1451	Head	11	Black Belt Helm Alpha +	150;158;174	1	1	1	1	2	marathonRunner-2;mushroomancer-1;instructorsGuidance	3	arena;coins	0
+1452	Chest	11	Black Belt Mail Alpha +	150;158;174	1	1	1	1	2	mushroomancer-2;wideRange-1;instructorsGuidance	1;1;1	arena;coins	0
+1453	Hands	11	Black Belt Vambraces Alpha +	150;158;174	1	1	1	1	2	wideRange-2;hornMaestro-2;instructorsGuidance	3	arena;coins	0
+1454	Legs	11	Black Belt Coil Alpha +	150;158;174	1	1	1	1	2	recoveryUp-2;marathonRunner-1;instructorsGuidance	3	arena;coins	0
+1455	Feet	11	Black Belt Greaves Alpha +	150;158;174	1	1	1	1	2	wideRange-2;recoveryUp-1;instructorsGuidance	2;2	arena;coins	0
+1456	Head	11	Black Belt Helm Beta +	150;158;174	1	1	1	1	2	marathonRunner-2;instructorsGuidance	4;2	arena;coins	0
+1457	Chest	11	Black Belt Mail Beta +	150;158;174	1	1	1	1	2	mushroomancer-2;instructorsGuidance	4;1;1	arena;coins	0
+1458	Hands	11	Black Belt Vambraces Beta +	150;158;174	1	1	1	1	2	wideRange-2;instructorsGuidance	4;1	arena;coins	0
+1459	Legs	11	Black Belt Coil Beta +	150;158;174	1	1	1	1	2	recoveryUp-2;instructorsGuidance	4;1	arena;coins	0
+1460	Feet	11	Black Belt Greaves Beta +	150;158;174	1	1	1	1	2	wideRange-2;instructorsGuidance	4;2	arena;coins	0
+1461	Head	11	Dober Helm Alpha +	152;160;176	-2	0	-1	-1	4	freeElemAmmoUp-2;staminaSurge-1	1	bone	0
+1462	Chest	11	Dober Mail Alpha +	152;160;176	-2	0	-1	-1	4	attackBoost-2;effluviaResistance-1	1;1;1	bone	0
+1463	Hands	11	Dober Vambraces Alpha +	152;160;176	-2	0	-1	-1	4	staminaSurge-2;mushroomancer-1	2;1	bone	0
+1464	Legs	11	Dober Coil Alpha +	152;160;176	-2	0	-1	-1	4	attackBoost-2;stunResistance-2	2;1	bone	0
+1465	Feet	11	Dober Greaves Alpha +	152;160;176	-2	0	-1	-1	4	attackBoost-2;mushroomancer-2	2	bone	0
+1466	Head	11	Dober Helm Beta +	152;160;176	-2	0	-1	-1	4	freeElemAmmoUp-2	4	bone	0
+1467	Chest	11	Dober Mail Beta +	152;160;176	-2	0	-1	-1	4	attackBoost-1;effluviaResistance-1	4;1;1	bone	0
+1468	Hands	11	Dober Vambraces Beta +	152;160;176	-2	0	-1	-1	4	staminaSurge-1;mushroomancer-1	4;1	bone	0
+1469	Legs	11	Dober Coil Beta +	152;160;176	-2	0	-1	-1	4	attackBoost-1;stunResistance-1	4;2	bone	0
+1470	Feet	11	Dober Greaves Beta +	152;160;176	-2	0	-1	-1	4	attackBoost-1;mushroomancer-1	4;2	bone	0
+1471	Head	11	Damascus Helm Alpha +	152;160;176	4	-2	0	0	0	defenseBoost-3;speedSharpening-2	3	mineral	0
+1472	Chest	11	Damascus Mail Alpha +	152;160;176	4	-2	0	0	0	focus-2;defenseBoost-2	3;1	mineral	0
+1473	Hands	11	Damascus Vambraces Alpha +	152;160;176	4	-2	0	0	0	handicraft-2;speedSharpening-1	2;1	mineral	0
+1474	Legs	11	Damascus Coil Alpha +	152;160;176	4	-2	0	0	0	focus-1;guard-1	3;2	mineral	0
+1475	Feet	11	Damascus Greaves Alpha +	152;160;176	4	-2	0	0	0	defenseBoost-2;guard-2	2;1	mineral	0
+1476	Head	11	Damascus Helm Beta +	152;160;176	4	-2	0	0	0	defenseBoost-3	4;1;1	mineral	0
+1477	Chest	11	Damascus Mail Beta +	152;160;176	4	-2	0	0	0	focus-2	4;2;1	mineral	0
+1478	Hands	11	Damascus Vambraces Beta +	152;160;176	4	-2	0	0	0	handicraft-2	4;1	mineral	0
+1479	Legs	11	Damascus Coil Beta +	152;160;176	4	-2	0	0	0	focus-1	4;3;1	mineral	0
+1480	Feet	11	Damascus Greaves Beta +	152;160;176	4	-2	0	0	0	defenseBoost-2;guard-1	4;2	mineral	0
+1481	Head	11	Seething Bazel Helm Alpha +	154;162;178	3	1	-2	-4	-2	earplugs-2;blastAttack-2;bazelgeuseAmbition	2;1	bazelgeuse	0
+1482	Chest	11	Seething Bazel Mail Alpha +	154;162;178	3	1	-2	-4	-2	guard-2;blastResistance-2;bazelgeuseAmbition	1;1	bazelgeuse	0
+1483	Hands	11	Seething Bazel Vambraces Alpha +	154;162;178	3	1	-2	-4	-2	criticalDraw-2;earplugs-1;bazelgeuseAmbition	3	bazelgeuse	0
+1484	Legs	11	Seething Bazel Coil Alpha +	154;162;178	3	1	-2	-4	-2	bombardier-2;criticalDraw-1;bazelgeuseAmbition	3	bazelgeuse	0
+1485	Feet	11	Seething Bazel Greaves Alpha +	154;162;178	3	1	-2	-4	-2	earplugs-2;jumpMaster-1;bazelgeuseAmbition	3	bazelgeuse	0
+1486	Head	11	Seething Bazel Helm Beta +	154;162;178	3	1	-2	-4	-2	earplugs-2;blastAttack-1;bazelgeuseAmbition	4;1	bazelgeuse	0
+1487	Chest	11	Seething Bazel Mail Beta +	154;162;178	3	1	-2	-4	-2	guard-2;bazelgeuseAmbition	4;1;1	bazelgeuse	0
+1488	Hands	11	Seething Bazel Vambraces Beta +	154;162;178	3	1	-2	-4	-2	criticalDraw-2;bazelgeuseAmbition	4;3	bazelgeuse	0
+1489	Legs	11	Seething Bazel Coil Beta +	154;162;178	3	1	-2	-4	-2	bombardier-2;bazelgeuseAmbition	4;2	bazelgeuse	0
+1490	Feet	11	Seething Bazel Greaves Beta +	154;162;178	3	1	-2	-4	-2	earplugs-1;jumpMaster-1;bazelgeuseAmbition	4;2	bazelgeuse	0
+1491	Head	11	Savage Jho Helm Alpha +	156;164;180	2	1	-3	1	-3	partbreaker-1;handicraft-2;deviljhoEssence	1	deviljho	0
+1492	Chest	11	Savage Jho Mail Alpha +	156;164;180	2	1	-3	1	-3	speedEating-1;handicraft-2;deviljhoEssence	2	deviljho	0
+1493	Hands	11	Savage Jho Vambraces Alpha +	156;164;180	2	1	-3	1	-3	staminaThief-2;partbreaker-1;deviljhoEssence	2	deviljho	0
+1494	Legs	11	Savage Jho Faulds Alpha +	156;164;180	2	1	-3	1	-3	staminaThief-2;handicraft-1;deviljhoEssence	1	deviljho	0
+1495	Feet	11	Savage Jho Greaves Alpha +	156;164;180	2	1	-3	1	-3	speedEating-2;staminaThief-1;deviljhoEssence	2;2	deviljho	0
+1496	Head	11	Savage Jho Helm Beta +	156;164;180	2	1	-3	1	-3	partbreaker-1;deviljhoEssence	4;3	deviljho	0
+1497	Chest	11	Savage Jho Mail Beta +	156;164;180	2	1	-3	1	-3	speedEating-1;deviljhoEssence	4;2;2	deviljho	0
+1498	Hands	11	Savage Jho Vambraces Beta +	156;164;180	2	1	-3	1	-3	staminaThief-2;deviljhoEssence	4	deviljho	0
+1499	Legs	11	Savage Jho Faulds Beta +	156;164;180	2	1	-3	1	-3	staminaThief-2;deviljhoEssence	4;1	deviljho	0
+1500	Feet	11	Savage Jho Greaves Beta +	156;164;180	2	1	-3	1	-3	speedEating-1;staminaThief-1;deviljhoEssence	4;2	deviljho	0
+1501	Head	12	Rimeguard Helm Alpha +	154;160;172	-3	2	-1	4	-1	divineBlessing-2;coalescence-1;velkhanaDivinity	3;2	velkhana	0
+1502	Chest	12	Rimeguard Mail Alpha +	154;160;172	-3	2	-1	4	-1	quickSheath-2;criticalDraw-1;velkhanaDivinity	1	velkhana	0
+1503	Hands	12	Rimeguard Vambraces Alpha +	154;160;172	-3	2	-1	4	-1	quickSheath-1;flinchFree-2;velkhanaDivinity	1	velkhana	0
+1504	Legs	12	Rimeguard Coil Alpha +	154;160;172	-3	2	-1	4	-1	flinchFree-1;coalescence-1;velkhanaDivinity	2;1	velkhana	0
+1505	Feet	12	Rimeguard Greaves Alpha +	154;160;172	-3	2	-1	4	-1	criticalDraw-2;coalescence-1;velkhanaDivinity	1;1	velkhana	0
+1506	Head	12	Rimeguard Helm Beta +	154;160;172	-3	2	-1	4	-1	divineBlessing-2;velkhanaDivinity	4;2	velkhana	0
+1507	Chest	12	Rimeguard Mail Beta +	154;160;172	-3	2	-1	4	-1	quickSheath-2;velkhanaDivinity	4;1	velkhana	0
+1508	Hands	12	Rimeguard Vambraces Beta +	154;160;172	-3	2	-1	4	-1	quickSheath-1;flinchFree-1;velkhanaDivinity	4	velkhana	0
+1509	Legs	12	Rimeguard Coil Beta +	154;160;172	-3	2	-1	4	-1	flinchFree-1;velkhanaDivinity	4;1	velkhana	0
+1510	Feet	12	Rimeguard Greaves Beta +	154;160;172	-3	2	-1	4	-1	criticalDraw-2;velkhanaDivinity	4;1	velkhana	0
+1511	Head	12	Blackveil Hazak Helm Alpha +	156;162;174	-2	4	1	1	-3	peakPerformance-2;dragonAttack-2;vaalSoulvein	1	vaal;hazak	0
+1512	Chest	12	Blackveil Hazak Mail Alpha +	156;162;174	-2	4	1	1	-3	recoverySpeed-2;dragonAttack-2;vaalSoulvein	3;1	vaal;hazak	0
+1513	Hands	12	Blackveil Hazak Braces Alpha +	156;162;174	-2	4	1	1	-3	recoveryUp-2;speedEating-1;vaalSoulvein	2;1;1	vaal;hazak	0
+1514	Legs	12	Blackveil Hazak Coil Alpha +	156;162;174	-2	4	1	1	-3	speedEating-2;peakPerformance-1;vaalSoulvein	2;1	vaal;hazak	0
+1515	Feet	12	Blackveil Hazak Greaves Alpha +	156;162;174	-2	4	1	1	-3	effluviaResistance-2;dragonAttack-2;vaalSoulvein	3;2	vaal;hazak	0
+1516	Head	12	Blackveil Hazak Helm Beta +	156;162;174	-2	4	1	1	-3	peakPerformance-2;vaalSoulvein	4;1	vaal;hazak	0
+1517	Chest	12	Blackveil Hazak Mail Beta +	156;162;174	-2	4	1	1	-3	recoverySpeed-2;dragonAttack-1;vaalSoulvein	4;2	vaal;hazak	0
+1518	Hands	12	Blackveil Hazak Braces Beta +	156;162;174	-2	4	1	1	-3	recoveryUp-2;vaalSoulvein	4;1;1	vaal;hazak	0
+1519	Legs	12	Blackveil Hazak Coil Beta +	156;162;174	-2	4	1	1	-3	speedEating-2;vaalSoulvein	4;2	vaal;hazak	0
+1520	Feet	12	Blackveil Hazak Greaves Beta +	156;162;174	-2	4	1	1	-3	effluviaResistance-2;vaalSoulvein	4;3	vaal;hazak	0
+1521	Head	12	Kaiser Crown Alpha +	156;162;174	3	-3	1	-3	1	latentPower-2;criticalEye-2;teostraTechnique	1	teostra	0
+1522	Chest	12	Kaiser Mail Alpha +	156;162;174	3	-3	1	-3	1	latentPower-1;specialAmmoBoost-2;teostraTechnique	2;1	teostra	0
+1523	Hands	12	Kaiser Vambraces Alpha +	156;162;174	3	-3	1	-3	1	weaknessExploit-2;heatGuard-1;teostraTechnique	2	teostra	0
+1524	Legs	12	Kaiser Coil Alpha +	156;162;174	3	-3	1	-3	1	blastAttack-2;weaknessExploit-1;teostraTechnique	3	teostra	0
+1525	Feet	12	Kaiser Greaves Alpha +	156;162;174	3	-3	1	-3	1	latentPower-2;blastAttack-2;teostraTechnique	2	teostra	0
+1526	Head	12	Kaiser Crown Beta +	156;162;174	3	-3	1	-3	1	latentPower-1;criticalEye-2;teostraTechnique	4	teostra	0
+1527	Chest	12	Kaiser Mail Beta +	156;162;174	3	-3	1	-3	1	latentPower-1;teostraTechnique	4;1;1	teostra	0
+1528	Hands	12	Kaiser Vambraces Beta +	156;162;174	3	-3	1	-3	1	weaknessExploit-1;heatGuard-1;teostraTechnique	4;3	teostra	0
+1529	Legs	12	Kaiser Coil Beta +	156;162;174	3	-3	1	-3	1	blastAttack-2;teostraTechnique	4;2;1	teostra	0
+1530	Feet	12	Kaiser Greaves Beta +	156;162;174	3	-3	1	-3	1	latentPower-2;blastAttack-1;teostraTechnique	4	teostra	0
+1531	Head	12	Kushala Glare Alpha +	156;162;174	0	2	-3	4	-2	iceAttack-2;evadeWindow-2;kushalaDaoraFlight	2	kushala;daora	0
+1532	Chest	12	Kushala Cista Alpha +	156;162;174	0	2	-3	4	-2	handicraft-3;kushalaDaoraFlight	1	kushala;daora	0
+1533	Hands	12	Kushala Grip Alpha +	156;162;174	0	2	-3	4	-2	evadeWindow-3;kushalaDaoraFlight	1	kushala;daora	0
+1534	Legs	12	Kushala Cocoon Alpha +	156;162;174	0	2	-3	4	-2	iceAttack-3;evadeExtender-1;kushalaDaoraFlight	2	kushala;daora	0
+1535	Feet	12	Kushala Crus Alpha +	156;162;174	0	2	-3	4	-2	evadeExtender-2;handicraft-2;kushalaDaoraFlight	1	kushala;daora	0
+1536	Head	12	Kushala Glare Beta +	156;162;174	0	2	-3	4	-2	iceAttack-2;evadeWindow-1;kushalaDaoraFlight	4;1	kushala;daora	0
+1537	Chest	12	Kushala Cista Beta +	156;162;174	0	2	-3	4	-2	handicraft-2;kushalaDaoraFlight	4;2	kushala;daora	0
+1538	Hands	12	Kushala Grip Beta +	156;162;174	0	2	-3	4	-2	evadeWindow-2;kushalaDaoraFlight	4;2	kushala;daora	0
+1539	Legs	12	Kushala Cocoon Beta +	156;162;174	0	2	-3	4	-2	iceAttack-3;kushalaDaoraFlight	4;1	kushala;daora	0
+1540	Feet	12	Kushala Crus Beta +	156;162;174	0	2	-3	4	-2	evadeExtender-2;kushalaDaoraFlight	4;3	kushala;daora	0
+1541	Head	12	Kirin Horn Alpha +	154;160;172	-3	-2	4	-2	2	marathonRunner-2;divineBlessing-2;kirinDivinity	3;1	kirin	0
+1542	Chest	12	Kirin Jacket Alpha +	154;160;172	-3	-2	4	-2	2	criticalEye-3;divineBlessing-1;kirinDivinity	3;2	kirin	0
+1543	Hands	12	Kirin Longarms Alpha +	154;160;172	-3	-2	4	-2	2	thunderAttack-3;marathonRunner-1;kirinDivinity	3;2	kirin	0
+1544	Legs	12	Kirin Hoop Alpha +	154;160;172	-3	-2	4	-2	2	blightResistance-2;freeElemAmmoUp-1;kirinDivinity	2	kirin	0
+1545	Feet	12	Kirin Guards Alpha +	154;160;172	-3	-2	4	-2	2	freeElemAmmoUp-2;criticalEye-2;kirinDivinity	1	kirin	0
+1546	Head	12	Kirin Horn Beta +	154;160;172	-3	-2	4	-2	2	marathonRunner-2;kirinDivinity	4;1;1	kirin	0
+1547	Chest	12	Kirin Jacket Beta +	154;160;172	-3	-2	4	-2	2	criticalEye-2;divineBlessing-1;kirinDivinity	4;2	kirin	0
+1548	Hands	12	Kirin Longarms Beta +	154;160;172	-3	-2	4	-2	2	thunderAttack-3;kirinDivinity	4;2;2	kirin	0
+1549	Legs	12	Kirin Hoop Beta +	154;160;172	-3	-2	4	-2	2	blightResistance-2;kirinDivinity	4;1;1	kirin	0
+1550	Feet	12	Kirin Guards Beta +	154;160;172	-3	-2	4	-2	2	freeElemAmmoUp-2;kirinDivinity	4	kirin	0
+1551	Head	12	Namielle Cowl Alpha +	158;164;176	-3	4	3	0	-2	constitution-3;maximumMight-1;namielleDivinity	1	namielle	0
+1552	Chest	12	Namielle Cloak Alpha +	158;164;176	-3	4	3	0	-2	blightResistance-2;toolSpecialist-1;namielleDivinity	2;2	namielle	0
+1553	Hands	12	Namielle Gloves Alpha +	158;164;176	-3	4	3	0	-2	toolSpecialist-2;maximumMight-1;namielleDivinity	1	namielle	0
+1554	Legs	12	Namielle Coil Alpha +	158;164;176	-3	4	3	0	-2	constitution-2;staminaSurge-1;namielleDivinity	1;1;1	namielle	0
+1555	Feet	12	Namielle Greaves Alpha +	158;164;176	-3	4	3	0	-2	staminaSurge-2;blightResistance-1;namielleDivinity	2;1	namielle	0
+1556	Head	12	Namielle Cowl Beta +	158;164;176	-3	4	3	0	-2	constitution-2;maximumMight-1;namielleDivinity	4	namielle	0
+1557	Chest	12	Namielle Cloak Beta +	158;164;176	-3	4	3	0	-2	blightResistance-1;toolSpecialist-1;namielleDivinity	4;2	namielle	0
+1558	Hands	12	Namielle Gloves Beta +	158;164;176	-3	4	3	0	-2	toolSpecialist-2;namielleDivinity	4	namielle	0
+1559	Legs	12	Namielle Coil Beta +	158;164;176	-3	4	3	0	-2	constitution-1;staminaSurge-1;namielleDivinity	4;1;1	namielle	0
+1560	Feet	12	Namielle Greaves Beta +	158;164;176	-3	4	3	0	-2	staminaSurge-2;namielleDivinity	4;2	namielle	0
+1561	Head	11	Guild Palace Helm Alpha +	154;162;178	1	2	2	1	1	healthBoost-2;offensiveGuard-1;guildPride	3	workshop	0
+1562	Chest	11	Guild Palace Mail Alpha +	154;162;178	1	2	2	1	1	agitator-2;heroics-1;guildPride	1;1	workshop	0
+1563	Hands	11	Guild Palace Vambraces Alpha +	154;162;178	1	2	2	1	1	offensiveGuard-2;heroics-1;guildPride	3	workshop	0
+1564	Legs	11	Guild Palace Coil Alpha +	154;162;178	1	2	2	1	1	agitator-3;resuscitate-1;guildPride	1;1	workshop	0
+1565	Feet	11	Guild Palace Greaves Alpha +	154;162;178	1	2	2	1	1	heroics-3;healthBoost-1;guildPride	2	workshop	0
+1566	Head	11	Guild Palace Helm Beta +	154;162;178	1	2	2	1	1	healthBoost-2;guildPride	4;2	workshop	0
+1567	Chest	11	Guild Palace Mail Beta +	154;162;178	1	2	2	1	1	agitator-1;heroics-1;guildPride	4;2	workshop	0
+1568	Hands	11	Guild Palace Vambraces Beta +	154;162;178	1	2	2	1	1	offensiveGuard-2;guildPride	4;1	workshop	0
+1569	Legs	11	Guild Palace Coil Beta +	154;162;178	1	2	2	1	1	agitator-2;resuscitate-1;guildPride	4;1	workshop	0
+1570	Feet	11	Guild Palace Greaves Beta +	154;162;178	1	2	2	1	1	heroics-2;healthBoost-1;guildPride	4;1	workshop	0
+1571	Head	12	Shara Ishvalda Helm Alpha +	162;168;180	0	-2	3	-3	0	recoveryUp-2;partbreaker-1;sharaIshvaldaDivinity	3;1	shara;ishvalda	0
+1572	Chest	12	Shara Ishvalda Mail Alpha +	162;168;180	0	-2	3	-3	0	coalescence-2;healthBoost-1;sharaIshvaldaDivinity	3;2	shara;ishvalda	0
+1573	Hands	12	Shara Ishvalda Braces Alpha +	162;168;180	0	-2	3	-3	0	criticalBoost-2;coalescence-1;sharaIshvaldaDivinity	1	shara;ishvalda	0
+1574	Legs	12	Shara Ishvalda Coil Alpha +	162;168;180	0	-2	3	-3	0	healthBoost-2;recoveryUp-1;sharaIshvaldaDivinity	3;2	shara;ishvalda	0
+1575	Feet	12	Shara Ishvalda Greaves Alpha +	162;168;180	0	-2	3	-3	0	partbreaker-2;defenseBoost-2;sharaIshvaldaDivinity	1;1;1	shara;ishvalda	0
+1576	Head	12	Shara Ishvalda Helm Beta +	162;168;180	0	-2	3	-3	0	recoveryUp-2;sharaIshvaldaDivinity	4;2	shara;ishvalda	0
+1577	Chest	12	Shara Ishvalda Mail Beta +	162;168;180	0	-2	3	-3	0	coalescence-2;sharaIshvaldaDivinity	4;2	shara;ishvalda	0
+1578	Hands	12	Shara Ishvalda Braces Beta +	162;168;180	0	-2	3	-3	0	criticalBoost-2;sharaIshvaldaDivinity	4	shara;ishvalda	0
+1579	Legs	12	Shara Ishvalda Coil Beta +	162;168;180	0	-2	3	-3	0	healthBoost-2;sharaIshvaldaDivinity	4;3	shara;ishvalda	0
+1580	Feet	12	Shara Ishvalda Greaves Beta +	162;168;180	0	-2	3	-3	0	partbreaker-1;defenseBoost-1;sharaIshvaldaDivinity	4;2;1	shara;ishvalda	0
+1581	Head	12	Zorah Headgear Alpha +	160;166;178	4	-3	-1	-2	-3	flinchFree-1;artillery-2;zorahMagdarosEssence	2;2	zorah;magdaros	0
+1582	Chest	12	Zorah Hide Alpha +	160;166;178	4	-3	-1	-2	-3	tremorResistance-2;artillery-2;zorahMagdarosEssence	3;1	zorah;magdaros	0
+1583	Hands	12	Zorah Claws Alpha +	160;166;178	4	-3	-1	-2	-3	flinchFree-2;freeMeal-1;zorahMagdarosEssence	1;1	zorah;magdaros	0
+1584	Legs	12	Zorah Spine Alpha +	160;166;178	4	-3	-1	-2	-3	tremorResistance-1;artillery-1;zorahMagdarosEssence	3;2	zorah;magdaros	0
+1585	Feet	12	Zorah Spurs Alpha +	160;166;178	4	-3	-1	-2	-3	earplugs-1;handicraft-1;zorahMagdarosEssence	3;1	zorah;magdaros	0
+1586	Head	12	Zorah Headgear Beta +	160;166;178	4	-3	-1	-2	-3	flinchFree-1;zorahMagdarosEssence	4;2;1	zorah;magdaros	0
+1587	Chest	12	Zorah Hide Beta +	160;166;178	4	-3	-1	-2	-3	tremorResistance-2;zorahMagdarosEssence	4;2	zorah;magdaros	0
+1588	Hands	12	Zorah Claws Beta +	160;166;178	4	-3	-1	-2	-3	flinchFree-2;zorahMagdarosEssence	4;1	zorah;magdaros	0
+1589	Legs	12	Zorah Spine Beta +	160;166;178	4	-3	-1	-2	-3	tremorResistance-1;zorahMagdarosEssence	4;3	zorah;magdaros	0
+1590	Feet	12	Zorah Spurs Beta +	160;166;178	4	-3	-1	-2	-3	earplugs-1;zorahMagdarosEssence	4;3	zorah;magdaros	0
+1591	Head	11	Yian Garuga Helm Alpha +	154;162;178	2	-3	2	-2	-2	criticalEye-2;resentment-1	3	yian;garuga	0
+1592	Chest	11	Yian Garuga Mail Alpha +	154;162;178	2	-3	2	-2	-2	earplugs-2;criticalEye-2	1	yian;garuga	0
+1593	Hands	11	Yian Garuga Vambraces Alpha +	154;162;178	2	-3	2	-2	-2	earplugs-3	1	yian;garuga	0
+1594	Legs	11	Yian Garuga Coil Alpha +	154;162;178	2	-3	2	-2	-2	resentment-2;poisonAttack-2	1;1	yian;garuga	0
+1595	Feet	11	Yian Garuga Greaves Alpha +	154;162;178	2	-3	2	-2	-2	criticalEye-2;piercingShots-1	3;3	yian;garuga	0
+1596	Head	11	Yian Garuga Helm Beta +	154;162;178	2	-3	2	-2	-2	criticalEye-1;resentment-1	4;2	yian;garuga	0
+1597	Chest	11	Yian Garuga Mail Beta +	154;162;178	2	-3	2	-2	-2	earplugs-1;criticalEye-2	4	yian;garuga	0
+1598	Hands	11	Yian Garuga Vambraces Beta +	154;162;178	2	-3	2	-2	-2	earplugs-2	4	yian;garuga	0
+1599	Legs	11	Yian Garuga Coil Beta +	154;162;178	2	-3	2	-2	-2	resentment-2	4;3	yian;garuga	0
+1600	Feet	11	Yian Garuga Greaves Beta +	154;162;178	2	-3	2	-2	-2	criticalEye-2	4;2;2	yian;garuga	0
+1601	Head	11	Zinogre Helm Alpha +	158;166;182	-1	-1	4	-4	1	powerProlonger-2;criticalBoost-1;zinogreEssence	1	zinogre	0
+1602	Chest	11	Zinogre Mail Alpha +	158;166;182	-1	-1	4	-4	1	latentPower-3;normalShots-1;zinogreEssence	3	zinogre	0
+1603	Hands	11	Zinogre Braces Alpha +	158;166;182	-1	-1	4	-4	1	recoverySpeed-2;latentPower-2;zinogreEssence	2;1	zinogre	0
+1604	Legs	11	Zinogre Coil Alpha +	158;166;182	-1	-1	4	-4	1	powerProlonger-1;thunderAttack-2;zinogreEssence	2	zinogre	0
+1605	Feet	11	Zinogre Greaves Alpha +	158;166;182	-1	-1	4	-4	1	thunderAttack-3;latentPower-2;zinogreEssence	1	zinogre	0
+1606	Head	11	Zinogre Helm Beta +	158;166;182	-1	-1	4	-4	1	powerProlonger-1;criticalBoost-1;zinogreEssence	4	zinogre	0
+1607	Chest	11	Zinogre Mail Beta +	158;166;182	-1	-1	4	-4	1	latentPower-3;zinogreEssence	4	zinogre	0
+1608	Hands	11	Zinogre Braces Beta +	158;166;182	-1	-1	4	-4	1	recoverySpeed-1;latentPower-2;zinogreEssence	4;2	zinogre	0
+1609	Legs	11	Zinogre Coil Beta +	158;166;182	-1	-1	4	-4	1	powerProlonger-1;zinogreEssence	4;2	zinogre	0
+1610	Feet	11	Zinogre Greaves Beta +	158;166;182	-1	-1	4	-4	1	thunderAttack-1;latentPower-2;zinogreEssence	4;1	zinogre	0
+1611	Head	12	Golden Lunehelm Alpha +	162;168;180	3	-2	-4	0	4	healthBoost-2;poisonAttack-2;goldenRathianEssence	2;2	golden;lune;rathian	0
+1612	Chest	12	Golden Lunemail Alpha +	162;168;180	3	-2	-4	0	4	divineBlessing-2;resentment-1;goldenRathianEssence	3;1	golden;lune;rathian	0
+1613	Hands	12	Golden Lunebraces Alpha +	162;168;180	3	-2	-4	0	4	resentment-2;poisonAttack-2;goldenRathianEssence	2	golden;lune;rathian	0
+1614	Legs	12	Golden Lunecoil Alpha +	162;168;180	3	-2	-4	0	4	divineBlessing-3;healthBoost-1;goldenRathianEssence	2;2	golden;lune;rathian	0
+1615	Feet	12	Golden Lunegreaves Alpha +	162;168;180	3	-2	-4	0	4	weaknessExploit-2;spreadPowerShots-1;goldenRathianEssence	1	golden;lune;rathian	0
+1616	Head	12	Golden Lunehelm Beta +	162;168;180	3	-2	-4	0	4	healthBoost-2;goldenRathianEssence	4;2	golden;lune;rathian	0
+1617	Chest	12	Golden Lunemail Beta +	162;168;180	3	-2	-4	0	4	divineBlessing-2;goldenRathianEssence	4;2;1	golden;lune;rathian	0
+1618	Hands	12	Golden Lunebraces Beta +	162;168;180	3	-2	-4	0	4	resentment-2;goldenRathianEssence	4;2	golden;lune;rathian	0
+1619	Legs	12	Golden Lunecoil Beta +	162;168;180	3	-2	-4	0	4	divineBlessing-3;goldenRathianEssence	4;2	golden;lune;rathian	0
+1620	Feet	12	Golden Lunegreaves Beta +	162;168;180	3	-2	-4	0	4	weaknessExploit-2;goldenRathianEssence	4	golden;lune;rathian	0
+1621	Head	12	Silver Solhelm Alpha +	164;170;182	4	-3	-2	-2	3	windproof-2;fireAttack-2;silverRathalosEssence	2;2	silver;sol;rathalos	0
+1622	Chest	12	Silver Solmail Alpha +	164;170;182	4	-3	-2	-2	3	criticalBoost-2;fireAttack-2;silverRathalosEssence	1	silver;sol;rathalos	0
+1623	Hands	12	Silver Solbraces Alpha +	164;170;182	4	-3	-2	-2	3	slingerCapacity-3;windproof-1;silverRathalosEssence	2;2	silver;sol;rathalos	0
+1624	Legs	12	Silver Solcoil Alpha +	164;170;182	4	-3	-2	-2	3	windproof-2;criticalBoost-1;silverRathalosEssence	1;1	silver;sol;rathalos	0
+1625	Feet	12	Silver Solgreaves Alpha +	164;170;182	4	-3	-2	-2	3	slingerCapacity-2;fireAttack-2;silverRathalosEssence	3;2	silver;sol;rathalos	0
+1626	Head	12	Silver Solhelm Beta +	164;170;182	4	-3	-2	-2	3	windproof-2;silverRathalosEssence	4;3	silver;sol;rathalos	0
+1627	Chest	12	Silver Solmail Beta +	164;170;182	4	-3	-2	-2	3	criticalBoost-2;silverRathalosEssence	4	silver;sol;rathalos	0
+1628	Hands	12	Silver Solbraces Beta +	164;170;182	4	-3	-2	-2	3	slingerCapacity-3;silverRathalosEssence	4;2	silver;sol;rathalos	0
+1629	Legs	12	Silver Solcoil Beta +	164;170;182	4	-3	-2	-2	3	windproof-1;criticalBoost-1;silverRathalosEssence	4;1	silver;sol;rathalos	0
+1630	Feet	12	Silver Solgreaves Beta +	164;170;182	4	-3	-2	-2	3	slingerCapacity-2;silverRathalosEssence	4;2;1	silver;sol;rathalos	0
+1631	Head	12	Empress Crown Alpha +	164;170;182	3	1	1	-3	-2	toolSpecialist-2;offensiveGuard-1;lunastraEssence	3	lunastra	0
+1632	Chest	12	Empress Mail Alpha +	164;170;182	3	1	1	-3	-2	peakPerformance-2;wideRange-2;lunastraEssence	2	lunastra	0
+1633	Hands	12	Empress Braces Alpha +	164;170;182	3	1	1	-3	-2	toolSpecialist-2;blastAttack-2;lunastraEssence	2;1	lunastra	0
+1634	Legs	12	Empress Coil Alpha +	164;170;182	3	1	1	-3	-2	healthBoost-2;blastAttack-2;lunastraEssence	2;2	lunastra	0
+1635	Feet	12	Empress Greaves Alpha +	164;170;182	3	1	1	-3	-2	wideRange-3;toolSpecialist-1;lunastraEssence	3;1	lunastra	0
+1636	Head	12	Empress Crown Beta +	164;170;182	3	1	1	-3	-2	toolSpecialist-2;lunastraEssence	4;3	lunastra	0
+1637	Chest	12	Empress Mail Beta +	164;170;182	3	1	1	-3	-2	peakPerformance-1;wideRange-2;lunastraEssence	4;1	lunastra	0
+1638	Hands	12	Empress Braces Beta +	164;170;182	3	1	1	-3	-2	toolSpecialist-2;blastAttack-1;lunastraEssence	3;1	lunastra	0
+1639	Legs	12	Empress Coil Beta +	164;170;182	3	1	1	-3	-2	healthBoost-2;lunastraEssence	4;2	lunastra	0
+1640	Feet	12	Empress Greaves Beta +	164;170;182	3	1	1	-3	-2	wideRange-2;toolSpecialist-1;lunastraEssence	4;2	lunastra	0
+1641	Head	12	Ruinous Helm Alpha +	166;172;184	1	1	-3	1	-3	maximumMight-2;staminaSurge-1;nergiganteAmbition	3;1	ruiner;nergigante	0
+1642	Chest	12	Ruinous Mail Alpha +	166;172;184	1	1	-3	1	-3	staminaSurge-2;maximumMight-1;nergiganteAmbition	2;2	ruiner;nergigante	0
+1643	Hands	12	Ruinous Braces Alpha +	166;172;184	1	1	-3	1	-3	agitator-2;attackBoost-2;nergiganteAmbition	3	ruiner;nergigante	0
+1644	Legs	12	Ruinous Coil Alpha +	166;172;184	1	1	-3	1	-3	attackBoost-3;earplugs-1;nergiganteAmbition	2;1	ruiner;nergigante	0
+1645	Feet	12	Ruinous Greaves Alpha +	166;172;184	1	1	-3	1	-3	earplugs-2;agitator-1;nergiganteAmbition	2	ruiner;nergigante	0
+1646	Head	12	Ruinous Helm Beta +	166;172;184	1	1	-3	1	-3	maximumMight-2;nergiganteAmbition	4;2	ruiner;nergigante	0
+1647	Chest	12	Ruinous Mail Beta +	166;172;184	1	1	-3	1	-3	staminaSurge-2;nergiganteAmbition	4;2	ruiner;nergigante	0
+1648	Hands	12	Ruinous Braces Beta +	166;172;184	1	1	-3	1	-3	agitator-2;attackBoost-1;nergiganteAmbition	4;1	ruiner;nergigante	0
+1649	Legs	12	Ruinous Coil Beta +	166;172;184	1	1	-3	1	-3	attackBoost-2;earplugs-1;nergiganteAmbition	4;1	ruiner;nergigante	0
+1650	Feet	12	Ruinous Greaves Beta +	166;172;184	1	1	-3	1	-3	earplugs-2;nergiganteAmbition	4;1	ruiner;nergigante	0
+1651	Head	12	Guildwork Head Alpha +	162;168;180	2	1	1	2	2	botanist-3;honeyHunter-1;guildPride	3;2	guildwork	0
+1652	Chest	12	Guildwork Body Alpha +	162;168;180	2	1	1	2	2	cliffhanger-1;flinchFree-1;guildPride	3;1;1	guildwork	0
+1653	Hands	12	Guildwork Braces Alpha +	162;168;180	2	1	1	2	2	geologist-2;botanist-1;guildPride	3;2	guildwork	0
+1654	Legs	12	Guildwork Waist Alpha +	162;168;180	2	1	1	2	2	foragersLuck-1;detector-1;guildPride	3;2	guildwork	0
+1655	Feet	12	Guildwork Feet Alpha +	162;168;180	2	1	1	2	2	flinchFree-2;geologist-1;guildPride	2;1	guildwork	0
+1656	Head	12	Guildwork Head Beta +	162;168;180	2	1	1	2	2	botanist-2;honeyHunter-1;guildPride	4;3	guildwork	0
+1657	Chest	12	Guildwork Body Beta +	162;168;180	2	1	1	2	2	cliffhanger-1;guildPride	4;2;2	guildwork	0
+1658	Hands	12	Guildwork Braces Beta +	162;168;180	2	1	1	2	2	geologist-1;botanist-1;guildPride	4;3	guildwork	0
+1659	Legs	12	Guildwork Waist Beta +	162;168;180	2	1	1	2	2	foragersLuck-1;guildPride	4;3	guildwork	0
+1660	Feet	12	Guildwork Feet Beta +	162;168;180	2	1	1	2	2	flinchFree-2;guildPride	4;1	guildwork	0

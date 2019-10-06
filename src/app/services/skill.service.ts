@@ -201,6 +201,7 @@ export class SkillService {
 						if (skill.raiseSkillId) {
 							const equippedSkillToRaise = _.find(equippedSkills, es => es.id == skill.raiseSkillId);
 							if (equippedSkillToRaise) {
+								equippedSkillToRaise.secretLevelCount = equippedSkillToRaise.skill.levels.length - equippedSkillToRaise.totalLevelCount;
 								equippedSkillToRaise.totalLevelCount = equippedSkillToRaise.skill.levels.length;
 							}
 						}

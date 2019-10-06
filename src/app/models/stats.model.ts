@@ -28,6 +28,7 @@ export class StatsModel {
 	passiveCriticalBoostPercent: number;
 	criticalElement: boolean;
 	criticalStatus: boolean;
+	criticalStatusPercent: number;
 
 	elementless: boolean;
 	elementlessBoostPercent: number;
@@ -135,6 +136,7 @@ export class StatsModel {
 		this.passiveCriticalBoostPercent = 0;
 		this.criticalElement = false;
 		this.criticalStatus = false;
+		this.criticalStatusPercent = 0;
 
 		this.element = null;
 		this.baseElementAttack = 0;

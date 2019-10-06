@@ -100,7 +100,7 @@ export class ItemDetailsComponent implements OnInit {
 						value: this.item.elderseal
 					});
 				}
-			}		
+			}
 
 			if (this.item.otherData && this.item.otherData[0].value) {
 				const auxDetail: StatDetailModel = {
@@ -196,10 +196,12 @@ export class ItemDetailsComponent implements OnInit {
 			});
 		}
 
-		this.stats.push({
-			name: 'Tags',
-			value: this.item.tags.join(' | ')
-		});	
+		if (this.item.tags) {
+			this.stats.push({
+				name: 'Tags',
+				value: this.item.tags.join(' | ')
+			});
+		}
 	}
 
 

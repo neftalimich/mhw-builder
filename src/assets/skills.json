@@ -425,6 +425,7 @@
 		"id": "divineBlessing",
 		"name": "Divine Blessing",
 		"description": "Has a predetermined chance of reducing the damage you take.",
+		"maxLevel": 3,
 		"levels": [
 			{
 				"description": "While active, reduces damage taken by 15%."
@@ -434,6 +435,12 @@
 			},
 			{
 				"description": "While active, reduces damage taken by 50%."
+			},
+			{
+				"description": "While active, reduces damage taken by 60%."
+			},
+			{
+				"description": "While active, reduces damage taken by 60%. Skill becomes easier to activate as well."
 			}
 		]
 	},
@@ -1228,6 +1235,7 @@
 		"id": "slingerCapacity",
 		"name": "Slinger Capacity",
 		"description": "Increases the loading capacity for slinger ammo obtained in the field.",
+		"maxLevel": 3,
 		"levels": [
 			{
 				"description": "Increases the loading capacity for slinger ammo collected from the ground or plants."
@@ -1237,6 +1245,12 @@
 			},
 			{
 				"description": "In addition, increases the loading capacity for all slinger ammo dropped by monsters."
+			},
+			{
+				"description": "Increases the loading capacity for slinger ammo collected from ground or plants even more."
+			},
+			{
+				"description": "Increases the loading capacity for all slinger ammo."
 			}
 		]
 	},
@@ -1725,6 +1739,7 @@
 		"id": "toolSpecialist",
 		"name": "Tool Specialist",
 		"description": "Reduces the recharge time for specialized tools.",
+		"maxLevel": 3,
 		"levels": [
 			{
 				"description": "Shortens time until reuse by 10%.",
@@ -1737,6 +1752,14 @@
 			{
 				"description": "Shortens time until reuse by 30%.",
 				"toolRechargeReduce": 0.30
+			},
+			{
+				"description": "Shortens time until reuse by 40%.",
+				"toolRechargeReduce": 0.40
+			},
+			{
+				"description": "Shortens time until reuse by 50%.",
+				"toolRechargeReduce": 0.50
 			}
 		]
 	},
@@ -2013,10 +2036,20 @@
 	{
 		"id": "carvingPro",
 		"name": "Carving Pro",
-		"description": "Prevents knockback from attacks while carving.",
+		"description": "",
 		"levels": [
 			{
 				"description": "Prevents knockback while carving."
+			}
+		]
+	},
+	{
+		"id": "carvingMaster",
+		"name": "Carving Master",
+		"description": "",
+		"levels": [
+			{
+				"description": "Lets you carve one additional time. (Not effect when joing mid-quest.)"
 			}
 		]
 	},
@@ -2313,6 +2346,7 @@
 		"levels": [
 			{
 				"description": "Increases abnormal status effect damage (paralysis, poison, sleep, blast) when landing critical hits.",
+				"criticalStatusPercent": 20,
 				"criticalStatus": true
 			}
 		]
@@ -2482,6 +2516,51 @@
 		"levels": [
 			{
 				"description": "Raises the maximum level of Latent Power Skill."
+			}
+		]
+	},
+	{
+		"id": "divineBlessingSecret",
+		"name": "Divine Blessing Secrect",
+		"description": "",
+		"raiseSkillId": "divineBlessing",
+		"levels": [
+			{
+				"description": "Raises the maximum level of Divine Blessing Skill."
+			}
+		]
+	},
+	{
+		"id": "slingerAmmoSecret",
+		"name": "Slinger Ammo Secrect",
+		"description": "",
+		"raiseSkillId": "slingerCapacity",
+		"levels": [
+			{
+				"description": "Raises the maximum level of Slinger Capacity Skill."
+			}
+		]
+	},
+	{
+		"id": "trueCriticalStatus",
+		"name": "True Critical Status",
+		"description": "Greatly abnormal status effect damage (paralysis, poison, sleep, blast) when landing critical hits.",
+		"levels": [
+			{
+				"description": "Greatly abnormal status effect damage (paralysis, poison, sleep, blast) when landing critical hits.",
+				"criticalStatusPercent": 30,
+				"criticalStatus": true
+			}
+		]
+	},
+	{
+		"id": "toolSpecialistSecret",
+		"name": "Tool Specialist Secrect",
+		"description": "",
+		"raiseSkillId": "toolSpecialist",
+		"levels": [
+			{
+				"description": "Raises the maximum level of Tool Specialist Skill."
 			}
 		]
 	}

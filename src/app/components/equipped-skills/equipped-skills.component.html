@@ -18,10 +18,14 @@
 					<span class="value">
 						[{{skill.equippedCount}}]
 						<span class="skill-box" style="display:inline-block;position:relative;">
-							<span *ngFor="let key of getMinCount(skill.equippedArmorCount, skill.totalLevelCount) | numbersArr">
+							<span *ngFor="let key of getMinCount(skill.equippedArmorCount, skill.totalLevelCount - skill.secretLevelCount) | numbersArr">
 								<span class="skill-bg-active" *ngIf="!skill.isNatureBonus">
 								</span>
 								<span class="skill-bg-nature" *ngIf="skill.isNatureBonus">
+								</span>
+							</span>
+							<span *ngFor="let key of (getMinCount(skill.equippedArmorCount, skill.totalLevelCount) - (skill.totalLevelCount - skill.secretLevelCount)) | numbersArr">
+								<span class="skill-bg-secret" *ngIf="!skill.isNatureBonus">
 								</span>
 							</span>
 							<span *ngFor="let key of getMinCount(skill.equippedToolActiveCount, skill.totalLevelCount - skill.equippedArmorCount) | numbersArr">

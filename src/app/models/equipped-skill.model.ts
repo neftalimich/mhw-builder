@@ -10,6 +10,7 @@ export class EquippedSkillModel {
 	equippedTool2Count: number;
 	equippedToolActiveCount: number;
 	equippedCount: number;
+	secretLevelCount: number;
 	totalLevelCount: number;
 
 	weaponCount: number; // Weapon
@@ -40,6 +41,8 @@ export class EquippedSkillModel {
 		this.equippedTool2Count = 0;
 		this.equippedToolActiveCount = 0;
 		this.equippedCount = 0;
+
+		this.secretLevelCount = 0;
 
 		this.isSetBonus = false;
 		this.isNatureBonus = false;
