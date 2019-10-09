@@ -205,6 +205,9 @@ export class SkillService {
 								equippedSkillToRaise.totalLevelCount = equippedSkillToRaise.skill.levels.length;
 							}
 						}
+					} else {
+						equippedSkill.equippedCount = 2;
+						equippedSkill.equippedArmorCount = 2;
 					}
 					if (this.isSomeToolActive) {
 						let natureSkills = [];

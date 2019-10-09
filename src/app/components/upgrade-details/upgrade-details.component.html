@@ -1,27 +1,10 @@
-<div class="container" (click)="clearTooltipItem()">
+<div class="container" (click)="clearTooltipUpgrade()">
 	<h3>Upgrades<span class="close-btn-sm" style="visibility:hidden;"><i class="fa fa-times"></i></span></h3>
 	<hr>
-
 	<ul class="striped-light">
 		<li *ngFor="let stat of stats">
 			<span class="name" [ngStyle]="{ color: stat.color }">{{stat.name}}</span>
 			<span class="value" [ngStyle]="{ color: stat.color }">{{stat.value}}</span>
 		</li>
 	</ul>
-
-
-	<div *ngIf="skills?.length" class="skills-container">
-		<ul>
-			<ng-container *ngFor="let skill of skills">
-				<li *ngIf="skill.levels">
-					<div class="skill-header">
-						<h4 class="skill-name">{{skill.name}}</h4>
-						<h4 class="skill-level">{{getSkillCount(skill)}}</h4>
-					</div>
-					<hr>
-					<span>{{skill.description}}</span>
-				</li>
-			</ng-container>
-		</ul>
-	</div>
 </div>

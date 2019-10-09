@@ -1,10 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { SkillModel } from '../../models/skill.model';
 import { StatDetailModel } from '../../models/stat-detail.model';
 import { UpgradeContainerModel } from '../../models/upgrade-container.model';
-import { DataService } from '../../services/data.service';
 import { TooltipService } from '../../services/tooltip.service';
-import { AugmentationType } from '../../types/augmentation.type';
 
 @Component({
 	selector: 'mhw-builder-upgrade-details',
@@ -15,26 +12,19 @@ export class UpgradeDetailsComponent implements OnInit {
 	private _upgradeContainer: UpgradeContainerModel;
 
 	@Input()
-	set upgradeContainer(upgrade: UpgradeContainerModel) {
-		this._upgradeContainer = upgrade;
-		if (upgrade) {
+	set upgradeContainer(upgradeContainer: UpgradeContainerModel) {
+		this._upgradeContainer = upgradeContainer;
+		if (upgradeContainer) {
 			this.setupStats();
-			this.loadSkills();
-		} else {
-			this.skills = new Array<SkillModel>();
 		}
 	}
 	get upgradeContainer(): UpgradeContainerModel {
 		return this._upgradeContainer;
 	}
 
-	skills: SkillModel[];
 	stats: StatDetailModel[] = [];
 
-	constructor(
-		private dataService: DataService,
-		private tooltipService: TooltipService
-	) {
+	constructor(private tooltipService: TooltipService) {
 	}
 
 	ngOnInit() { }
@@ -52,19 +42,14 @@ export class UpgradeDetailsComponent implements OnInit {
 		const countElement = this.upgradeContainer.customUpgrades.filter(custom => custom == 'Element').length;
 
 		if (countAttack > 0) {
-			this.stats.push({ name: 'Attack Custom', value: `+${countAttack}` });
+			this.stats.push({ name: 'Custom Attack', value: `+${countAttack}` });
 		}
 		if (countAffinity > 0) {
-			this.stats.push({ name: 'Affinity Custom', value: `+${countAffinity}` });
+			this.stats.push({ name: 'Custom Affinity', value: `+${countAffinity}` });
 		}
 		if (countElement > 0) {
-			this.stats.push({ name: 'Element/Ailment Custom', value: `+${countElement * 10}` });
+			this.stats.push({ name: 'Custom Element/Ailment', value: `+${countElement * 10}` });
 		}
-	}
-
-
-	loadSkills() {
-		//this.skills = this.dataService.getSkills(this.upgrade.skills);
 	}
 
 	clearTooltipUpgrade() {

@@ -57,6 +57,10 @@ export class UpgradeSlotComponent implements OnInit {
 		}
 	}
 
+	showOnClickTooltipItem() {
+		this.tooltipService.setUpgradeContainer(this.upgradeContainer);
+	}
+
 	clearTooltipUpgrade() {
 		this.tooltipService.setUpgradeContainer(null);
 	}

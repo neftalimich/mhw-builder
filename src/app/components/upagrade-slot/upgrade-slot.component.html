@@ -1,6 +1,6 @@
-<div class="container" (click)="clicked()" [class.selected]="selected" (pointerenter)="setTooltipUpgrade($event, upgradeContainer)" (pointerleave)="clearTooltipUpgrade()">
+<div class="container"  [class.selected]="selected" >
 	<div class="slot-icon"><img [src]="'assets/images/augment-icon.png'" alt="augment"></div>
-	<div class="selected-upgrade">
+	<div class="selected-upgrade" (click)="clicked()" (pointerenter)="setTooltipUpgrade($event, upgradeContainer)" (pointerleave)="clearTooltipUpgrade()">
 		<span *ngIf="upgradeContainer?.upgradeDetails">
 			<span *ngFor="let detail of upgradeContainer.upgradeDetails; let i = index">
 				<span *ngFor="let key of detail.totalSlots | numbersArr">
@@ -17,13 +17,17 @@
 			</span>
 		</span>
 	</div>
-	<div class="selected-custom">
+	<div class="selected-custom" (click)="clicked()" (pointerenter)="setTooltipUpgrade($event, upgradeContainer)" (pointerleave)="clearTooltipUpgrade()">
 		<div *ngIf="upgradeContainer?.hasCustomUpgrades">
 			<span *ngFor="let custom of upgradeContainer.customUpgrades; let i = index">
 				<span [ngClass]="'hex-' + getCustomColor(custom)" style="font-size: 15px;">&#9672;</span>
 			</span>
 		</div>
 	</div>
+
+	<button type="button" class="info-button" (click)="showOnClickTooltipItem()" aria-label="info">
+		<i class="fas fa-info-circle icon-xs" style="display:none;"></i>
+	</button>
 
 	<button type="button" class="clear-button" (click)="clearClicked($event)">
 		<i class="fas fa-times"></i>
