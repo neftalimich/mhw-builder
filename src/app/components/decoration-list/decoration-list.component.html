@@ -8,18 +8,23 @@
 
 	<virtual-scroller id="decorations-list" #decorationList class="scroll-container" *ngIf="decorations" [items]="filteredDecorations" (vsUpdate)="onDecorationListUpdate($event)">
 		<div *ngFor="let decoration of virtualDecorations" class="scroll-item-container" (click)="selectDecoration(decoration)">
-			<div class="decoration-name">
-				{{decoration.name}}
-			</div>
-			<div class="rarity" *ngIf="decoration.rarity">
-				<span class="r1">Rarity </span><span class="r2">R</span>{{decoration.rarity}}
-			</div>
-			<div class="skill-container" *ngFor="let skill of dataService.getSkills(decoration.skills)">
-				<div class="skill-count">
-					{{getSkillCount(decoration, skill)}}
+			<div class="name-container">
+				<div class="name">
+					{{decoration.name}}
 				</div>
-				<div class="skill-name">
-					{{skill.name}}
+				<div class="rarity" *ngIf="decoration.rarity">
+					<span class="r1">Rarity </span><span class="r2">R</span>{{decoration.rarity}}
+				</div>
+			</div>
+
+			<div class="skills-container">
+				<div class="skill-container" *ngFor="let skill of dataService.getSkills(decoration.skills)">
+					<div class="count">
+						{{getSkillCount(decoration, skill)}}
+					</div>
+					<div class="name">
+						{{skill.name}}
+					</div>
 				</div>
 			</div>
 		</div>

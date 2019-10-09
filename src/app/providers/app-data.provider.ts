@@ -46,22 +46,22 @@ export class AppDataProvider {
 	load(): Observable<boolean> {
 		return new Observable((observer: Observer<boolean>) => {
 			forkJoin<any>(
-				this.weaponLoader.load('weapons.tsv'),
-				this.armorLoader.load('armor.tsv'),
-				this.charmsLoader.load('charms.tsv'),
-				this.decorationsLoader.load('decorations.tsv'),
-				this.augmentationsLoader.load('augmentations.json'),
-				this.modificationsLoader.load('modifications.json'),
-				this.kinsectsLoader.load('kinsects.tsv'),
-				this.skillsLoader.load('skills.json'),
-				this.setBonusesLoader.load('set-bonuses.json'),
+				this.weaponLoader.load('weapons.tsv', false),
+				this.armorLoader.load('armor.tsv', false),
+				this.charmsLoader.load('charms.tsv', false),
+				this.decorationsLoader.load('decorations.tsv', false),
+				this.augmentationsLoader.load('augmentations.json', false),
+				this.modificationsLoader.load('modifications.json', false),
+				this.kinsectsLoader.load('kinsects.tsv', false),
+				this.skillsLoader.load('skills.json', false),
+				this.setBonusesLoader.load('set-bonuses.json', false),
 				this.sharpnessModifiersLoader.load('sharpness-modifiers.json', false),
 				this.weaponModifiersLoader.load('weapon-modifiers.json', false),
 				this.ammoCapacitiesLoader.load('ammo-capacities.json', false),
 				this.melodiesLoader.load('melodies.tsv', false),
 				this.melodyEffectLoader.load('melody-effect.tsv', false),
 				this.toolsLoader.load('tools.tsv', false),
-				this.upgradesLoader.load('upgrades.json'),
+				this.upgradesLoader.load('upgrades.json', false),
 			).subscribe(results => {
 				this.appData.weapons = results[0];
 				this.appData.armor = results[1];

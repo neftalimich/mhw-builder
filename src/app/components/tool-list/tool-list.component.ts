@@ -1,4 +1,5 @@
 import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import * as _ from 'lodash';
 import { VirtualScrollerComponent } from 'ngx-virtual-scroller';
 import { ItemModel } from '../../models/item.model';
 import { DataService } from '../../services/data.service';
@@ -65,6 +66,29 @@ export class ToolListComponent implements OnInit {
 
 	search(query: string) {
 		this.filteredItems = this.items;
+
+		if (query) {
+			query = query.toLowerCase().trim();
+			const queryParts = query.split(' ');
+
+			if (this.items) {
+				for (const item of this.items) {
+					const itemName = item.name.toLowerCase();
+
+					const nameMatch = itemName.includes(query);
+
+					const tagMatch = _.some(queryParts, queryPart => {
+						return _.some(item.tags, tag => tag.toLowerCase().includes(queryPart));
+					});
+
+					if (!nameMatch && !tagMatch) {
+						this.filteredItems = _.reject(this.filteredItems, i => i.name === item.name);
+					}
+				}
+			}
+		} else {
+			this.resetSearchResults();
+		}
 	}
 
 	resetSearchResults() {
