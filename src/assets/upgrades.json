@@ -6,19 +6,19 @@
 		"description": "Increases attack power. Stacks with other upgrades.",
 		"levels": [
 			{
-				"description": "Attack +5",
+				"description": "+5",
 				"passiveAttack": 5,
 				"requiredSlots": 3,
 				"totalSlots": 3
 			},
 			{
-				"description": "Attack +10",
+				"description": "+10",
 				"passiveAttack": 10,
 				"requiredSlots": 2,
 				"totalSlots": 5
 			},
 			{
-				"description": "Attack +15",
+				"description": "+15",
 				"passiveAttack": 15,
 				"requiredSlots": 2,
 				"totalSlots": 7
@@ -32,19 +32,19 @@
 		"description": "Increases affinity. Stacks with other upgrades.",
 		"levels": [
 			{
-				"description": "Affinity +10%",
+				"description": "+10%",
 				"passiveAffinity": 10,
 				"requiredSlots": 2,
 				"totalSlots": 2
 			},
 			{
-				"description": "Affinity +15%",
+				"description": "+15%",
 				"passiveAffinity": 15,
 				"requiredSlots": 2,
 				"totalSlots": 4
 			},
 			{
-				"description": "Affinity +20%",
+				"description": "+20%",
 				"passiveAffinity": 20,
 				"requiredSlots": 2,
 				"totalSlots": 6
@@ -58,25 +58,25 @@
 		"description": "Increases defense and adds a chance to reduce damage taken each time you receive damage. Defense stacks with other upgrades, Divine Blessing does not.",
 		"levels": [
 			{
-				"description": "Defense +15.",
+				"description": "+15.",
 				"passiveDefense": 15,
 				"requiredSlots": 1,
 				"totalSlots": 1
 			},
 			{
-				"description": "Defense +25.",
+				"description": "+25.",
 				"passiveDefense": 25,
 				"requiredSlots": 1,
 				"totalSlots": 2
 			},
 			{
-				"description": "Defense +35.",
+				"description": "+35.",
 				"passiveDefense": 35,
 				"requiredSlots": 1,
 				"totalSlots": 3
 			},
 			{
-				"description": "Defense +50.",
+				"description": "+50.",
 				"passiveDefense": 50,
 				"requiredSlots": 2,
 				"totalSlots": 5
@@ -90,19 +90,19 @@
 		"description": "Adds an extra slot. Stack with other upgrades to increase the slot's level.",
 		"levels": [
 			{
-				"description": "Adds a Lv 1 slot",
+				"description": "Lv 1 slot",
 				"slotLevel": 1,
 				"requiredSlots": 3,
 				"totalSlots": 3
 			},
 			{
-				"description": "Adds a Lv 2 slot",
+				"description": "Lv 2 slot",
 				"slotLevel": 2,
 				"requiredSlots": 3,
 				"totalSlots": 6
 			},
 			{
-				"description": "Adds a Lv 3 slot",
+				"description": "Lv 3 slot",
 				"slotLevel": 3,
 				"requiredSlots": 1,
 				"totalSlots": 7
@@ -138,32 +138,32 @@
 	{
 		"id": 6,
 		"type": "Element",
-		"name": "Element Icrease",
+		"name": "Element/Ailment Icrease",
 		"description": "",
 		"levels": [
 			{
-				"description": "Element/Ailment +30",
+				"description": "+30",
 				"passiveElement": 30,
 				"passiveAilment": 30,
 				"requiredSlots": 1,
 				"totalSlots": 1
 			},
 			{
-				"description": "Element/Ailment +60",
+				"description": "+60",
 				"passiveElement": 60,
 				"passiveAilment": 60,
 				"requiredSlots": 2,
 				"totalSlots": 3
 			},
 			{
-				"description": "Element/Ailment +90",
+				"description": "+90",
 				"passiveElement": 90,
 				"passiveAilment": 90,
 				"requiredSlots": 2,
 				"totalSlots": 5
 			},
 			{
-				"description": "Element/Ailment +120",
+				"description": "+120",
 				"passiveElement": 120,
 				"passiveAilment": 120,
 				"requiredSlots": 2,

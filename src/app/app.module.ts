@@ -32,6 +32,7 @@ import { SkillDetailsComponent } from './components/skill-details/skill-details.
 import { ToolListComponent } from './components/tool-list/tool-list.component';
 import { TooltipComponent } from './components/tooltip/tooltip.component';
 import { UpgradeSlotComponent } from './components/upagrade-slot/upgrade-slot.component';
+import { UpgradeDetailsComponent } from './components/upgrade-details/upgrade-details.component';
 import { UpgradesListComponent } from './components/upgrades-list/upgrades-list.component';
 import { WeaponListComponent } from './components/weapon-list/weapon-list.component';
 import { DataModule } from './data/data.module';
@@ -64,6 +65,7 @@ import { TooltipService } from './services/tooltip.service';
 		ToolListComponent,
 		ItemDetailsComponent,
 		CommonDetailsComponent,
+		UpgradeDetailsComponent,
 		DecorationDetailsComponent,
 		KinsectDetailsComponent,
 		ItemSlotComponent,

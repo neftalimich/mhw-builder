@@ -9,6 +9,7 @@ import { SkillModel } from '../../models/skill.model';
 import { StatDetailModel } from '../../models/stat-detail.model';
 import { TooltipService } from '../../services/tooltip.service';
 import { WeaponType } from '../../types/weapon.type';
+import { UpgradeContainerModel } from '../../models/upgrade-container.model';
 
 @Component({
 	selector: 'mhw-builder-tooltip',
@@ -19,6 +20,7 @@ export class TooltipComponent implements OnInit {
 	@ViewChild('container', { static: true }) container: ElementRef;
 
 	item: ItemModel;
+	upgradeContainer: UpgradeContainerModel;
 	decoration: DecorationModel;
 	common: CommonModel;
 	kinsect: KinsectModel;
@@ -79,6 +81,16 @@ export class TooltipComponent implements OnInit {
 					description: augmentation.description,
 					levels: levels
 				};
+				this.show();
+			}
+		});
+
+		this.tooltipService.upgradeContainerChanged$.subscribe(upgradeContainer => {
+			if (!upgradeContainer) {
+				this.hide();
+			} else {
+				this.reset();
+				this.upgradeContainer = upgradeContainer;
 				this.show();
 			}
 		});
@@ -162,6 +174,7 @@ export class TooltipComponent implements OnInit {
 
 	reset() {
 		this.item = null;
+		this.upgradeContainer = null;
 		this.decoration = null;
 		this.common = null;
 		this.kinsect = null;

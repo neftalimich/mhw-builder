@@ -3,6 +3,7 @@ import { UpgradeContainerModel } from '../../models/upgrade-container.model';
 import { SlotService } from '../../services/slot.service';
 import { TooltipService } from '../../services/tooltip.service';
 import { ItemType } from '../../types/item.type';
+import { PointerType } from '../../types/pointer.type';
 
 @Component({
 	selector: 'mhw-builder-upgrade-slot',
@@ -48,5 +49,15 @@ export class UpgradeSlotComponent implements OnInit {
 		} else {
 			return 'gray';
 		}
+	}
+
+	setTooltipUpgrade(event: PointerEvent, upgradeContainer: UpgradeContainerModel) {
+		if (event.pointerType == PointerType.Mouse) {
+			this.tooltipService.setUpgradeContainer(upgradeContainer);
+		}
+	}
+
+	clearTooltipUpgrade() {
+		this.tooltipService.setUpgradeContainer(null);
 	}
 }

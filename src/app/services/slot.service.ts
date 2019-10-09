@@ -198,6 +198,7 @@ export class SlotService {
 			detail.passiveElement = 0;
 			detail.passiveAilment = 0;
 		}
+		upgradeContainer.customUpgrades = ['', '', '', '', ''];
 	}
 
 	clearModificationSlot(slot: ModificationSlotComponent) {

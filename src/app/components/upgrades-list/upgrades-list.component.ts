@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { UpgradeContainerModel, UpgradeDetailModel } from '../../models/upgrade-container.model';
+import { UpgradeContainerModel } from '../../models/upgrade-container.model';
 import { UpgradeLevelModel, UpgradeModel } from '../../models/upgrade.model';
 import { DataService } from '../../services/data.service';
 import { SlotService } from '../../services/slot.service';
@@ -23,7 +23,7 @@ export class UpgradesListComponent implements OnInit {
 			this.loadUpgrades();
 			if (this.upgradeContainer.upgradeDetails && this.upgradeContainer.upgradeDetails.length == 0) {
 				for (const cUpg of this.upgrades) {
-					const newDetail = new UpgradeDetailModel();
+					const newDetail = new UpgradeLevelModel();
 					newDetail.type = cUpg.type;
 					newDetail.level = 0;
 					newDetail.requiredSlots = 0;
@@ -85,7 +85,7 @@ export class UpgradesListComponent implements OnInit {
 			} else {
 				this.upgradeContainer.used -= auxUpg.totalSlots;
 
-				this.clearPassiveStats(auxUpg, auxLevel);
+				this.clearPassiveStats(auxUpg);
 			}
 		} else {
 			if (this.upgradeContainer.used - auxUpg.totalSlots + auxLevel.totalSlots <= this.upgradeContainer.slots) {
@@ -98,7 +98,7 @@ export class UpgradesListComponent implements OnInit {
 		}
 	}
 
-	updatePassiveStats(aug: UpgradeDetailModel, level: UpgradeLevelModel) {
+	updatePassiveStats(aug: UpgradeLevelModel, level: UpgradeLevelModel) {
 		aug.requiredSlots = level.requiredSlots;
 		aug.totalSlots = level.totalSlots;
 
@@ -108,9 +108,13 @@ export class UpgradesListComponent implements OnInit {
 		aug.healOnHitPercent = level.healOnHitPercent;
 		aug.passiveElement = level.passiveElement;
 		aug.passiveAilment = level.passiveAilment;
+
+		aug.description = level.description;
+
+		console.log(aug, level);
 	}
 
-	clearPassiveStats(aug: UpgradeDetailModel, level: UpgradeLevelModel) {
+	clearPassiveStats(aug: UpgradeLevelModel) {
 		aug.requiredSlots = 0;
 		aug.totalSlots = 0;
 

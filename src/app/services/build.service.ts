@@ -4,7 +4,8 @@ import { Subject } from 'rxjs';
 import { ItemSlotComponent } from '../components/item-slot/item-slot.component';
 import { BuildItemModel, BuildModel } from '../models/build.model';
 import { ItemModel } from '../models/item.model';
-import { UpgradeContainerModel, UpgradeDetailModel } from '../models/upgrade-container.model';
+import { UpgradeContainerModel } from '../models/upgrade-container.model';
+import { UpgradeLevelModel } from '../models/upgrade.model';
 import { ElementType } from '../types/element.type';
 import { EquipmentCategoryType } from '../types/equipment-category.type';
 import { ItemType } from '../types/item.type';
@@ -258,7 +259,7 @@ export class BuildService {
 						}
 
 						for (let i = 0; i < buildItem.upgradeLevels.length; i++) {
-							const detail = new UpgradeDetailModel;
+							const detail = new UpgradeLevelModel;
 							detail.type = upgrades[i].type;
 							detail.level = buildItem.upgradeLevels[i];
 							if (detail.level > 0) {
@@ -272,6 +273,8 @@ export class BuildService {
 								detail.healOnHitPercent = upgrades[i].levels[buildItem.upgradeLevels[i] - 1].healOnHitPercent;
 								detail.passiveElement = upgrades[i].levels[buildItem.upgradeLevels[i] - 1].passiveElement;
 								detail.passiveAilment = upgrades[i].levels[buildItem.upgradeLevels[i] - 1].passiveAilment;
+
+								detail.description = upgrades[i].levels[buildItem.upgradeLevels[i] - 1].description;
 
 								upgradeContainer.used += detail.totalSlots;
 							} else {

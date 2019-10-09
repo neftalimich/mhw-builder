@@ -9,12 +9,14 @@ import { KinsectModel } from '../models/kinsect.model';
 import { ModificationModel } from '../models/modification.model';
 import { SkillModel } from '../models/skill.model';
 import { StatDetailModel } from '../models/stat-detail.model';
+import { UpgradeContainerModel } from '../models/upgrade-container.model';
 
 @Injectable()
 export class TooltipService {
 	public itemChanged$ = new Subject<ItemModel>();
 	public decorationChanged$ = new Subject<DecorationModel>();
 	public augmentationChanged$ = new Subject<AugmentationModel>();
+	public upgradeContainerChanged$ = new Subject<UpgradeContainerModel>();
 	public modificationChanged$ = new Subject<ModificationModel>();
 	public kinsectChanged$ = new Subject<KinsectModel>();
 	public equippedSkillChanged$ = new Subject<EquippedSkillModel>();
@@ -25,6 +27,7 @@ export class TooltipService {
 	public item: ItemModel;
 	public decoration: DecorationModel;
 	public augmentation: AugmentationModel;
+	public upgradeContainer: UpgradeContainerModel;
 	public modification: ModificationModel;
 	public kinsect: KinsectModel;
 	public equippedSkill: EquippedSkillModel;
@@ -53,6 +56,14 @@ export class TooltipService {
 			this.reset();
 			this.augmentation = augmentation;
 			this.augmentationChanged$.next(augmentation);
+		}
+	}
+
+	setUpgradeContainer(upgradeContainer: UpgradeContainerModel) {
+		if (upgradeContainer != this.upgradeContainer) {
+			this.reset();
+			this.upgradeContainer = upgradeContainer;
+			this.upgradeContainerChanged$.next(upgradeContainer);
 		}
 	}
 
@@ -108,6 +119,7 @@ export class TooltipService {
 		this.item = null;
 		this.decoration = null;
 		this.augmentation = null;
+		this.upgradeContainer = null;
 		this.modification = null;
 		this.kinsect = null;
 		this.equippedSkill = null;

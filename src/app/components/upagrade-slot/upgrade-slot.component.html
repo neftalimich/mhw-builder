@@ -1,4 +1,4 @@
-<div class="container" (click)="clicked()" [class.selected]="selected">
+<div class="container" (click)="clicked()" [class.selected]="selected" (pointerenter)="setTooltipUpgrade($event, upgradeContainer)" (pointerleave)="clearTooltipUpgrade()">
 	<div class="slot-icon"><img [src]="'assets/images/augment-icon.png'" alt="augment"></div>
 	<div class="selected-upgrade">
 		<span *ngIf="upgradeContainer?.upgradeDetails">

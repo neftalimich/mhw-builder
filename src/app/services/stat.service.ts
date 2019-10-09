@@ -8,7 +8,7 @@ import { KinsectModel } from '../models/kinsect.model';
 import { ModificationModel } from '../models/modification.model';
 import { SkillLevelModel } from '../models/skill-level.model';
 import { StatsModel } from '../models/stats.model';
-import { UpgradeContainerModel, UpgradeDetailModel } from '../models/upgrade-container.model';
+import { UpgradeContainerModel } from '../models/upgrade-container.model';
 import { AilmentType } from '../types/ailment.type';
 import { DamageType } from '../types/damage.type';
 import { EldersealType } from '../types/elderseal.type';
