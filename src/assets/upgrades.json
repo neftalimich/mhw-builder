@@ -32,19 +32,19 @@
 		"description": "Increases affinity. Stacks with other upgrades.",
 		"levels": [
 			{
-				"description": "+10%",
+				"description": "+10",
 				"passiveAffinity": 10,
 				"requiredSlots": 2,
 				"totalSlots": 2
 			},
 			{
-				"description": "+15%",
+				"description": "+15",
 				"passiveAffinity": 15,
 				"requiredSlots": 2,
 				"totalSlots": 4
 			},
 			{
-				"description": "+20%",
+				"description": "+20",
 				"passiveAffinity": 20,
 				"requiredSlots": 2,
 				"totalSlots": 6
@@ -58,25 +58,25 @@
 		"description": "Increases defense and adds a chance to reduce damage taken each time you receive damage. Defense stacks with other upgrades, Divine Blessing does not.",
 		"levels": [
 			{
-				"description": "+15.",
+				"description": "+15",
 				"passiveDefense": 15,
 				"requiredSlots": 1,
 				"totalSlots": 1
 			},
 			{
-				"description": "+25.",
+				"description": "+25",
 				"passiveDefense": 25,
 				"requiredSlots": 1,
 				"totalSlots": 2
 			},
 			{
-				"description": "+35.",
+				"description": "+35",
 				"passiveDefense": 35,
 				"requiredSlots": 1,
 				"totalSlots": 3
 			},
 			{
-				"description": "+50.",
+				"description": "+50",
 				"passiveDefense": 50,
 				"requiredSlots": 2,
 				"totalSlots": 5

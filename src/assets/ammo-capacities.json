@@ -8931,7 +8931,7 @@
 				]
 			}
 		],
-		"deviation": [ "High", "Average", "Slow", "None" ],
+		"deviation": [ "High", "Average", "Low", "None" ],
 		"specialAmmo": "Wyvernheart",
 		"missingData": false,
 		"missingMods": false
@@ -32667,7 +32667,7 @@
 				]
 			}
 		],
-		"deviation": [ "Slow", "Slow", "Slow", "Slow" ],
+		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernblast",
 		"missingData": false,
 		"missingMods": true,
@@ -34435,7 +34435,7 @@
 				]
 			}
 		],
-		"deviation": [ "Slow", "Slow", "Slow", "Slow" ],
+		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernblast",
 		"missingData": false,
 		"missingMods": true,
@@ -36730,7 +36730,7 @@
 				]
 			}
 		],
-		"deviation": [ "Slow", "Slow", "Slow", "Slow" ],
+		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernheart",
 		"missingData": false,
 		"missingMods": true,
@@ -36961,7 +36961,7 @@
 				]
 			}
 		],
-		"deviation": [ "Slow", "Slow", "Slow", "Slow" ],
+		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernheart",
 		"missingData": false,
 		"missingMods": true,
@@ -37411,7 +37411,7 @@
 				]
 			}
 		],
-		"deviation": [ "Slow", "Slow", "Slow", "Slow" ],
+		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernheart",
 		"missingData": false,
 		"missingMods": true,
@@ -37818,7 +37818,7 @@
 				]
 			}
 		],
-		"deviation": [ "Slow", "Slow", "Slow", "Slow" ],
+		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernheart",
 		"missingData": false,
 		"missingMods": true,
@@ -39835,7 +39835,7 @@
 				]
 			}
 		],
-		"deviation": [ "Slow", "Slow", "Slow", "Slow" ],
+		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernsnipe",
 		"missingData": false,
 		"missingMods": true,
@@ -40697,7 +40697,7 @@
 				]
 			}
 		],
-		"deviation": [ "Slow", "Slow", "Slow", "Slow" ],
+		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernsnipe",
 		"missingData": false,
 		"missingMods": true,
@@ -41158,7 +41158,7 @@
 				]
 			}
 		],
-		"deviation": [ "Slow", "Slow", "Slow", "Slow" ],
+		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernsnipe",
 		"missingData": false,
 		"missingMods": true,
@@ -41591,7 +41591,7 @@
 				]
 			}
 		],
-		"deviation": [ "Slow", "Slow", "Slow", "Slow" ],
+		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernsnipe",
 		"missingData": false,
 		"missingMods": true,
@@ -42290,7 +42290,7 @@
 				]
 			}
 		],
-		"deviation": [ "Slow", "Slow", "Slow", "Slow" ],
+		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernheart",
 		"missingData": false,
 		"missingMods": true,
@@ -43232,6 +43232,354 @@
 		],
 		"deviation": [ "Low", "Low", "Low", "Low" ],
 		"specialAmmo": "Wyvernsnipe",
+		"missingData": false,
+		"missingMods": true,
+		"bloqued": false
+	},
+	{
+		"id": 3012,
+		"ammo": [
+			{
+				"name": "normal",
+				"levels": [
+					{
+						"capacity": 6,
+						"type": 0,
+						"recoil": [ 3, 3, 3, 3 ],
+						"reload": [ 3, 3, 3, 3 ]
+					},
+					{
+						"capacity": 0,
+						"type": 0,
+						"recoil": [ 3, 3, 3, 3 ],
+						"reload": [ 3, 3, 3, 3 ]
+					},
+					{
+						"capacity": 3,
+						"type": 0,
+						"recoil": [ 5, 3, 3, 3 ],
+						"reload": [ 2, 3, 3, 3 ]
+					}
+				]
+			},
+			{
+				"name": "spread",
+				"levels": [
+					{
+						"capacity": 4,
+						"type": 0,
+						"recoil": [ 3, 3, 3, 3 ],
+						"reload": [ 3, 3, 3, 3 ]
+					},
+					{
+						"capacity": 1,
+						"type": 1,
+						"recoil": [ 3, 3, 3, 3 ],
+						"reload": [ 2, 3, 3, 3 ]
+					},
+					{
+						"capacity": 2,
+						"type": 0,
+						"recoil": [ 5, 3, 3, 3 ],
+						"reload": [ 2, 3, 3, 3 ]
+					}
+				]
+			},
+			{
+				"name": "sticky",
+				"levels": [
+					{
+						"capacity": 0,
+						"type": 0,
+						"recoil": [ 3, 3, 3, 3 ],
+						"reload": [ 3, 3, 3, 3 ]
+					},
+					{
+						"capacity": 1,
+						"type": 1,
+						"recoil": [ 3, 3, 3, 3 ],
+						"reload": [ 1, 3, 3, 3 ]
+					},
+					{
+						"capacity": 2,
+						"type": 0,
+						"recoil": [ 5, 3, 3, 3 ],
+						"reload": [ 1, 3, 3, 3 ]
+					}
+				]
+			},
+			{
+				"name": "paralysis",
+				"levels": [
+					{
+						"capacity": 0,
+						"type": 0,
+						"recoil": [ 3, 3, 3, 3 ],
+						"reload": [ 3, 3, 3, 3 ]
+					},
+					{
+						"capacity": 1,
+						"type": 1,
+						"recoil": [ 3, 3, 3, 3 ],
+						"reload": [ 2, 3, 3, 3 ]
+					}
+				]
+			},
+			{
+				"name": "exhaust",
+				"levels": [
+					{
+						"capacity": 5,
+						"type": 0,
+						"recoil": [ 3, 3, 3, 3 ],
+						"reload": [ 3, 3, 3, 3 ]
+					},
+					{
+						"capacity": 1,
+						"type": 1,
+						"recoil": [ 3, 3, 3, 3 ],
+						"reload": [ 2, 3, 3, 3 ]
+					}
+				]
+			},
+			{
+				"name": "thunder",
+				"levels": [
+					{
+						"capacity": 1,
+						"type": 1,
+						"recoil": [ 3, 3, 3, 3 ],
+						"reload": [ 2, 3, 3, 3 ]
+					}
+				]
+			},
+			{
+				"name": "demon",
+				"levels": [
+					{
+						"capacity": 2,
+						"type": 0,
+						"recoil": [ 3, 3, 3, 3 ],
+						"reload": [ 3, 3, 3, 3 ]
+					}
+				]
+			},
+			{
+				"name": "armor",
+				"levels": [
+					{
+						"capacity": 1,
+						"type": 1,
+						"recoil": [ 3, 3, 3, 3 ],
+						"reload": [ 1, 3, 3, 3 ]
+					}
+				]
+			},
+			{
+				"name": "tranq",
+				"levels": [
+					{
+						"capacity": 2,
+						"type": 0,
+						"recoil": [ 4, 3, 3, 3 ],
+						"reload": [ 3, 3, 3, 3 ]
+					}
+				]
+			}
+		],
+		"deviation": [ "VeryHigh", "VeryHigh", "VeryHigh", "VeryHigh" ],
+		"specialAmmo": "Wyvernblast",
+		"missingData": false,
+		"missingMods": true,
+		"bloqued": false
+	},
+	{
+		"id": 3013,
+		"ammo": [
+			{
+				"name": "normal",
+				"levels": [
+					{
+						"capacity": 5,
+						"type": 0,
+						"recoil": [ 2, 2, 2, 2 ],
+						"reload": [ 3, 3, 3, 3 ]
+					},
+					{
+						"capacity": 0,
+						"type": 0,
+						"recoil": [ 3, 3, 3, 3 ],
+						"reload": [ 3, 3, 3, 3 ]
+					},
+					{
+						"capacity": 1,
+						"type": 1,
+						"recoil": [ 3, 3, 3, 3 ],
+						"reload": [ 1, 3, 3, 3 ]
+					}
+				]
+			},
+			{
+				"name": "spread",
+				"levels": [
+					{
+						"capacity": 5,
+						"type": 0,
+						"recoil": [ 3, 3, 3, 3 ],
+						"reload": [ 3, 3, 3, 3 ]
+					},
+					{
+						"capacity": 0,
+						"type": 0,
+						"recoil": [ 3, 3, 3, 3 ],
+						"reload": [ 3, 3, 3, 3 ]
+					},
+					{
+						"capacity": 1,
+						"type": 1,
+						"recoil": [ 3, 3, 3, 3 ],
+						"reload": [ 1, 3, 3, 3 ]
+					}
+				]
+			},
+			{
+				"name": "sticky",
+				"levels": [
+					{
+						"capacity": 3,
+						"type": 0,
+						"recoil": [ 3, 3, 3, 3 ],
+						"reload": [ 2, 3, 3, 3 ]
+					},
+					{
+						"capacity": 0,
+						"type": 0,
+						"recoil": [ 3, 3, 3, 3 ],
+						"reload": [ 3, 3, 3, 3 ]
+					},
+					{
+						"capacity": 1,
+						"type": 1,
+						"recoil": [ 3, 3, 3, 3 ],
+						"reload": [ 1, 3, 3, 3 ]
+					}
+				]
+			},
+			{
+				"name": "cluster",
+				"levels": [
+					{
+						"capacity": 2,
+						"type": 0,
+						"recoil": [ 3, 3, 3, 3 ],
+						"reload": [ 1, 3, 3, 3 ]
+					},
+					{
+						"capacity": 0,
+						"type": 0,
+						"recoil": [ 3, 3, 3, 3 ],
+						"reload": [ 3, 3, 3, 3 ]
+					},
+					{
+						"capacity": 1,
+						"type": 0,
+						"recoil": [ 4, 3, 3, 3 ],
+						"reload": [ 1, 3, 3, 3 ]
+					}
+				]
+			},
+			{
+				"name": "paralysis",
+				"levels": [
+					{
+						"capacity": 2,
+						"type": 0,
+						"recoil": [ 4, 3, 3, 3 ],
+						"reload": [ 3, 3, 3, 3 ]
+					},
+					{
+						"capacity": 1,
+						"type": 0,
+						"recoil": [ 5, 3, 3, 3 ],
+						"reload": [ 1, 3, 3, 3 ]
+					}
+				]
+			},
+			{
+				"name": "exhaust",
+				"levels": [
+					{
+						"capacity": 0,
+						"type": 0,
+						"recoil": [ 3, 3, 3, 3 ],
+						"reload": [ 3, 3, 3, 3 ]
+					},
+					{
+						"capacity": 1,
+						"type": 1,
+						"recoil": [ 3, 3, 3, 3 ],
+						"reload": [ 1, 3, 3, 3 ]
+					}
+				]
+			},
+			{
+				"name": "thunder",
+				"levels": [
+					{
+						"capacity": 4,
+						"type": 0,
+						"recoil": [ 4, 3, 3, 3 ],
+						"reload": [ 2, 3, 3, 3 ]
+					}
+				]
+			},
+			{
+				"name": "wyvern",
+				"levels": [
+					{
+						"capacity": 1,
+						"type": 0,
+						"recoil": [ 6, 3, 3, 3 ],
+						"reload": [ 1, 3, 3, 3 ]
+					}
+				]
+			},
+			{
+				"name": "demon",
+				"levels": [
+					{
+						"capacity": 2,
+						"type": 0,
+						"recoil": [ 5, 3, 3, 3 ],
+						"reload": [ 1, 3, 3, 3 ]
+					}
+				]
+			},
+			{
+				"name": "armor",
+				"levels": [
+					{
+						"capacity": 2,
+						"type": 0,
+						"recoil": [ 5, 3, 3, 3 ],
+						"reload": [ 1, 3, 3, 3 ]
+					}
+				]
+			},
+			{
+				"name": "tranq",
+				"levels": [
+					{
+						"capacity": 3,
+						"type": 0,
+						"recoil": [ 3, 3, 3, 3 ],
+						"reload": [ 2, 3, 3, 3 ]
+					}
+				]
+			}
+		],
+		"deviation": [ "High", "High", "High", "High" ],
+		"specialAmmo": "Wyvernheart",
 		"missingData": false,
 		"missingMods": true,
 		"bloqued": false

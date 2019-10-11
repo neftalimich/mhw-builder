@@ -534,5 +534,19 @@
 				"pieces": 4
 			}
 		]
+	},
+	{
+		"id": "rajangRage",
+		"name": "Rajang Rage",
+		"setLevels": [
+			{
+				"id": "mindsEyeBallistics",
+				"pieces": 2
+			},
+			{
+				"id": "protectivePolish",
+				"pieces": 4
+			}
+		]
 	}
 ]

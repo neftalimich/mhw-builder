@@ -4,6 +4,7 @@ import { UpgradeLevelModel, UpgradeModel } from '../../models/upgrade.model';
 import { DataService } from '../../services/data.service';
 import { SlotService } from '../../services/slot.service';
 import { TooltipService } from '../../services/tooltip.service';
+import { AugmentationType } from '../../types/augmentation.type';
 
 @Component({
 	selector: 'mhw-builder-upgrades-list',
@@ -11,7 +12,8 @@ import { TooltipService } from '../../services/tooltip.service';
 	styleUrls: ['./upgrades-list.component.scss']
 })
 export class UpgradesListComponent implements OnInit {
-	upgrades: UpgradeModel[];
+    upgrades: UpgradeModel[];
+    customUpgrades: any[];
 
 	private _upgradeContainer: UpgradeContainerModel;
 
@@ -43,7 +45,13 @@ export class UpgradesListComponent implements OnInit {
 		private dataService: DataService,
 		private slotService: SlotService,
 		private tooltipService: TooltipService
-	) {
+    ) {
+        this.customUpgrades = [
+            { type: AugmentationType.Attack, multiplier: 1, maximun: 5 },
+            { type: AugmentationType.Affinity, multiplier: 1, maximun: 5 },
+            { type: AugmentationType.Element, multiplier: 10, maximun: 5 },
+            { type: AugmentationType.Defense, multiplier: 15, maximun: 5 }
+        ];
 	}
 
 	ngOnInit(): void {
@@ -110,8 +118,6 @@ export class UpgradesListComponent implements OnInit {
 		aug.passiveAilment = level.passiveAilment;
 
 		aug.description = level.description;
-
-		console.log(aug, level);
 	}
 
 	clearPassiveStats(aug: UpgradeLevelModel) {
@@ -169,14 +175,16 @@ export class UpgradesListComponent implements OnInit {
 	}
 
 	getCustomColor(augType: string) {
-		if (augType == 'Attack') {
-			return '0';
-		} else if (augType == 'Affinity') {
-			return '1';
-		} else if (augType == 'Element') {
-			return '5';
-		} else {
-			return 'gray';
-		}
+        if (augType == 'Attack') {
+            return '0';
+        } else if (augType == 'Affinity') {
+            return '1';
+        } else if (augType == 'Defense') {
+            return '2';
+        } else if (augType == 'Element') {
+            return '5';
+        } else {
+            return 'gray';
+        }
 	}
 }

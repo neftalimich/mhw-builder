@@ -1089,3 +1089,13 @@ id	itemType	rarity	name	defense	fireResist	waterResist	thunderResist	iceResist	d
 1658	Hands	12	Guildwork Braces Beta +	162;168;180	2	1	1	2	2	geologist-1;botanist-1;guildPride	4;3	guildwork	0
 1659	Legs	12	Guildwork Waist Beta +	162;168;180	2	1	1	2	2	foragersLuck-1;guildPride	4;3	guildwork	0
 1660	Feet	12	Guildwork Feet Beta +	162;168;180	2	1	1	2	2	flinchFree-2;guildPride	4;1	guildwork	0
+1661	Head	11	Rajang Headdress Alpha +	158;166;182	2	0	3	-5	2	weaknessExploit-2;handicraft-2;rajangRage		rajang	0
+1662	Chest	11	Rajang Body Alpha +	158;166;182	2	0	3	-5	2	resentment-2;speedSharpening-2;rajangRage	3;1	rajang	0
+1663	Hands	11	Rajang Braces Alpha +	158;166;182	2	0	3	-5	2	resentment-1;handicraft-2;rajangRage	2	rajang	0
+1664	Legs	11	Rajang Waist Alpha +	158;166;182	2	0	3	-5	2	weaknessExploit-1;handicraft-1;rajangRage	3;1	rajang	0
+1665	Feet	11	Rajang Feet Alpha +	158;166;182	2	0	3	-5	2	resentment-2;attackBoost-2;rajangRage	2;2	rajang	0
+1666	Head	11	Rajang Headdress Beta +	158;166;182	2	0	3	-5	2	weaknessExploit-2;rajangRage	4;1	rajang	0
+1667	Chest	11	Rajang Body Beta +	158;166;182	2	0	3	-5	2	resentment-2;rajangRage	4;1;1	rajang	0
+1668	Hands	11	Rajang Braces Beta +	158;166;182	2	0	3	-5	2	resentment-1;rajangRage	4;3	rajang	0
+1669	Legs	11	Rajang Waist Beta +	158;166;182	2	0	3	-5	2	weaknessExploit-1;rajangRage	4;3	rajang	0
+1670	Feet	11	Rajang Feet Beta +	158;166;182	2	0	3	-5	2	resentment-2;attackBoost-1;rajangRage	4;2	rajang	0

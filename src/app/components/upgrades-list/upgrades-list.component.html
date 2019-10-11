@@ -50,32 +50,16 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td class="border-left-blue">Attack</td>
-				<td class="text-center" (click)="selectCustomUpg('Attack',0)" [class.selected]="upgradeContainer.customUpgrades[0]=='Attack'" style="cursor:pointer;">+1</td>
-				<td class="text-center" (click)="selectCustomUpg('Attack',1)" [class.selected]="upgradeContainer.customUpgrades[1]=='Attack'" style="cursor:pointer;">+1</td>
-				<td class="text-center" (click)="selectCustomUpg('Attack',2)" [class.selected]="upgradeContainer.customUpgrades[2]=='Attack'" style="cursor:pointer;">+1</td>
-				<td class="text-center" (click)="selectCustomUpg('Attack',3)" [class.selected]="upgradeContainer.customUpgrades[3]=='Attack'" style="cursor:pointer;">+1</td>
-				<td class="text-center" (click)="selectCustomUpg('Attack',4)" [class.selected]="upgradeContainer.customUpgrades[4]=='Attack'" style="cursor:pointer;">+1</td>
-				<td class="text-center bg-52">+{{countCustomUpg('Attack')}}</td>
-			</tr>
-			<tr>
-				<td class="border-left-blue">Affinity</td>
-				<td class="text-center" (click)="selectCustomUpg('Affinity',0)" [class.selected]="upgradeContainer.customUpgrades[0]=='Affinity'" style="cursor:pointer;">+1</td>
-				<td class="text-center" (click)="selectCustomUpg('Affinity',1)" [class.selected]="upgradeContainer.customUpgrades[1]=='Affinity'" style="cursor:pointer;">+1</td>
-				<td class="text-center" (click)="selectCustomUpg('Affinity',2)" [class.selected]="upgradeContainer.customUpgrades[2]=='Affinity'" style="cursor:pointer;">+1</td>
-				<td class="text-center" (click)="selectCustomUpg('Affinity',3)" [class.selected]="upgradeContainer.customUpgrades[3]=='Affinity'" style="cursor:pointer;">+1</td>
-				<td class="text-center" (click)="selectCustomUpg('Affinity',4)" [class.selected]="upgradeContainer.customUpgrades[4]=='Affinity'" style="cursor:pointer;">+1</td>
-				<td class="text-center bg-52">+{{countCustomUpg('Affinity')}}</td>
-			</tr>
-			<tr>
-				<td class="border-left-blue">Element</td>
-				<td class="text-center" (click)="selectCustomUpg('Element',0)" [class.selected]="upgradeContainer.customUpgrades[0]=='Element'" style="cursor:pointer;">+10</td>
-				<td class="text-center" (click)="selectCustomUpg('Element',1)" [class.selected]="upgradeContainer.customUpgrades[1]=='Element'" style="cursor:pointer;">+10</td>
-				<td class="text-center" (click)="selectCustomUpg('Element',2)" [class.selected]="upgradeContainer.customUpgrades[2]=='Element'" style="cursor:pointer;">+10</td>
-				<td class="text-center" (click)="selectCustomUpg('Element',3)" [class.selected]="upgradeContainer.customUpgrades[3]=='Element'" style="cursor:pointer;">+10</td>
-				<td class="text-center" (click)="selectCustomUpg('Element',4)" [class.selected]="upgradeContainer.customUpgrades[4]=='Element'" style="cursor:pointer;">+10</td>
-				<td class="text-center bg-52">+{{countCustomUpg('Element')*10}}</td>
+			<tr *ngFor="let customUpg of customUpgrades">
+				<td class="border-left-blue">{{customUpg.type}}</td>
+				<td class="text-center" (click)="selectCustomUpg(customUpg.type,0)" [class.selected]="upgradeContainer.customUpgrades[0]==customUpg.type" style="cursor:pointer;">+{{customUpg.multiplier}}</td>
+				<td class="text-center" (click)="selectCustomUpg(customUpg.type,1)" [class.selected]="upgradeContainer.customUpgrades[1]==customUpg.type" style="cursor:pointer;">+{{customUpg.multiplier}}</td>
+				<td class="text-center" (click)="selectCustomUpg(customUpg.type,2)" [class.selected]="upgradeContainer.customUpgrades[2]==customUpg.type" style="cursor:pointer;">+{{customUpg.multiplier}}</td>
+				<td class="text-center" (click)="selectCustomUpg(customUpg.type,3)" [class.selected]="upgradeContainer.customUpgrades[3]==customUpg.type" style="cursor:pointer;">+{{customUpg.multiplier}}</td>
+				<td class="text-center" (click)="selectCustomUpg(customUpg.type,4)" [class.selected]="upgradeContainer.customUpgrades[4]==customUpg.type" style="cursor:pointer;">+{{customUpg.multiplier}}</td>
+				<td class="text-center bg-52">
+					+{{countCustomUpg(customUpg.type)*customUpg.multiplier}}
+				</td>
 			</tr>
 		</tbody>
 		<tfoot>

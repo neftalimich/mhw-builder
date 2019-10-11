@@ -257,11 +257,11 @@ export class SlotService {
 						new AugmentationModel()
 					];
 				} else if (item.rarity == 10) {
-					this.selectedItemSlot.upgradeContainer.slots = 7;
+					this.selectedItemSlot.upgradeContainer.slots = 9;
 				} else if (item.rarity == 11) {
-					this.selectedItemSlot.upgradeContainer.slots = 5;
+					this.selectedItemSlot.upgradeContainer.slots = 6;
 				} else if (item.rarity == 12) {
-					this.selectedItemSlot.upgradeContainer.slots = 4;
+					this.selectedItemSlot.upgradeContainer.slots = 5;
 				}
 
 				this.selectedItemSlot.kinsect = null;

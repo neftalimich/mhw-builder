@@ -211,10 +211,12 @@ export class StatService {
 
 		const upgradePassiveAttack = upgradeContainer.customUpgrades.filter(custom => custom == 'Attack').length;
 		const upgradePassiveAffinity = upgradeContainer.customUpgrades.filter(custom => custom == 'Affinity').length;
-		const upgradePassiveAilmentElement = upgradeContainer.customUpgrades.filter(custom => custom == 'Element').length * 10;
+        const upgradePassiveAilmentElement = upgradeContainer.customUpgrades.filter(custom => custom == 'Element').length * 10;
+        const upgradePassiveDefense = upgradeContainer.customUpgrades.filter(custom => custom == 'Defense').length * 15;
 
 		this.stats.passiveAttack += upgradePassiveAttack;
-		this.stats.passiveAffinity += upgradePassiveAffinity;
+        this.stats.passiveAffinity += upgradePassiveAffinity;
+        this.stats.passiveDefense += upgradePassiveDefense;
 
 		this.stats.passiveFireAttack += upgradePassiveAilmentElement;
 		this.stats.passiveWaterAttack += upgradePassiveAilmentElement;

@@ -43,7 +43,9 @@ export class UpgradeSlotComponent implements OnInit {
 		if (augType == 'Attack') {
 			return '0';
 		} else if (augType == 'Affinity') {
-			return '1';
+            return '1';
+        } else if (augType == 'Defense') {
+            return '2';
 		} else if (augType == 'Element') {
 			return '5';
 		} else {
