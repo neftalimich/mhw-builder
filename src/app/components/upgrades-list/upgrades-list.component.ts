@@ -12,8 +12,8 @@ import { AugmentationType } from '../../types/augmentation.type';
 	styleUrls: ['./upgrades-list.component.scss']
 })
 export class UpgradesListComponent implements OnInit {
-    upgrades: UpgradeModel[];
-    customUpgrades: any[];
+	upgrades: UpgradeModel[];
+	customUpgrades: any[];
 
 	private _upgradeContainer: UpgradeContainerModel;
 
@@ -45,13 +45,13 @@ export class UpgradesListComponent implements OnInit {
 		private dataService: DataService,
 		private slotService: SlotService,
 		private tooltipService: TooltipService
-    ) {
-        this.customUpgrades = [
-            { type: AugmentationType.Attack, multiplier: 1, maximun: 5 },
-            { type: AugmentationType.Affinity, multiplier: 1, maximun: 5 },
-            { type: AugmentationType.Element, multiplier: 10, maximun: 5 },
-            { type: AugmentationType.Defense, multiplier: 15, maximun: 5 }
-        ];
+	) {
+		this.customUpgrades = [
+			{ type: AugmentationType.Attack, multiplier: 1, maximun: 5 },
+			{ type: AugmentationType.Affinity, multiplier: 1, maximun: 5 },
+			{ type: AugmentationType.Element, multiplier: 10, maximun: 5 },
+			{ type: AugmentationType.Defense, multiplier: 15, maximun: 5 }
+		];
 	}
 
 	ngOnInit(): void {
@@ -175,16 +175,16 @@ export class UpgradesListComponent implements OnInit {
 	}
 
 	getCustomColor(augType: string) {
-        if (augType == 'Attack') {
-            return '0';
-        } else if (augType == 'Affinity') {
-            return '1';
-        } else if (augType == 'Defense') {
-            return '2';
-        } else if (augType == 'Element') {
-            return '5';
-        } else {
-            return 'gray';
-        }
+		if (augType == 'Attack') {
+			return '0';
+		} else if (augType == 'Affinity') {
+			return '1';
+		} else if (augType == 'Defense') {
+			return '2';
+		} else if (augType == 'Element') {
+			return '5';
+		} else {
+			return 'gray';
+		}
 	}
 }

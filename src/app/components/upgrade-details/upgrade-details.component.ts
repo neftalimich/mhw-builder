@@ -39,7 +39,7 @@ export class UpgradeDetailsComponent implements OnInit {
 
 		const countAttack = this.upgradeContainer.customUpgrades.filter(custom => custom == 'Attack').length;
 		const countAffinity = this.upgradeContainer.customUpgrades.filter(custom => custom == 'Affinity').length;
-        const countElement = this.upgradeContainer.customUpgrades.filter(custom => custom == 'Element').length;
+		const countElement = this.upgradeContainer.customUpgrades.filter(custom => custom == 'Element').length;
 		const countDefense = this.upgradeContainer.customUpgrades.filter(custom => custom == 'Defense').length;
 
 		if (countAttack > 0) {
@@ -50,10 +50,10 @@ export class UpgradeDetailsComponent implements OnInit {
 		}
 		if (countElement > 0) {
 			this.stats.push({ name: 'Custom Element/Ailment', value: `+${countElement * 10}` });
-        }
-        if (countDefense > 0) {
-            this.stats.push({ name: 'Custom Defense', value: `+${countDefense * 15}` });
-        }
+		}
+		if (countDefense > 0) {
+			this.stats.push({ name: 'Custom Defense', value: `+${countDefense * 15}` });
+		}
 	}
 
 	clearTooltipUpgrade() {
