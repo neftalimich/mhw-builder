@@ -4,6 +4,7 @@ import { SlotService } from '../../services/slot.service';
 import { TooltipService } from '../../services/tooltip.service';
 import { ItemType } from '../../types/item.type';
 import { PointerType } from '../../types/pointer.type';
+import { WeaponType } from '../../types/weapon.type';
 
 @Component({
 	selector: 'mhw-builder-upgrade-slot',
@@ -15,6 +16,8 @@ export class UpgradeSlotComponent implements OnInit {
 
 	@Input()
 	slots: number;
+	@Input()
+	weaponType: WeaponType;
 	@Input()
 	upgradeContainer: UpgradeContainerModel;
 
@@ -31,6 +34,7 @@ export class UpgradeSlotComponent implements OnInit {
 
 	clicked() {
 		this.upgradeContainer.slots = this.slots;
+		this.upgradeContainer.weaponType = this.weaponType;
 		this.slotService.selectUpgradeSlot(this);
 	}
 

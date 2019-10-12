@@ -1,4 +1,4 @@
-import { AugmentationType } from '../types/augmentation.type';
+import { WeaponType } from '../types/weapon.type';
 import { UpgradeLevelModel } from './upgrade.model';
 
 export class UpgradeContainerModel {
@@ -7,12 +7,13 @@ export class UpgradeContainerModel {
 	hasCustomUpgrades: boolean;
 	upgradeDetails: UpgradeLevelModel[];
 	customUpgrades: string[];
+	weaponType: WeaponType;
 
 	constructor() {
 		this.slots = 0;
 		this.used = 0;
 		this.hasCustomUpgrades = false;
 		this.upgradeDetails = new Array<UpgradeLevelModel>();
-		this.customUpgrades = ['', '', '', '', ''];
+		this.customUpgrades = ['', '', '', '', '', ''];
 	}
 }

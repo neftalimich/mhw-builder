@@ -140,8 +140,9 @@ export class BuildService {
 				buildItem.customLevels = [];
 				buildItem.customLevels.push(parseInt(customs.toString().substring(0, 1), 10)); // Attack
 				buildItem.customLevels.push(parseInt(customs.toString().substring(1, 2), 10)); // Affinity
-				buildItem.customLevels.push(parseInt(customs.toString().substring(2, 3), 10)); // Element
-				buildItem.customLevels.push(parseInt(customs.toString().substring(3, 4), 10)); // Defense
+				buildItem.customLevels.push(parseInt(customs.toString().substring(2, 3), 10)); // Defense
+				buildItem.customLevels.push(parseInt(customs.toString().substring(3, 4), 10)); // Element
+
 			}
 
 			const mods = itemGroup.match(modRegex);
@@ -249,6 +250,7 @@ export class BuildService {
 						const upgrades = this.dataService.getUpgrades();
 						const upgradeContainer = new UpgradeContainerModel();
 						upgradeContainer.hasCustomUpgrades = item.hasCustomUpgrades;
+						upgradeContainer.weaponType = item.weaponType;
 						if (item.rarity == 10) {
 							upgradeContainer.slots = 7;
 						} else if (item.rarity == 11) {
@@ -304,11 +306,11 @@ export class BuildService {
 								idx += 1;
 							}
 							for (let i = 0; i < buildItem.customLevels[2]; i++) {
-								upgradeContainer.customUpgrades[idx] = 'Element';
+								upgradeContainer.customUpgrades[idx] = 'Defense';
 								idx += 1;
 							}
 							for (let i = 0; i < buildItem.customLevels[3]; i++) {
-								upgradeContainer.customUpgrades[idx] = 'Defense';
+								upgradeContainer.customUpgrades[idx] = 'Element';
 								idx += 1;
 							}
 						}
@@ -440,9 +442,9 @@ export class BuildService {
 						}
 						const countAttack = this.equipmentService.upgradeContainer.customUpgrades.filter(custom => custom == 'Attack').length;
 						const countAffinity = this.equipmentService.upgradeContainer.customUpgrades.filter(custom => custom == 'Affinity').length;
-						const countElement = this.equipmentService.upgradeContainer.customUpgrades.filter(custom => custom == 'Element').length;
 						const countDefense = this.equipmentService.upgradeContainer.customUpgrades.filter(custom => custom == 'Defense').length;
-						result += 'c' + countAttack + countAffinity + countElement + countDefense;
+						const countElement = this.equipmentService.upgradeContainer.customUpgrades.filter(custom => custom == 'Element').length;
+						result += 'c' + countAttack + countAffinity + countDefense + countElement;
 					} else {
 						result += 'u000000c0000';
 					}

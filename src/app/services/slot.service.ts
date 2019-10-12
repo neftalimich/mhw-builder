@@ -198,7 +198,7 @@ export class SlotService {
 			detail.passiveElement = 0;
 			detail.passiveAilment = 0;
 		}
-		upgradeContainer.customUpgrades = ['', '', '', '', ''];
+		upgradeContainer.customUpgrades = ['', '', '', '', '', ''];
 	}
 
 	clearModificationSlot(slot: ModificationSlotComponent) {
@@ -240,7 +240,9 @@ export class SlotService {
 				}
 				this.selectedItemSlot.upgradeContainer.slots = 0;
 				this.selectedItemSlot.upgradeContainer.hasCustomUpgrades = item.hasCustomUpgrades;
+				this.selectedItemSlot.upgradeContainer.weaponType = item.weaponType;
 				this.selectedItemSlot.augmentations = [];
+
 				if (item.rarity == 6) {
 					this.selectedItemSlot.augmentations = [
 						new AugmentationModel(),

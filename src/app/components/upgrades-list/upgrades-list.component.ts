@@ -3,8 +3,7 @@ import { UpgradeContainerModel } from '../../models/upgrade-container.model';
 import { UpgradeLevelModel, UpgradeModel } from '../../models/upgrade.model';
 import { DataService } from '../../services/data.service';
 import { SlotService } from '../../services/slot.service';
-import { TooltipService } from '../../services/tooltip.service';
-import { AugmentationType } from '../../types/augmentation.type';
+import { WeaponType } from '../../types/weapon.type';
 
 @Component({
 	selector: 'mhw-builder-upgrades-list',
@@ -14,6 +13,7 @@ import { AugmentationType } from '../../types/augmentation.type';
 export class UpgradesListComponent implements OnInit {
 	upgrades: UpgradeModel[];
 	customUpgrades: any[];
+	weaponIndex: number;
 
 	private _upgradeContainer: UpgradeContainerModel;
 
@@ -34,6 +34,28 @@ export class UpgradesListComponent implements OnInit {
 				}
 			}
 
+			this.customUpgrades = [];
+			this.weaponIndex = 0;
+			for (const item in WeaponType) {
+				if (isNaN(Number(item))) {
+					if (item == upgradeContainer.weaponType) {
+						break;
+					} else {
+						this.weaponIndex += 1;
+					}
+				}
+			}
+
+			for (const cUpg of this.upgrades) {
+				if (cUpg.customMaxLevel[this.weaponIndex] > 0) {
+					this.customUpgrades.push({
+						type: cUpg.type,
+						multiplier: cUpg.multiplier,
+						maximum: cUpg.customMaxLevel[this.weaponIndex]
+					});
+				}
+			}
+
 			this.checkUpgrades();
 		}
 	}
@@ -43,15 +65,8 @@ export class UpgradesListComponent implements OnInit {
 
 	constructor(
 		private dataService: DataService,
-		private slotService: SlotService,
-		private tooltipService: TooltipService
+		private slotService: SlotService
 	) {
-		this.customUpgrades = [
-			{ type: AugmentationType.Attack, multiplier: 1, maximun: 5 },
-			{ type: AugmentationType.Affinity, multiplier: 1, maximun: 5 },
-			{ type: AugmentationType.Element, multiplier: 10, maximun: 5 },
-			{ type: AugmentationType.Defense, multiplier: 15, maximun: 5 }
-		];
 	}
 
 	ngOnInit(): void {
@@ -163,10 +178,15 @@ export class UpgradesListComponent implements OnInit {
 	}
 
 	selectCustomUpg(augType: string, levelIndex: number) {
+		const maximum = this.upgrades.filter(x => x.type == augType)[0].customMaxLevel[this.weaponIndex];
+		const levels = this.upgradeContainer.customUpgrades.filter(custom => custom == augType).length;
+
 		if (this.upgradeContainer.customUpgrades[levelIndex] == augType) {
 			this.upgradeContainer.customUpgrades[levelIndex] = '';
 		} else {
-			this.upgradeContainer.customUpgrades[levelIndex] = augType;
+			if (levels < maximum) {
+				this.upgradeContainer.customUpgrades[levelIndex] = augType;
+			}
 		}
 	}
 

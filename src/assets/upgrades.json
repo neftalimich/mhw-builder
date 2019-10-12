@@ -4,6 +4,7 @@
 		"type": "Attack",
 		"name": "Attack Increase",
 		"description": "Increases attack power. Stacks with other upgrades.",
+		"multiplier": 1,
 		"levels": [
 			{
 				"description": "+5",
@@ -31,6 +32,7 @@
 		"type": "Affinity",
 		"name": "Affinity Increase",
 		"description": "Increases affinity. Stacks with other upgrades.",
+		"multiplier": 1,
 		"levels": [
 			{
 				"description": "+10",
@@ -58,6 +60,7 @@
 		"type": "Defense",
 		"name": "Defense Increase",
 		"description": "Increases defense and adds a chance to reduce damage taken each time you receive damage. Defense stacks with other upgrades, Divine Blessing does not.",
+		"multiplier": 15,
 		"levels": [
 			{
 				"description": "+15",
@@ -91,6 +94,7 @@
 		"type": "Slot",
 		"name": "Slot Upgrade",
 		"description": "Adds an extra slot. Stack with other upgrades to increase the slot's level.",
+		"multiplier": 1,
 		"levels": [
 			{
 				"description": "Lv 1 slot",
@@ -118,6 +122,7 @@
 		"type": "Health",
 		"name": "Health Regen",
 		"description": "Regain health as you land attacks. Stack with other upgrades to increase the amount of health regained.",
+		"multiplier": 5,
 		"levels": [
 			{
 				"description": "Heal on hit +10%",
@@ -145,6 +150,7 @@
 		"type": "Element",
 		"name": "Element/Ailment Icrease",
 		"description": "",
+		"multiplier": 10,
 		"levels": [
 			{
 				"description": "+30",
