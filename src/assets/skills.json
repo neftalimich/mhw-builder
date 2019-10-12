@@ -2346,7 +2346,6 @@
 		"levels": [
 			{
 				"description": "Increases abnormal status effect damage (paralysis, poison, sleep, blast) when landing critical hits.",
-				"criticalStatusPercent": 20,
 				"criticalStatus": true
 			}
 		]
@@ -2548,8 +2547,18 @@
 		"levels": [
 			{
 				"description": "Greatly abnormal status effect damage (paralysis, poison, sleep, blast) when landing critical hits.",
-				"criticalStatusPercent": 30,
-				"criticalStatus": true
+				"trueCriticalStatus": true
+			}
+		]
+	},
+	{
+		"id": "trueCriticalElement",
+		"name": "True Critical Element",
+		"description": "Greatly increases elemental damage (fire, water, thunder, ice, dragon) when landing critical hits.",
+		"levels": [
+			{
+				"description": "Greatly increases elemental damage (fire, water, thunder, ice, dragon) when landing critical hits.",
+				"trueCriticalElement": true
 			}
 		]
 	},

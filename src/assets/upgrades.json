@@ -23,7 +23,8 @@
 				"requiredSlots": 2,
 				"totalSlots": 7
 			}
-		]
+		],
+		"customMaxLevel": [ 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6 ]
 	},
 	{
 		"id": 2,
@@ -49,7 +50,8 @@
 				"requiredSlots": 2,
 				"totalSlots": 6
 			}
-		]
+		],
+		"customMaxLevel": [ 5, 6, 5, 5, 5, 5, 5, 6, 6, 5, 5, 6, 5, 6 ]
 	},
 	{
 		"id": 3,
@@ -81,7 +83,8 @@
 				"requiredSlots": 2,
 				"totalSlots": 5
 			}
-		]
+		],
+		"customMaxLevel": [ 2, 0, 0, 4, 1, 0, 1, 2, 6, 2, 4, 5, 3, 4 ]
 	},
 	{
 		"id": 4,
@@ -107,7 +110,8 @@
 				"requiredSlots": 1,
 				"totalSlots": 7
 			}
-		]
+		],
+		"customMaxLevel": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
 	},
 	{
 		"id": 5,
@@ -133,7 +137,8 @@
 				"requiredSlots": 2,
 				"totalSlots": 7
 			}
-		]
+		],
+		"customMaxLevel": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
 	},
 	{
 		"id": 6,
@@ -169,6 +174,7 @@
 				"requiredSlots": 2,
 				"totalSlots": 7
 			}
-		]
+		],
+		"customMaxLevel": [ 5, 6, 5, 5, 5, 5, 5, 6, 6, 5, 5, 1, 0, 6 ]
 	}
 ]

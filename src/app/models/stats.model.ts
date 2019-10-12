@@ -19,6 +19,9 @@ export class StatsModel {
 	weaponType?: WeaponType;
 	weaponAttackModifier: number;
 	critElementModifier: number;
+	trueCritElementModifier: number;
+	critStatusModifier: number;
+	trueCritStatusModifier: number;
 	affinity: number;
 	passiveAffinity: number;
 	activeAffinity: number;
@@ -28,7 +31,8 @@ export class StatsModel {
 	passiveCriticalBoostPercent: number;
 	criticalElement: boolean;
 	criticalStatus: boolean;
-	criticalStatusPercent: number;
+	trueCriticalElement: boolean;
+	trueCriticalStatus: boolean;
 
 	elementless: boolean;
 	elementlessBoostPercent: number;
@@ -127,6 +131,9 @@ export class StatsModel {
 		this.effectiveElementalSharpnessModifier = 1;
 		this.weaponAttackModifier = 0;
 		this.critElementModifier = 0;
+		this.trueCritElementModifier = 0;
+		this.critStatusModifier = 0;
+		this.trueCritStatusModifier = 0;
 		this.affinity = 0;
 		this.passiveAffinity = 0;
 		this.activeAffinity = 0;
@@ -136,7 +143,8 @@ export class StatsModel {
 		this.passiveCriticalBoostPercent = 0;
 		this.criticalElement = false;
 		this.criticalStatus = false;
-		this.criticalStatusPercent = 0;
+		this.trueCriticalElement = false;
+		this.trueCriticalStatus = false;
 
 		this.element = null;
 		this.baseElementAttack = 0;

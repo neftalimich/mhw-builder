@@ -123,10 +123,9 @@ export class StatService {
 
 				if (level.passiveCriticalBoostPercent) { this.stats.passiveCriticalBoostPercent += level.passiveCriticalBoostPercent; }
 				if (level.criticalElement) { this.stats.criticalElement = true; }
-				if (level.criticalStatus) {
-					this.stats.criticalStatus = true;
-					this.stats.criticalStatusPercent = level.criticalStatusPercent;
-				}
+				if (level.criticalStatus) { this.stats.criticalStatus = true; }
+				if (level.trueCriticalElement) { this.stats.trueCriticalElement = true; }
+				if (level.trueCriticalStatus) { this.stats.trueCriticalStatus = true; }
 
 				if (level.passiveFireAttack) { this.stats.passiveFireAttack += level.passiveFireAttack; }
 				if (level.passiveWaterAttack) { this.stats.passiveWaterAttack += level.passiveWaterAttack; }
@@ -316,6 +315,9 @@ export class StatService {
 			if (weaponModifier) {
 				this.stats.weaponAttackModifier = weaponModifier.attackModifier;
 				this.stats.critElementModifier = weaponModifier.critElementModifier;
+				this.stats.trueCritElementModifier = weaponModifier.trueCritElementModifier;
+				this.stats.critStatusModifier = weaponModifier.critStatusModifier;
+				this.stats.trueCritStatusModifier = weaponModifier.trueCritStatusModifier;
 			}
 		}
 

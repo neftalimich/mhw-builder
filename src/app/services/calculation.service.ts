@@ -505,26 +505,36 @@ export class CalculationService {
 	private getRawAttackAverage(stats: StatsModel): StatDetailModel {
 		const totalAffinity = Math.min(stats.affinity + stats.passiveAffinity, 100);
 		const rawAttackAvg =
-			this.getRawAverage(stats.totalAttack, totalAffinity, stats.passiveCriticalBoostPercent, stats.weaponAttackModifier);
-		const ailmentBuildUpPercent = stats.effectivePassiveAilmentBuildupPercent;
+			this.getRawAverage(
+				stats.totalAttack,
+				totalAffinity,
+				stats.passiveCriticalBoostPercent,
+				stats.weaponAttackModifier);
 		const auxDivider = stats.totalAilmentAttack && stats.totalElementAttack ? 2 : 1;
+
+		const trueElement =
+			this.getElementAverage(
+				stats.totalElementAttack,
+				0,
+				0,
+				stats.effectiveElementalSharpnessModifier,
+				auxDivider);
+
+		const trueAilment =
+			this.getAilmentAverage(
+				stats.totalAilmentAttack * (100 + stats.effectivePassiveAilmentBuildupPercent) / 100,
+				0,
+				0,
+				stats.effectiveElementalSharpnessModifier,
+				auxDivider
+			);
 
 		const rawAttackAvgCalc: StatDetailModel = {
 			name: 'True Raw Average',
 			value: Number.isInteger(rawAttackAvg) ? rawAttackAvg : 0,
-			extra1:
-				stats.totalAilmentAttack ?
-					this.getAilmentAverage(
-						stats.totalAilmentAttack * (1 + ailmentBuildUpPercent / 100),
-						0,
-						100,
-						stats.effectiveElementalSharpnessModifier,
-						auxDivider)
-					: null,
+			extra1: trueAilment,
 			class1: stats.totalAilmentAttack ? stats.ailment : null,
-			extra2: stats.totalElementAttack ?
-				this.getElementAverage(stats.totalElementAttack, 0, 0, 1, auxDivider)
-				: null,
+			extra2: trueElement,
 			class2: stats.totalElementAttack ? stats.element : null,
 			calculationTemplate: `({totalAttack} × {totalAffinity} × {criticalBoost} + {totalAttack} × (100% - {totalAffinity})) <br>÷ {weaponModifier} <br>=<br> [${rawAttackAvg}`,
 			calculationVariables: [
@@ -583,35 +593,54 @@ export class CalculationService {
 	private getRawAttackAveragePotential(stats: StatsModel): StatDetailModel {
 		const totalAffinityPotential = Math.min(stats.affinity + stats.passiveAffinity + stats.weakPointAffinity + stats.activeAffinity, 100);
 		const rawAttackAveragePotential =
-			this.getRawAverage(stats.totalAttackPotential, totalAffinityPotential, stats.passiveCriticalBoostPercent, stats.weaponAttackModifier);
-		const ailmentBuildUpPercent =
-			stats.effectivePassiveAilmentBuildupPercent
-			+ stats.activeAilmentAttackBuildUpPercent;
+			this.getRawAverage(
+				stats.totalAttackPotential,
+				totalAffinityPotential,
+				stats.passiveCriticalBoostPercent,
+				stats.weaponAttackModifier);
 		const auxDivider = stats.totalAilmentAttack && stats.totalElementAttack ? 2 : 1;
+
+		let elementAffinity = totalAffinityPotential;
+		let criticalElementModifier = 0;
+		if (stats.trueCriticalElement) {
+			criticalElementModifier = stats.trueCritElementModifier;
+		} else if (stats.criticalElement) {
+			criticalElementModifier = stats.critElementModifier;
+		} else {
+			elementAffinity = 0;
+		}
+		const trueElementPotential = this.getElementAverage(
+			stats.totalElementAttack + stats.activeElementAttack,
+			Math.max(elementAffinity, 0),
+			criticalElementModifier,
+			stats.effectiveElementalSharpnessModifier,
+			auxDivider);
+
+		let ailmentAffinity = totalAffinityPotential;
+		let criticalStatusModifier = 0;
+		if (stats.trueCriticalStatus) {
+			criticalStatusModifier = stats.trueCritStatusModifier;
+		} else if (stats.criticalStatus) {
+			criticalStatusModifier = stats.critStatusModifier;
+		} else {
+			ailmentAffinity = 0;
+		}
+		const trueAilmentPotential =
+			this.getAilmentAverage(
+				stats.totalAilmentAttack * (100 + stats.effectivePassiveAilmentBuildupPercent) / 100,
+				Math.max(ailmentAffinity, 0),
+				criticalStatusModifier,
+				stats.effectiveElementalSharpnessModifier,
+				auxDivider
+			);
 
 		const rawAttackAveragePotentialCalc: StatDetailModel = {
 			name: 'True Raw Average Potential',
 			value: Number.isInteger(rawAttackAveragePotential) ? rawAttackAveragePotential : 0,
-			extra1:
-				stats.totalAilmentAttack ?
-					this.getAilmentAverage(
-						stats.totalAilmentAttack * (1 + ailmentBuildUpPercent / 100),
-						Math.max(stats.criticalStatus ? totalAffinityPotential : 0, 0),
-						100 + (stats.criticalStatus ? stats.criticalStatusPercent : 0),
-						stats.effectiveElementalSharpnessModifier,
-						auxDivider)
-					: null,
+			extra1: trueAilmentPotential,
 			class1:
 				stats.totalAilmentAttack ? stats.ailment : null,
-			extra2:
-				stats.totalElementAttack ?
-					this.getElementAverage(
-						stats.totalElementAttack + stats.activeElementAttack,
-						Math.max(stats.criticalElement ? totalAffinityPotential : 0, 0),
-						stats.critElementModifier,
-						stats.effectiveElementalSharpnessModifier,
-						auxDivider)
-					: null,
+			extra2: trueElementPotential,
 			class2:
 				stats.totalElementAttack ? stats.element : null,
 			calculationTemplate:
@@ -800,23 +829,20 @@ export class CalculationService {
 	}
 
 	private getRawAverage(attack: number, affinity: number, criticalBoostPercent: number, weaponAttackModifier: number): number {
-		return Math.round((
-			(attack * (Math.min(affinity, 100) / 100) * (Math.min(affinity, 100) > 0 ? (criticalBoostPercent + 125) / 100 : 1.25))
-			+ (attack * (1 - Math.min(affinity, 100) / 100))
-		) / weaponAttackModifier);
+		const attackWithAffinity = attack * (Math.min(affinity, 100) / 100) * (Math.min(affinity, 100) > 0 ? (criticalBoostPercent + 125) / 100 : 1.25);
+		const attackWithoutAffinity = attack * (1 - Math.min(affinity, 100) / 100);
+		return Math.round((attackWithAffinity + attackWithoutAffinity) / weaponAttackModifier);
 	}
 
-	private getAilmentAverage(attack: number, affinity: number, criticalBoostPercent: number, elementAttackModififier: number, auxDivider: number): number {
-		return Math.round((
-			(attack * (Math.min(affinity, 100) / 100) * (Math.min(affinity, 100) > 0 ? criticalBoostPercent / 100 : 1))
-			+ (attack * (1 - Math.min(affinity, 100) / 100))
-		) * elementAttackModififier / 30 / (auxDivider ? auxDivider : 1));
+	private getAilmentAverage(attack: number, affinity: number, criticalModifier: number, sharpnessModifier: number, auxDivider: number): number {
+		const ailmentWithAffinity = attack * (Math.min(affinity, 100) / 100) * (Math.min(affinity, 100) > 0 ? criticalModifier : 1);
+		const ailmentWithoutAffinity = attack * (1 - Math.min(affinity, 100) / 100);
+		return Math.round((ailmentWithAffinity + ailmentWithoutAffinity) * sharpnessModifier / 30 / (auxDivider ? auxDivider : 1));
 	}
 
-	private getElementAverage(attack: number, affinity: number, criticalBoostPercent: number, elementAttackModififier: number, auxDivider: number): number {
-		return Math.round((
-			(attack * (Math.min(affinity, 100) / 100) * (Math.min(affinity, 100) > 0 ? (criticalBoostPercent + 125) / 100 : 1.25))
-			+ (attack * (1 - Math.min(affinity, 100) / 100))
-		) * elementAttackModififier / 10 / (auxDivider ? auxDivider : 1));
+	private getElementAverage(attack: number, affinity: number, criticalModifier: number, sharpnessModifier: number, auxDivider: number): number {
+		const elementWithAffinity = attack * (Math.min(affinity, 100) / 100) * (Math.min(affinity, 100) > 0 ? criticalModifier : 1);
+		const elementWithoutAffinity = attack * (1 - Math.min(affinity, 100) / 100);
+		return Math.round((elementWithAffinity + elementWithoutAffinity) * sharpnessModifier / 10 / (auxDivider ? auxDivider : 1));
 	}
 }

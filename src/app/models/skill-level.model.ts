@@ -7,7 +7,8 @@ export class SkillLevelModel {
 	passiveCriticalBoostPercent: number;
 	criticalElement: boolean;
 	criticalStatus: boolean;
-	criticalStatusPercent: number;
+	trueCriticalElement: boolean;
+	trueCriticalStatus: boolean;
 
 	passiveAffinity: number;
 	activeAffinity: number;
