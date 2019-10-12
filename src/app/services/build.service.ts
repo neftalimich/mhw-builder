@@ -252,11 +252,11 @@ export class BuildService {
 						upgradeContainer.hasCustomUpgrades = item.hasCustomUpgrades;
 						upgradeContainer.weaponType = item.weaponType;
 						if (item.rarity == 10) {
-							upgradeContainer.slots = 7;
+							upgradeContainer.slots = 9;
 						} else if (item.rarity == 11) {
-							upgradeContainer.slots = 5;
+							upgradeContainer.slots = 6;
 						} else if (item.rarity == 12) {
-							upgradeContainer.slots = 4;
+							upgradeContainer.slots = 5;
 						} else {
 							upgradeContainer.slots = 0;
 						}

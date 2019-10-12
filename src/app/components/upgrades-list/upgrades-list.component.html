@@ -40,14 +40,14 @@
 	<table class="upgrades-table" *ngIf="upgradeContainer.hasCustomUpgrades">
 		<thead>
 			<tr>
-				<th class="text-left">Custom</th>
-				<th>I</th>
-				<th>II</th>
-				<th>III</th>
-				<th>IV</th>
-				<th>V</th>
-				<th>VI</th>
-				<th>Total</th>
+				<th class="text-left upgrade-th">Custom</th>
+				<th class="upgrade-th">I</th>
+				<th class="upgrade-th">II</th>
+				<th class="upgrade-th">III</th>
+				<th class="upgrade-th">IV</th>
+				<th class="upgrade-th">V</th>
+				<th class="upgrade-th">VI</th>
+				<th class="upgrade-th">Total</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -55,15 +55,15 @@
 				<td class="border-left-blue">
 					{{customUpg.type}}
 					<br />
-					<span style="font-size:12px;">(max: {{customUpg.maximum}} Lv)</span>
+					<span style="font-size:12px;">(max: {{customUpg.maximum}})</span>
 				</td>
-				<td class="text-center" (click)="selectCustomUpg(customUpg.type,0)" [class.selected]="upgradeContainer.customUpgrades[0]==customUpg.type" style="cursor:pointer;">+{{customUpg.multiplier}}</td>
-				<td class="text-center" (click)="selectCustomUpg(customUpg.type,1)" [class.selected]="upgradeContainer.customUpgrades[1]==customUpg.type" style="cursor:pointer;">+{{customUpg.multiplier}}</td>
-				<td class="text-center" (click)="selectCustomUpg(customUpg.type,2)" [class.selected]="upgradeContainer.customUpgrades[2]==customUpg.type" style="cursor:pointer;">+{{customUpg.multiplier}}</td>
-				<td class="text-center" (click)="selectCustomUpg(customUpg.type,3)" [class.selected]="upgradeContainer.customUpgrades[3]==customUpg.type" style="cursor:pointer;">+{{customUpg.multiplier}}</td>
-				<td class="text-center" (click)="selectCustomUpg(customUpg.type,4)" [class.selected]="upgradeContainer.customUpgrades[4]==customUpg.type" style="cursor:pointer;">+{{customUpg.multiplier}}</td>
-				<td class="text-center" (click)="selectCustomUpg(customUpg.type,5)" [class.selected]="upgradeContainer.customUpgrades[5]==customUpg.type" style="cursor:pointer;">+{{customUpg.multiplier}}</td>
-				<td class="text-center bg-52">
+				<td class="text-center upgrade-td" (click)="selectCustomUpg(customUpg.type,0)" [class.selected]="upgradeContainer.customUpgrades[0]==customUpg.type">+{{customUpg.multiplier}}</td>
+				<td class="text-center upgrade-td" (click)="selectCustomUpg(customUpg.type,1)" [class.selected]="upgradeContainer.customUpgrades[1]==customUpg.type">+{{customUpg.multiplier}}</td>
+				<td class="text-center upgrade-td" (click)="selectCustomUpg(customUpg.type,2)" [class.selected]="upgradeContainer.customUpgrades[2]==customUpg.type">+{{customUpg.multiplier}}</td>
+				<td class="text-center upgrade-td" (click)="selectCustomUpg(customUpg.type,3)" [class.selected]="upgradeContainer.customUpgrades[3]==customUpg.type">+{{customUpg.multiplier}}</td>
+				<td class="text-center upgrade-td" (click)="selectCustomUpg(customUpg.type,4)" [class.selected]="upgradeContainer.customUpgrades[4]==customUpg.type">+{{customUpg.multiplier}}</td>
+				<td class="text-center upgrade-td" (click)="selectCustomUpg(customUpg.type,5)" [class.selected]="upgradeContainer.customUpgrades[5]==customUpg.type">+{{customUpg.multiplier}}</td>
+				<td class="text-center upgrade-td bg-52">
 					+{{countCustomUpg(customUpg.type)*customUpg.multiplier}}
 				</td>
 			</tr>

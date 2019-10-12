@@ -2,7 +2,7 @@
 	width: 100%;
 
 	th {
-		padding: 0px 10px;
+		padding: 0px 5px;
 		background-color: #525252;
 		height: 32px;
 	}
@@ -34,6 +34,14 @@
 
 .selected {
 	background-color: #4E4E4E !important;
+}
+
+.upgrade-th {
+	font-size: 16px;
+}
+.upgrade-td {
+	cursor:pointer;
+	font-size:14px;
 }
 
 $attack: #f1666b;
