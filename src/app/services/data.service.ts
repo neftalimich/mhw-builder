@@ -46,8 +46,18 @@ export class DataService {
 		return weapon;
 	}
 
+	getArmors(armorType?: ItemType): ItemModel[] {
+		let result = new Array<ItemModel>();
+		if (armorType) {
+			result = this.appDataProvider.appData.armors.filter(armor => armor.itemType);
+		} else {
+			result = this.appDataProvider.appData.armors;
+		}
+		return result;
+	}
+
 	getArmor(id: number): ItemModel {
-		return _.find(this.appDataProvider.appData.armor, armor => armor.id === id);
+		return _.find(this.appDataProvider.appData.armors, armor => armor.id === id);
 	}
 
 	getCharm(id: number): ItemModel {
@@ -61,7 +71,7 @@ export class DataService {
 	}
 
 	getArmorByType(type: ItemType): ItemModel[] {
-		return _.filter(this.appDataProvider.appData.armor, armor => armor.itemType === type);
+		return _.filter(this.appDataProvider.appData.armors, armor => armor.itemType === type);
 	}
 
 	getCharms(): ItemModel[] {

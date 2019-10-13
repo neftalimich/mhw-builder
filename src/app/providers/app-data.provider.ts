@@ -64,7 +64,7 @@ export class AppDataProvider {
 				this.upgradesLoader.load('upgrades.json', false),
 			).subscribe(results => {
 				this.appData.weapons = results[0];
-				this.appData.armor = results[1];
+				this.appData.armors = results[1];
 				this.appData.charms = results[2];
 				this.appData.decorations = results[3];
 				this.appData.augmentations = results[4];

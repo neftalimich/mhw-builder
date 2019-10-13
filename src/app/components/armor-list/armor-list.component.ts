@@ -15,31 +15,22 @@ import { ItemType } from '../../types/item.type';
 })
 export class ArmorListComponent implements OnInit {
 	public equipmentCategoryType = EquipmentCategoryType;
-	private _itemType: ItemType;
-	private _onlyIceborne: boolean;
+	private _itemTypeFilters: ItemType[];
+	onlyIceborne = true;
+	hideFilterContainer = true;
 
 	@Input()
-	set itemType(itemType: ItemType) {
-		this._itemType = itemType;
+	set itemTypeFilters(itemTypeFilters: ItemType[]) {
+		this._itemTypeFilters = itemTypeFilters;
 		this.loadItems();
 	}
-	get itemType(): ItemType { return this._itemType; }
-
-	@Input()
-	set onlyIceborne(onlyIceborne: boolean) {
-		this._onlyIceborne = onlyIceborne;
-		if (onlyIceborne) {
-			this.applyIceborneFilter();
-		} else {
-			this.resetSearchResults();
-		}
-	}
-	get onlyIceborne(): boolean { return this._onlyIceborne; }
+	get itemTypeFilters(): ItemType[] { return this._itemTypeFilters; }
 
 	@ViewChild('searchBox', { static: true }) searchBox: ElementRef;
 	@ViewChild('itemList', { static: false }) itemList: VirtualScrollerComponent;
 
 	items: ItemModel[];
+	itemsAll: ItemModel[];
 	filteredItems: ItemModel[];
 	virtualItems: ItemModel[];
 
@@ -51,7 +42,7 @@ export class ArmorListComponent implements OnInit {
 	constructor(
 		private slotService: SlotService,
 		public dataService: DataService
-	) { }
+	) {	}
 
 	ngOnInit(): void { }
 
@@ -66,8 +57,10 @@ export class ArmorListComponent implements OnInit {
 	}
 
 	loadItems() {
-		this.items = this.dataService.getArmorByType(this.itemType);
-		this.resetSearchResults();
+		this.itemsAll = this.dataService.getArmors();
+		this.items = this.itemsAll.filter(f => f.id > 1000);
+		this.filteredItems = this.items;
+		this.applyItemFilter();
 		setTimeout(() => this.searchBox.nativeElement.focus(), 250);
 	}
 
@@ -75,7 +68,17 @@ export class ArmorListComponent implements OnInit {
 		this.filteredItems = this.items;
 
 		if (query) {
+			const alphaIndex = query.indexOf('alpha');
+			if (alphaIndex > -1) {
+				query = query.replace('alpha', '');
+			}
+			const betaIndex = query.indexOf('beta');
+			if (betaIndex > -1) {
+				query = query.replace('beta', '');
+			}
+
 			query = query.toLowerCase().trim();
+
 			const queryParts = query.split(' ');
 
 			if (this.items) {
@@ -93,34 +96,91 @@ export class ArmorListComponent implements OnInit {
 					if (!nameMatch && !skillMatch && !tagMatch) {
 						this.filteredItems = _.reject(this.filteredItems, i => i.name === item.name);
 					}
+					if (alphaIndex > -1 || betaIndex > -1) {
+						const alphaBetaQuery = [];
+
+						if (alphaIndex > -1) {
+							alphaBetaQuery.push('α');
+						}
+						if (betaIndex > -1) {
+							alphaBetaQuery.push('β');
+						}
+						const query2Match = _.some(alphaBetaQuery, queryPart => {
+							return itemName.includes(queryPart);
+						});
+						if (!query2Match) {
+							this.filteredItems = _.reject(this.filteredItems, i => i.name === item.name);
+						}
+					}
 				}
 			}
-			this.applyIceborneFilter();
 		} else {
 			this.resetSearchResults();
 		}
+		this.applyItemFilter();
 	}
 
 	resetSearchResults() {
 		this.searchBox.nativeElement.value = null;
 		this.filteredItems = this.items;
-		this.applyIceborneFilter();
+	}
+
+	applyItemFilter() {
+		if (this.filteredItems && this.itemTypeFilters) {
+			this.filteredItems = _.reject(this.filteredItems, item => {
+				for (const itemType of this.itemTypeFilters) {
+					if (item.itemType == itemType) {
+						return false;
+					}
+				}
+				return true;
+			});
+		}
 	}
 
 	applyIceborneFilter() {
+		this.onlyIceborne = !this.onlyIceborne;
 		if (this.onlyIceborne) {
-			this.filteredItems = _.reject(this.filteredItems, item => item.id < 1000);
+			this.items = this.itemsAll.filter(f => f.id > 1000);
+		} else {
+			this.items = this.itemsAll;
 		}
+		this.search(this.searchBox.nativeElement.value);
 	}
 
 	selectItem(item: ItemModel) {
 		const newItem = Object.assign({}, item);
-		this.slotService.selectItem(newItem);
+		if (this.itemTypeFilters.length == 1) {
+			this.slotService.selectItem(newItem);
+		} else {
+			this.slotService.selectItemByItemType(newItem);
+		}
+	}
+
+	addItemTypeFilter(itemTypeFilter: ItemType) {
+		const existFilter = this.itemTypeFilters.filter(f => f == itemTypeFilter);
+		if (existFilter.length > 0) {
+			const index = this.itemTypeFilters.indexOf(existFilter[0], 0);
+			if (index > -1) {
+				this.itemTypeFilters.splice(index, 1);
+			}
+		} else {
+			this.itemTypeFilters.push(itemTypeFilter);
+		}
+		this.search(this.searchBox.nativeElement.value);
 	}
 
 	getSkillCount(item: ItemModel, skill: SkillModel): string {
 		const itemSkill = _.find(item.skills, s => s.id == skill.id);
 		const result = `${itemSkill.level}/${skill.levels.length}`;
 		return result;
+	}
+
+	itemTypeIsSelected(itemType: ItemType) {
+		if (this.itemTypeFilters.filter(f => f == itemType).length > 0) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 }

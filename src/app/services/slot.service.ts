@@ -18,6 +18,7 @@ import { EquipmentCategoryType } from '../types/equipment-category.type';
 import { ItemType } from '../types/item.type';
 import { WeaponType } from '../types/weapon.type';
 import { EquipmentService } from './equipment.service';
+import { SlotModel } from '../models/slot.model';
 
 @Injectable()
 export class SlotService {
@@ -25,6 +26,7 @@ export class SlotService {
 		new Subject<ItemSlotComponent | DecorationSlotComponent | AugmentationSlotComponent | UpgradeSlotComponent | ModificationSlotComponent | KinsectSlotComponent>();
 
 	public itemSelected$ = new Subject<SlotEventModel<ItemSlotComponent, ItemModel>>();
+	public itemSelectedNew$ = new Subject<SlotEventModel<ItemSlotComponent, ItemModel>>();
 	public decorationSelected$ = new Subject<SlotEventModel<DecorationSlotComponent, DecorationModel>>();
 	public augmentationSelected$ = new Subject<SlotEventModel<AugmentationSlotComponent, AugmentationModel>>();
 	public upgradeSelected$ = new Subject<SlotEventModel<UpgradeSlotComponent, UpgradeContainerModel>>();
@@ -302,6 +304,33 @@ export class SlotService {
 		}
 	}
 
+	selectItemByItemType(item: ItemModel) {
+		let slotAux: ItemSlotComponent;
+		switch (item.itemType) {
+			case ItemType.Head:
+				slotAux = this.headSlot;
+				break;
+			case ItemType.Chest:
+				slotAux = this.chestSlot;
+				break;
+			case ItemType.Hands:
+				slotAux = this.handsSlot;
+				break;
+			case ItemType.Legs:
+				slotAux = this.legsSlot;
+				break;
+			case ItemType.Feet:
+				slotAux = this.feetSlot;
+				break;
+			default:
+				break;
+		}
+		this.clearSlotItems(slotAux);
+		this.equipmentService.addItem(item);
+		slotAux.item = item;
+		this.itemSelectedNew$.next({ slot: slotAux, equipment: item });
+	}
+
 	selectDecoration(decoration: DecorationModel) {
 		if (this.selectedDecorationSlot) {
 			if (this.selectedDecorationSlot.decoration) {
@@ -441,6 +470,9 @@ export class SlotService {
 	}
 
 	private clearSlotItems(slot: ItemSlotComponent) {
+		if (slot.item) {
+			slot.item.selected = false;
+		}
 		this.equipmentService.removeItem(slot.item);
 
 		slot.decorationSlots.forEach(ds => {

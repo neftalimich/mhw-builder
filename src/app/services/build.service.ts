@@ -39,6 +39,9 @@ export class BuildService {
 		this.slotService.itemSelected$.subscribe(() => {
 			if (!this.loadingBuild) { this.updateBuildId(); }
 		});
+		this.slotService.itemSelectedNew$.subscribe(() => {
+			if (!this.loadingBuild) { this.updateBuildId(); }
+		});
 
 		this.slotService.decorationSelected$.subscribe(() => {
 			if (!this.loadingBuild) { this.updateBuildId(); }

@@ -1,18 +1,38 @@
 <div class="container">
 	<div class="search-container">
 		<input #searchBox (keyup)="search(searchBox.value)" placeholder="Search names, skills, monster" />
-		<button type="button" class="iceborne-button" (click)="onlyIceborne=!onlyIceborne" title="Only Iceborne">
+		<button type="button" class="iceborne-button" (click)="applyIceborneFilter()" title="Only Iceborne">
 			<i class="fas fa-toggle-on" [hidden]="!onlyIceborne"></i>
 			<i class="fas fa-toggle-off" [hidden]="onlyIceborne"></i>
+		</button>
+		<button type="button" class="filter-button" (click)="hideFilterContainer=!hideFilterContainer">
+			<i class="fas fa-filter"></i>
 		</button>
 		<button type="button" class="clear-button" (click)="resetSearchResults()">
 			<i class="fas fa-times"></i>
 		</button>
 	</div>
 
-	<virtual-scroller id="items-list" #itemList class="scroll-container" *ngIf="items" [items]="filteredItems" (vsUpdate)="onItemListUpdate($event)">
-		<div *ngFor="let item of virtualItems" class="scroll-item-container" (click)="selectItem(item)">
+	<div class="filter-container" *ngIf="!hideFilterContainer">
+		<button type="button" class="armor-filter" [class.selected]="itemTypeIsSelected('Head')" (click)="addItemTypeFilter('Head')" title="Head">
+			<img src="assets/images/armor/head-icon.png" alt="Head">
+		</button>
+		<button type="button" class="armor-filter" [class.selected]="itemTypeIsSelected('Chest')" (click)="addItemTypeFilter('Chest')" title="Chest">
+			<img src="assets/images/armor/chest-icon.png" alt="Chest">
+		</button>
+		<button type="button" class="armor-filter" [class.selected]="itemTypeIsSelected('Hands')" (click)="addItemTypeFilter('Hands')" title="Hands">
+			<img src="assets/images/armor/hands-icon.png" alt="Hands">
+		</button>
+		<button type="button" class="armor-filter" [class.selected]="itemTypeIsSelected('Legs')" (click)="addItemTypeFilter('Legs')" title="Legs">
+			<img src="assets/images/armor/legs-icon.png" alt="Legs">
+		</button>
+		<button type="button" class="armor-filter" [class.selected]="itemTypeIsSelected('Feet')" (click)="addItemTypeFilter('Feet')" title="Feet">
+			<img src="assets/images/armor/feet-icon.png" alt="Feet">
+		</button>
+	</div>
 
+	<virtual-scroller id="items-list" #itemList class="scroll-container" *ngIf="items" [items]="filteredItems" (vsUpdate)="onItemListUpdate($event)">
+		<div *ngFor="let item of virtualItems" class="scroll-item-container" (click)="selectItem(item)" [class.itemSelected]="item.selected">
 			<div class="name-container">
 				<div class="name" [ngClass]="'vcolor-' + item.color">
 					{{item.name}}
@@ -30,7 +50,7 @@
 				</div>
 				<div class="type">
 					<span class="typeName">{{item.itemType}}</span>
-					<img [src]="'assets/images/armor/' + (item.itemType | lowercase) + '-icon.png'" alt="item type"/>
+					<img [src]="'assets/images/armor/' + (item.itemType | lowercase) + '-icon.png'" alt="item type" />
 				</div>
 				<div class="rarity" *ngIf="item.rarity">
 					<span class="r1">Rarity </span><span class="r2">R</span>{{item.rarity}}
@@ -46,10 +66,10 @@
 						<span *ngFor="let def of item.defense; let i = index">
 							{{def}}
 							<span *ngIf="i < item.defense.length - 2">
-								 |<!--➝-->
+								|<!--➝-->
 							</span>
 							<span *ngIf="i == item.defense.length -2">
-								 |<!--➟-->
+								|<!--➟-->
 							</span>
 						</span>
 					</div>

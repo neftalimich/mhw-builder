@@ -16,7 +16,7 @@ export class AppDataModel {
 	weaponModifiers: WeaponModifierModel[];
 	sharpnessModifiers: SharpnessModifierModel[];
 	weapons: ItemModel[];
-	armor: ItemModel[];
+	armors: ItemModel[];
 	charms: ItemModel[];
 	tools: ItemModel[];
 	setBonuses: SetBonusModel[];
@@ -34,7 +34,7 @@ export class AppDataModel {
 		this.weaponModifiers = new Array<WeaponModifierModel>();
 		this.sharpnessModifiers = new Array<SharpnessModifierModel>();
 		this.weapons = new Array<ItemModel>();
-		this.armor = new Array<ItemModel>();
+		this.armors = new Array<ItemModel>();
 		this.charms = new Array<ItemModel>();
 		this.setBonuses = new Array<SetBonusModel>();
 		this.skills = new Array<SkillModel>();

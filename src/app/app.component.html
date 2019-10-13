@@ -93,7 +93,7 @@
 								 [itemType]="slotService.selectedItemSlot?.slotName" [onlyIceborne]="slotService.onlyIceborne"></mhw-builder-weapon-list>
 
 		<mhw-builder-armor-list *ngIf="slotService.selectedItemSlot && dataService.getEquipmentCategory(slotService.selectedItemSlot.slotName) == equipmentCategoryTypes.Armor"
-								[itemType]="slotService.selectedItemSlot?.slotName" [onlyIceborne]="slotService.onlyIceborne"></mhw-builder-armor-list>
+								[itemTypeFilters]="[slotService.selectedItemSlot?.slotName]"></mhw-builder-armor-list>
 
 		<mhw-builder-charm-list *ngIf="slotService.selectedItemSlot && dataService.getEquipmentCategory(slotService.selectedItemSlot.slotName) == equipmentCategoryTypes.Charm"
 								[itemType]="slotService.selectedItemSlot?.slotName"></mhw-builder-charm-list>
@@ -110,6 +110,11 @@
 
 	<mhw-builder-modal #changeLogModal title="Change Log">
 		<div style="padding:16px;">
+			<h3>2019-10-14 ICEBORNE (Version 2.7.5)</h3>
+			<ul>
+				<li>Now you can select multiple distinct armor pieces using the filter.</li>
+				<li>Bug fixes.</li>
+			</ul>
 			<h3>2019-10-10 ICEBORNE (Version 2.7.0)</h3>
 			<ul>
 				<li>New Rajang Weapons/Armor added.</li>
@@ -131,34 +136,23 @@
 				<li>New & Updated Skills Pack 1.</li>
 				<li>Etc.</li>
 			</ul>
-			<h3>2019-03-24 (Version 2.2.3)</h3>
-			<ul>
-				<li>Import Set fixed.</li>
-			</ul>
-			<h3>2019-03-20 (Version 2.2.2)</h3>
+			<h3>2019-03-20 (Version 2.3)</h3>
 			<ul>
 				<li>Download Set List HTML + AngularJS.</li>
+				<li>Filters</li>
 				<li>Bug Fixes</li>
 			</ul>
-			<h3>2019-03-19 (Version 2.2.0)</h3>
+			<h3>2019-03-19 (Version 2.2.5)</h3>
 			<ul>
 				<li>Kinsect Slot.</li>
 			</ul>
-			<h3>2019-03-18 (Version 2.1.1)</h3>
-			<ul>
-				<li>Sets List Filter.</li>
-			</ul>
-			<h3>2019-03-15 (Version 2.1.0)</h3>
+			<h3>2019-03-15 (Version 2.2.0)</h3>
 			<ul>
 				<li>HBG/LBG Modifications Slot Added.</li>
 			</ul>
-			<h3>2019-03-01 (Version 2.0.2)</h3>
+			<h3>2019-01-11 (Version 2.1.0)</h3>
 			<ul>
-				<li>Save set list format html/json</li>
-			</ul>
-			<h3>2019-01-11 (Version 2.0.1)</h3>
-			<ul>
-				<li>Saved sets list.</li>
+				<li>Save sets list.</li>
 			</ul>
 			<h3>2019-01-01 (Version 2.0.0)</h3>
 			<ul>
