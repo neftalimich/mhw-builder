@@ -898,44 +898,44 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2308	Lance	11	Shining Star Lance	598	0	0				Paralysis	300	false		false	6;8;3;3;8;12;0		workshop;paralysis				0
 2309	Lance	11	Sweeping Gale Lance	598	0	0				Sleep	270	false		false	7;8;3;3;8;11;0		workshop;sleep				0
 3007	Lance	12	Great Demon Lance	713	-15	0	Thunder	120	false					false	10;10;4;5;6;5;0	4	rajang;thunder				0
-2312	Gunlance	11	Chrome Halberd III	598	0	0				Blast	360	true		false	11;3;3;6;5;9;3	1;1	ore;blast		Normal-6	true	0
-2314	Gunlance	11	Blackwing Gunlance II	621	25	0				Poison	240	false		false	14;3;9;3;3;6;2	3	yian;garuga;poison		Long-6	true	0
-2315	Gunlance	12	Ruinous Eradication GL	667	0	0	Dragon	210	false				High	false	8;3;3;12;3;16;0	2	nergigante;dragon		Wide-5		0
-2317	Gunlance	10	Thundering Striker	529	20	0	Thunder	510	false					false	12;3;9;3;3;8;2	1	tobi;kadachi;thunder		Long-5		0
-2320	Gunlance	11	Crimson Hornet	598	15	0				Paralysis	330	false		false	12;3;9;3;3;8;2	1	viper;kadachi;paralysis		Long-6		0
-2323	Gunlance	12	Chariot Gun	621	20	0	Fire	330	false					false	7;8;3;6;5;8;3	2	rathalos;fire		Long-6		0
-2326	Gunlance	12	Queen's Panoply	667	15	0				Poison	450	false		false	6;8;3;4;7;12;0	1	rathian;poison		Normal-6		0
-2328	Gunlance	10	Jyura Demolisher II	598	0	0	Water	420	false					false	9;10;4;5;7;5;0	3;1	jyuratodus;water		Wide-5	true	0
-2331	Gunlance	11	Ambermarch	575	30	0	Ice	330	false					false	10;3;3;11;4;9;0		barioth;ice		Wide-5		0
-2333	Gunlance	10	Hoarcry Cannon	529	0	0	Ice	570	false					false	12;3;3;6;5;8;3	1	legiana;ice		Normal-6	true	0
-2335	Gunlance	10	Hidden Cannon II	529	20	0				Poison	570	true		false	13;2;2;7;4;3;9	1	nargacuga;poison		Wide-5	true	0
-2338	Gunlance	11	Dragonpike 'Quake' III	644	0	35	Thunder	360	true					false	8;10;4;5;8;5;0	3	bone;thunder		Long-5	true	0
-2340	Gunlance	12	Vorpal Icefort	621	0	0	Ice	270	false					false	13;3;3;6;5;5;5	4	velkhana;ice		Normal-6		0
-2341	Gunlance	11	Bazelpride	598	-10	0				Blast	270	false		false	16;3;3;7;4;2;5	1;1	bazelgeuse;blast		Wide-5	true	0
-2343	Gunlance	10	Glutton's Fang II	598	0	0				Sleep	420	true		false	10;8;3;3;8;8;0	3;3	jagras;sleep		Normal-6	true	0
-2346	Gunlance	11	Tigrex Gunlance	644	-15	0				Blast	360	true		false	5;3;3;11;4;14;0		tigrex;blast		Long-5		0
-2348	Gunlance	12	Flamebite	667	-30	0				Sleep	270	true		false	9;2;3;9;9;4;4		brute;tigrex;sleep		Wide-5		0
-2350	Gunlance	10	Nightveil Gunlance II	552	20	0				Paralysis	510	false		false	7;10;4;5;10;4;0		girros;paralysis		Normal-5	true	0
-2352	Gunlance	10	Glavenus Buster II	575	0	0	Fire	390	false					false	12;3;3;6;5;8;3	1;1	glavenus;fire		Wide-5	true	0
-2353	Gunlance	11	Deathlance Vaal Spysa	575	0	0	Dragon	510	false				Average	false	7;8;3;3;8;11;0	2;2	vaal;hazak;dragon		Long-6	true	0
-2355	Gunlance	11	Acid Buster II	667	0	0				Paralysis	330	true		false	6;5;11;9;6;2;1	4	acidic;glavenus;paralysis		Normal-6	true	0
-2357	Gunlance	10	Barroth Bluff II	621	-10	25				Paralysis	510	true		false	6;6;6;10;9;3;0	2;2	barroth;paralysis		Wide-5	true	0
-2359	Gunlance	10	Brachydios Buster II	552	0	0				Blast	480	false		false	9;3;3;11;4;10;0	1	brachydios;blast		Normal-6	true	0
-2361	Gunlance	10	Mammoth Gunlance II	644	0	0	Ice	510	true					false	8;5;5;8;14;0;0	4	banbaro;ice		Normal-6		0
-2364	Gunlance	12	Despot's Phlogiston	598	0	0	Thunder	450	false					false	12;3;9;3;3;8;2	2	zinogre;thunder		Normal-6		0
-2366	Gunlance	10	Anjanath Flamelance II	621	-20	0	Fire	600	false					false	7;10;4;5;9;5;0		anjanath;fire		Long-5	true	0
-2368	Gunlance	10	Ending Fulgur II	575	20	0	Thunder	330	false					false	7;10;4;5;9;5;0	1	fulgur;anjanath;thunder		Wide-5	true	0
-2370	Gunlance	11	Dragonseal Gunlance II	552	0	0	Dragon	660	false				Average	false	6;6;6;10;9;3;0	1;1	dragonbone;dragon		Normal-6	true	0
-2371	Gunlance	12	Broken Silence	644	0	30	Dragon	510	true				High	false	16;3;3;6;5;4;3	1;1	shara;ishvalda;dragon		Wide-5		0
-2372	Gunlance	11	Magda Lahat Reforged	644	-10	45				Blast	450	false		false	13;4;4;7;8;2;2	2	zorah;magdaros;blast		Long-6		0
-2374	Gunlance	12	Black Ephyra	644	15	0	Water	390	false					false	6;8;3;3;8;12;0		namielle;water		Normal-6		0
-2375	Gunlance	11	Daora's Tempest	598	10	0	Ice	270	false					false	13;3;3;6;5;7;3	3	blacksteel;ice		Long-5		0
-2376	Gunlance	12	Consummate Gunlance	644	-30	0	Dragon	390	false				High	false	15;3;3;7;4;5;3		deviljho;dragon		Long-6		0
-2377	Gunlance	12	Soulfire Talon 'Blaze'	575	20	0				Blast	270	false		false	11;3;9;3;3;9;2	2;1	lunastra;teostra;blast	guts-1	Wide-5		0
-2378	Gunlance	12	Soulfire Talon 'Ruin'	621	0	0				Blast	210	false		false	11;3;9;3;3;9;2	2;2	lunastra;nergigante;blast	hastenRecovery-1	Wide-5		0
-2379	Gunlance	12	Soulfire Talon 'Styx'	575	10	0				Blast	330	false		false	11;3;9;3;3;9;2	3;3	lunastra;xeno;jiva;blast	razorSharpSpareShot-1	Wide-5		0
-2381	Gunlance	11	Gajalaka Firepike	621	0	30	Dragon	450	true				High	false	4;10;4;4;18;0;0	4	workshop;dragon		Normal-5		0
-3008	Gunlance	12	Great Demon Gunlance	656	-15	0	Thunder	120	false					false	9;10;4;5;7;5;0	4	rajang;thunder		Wide-6		0
+2312	Gunlance	11	Chrome Halberd III	598	0	0				Blast	360	true		false	11;3;3;6;5;9;3	1;1	ore;blast;normal6		Normal-6	true	0
+2314	Gunlance	11	Blackwing Gunlance II	621	25	0				Poison	240	false		false	14;3;9;3;3;6;2	3	yian;garuga;poison;long6		Long-6	true	0
+2315	Gunlance	12	Ruinous Eradication GL	667	0	0	Dragon	210	false				High	false	8;3;3;12;3;16;0	2	nergigante;dragon;wide5		Wide-5		0
+2317	Gunlance	10	Thundering Striker	529	20	0	Thunder	510	false					false	12;3;9;3;3;8;2	1	tobi;kadachi;thunder;long5		Long-5		0
+2320	Gunlance	11	Crimson Hornet	598	15	0				Paralysis	330	false		false	12;3;9;3;3;8;2	1	viper;kadachi;paralysis;long6		Long-6		0
+2323	Gunlance	12	Chariot Gun	621	20	0	Fire	330	false					false	7;8;3;6;5;8;3	2	rathalos;fire;long6		Long-6		0
+2326	Gunlance	12	Queen's Panoply	667	15	0				Poison	450	false		false	6;8;3;4;7;12;0	1	rathian;poison;normal6		Normal-6		0
+2328	Gunlance	10	Jyura Demolisher II	598	0	0	Water	420	false					false	9;10;4;5;7;5;0	3;1	jyuratodus;water;wide5		Wide-5	true	0
+2331	Gunlance	11	Ambermarch	575	30	0	Ice	330	false					false	10;3;3;11;4;9;0		barioth;ice;wide5		Wide-5		0
+2333	Gunlance	10	Hoarcry Cannon	529	0	0	Ice	570	false					false	12;3;3;6;5;8;3	1	legiana;ice;normal6		Normal-6	true	0
+2335	Gunlance	10	Hidden Cannon II	529	20	0				Poison	570	true		false	13;2;2;7;4;3;9	1	nargacuga;poison;wide5		Wide-5	true	0
+2338	Gunlance	11	Dragonpike 'Quake' III	644	0	35	Thunder	360	true					false	8;10;4;5;8;5;0	3	bone;thunder;long6		Long-5	true	0
+2340	Gunlance	12	Vorpal Icefort	621	0	0	Ice	270	false					false	13;3;3;6;5;5;5	4	velkhana;ice;normal6		Normal-6		0
+2341	Gunlance	11	Bazelpride	598	-10	0				Blast	270	false		false	16;3;3;7;4;2;5	1;1	bazelgeuse;blast;wide5		Wide-5	true	0
+2343	Gunlance	10	Glutton's Fang II	598	0	0				Sleep	420	true		false	10;8;3;3;8;8;0	3;3	jagras;sleep;normal6		Normal-6	true	0
+2346	Gunlance	11	Tigrex Gunlance	644	-15	0				Blast	360	true		false	5;3;3;11;4;14;0		tigrex;blast;long5		Long-5		0
+2348	Gunlance	12	Flamebite	667	-30	0				Sleep	270	true		false	9;2;3;9;9;4;4		brute;tigrex;sleep;wide5		Wide-5		0
+2350	Gunlance	10	Nightveil Gunlance II	552	20	0				Paralysis	510	false		false	7;10;4;5;10;4;0		girros;paralysis;normal5		Normal-5	true	0
+2352	Gunlance	10	Glavenus Buster II	575	0	0	Fire	390	false					false	12;3;3;6;5;8;3	1;1	glavenus;fire;wide5		Wide-5	true	0
+2353	Gunlance	11	Deathlance Vaal Spysa	575	0	0	Dragon	510	false				Average	false	7;8;3;3;8;11;0	2;2	vaal;hazak;dragon;long6		Long-6	true	0
+2355	Gunlance	11	Acid Buster II	667	0	0				Paralysis	330	true		false	6;5;11;9;6;2;1	4	acidic;glavenus;paralysis;normal6		Normal-6	true	0
+2357	Gunlance	10	Barroth Bluff II	621	-10	25				Paralysis	510	true		false	6;6;6;10;9;3;0	2;2	barroth;paralysis;wide5		Wide-5	true	0
+2359	Gunlance	10	Brachydios Buster II	552	0	0				Blast	480	false		false	9;3;3;11;4;10;0	1	brachydios;blast;normal6		Normal-6	true	0
+2361	Gunlance	10	Mammoth Gunlance II	644	0	0	Ice	510	true					false	8;5;5;8;14;0;0	4	banbaro;ice;normal6		Normal-6		0
+2364	Gunlance	12	Despot's Phlogiston	598	0	0	Thunder	450	false					false	12;3;9;3;3;8;2	2	zinogre;thunder;normal6		Normal-6		0
+2366	Gunlance	10	Anjanath Flamelance II	621	-20	0	Fire	600	false					false	7;10;4;5;9;5;0		anjanath;fire;long5		Long-5	true	0
+2368	Gunlance	10	Ending Fulgur II	575	20	0	Thunder	330	false					false	7;10;4;5;9;5;0	1	fulgur;anjanath;thunder;wide5		Wide-5	true	0
+2370	Gunlance	11	Dragonseal Gunlance II	552	0	0	Dragon	660	false				Average	false	6;6;6;10;9;3;0	1;1	dragonbone;dragon;normal6		Normal-6	true	0
+2371	Gunlance	12	Broken Silence	644	0	30	Dragon	510	true				High	false	16;3;3;6;5;4;3	1;1	shara;ishvalda;dragon;wide5		Wide-5		0
+2372	Gunlance	11	Magda Lahat Reforged	644	-10	45				Blast	450	false		false	13;4;4;7;8;2;2	2	zorah;magdaros;blast;long6		Long-6		0
+2374	Gunlance	12	Black Ephyra	644	15	0	Water	390	false					false	6;8;3;3;8;12;0		namielle;water;normal6		Normal-6		0
+2375	Gunlance	11	Daora's Tempest	598	10	0	Ice	270	false					false	13;3;3;6;5;7;3	3	blacksteel;ice;long5		Long-5		0
+2376	Gunlance	12	Consummate Gunlance	644	-30	0	Dragon	390	false				High	false	15;3;3;7;4;5;3		deviljho;dragon;long6		Long-6		0
+2377	Gunlance	12	Soulfire Talon 'Blaze'	575	20	0				Blast	270	false		false	11;3;9;3;3;9;2	2;1	lunastra;teostra;blast;wide5	guts-1	Wide-5		0
+2378	Gunlance	12	Soulfire Talon 'Ruin'	621	0	0				Blast	210	false		false	11;3;9;3;3;9;2	2;2	lunastra;nergigante;blast;wide5	hastenRecovery-1	Wide-5		0
+2379	Gunlance	12	Soulfire Talon 'Styx'	575	10	0				Blast	330	false		false	11;3;9;3;3;9;2	3;3	lunastra;xeno;jiva;blast;wide5	razorSharpSpareShot-1	Wide-5		0
+2381	Gunlance	11	Gajalaka Firepike	621	0	30	Dragon	450	true				High	false	4;10;4;4;18;0;0	4	workshop;dragon;normal5		Normal-5		0
+3008	Gunlance	12	Great Demon Gunlance	656	-15	0	Thunder	120	false					false	9;10;4;5;7;5;0	4	rajang;thunder;wide6		Wide-6		0
 2384	SwitchAxe	11	Chrome Machina III	945	0	0				Poison	510	true		false	12;3;3;6;5;8;3	1;1	ore;poison		Poison-540	true	0
 2386	SwitchAxe	11	Blackwing Switch Axe II	945	25	0				Poison	240	false		false	15;3;9;3;3;5;2	3	yian;garuga;poison		Power	true	0
 2387	SwitchAxe	12	Ruinous Light	1015	0	0	Dragon	210	false				High	false	8;3;3;11;4;16;0	1	nergigante;dragon		Power		0

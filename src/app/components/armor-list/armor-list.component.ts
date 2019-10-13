@@ -7,6 +7,7 @@ import { DataService } from '../../services/data.service';
 import { SlotService } from '../../services/slot.service';
 import { EquipmentCategoryType } from '../../types/equipment-category.type';
 import { ItemType } from '../../types/item.type';
+import { WeaponType } from '../../types/weapon.type';
 
 @Component({
 	selector: 'mhw-builder-armor-list',
@@ -42,7 +43,7 @@ export class ArmorListComponent implements OnInit {
 	constructor(
 		private slotService: SlotService,
 		public dataService: DataService
-	) {	}
+	) { }
 
 	ngOnInit(): void { }
 
@@ -153,7 +154,7 @@ export class ArmorListComponent implements OnInit {
 		if (this.itemTypeFilters.length == 1) {
 			this.slotService.selectItem(newItem);
 		} else {
-			this.slotService.selectItemByItemType(newItem);
+			this.slotService.selectArmorItemByType(newItem);
 		}
 	}
 
@@ -182,5 +183,39 @@ export class ArmorListComponent implements OnInit {
 		} else {
 			return false;
 		}
+	}
+
+	itemIsSelected(id: number, itemType: ItemType) {
+		let itemId = 0;
+		switch (itemType) {
+			case ItemType.Head:
+				if (this.slotService.headSlot.item) {
+					itemId = this.slotService.headSlot.item.id;
+				}
+				break;
+			case ItemType.Chest:
+				if (this.slotService.chestSlot.item) {
+					itemId = this.slotService.chestSlot.item.id;
+				}
+				break;
+			case ItemType.Hands:
+				if (this.slotService.handsSlot.item) {
+					itemId = this.slotService.handsSlot.item.id;
+				}
+				break;
+			case ItemType.Legs:
+				if (this.slotService.legsSlot.item) {
+					itemId = this.slotService.legsSlot.item.id;
+				}
+				break;
+			case ItemType.Feet:
+				if (this.slotService.feetSlot.item) {
+					itemId = this.slotService.feetSlot.item.id;
+				}
+				break;
+			default:
+				break;
+		}
+		return id == itemId;
 	}
 }

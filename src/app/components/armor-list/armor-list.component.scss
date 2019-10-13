@@ -215,12 +215,18 @@ $listItemHeight: 66px;
 	}
 
 	.scroll-item-container:hover {
-		background-color: #525252;
+		background-color: #4A4A4A;
 	}
 }
 
 .itemSelected {
-	background: $blue;
+	background-color: #52526F !important;
+
+	.name-container {
+		.name {
+			color: lightcoral !important;
+		}
+	}
 }
 
 @media only screen and (max-width: 716px) {

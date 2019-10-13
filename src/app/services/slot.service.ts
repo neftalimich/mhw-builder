@@ -162,6 +162,12 @@ export class SlotService {
 		slot.kinsect = null;
 		this.itemSelected$.next({ slot: slot, equipment: null });
 	}
+	clearArmorSlot(slot: ItemSlotComponent) {
+		this.clearSlotItems(slot);
+
+		slot.item = null;
+		this.itemSelectedNew$.next({ slot: slot, equipment: null });
+	}
 
 	clearDecorationSlot(slot: DecorationSlotComponent) {
 		this.equipmentService.removeDecoration(slot.decoration);
@@ -304,7 +310,7 @@ export class SlotService {
 		}
 	}
 
-	selectItemByItemType(item: ItemModel) {
+	selectArmorItemByType(item: ItemModel) {
 		let slotAux: ItemSlotComponent;
 		switch (item.itemType) {
 			case ItemType.Head:
@@ -325,10 +331,18 @@ export class SlotService {
 			default:
 				break;
 		}
-		this.clearSlotItems(slotAux);
-		this.equipmentService.addItem(item);
-		slotAux.item = item;
-		this.itemSelectedNew$.next({ slot: slotAux, equipment: item });
+		let currentId = 0;
+		if (slotAux.item) {
+			currentId = slotAux.item.id;
+		}
+		if (currentId != item.id) {
+			this.clearSlotItems(slotAux);
+			this.equipmentService.addItem(item);
+			slotAux.item = item;
+			this.itemSelectedNew$.next({ slot: slotAux, equipment: item });
+		} else {
+			this.clearArmorSlot(slotAux);
+		}
 	}
 
 	selectDecoration(decoration: DecorationModel) {
@@ -470,9 +484,6 @@ export class SlotService {
 	}
 
 	private clearSlotItems(slot: ItemSlotComponent) {
-		if (slot.item) {
-			slot.item.selected = false;
-		}
 		this.equipmentService.removeItem(slot.item);
 
 		slot.decorationSlots.forEach(ds => {

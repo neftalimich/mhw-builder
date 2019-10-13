@@ -1,3 +1,5 @@
+@import "../../../sass/variables";
+
 .upgrades-table {
 	width: 100%;
 
@@ -43,13 +45,6 @@
 	cursor:pointer;
 	font-size:14px;
 }
-
-$attack: #f1666b;
-$affinity: #9090d2;
-$defense: #f7a84c;
-$slot: #61a5d4;
-$health: #6dc19e;
-$element: #ede65e;
 
 .hex-gray {
 	color: #202020;

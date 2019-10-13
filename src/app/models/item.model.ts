@@ -57,5 +57,4 @@ export class ItemModel {
 
 	equippedLevel?: number;
 	active: boolean;
-	selected: boolean;
 }
