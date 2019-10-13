@@ -517,7 +517,7 @@ export class CalculationService {
 				stats.totalElementAttack,
 				0,
 				0,
-				stats.effectiveElementalSharpnessModifier,
+				1,
 				auxDivider);
 
 		const trueAilment =
@@ -525,7 +525,7 @@ export class CalculationService {
 				stats.totalAilmentAttack * (100 + stats.effectivePassiveAilmentBuildupPercent) / 100,
 				0,
 				0,
-				stats.effectiveElementalSharpnessModifier,
+				1,
 				auxDivider
 			);
 

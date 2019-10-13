@@ -679,7 +679,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 1886	LongSword	11	Deepest Night	792	20	0				Poison	540	true		false	14;2;1;8;3;4;8		nargacuga;poison				0
 1888	LongSword	10	Brazenreach II	957	-10	35	Fire	240	false					false	10;5;5;8;12;0;0	4;1	uragaan;fire			true	0
 1890	LongSword	10	Glavenus Spada II	825	0	0	Fire	270	false					false	13;3;3;6;5;7;3	1;1	glavenus;fire			true	0
-1893	LongSword	12	Wyvern Blade 'Luna'	957	10	0				Poison	1420	false		false	7;8;3;3;8;11;0	1	rathian;poison				0
+1893	LongSword	12	Wyvern Blade 'Luna'	957	10	0				Poison	420	false		false	7;8;3;3;8;11;0	1	rathian;poison				0
 1896	LongSword	12	Wyvern Blade 'Pale'	891	20	0	Fire	420	false					false	13;3;3;6;5;7;3	2	rathalos;fire				0
 1899	LongSword	11	Grand Khopesh III	924	0	35				Sleep	300	true		false	8;10;4;5;8;5;0	3	bone;sleep			true	0
 1901	LongSword	12	Reverent Elusarca	891	0	0	Ice	270	false					false	14;3;3;6;5;4;5	4	velkhana;ice				0

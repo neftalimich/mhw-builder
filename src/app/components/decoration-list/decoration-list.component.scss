@@ -47,7 +47,7 @@ $searchHeight: 38px;
 	.scroll-item-container {
 		min-height: 32px;
 		display: grid;
-		grid-template-rows: auto max-content;
+		grid-template-rows: auto max-content max-content;
 		grid-gap: 4px;
 		border-radius: 3px;
 		background-color: #323232;
@@ -88,6 +88,40 @@ $searchHeight: 38px;
 			grid-row: 2;
 			display: grid;
 			grid-template-columns: repeat(auto-fill, 1fr);
+			grid-gap: 4px;
+			font-size: 12px;
+
+			.skill-container {
+				background-color: #272727;
+				border-radius: 3px;
+				display: grid;
+				grid-template-columns: min-content auto;
+
+				.count {
+					height: 26px;
+					line-height: 26px;
+					text-align: center;
+					padding: 0 8px;
+					font-weight: 900;
+				}
+
+				.name {
+					border-left: 1px solid #323232;
+					line-height: 26px;
+					text-align: center;
+					font-size: 12px;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					overflow: hidden;
+					padding: 0 8px;
+				}
+			}
+		}
+
+		.skills-container-2 {
+			grid-row: 3;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
 			grid-gap: 4px;
 			font-size: 12px;
 

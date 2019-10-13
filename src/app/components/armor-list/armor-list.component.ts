@@ -61,6 +61,10 @@ export class ArmorListComponent implements OnInit {
 		}
 	}
 
+	onItemListUpdate(items: ItemModel[]) {
+		this.virtualItems = items;
+	}
+
 	loadItems() {
 		this.items = this.dataService.getArmorByType(this.itemType);
 		this.resetSearchResults();
@@ -107,10 +111,6 @@ export class ArmorListComponent implements OnInit {
 		if (this.onlyIceborne) {
 			this.filteredItems = _.reject(this.filteredItems, item => item.id < 1000);
 		}
-	}
-
-	onItemListUpdate(items: ItemModel[]) {
-		this.virtualItems = items;
 	}
 
 	selectItem(item: ItemModel) {

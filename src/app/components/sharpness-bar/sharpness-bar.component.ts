@@ -1,9 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { SharpnessBarModel } from 'src/app/models/sharpness-bar.model';
 import { SharpnessModel } from 'src/app/models/sharpness-model';
-import { StatDetailModel } from 'src/app/models/stat-detail.model';
 import { TooltipService } from 'src/app/services/tooltip.service';
-import { PointerType } from 'src/app/types/pointer.type';
 
 @Component({
 	selector: 'mhw-builder-sharpness-bar',
@@ -109,7 +107,7 @@ export class SharpnessBarComponent implements OnInit {
 		this.sharpnessBar.widthModifier = 5;
 		this.sharpnessBar.levelsMissing = 7 - this._sharpnessLevels.length;
 		this.sharpnessBar.tooltipTemplate +=
-			` | = <span class="sharp-8"> ${((total - sharpnessEmpty) * 10)}`
+			` | <br /> = <br /><span class="sharp-8"> ${((total - sharpnessEmpty) * 10)}`
 			+ ` [<span class="sharp-${this.sharpnessBar.maxColorSharp}">${this.sharpnessBar.maxLevelSharp * 10}<i class="fas fa-circle fa-sm"></i></span>]</span>`;
 		this.sharpnessBar.sharpnessDataNeeded = this.dataNeeded;
 		this.sharpnessBar.color = this.dataNeeded ? 'red' : 'white';
