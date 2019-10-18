@@ -310,7 +310,7 @@ export class SlotService {
 		}
 	}
 
-	selectArmorItemByType(item: ItemModel) {
+	selectArmorItemByType(item: ItemModel, closeModal?: boolean) {
 		let slotAux: ItemSlotComponent;
 		switch (item.itemType) {
 			case ItemType.Head:
@@ -339,7 +339,11 @@ export class SlotService {
 			this.clearSlotItems(slotAux);
 			this.equipmentService.addItem(item);
 			slotAux.item = item;
-			this.itemSelectedNew$.next({ slot: slotAux, equipment: item });
+			if (closeModal) {
+				this.itemSelected$.next({ slot: slotAux, equipment: item });
+			} else {
+				this.itemSelectedNew$.next({ slot: slotAux, equipment: item });
+			}
 		} else {
 			this.clearArmorSlot(slotAux);
 		}

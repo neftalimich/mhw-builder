@@ -124,6 +124,7 @@ export class ArmorListComponent implements OnInit {
 	resetSearchResults() {
 		this.searchBox.nativeElement.value = null;
 		this.filteredItems = this.items;
+		this.applyItemFilter();
 	}
 
 	applyItemFilter() {
@@ -152,7 +153,7 @@ export class ArmorListComponent implements OnInit {
 	selectItem(item: ItemModel) {
 		const newItem = Object.assign({}, item);
 		if (this.itemTypeFilters.length == 1) {
-			this.slotService.selectItem(newItem);
+			this.slotService.selectArmorItemByType(newItem, true);
 		} else {
 			this.slotService.selectArmorItemByType(newItem);
 		}

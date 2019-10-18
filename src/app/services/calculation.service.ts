@@ -117,6 +117,38 @@ export class CalculationService {
 			this.attackCalcs.push(this.getElementAttack(stats, elementCalc));
 		}
 
+		if (stats.element) {
+			if (stats.trueCriticalElement) {
+				this.attackCalcs.push({
+					name: 'Elemental Critical Boost',
+					value: stats.trueCritElementModifier * 100 + '%',
+					icon: stats.element.toLowerCase() + '-gray'
+				});
+			} else if (stats.criticalElement) {
+				this.attackCalcs.push({
+					name: 'Elemental Critical Boost',
+					value: stats.critElementModifier * 100 + '%',
+					icon: stats.element.toLowerCase() + '-gray'
+				});
+			}
+		}
+
+		if (stats.ailment) {
+			if (stats.trueCriticalStatus) {
+				this.attackCalcs.push({
+					name: 'Ailment Critical Boost',
+					value: stats.trueCritStatusModifier * 100 + '%',
+					icon: stats.ailment.toLowerCase() + '-gray'
+				});
+			} else if (stats.criticalStatus) {
+				this.attackCalcs.push({
+					name: 'Ailment Critical Boost',
+					value: stats.critStatusModifier * 100 + '%',
+					icon: stats.ailment.toLowerCase() + '-gray'
+				});
+			}
+		}
+
 		if (stats.elderseal) {
 			this.attackCalcs.push(this.getElderseal(stats));
 		}
