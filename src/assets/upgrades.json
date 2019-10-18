@@ -23,6 +23,12 @@
 				"passiveAttack": 15,
 				"requiredSlots": 2,
 				"totalSlots": 7
+			},
+			{
+				"description": "+20",
+				"passiveAttack": 20,
+				"requiredSlots": 2,
+				"totalSlots": 9
 			}
 		],
 		"customMaxLevel": [ 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6 ]
@@ -51,6 +57,12 @@
 				"passiveAffinity": 20,
 				"requiredSlots": 2,
 				"totalSlots": 6
+			},
+			{
+				"description": "+25",
+				"passiveAffinity": 25,
+				"requiredSlots": 2,
+				"totalSlots": 8
 			}
 		],
 		"customMaxLevel": [ 5, 6, 5, 5, 5, 5, 5, 6, 6, 5, 5, 6, 5, 6 ]
@@ -113,6 +125,12 @@
 				"slotLevel": 3,
 				"requiredSlots": 1,
 				"totalSlots": 7
+			},
+			{
+				"description": "Lv 3 slot",
+				"slotLevel": 4,
+				"requiredSlots": 1,
+				"totalSlots": 8
 			}
 		],
 		"customMaxLevel": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
@@ -141,6 +159,12 @@
 				"healOnHitPercent": 20,
 				"requiredSlots": 2,
 				"totalSlots": 7
+			},
+			{
+				"description": "Heal on hit +25%",
+				"healOnHitPercent": 25,
+				"requiredSlots": 2,
+				"totalSlots": 9
 			}
 		],
 		"customMaxLevel": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]

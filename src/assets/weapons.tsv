@@ -632,7 +632,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 796	SwordAndShield	8	Kjárr Slicer "Water"	252	15	0	Water	330						false	16;7;2;2;9;4	1	kulve;kjarr;water	criticalElement-1			0		
 797	SwordAndShield	8	Witcher's Silver Sword+	266	0	0	Dragon	330					High	false	25;2;2;2;3;11	1	witcher;dragon				0		
 1797	GreatSword	11	Chrome Deathscythe III	1248	0	0				Poison	540	true		false	12;3;3;6;5;8;3	1;1	ore;poison			true	0
-1798	GreatSword	12	Ruinous Atrocity	1344	0	0	Dragon	240	false				High	false	8;3;3;11;4;11;0	1	nergigante;dragon				0
+1798	GreatSword	12	Ruinous Atrocity	1344	0	0	Dragon	240	false				High	false	8;3;3;11;4;16;0	1	nergigante;dragon				0
 1801	GreatSword	11	Severing Bolt II	1200	0	0	Thunder	510	false					false	13;3;9;3;3;7;2	2;1	element;thunder			true	0
 1805	GreatSword	11	Paladire	1200	35	0	Ice	540	false					false	11;3;3;11;4;8;0		element;ice				0
 1807	GreatSword	10	Jagras Deathclaw II	1248	0	0	Water	600	true					false	11;8;3;3;8;7;0	3;3	jagras;water			true	0
@@ -672,7 +672,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 1871	LongSword	11	Iron Eschaton III	858	0	0	Water	270	true					false	12;3;3;6;5;8;3	1;1	ore;water			true	0
 1873	LongSword	11	Daito Wolf	891	25	0				Poison	240	false		false	14;3;9;3;3;6;2	3	yian;garuga;poison				0
 1876	LongSword	12	Despot's Boltbreaker	858	0	0	Thunder	450	false					false	12;3;9;3;3;8;2	2	zinogre;thunder				0
-1877	LongSword	12	Ruinous Extermination	957	0	0	Dragon	180	false				High	false	8;3;3;11;3;12;0	1	nergigante;dragon				0
+1877	LongSword	12	Ruinous Extermination	957	0	0	Dragon	180	false				High	false	8;3;3;11;3;17;0	1	nergigante;dragon				0
 1879	LongSword	10	Blinding Blaze II	858	0	0	Thunder	480	true					false	9;3;3;11;4;10;0	3	tzitziyaku;thunder			true	0
 1881	LongSword	10	Ambertooth II	792	30	0	Ice	300	false					false	11;3;3;11;4;8;0	1	barioth;ice			true	0
 1883	LongSword	10	Rafiq al-Nasr II	825	25	0				Sleep	420	true		false	11;3;3;11;4;8;0		kuluyaku;sleep			true	0
@@ -709,7 +709,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 1942	LongSword	12	Soulfire Lash 'Styx'	825	10	0				Blast	330	false		false	12;3;9;3;3;8;2	3;3	lunastra;xeno;jiva;blast	razorSharpSpareShot-1			0
 3002	LongSword	12	Great Demon Halberd	1023	-15	0	Thunder	120	false					false	10;10;4;5;6;5;0	4	rajang;thunder				0
 1945	SwordAndShield	11	Chrome Knight Sword III	364	0	0				Sleep	330	true		false	11;3;3;6;5;9;3	1;1	ore;sleep			true	0
-1946	SwordAndShield	12	Ruinous Eradication	406	0	0	Dragon	180	false				High	false	7;3;3;11;4;12;0	1	nergigante;dragon				0
+1946	SwordAndShield	12	Ruinous Eradication	406	0	0	Dragon	180	false				High	false	7;3;3;11;4;17;0	1	nergigante;dragon				0
 1949	SwordAndShield	12	Shining Wyvern Blade	378	20	0	Fire	390	false					false	12;3;3;6;5;8;3	2	rathalos;fire				0
 1951	SwordAndShield	11	Legendary Bang	364	0	35	Thunder	450	true					false	13;3;3;6;5;5;5	3	workshop;thunder				0
 1954	SwordAndShield	10	Laguna Blossom II	336	0	0	Water	420	false					false	11;3;3;6;5;7;5	2;1	element;water			true	0
@@ -746,7 +746,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3003	SwordAndShield	12	Banned Rajang Club	434	-15	0	Thunder	90	false					false	9;10;4;5;7;5;0	4	rajang;thunder				0
 2018	DualBlades	11	Chrome Cross III	364	0	0				Poison	360	true		false	10;3;3;6;5;10;3	1;1	ore;poison			true	0
 2021	DualBlades	12	Despot's Blitz	364	0	0	Thunder	240	false					false	11;3;9;3;3;9;2	2	zinogre;thunder				0
-2022	DualBlades	12	Ruinous Decimation	406	0	0	Dragon	180	false				High	false	7;3;3;11;4;12;5	1	nergigante;dragon				0
+2022	DualBlades	12	Ruinous Decimation	406	0	0	Dragon	180	false				High	false	7;3;3;11;4;17;0	1	nergigante;dragon				0
 2024	DualBlades	10	Cross Destroyers II	364	0	0	Thunder	330	true					false	8;3;3;11;4;11;0	3	tzitziyaku;thunder			true	0
 2026	DualBlades	10	Hidden Tomahawk II	322	15	0				Poison	240	true		false	12;2;2;7;4;3;10	1	nargacuga;poison			true	0
 2028	DualBlades	12	Bazel Bombers	364	-10	0				Blast	240	false		false	13;3;3;6;5;5;5	1	bazelgeuse;blast				0
@@ -787,7 +787,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3004	DualBlades	12	Suzuka Otakemaru	434	-10	0	Thunder	90	false					false	8;10;4;5;8;5;0	4	rajang;thunder				0
 2094	Hammer	11	Kurogane III	1352	0	0				Blast	360	true		false	12;3;3;6;5;8;3	1;1	ore;blast			true	0
 2097	Hammer	12	Leonid Starcrusher	1404	20	0	Fire	420	false					false	13;3;3;6;5;7;3	2	rathalos;fire				0
-2098	Hammer	12	Ruinous Obliteration	1508	0	0	Dragon	180	false				High	false	8;3;3;11;4;11;0	1	nergigante;dragon				0
+2098	Hammer	12	Ruinous Obliteration	1508	0	0	Dragon	180	false				High	false	8;3;3;11;4;16;0	1	nergigante;dragon				0
 2100	Hammer	11	Pykrete Punisher	1300	0	0	Ice	510	false					false	6;8;3;3;8;12;0	3	workshop;ice		undefinded		0
 2104	Hammer	11	Aqua Florescence	1300	0	0	Water	600	false					false	12;3;3;6;5;6;5	2;1	element;water				0
 2107	Hammer	10	Glacial Bash III	1248	25	0	Ice	360	false					false	11;3;3;11;4;8;0	1	barioth;ice			true	0
