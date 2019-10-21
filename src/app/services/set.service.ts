@@ -65,7 +65,7 @@ export class SetService {
 			setItem.hashString = setItem.hashString.replace('#v1', '#v2');
 			setItem.weaponType = stats.weaponType;
 			setItem.totalAttack = stats.totalAttack;
-			setItem.affinity = stats.affinity
+			setItem.affinity = stats.affinity;
 			setItem.element = stats.element;
 			setItem.elementAttack = stats.totalElementAttack;
 			setItem.ailment = stats.ailment;

@@ -265,17 +265,17 @@ export class ArmorListComponent implements OnInit {
 				resistance1 = item1.fireResist;
 				resistance2 = item2.fireResist;
 			} else if (type == 'WAT') {
-				resistance1 = item1.waterResist
-				resistance2 = item2.waterResist
+				resistance1 = item1.waterResist;
+				resistance2 = item2.waterResist;
 			} else if (type == 'THU') {
-				resistance1 = item1.thunderResist
-				resistance2 = item2.thunderResist
+				resistance1 = item1.thunderResist;
+				resistance2 = item2.thunderResist;
 			} else if (type == 'ICE') {
-				resistance1 = item1.iceResist
-				resistance2 = item2.iceResist
+				resistance1 = item1.iceResist;
+				resistance2 = item2.iceResist;
 			} else if (type == 'DRA') {
-				resistance1 = item1.dragonResist
-				resistance2 = item2.dragonResist
+				resistance1 = item1.dragonResist;
+				resistance2 = item2.dragonResist;
 			}
 			if (resistance1 > resistance2) {
 				return -1;

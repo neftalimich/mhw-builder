@@ -96,7 +96,7 @@ export class SetListComponent implements OnInit, AfterViewInit {
 			month: '2-digit',
 			day: '2-digit',
 		});
-		const fileName = `mhw-builder-save(${dateNow}).html`;
+		const fileName = `mhworld-builder-save(${dateNow}).html`;
 		const fileString = `
 <!DOCTYPE html>
 
@@ -251,7 +251,7 @@ export class SetListComponent implements OnInit, AfterViewInit {
 			month: '2-digit',
 			day: '2-digit',
 		});
-		const fileName = `mhw-builder-data(${dateNow}).json`;
+		const fileName = `mhworld-builder-data(${dateNow}).json`;
 		const fileString = JSON.stringify(this.sets);
 		const blob = new Blob([fileString], { type: 'application/json' });
 		if (window.navigator && window.navigator.msSaveOrOpenBlob) {
