@@ -37,7 +37,7 @@ export class SetService {
 			const itemGroupRegex = /(i[.]*[^i]*)/g;
 			const itemGroups = buildId.match(itemGroupRegex);
 			let itemGroupsLenght = 0;
-			if ( buildV == '#v2') {
+			if (buildV == '#v2') {
 				itemGroupsLenght = 9;
 			} else if (buildId.substring(0, 3) == '#v1') {
 				itemGroupsLenght = 8;
@@ -59,27 +59,44 @@ export class SetService {
 	save(setName: string, overwrite: boolean = true): number {
 		this.loadSets();
 		let setItem = this.sets.find(s => s.setName === setName);
+		const stats = this.statService.stats;
 		if (setItem && overwrite) {
 			setItem.hashString = location.hash;
 			setItem.hashString = setItem.hashString.replace('#v1', '#v2');
-			setItem.weaponType = this.statService.stats.weaponType;
-			setItem.totalAttack = this.statService.stats.totalAttack;
-			setItem.element = this.statService.stats.element;
-			setItem.elementAttack = this.statService.stats.totalElementAttack;
-			setItem.ailment = this.statService.stats.ailment;
-			setItem.ailmentAttack = this.statService.stats.totalAilmentAttack;
+			setItem.weaponType = stats.weaponType;
+			setItem.totalAttack = stats.totalAttack;
+			setItem.affinity = stats.affinity
+			setItem.element = stats.element;
+			setItem.elementAttack = stats.totalElementAttack;
+			setItem.ailment = stats.ailment;
+			setItem.ailmentAttack = stats.totalAilmentAttack;
+			setItem.defense = stats.defense;
+			setItem.resistances = [
+				stats.fireResist,
+				stats.waterResist,
+				stats.thunderResist,
+				stats.iceResist,
+				stats.dragonResist];
 			setItem.confirm = false;
 			this.selectedSetIndex = this.sets.indexOf(setItem);
 		} else {
 			setItem = {
 				setName: setName,
 				hashString: location.hash.replace('#v1', '#v2'),
-				weaponType: this.statService.stats.weaponType,
-				totalAttack: this.statService.stats.totalAttack,
-				element: this.statService.stats.element,
-				elementAttack: this.statService.stats.totalElementAttack,
-				ailment: this.statService.stats.ailment,
-				ailmentAttack: this.statService.stats.totalAilmentAttack,
+				weaponType: stats.weaponType,
+				totalAttack: stats.totalAttack,
+				affinity: stats.affinity,
+				element: stats.element,
+				elementAttack: stats.totalElementAttack,
+				ailment: stats.ailment,
+				ailmentAttack: stats.totalAilmentAttack,
+				defense: stats.defense,
+				resistances: [
+					stats.fireResist,
+					stats.waterResist,
+					stats.thunderResist,
+					stats.iceResist,
+					stats.dragonResist],
 				confirm: false
 			};
 			this.sets.push(setItem);
@@ -135,54 +152,36 @@ export class SetService {
 		if (weaponType == null) {
 			return -1;
 		}
-		let weaponTypeIndex = -1;
-		switch (weaponType) {
-			case WeaponType.GreatSword:
-				weaponTypeIndex = 0;
-				break;
-			case WeaponType.SwordAndShield:
-				weaponTypeIndex = 1;
-				break;
-			case WeaponType.DualBlades:
-				weaponTypeIndex = 2;
-				break;
-			case WeaponType.LongSword:
-				weaponTypeIndex = 3;
-				break;
-			case WeaponType.Hammer:
-				weaponTypeIndex = 4;
-				break;
-			case WeaponType.HuntingHorn:
-				weaponTypeIndex = 5;
-				break;
-			case WeaponType.Lance:
-				weaponTypeIndex = 6;
-				break;
-			case WeaponType.Gunlance:
-				weaponTypeIndex = 7;
-				break;
-			case WeaponType.SwitchAxe:
-				weaponTypeIndex = 8;
-				break;
-			case WeaponType.ChargeBlade:
-				weaponTypeIndex = 9;
-				break;
-			case WeaponType.InsectGlaive:
-				weaponTypeIndex = 10;
-				break;
-			case WeaponType.Bow:
-				weaponTypeIndex = 11;
-				break;
-			case WeaponType.LightBowgun:
-				weaponTypeIndex = 12;
-				break;
-			case WeaponType.HeavyBowgun:
-				weaponTypeIndex = 13;
-				break;
-			default:
-				weaponTypeIndex = -1;
-				break;
+		if (weaponType == WeaponType.GreatSword) {
+			return 0;
+		} else if (weaponType == WeaponType.SwordAndShield) {
+			return 1;
+		} else if (weaponType == WeaponType.DualBlades) {
+			return 2;
+		} else if (weaponType == WeaponType.LongSword) {
+			return 3;
+		} else if (weaponType == WeaponType.Hammer) {
+			return 4;
+		} else if (weaponType == WeaponType.HuntingHorn) {
+			return 5;
+		} else if (weaponType == WeaponType.Lance) {
+			return 6;
+		} else if (weaponType == WeaponType.Gunlance) {
+			return 7;
+		} else if (weaponType == WeaponType.SwitchAxe) {
+			return 8;
+		} else if (weaponType == WeaponType.ChargeBlade) {
+			return 9;
+		} else if (weaponType == WeaponType.InsectGlaive) {
+			return 10;
+		} else if (weaponType == WeaponType.Bow) {
+			return 11;
+		} else if (weaponType == WeaponType.LightBowgun) {
+			return 12;
+		} else if (weaponType == WeaponType.HeavyBowgun) {
+			return 13;
+		} else {
+			return -1;
 		}
-		return weaponTypeIndex;
 	}
 }

@@ -18,7 +18,7 @@ $listItemHeight: 66px;
 	padding: 0 0 0 12px;
 	border-radius: 3px;
 	display: grid;
-	grid-template-columns: auto min-content min-content min-content;
+	grid-template-columns: auto min-content min-content min-content min-content;
 	height: $searchHeight;
 
 	input {
@@ -34,6 +34,11 @@ $listItemHeight: 66px;
 	}
 
 	.iceborne-button {
+		padding-top: 4px;
+		height: $searchHeight;
+	}
+
+	.sort-button {
 		padding-top: 4px;
 		height: $searchHeight;
 	}
@@ -72,8 +77,33 @@ $listItemHeight: 66px;
 	}
 }
 
-.scroll-container {
+.sort-container {
 	grid-row: 3;
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+
+	.selected > img {
+		background: $blue;
+		border-radius: 3px;
+	}
+
+	.selected > span {
+		color: $blue;
+	}
+
+	.item-sort {
+		padding: 4px;
+		height: 25px;
+
+		img {
+			padding: 2px;
+			height: 14px;
+		}
+	}
+}
+
+.scroll-container {
+	grid-row: 4;
 	overflow-y: auto;
 	border-radius: 3px;
 

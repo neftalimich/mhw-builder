@@ -49,7 +49,7 @@ export class WeaponListComponent implements OnInit {
 	weaponTypeFilter?: WeaponType;
 	weaponTypeSort: String;
 
-	hideFilterContainer = false;
+	showFilterContainer = true;
 	showSortContainer = false;
 
 	childHeight: number;

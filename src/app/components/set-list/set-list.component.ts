@@ -104,10 +104,10 @@ export class SetListComponent implements OnInit, AfterViewInit {
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>MHW-Builder SetList</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.7/angular.min.js"></script>
+    <title>MHWorld-Builder SetList</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.7/angular.min.js" crossorigin="anonymous"></script>
     <style>
         a {
             color: cornflowerblue;
@@ -145,7 +145,7 @@ export class SetListComponent implements OnInit, AfterViewInit {
     <div class="container-fluid" ng-controller="SetListController">
         <div class="row">
             <div class="col-12">
-                <h2>MHW-Builder</h2>
+                <h2>MHWorld-Builder</h2>
                 <div class="input-group mb-2">
                     <select class="custom-select" id="weaponFilter" ng-model="weaponFilter">
                         <option value="" selected></option>
@@ -187,6 +187,9 @@ export class SetListComponent implements OnInit, AfterViewInit {
 											-->{{item.ailment && item.element ? '/' : ''}}<!--
 											--><span class="{{item.ailment}}" title="{{item.ailment}}">{{item.ailment ? item.ailmentAttack : ''}}</span>)
                                         </span>
+										<span class="text-muted" style="font-size:12px;">
+											{{item.affinity}}%
+										</span>
                                     </span>
                                 </span>
                             </h6>
@@ -194,11 +197,25 @@ export class SetListComponent implements OnInit, AfterViewInit {
                                 <small class="text-muted text-capitalize">
                                     {{item.weaponType}}
                                 </small>
+								<span style="font-size:10px;">
+									<span class="float-right text-muted mt-2" ng-show="item.resistances.length > 0">
+										[
+										<span class="Fire">{{item.resistances[0]}}</span>,
+										<span class="Water">{{item.resistances[1]}}</span>,
+										<span class="Thunder">{{item.resistances[2]}}</span>,
+										<span class="Ice">{{item.resistances[3]}}</span>,
+										<span class="Dragon">{{item.resistances[4]}}</span>
+										] ➟ <span>{{item.defense[2]}} DEF</span>
+									</span>
+                                </span>
                             </p>
                         </div>
                     </div>
                 </div>
-                <span class="text-muted float-right" style="font-size:11px">By Neftalí Michelet (neftalimich)</span>
+                <span class="text-muted float-right" style="font-size:11px">
+					By Neftalí Michelet (neftalimich)
+					<a href="https://neftalimich.github.io/mhw-builder-page/">Site</a>.
+				</span>
             </div>
         </div>
     </div>

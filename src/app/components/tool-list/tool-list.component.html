@@ -12,6 +12,18 @@
 		</button>
 	</div>
 
+	<div class="sort-container" *ngIf="showSortContainer">
+		<button type="button" class="item-sort" [class.selected]="typeSort == 'DUR'" (click)="sortByDuration()">
+			<span>DUR</span>
+		</button>
+		<button type="button" class="item-sort" [class.selected]="typeSort == 'REC'" (click)="sortByRecharge()">
+			<span>REC</span>
+		</button>
+		<button type="button" class="item-sort" [class.selected]="typeSort == 'SLOT'" (click)="sortBySlots()">
+			<span>SLOT</span>
+		</button>
+	</div>
+
 	<virtual-scroller id="items-list" #itemList class="scroll-container" *ngIf="items" [items]="filteredItems" (vsUpdate)="onItemListUpdate($event)">
 		<div *ngFor="let item of virtualItems" class="scroll-item-container" (click)="selectItem(item)">
 			<div class="name-container">
@@ -44,7 +56,7 @@
 					<div class="icon-container">
 						<img src="assets/images/tool-recharge-icon.png" alt="recharge">
 					</div>
-					<div class="stat-value">{{item.recharge}}%</div>
+					<div class="stat-value">{{item.recharge}}</div>
 				</div>
 			</div>
 		</div>

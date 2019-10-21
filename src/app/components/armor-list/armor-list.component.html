@@ -5,7 +5,10 @@
 			<i class="fas fa-toggle-on" [hidden]="!onlyIceborne"></i>
 			<i class="fas fa-toggle-off" [hidden]="onlyIceborne"></i>
 		</button>
-		<button type="button" class="filter-button" (click)="hideFilterContainer=!hideFilterContainer">
+		<button type="button" class="sort-button" (click)="showSortContainer=!showSortContainer">
+			<i class="fas fa-sort-amount-up"></i>
+		</button>
+		<button type="button" class="filter-button" (click)="showFilterContainer=!showFilterContainer">
 			<i class="fas fa-filter"></i>
 		</button>
 		<button type="button" class="clear-button" (click)="resetSearchResults()">
@@ -13,7 +16,7 @@
 		</button>
 	</div>
 
-	<div class="filter-container" *ngIf="!hideFilterContainer">
+	<div class="filter-container" *ngIf="showFilterContainer">
 		<button type="button" class="armor-filter" [class.selected]="itemTypeIsSelected('Head')" (click)="addItemTypeFilter('Head')" title="Head">
 			<img src="assets/images/armor/head-icon.png" alt="Head">
 		</button>
@@ -28,6 +31,30 @@
 		</button>
 		<button type="button" class="armor-filter" [class.selected]="itemTypeIsSelected('Feet')" (click)="addItemTypeFilter('Feet')" title="Feet">
 			<img src="assets/images/armor/feet-icon.png" alt="Feet">
+		</button>
+	</div>
+
+	<div class="sort-container" *ngIf="showSortContainer">
+		<button type="button" class="item-sort" [class.selected]="typeSort == 'DEF'" (click)="sortByDefense()">
+			<span>DEF</span>
+		</button>
+		<button type="button" class="item-sort" [class.selected]="typeSort == 'FIR'" (click)="sortByResistance('FIR')">
+			<span>FIR</span>
+		</button>
+		<button type="button" class="item-sort" [class.selected]="typeSort == 'WAT'" (click)="sortByResistance('WAT')">
+			<span>WAT</span>
+		</button>
+		<button type="button" class="item-sort" [class.selected]="typeSort == 'THU'" (click)="sortByResistance('THU')">
+			<span>THU</span>
+		</button>
+		<button type="button" class="item-sort" [class.selected]="typeSort == 'ICE'" (click)="sortByResistance('ICE')">
+			<span>ICE</span>
+		</button>
+		<button type="button" class="item-sort" [class.selected]="typeSort == 'DRA'" (click)="sortByResistance('DRA')">
+			<span>DRA</span>
+		</button>
+		<button type="button" class="item-sort" [class.selected]="typeSort == 'SLOT'" (click)="sortBySlots()">
+			<span>SLOT</span>
 		</button>
 	</div>
 

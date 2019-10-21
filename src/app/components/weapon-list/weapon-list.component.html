@@ -8,7 +8,7 @@
 		<button type="button" class="sort-button" (click)="showSortContainer=!showSortContainer">
 			<i class="fas fa-sort-amount-up"></i>
 		</button>
-		<button type="button" class="filter-button" (click)="hideFilterContainer=!hideFilterContainer">
+		<button type="button" class="filter-button" (click)="showFilterContainer=!showFilterContainer">
 			<i class="fas fa-filter"></i>
 		</button>
 		<button type="button" class="clear-button" (click)="resetSearchResults()">
@@ -16,7 +16,7 @@
 		</button>
 	</div>
 
-	<div class="filter-container" *ngIf="itemType == 'Weapon' && !hideFilterContainer">
+	<div class="filter-container" *ngIf="itemType == 'Weapon' && showFilterContainer">
 		<button type="button" class="weapon-filter" [class.selected]="weaponTypeFilter == 'GreatSword'" (click)="weaponFilterClicked('GreatSword')" title="Great Sword">
 			<img src="assets/images/weapons/greatsword-icon.png" alt="greatsword">
 		</button>

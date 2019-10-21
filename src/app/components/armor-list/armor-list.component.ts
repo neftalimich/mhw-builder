@@ -7,7 +7,6 @@ import { DataService } from '../../services/data.service';
 import { SlotService } from '../../services/slot.service';
 import { EquipmentCategoryType } from '../../types/equipment-category.type';
 import { ItemType } from '../../types/item.type';
-import { WeaponType } from '../../types/weapon.type';
 
 @Component({
 	selector: 'mhw-builder-armor-list',
@@ -18,7 +17,9 @@ export class ArmorListComponent implements OnInit {
 	public equipmentCategoryType = EquipmentCategoryType;
 	private _itemTypeFilters: ItemType[];
 	onlyIceborne = true;
-	hideFilterContainer = true;
+	typeSort: string;
+	showFilterContainer = false;
+	showSortContainer = true;
 
 	@Input()
 	set itemTypeFilters(itemTypeFilters: ItemType[]) {
@@ -114,6 +115,11 @@ export class ArmorListComponent implements OnInit {
 						}
 					}
 				}
+				this.filteredItems.sort((a, b) => {
+					return (this.getItemTypeIndex(a.itemType) > this.getItemTypeIndex(b.itemType)) ?
+						1 : ((this.getItemTypeIndex(b.itemType) > this.getItemTypeIndex(a.itemType)) ?
+							-1 : 0);
+				});
 			}
 		} else {
 			this.resetSearchResults();
@@ -218,5 +224,103 @@ export class ArmorListComponent implements OnInit {
 				break;
 		}
 		return id == itemId;
+	}
+
+	getItemTypeIndex(type: ItemType): number {
+		if (type == ItemType.Head) {
+			return 1;
+		} else if (type == ItemType.Chest) {
+			return 2;
+		} else if (type == ItemType.Hands) {
+			return 3;
+		} else if (type == ItemType.Legs) {
+			return 4;
+		} else if (type == ItemType.Feet) {
+			return 5;
+		} else {
+			return 0;
+		}
+	}
+
+	sortByDefense() {
+		this.typeSort = 'DEF';
+		this.filteredItems.sort(function (item1, item2) {
+			if (item1.defense[2] > item2.defense[2]) {
+				return -1;
+			} else if (item1.defense[2] < item2.defense[2]) {
+				return 1;
+			} else {
+				return 0;
+			}
+		});
+		this.virtualItems = this.filteredItems;
+	}
+
+	sortByResistance(type: string) {
+		this.typeSort = type;
+		this.filteredItems.sort(function (item1, item2) {
+			let resistance1 = 0;
+			let resistance2 = 0;
+			if (type == 'FIR') {
+				resistance1 = item1.fireResist;
+				resistance2 = item2.fireResist;
+			} else if (type == 'WAT') {
+				resistance1 = item1.waterResist
+				resistance2 = item2.waterResist
+			} else if (type == 'THU') {
+				resistance1 = item1.thunderResist
+				resistance2 = item2.thunderResist
+			} else if (type == 'ICE') {
+				resistance1 = item1.iceResist
+				resistance2 = item2.iceResist
+			} else if (type == 'DRA') {
+				resistance1 = item1.dragonResist
+				resistance2 = item2.dragonResist
+			}
+			if (resistance1 > resistance2) {
+				return -1;
+			} else if (resistance1 < resistance2) {
+				return 1;
+			} else {
+				return 0;
+			}
+		});
+		this.virtualItems = this.filteredItems;
+	}
+
+	sortBySlots() {
+		this.typeSort = 'SLOT';
+		this.filteredItems.sort(function (item1, item2) {
+			let slotValue1 = 0;
+			let slotValue2 = 0;
+
+			if (item1.slots.length > 0) {
+				slotValue1 += item1.slots[0].level * 100;
+			}
+			if (item1.slots.length > 1) {
+				slotValue1 += item1.slots[1].level * 10;
+			}
+			if (item1.slots.length > 2) {
+				slotValue1 += item1.slots[2].level;
+			}
+			if (item2.slots.length > 0) {
+				slotValue2 += item2.slots[0].level * 100;
+			}
+			if (item2.slots.length > 1) {
+				slotValue2 += item2.slots[1].level * 10;
+			}
+			if (item2.slots.length > 2) {
+				slotValue2 += item2.slots[2].level;
+			}
+
+			if (slotValue1 > slotValue2) {
+				return -1;
+			} else if (slotValue1 < slotValue2) {
+				return 1;
+			} else {
+				return 0;
+			}
+		});
+		this.virtualItems = this.filteredItems;
 	}
 }
