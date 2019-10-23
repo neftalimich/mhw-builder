@@ -60,7 +60,13 @@ export class ArmorListComponent implements OnInit {
 
 	loadItems() {
 		this.itemsAll = this.dataService.getArmors();
+		this.itemsAll.sort((a, b) => {
+			return (this.getItemTypeIndex(a.itemType) > this.getItemTypeIndex(b.itemType)) ?
+				1 : ((this.getItemTypeIndex(b.itemType) > this.getItemTypeIndex(a.itemType)) ?
+					-1 : 0);
+		});
 		this.items = this.itemsAll.filter(f => f.id > 1000);
+
 		this.filteredItems = this.items;
 		this.applyItemFilter();
 		setTimeout(() => this.searchBox.nativeElement.focus(), 250);
@@ -115,11 +121,6 @@ export class ArmorListComponent implements OnInit {
 						}
 					}
 				}
-				this.filteredItems.sort((a, b) => {
-					return (this.getItemTypeIndex(a.itemType) > this.getItemTypeIndex(b.itemType)) ?
-						1 : ((this.getItemTypeIndex(b.itemType) > this.getItemTypeIndex(a.itemType)) ?
-							-1 : 0);
-				});
 			}
 		} else {
 			this.resetSearchResults();

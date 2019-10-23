@@ -666,7 +666,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 1862	GreatSword	12	Consummate Blade	1344	-30	0	Dragon	390	false				High	false	16;3;3;6;5;4;3		deviljho;dragon				0
 1863	GreatSword	12	Soulfire Edge 'Blaze'	1200	25	0				Blast	390	false		false	12;3;9;3;3;8;2	2;1	lunastra;teostra;blast	guts-1			0
 1864	GreatSword	12	Soulfire Edge 'Ruin'	1296	0	0				Blast	330	false		false	12;3;9;3;3;8;2	2;2	lunastra;nergigante;blast	hastenRecovery-1			0
-1865	GreatSword	12	Soulfire Edge 'Styx'	1200	15	0				Blast	480	false		false	12;3;9;3;3;8;2	3;3	lunastra;xeno;jiva;blast		razorSharpSpareShot-1		0
+1865	GreatSword	12	Soulfire Edge 'Styx'	1200	15	0				Blast	480	false		false	12;3;9;3;3;8;2	3;3	lunastra;xenojiva;blast		razorSharpSpareShot-1		0
 1868	GreatSword	11	Xiphias Gladius	1152	0	0	Ice	690	false					false	7;3;3;11;4;12;0	1	workshop;ice				0
 3001	GreatSword	12	Great Demon Rod	1488	-15	0	Thunder	180	false					false	10;10;4;5;6;5;0	4	rajang;thunder				0
 1871	LongSword	11	Iron Eschaton III	858	0	0	Water	270	true					false	12;3;3;6;5;8;3	1;1	ore;water			true	0
@@ -706,7 +706,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 1939	LongSword	12	Consummate Katana	924	-30	0	Dragon	330	false				High	false	16;3;3;6;5;4;3		deviljho;dragon				0
 1940	LongSword	12	Soulfire Lash 'Blaze'	825	20	0				Blast	270	false		false	12;3;9;3;3;8;2	2;1	lunastra;teostra;blast	guts-1			0
 1941	LongSword	12	Soulfire Lash 'Ruin'	891	0	0				Blast	210	false		false	12;3;9;3;3;8;2	2;2	lunastra;nergigante;blast	hastenRecovery-1			0
-1942	LongSword	12	Soulfire Lash 'Styx'	825	10	0				Blast	330	false		false	12;3;9;3;3;8;2	3;3	lunastra;xeno;jiva;blast	razorSharpSpareShot-1			0
+1942	LongSword	12	Soulfire Lash 'Styx'	825	10	0				Blast	330	false		false	12;3;9;3;3;8;2	3;3	lunastra;xenojiva;blast	razorSharpSpareShot-1			0
 3002	LongSword	12	Great Demon Halberd	1023	-15	0	Thunder	120	false					false	10;10;4;5;6;5;0	4	rajang;thunder				0
 1945	SwordAndShield	11	Chrome Knight Sword III	364	0	0				Sleep	330	true		false	11;3;3;6;5;9;3	1;1	ore;sleep			true	0
 1946	SwordAndShield	12	Ruinous Eradication	406	0	0	Dragon	180	false				High	false	7;3;3;11;4;17;0	1	nergigante;dragon				0
@@ -742,7 +742,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2012	SwordAndShield	12	Fate's Shear	392	-20	0	Dragon	240	false				High	false	15;3;3;6;5;5;3		deviljho;dragon				0
 2013	SwordAndShield	12	Soulfire Barb 'Blaze'	350	20	0				Blast	180	false		false	12;3;3;6;5;8;3	2;1	lunastra;teostra;blast	guts-1			0
 2014	SwordAndShield	12	Soulfire Barb 'Ruin'	378	0	0				Blast	150	false		false	12;3;3;6;5;8;3	2;2	lunastra;nergigante;blast	hastenRecovery-1			0
-2015	SwordAndShield	12	Soulfire Barb 'Styx'	350	10	0				Blast	240	false		false	12;3;3;6;5;8;3	3;3	lunastra;xeno;jiva;blast	razorSharpSpareShot-1			0
+2015	SwordAndShield	12	Soulfire Barb 'Styx'	350	10	0				Blast	240	false		false	12;3;3;6;5;8;3	3;3	lunastra;xenojiva;blast	razorSharpSpareShot-1			0
 3003	SwordAndShield	12	Banned Rajang Club	434	-15	0	Thunder	90	false					false	9;10;4;5;7;5;0	4	rajang;thunder				0
 2018	DualBlades	11	Chrome Cross III	364	0	0				Poison	360	true		false	10;3;3;6;5;10;3	1;1	ore;poison			true	0
 2021	DualBlades	12	Despot's Blitz	364	0	0	Thunder	240	false					false	11;3;9;3;3;9;2	2	zinogre;thunder				0
@@ -782,7 +782,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2087	DualBlades	12	Consummate Pair	392	-15	0	Dragon	210	false				High	false	14;3;3;6;5;4;5		deviljho;dragon				0
 2088	DualBlades	12	Soulfire Fangs 'Blaze'	350	20	0				Blast	120	false		false	11;3;3;6;5;9;3	2;1	lunastra;teostra;blast	guts-1			0
 2089	DualBlades	12	Soulfire Fangs 'Ruin'	378	0	0				Blast	90	false		false	11;3;3;6;5;9;3	2;2	lunastra;nergigante;blast	hastenRecovery-1			0
-2090	DualBlades	12	Soulfire Fangs 'Styx'	350	10	0				Blast	150	false		false	11;3;3;6;5;9;3	3;3	lunastra;xeno;jiva;blast	razorSharpSpareShot-1			0
+2090	DualBlades	12	Soulfire Fangs 'Styx'	350	10	0				Blast	150	false		false	11;3;3;6;5;9;3	3;3	lunastra;xenojiva;blast	razorSharpSpareShot-1			0
 2091	DualBlades	11	Downy Paradise	364	0	0				Sleep	180	false		false	4;8;3;3;8;14;0		workshop;sleep				0
 3004	DualBlades	12	Suzuka Otakemaru	434	-10	0	Thunder	90	false					false	8;10;4;5;8;5;0	4	rajang;thunder				0
 2094	Hammer	11	Kurogane III	1352	0	0				Blast	360	true		false	12;3;3;6;5;8;3	1;1	ore;blast			true	0
@@ -795,7 +795,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2111	Hammer	10	Nyx Hammer II	1248	0	0				Sleep	450	false		false	7;8;3;3;8;11;0	2	nightshade;paoulumu;sleep			true	0
 2113	Hammer	10	Buona Florescenza	1300	0	0				Poison	660	false		false	2;3;3;6;5;6;5	2;2	pukei;poison				0
 2116	Hammer	11	Night Eternal	1248	20	0				Poison	450	true		false	14;2;2;7;4;3;8		nargacuga;poison				0
-2120	Hammer	12	Despot's Crackle	1352	0	0	Thunder	450	false					false	12;3;9;3;3;8;2	2	elemental;thunder				0
+2120	Hammer	12	Despot's Crackle	1352	0	0	Thunder	450	false					false	12;3;9;3;3;8;2	2	element;thunder				0
 2123	Hammer	11	Earth Ender III	1456	0	35	Thunder	450	true					false	9;10;4;5;7;5;0	3	bone;thunder			true	0
 2125	Hammer	12	Victorious Northlein	1404	0	0	Ice	330	false					false	14;3;3;7;4;4;5	4	velkhana;ice				0
 2127	Hammer	12	Pandemonium Unleashed	1352	0	0	Dragon	510	false				Average	false	7;8;3;3;8;11;0	2;2	vaal;hazak;dragon				0
@@ -820,7 +820,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2162	Hammer	12	Consummate Hammer	1456	-30	0	Dragon	360	false				High	false	16;3;3;6;5;4;3		deviljho;dragon				0
 2163	Hammer	12	Soulfire Heel 'Blaze'	1300	20	0				Blast	270	false		false	12;3;9;3;3;8;2	2;1	lunastra;teostra;blast	guts-1			0
 2164	Hammer	12	Soulfire Heel 'Ruin'	1404	0	0				Blast	210	false		false	12;3;9;3;3;8;2	2;2	lunastra;nergigante;blast	hastenRecovery-1			0
-2165	Hammer	12	Soulfire Heel 'Styx'	1300	10	0				Blast	330	false		false	12;3;9;3;3;8;2	3;3	lunastra;xeno;jiva;blast	razorSharpSpareShot-1			0
+2165	Hammer	12	Soulfire Heel 'Styx'	1300	10	0				Blast	330	false		false	12;3;9;3;3;8;2	3;3	lunastra;xenojiva;blast	razorSharpSpareShot-1			0
 2166	Hammer	11	Bristly Inferno	1352	0	0				Poison	360	false		false	6;3;3;11;4;13;0		workshop;poison				0
 3005	Hammer	12	Mane Malice Rajang	1612	-15	0	Thunder	120	false					false	10;10;4;5;6;5;0	4	rajang;thunder				0
 2169	HuntingHorn	11	Sforzando III	1092	0	0				Paralysis	360	true		false	12;3;3;6;5;8;3	1;1	ore;paralysis			true	0
@@ -857,7 +857,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2234	HuntingHorn	12	Fate's Dirge	1176	-30	0	Dragon	330	false				High	false	16;3;3;6;5;4;3		deviljho;dragon				0
 2235	HuntingHorn	12	Soulfire Chorus 'Blaze'	1050	20	0				Blast	270	false		false	12;3;9;3;3;8;2	2;1	lunastra;teostra;blast	guts-1			0
 2236	HuntingHorn	12	Soulfire Chorus 'Ruin'	1134	0	0				Blast	210	false		false	12;3;9;3;3;8;2	2;2	lunastra;nergigante;blast	hastenRecovery-1			0
-2237	HuntingHorn	12	Soulfire Chorus 'Styx'	1050	10	0				Blast	330	false		false	12;3;9;3;3;8;2	3;3	lunastra;xeno;jiva;blast	razorSharpSpareShot-1			0
+2237	HuntingHorn	12	Soulfire Chorus 'Styx'	1050	10	0				Blast	330	false		false	12;3;9;3;3;8;2	3;3	lunastra;xenojiva;blast	razorSharpSpareShot-1			0
 3006	HuntingHorn	12	Denden Doomsounder	1302	-15	0	Thunder	120	false					false	10;10;4;5;6;5;0	4	rajang;thunder				0
 2240	Lance	11	Chrome Drill III	598	0	0				Paralysis	360	true		false	12;3;3;6;5;8;3	1;1	ore;paralysis			true	0
 2242	Lance	11	Incessant Wolf	621	25	0				Poison	240	false		false	15;3;9;3;3;5;2	3	yian;garuga;poison				0
@@ -894,7 +894,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2304	Lance	12	Fate's Spindle	644	-30	0	Dragon	360	false				High	false	16;3;3;6;5;4;3		deviljho;dragon				0
 2305	Lance	12	Soulfire Spike 'Blaze'	575	20	0				Blast	270	false		false	12;3;9;3;3;8;2	2;1	lunastra;teostra;blast	guts-1			0
 2306	Lance	12	Soulfire Spike 'Ruin'	621	0	0				Blast	210	false		false	12;3;9;3;3;8;2	2;2	lunastra;nergigante;blast	hastenRecovery-1			0
-2307	Lance	12	Soulfire Spike 'Styx'	575	10	0				Blast	330	false		false	12;3;9;3;3;8;2	3;3	lunastra;xeno;jiva;blast	razorSharpSpareShot-1			0
+2307	Lance	12	Soulfire Spike 'Styx'	575	10	0				Blast	330	false		false	12;3;9;3;3;8;2	3;3	lunastra;xenojiva;blast	razorSharpSpareShot-1			0
 2308	Lance	11	Shining Star Lance	598	0	0				Paralysis	300	false		false	6;8;3;3;8;12;0		workshop;paralysis				0
 2309	Lance	11	Sweeping Gale Lance	598	0	0				Sleep	270	false		false	7;8;3;3;8;11;0		workshop;sleep				0
 3007	Lance	12	Great Demon Lance	713	-15	0	Thunder	120	false					false	10;10;4;5;6;5;0	4	rajang;thunder				0
@@ -933,7 +933,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2376	Gunlance	12	Consummate Gunlance	644	-30	0	Dragon	390	false				High	false	15;3;3;7;4;5;3		deviljho;dragon;long6		Long-6		0
 2377	Gunlance	12	Soulfire Talon 'Blaze'	575	20	0				Blast	270	false		false	11;3;9;3;3;9;2	2;1	lunastra;teostra;blast;wide5	guts-1	Wide-5		0
 2378	Gunlance	12	Soulfire Talon 'Ruin'	621	0	0				Blast	210	false		false	11;3;9;3;3;9;2	2;2	lunastra;nergigante;blast;wide5	hastenRecovery-1	Wide-5		0
-2379	Gunlance	12	Soulfire Talon 'Styx'	575	10	0				Blast	330	false		false	11;3;9;3;3;9;2	3;3	lunastra;xeno;jiva;blast;wide5	razorSharpSpareShot-1	Wide-5		0
+2379	Gunlance	12	Soulfire Talon 'Styx'	575	10	0				Blast	330	false		false	11;3;9;3;3;9;2	3;3	lunastra;xenojiva;blast;wide5	razorSharpSpareShot-1	Wide-5		0
 2381	Gunlance	11	Gajalaka Firepike	621	0	30	Dragon	450	true				High	false	4;10;4;4;18;0;0	4	workshop;dragon;normal5		Normal-5		0
 3008	Gunlance	12	Great Demon Gunlance	656	-15	0	Thunder	120	false					false	9;10;4;5;7;5;0	4	rajang;thunder;wide6		Wide-6		0
 2384	SwitchAxe	11	Chrome Machina III	945	0	0				Poison	510	true		false	12;3;3;6;5;8;3	1;1	ore;poison		Poison-540	true	0
@@ -974,7 +974,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2454	SwitchAxe	12	Saligia Vileaxe	980	-30	0	Dragon	330	false				High	false	16;3;3;6;5;4;3		deviljho;dragon		Power		0
 2455	SwitchAxe	12	Soulfire Scourge 'Blaze'	875	20	0				Blast	270	false		false	12;3;9;3;3;8;2	2;1	lunastra;teostra;blast	guts-1	Power		0
 2456	SwitchAxe	12	Soulfire Scourge 'Ruin'	945	0	0				Blast	210	false		false	12;3;9;3;3;8;2	2;2	lunastra;nergigante;blast	hastenRecovery-1	Power		0
-2457	SwitchAxe	12	Soulfire Scourge 'Styx'	875	10	0				Blast	330	false		false	12;3;9;3;3;8;2	3;3	lunastra;xeno;jiva;blast	razorSharpSpareShot-1	Power		0
+2457	SwitchAxe	12	Soulfire Scourge 'Styx'	875	10	0				Blast	330	false		false	12;3;9;3;3;8;2	3;3	lunastra;xenojiva;blast	razorSharpSpareShot-1	Power		0
 3009	SwitchAxe	12	Undying Light	1085	-15	0	Thunder	120	false					false	10;10;4;5;6;5;0	4	rajang;thunder		Power		0
 2460	ChargeBlade	11	Chrome Fortress III	972	0	0	Thunder	360	true					false	13;3;3;6;5;7;3	1;1	ore;thunder		Impact	true	0
 2463	ChargeBlade	12	Despot's Thundergale	936	0	0	Thunder	390	false					false	11;3;9;3;3;9;2	2	zinogre;thunder		Power Element		0
@@ -1009,7 +1009,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2519	ChargeBlade	12	Fate's Curtain	1008	-30	0	Dragon	270	false				High	false	15;3;3;6;5;5;3		deviljho;dragon		Power Element		0
 2520	ChargeBlade	12	Soulfire Brand 'Blaze'	900	20	0				Blast	180	false		false	11;3;9;3;3;9;2	2;1	lunastra;teostra;blast	guts-1	Impact		0
 2521	ChargeBlade	12	Soulfire Brand 'Ruin'	972	0	0				Blast	150	false		false	11;3;9;3;3;9;2	2;2	lunastra;nergigante;blast	hastenRecovery-1	Impact		0
-2522	ChargeBlade	12	Soulfire Brand 'Styx'	900	10	0				Blast	240	false		false	11;3;9;3;3;9;2	3;3	lunastra;xeno;jiva;blast	razorSharpSpareShot-1	Impact		0
+2522	ChargeBlade	12	Soulfire Brand 'Styx'	900	10	0				Blast	240	false		false	11;3;9;3;3;9;2	3;3	lunastra;xenojiva;blast	razorSharpSpareShot-1	Impact		0
 3010	ChargeBlade	12	Rajang Beastblade Ikazuchi	1116	-15	0	Thunder	120	false					false	9;10;4;5;7;5;0	4	rajang;thunder		Impact		0
 2525	InsectGlaive	11	Chrome Trident III	806	0	0				Blast	360	true		false	11;3;3;6;5;9;3	1;1	ore;blast		Sever	true	0
 2528	InsectGlaive	12	Despot's Twinbolt	806	0	0	Thunder	360	false					false	11;3;9;3;3;9;2	2	zinogre;thunder		Spirit & Strength Boost		0
@@ -1047,7 +1047,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2591	InsectGlaive	12	Fate's Wing	868	-25	0	Dragon	270	false				High	false	15;3;3;6;5;5;3		deviljho;dragon		Stamina Upgrade & Healing		0
 2592	InsectGlaive	12	Soulfire Reach 'Blaze'	775	20	0				Blast	180	false		false	11;3;9;3;3;9;2	2;1	lunastra;teostra;blast	guts-1	Speed		0
 2593	InsectGlaive	12	Soulfire Reach 'Ruin'	837	0	0				Blast	150	false		false	11;3;9;3;3;9;2	2;2	lunastra;nergigante;blast	hastenRecovery-1	Speed		0
-2594	InsectGlaive	12	Soulfire Reach 'Styx'	775	10	0				Blast	240	false		false	11;3;9;3;3;9;2	3;3	lunastra;xeno;jiva;blast	razorSharpSpareShot-1	Speed		0
+2594	InsectGlaive	12	Soulfire Reach 'Styx'	775	10	0				Blast	240	false		false	11;3;9;3;3;9;2	3;3	lunastra;xenojiva;blast	razorSharpSpareShot-1	Speed		0
 3011	InsectGlaive	12	Metalmangler	961	-15	0	Thunder	90	false					false	9;10;4;5;7;5;0	4	rajang;thunder		Blunt		0
 2597	LightBowgun	11	Crossblitzer III	338	0	0								false		1;1	ore;			true	0
 2599	LightBowgun	11	Blackwing Bowgun II	351	25	0								false		3	yiang;garuga;			true	0
@@ -1082,7 +1082,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2661	LightBowgun	12	Diregun 'Dementia'	364	-25	0								false			deviljho;				0
 2662	LightBowgun	12	Soulfire Rasp 'Blaze'	338	20	0								false		2;1	lunastra;teostra;	guts-1			0
 2663	LightBowgun	12	Soulfire Rasp 'Ruin'	351	0	0								false		2;2	lunastra;nergigante;	hastenRecovery-1			0
-2664	LightBowgun	12	Soulfire Rasp 'Styx'	338	10	0								false		3;3	lunastra;xeno;jiva;	razorSharpSpareShot-1			0
+2664	LightBowgun	12	Soulfire Rasp 'Styx'	338	10	0								false		3;3	lunastra;xenojiva;	razorSharpSpareShot-1			0
 3012	LightBowgun	12	Ten Thousand Volts	403	-15	0								false		4	rajang;thunder				0
 2667	HeavyBowgun	11	Fatal Assault III	420	0	0								false		1;1	ore;			true	0
 2669	HeavyBowgun	10	Icicle Assault II	360	30	0								false		1	barioth;			true	0
@@ -1113,7 +1113,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2723	HeavyBowgun	12	Endless Famine	450	-25	0								false			deviljho;				0
 2724	HeavyBowgun	12	Soulfire Roar 'Blaze'	420	20	0								false		2;1	lunastra;teostra;	guts-1			0
 2725	HeavyBowgun	12	Soulfire Roar 'Ruin'	435	0	0								false		2;2	lunastra;nergigante;	hastenRecovery-1			0
-2726	HeavyBowgun	12	Soulfire Roar 'Styx'	420	10	0								false		3;3	lunastra;xeno;jiva;	razorSharpSpareShot-1			0
+2726	HeavyBowgun	12	Soulfire Roar 'Styx'	420	10	0								false		3;3	lunastra;xenojiva;	razorSharpSpareShot-1			0
 3013	HeavyBowgun	12	Rajang Destroyer	495	-15	0								false		4	rajang;thunder				0
 2729	Bow	11	Dragon Perforator III	312	0	0	Thunder	240	true					false		2;2	ore;thunder		Close;Power	true	0
 2732	Bow	12	Despot's Earlybolt	324	0	0	Thunder	240	false					false		2	zinogre;thunder		Close;Power		0
@@ -1123,7 +1123,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2740	Bow	11	Tsali Flier	288	0	0				Blast	360	false		false		1	brachydios;blast		Close;Blast		0
 2742	Bow	10	Gigantomachy	312	0	35	Fire	210	false					false		4	uragaan;fire		Close;Sleep;Blast	true	0
 2745	Bow	12	Lunatic Arrow	324	10	0	Dragon	300	true				Low	false		2;1	rathian;dragon		Close;Power;Poison		0
-2748	Bow	12	Silver Wrathbow	312	20	0	Fire	330	false					false		1	rathalos;fire		Close;Power;Poison		0
+2748	Bow	12	Silver Wrathbow	312	20	0	Fire	330	false					false		1	rathalos;fire		Close;Power;Poison	true	0
 2751	Bow	10	Laguna Shot II	288	0	0	Water	330	false					false		2;1	element;water		Close;Power	true	0
 2753	Bow	10	Icicle Blizzard II	276	25	0	Ice	300	false					false		1	barioth;ice		Close;Power	true	0
 2756	Bow	11	Night Flight	300	20	0	Water	240	true					false		1	nargacuga;water		Close;Power;Poison		0
@@ -1142,12 +1142,12 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2783	Bow	10	Fulguring Bow II	300	20	0	Thunder	180	false					false	 	1	fulgur;anjanath;thunder		Close;Power;Paralysis	true	0
 2785	Bow	10	Thundering Strikebow	264	15	0	Thunder	330	false					false		1	tobi;kadachi;thunder		Close;Power;Paralysis	true	0
 2788	Bow	11	Fellbow Crimson Storm	300	15	0	Dragon	360	true				Low	false		1	viper;kadachi;dragon		Close;Paralysis;Poison		0
-2790	Bow	11	Dragonseal Aldbow II	264	0	0	Dragon	480	false				Average	false		1;1	dragonbone;dragon		Close;Paralysis;Sleep		0
+2790	Bow	11	Dragonseal Aldbow II	264	0	0	Dragon	480	false				Average	false		1;1	dragonbone;dragon		Close;Paralysis;Sleep	true	0
 2791	Bow	12	Dawning Insight	336	0	30	Dragon	270	true				High	false		1	shara;ishvalda;dragon		Close;Power;Sleep		0
 2792	Bow	11	Daora's Toxotes	300	10	0	Ice	270	false					false		2;1	blacksteel;ice		Close;Power		0
 2793	Bow	11	Neo Hunter Bow	312	0	0				Blast	180	false		false		4	workshop;blast		Close;Paralysis;Poison;Sleep;Blast		0
 2794	Bow	12	Fate's Thread	336	-20	0	Dragon	270	false				High	false			deviljho;dragon		Close;Power;Poison		0
 2795	Bow	12	Soulfire Arch 'Blaze'	312	20	0				Blast	180	false		false		2;1	lunastra;teostra;blast	guts-1	Close;Power		0
 2796	Bow	12	Soulfire Arch 'Ruin'	336	0	0				Blast	120	false		false		2;2	lunastra;nergigante;blast	hastenRecovery-1	Close;Power;Poison;Sleep		0
-2797	Bow	12	Soulfire Arch 'Styx'	312	10	0				Blast	240	false		false			lunastra;xeno;jiva;blast	razorSharpSpareShot-1	Close;Power		0
+2797	Bow	12	Soulfire Arch 'Styx'	312	10	0				Blast	240	false		false			lunastra;xenojiva;blast	razorSharpSpareShot-1	Close;Power		0
 3014	Bow	12	Beastking Thunderbow	372	-10	0	thunder	120	false					false		4	rajang;thunder		Close;Power		0

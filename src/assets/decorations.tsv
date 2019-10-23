@@ -154,7 +154,8 @@ id	rarity	level	name	skills
 178	11	4	Bomber Jewel+ 4	bombardier-2
 179	12	4	Blast Jewel+ 4	blastAttack-2
 180	12	4	Artillery Jewel+ 4	artillery-2
-238	9	4	Brilliant Tip Toe Jewel 4	stealth-3
+230	9	4	Hard Meowster Jewel 4	palicoRally-3
+238	9	4	Hard Tip Toe Jewel 4	stealth-3
 7812	0	4	Bomber/Attack Jewel+ 4	bombardier-1;attackBoost-1
 7886	0	4	Bomber/Physique Jewel+ 4	bombardier-1;constitution-1
 7819	0	4	Bomber/Expert Jewel+ 4	bombardier-1;criticalEye-1
@@ -250,13 +251,13 @@ id	rarity	level	name	skills
 3919	9	4	Fortitude/Expert Jewel+ 4	fortify-1;criticalEye-1
 3959	0	4	Fortitude/Evasion Jewel+ 4	fortify-1;evadeWindow-1
 3996	0	4	Fortitude/Release Jewel+ 4	fortify-1;freeElemAmmoUp-1
-3964	0	4	Fortitude/Handicraft Jewel+ 4	fortify-1;handicraft-1
-2912	0	4	FriendshipAttack Jewel+ 4	wideRange-1;attackBoost-1
-2986	0	4	FriendshipPhysique Jewel+ 4	wideRange-1;constitution-1
-2919	0	4	FriendshipExpert Jewel+ 4	wideRange-1;criticalEye-1
-2959	0	4	FriendshipEvasion Jewel+ 4	wideRange-1;evadeWindow-1
-2996	0	4	FriendshipRelease Jewel+ 4	wideRange-1;freeElemAmmoUp-1
-2964	0	4	FriendshipHandicraft Jewel+ 4	wideRange-1;handicraft-1
+3964	10	4	Fortitude/Handicraft Jewel+ 4	fortify-1;handicraft-1
+2912	0	4	Friendship/Attack Jewel+ 4	wideRange-1;attackBoost-1
+2986	0	4	Friendship/Physique Jewel+ 4	wideRange-1;constitution-1
+2919	0	4	Friendship/Expert Jewel+ 4	wideRange-1;criticalEye-1
+2959	0	4	Friendship/Evasion Jewel+ 4	wideRange-1;evadeWindow-1
+2996	0	4	Friendship/Release Jewel+ 4	wideRange-1;freeElemAmmoUp-1
+2964	11	4	Friendship/Handicraft Jewel+ 4	wideRange-1;handicraft-1
 6912	0	4	Fungiform/Attack Jewel+ 4	mushroomancer-1;attackBoost-1
 6986	0	4	Fungiform/Physique Jewel+ 4	mushroomancer-1;constitution-1
 6919	0	4	Fungiform/Expert Jewel+ 4	mushroomancer-1;criticalEye-1
@@ -284,7 +285,7 @@ id	rarity	level	name	skills
 9312	9	4	Guardian/Attack Jewel+ 4	offensiveGuard-1;attackBoost-1
 9386	0	4	Guardian/Physique Jewel+ 4	offensiveGuard-1;constitution-1
 9319	0	4	Guardian/Expert Jewel+ 4	offensiveGuard-1;criticalEye-1
-9359	0	4	Guardian/Evasion Jewel+ 4	offensiveGuard-1;evadeWindow-1
+9359	9	4	Guardian/Evasion Jewel+ 4	offensiveGuard-1;evadeWindow-1
 9396	0	4	Guardian/Release Jewel+ 4	offensiveGuard-1;freeElemAmmoUp-1
 9364	0	4	Guardian/Handicraft Jewel+ 4	offensiveGuard-1;handicraft-1
 6486	0	4	Handicraft/Physique Jewel+ 4	handicraft-1;constitution-1
@@ -366,7 +367,7 @@ id	rarity	level	name	skills
 8296	0	4	Sprinter/Release Jewel+ 4	marathonRunner-1;freeElemAmmoUp-1
 8264	0	4	Sprinter/Handicraft Jewel+ 4	marathonRunner-1;handicraft-1
 2112	0	4	Stonethrower/Attack Jewel+ 4	slingerCapacity-1;attackBoost-1
-2186	0	4	Stonethrower/Physique Jewel+ 4	slingerCapacity-1;constitution-1
+2186	9	4	Stonethrower/Physique Jewel+ 4	slingerCapacity-1;constitution-1
 2119	9	4	Stonethrower/Expert Jewel+ 4	slingerCapacity-1;criticalEye-1
 2159	0	4	Stonethrower/Evasion Jewel+ 4	slingerCapacity-1;evadeWindow-1
 2196	0	4	Stonethrower/Release Jewel+ 4	slingerCapacity-1;freeElemAmmoUp-1
