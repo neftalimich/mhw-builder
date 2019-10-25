@@ -104,6 +104,10 @@ export class EquipmentService {
 		this.updateSkills();
 	}
 
+	updateSkillMode(equippedSkills: EquippedSkillModel[]) {
+		this.statService.update(equippedSkills, this.items, this.augmentations, this.upgradeContainer, this.modifications, this.kinsect);
+	}
+
 	private updateSkills() {
 		this.skillService.updateSkills(this.items, this.decorations, this.augmentations);
 	}

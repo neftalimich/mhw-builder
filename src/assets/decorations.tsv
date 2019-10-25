@@ -84,6 +84,7 @@ id	rarity	level	name	skills
 90	7	2	Flawless Jewel 2	peakPerformance-1
 91	7	2	Enhancer Jewel 2	powerProlonger-1
 92	8	2	Draw Jewel 2	criticalDraw-1
+93	8	2	Guardian Jewel 2	offensiveGuard-1
 94	7	2	Challenger Jewel 2	agitator-1
 63	6	3	Earplugs Jewel 3	earplugs-1
 64	8	3	Handicraft Jewel 3	handicraft-1
@@ -92,7 +93,6 @@ id	rarity	level	name	skills
 67	7	3	Paracoat Jewel 3	paraFunctionality-1
 68	7	3	Forceshot Jewel 3	normalShots-1
 70	8	3	Spread Jewel 3	spreadPowerShots-1
-93	8	3	Guardian Jewel 3	offensiveGuard-1
 95	7	3	Sleepcoat Jewel 3	sleepFunctionality-1
 96	8	3	Release Jewel 3	freeElemAmmoUp-1
 97	8	3	Pierce Jewel 3	piercingShots-1

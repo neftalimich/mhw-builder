@@ -14,6 +14,7 @@ import { DamageType } from '../types/damage.type';
 import { EldersealType } from '../types/elderseal.type';
 import { ElementType } from '../types/element.type';
 import { ItemType } from '../types/item.type';
+import { ModeType } from '../types/mode.type';
 import { WeaponType } from '../types/weapon.type';
 import { CalculationService } from './calculation.service';
 import { DataService } from './data.service';
@@ -107,66 +108,71 @@ export class StatService {
 			}
 
 			if (level) {
+				if (equippedSkill.mode == ModeType.AllSkillActive) {
+					if (level.activeElementAttack) { this.stats.activeElementAttack += level.activeElementAttack; }
+					if (level.activeAilmentAttackBuildUpPercent) { this.stats.activeAilmentAttackBuildUpPercent += level.activeAilmentAttackBuildUpPercent; }
+					if (level.activeAttack) { this.stats.activeAttack += level.activeAttack; }
+					if (level.activeAttackPercent) { this.stats.activeAttackPercent += level.activeAttackPercent; }
+					if (level.activeAffinity) { this.stats.activeAffinity += level.activeAffinity; }
+					if (level.drawAffinity) { this.stats.drawAffinity += level.drawAffinity; }
+				}
+				if (equippedSkill.mode == ModeType.Active || equippedSkill.mode == ModeType.AllSkillActive) {
+					if (level.passiveAttack) { this.stats.passiveAttack += level.passiveAttack; }
+					if (level.elementlessBoostPercent) { this.stats.elementlessBoostPercent += level.elementlessBoostPercent; }
+					if (level.passiveAffinity) { this.stats.passiveAffinity += level.passiveAffinity; }
+					if (level.weakPointAffinity) { this.stats.weakPointAffinity += level.weakPointAffinity; }
 
-				if (level.activeElementAttack) { this.stats.activeElementAttack += level.activeElementAttack; }
-				if (level.activeAilmentAttackBuildUpPercent) { this.stats.activeAilmentAttackBuildUpPercent += level.activeAilmentAttackBuildUpPercent; }
+					if (level.slidingAffinity) { this.stats.slidingAffinity += level.slidingAffinity; }
+					if (level.passiveSharpness) { this.stats.passiveSharpness += level.passiveSharpness; }
 
-				if (level.passiveAttack) { this.stats.passiveAttack += level.passiveAttack; }
-				if (level.activeAttack) { this.stats.activeAttack += level.activeAttack; }
-				if (level.elementlessBoostPercent) { this.stats.elementlessBoostPercent += level.elementlessBoostPercent; }
-				if (level.passiveAffinity) { this.stats.passiveAffinity += level.passiveAffinity; }
-				if (level.activeAffinity) { this.stats.activeAffinity += level.activeAffinity; }
-				if (level.weakPointAffinity) { this.stats.weakPointAffinity += level.weakPointAffinity; }
-				if (level.drawAffinity) { this.stats.drawAffinity += level.drawAffinity; }
-				if (level.slidingAffinity) { this.stats.slidingAffinity += level.slidingAffinity; }
-				if (level.passiveSharpness) { this.stats.passiveSharpness += level.passiveSharpness; }
+					if (level.passiveCriticalBoostPercent) { this.stats.passiveCriticalBoostPercent += level.passiveCriticalBoostPercent; }
+					if (level.criticalElement) { this.stats.criticalElement = true; }
+					if (level.criticalStatus) { this.stats.criticalStatus = true; }
+					if (level.trueCriticalElement) { this.stats.trueCriticalElement = true; }
+					if (level.trueCriticalStatus) { this.stats.trueCriticalStatus = true; }
 
-				if (level.passiveCriticalBoostPercent) { this.stats.passiveCriticalBoostPercent += level.passiveCriticalBoostPercent; }
-				if (level.criticalElement) { this.stats.criticalElement = true; }
-				if (level.criticalStatus) { this.stats.criticalStatus = true; }
-				if (level.trueCriticalElement) { this.stats.trueCriticalElement = true; }
-				if (level.trueCriticalStatus) { this.stats.trueCriticalStatus = true; }
+					if (level.passiveFireAttack) { this.stats.passiveFireAttack += level.passiveFireAttack; }
+					if (level.passiveWaterAttack) { this.stats.passiveWaterAttack += level.passiveWaterAttack; }
+					if (level.passiveThunderAttack) { this.stats.passiveThunderAttack += level.passiveThunderAttack; }
+					if (level.passiveIceAttack) { this.stats.passiveIceAttack += level.passiveIceAttack; }
+					if (level.passiveDragonAttack) { this.stats.passiveDragonAttack += level.passiveDragonAttack; }
 
-				if (level.passiveFireAttack) { this.stats.passiveFireAttack += level.passiveFireAttack; }
-				if (level.passiveWaterAttack) { this.stats.passiveWaterAttack += level.passiveWaterAttack; }
-				if (level.passiveThunderAttack) { this.stats.passiveThunderAttack += level.passiveThunderAttack; }
-				if (level.passiveIceAttack) { this.stats.passiveIceAttack += level.passiveIceAttack; }
-				if (level.passiveDragonAttack) { this.stats.passiveDragonAttack += level.passiveDragonAttack; }
+					if (level.passiveFireAttackPercent) { this.stats.passiveFireAttackPercent += level.passiveFireAttackPercent; }
+					if (level.passiveWaterAttackPercent) { this.stats.passiveWaterAttackPercent += level.passiveWaterAttackPercent; }
+					if (level.passiveThunderAttackPercent) { this.stats.passiveThunderAttackPercent += level.passiveThunderAttackPercent; }
+					if (level.passiveIceAttackPercent) { this.stats.passiveIceAttackPercent += level.passiveIceAttackPercent; }
+					if (level.passiveDragonAttackPercent) { this.stats.passiveDragonAttackPercent += level.passiveDragonAttackPercent; }
 
-				if (level.passiveFireAttackPercent) { this.stats.passiveFireAttackPercent += level.passiveFireAttackPercent; }
-				if (level.passiveWaterAttackPercent) { this.stats.passiveWaterAttackPercent += level.passiveWaterAttackPercent; }
-				if (level.passiveThunderAttackPercent) { this.stats.passiveThunderAttackPercent += level.passiveThunderAttackPercent; }
-				if (level.passiveIceAttackPercent) { this.stats.passiveIceAttackPercent += level.passiveIceAttackPercent; }
-				if (level.passiveDragonAttackPercent) { this.stats.passiveDragonAttackPercent += level.passiveDragonAttackPercent; }
+					if (level.passivePoisonAttack) { this.stats.passivePoisonAttack += level.passivePoisonAttack; }
+					if (level.passiveSleepAttack) { this.stats.passiveSleepAttack += level.passiveSleepAttack; }
+					if (level.passiveParalysisAttack) { this.stats.passiveParalysisAttack += level.passiveParalysisAttack; }
+					if (level.passiveBlastAttack) { this.stats.passiveBlastAttack += level.passiveBlastAttack; }
+					if (level.passiveStunAttack) { this.stats.passiveStunAttack += level.passiveStunAttack; }
 
-				if (level.passivePoisonAttack) { this.stats.passivePoisonAttack += level.passivePoisonAttack; }
-				if (level.passiveSleepAttack) { this.stats.passiveSleepAttack += level.passiveSleepAttack; }
-				if (level.passiveParalysisAttack) { this.stats.passiveParalysisAttack += level.passiveParalysisAttack; }
-				if (level.passiveBlastAttack) { this.stats.passiveBlastAttack += level.passiveBlastAttack; }
-				if (level.passiveStunAttack) { this.stats.passiveStunAttack += level.passiveStunAttack; }
+					if (level.passivePoisonBuildupPercent) { this.stats.passivePoisonBuildupPercent += level.passivePoisonBuildupPercent; }
+					if (level.passiveSleepBuildupPercent) { this.stats.passiveSleepBuildupPercent += level.passiveSleepBuildupPercent; }
+					if (level.passiveParalysisBuildupPercent) { this.stats.passiveParalysisBuildupPercent += level.passiveParalysisBuildupPercent; }
+					if (level.passiveBlastBuildupPercent) { this.stats.passiveBlastBuildupPercent += level.passiveBlastBuildupPercent; }
+					if (level.passiveStunBuildupPercent) { this.stats.passiveStunBuildupPercent += level.passiveStunBuildupPercent; }
 
-				if (level.passivePoisonBuildupPercent) { this.stats.passivePoisonBuildupPercent += level.passivePoisonBuildupPercent; }
-				if (level.passiveSleepBuildupPercent) { this.stats.passiveSleepBuildupPercent += level.passiveSleepBuildupPercent; }
-				if (level.passiveParalysisBuildupPercent) { this.stats.passiveParalysisBuildupPercent += level.passiveParalysisBuildupPercent; }
-				if (level.passiveBlastBuildupPercent) { this.stats.passiveBlastBuildupPercent += level.passiveBlastBuildupPercent; }
-				if (level.passiveStunBuildupPercent) { this.stats.passiveStunBuildupPercent += level.passiveStunBuildupPercent; }
+					if (level.passiveDefense) { this.stats.passiveDefense += level.passiveDefense; }
+					if (level.passiveDefensePercent) { this.stats.passiveDefensePercent += level.passiveDefensePercent; }
+					if (level.passiveHealth) { this.stats.passiveHealth += level.passiveHealth; }
+					if (level.passiveStamina) { this.stats.passiveStamina += level.passiveStamina; }
 
-				if (level.passiveDefense) { this.stats.passiveDefense += level.passiveDefense; }
-				if (level.passiveDefensePercent) { this.stats.passiveDefensePercent += level.passiveDefensePercent; }
-				if (level.passiveHealth) { this.stats.passiveHealth += level.passiveHealth; }
-				if (level.passiveStamina) { this.stats.passiveStamina += level.passiveStamina; }
+					if (level.passiveFireResist) { this.stats.passiveFireResist += level.passiveFireResist; }
+					if (level.passiveWaterResist) { this.stats.passiveWaterResist += level.passiveWaterResist; }
+					if (level.passiveThunderResist) { this.stats.passiveThunderResist += level.passiveThunderResist; }
+					if (level.passiveIceResist) { this.stats.passiveIceResist += level.passiveIceResist; }
+					if (level.passiveDragonResist) { this.stats.passiveDragonResist += level.passiveDragonResist; }
 
-				if (level.passiveFireResist) { this.stats.passiveFireResist += level.passiveFireResist; }
-				if (level.passiveWaterResist) { this.stats.passiveWaterResist += level.passiveWaterResist; }
-				if (level.passiveThunderResist) { this.stats.passiveThunderResist += level.passiveThunderResist; }
-				if (level.passiveIceResist) { this.stats.passiveIceResist += level.passiveIceResist; }
-				if (level.passiveDragonResist) { this.stats.passiveDragonResist += level.passiveDragonResist; }
-
-				if (level.hiddenElementUp) { this.stats.elementAttackMultiplier = level.hiddenElementUp; }
-				if (level.ammoUp) { this.stats.ammoUp += level.ammoUp; }
-				if (level.eldersealLevelBoost) { this.stats.eldersealLevelBoost = level.eldersealLevelBoost; }
+					if (level.hiddenElementUp) { this.stats.elementAttackMultiplier = level.hiddenElementUp; }
+					if (level.ammoUp) { this.stats.ammoUp += level.ammoUp; }
+					if (level.eldersealLevelBoost) { this.stats.eldersealLevelBoost = level.eldersealLevelBoost; }
+				}
 			}
 		}
+
 	}
 
 	private updateAugmentations(augmentations: AugmentationModel[]) {
@@ -379,12 +385,15 @@ export class StatService {
 		if (this.checkElementless()) {
 			this.stats.totalAttack =
 				Math.round(
-					this.stats.attack * (1 + this.stats.elementlessBoostPercent / 100)
+					this.stats.attack
+					* (1 + this.stats.elementlessBoostPercent / 100)
 					+ this.stats.passiveAttack * this.stats.weaponAttackModifier
 				);
 			this.stats.totalAttackPotential =
 				Math.round(
-					this.stats.attack * this.stats.effectivePhysicalSharpnessModifier * (1 + this.stats.elementlessBoostPercent / 100)
+					this.stats.attack
+					* (1 + (this.stats.elementlessBoostPercent / 100) + (this.stats.activeAttackPercent / 100))
+					* this.stats.effectivePhysicalSharpnessModifier
 					+ (this.stats.passiveAttack + this.stats.activeAttack) * this.stats.weaponAttackModifier
 				);
 			this.stats.elementless = true;
@@ -393,7 +402,9 @@ export class StatService {
 				this.stats.attack + Math.round(this.stats.passiveAttack * this.stats.weaponAttackModifier);
 			this.stats.totalAttackPotential =
 				Math.round(
-					this.stats.attack * this.stats.effectivePhysicalSharpnessModifier
+					this.stats.attack
+					* this.stats.effectivePhysicalSharpnessModifier
+					* (1 + this.stats.activeAttackPercent / 100)
 					+ (this.stats.passiveAttack + this.stats.activeAttack) * this.stats.weaponAttackModifier
 				);
 			this.stats.elementless = false;

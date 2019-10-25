@@ -189,7 +189,7 @@ export class CalculationService {
 
 		if (stats.elementless) {
 			attackCalc.calculationVariables.push(this.getElementlessVariable(stats));
-			attackCalc.calculationTemplate = `{attack} × {elementlessBoostPercent} + {passiveAttack} × {weaponModifier} ≈ ${stats.totalAttack}`;
+			attackCalc.calculationTemplate = `{attack} × (1 + {elementlessBoostPercent}) + {passiveAttack} × {weaponModifier} ≈ ${stats.totalAttack}`;
 		} else {
 			attackCalc.calculationTemplate = `{attack} + {passiveAttack} × {weaponModifier} ≈ ${stats.totalAttack}`;
 		}
@@ -227,6 +227,12 @@ export class CalculationService {
 					colorClass: 'red'
 				},
 				{
+					displayName: 'Active Attack Percent',
+					name: 'activeAttackPercent',
+					value: stats.activeAttackPercent / 100,
+					colorClass: 'red'
+				},
+				{
 					displayName: 'Weapon Modifier',
 					name: 'weaponModifier',
 					value: stats.weaponAttackModifier,
@@ -236,10 +242,10 @@ export class CalculationService {
 		};
 
 		if (stats.elementlessBoostPercent > 0 && stats.totalAilmentAttack == 0 && stats.totalElementAttack == 0) {
-			attackPotentialCalc.calculationTemplate = `{attack} × {elementlessBoostPercent} × {sharpnessModifier} + ({passiveAttack} + {activeAttack}) × {weaponModifier} ≈ ${stats.totalAttackPotential}`;
+			attackPotentialCalc.calculationTemplate = `{attack} × (1 + {elementlessBoostPercent} + {activeAttackPercent}) × {sharpnessModifier} + ({passiveAttack} + {activeAttack}) × {weaponModifier} ≈ ${stats.totalAttackPotential}`;
 			attackPotentialCalc.calculationVariables.push(this.getElementlessVariable(stats));
 		} else {
-			attackPotentialCalc.calculationTemplate = `{attack} × {sharpnessModifier} + ({passiveAttack} + {activeAttack}) × {weaponModifier} ≈ ${stats.totalAttackPotential}`;
+			attackPotentialCalc.calculationTemplate = `{attack} × (1 + {activeAttackPercent}) × {sharpnessModifier} + ({passiveAttack} + {activeAttack}) × {weaponModifier} ≈ ${stats.totalAttackPotential}`;
 		}
 
 		return attackPotentialCalc;
@@ -249,7 +255,7 @@ export class CalculationService {
 		return {
 			displayName: 'Elementless Boost Modifier',
 			name: 'elementlessBoostPercent',
-			value: (1 + stats.elementlessBoostPercent / 100),
+			value: stats.elementlessBoostPercent / 100,
 			colorClass: 'kakhi'
 		};
 	}

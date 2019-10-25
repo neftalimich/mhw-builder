@@ -11,6 +11,7 @@ export class StatsModel {
 	attack: number;
 	passiveAttack: number;
 	activeAttack: number;
+	activeAttackPercent: number;
 	sharpnessDataNeeded: boolean;
 	passiveSharpness: number;
 	sharpnessLevelsBar: number[];
@@ -121,6 +122,7 @@ export class StatsModel {
 		this.attack = 0;
 		this.passiveAttack = 0;
 		this.activeAttack = 0;
+		this.activeAttackPercent = 0;
 
 		this.elementless = false;
 		this.elementlessBoostPercent = 0;

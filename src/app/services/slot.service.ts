@@ -18,7 +18,6 @@ import { EquipmentCategoryType } from '../types/equipment-category.type';
 import { ItemType } from '../types/item.type';
 import { WeaponType } from '../types/weapon.type';
 import { EquipmentService } from './equipment.service';
-import { SlotModel } from '../models/slot.model';
 
 @Injectable()
 export class SlotService {

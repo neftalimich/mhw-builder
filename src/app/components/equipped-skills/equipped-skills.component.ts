@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { EquippedSetBonusModel } from '../../models/equipped-set-bonus.model';
 import { EquippedSkillModel } from '../../models/equipped-skill.model';
+import { EquipmentService } from '../../services/equipment.service';
 import { SkillService } from '../../services/skill.service';
 import { TooltipService } from '../../services/tooltip.service';
+import { ModeType } from '../../types/mode.type';
 import { PointerType } from '../../types/pointer.type';
 
 @Component({
@@ -18,6 +20,7 @@ export class EquippedSkillsComponent implements OnInit {
 
 	constructor(
 		private skillService: SkillService,
+		private equipmentService: EquipmentService,
 		private tooltipService: TooltipService
 	) { }
 
@@ -103,5 +106,28 @@ export class EquippedSkillsComponent implements OnInit {
 
 	showOnClickSetBonusDetails(equippedSetBonus: EquippedSetBonusModel) {
 		this.tooltipService.setEquippedSetBonus(equippedSetBonus);
+	}
+
+	skillMode(skill: EquippedSkillModel) {
+		if (skill.mode == ModeType.Active) {
+			skill.mode = ModeType.AllSkillActive;
+		} else if (skill.mode == ModeType.AllSkillActive) {
+			skill.mode = ModeType.Inactive;
+		} else if (skill.mode == ModeType.Inactive) {
+			skill.mode = ModeType.Active;
+		}
+		this.equipmentService.updateSkillMode(this.skills);
+	}
+
+	getModeColor(mode: ModeType) {
+		if (mode == 1) {
+			return '';
+		} else if (mode == 2) {
+			return 'rgba(200,200,200,0.5)';
+		} else if (mode == 3) {
+			return 'lightcoral';
+		} else {
+			return '';
+		}
 	}
 }

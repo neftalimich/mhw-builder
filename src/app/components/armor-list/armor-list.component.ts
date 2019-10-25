@@ -84,6 +84,10 @@ export class ArmorListComponent implements OnInit {
 			if (betaIndex > -1) {
 				query = query.replace('beta', '');
 			}
+			const gammaIndex = query.indexOf('gamma');
+			if (gammaIndex > -1) {
+				query = query.replace('gamma', '');
+			}
 
 			query = query.toLowerCase().trim();
 
@@ -104,16 +108,19 @@ export class ArmorListComponent implements OnInit {
 					if (!nameMatch && !skillMatch && !tagMatch) {
 						this.filteredItems = _.reject(this.filteredItems, i => i.name === item.name);
 					}
-					if (alphaIndex > -1 || betaIndex > -1) {
-						const alphaBetaQuery = [];
+					if (alphaIndex > -1 || betaIndex > -1 || gammaIndex > -1) {
+						const abgQuery = [];
 
 						if (alphaIndex > -1) {
-							alphaBetaQuery.push('α');
+							abgQuery.push('α');
 						}
 						if (betaIndex > -1) {
-							alphaBetaQuery.push('β');
+							abgQuery.push('β');
 						}
-						const query2Match = _.some(alphaBetaQuery, queryPart => {
+						if (gammaIndex > -1) {
+							abgQuery.push('γ');
+						}
+						const query2Match = _.some(abgQuery, queryPart => {
 							return itemName.includes(queryPart);
 						});
 						if (!query2Match) {
