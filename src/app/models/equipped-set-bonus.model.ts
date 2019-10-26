@@ -1,4 +1,5 @@
-import { EquippedSetBonusDetailModel } from './equipped-set-bonus-detail.model';
+import { ModeType } from '../types/mode.type';
+import { SkillModel } from './skill.model';
 
 export class EquippedSetBonusModel {
 	id: string;
@@ -20,3 +21,13 @@ export class EquippedSetBonusModel {
 		this.feetCount = 0;
 	}
 }
+export class EquippedSetBonusDetailModel {
+	requiredCount: number;
+	skill: SkillModel;
+	mode: ModeType;
+
+	constructor() {
+		this.mode = ModeType.Active;
+	}
+}
+

@@ -1,3 +1,5 @@
+import { SkillReferenceModel } from './skill-reference.model';
+
 export class SkillLevelModel {
 	description: string;
 
@@ -55,6 +57,7 @@ export class SkillLevelModel {
 
 	passiveDefense: number;
 	passiveDefensePercent: number;
+	activeDefense: number;
 	passiveHealth: number;
 	passiveStamina: number;
 
@@ -63,4 +66,6 @@ export class SkillLevelModel {
 	passiveThunderResist: number;
 	passiveIceResist: number;
 	passiveDragonResist: number;
+
+	activeSkills: SkillReferenceModel[];
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EquippedSetBonusModel } from '../../models/equipped-set-bonus.model';
+import { EquippedSetBonusDetailModel, EquippedSetBonusModel } from '../../models/equipped-set-bonus.model';
 import { EquippedSkillModel } from '../../models/equipped-skill.model';
 import { EquipmentService } from '../../services/equipment.service';
 import { SkillService } from '../../services/skill.service';
@@ -14,6 +14,7 @@ import { PointerType } from '../../types/pointer.type';
 })
 export class EquippedSkillsComponent implements OnInit {
 	skills: EquippedSkillModel[];
+	skillsBackup: EquippedSkillModel[];
 	setBonuses: EquippedSetBonusModel[];
 
 	skillsVisible = true;
@@ -27,6 +28,7 @@ export class EquippedSkillsComponent implements OnInit {
 	ngOnInit() {
 		this.skillService.skillsUpdated$.subscribe(skills => {
 			this.skills = skills;
+			this.skillsBackup = JSON.parse(JSON.stringify(this.skills));
 			this.skills.sort(function (skill1, skill2) {
 				if (skill1.isSetBonus && !skill2.isSetBonus) {
 					return 1;
@@ -108,15 +110,57 @@ export class EquippedSkillsComponent implements OnInit {
 		this.tooltipService.setEquippedSetBonus(equippedSetBonus);
 	}
 
-	skillMode(skill: EquippedSkillModel) {
-		if (skill.mode == ModeType.Active) {
-			skill.mode = ModeType.AllSkillActive;
-		} else if (skill.mode == ModeType.AllSkillActive) {
-			skill.mode = ModeType.Inactive;
-		} else if (skill.mode == ModeType.Inactive) {
-			skill.mode = ModeType.Active;
+	skillMode(equippedSkill: EquippedSkillModel) {
+		if (equippedSkill.mode == ModeType.Active) {
+			equippedSkill.mode = ModeType.AllSkillActive;
+		} else if (equippedSkill.mode == ModeType.AllSkillActive) {
+			equippedSkill.mode = ModeType.Inactive;
+		} else if (equippedSkill.mode == ModeType.Inactive) {
+			equippedSkill.mode = ModeType.Active;
 		}
 		this.equipmentService.updateSkillMode(this.skills);
+	}
+
+	SetbonusSkillMode(detail: EquippedSetBonusDetailModel, equippedCount: number) {
+		if (equippedCount >= detail.requiredCount && detail.skill.levels[0].activeSkills) {
+			if (detail.mode == ModeType.Active) {
+				detail.mode = ModeType.AllSkillActive;
+				for (const skillExtra of detail.skill.levels[0].activeSkills) {
+					let equippedSkill = new EquippedSkillModel();
+					equippedSkill = this.skills.find(es => es.id == skillExtra.id);
+					if (!equippedSkill) {
+						equippedSkill = this.skillService.createEquippedSkill(skillExtra.id, skillExtra.level);
+						equippedSkill.isNatureBonus = true;
+						this.skills.push(equippedSkill);
+					} else {
+						if (skillExtra.level > equippedSkill.equippedCount) {
+							equippedSkill.equippedCount = skillExtra.level;
+							equippedSkill.equippedArmorCount = skillExtra.level;
+							equippedSkill.isNatureBonus = true;
+						}
+					}
+					this.equipmentService.updateSkillMode(this.skills);
+				}
+			} else if (detail.mode == ModeType.AllSkillActive) {
+				detail.mode = ModeType.Active;
+				for (const skillExtra of detail.skill.levels[0].activeSkills) {
+					let equippedSkill = new EquippedSkillModel();
+					equippedSkill = this.skillsBackup.find(es => es.id == skillExtra.id);
+					if (!equippedSkill) {
+						const skillIndex = this.skills.findIndex(es => es.id == skillExtra.id);
+						if (skillIndex > -1) {
+							this.skills.splice(skillIndex, 1);
+						}
+					} else {
+						const skillIndex = this.skills.findIndex(es => es.id == skillExtra.id);
+						if (skillIndex > -1) {
+							this.skills[skillIndex] = equippedSkill;
+						}
+					}
+				}
+				this.equipmentService.updateSkillMode(this.skills);
+			}
+		}
 	}
 
 	getModeColor(mode: ModeType) {
@@ -129,5 +173,18 @@ export class EquippedSkillsComponent implements OnInit {
 		} else {
 			return '';
 		}
+	}
+
+	getIconModeClass(mode: ModeType) {
+		if (mode == 1) {
+			return 'fas fa-circle';
+		} else if (mode == 2) {
+			return 'far fa-circle';
+		} else if (mode == 3) {
+			return 'fas fa-circle';
+		} else {
+			return '';
+		}
+
 	}
 }

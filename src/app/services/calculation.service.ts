@@ -99,7 +99,7 @@ export class CalculationService {
 		}
 
 		this.attackCalcs.push(this.getAffinity(stats));
-		if (stats.activeAffinity || stats.weakPointAffinity || stats.drawAffinity || stats.slidingAffinity) {
+		if (stats.activeAffinity || stats.weakPointAffinity) {
 			this.attackCalcs.push(this.getAffinityPotential(stats));
 		}
 
@@ -333,30 +333,6 @@ export class CalculationService {
 				}
 			]
 		};
-
-		if (stats.drawAffinity > 0) {
-			affinityPotentialCalc.calculationVariables.push({
-				displayName: 'Draw Attack Affinity',
-				name: 'draw',
-				value: stats.drawAffinity,
-				colorClass: 'kakhi'
-			});
-			affinityPotentialCalc.value += ` | ${(affinityTotal + stats.drawAffinity)}%`;
-			affinityPotentialCalc.calculationTemplate +=
-				`<br>Draw: ` + `{base} + {passive} + {weakPoint} + {active} + {draw} = ${(affinityTotal + stats.drawAffinity)}%`;
-		}
-
-		if (stats.slidingAffinity > 0) {
-			affinityPotentialCalc.calculationVariables.push({
-				displayName: 'Sliding Attack Affinity',
-				name: 'sliding',
-				value: stats.slidingAffinity,
-				colorClass: 'kakhi'
-			});
-			affinityPotentialCalc.value += ` | ${(affinityTotal + stats.slidingAffinity)}%`;
-			affinityPotentialCalc.calculationTemplate +=
-				`<br>Slide: ` + `{base} + {passive} + {weakPoint} + {active} + {sliding} =  ${(affinityTotal + stats.slidingAffinity)}%`;
-		}
 
 		return affinityPotentialCalc;
 	}
@@ -603,26 +579,7 @@ export class CalculationService {
 			]
 		};
 
-		if (stats.drawAffinity > 0) {
-			rawAttackAvgCalc.value
-				+= ` | ${this.getRawAverage(stats.totalAttack, totalAffinity + stats.drawAffinity, stats.passiveCriticalBoostPercent, stats.weaponAttackModifier)}`;
-			rawAttackAvgCalc.calculationTemplate
-				+= ` | ${this.getRawAverage(stats.totalAttack, totalAffinity + stats.drawAffinity, stats.passiveCriticalBoostPercent, stats.weaponAttackModifier)}`;
-			rawAttackAvgCalc.calculationVariables[1].value += '|' + (totalAffinity + stats.drawAffinity);
-		}
-
-		if (stats.slidingAffinity > 0) {
-			rawAttackAvgCalc.value
-				+= ` | ${this.getRawAverage(stats.totalAttack, totalAffinity + stats.slidingAffinity, stats.passiveCriticalBoostPercent, stats.weaponAttackModifier)}`;
-			rawAttackAvgCalc.calculationTemplate
-				+= ` | ${this.getRawAverage(stats.totalAttack, totalAffinity + stats.slidingAffinity, stats.passiveCriticalBoostPercent, stats.weaponAttackModifier)}`;
-			rawAttackAvgCalc.calculationVariables[1].value += '|' + (totalAffinity + stats.slidingAffinity);
-		}
-
 		rawAttackAvgCalc.calculationTemplate += ']';
-		if (stats.drawAffinity > 0 || stats.slidingAffinity > 0) {
-			rawAttackAvgCalc.calculationVariables[1].value = '[' + rawAttackAvgCalc.calculationVariables[1].value + ']';
-		}
 		rawAttackAvgCalc.calculationVariables[1].value += '%';
 
 		return rawAttackAvgCalc;
@@ -709,26 +666,7 @@ export class CalculationService {
 			]
 		};
 
-		if (stats.drawAffinity > 0) {
-			rawAttackAveragePotentialCalc.value
-				+= ` | ${this.getRawAverage(stats.totalAttackPotential, totalAffinityPotential + stats.drawAffinity, stats.passiveCriticalBoostPercent, stats.weaponAttackModifier)}`;
-			rawAttackAveragePotentialCalc.calculationTemplate
-				+= ` | ${this.getRawAverage(stats.totalAttackPotential, totalAffinityPotential + stats.drawAffinity, stats.passiveCriticalBoostPercent, stats.weaponAttackModifier)}`;
-			rawAttackAveragePotentialCalc.calculationVariables[1].value += '|' + (totalAffinityPotential + stats.drawAffinity);
-		}
-
-		if (stats.slidingAffinity > 0) {
-			rawAttackAveragePotentialCalc.value
-				+= ` | ${this.getRawAverage(stats.totalAttackPotential, totalAffinityPotential + stats.slidingAffinity, stats.passiveCriticalBoostPercent, stats.weaponAttackModifier)}`;
-			rawAttackAveragePotentialCalc.calculationTemplate
-				+= ` | ${this.getRawAverage(stats.totalAttackPotential, totalAffinityPotential + stats.slidingAffinity, stats.passiveCriticalBoostPercent, stats.weaponAttackModifier)}`;
-			rawAttackAveragePotentialCalc.calculationVariables[1].value += '|' + (totalAffinityPotential + stats.slidingAffinity);
-		}
-
 		rawAttackAveragePotentialCalc.calculationTemplate += ']';
-		if (stats.drawAffinity > 0 || stats.slidingAffinity > 0) {
-			rawAttackAveragePotentialCalc.calculationVariables[1].value = '[' + rawAttackAveragePotentialCalc.calculationVariables[1].value + ']';
-		}
 		rawAttackAveragePotentialCalc.calculationVariables[1].value += '%';
 
 		return rawAttackAveragePotentialCalc;
@@ -737,7 +675,7 @@ export class CalculationService {
 	private buildDefenseCalcs(stats: StatsModel) {
 		let defValue = '';
 		for (let i = 0; i < stats.defense.length; i++) {
-			defValue += Math.round(stats.defense[i] * (1 + stats.passiveDefensePercent / 100) + stats.passiveDefense);
+			defValue += Math.round(stats.defense[i] * (1 + stats.passiveDefensePercent / 100) + stats.passiveDefense + stats.activeDefense);
 			if (i < stats.defense.length - 2) {
 				defValue += ' ➝ ';
 			} else if (i < stats.defense.length - 1) {

@@ -3,6 +3,7 @@
 $skillColor: deepskyblue;
 $skillMode2: slategray;
 $skillMode3: lightcoral;
+$skillNature: lightseagreen;
 $skillWidht: 10px;
 
 ul {
@@ -137,9 +138,9 @@ li {
 }
 
 .skill-bg-nature {
-	background-color: lightseagreen;
-	color: lightseagreen;
-	border-color: lightseagreen;
+	background-color: $skillNature;
+	color: $skillNature;
+	border-color: $skillNature;
 	border-width: 2px;
 	border-style: solid;
 	width: $skillWidht !important;

@@ -3,8 +3,7 @@ import * as _ from 'lodash';
 import { Subject } from 'rxjs';
 import { AugmentationModel } from '../models/augmentation.model';
 import { DecorationModel } from '../models/decoration.model';
-import { EquippedSetBonusDetailModel } from '../models/equipped-set-bonus-detail.model';
-import { EquippedSetBonusModel } from '../models/equipped-set-bonus.model';
+import { EquippedSetBonusDetailModel, EquippedSetBonusModel } from '../models/equipped-set-bonus.model';
 import { EquippedSkillModel } from '../models/equipped-skill.model';
 import { ItemModel } from '../models/item.model';
 import { ItemType } from '../types/item.type';
@@ -209,61 +208,6 @@ export class SkillService {
 						equippedSkill.equippedCount = 2;
 						equippedSkill.equippedArmorCount = 2;
 					}
-					if (this.isSomeToolActive) {
-						let natureSkills = [];
-						if (setLevel.id == 'gaiasVeil') {
-							natureSkills = [
-								{ id: 'windproof', level: 3 },
-								{ id: 'earplugs', level: 3 },
-								{ id: 'tremorResistance', level: 3 },
-								{ id: 'flinchFree', level: 3 }
-							];
-						} else if (setLevel.id == 'trueGaiasVeil') {
-							natureSkills = [
-								{ id: 'windproof', level: 5 },
-								{ id: 'earplugs', level: 5 },
-								{ id: 'tremorResistance', level: 3 },
-								{ id: 'flinchFree', level: 3 }
-							];
-						}
-
-						if (natureSkills.length > 0) {
-							for (const nature of natureSkills) {
-								let natureEquippedSkill = _.find(equippedSkills, (es: { id: string; }) => es.id == nature.id);
-
-								if (!natureEquippedSkill) {
-									const skill = this.dataService.getSkill(nature.id);
-									natureEquippedSkill = new EquippedSkillModel();
-									natureEquippedSkill.skill = skill;
-									natureEquippedSkill.id = skill.id;
-									natureEquippedSkill.name = skill.name;
-									natureEquippedSkill.description = skill.description;
-									natureEquippedSkill.isNatureBonus = true;
-									natureEquippedSkill.equippedCount = nature.level;
-									natureEquippedSkill.equippedArmorCount = nature.level;
-									natureEquippedSkill.totalLevelCount = skill.levels.length;
-									equippedSkills.push(natureEquippedSkill);
-
-									if (skill.raiseSkillId) {
-										const equippedSkillToRaise = _.find(equippedSkills, es => es.id == skill.raiseSkillId);
-										if (equippedSkillToRaise) {
-											equippedSkillToRaise.totalLevelCount = equippedSkillToRaise.skill.levels.length;
-										}
-									}
-								} else {
-									if (!natureEquippedSkill.isNatureBonus) {
-										if (natureEquippedSkill.equippedCount > nature.level) {
-											natureEquippedSkill.isNatureBonus = false;
-										} else {
-											natureEquippedSkill.isNatureBonus = true;
-										}
-									}
-									natureEquippedSkill.equippedCount = Math.max(natureEquippedSkill.equippedCount, nature.level);
-									natureEquippedSkill.equippedArmorCount = Math.max(natureEquippedSkill.equippedArmorCount, nature.level);
-								}
-							}
-						}
-					}
 				}
 			}
 
@@ -338,5 +282,20 @@ export class SkillService {
 		} else if (itemType == ItemType.Tool1 || itemType == ItemType.Tool2) {
 			equippedSkill.toolCount += actualCount;
 		}
+	}
+
+	createEquippedSkill(skillId: string, level: number): EquippedSkillModel {
+		const skill = this.dataService.getSkill(skillId);
+		const equippedSkill = new EquippedSkillModel();
+		equippedSkill.skill = skill;
+		equippedSkill.id = skill.id;
+		equippedSkill.name = skill.name;
+		equippedSkill.description = skill.description;
+		equippedSkill.equippedArmorCount = level;
+		equippedSkill.equippedCount = level;
+
+		equippedSkill.totalLevelCount = skill.maxLevel ? skill.maxLevel : skill.levels.length;
+
+		return equippedSkill;
 	}
 }

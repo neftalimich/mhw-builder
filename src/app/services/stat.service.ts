@@ -114,15 +114,13 @@ export class StatService {
 					if (level.activeAttack) { this.stats.activeAttack += level.activeAttack; }
 					if (level.activeAttackPercent) { this.stats.activeAttackPercent += level.activeAttackPercent; }
 					if (level.activeAffinity) { this.stats.activeAffinity += level.activeAffinity; }
-					if (level.drawAffinity) { this.stats.drawAffinity += level.drawAffinity; }
+					if (level.activeDefense) { this.stats.activeDefense += level.activeDefense; }
 				}
 				if (equippedSkill.mode == ModeType.Active || equippedSkill.mode == ModeType.AllSkillActive) {
 					if (level.passiveAttack) { this.stats.passiveAttack += level.passiveAttack; }
 					if (level.elementlessBoostPercent) { this.stats.elementlessBoostPercent += level.elementlessBoostPercent; }
 					if (level.passiveAffinity) { this.stats.passiveAffinity += level.passiveAffinity; }
 					if (level.weakPointAffinity) { this.stats.weakPointAffinity += level.weakPointAffinity; }
-
-					if (level.slidingAffinity) { this.stats.slidingAffinity += level.slidingAffinity; }
 					if (level.passiveSharpness) { this.stats.passiveSharpness += level.passiveSharpness; }
 
 					if (level.passiveCriticalBoostPercent) { this.stats.passiveCriticalBoostPercent += level.passiveCriticalBoostPercent; }

@@ -14,12 +14,12 @@
 					<span class="detail-icon" (click)="showOnClickSkillDetails(skill)">
 						<i class="far fa-question-circle"></i>
 					</span>
-					<span class="name" [style.color]="getModeColor(skill.mode)" (click)="showOnClickSkillDetails(skill)">
+					<span class="name" [style.color]="getSkillCountColor(skill)" (click)="showOnClickSkillDetails(skill)">
 						{{skill.name}}
 					</span>
 					<span class="value">
-						<span (click)="skillMode(skill)" style="font-size:14px !important;">
-							<i [ngClass]="skill.mode == 1 ? 'fas fa-circle':(skill.mode == 2 ? 'far fa-circle': 'fas fa-circle')" [style.color]="getModeColor(skill.mode)"></i>
+						<span (click)="skillMode(skill)" class="cursor-p" style="font-size:14px !important;">
+							<i [ngClass]="getIconModeClass(skill.mode)" [style.color]="getModeColor(skill.mode)"></i>
 							[{{skill.equippedCount}}]
 						</span>
 						<span class="skill-box" style="display:inline-block;position:relative;">
@@ -68,33 +68,26 @@
 							<i class="far fa-question-circle"></i>
 						</span>
 						<span class="name">
-							{{setBonus.name}} &nbsp;
-							[
+							{{setBonus.name}}
 							<span [style.color]="getSetBonusColor(setBonus.equippedCount, setBonus.details[setBonus.details.length-1].requiredCount)">
-								{{setBonus.equippedCount}}
+								[{{setBonus.equippedCount}}]
 							</span>
-							]
-							/
-							[
-							<span *ngFor="let level of setBonus.details; let i=index">
-								<span [style.color]="getSetBonusColor(setBonus.equippedCount, level.requiredCount)">
-									{{level.requiredCount}}
-								</span>
-								<span *ngIf="i < setBonus.details.length - 1">|</span>
-							</span>
-							]
 						</span>
 						<div class="value">
 						</div>
 					</li>
-					<li *ngFor="let level of setBonus.details; let i=index" [style.color]="getSetBonusColor(setBonus.equippedCount, level.requiredCount)" (pointerenter)="showSkillDetails($event, level)" (pointerleave)="clearSkillDetails()" (click)="showOnClickSkillDetails(level)">
+					<li *ngFor="let level of setBonus.details; let i=index" [style.color]="getSetBonusColor(setBonus.equippedCount, level.requiredCount)" (pointerenter)="showSkillDetails($event, level)" (pointerleave)="clearSkillDetails()">
 						<span class="detail-icon">
 						</span>
-						<span class="name">
+						<span class="name" (click)="showOnClickSkillDetails(level)">
 							<i class="far fa-question-circle"></i>&nbsp;{{level.skill.name}}
 						</span>
 						<div class="value">
-							<span class="skill-box" style="display:inline-block;position:relative;">
+							<span (click)="SetbonusSkillMode(level,setBonus.equippedCount)" class="cursor-p" style="font-size:14px !important;">
+								<i [ngClass]="getIconModeClass(level.mode)" [style.color]="getModeColor(level.mode)"></i>
+								[{{level.requiredCount}}]
+							</span>
+							<span class="skill-box" style="display:inline-block;position:relative;" (click)="showOnClickSkillDetails(level)">
 								<span *ngFor="let key of getMinCount(setBonus.equippedCount, level.requiredCount) | numbersArr">
 									<span class="skill-bg-setbonus">
 									</span>

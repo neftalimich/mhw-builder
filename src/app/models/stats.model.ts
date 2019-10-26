@@ -27,8 +27,6 @@ export class StatsModel {
 	passiveAffinity: number;
 	activeAffinity: number;
 	weakPointAffinity: number;
-	drawAffinity: number;
-	slidingAffinity: number;
 	passiveCriticalBoostPercent: number;
 	criticalElement: boolean;
 	criticalStatus: boolean;
@@ -90,6 +88,7 @@ export class StatsModel {
 	defense: number[];
 	passiveDefense: number;
 	passiveDefensePercent: number;
+	activeDefense: number;
 	passiveHealth: number;
 	passiveStamina: number;
 
@@ -140,8 +139,6 @@ export class StatsModel {
 		this.passiveAffinity = 0;
 		this.activeAffinity = 0;
 		this.weakPointAffinity = 0;
-		this.drawAffinity = 0;
-		this.slidingAffinity = 0;
 		this.passiveCriticalBoostPercent = 0;
 		this.criticalElement = false;
 		this.criticalStatus = false;
@@ -200,6 +197,7 @@ export class StatsModel {
 		this.defense = [0, 0, 0];
 		this.passiveDefense = 0;
 		this.passiveDefensePercent = 0;
+		this.activeDefense = 0;
 		this.passiveHealth = 0;
 		this.passiveStamina = 0;
 
