@@ -17,13 +17,10 @@ export class SkillService {
 
 	public skills: EquippedSkillModel[];
 	public setBonuses: EquippedSetBonusModel[];
-	public isSomeToolActive?: boolean;
 
 	constructor(
 		private dataService: DataService
-	) {
-		this.isSomeToolActive = false;
-	}
+	) {}
 
 	updateSkills(items: ItemModel[], decorations: DecorationModel[], augmentations: AugmentationModel[]) {
 		const equippedSkills = new Array<EquippedSkillModel>();

@@ -35,35 +35,47 @@ export class EquipmentService {
 		});
 	}
 
-	addItem(item: ItemModel) {
+	addItem(item: ItemModel, updateStats: boolean = true) {
 		this.items.push(item);
-		this.updateSkills();
-	}
-
-	addDecoration(decoration: DecorationModel) {
-		this.decorations.push(decoration);
-		this.updateSkills();
-	}
-
-	addAugmentation(augmentation: AugmentationModel) {
-		this.augmentations.push(augmentation);
-		this.updateSkills();
-	}
-	addUpgrade(upgradeContainer: UpgradeContainerModel) {
-		this.upgradeContainer = upgradeContainer;
-		this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.modifications, this.kinsect);
-	}
-
-	addModification(modification: ModificationModel) {
-		this.modifications.push(modification);
-		if (modification.id < 4) {
+		if (updateStats) {
 			this.updateSkills();
 		}
 	}
 
-	addKinsect(kinsect: KinsectModel) {
+	addDecoration(decoration: DecorationModel, updateStats: boolean = true) {
+		this.decorations.push(decoration);
+		if (updateStats) {
+			this.updateSkills();
+		}
+	}
+
+	addAugmentation(augmentation: AugmentationModel, updateStats: boolean = true) {
+		this.augmentations.push(augmentation);
+		if (updateStats) {
+			this.updateSkills();
+		}
+	}
+	addUpgrade(upgradeContainer: UpgradeContainerModel, updateStats: boolean = true) {
+		this.upgradeContainer = upgradeContainer;
+		if (updateStats) {
+			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.modifications, this.kinsect);
+		}
+	}
+
+	addModification(modification: ModificationModel, updateStats: boolean = true) {
+		this.modifications.push(modification);
+		if (updateStats) {
+			if (modification.id < 4) {
+				this.updateSkills();
+			}
+		}
+	}
+
+	addKinsect(kinsect: KinsectModel, updateStats: boolean = true) {
 		this.kinsect = kinsect;
-		this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.modifications, this.kinsect);
+		if (updateStats) {
+			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.modifications, this.kinsect);
+		}
 	}
 
 	removeItem(item: ItemModel) {
@@ -99,8 +111,7 @@ export class EquipmentService {
 		this.updateSkills();
 	}
 
-	updateItemActive(isSomeToolActive: boolean) {
-		this.skillService.isSomeToolActive = isSomeToolActive;
+	updateItemActive() {
 		this.updateSkills();
 	}
 

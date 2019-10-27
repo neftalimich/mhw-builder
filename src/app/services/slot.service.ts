@@ -220,7 +220,7 @@ export class SlotService {
 		this.kinsectSelected$.next({ slot: slot, equipment: null });
 	}
 
-	selectItem(item: ItemModel) {
+	selectItem(item: ItemModel, updateStats: boolean = true) {
 		if (this.selectedItemSlot) {
 			this.clearSlotItems(this.selectedItemSlot);
 
@@ -233,7 +233,7 @@ export class SlotService {
 				item.active = true;
 			}
 
-			this.equipmentService.addItem(item);
+			this.equipmentService.addItem(item, updateStats);
 			this.selectedItemSlot.item = item;
 
 			if (item.equipmentCategory == EquipmentCategoryType.Weapon) {
@@ -305,11 +305,13 @@ export class SlotService {
 				}
 			}
 
-			this.itemSelected$.next({ slot: this.selectedItemSlot, equipment: item });
+			if (updateStats) {
+				this.itemSelected$.next({ slot: this.selectedItemSlot, equipment: item });
+			}
 		}
 	}
 
-	selectArmorItemByType(item: ItemModel, closeModal?: boolean) {
+	selectArmorItemByType(item: ItemModel, closeModal?: boolean, updateStats: boolean = true) {
 		let slotAux: ItemSlotComponent;
 		switch (item.itemType) {
 			case ItemType.Head:
@@ -336,7 +338,7 @@ export class SlotService {
 		}
 		if (currentId != item.id) {
 			this.clearSlotItems(slotAux);
-			this.equipmentService.addItem(item);
+			this.equipmentService.addItem(item, updateStats);
 			slotAux.item = item;
 			if (closeModal) {
 				this.itemSelected$.next({ slot: slotAux, equipment: item });
@@ -348,7 +350,7 @@ export class SlotService {
 		}
 	}
 
-	selectDecoration(decoration: DecorationModel) {
+	selectDecoration(decoration: DecorationModel, updateStats: boolean = true) {
 		if (this.selectedDecorationSlot) {
 			if (this.selectedDecorationSlot.decoration) {
 				this.equipmentService.removeDecoration(this.selectedDecorationSlot.decoration);
@@ -356,32 +358,32 @@ export class SlotService {
 
 			decoration.itemId = this.selectedDecorationSlot.itemId;
 			decoration.itemType = this.selectedDecorationSlot.itemType;
-			this.equipmentService.addDecoration(decoration);
+			this.equipmentService.addDecoration(decoration, updateStats);
 			this.selectedDecorationSlot.decoration = decoration;
 			this.decorationSelected$.next({ slot: this.selectedDecorationSlot, equipment: decoration });
 		}
 	}
 
-	selectAugmentation(augmentation: AugmentationModel) {
+	selectAugmentation(augmentation: AugmentationModel, updateStats: boolean = true) {
 		if (this.selectedAugmentationSlot) {
 			if (this.selectedAugmentationSlot.augmentation) {
 				this.equipmentService.removeAugmentation(this.selectedAugmentationSlot.augmentation);
 			}
 
-			this.equipmentService.addAugmentation(augmentation);
+			this.equipmentService.addAugmentation(augmentation, updateStats);
 			this.applySlotAugmentation();
 			this.selectedAugmentationSlot.augmentation = augmentation;
 			this.augmentationSelected$.next({ slot: this.selectedAugmentationSlot, equipment: augmentation });
 		}
 	}
 
-	selectUpgradeContainer(upgradeContainer: UpgradeContainerModel) {
+	selectUpgradeContainer(upgradeContainer: UpgradeContainerModel, updateStats: boolean = true) {
 		if (this.selectedUpgradeSlot) {
 			if (this.selectedUpgradeSlot.upgradeContainer) {
 				this.equipmentService.removeUpgrade();
 			}
 
-			this.equipmentService.addUpgrade(upgradeContainer);
+			this.equipmentService.addUpgrade(upgradeContainer, updateStats);
 
 			if (upgradeContainer.upgradeDetails.length > 0) {
 				this.applySlotUpgrade(upgradeContainer.upgradeDetails[3].level);
@@ -393,7 +395,7 @@ export class SlotService {
 		}
 	}
 
-	selectModification(modification: ModificationModel) {
+	selectModification(modification: ModificationModel, updateStats: boolean = true) {
 		if (this.selectedModificationSlot) {
 			if (this.selectedModificationSlot.modification) {
 				this.equipmentService.removeModification(this.selectedModificationSlot.modification);
@@ -405,12 +407,12 @@ export class SlotService {
 		}
 	}
 
-	selectKinsect(kinsect: KinsectModel) {
+	selectKinsect(kinsect: KinsectModel, updateStats: boolean = true) {
 		if (this.selectedKinsectSlot) {
 			if (this.selectedKinsectSlot.kinsect) {
 				this.equipmentService.removeKinsect();
 			}
-			this.equipmentService.addKinsect(kinsect);
+			this.equipmentService.addKinsect(kinsect, updateStats);
 			this.selectedKinsectSlot.kinsect = kinsect;
 			this.kinsectSelected$.next({ slot: this.selectedKinsectSlot, equipment: kinsect });
 		}
@@ -431,7 +433,7 @@ export class SlotService {
 			}
 		}
 		this.itemActiveChanged$.next();
-		this.equipmentService.updateItemActive(active);
+		this.equipmentService.updateItemActive();
 	}
 
 	private applySlotAugmentation() {

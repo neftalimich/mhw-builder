@@ -72,7 +72,6 @@ export class BuildService {
 		this.loadingBuild = true;
 		const build = this.parseBuildId(buildId);
 
-		this.loadBuildSlot(build.weapon, this.slotService.weaponSlot);
 		this.loadBuildSlot(build.head, this.slotService.headSlot);
 		this.loadBuildSlot(build.chest, this.slotService.chestSlot);
 		this.loadBuildSlot(build.hands, this.slotService.handsSlot);
@@ -81,6 +80,7 @@ export class BuildService {
 		this.loadBuildSlot(build.charm, this.slotService.charmSlot);
 		this.loadBuildSlot(build.tool1, this.slotService.tool1Slot);
 		this.loadBuildSlot(build.tool2, this.slotService.tool2Slot);
+		this.loadBuildSlot(build.weapon, this.slotService.weaponSlot, true);
 
 		this.slotService.selectItemSlot(null);
 		this.changeDetector.detectChanges();
@@ -206,7 +206,7 @@ export class BuildService {
 		return build;
 	}
 
-	private loadBuildSlot(buildItem: BuildItemModel, slot: ItemSlotComponent) {
+	private loadBuildSlot(buildItem: BuildItemModel, slot: ItemSlotComponent, updateStats: boolean = false) {
 		if (buildItem.itemId) {
 			let item: ItemModel;
 			switch (this.dataService.getEquipmentCategory(slot.slotName)) {
@@ -230,7 +230,7 @@ export class BuildService {
 				}
 
 				this.slotService.selectItemSlot(slot);
-				this.slotService.selectItem(item);
+				this.slotService.selectItem(item, updateStats);
 
 				this.changeDetector.detectChanges();
 
@@ -243,7 +243,7 @@ export class BuildService {
 								if (aug) {
 									this.slotService.selectAugmentationSlot(slot.augmentationSlots.toArray()[i]);
 									const newAug = Object.assign({}, aug);
-									this.slotService.selectAugmentation(newAug);
+									this.slotService.selectAugmentation(newAug, updateStats);
 								}
 							}
 						}
@@ -323,7 +323,7 @@ export class BuildService {
 
 						this.slotService.selectUpgradeSlot(slot.upgradeSlot);
 						const newUpg = JSON.parse(JSON.stringify(upgradeContainer));
-						this.slotService.selectUpgradeContainer(newUpg);
+						this.slotService.selectUpgradeContainer(newUpg, updateStats);
 					}
 
 					switch (item.weaponType) {
@@ -333,7 +333,7 @@ export class BuildService {
 								if (kinsect) {
 									this.slotService.selectKinsectSlot(slot.kinsectSlot);
 									const newKinsect = Object.assign({}, kinsect);
-									this.slotService.selectKinsect(newKinsect);
+									this.slotService.selectKinsect(newKinsect, updateStats);
 									if (buildItem.kinsectElementId) {
 										const keys = Object.keys(ElementType);
 										for (const key in keys) {
@@ -358,7 +358,7 @@ export class BuildService {
 										if (mod) {
 											this.slotService.selectModificationSlot(slot.modificationSlots.toArray()[i]);
 											const newAug = Object.assign({}, mod);
-											this.slotService.selectModification(newAug);
+											this.slotService.selectModification(newAug, updateStats);
 										}
 									}
 								}
@@ -378,7 +378,7 @@ export class BuildService {
 						if (decoration) {
 							this.slotService.selectDecorationSlot(slot.decorationSlots.toArray()[i]);
 							const newDecoration = Object.assign({}, decoration);
-							this.slotService.selectDecoration(newDecoration);
+							this.slotService.selectDecoration(newDecoration, updateStats);
 						}
 						i++;
 					}
