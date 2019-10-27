@@ -2,8 +2,8 @@
 
 $skillColor: deepskyblue;
 $skillMode2: slategray;
-$skillMode3: lightcoral;
-$skillNature: lightseagreen;
+$skillMode3: darken(deepskyblue,12%);
+$skillNature: #00c292;
 $skillWidht: 10px;
 
 ul {
@@ -49,103 +49,66 @@ li {
 	height: 100%;
 }
 
+.skill-square {
+	width: $skillWidht !important;
+	border-width: 2px;
+	border-style: solid;
+	margin: 0 2px;
+}
+
 .skill-bg-active {
 	background-color: deepskyblue;
 	color: deepskyblue;
-	width: $skillWidht !important;
 	border-color: deepskyblue;
-	border-width: 2px;
-	border-style: solid;
-	margin-left: 2px;
-	margin-right: 2px;
 }
 
 .skill-bg-mode2 {
 	background-color: $skillMode2;
 	color: $skillMode2;
-	width: $skillWidht !important;
 	border-color: $skillMode2;
-	border-width: 2px;
-	border-style: solid;
-	margin-left: 2px;
-	margin-right: 2px;
 }
 
 .skill-bg-mode3 {
 	background-color: $skillMode3;
 	color: $skillMode3;
-	width: $skillWidht !important;
 	border-color: $skillMode3;
-	border-width: 2px;
-	border-style: solid;
-	margin-left: 2px;
-	margin-right: 2px;
 }
 
 .skill-bg-secret {
 	background-color: #7f40bf;
 	color: #7f40bf;
-	width: $skillWidht !important;
 	border-color: #7f40bf;
-	border-width: 2px;
-	border-style: solid;
-	margin-left: 2px;
-	margin-right: 2px;
 }
 
 .skill-bg-tool {
 	background-color: #86ff86;
 	color: #86ff86;
-	width: $skillWidht !important;
 	border-color: #86ff86;
-	border-width: 2px;
-	border-style: solid;
-	margin-left: 2px;
-	margin-right: 2px;
 }
 
 .skill-bg-empty {
 	background-color: #C0C0C0;
 	color: #C0C0C0;
 	border-color: #C0C0C0;
-	border-width: 2px;
-	border-style: solid;
-	width: $skillWidht !important;
-	margin-left: 2px;
-	margin-right: 2px;
 }
 
 .skill-bg-transparent {
 	background-color: transparent;
 	color: transparent;
 	border-color: transparent;
-	border-width: 2px;
-	border-style: solid;
-	width: $skillWidht !important;
-	margin-left: 2px;
-	margin-right: 2px;
 }
 
 .skill-bg-setbonus {
 	background-color: #F0E68C;
 	color: #F0E68C;
 	border-color: #F0E68C;
-	border-width: 2px;
-	border-style: solid;
-	width: $skillWidht !important;
-	margin-left: 2px;
-	margin-right: 2px;
 }
 
 .skill-bg-nature {
 	background-color: $skillNature;
 	color: $skillNature;
 	border-color: $skillNature;
-	border-width: 2px;
-	border-style: solid;
 	width: $skillWidht !important;
-	margin-left: 2px;
-	margin-right: 2px;
 }
 
 .setBonus-header {

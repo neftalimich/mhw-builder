@@ -25,30 +25,30 @@
 						<span class="skill-box" style="display:inline-block;position:relative;">
 							<span *ngFor="let key of getMinCount(skill.equippedArmorCount, skill.totalLevelCount - skill.secretLevelCount) | numbersArr">
 								<span *ngIf="!skill.isNatureBonus">
-									<span class="skill-bg-active" *ngIf="skill.mode==1">
+									<span class="skill-square skill-bg-active" *ngIf="skill.mode == 1">
 									</span>
-									<span class="skill-bg-mode2" *ngIf="skill.mode==2">
+									<span class="skill-square skill-bg-mode2" *ngIf="skill.mode == 2">
 									</span>
-									<span class="skill-bg-mode3" *ngIf="skill.mode==3">
+									<span class="skill-square skill-bg-mode3" *ngIf="skill.mode == 3">
 									</span>
 								</span>
-								<span class="skill-bg-nature" *ngIf="skill.isNatureBonus">
+								<span class="skill-square skill-bg-nature" *ngIf="skill.isNatureBonus">
 								</span>
 							</span>
 							<span *ngFor="let key of (getMinCount(skill.equippedArmorCount, skill.totalLevelCount) - (skill.totalLevelCount - skill.secretLevelCount)) | numbersArr">
-								<span class="skill-bg-secret" *ngIf="!skill.isNatureBonus">
+								<span class="skill-square skill-bg-secret" *ngIf="!skill.isNatureBonus">
 								</span>
 							</span>
 							<span *ngFor="let key of getMinCount(skill.equippedToolActiveCount, skill.totalLevelCount - skill.equippedArmorCount) | numbersArr">
-								<span class="skill-bg-tool">
+								<span class="skill-square skill-bg-tool">
 								</span>
 							</span>
 							<span *ngFor="let key of (skill.totalLevelCount - skill.equippedArmorCount - skill.equippedToolActiveCount) | numbersArr">
-								<span class="skill-bg-empty">
+								<span class="skill-square skill-bg-empty">
 								</span>
 							</span>
 							<span *ngFor="let key of (7 - skill.totalLevelCount) | numbersArr">
-								<span class="skill-bg-transparent">
+								<span class="skill-square skill-bg-transparent">
 								</span>
 							</span>
 						</span>
@@ -89,15 +89,15 @@
 							</span>
 							<span class="skill-box" style="display:inline-block;position:relative;" (click)="showOnClickSkillDetails(level)">
 								<span *ngFor="let key of getMinCount(setBonus.equippedCount, level.requiredCount) | numbersArr">
-									<span class="skill-bg-setbonus">
+									<span class="skill-square skill-bg-setbonus">
 									</span>
 								</span>
 								<span *ngFor="let key of (level.requiredCount - getMinCount(setBonus.equippedCount, level.requiredCount)) | numbersArr">
-									<span class="skill-bg-empty">
+									<span class="skill-square skill-bg-empty">
 									</span>
 								</span>
 								<span *ngFor="let key of (5 - level.requiredCount) | numbersArr">
-									<span class="skill-bg-transparent">
+									<span class="skill-square skill-bg-transparent">
 									</span>
 								</span>
 							</span>

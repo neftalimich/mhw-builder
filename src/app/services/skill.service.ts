@@ -7,6 +7,7 @@ import { EquippedSetBonusDetailModel, EquippedSetBonusModel } from '../models/eq
 import { EquippedSkillModel } from '../models/equipped-skill.model';
 import { ItemModel } from '../models/item.model';
 import { ItemType } from '../types/item.type';
+import { ModeType } from '../types/mode.type';
 import { DataService } from './data.service';
 
 @Injectable()
@@ -58,24 +59,15 @@ export class SkillService {
 					continue;
 				}
 
-				let equippedSkill = _.find(equippedSkills, es => es.id == itemSkill.id);
-				const equippedCount = itemSkill.level * (item.equippedLevel ? item.equippedLevel : 1);
+				let equippedSkill: EquippedSkillModel = _.find(equippedSkills, es => es.id == itemSkill.id);
+				const level = itemSkill.level * (item.equippedLevel ? item.equippedLevel : 1);
 				if (!equippedSkill) {
-					const skill = this.dataService.getSkill(itemSkill.id);
-					equippedSkill = new EquippedSkillModel();
-					equippedSkill.skill = skill;
-					equippedSkill.id = skill.id;
-					equippedSkill.name = skill.name;
-					equippedSkill.description = skill.description;
-					equippedSkill.equippedArmorCount = equippedCount;
-					equippedSkill.equippedCount = equippedCount;
-					equippedSkill.totalLevelCount = skill.maxLevel ? skill.maxLevel : skill.levels.length;
-					this.countSkillItemPart(equippedSkill, equippedCount, item.itemType);
+					equippedSkill = this.createEquippedSkill(itemSkill.id, level, item.itemType);
 					equippedSkills.push(equippedSkill);
 				} else {
-					equippedSkill.equippedArmorCount += equippedCount;
-					equippedSkill.equippedCount += equippedCount;
-					this.countSkillItemPart(equippedSkill, equippedCount, item.itemType);
+					equippedSkill.equippedArmorCount += level;
+					equippedSkill.equippedCount += level;
+					this.countSkillItemPart(equippedSkill, level, item.itemType);
 				}
 			}
 		}
@@ -92,55 +84,30 @@ export class SkillService {
 					continue;
 				}
 
-				let equippedSkill = _.find(equippedSkills, es => es.id == itemSkill.id);
-				const equippedCount = itemSkill.level;
+				let equippedSkill: EquippedSkillModel = _.find(equippedSkills, es => es.id == itemSkill.id);
+				const level = itemSkill.level;
 				if (!equippedSkill) {
-					const skill = this.dataService.getSkill(itemSkill.id);
-
-					equippedSkill = new EquippedSkillModel();
-					equippedSkill.skill = skill;
-					equippedSkill.id = skill.id;
-					equippedSkill.name = skill.name;
-					equippedSkill.description = skill.description;
-					if (decoration.itemType == ItemType.Tool1) {
-						if (decoration.active) {
-							equippedSkill.equippedToolActiveCount = equippedCount;
-						} else {
-							equippedSkill.equippedTool1Count = equippedCount;
-						}
-					} else if (decoration.itemType == ItemType.Tool2) {
-						if (decoration.active) {
-							equippedSkill.equippedToolActiveCount = equippedCount;
-						} else {
-							equippedSkill.equippedTool2Count = equippedCount;
-						}
-					} else {
-						equippedSkill.equippedArmorCount = equippedCount;
-					}
-					equippedSkill.equippedCount = equippedSkill.equippedArmorCount + equippedSkill.equippedToolActiveCount;
-
-					equippedSkill.totalLevelCount = skill.maxLevel ? skill.maxLevel : skill.levels.length;
-					this.countSkillItemPart(equippedSkill, equippedCount, decoration.itemType);
+					equippedSkill = this.createEquippedSkill(itemSkill.id, level, decoration.itemType, decoration.active);
 					equippedSkills.push(equippedSkill);
 				} else {
 					if (decoration.itemType == ItemType.Tool1) {
 						if (decoration.active) {
-							equippedSkill.equippedToolActiveCount += equippedCount;
+							equippedSkill.equippedToolActiveCount += level;
 						} else {
-							equippedSkill.equippedTool1Count += equippedCount;
+							equippedSkill.equippedTool1Count += level;
 						}
 					} else if (decoration.itemType == ItemType.Tool2) {
 						if (decoration.active) {
-							equippedSkill.equippedToolActiveCount += equippedCount;
+							equippedSkill.equippedToolActiveCount += level;
 						} else {
-							equippedSkill.equippedTool2Count += equippedCount;
+							equippedSkill.equippedTool2Count += level;
 						}
 					} else {
-						equippedSkill.equippedArmorCount += equippedCount;
+						equippedSkill.equippedArmorCount += level;
 					}
 					equippedSkill.equippedCount = equippedSkill.equippedArmorCount + equippedSkill.equippedToolActiveCount;
 
-					this.countSkillItemPart(equippedSkill, equippedCount, decoration.itemType);
+					this.countSkillItemPart(equippedSkill, level, decoration.itemType);
 				}
 			}
 		}
@@ -264,7 +231,7 @@ export class SkillService {
 		}
 	}
 
-	private countSkillItemPart(equippedSkill: EquippedSkillModel, actualCount: number, itemType: ItemType) {
+	private countSkillItemPart(equippedSkill: EquippedSkillModel, actualCount: number, itemType?: ItemType) {
 		if (itemType == ItemType.Weapon) {
 			equippedSkill.weaponCount += actualCount;
 		} else if (itemType == ItemType.Head) {
@@ -284,17 +251,36 @@ export class SkillService {
 		}
 	}
 
-	createEquippedSkill(skillId: string, level: number): EquippedSkillModel {
+	createEquippedSkill(skillId: string, level: number, itemType?: ItemType, active?: boolean): EquippedSkillModel {
 		const skill = this.dataService.getSkill(skillId);
 		const equippedSkill = new EquippedSkillModel();
 		equippedSkill.skill = skill;
 		equippedSkill.id = skill.id;
 		equippedSkill.name = skill.name;
 		equippedSkill.description = skill.description;
-		equippedSkill.equippedArmorCount = level;
-		equippedSkill.equippedCount = level;
+
+		if (itemType == ItemType.Tool1) {
+			if (active) {
+				equippedSkill.equippedToolActiveCount = level;
+			} else {
+				equippedSkill.equippedTool1Count = level;
+			}
+		} else if (itemType == ItemType.Tool2) {
+			if (active) {
+				equippedSkill.equippedToolActiveCount = level;
+			} else {
+				equippedSkill.equippedTool2Count = level;
+			}
+		} else {
+			equippedSkill.equippedArmorCount = level;
+		}
+
+		equippedSkill.equippedCount = equippedSkill.equippedArmorCount + equippedSkill.equippedToolActiveCount;
 
 		equippedSkill.totalLevelCount = skill.maxLevel ? skill.maxLevel : skill.levels.length;
+		this.countSkillItemPart(equippedSkill, level, itemType);
+		equippedSkill.hasActiveStats = skill.hasActiveStats;
+		if (skill.hasActiveStats) { equippedSkill.mode = ModeType.AllSkillActive; }
 
 		return equippedSkill;
 	}

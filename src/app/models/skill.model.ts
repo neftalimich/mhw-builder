@@ -7,4 +7,5 @@ export class SkillModel {
 	maxLevel?: number;
 	raiseSkillId?: string;
 	levels: SkillLevelModel[];
+	hasActiveStats?: boolean;
 }

@@ -144,6 +144,10 @@ id	rarity	level	name	skills
 146	9	4	Satiated Jewel+ 4	freeMeal-2
 147	9	4	Sonorous Jewel+ 4	hornMaestro-2
 148	9	4	Maintenance Jewel+ 4	toolSpecialist-2
+159	12	4	Evasion Jewel+ 4	evadeWindow-2
+161	12	4	Wind Resist Jewel+ 4	windproof-2
+163	12	4	Earplugs Jewel+ 4	earplugs-2
+164	12	4	Handicraft Jewel+ 4	handicraft-2
 169	9	4	Fungiform Jewel+ 4	mushroomancer-2
 172	12	4	Trueshot Jewel+ 4	specialAmmoBoost-2
 173	11	4	Sleep Jewel+ 4	sleepAttack-2
@@ -154,8 +158,23 @@ id	rarity	level	name	skills
 178	11	4	Bomber Jewel+ 4	bombardier-2
 179	12	4	Blast Jewel+ 4	blastAttack-2
 180	12	4	Artillery Jewel+ 4	artillery-2
+181	12	4	Throttle Jewel+ 4	latentPower-2
+186	12	4	Physique Jewel+ 4	constitution-2
+194	12	4	Challenger Jewel+ 4	agitator-2
+207	12	4	Hard Fire Res Jewel 4	fireResistance-3
+208	12	4	Hard Water Res Jewel 4	waterResistance-3
+209	12	4	Hard Thunder Res Jewel 4	thunderResistance-3
+210	12	4	Hard Ice Res Jewel 4	iceResistance-3
+211	12	4	Hard Dragon Res Jewel 4	dragonResistance-3
+222	12	4	Hard Enduring Jewel 4	itemProlonger-3
+227	12	4	Hard Defense Jewel 4	defenseBoost-3
 230	9	4	Hard Meowster Jewel 4	palicoRally-3
+233	9	4	Hard Intimidator Jewel 4	intimidator-3
+236	9	4	Hard Survival Jewel 4	survivalExpert-3
+237	9	4	Hard Geology Jewel 4	geologist-3
 238	9	4	Hard Tip Toe Jewel 4	stealth-3
+240	9	4	Hard Specimen Jewel 4	entomologist-3
+244	9	4	Hard Botany Jewel 4	botanist-4
 7812	0	4	Bomber/Attack Jewel+ 4	bombardier-1;attackBoost-1
 7886	0	4	Bomber/Physique Jewel+ 4	bombardier-1;constitution-1
 7819	0	4	Bomber/Expert Jewel+ 4	bombardier-1;criticalEye-1

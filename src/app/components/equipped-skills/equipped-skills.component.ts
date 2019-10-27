@@ -111,12 +111,16 @@ export class EquippedSkillsComponent implements OnInit {
 	}
 
 	skillMode(equippedSkill: EquippedSkillModel) {
-		if (equippedSkill.mode == ModeType.Active) {
-			equippedSkill.mode = ModeType.AllSkillActive;
-		} else if (equippedSkill.mode == ModeType.AllSkillActive) {
+		if (equippedSkill.mode == ModeType.AllSkillActive) {
+			equippedSkill.mode = ModeType.Active;
+		} else if (equippedSkill.mode == ModeType.Active) {
 			equippedSkill.mode = ModeType.Inactive;
 		} else if (equippedSkill.mode == ModeType.Inactive) {
-			equippedSkill.mode = ModeType.Active;
+			if (equippedSkill.hasActiveStats) {
+				equippedSkill.mode = ModeType.AllSkillActive;
+			} else {
+				equippedSkill.mode = ModeType.Active;
+			}
 		}
 		this.equipmentService.updateSkillMode(this.skills);
 	}
@@ -169,7 +173,7 @@ export class EquippedSkillsComponent implements OnInit {
 		} else if (mode == 2) {
 			return 'rgba(200,200,200,0.5)';
 		} else if (mode == 3) {
-			return 'lightcoral';
+			return '#0091c2';
 		} else {
 			return '';
 		}

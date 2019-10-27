@@ -922,17 +922,21 @@
 		"levels": [
 			{
 				"description": "Attacks that hit weak spots have 10% increased affinity, with an extra 5% on wounded parts.",
-				"weakPointAffinity": 15
+				"weakPointAffinity": 10,
+				"activeWeakPointAffinity": 5
 			},
 			{
 				"description": "Attacks that hit weak spots have 15% increased affinity, with an extra 15% on wounded parts.",
-				"weakPointAffinity": 30
+				"weakPointAffinity": 15,
+				"activeWeakPointAffinity": 15
 			},
 			{
 				"description": "Attacks that hit weak spots have 30% increased affinity, with an extra 20% on wounded parts.",
-				"weakPointAffinity": 50
+				"weakPointAffinity": 30,
+				"activeWeakPointAffinity": 20
 			}
-		]
+		],
+		"hasActiveStats": true
 	},
 	{
 		"id": "focus",
@@ -1016,7 +1020,8 @@
 				"description": "Draw attack affinity +100%",
 				"activeAffinity": 100
 			}
-		]
+		],
+		"hasActiveStats": true
 	},
 	{
 		"id": "punishingDraw",
@@ -1172,7 +1177,8 @@
 				"activeAffinity": 60,
 				"activeStaminaDepletionReductionPercent": 50
 			}
-		]
+		],
+		"hasActiveStats": true
 	},
 	{
 		"id": "agitator",
@@ -1215,7 +1221,8 @@
 				"activeAffinity": 20,
 				"activeAttack": 28
 			}
-		]
+		],
+		"hasActiveStats": true
 	},
 	{
 		"id": "peakPerformance",
@@ -1234,7 +1241,8 @@
 				"description": "While active, grants attack +20.",
 				"activeAttack": 20
 			}
-		]
+		],
+		"hasActiveStats": true
 	},
 	{
 		"id": "heroics",
@@ -1266,7 +1274,8 @@
 				"activeAttackPercent": 15,
 				"activeDefense": 100
 			}
-		]
+		],
+		"hasActiveStats": true
 	},
 	{
 		"id": "adrenaline",
@@ -1313,7 +1322,8 @@
 				"description": "While active, grants attack +25.",
 				"activeAttack": 25
 			}
-		]
+		],
+		"hasActiveStats": true
 	},
 	{
 		"id": "resuscitate",
@@ -1877,7 +1887,8 @@
 				"description": "While active, increases affinity by 50%.",
 				"activeAffinity": 50
 			}
-		]
+		],
+		"hasActiveStats": true
 	},
 	{
 		"id": "slingerCapacity",
@@ -2125,7 +2136,8 @@
 				"description": "Increases affinity by 30% for a short time after sliding.",
 				"activeAffinity": 30
 			}
-		]
+		],
+		"hasActiveStats": true
 	},
 	{
 		"id": "eldersealBoost",
@@ -2222,7 +2234,8 @@
 				"description": "While active increases attack power by 15%.",
 				"activeAttackPercent": 15
 			}
-		]
+		],
+		"hasActiveStats": true
 	},
 	{
 		"id": "coalescence",
@@ -2247,7 +2260,8 @@
 				"activeElementAttack": 90,
 				"activeAilmentAttackBuildUpPercent": 15
 			}
-		]
+		],
+		"hasActiveStats": true
 	},
 	{
 		"id": "captureMaster",

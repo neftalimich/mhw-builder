@@ -28,6 +28,7 @@ export class EquippedSkillModel {
 	requiredCount?: number;
 
 	mode: ModeType;
+	hasActiveStats?: boolean;
 
 	constructor() {
 		this.weaponCount = 0;

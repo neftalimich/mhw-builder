@@ -16,6 +16,7 @@ export class SkillLevelModel {
 	passiveAffinity: number;
 	activeAffinity: number;
 	weakPointAffinity: number;
+	activeWeakPointAffinity: number;
 	drawAffinity: number;
 	slidingAffinity: number;
 
