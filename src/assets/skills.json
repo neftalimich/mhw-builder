@@ -2189,10 +2189,20 @@
 	{
 		"id": "razorSharpSpareShot",
 		"name": "Razor Sharp/Spare Shot",
-		"description": "Halves sharpness loss. For bows and bowguns, shots have a chance not to expend coatings or ammo.",
+		"description": "",
 		"levels": [
 			{
 				"description": "Halves sharpness loss. For bows and bowguns, shots have a chance not to expend coatings or ammo."
+			}
+		]
+	},
+	{
+		"id": "trueRazorSharpSpareShot",
+		"name": "True Razor Sharp/Spare Shot",
+		"description": "",
+		"levels": [
+			{
+				"description": "Greatly reduces sharpness loss. Bows and bowguns have a chance not to expend coatings or ammo."
 			}
 		]
 	},

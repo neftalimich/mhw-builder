@@ -33,6 +33,8 @@ export class SlotService {
 	public kinsectSelected$ = new Subject<SlotEventModel<KinsectSlotComponent, KinsectModel>>();
 	public itemLevelChanged$ = new Subject();
 	public itemActiveChanged$ = new Subject();
+	public weaponSlotSelected$ = new Subject();
+	public armorSlotSelected$ = new Subject();
 
 	weaponSlot: ItemSlotComponent;
 	headSlot: ItemSlotComponent;
@@ -92,6 +94,13 @@ export class SlotService {
 		if (this.selectedItemSlot) {
 			this.selectedItemSlot.selected = true;
 			this.anySlotSelected$.next(this.selectedItemSlot);
+			if (this.selectedItemSlot && this.selectedItemSlot.item) {
+				if (this.selectedItemSlot.item.equipmentCategory == EquipmentCategoryType.Weapon) {
+					this.weaponSlotSelected$.next();
+				} else if (this.selectedItemSlot.item.equipmentCategory == EquipmentCategoryType.Armor) {
+					this.armorSlotSelected$.next();
+				}
+			}
 		}
 	}
 

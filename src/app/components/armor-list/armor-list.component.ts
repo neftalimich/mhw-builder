@@ -46,7 +46,14 @@ export class ArmorListComponent implements OnInit {
 		public dataService: DataService
 	) { }
 
-	ngOnInit(): void { }
+	ngOnInit(): void {
+		this.slotService.armorSlotSelected$.subscribe(slot => {
+			setTimeout(() => {
+				this.searchBox.nativeElement.focus();
+				this.searchBox.nativeElement.select();
+			}, 250);
+		});
+	}
 
 	refreshList() {
 		if (this.itemList) {

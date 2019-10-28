@@ -32,17 +32,16 @@ export class DataService {
 		} else {
 			result = this.appDataProvider.appData.weapons;
 		}
-		for (const weapon of result) {
-			weapon.ammoCapacities = this.getAmmoCapacities(weapon.id, weapon.weaponType);
-			weapon.melodies = this.getMelodies(weapon.id, weapon.weaponType);
-		}
 		return result;
 	}
 
 	getWeapon(id: number): ItemModel {
-		const weapon = _.find(this.appDataProvider.appData.weapons, w => w.id === id);
-		weapon.ammoCapacities = this.getAmmoCapacities(weapon.id, weapon.weaponType);
-		weapon.melodies = this.getMelodies(weapon.id, weapon.weaponType);
+		const weapon: ItemModel = _.find(this.appDataProvider.appData.weapons, w => w.id === id);
+		if (weapon.weaponType == WeaponType.LightBowgun || weapon.weaponType == WeaponType.HeavyBowgun) {
+			weapon.ammoCapacities = this.getAmmoCapacities(weapon.id);
+		} else if (weapon.weaponType == WeaponType.HuntingHorn) {
+			weapon.melodies = this.getMelodies(weapon.id);
+		}
 		return weapon;
 	}
 
@@ -205,31 +204,25 @@ export class DataService {
 		}
 	}
 
-	private getAmmoCapacities(weaponId: number, weaponType: WeaponType): AmmoCapacitiesModel {
-		let result: AmmoCapacitiesModel;
-		if (weaponType == WeaponType.LightBowgun || weaponType == WeaponType.HeavyBowgun) {
-			result = this.appDataProvider.appData.ammoCapacities.find(c => c.id === weaponId);
-		}
-		return result;
+	getAmmoCapacities(weaponId: number): AmmoCapacitiesModel {
+		return this.appDataProvider.appData.ammoCapacities.find(c => c.id === weaponId);
 	}
 
-	private getMelodies(weaponId: number, weaponType: WeaponType): MelodiesModel {
-		let result: MelodiesModel;
-		if (weaponType == WeaponType.HuntingHorn) {
-			result = this.appDataProvider.appData.melodies.find(c => c.id === weaponId);
-			if (result) {
-				result.melodyEffects = [];
-				for (let i = 0; i < result.melodies.length; i++) {
-					const melodyEffect = new MelodiesDetailModel();
-					melodyEffect.melody = result.melodies[i];
-					melodyEffect.effects = result.melodiesEffect.filter(e => e.index == i);
-					for (const effect of melodyEffect.effects) {
-						effect.name = this.appDataProvider.appData.melodyEffect.find(m => m.id == effect.id).name;
-					}
-					result.melodyEffects.push(melodyEffect);
+	getMelodies(weaponId: number): MelodiesModel {
+		const result: MelodiesModel = this.appDataProvider.appData.melodies.find(c => c.id === weaponId);
+		if (result) {
+			result.melodyEffects = [];
+			for (let i = 0; i < result.melodies.length; i++) {
+				const melodyEffect = new MelodiesDetailModel();
+				melodyEffect.melody = result.melodies[i];
+				melodyEffect.effects = result.melodiesEffect.filter(e => e.index == i);
+				for (const effect of melodyEffect.effects) {
+					effect.name = this.appDataProvider.appData.melodyEffect.find(m => m.id == effect.id).name;
 				}
+				result.melodyEffects.push(melodyEffect);
 			}
 		}
+
 		return result;
 	}
 }
