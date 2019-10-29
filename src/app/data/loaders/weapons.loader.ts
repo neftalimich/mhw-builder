@@ -35,6 +35,10 @@ export class WeaponsLoader extends DataLoader<ItemModel> {
 				parser: new ValuesParser()
 			},
 			{
+				columnName: 'monsters',
+				parser: new TagsParser()
+			},
+			{
 				columnName: 'tags',
 				parser: new TagsParser()
 			},

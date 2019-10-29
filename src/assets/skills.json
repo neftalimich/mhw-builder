@@ -1744,7 +1744,7 @@
 	{
 		"id": "carvingPro",
 		"name": "Carving Pro",
-		"description": "",
+		"description": "Prevents knockback while carving.",
 		"levels": [
 			{
 				"description": "Prevents knockback while carving."
@@ -1754,7 +1754,7 @@
 	{
 		"id": "carvingMaster",
 		"name": "Carving Master",
-		"description": "",
+		"description": "Lets you carve one additional time. (Not effect when joing mid-quest.)",
 		"levels": [
 			{
 				"description": "Lets you carve one additional time. (Not effect when joing mid-quest.)"
@@ -2189,7 +2189,7 @@
 	{
 		"id": "razorSharpSpareShot",
 		"name": "Razor Sharp/Spare Shot",
-		"description": "",
+		"description": "Halves sharpness loss. For bows and bowguns, shots have a chance not to expend coatings or ammo.",
 		"levels": [
 			{
 				"description": "Halves sharpness loss. For bows and bowguns, shots have a chance not to expend coatings or ammo."
@@ -2199,7 +2199,7 @@
 	{
 		"id": "trueRazorSharpSpareShot",
 		"name": "True Razor Sharp/Spare Shot",
-		"description": "",
+		"description": "Greatly reduces sharpness loss. Bows and bowguns have a chance not to expend coatings or ammo.",
 		"levels": [
 			{
 				"description": "Greatly reduces sharpness loss. Bows and bowguns have a chance not to expend coatings or ammo."
@@ -2296,7 +2296,7 @@
 	{
 		"id": "igniIntensity",
 		"name": "Igni Intensity",
-		"description": "",
+		"description": "Only those who complete the rigorous witcher training are allowed to use the powerful magic of the Igni Sign.",
 		"levels": [
 			{
 				"description": "Only those who complete the rigorous witcher training are allowed to use the powerful magic of the Igni Sign."
@@ -2368,7 +2368,7 @@
 	{
 		"id": "goodLuck",
 		"name": "Good Luck",
-		"description": "",
+		"description": "Good chance of increased quest rewards. (No effect when joining mid-quest.)",
 		"levels": [
 			{
 				"description": "Good chance of increased quest rewards. (No effect when joining mid-quest.)"
@@ -2378,7 +2378,7 @@
 	{
 		"id": "greatLuck",
 		"name": "Great Luck",
-		"description": "",
+		"description": "Often increases the number of rewards received at the end of a quest. (Does not work if joining a quest in progress)",
 		"levels": [
 			{
 				"description": "Often increases the number of rewards received at the end of a quest. (Does not work if joining a quest in progress)"

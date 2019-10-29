@@ -196,10 +196,10 @@ export class ItemDetailsComponent implements OnInit {
 			});
 		}
 
-		if (this.item.tags) {
+		if (this.item.monsters) {
 			this.stats.push({
-				name: 'Tags',
-				value: this.item.tags.join(' | ')
+				name: 'Monsters',
+				value: this.item.monsters.join(' | ').replace(/-/g, ' ')
 			});
 		}
 	}

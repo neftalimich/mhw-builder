@@ -52,6 +52,7 @@ export class ItemModel {
 	duration: number;
 	recharge: number;
 
+	monsters?: string[];
 	tags?: string[];
 	color: number;
 

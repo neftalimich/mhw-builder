@@ -105,8 +105,9 @@ export class WeaponListComponent implements OnInit {
 						const nameMatch = itemName.includes(queryPart);
 						const skillMatch = _.some(skills, skill => skill.name.toLowerCase().includes(queryPart));
 						const tagMatch = _.some(item.tags, tag => tag.toLowerCase().includes(queryPart));
+						const monstersMatch = _.some(item.monsters, tag => tag.toLowerCase().includes(queryPart));
 
-						return nameMatch || skillMatch || tagMatch;
+						return nameMatch || skillMatch || tagMatch || monstersMatch;
 					});
 
 					let hiddenMatch = true;
