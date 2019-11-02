@@ -71,6 +71,7 @@ export class BuildService {
 	loadBuild(buildId: string) {
 		this.loadingBuild = true;
 		const build = this.parseBuildId(buildId);
+		console.log(build);
 
 		this.loadBuildSlot(build.head, this.slotService.headSlot);
 		this.loadBuildSlot(build.chest, this.slotService.chestSlot);
@@ -78,8 +79,8 @@ export class BuildService {
 		this.loadBuildSlot(build.legs, this.slotService.legsSlot);
 		this.loadBuildSlot(build.feet, this.slotService.feetSlot);
 		this.loadBuildSlot(build.charm, this.slotService.charmSlot);
-		this.loadBuildSlot(build.tool1, this.slotService.tool1Slot);
-		this.loadBuildSlot(build.tool2, this.slotService.tool2Slot);
+		if (build.tool1) { this.loadBuildSlot(build.tool1, this.slotService.tool1Slot); }
+		if (build.tool2) { this.loadBuildSlot(build.tool2, this.slotService.tool2Slot); }
 		this.loadBuildSlot(build.weapon, this.slotService.weaponSlot, true);
 
 		this.slotService.selectItemSlot(null);

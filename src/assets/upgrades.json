@@ -143,26 +143,26 @@
 		"multiplier": 5,
 		"levels": [
 			{
-				"description": "Heal on hit +10%",
-				"healOnHitPercent": 10,
+				"description": "Heal on hit +7.5%",
+				"healOnHitPercent": 7.5,
 				"requiredSlots": 3,
 				"totalSlots": 3
 			},
 			{
-				"description": "Heal on hit +15%",
-				"healOnHitPercent": 15,
+				"description": "Heal on hit +9%",
+				"healOnHitPercent": 9,
 				"requiredSlots": 2,
 				"totalSlots": 5
 			},
 			{
-				"description": "Heal on hit +20%",
-				"healOnHitPercent": 20,
+				"description": "Heal on hit +11.25%",
+				"healOnHitPercent": 11.25,
 				"requiredSlots": 2,
 				"totalSlots": 7
 			},
 			{
-				"description": "Heal on hit +25%",
-				"healOnHitPercent": 25,
+				"description": "Heal on hit +13.5%",
+				"healOnHitPercent": 13.5,
 				"requiredSlots": 2,
 				"totalSlots": 9
 			}
