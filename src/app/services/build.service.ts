@@ -71,7 +71,6 @@ export class BuildService {
 	loadBuild(buildId: string) {
 		this.loadingBuild = true;
 		const build = this.parseBuildId(buildId);
-		console.log(build);
 
 		this.loadBuildSlot(build.head, this.slotService.headSlot);
 		this.loadBuildSlot(build.chest, this.slotService.chestSlot);

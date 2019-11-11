@@ -96,7 +96,7 @@
 								 [itemType]="slotService.selectedItemSlot?.slotName" [onlyIceborne]="slotService.onlyIceborne"></mhw-builder-weapon-list>
 
 		<mhw-builder-armor-list *ngIf="slotService.selectedItemSlot && dataService.getEquipmentCategory(slotService.selectedItemSlot.slotName) == equipmentCategoryTypes.Armor"
-								[itemTypeFilters]="[slotService.selectedItemSlot?.slotName]"></mhw-builder-armor-list>
+								[itemTypeFilters]="[slotService.selectedItemSlot?.slotName]" [onlyIceborne]="slotService.onlyIceborne"></mhw-builder-armor-list>
 
 		<mhw-builder-charm-list *ngIf="slotService.selectedItemSlot && dataService.getEquipmentCategory(slotService.selectedItemSlot.slotName) == equipmentCategoryTypes.Charm"
 								[itemType]="slotService.selectedItemSlot?.slotName"></mhw-builder-charm-list>

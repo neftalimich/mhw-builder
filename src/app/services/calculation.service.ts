@@ -512,7 +512,7 @@ export class CalculationService {
 	private getHealOnHitPercent(stats: StatsModel): StatDetailModel {
 		return {
 			name: 'Heal on Hit',
-			value: stats.healOnHitPercent
+			value: stats.healOnHitPercent + '%'
 		};
 	}
 

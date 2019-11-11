@@ -16,11 +16,8 @@ import { ItemType } from '../../types/item.type';
 export class ArmorListComponent implements OnInit {
 	public equipmentCategoryType = EquipmentCategoryType;
 	private _itemTypeFilters: ItemType[];
-	onlyIceborne = true;
-	typeSort: string;
-	showFilterContainer = false;
-	showSortContainer = true;
-
+	private _onlyIceborne: boolean;
+	
 	@Input()
 	set itemTypeFilters(itemTypeFilters: ItemType[]) {
 		this._itemTypeFilters = itemTypeFilters;
@@ -28,13 +25,26 @@ export class ArmorListComponent implements OnInit {
 	}
 	get itemTypeFilters(): ItemType[] { return this._itemTypeFilters; }
 
+	@Input()
+	set onlyIceborne(onlyIceborne: boolean) {
+		this._onlyIceborne = onlyIceborne;
+		this.search(this.searchBox.nativeElement.value);
+		this.armorTypeSort = '';
+	}
+	get onlyIceborne(): boolean { return this._onlyIceborne; }
+
 	@ViewChild('searchBox', { static: true }) searchBox: ElementRef;
 	@ViewChild('itemList', { static: false }) itemList: VirtualScrollerComponent;
 
-	items: ItemModel[];
 	itemsAll: ItemModel[];
+	itemsWorld: ItemModel[];
+	itemsIceborne: ItemModel[]
 	filteredItems: ItemModel[];
 	virtualItems: ItemModel[];
+	armorTypeSort: string;
+
+	showFilterContainer = false;
+	showSortContainer = true;
 
 	@HostListener('window:resize')
 	onResize() {
@@ -44,7 +54,14 @@ export class ArmorListComponent implements OnInit {
 	constructor(
 		private slotService: SlotService,
 		public dataService: DataService
-	) { }
+	) {
+		this.itemsAll = this.dataService.getArmors();
+		this.itemsAll.sort((a, b) => {
+			return (this.getItemTypeIndex(a.itemType) > this.getItemTypeIndex(b.itemType)) ?
+				1 : ((this.getItemTypeIndex(b.itemType) > this.getItemTypeIndex(a.itemType)) ?
+					-1 : 0);
+		});
+	}
 
 	ngOnInit(): void {
 		this.slotService.armorSlotSelected$.subscribe(slot => {
@@ -66,72 +83,69 @@ export class ArmorListComponent implements OnInit {
 	}
 
 	loadItems() {
-		this.itemsAll = this.dataService.getArmors();
-		this.itemsAll.sort((a, b) => {
-			return (this.getItemTypeIndex(a.itemType) > this.getItemTypeIndex(b.itemType)) ?
-				1 : ((this.getItemTypeIndex(b.itemType) > this.getItemTypeIndex(a.itemType)) ?
-					-1 : 0);
-		});
-		this.items = this.itemsAll.filter(f => f.id > 1000);
+		this.itemsWorld = this.itemsAll.filter(f => f.id < 1000);
+		this.itemsIceborne = this.itemsAll.filter(f => f.id >= 1000);
 
-		this.filteredItems = this.items;
+		this.applyIceborneFilter();
 		this.applyItemFilter();
 		setTimeout(() => this.searchBox.nativeElement.focus(), 250);
 	}
 
 	search(query: string) {
-		this.filteredItems = this.items;
+		this.applyIceborneFilter();
 
 		if (query) {
-			const alphaIndex = query.indexOf('alpha');
-			if (alphaIndex > -1) {
-				query = query.replace('alpha', '');
-			}
-			const betaIndex = query.indexOf('beta');
-			if (betaIndex > -1) {
-				query = query.replace('beta', '');
-			}
-			const gammaIndex = query.indexOf('gamma');
-			if (gammaIndex > -1) {
-				query = query.replace('gamma', '');
-			}
+			if (query.length > 2) {
+				const alphaIndex = query.indexOf('alpha');
+				if (alphaIndex > -1) {
+					query = query.replace('alpha', '');
+				}
+				const betaIndex = query.indexOf('beta');
+				if (betaIndex > -1) {
+					query = query.replace('beta', '');
+				}
+				const gammaIndex = query.indexOf('gamma');
+				if (gammaIndex > -1) {
+					query = query.replace('gamma', '');
+				}
 
-			query = query.toLowerCase().trim();
+				query = query.toLowerCase().trim();
 
-			const queryParts = query.split(' ');
+				const queryParts = query.split(' ');
 
-			if (this.items) {
-				for (const item of this.items) {
-					const itemName = item.name.toLowerCase();
-					const skills = this.dataService.getSkills(item.skills);
+				if (this.filteredItems) {
+					for (const item of this.filteredItems) {
+						const itemName = item.name.toLowerCase();
+						const skills = this.dataService.getSkills(item.skills);
 
-					const nameMatch = itemName.includes(query);
-					const skillMatch = _.some(skills, skill => skill.name.toLowerCase().includes(query));
+						const nameMatch = itemName.includes(query);
+						const skillMatch = _.some(skills, skill => skill.name.toLowerCase().includes(query));
 
-					const tagMatch = _.some(queryParts, queryPart => {
-						return _.some(item.tags, tag => tag.toLowerCase().includes(queryPart));
-					});
-
-					if (!nameMatch && !skillMatch && !tagMatch) {
-						this.filteredItems = _.reject(this.filteredItems, i => i.name === item.name);
-					}
-					if (alphaIndex > -1 || betaIndex > -1 || gammaIndex > -1) {
-						const abgQuery = [];
-
-						if (alphaIndex > -1) {
-							abgQuery.push('α');
-						}
-						if (betaIndex > -1) {
-							abgQuery.push('β');
-						}
-						if (gammaIndex > -1) {
-							abgQuery.push('γ');
-						}
-						const query2Match = _.some(abgQuery, queryPart => {
-							return itemName.includes(queryPart);
+						const tagMatch = _.some(queryParts, queryPart => {
+							return _.some(item.tags, tag => tag.toLowerCase().includes(queryPart));
 						});
-						if (!query2Match) {
+
+						if (!nameMatch && !skillMatch && !tagMatch) {
 							this.filteredItems = _.reject(this.filteredItems, i => i.name === item.name);
+						}
+						if (alphaIndex > -1 || betaIndex > -1 || gammaIndex > -1) {
+							const abgQuery = [];
+
+							if (alphaIndex > -1) {
+								abgQuery.push('α');
+							}
+							if (betaIndex > -1) {
+								abgQuery.push('β');
+							}
+							if (gammaIndex > -1) {
+								abgQuery.push('γ');
+							}
+							const query2Match = _.some(abgQuery, queryPart => {
+								return itemName.includes(queryPart);
+							});
+							if (!query2Match) {
+								this.filteredItems = _.reject(this.filteredItems, i => i.name === item.name);
+							}
 						}
 					}
 				}
@@ -144,8 +158,9 @@ export class ArmorListComponent implements OnInit {
 
 	resetSearchResults() {
 		this.searchBox.nativeElement.value = null;
-		this.filteredItems = this.items;
+		this.applyIceborneFilter();
 		this.applyItemFilter();
+		this.armorTypeSort = '';
 	}
 
 	applyItemFilter() {
@@ -162,13 +177,11 @@ export class ArmorListComponent implements OnInit {
 	}
 
 	applyIceborneFilter() {
-		this.onlyIceborne = !this.onlyIceborne;
 		if (this.onlyIceborne) {
-			this.items = this.itemsAll.filter(f => f.id > 1000);
+			this.filteredItems = this.itemsIceborne;
 		} else {
-			this.items = this.itemsAll;
+			this.filteredItems = this.itemsIceborne.concat(this.itemsWorld);
 		}
-		this.search(this.searchBox.nativeElement.value);
 	}
 
 	selectItem(item: ItemModel) {
@@ -258,7 +271,7 @@ export class ArmorListComponent implements OnInit {
 	}
 
 	sortByDefense() {
-		this.typeSort = 'DEF';
+		this.armorTypeSort = 'DEF';
 		this.filteredItems.sort(function (item1, item2) {
 			if (item1.defense[2] > item2.defense[2]) {
 				return -1;
@@ -272,7 +285,7 @@ export class ArmorListComponent implements OnInit {
 	}
 
 	sortByResistance(type: string) {
-		this.typeSort = type;
+		this.armorTypeSort = type;
 		this.filteredItems.sort(function (item1, item2) {
 			let resistance1 = 0;
 			let resistance2 = 0;
@@ -304,7 +317,7 @@ export class ArmorListComponent implements OnInit {
 	}
 
 	sortBySlots() {
-		this.typeSort = 'SLOT';
+		this.armorTypeSort = 'SLOT';
 		this.filteredItems.sort(function (item1, item2) {
 			let slotValue1 = 0;
 			let slotValue2 = 0;

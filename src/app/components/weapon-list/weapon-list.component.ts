@@ -30,11 +30,8 @@ export class WeaponListComponent implements OnInit {
 	@Input()
 	set onlyIceborne(onlyIceborne: boolean) {
 		this._onlyIceborne = onlyIceborne;
-		if (onlyIceborne) {
-			this.applyIceborneFilter();
-		} else {
-			this.resetSearchResults();
-		}
+		this.search(this.searchBox.nativeElement.value);
+		this.weaponTypeSort = '';
 	}
 	get onlyIceborne(): boolean { return this._onlyIceborne; }
 
@@ -44,6 +41,8 @@ export class WeaponListComponent implements OnInit {
 	@ViewChild('itemList', { static: false }) itemList: VirtualScrollerComponent;
 
 	items: ItemModel[];
+	itemsWorld: ItemModel[];
+	itemsIceborne: ItemModel[];
 	filteredItems: ItemModel[];
 	virtualItems: ItemModel[];
 	weaponTypeFilter?: WeaponType;
@@ -62,7 +61,9 @@ export class WeaponListComponent implements OnInit {
 	constructor(
 		private slotService: SlotService,
 		public dataService: DataService,
-	) { }
+	) {
+		this.items = this.dataService.getWeapons();
+	}
 
 	ngOnInit() {
 		this.slotService.weaponSlotSelected$.subscribe(slot => {
@@ -84,48 +85,51 @@ export class WeaponListComponent implements OnInit {
 	}
 
 	loadItems() {
-		this.items = this.dataService.getWeapons();
+		this.itemsWorld = this.items.filter(item => item.id < 1000);
+		this.itemsIceborne = this.items.filter(item => item.id >= 1000);
 		this.resetSearchResults();
 		setTimeout(() => this.searchBox.nativeElement.focus(), 250);
 	}
 
 	search(query: string) {
-		this.filteredItems = this.items;
+		this.applyIcborneFilter();
 
 		if (query) {
-			query = query.toLowerCase().trim();
-			const queryParts = query.split(' ');
+			if (query.length > 2) {
+				query = query.toLowerCase().trim();
+				const queryParts = query.split(' ');
 
-			if (this.items) {
-				for (const item of this.items) {
-					const itemName = item.name.toLowerCase();
-					const skills = this.dataService.getSkills(item.skills);
+				if (this.items) {
+					for (const item of this.filteredItems) {
+						const itemName = item.name.toLowerCase();
+						const skills = this.dataService.getSkills(item.skills);
 
-					let match = _.some(queryParts, queryPart => {
-						const nameMatch = itemName.includes(queryPart);
-						const skillMatch = _.some(skills, skill => skill.name.toLowerCase().includes(queryPart));
-						const tagMatch = _.some(item.tags, tag => tag.toLowerCase().includes(queryPart));
-						const monstersMatch = _.some(item.monsters, tag => tag.toLowerCase().includes(queryPart));
+						let match = _.some(queryParts, queryPart => {
+							const nameMatch = itemName.includes(queryPart);
+							const skillMatch = _.some(skills, skill => skill.name.toLowerCase().includes(queryPart));
+							const tagMatch = _.some(item.tags, tag => tag.toLowerCase().includes(queryPart));
+							const monstersMatch = _.some(item.monsters, tag => tag.toLowerCase().includes(queryPart));
 
-						return nameMatch || skillMatch || tagMatch || monstersMatch;
-					});
+							return nameMatch || skillMatch || tagMatch || monstersMatch;
+						});
 
-					let hiddenMatch = true;
-					if (_.some(queryParts, queryPart => queryPart === 'hidden')) {
-						hiddenMatch = (item.elementHidden || item.ailmentHidden);
+						let hiddenMatch = true;
+						if (_.some(queryParts, queryPart => queryPart === 'hidden')) {
+							hiddenMatch = (item.elementHidden || item.ailmentHidden);
 
-						if (queryParts.length < 2) {
-							match = true;
+							if (queryParts.length < 2) {
+								match = true;
+							}
+						}
+
+						if (!match || !hiddenMatch) {
+							this.filteredItems = _.reject(this.filteredItems, i => i.name === item.name);
 						}
 					}
-
-					if (!match || !hiddenMatch) {
-						this.filteredItems = _.reject(this.filteredItems, i => i.name === item.name);
-					}
 				}
-			}
 
-			this.applyWeaponFilter();
+				this.applyWeaponFilter();
+			}
 		} else {
 			this.resetSearchResults();
 		}
@@ -133,21 +137,34 @@ export class WeaponListComponent implements OnInit {
 
 	resetSearchResults() {
 		this.searchBox.nativeElement.value = null;
-		this.filteredItems = this.items;
+		this.applyIcborneFilter();
 		this.applyWeaponFilter();
+		this.weaponTypeSort = '';
 	}
 
 	applyWeaponFilter() {
 		if (this.filteredItems && this.weaponTypeFilter && this.itemType == ItemType.Weapon) {
 			this.filteredItems = _.reject(this.filteredItems, item => item.weaponType != this.weaponTypeFilter);
 		}
-		this.applyIceborneFilter();
 	}
 
-	applyIceborneFilter() {
+	applyIcborneFilter() {
 		if (this.onlyIceborne) {
-			this.filteredItems = _.reject(this.filteredItems, item => item.id < 1000);
+			this.filteredItems = this.itemsIceborne;
+		} else {
+			this.filteredItems = this.itemsIceborne.concat(this.itemsWorld);
 		}
+	}
+
+	weaponFilterClicked(weaponType: WeaponType) {
+		if (!this.weaponTypeFilter || this.weaponTypeFilter != weaponType) {
+			this.weaponTypeFilter = weaponType;
+		} else if (this.weaponTypeFilter == weaponType) {
+			this.weaponTypeFilter = null;
+		}
+
+		this.search(this.searchBox.nativeElement.value);
+		this.weaponTypeSort = '';
 	}
 
 	selectItem(item: ItemModel) {
@@ -181,17 +198,6 @@ export class WeaponListComponent implements OnInit {
 		} else {
 			return null;
 		}
-	}
-
-	weaponFilterClicked(weaponType: WeaponType) {
-		if (!this.weaponTypeFilter || this.weaponTypeFilter != weaponType) {
-			this.weaponTypeFilter = weaponType;
-		} else if (this.weaponTypeFilter == weaponType) {
-			this.weaponTypeFilter = null;
-		}
-
-		this.search(this.searchBox.nativeElement.value);
-		this.weaponTypeSort = '';
 	}
 
 	weaponSortByAttack() {
