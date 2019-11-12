@@ -259,6 +259,10 @@ $listItemHeight: 66px;
 	}
 }
 
+.info-opaque {
+	opacity: 0.5;
+}
+
 @media only screen and (max-width: 716px) {
 	.filter-container {
 		grid-template-columns: repeat(5, 1fr);

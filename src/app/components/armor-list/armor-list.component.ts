@@ -43,6 +43,12 @@ export class ArmorListComponent implements OnInit {
 	virtualItems: ItemModel[];
 	armorTypeSort: string;
 
+	headId: number = 0;
+	bodyId: number = 0;
+	armsId: number = 0;
+	torsoId: number = 0;
+	legsId: number = 0;
+
 	showFilterContainer = false;
 	showSortContainer = true;
 
@@ -61,6 +67,13 @@ export class ArmorListComponent implements OnInit {
 				1 : ((this.getItemTypeIndex(b.itemType) > this.getItemTypeIndex(a.itemType)) ?
 					-1 : 0);
 		});
+
+		this.slotService.itemSelected$.subscribe(item => {
+			this.getArmorIds();
+		});
+		this.slotService.itemSelectedNew$.subscribe(item => {
+			this.getArmorIds();
+		});
 	}
 
 	ngOnInit(): void {
@@ -70,6 +83,7 @@ export class ArmorListComponent implements OnInit {
 				this.searchBox.nativeElement.select();
 			}, 250);
 		});
+		this.getArmorIds();
 	}
 
 	refreshList() {
@@ -221,37 +235,89 @@ export class ArmorListComponent implements OnInit {
 	}
 
 	itemIsSelected(id: number, itemType: ItemType) {
+		//let itemId = 0;
+
+		//switch (itemType) {
+		//	case ItemType.Head:
+		//		if (this.slotService.headSlot.item) {
+		//			itemId = this.slotService.headSlot.item.id;
+		//		}
+		//		break;
+		//	case ItemType.Chest:
+		//		if (this.slotService.chestSlot.item) {
+		//			itemId = this.slotService.chestSlot.item.id;
+		//		}
+		//		break;
+		//	case ItemType.Hands:
+		//		if (this.slotService.handsSlot.item) {
+		//			itemId = this.slotService.handsSlot.item.id;
+		//		}
+		//		break;
+		//	case ItemType.Legs:
+		//		if (this.slotService.legsSlot.item) {
+		//			itemId = this.slotService.legsSlot.item.id;
+		//		}
+		//		break;
+		//	case ItemType.Feet:
+		//		if (this.slotService.feetSlot.item) {
+		//			itemId = this.slotService.feetSlot.item.id;
+		//		}
+		//		break;
+		//	default:
+		//		break;
+		//}
+		//return id == itemId;
+
 		let itemId = 0;
+
 		switch (itemType) {
 			case ItemType.Head:
-				if (this.slotService.headSlot.item) {
-					itemId = this.slotService.headSlot.item.id;
-				}
+				itemId = this.headId;
 				break;
 			case ItemType.Chest:
-				if (this.slotService.chestSlot.item) {
-					itemId = this.slotService.chestSlot.item.id;
-				}
+				itemId = this.bodyId;
 				break;
 			case ItemType.Hands:
-				if (this.slotService.handsSlot.item) {
-					itemId = this.slotService.handsSlot.item.id;
-				}
+				itemId = this.armsId;
 				break;
 			case ItemType.Legs:
-				if (this.slotService.legsSlot.item) {
-					itemId = this.slotService.legsSlot.item.id;
-				}
+				itemId = this.torsoId;
 				break;
 			case ItemType.Feet:
-				if (this.slotService.feetSlot.item) {
-					itemId = this.slotService.feetSlot.item.id;
-				}
+				itemId = this.legsId;
 				break;
 			default:
 				break;
 		}
 		return id == itemId;
+	}
+
+	getArmorIds() {
+		if (this.slotService.headSlot.item) {
+			this.headId = this.slotService.headSlot.item.id;
+		} else {
+			this.headId = 0;
+		}
+		if (this.slotService.chestSlot.item) {
+			this.bodyId = this.slotService.chestSlot.item.id;
+		} else {
+			this.bodyId = 0;
+		}
+		if (this.slotService.handsSlot.item) {
+			this.armsId = this.slotService.handsSlot.item.id;
+		} else {
+			this.armsId = 0;
+		}
+		if (this.slotService.legsSlot.item) {
+			this.torsoId = this.slotService.legsSlot.item.id;
+		} else {
+			this.torsoId = 0;
+		}
+		if (this.slotService.feetSlot.item) {
+			this.legsId = this.slotService.feetSlot.item.id;
+		} else {
+			this.legsId = 0;
+		}
 	}
 
 	getItemTypeIndex(type: ItemType): number {

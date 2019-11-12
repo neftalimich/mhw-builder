@@ -2648,5 +2648,16 @@
 				]
 			}
 		]
+	},
+	{
+		"id": "zombieEffluvialRes",
+		"name": "Zombie & Effluvial Res",
+		"description": "",
+		"raiseSkillId": "toolSpecialist",
+		"levels": [
+			{
+				"description": "Prevents zombie and effluvial buildup."
+			}
+		]
 	}
 ]

@@ -548,5 +548,19 @@
 				"pieces": 4
 			}
 		]
+	},
+	{
+		"id": "survivor",
+		"name": "Survivor",
+		"setLevels": [
+			{
+				"id": "zombieEffluvialRes",
+				"pieces": 2
+			},
+			{
+				"id": "agitatorSecret",
+				"pieces": 4
+			}
+		]
 	}
 ]
