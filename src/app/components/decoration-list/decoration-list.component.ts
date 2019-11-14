@@ -56,6 +56,21 @@ export class DecorationListComponent implements OnInit {
 
 	loadItems() {
 		this.decorations = this.dataService.getDecorations(this.decorationLevel);
+		this.decorations = this.decorations.sort((a, b) => {
+			if (a.skills.length < b.skills.length) {
+				return -1;
+			} else if (a.skills.length > b.skills.length) {
+				return 1;
+			} else {
+				if (a.name < b.name) {
+					return -1;
+				} else if (a.name > b.name) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+		});
 		this.resetSearchResults();
 		setTimeout(() => this.searchBox.nativeElement.focus(), 250);
 	}
@@ -65,7 +80,6 @@ export class DecorationListComponent implements OnInit {
 
 		if (query) {
 			query = query.toLowerCase().trim();
-			const queryParts = query.split(' ');
 
 			if (this.decorations) {
 				for (const decoration of this.decorations) {
@@ -93,6 +107,14 @@ export class DecorationListComponent implements OnInit {
 	selectDecoration(decoration: DecorationModel) {
 		const newDecoration = Object.assign({}, decoration);
 		this.slotService.selectDecoration(newDecoration);
+	}
+
+	getSkills(decoration: DecorationModel): SkillModel[] {
+		const result: SkillModel[] = [];
+		for (const skill of decoration.skills) {
+			result.push(this.dataService.getSkill(skill.id));
+		}
+		return result;
 	}
 
 	getSkillCount(decoration: DecorationModel, skill: SkillModel): string {

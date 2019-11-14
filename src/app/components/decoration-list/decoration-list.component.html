@@ -17,8 +17,8 @@
 				</div>
 			</div>
 
-			<div class="skills-container" *ngIf="dataService.getSkills(decoration.skills).length == 1">
-				<div class="skill-container" *ngFor="let skill of dataService.getSkills(decoration.skills)">
+			<div class="skills-container" *ngIf="decoration.skills.length == 1">
+				<div class="skill-container" *ngFor="let skill of getSkills(decoration)">
 					<div class="count">
 						{{getSkillCount(decoration, skill)}}
 					</div>
@@ -27,8 +27,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="skills-container-2" *ngIf="dataService.getSkills(decoration.skills).length > 1">
-				<div class="skill-container" *ngFor="let skill of dataService.getSkills(decoration.skills)">
+			<div class="skills-container-2" *ngIf="decoration.skills.length > 1">
+				<div class="skill-container" *ngFor="let skill of getSkills(decoration)">
 					<div class="count">
 						{{getSkillCount(decoration, skill)}}
 					</div>

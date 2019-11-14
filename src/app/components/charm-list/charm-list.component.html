@@ -21,7 +21,17 @@
 				</div>
 			</div>
 
-			<div class="skills-container">
+			<div class="skills-container" *ngIf="item.skills.length == 1">
+				<div class="skill-container" *ngFor="let skill of dataService.getSkills(item.skills)">
+					<div class="count">
+						{{getSkillCount(item, skill)}}
+					</div>
+					<div class="name">
+						{{skill.name}}
+					</div>
+				</div>
+			</div>
+			<div class="skills-container-2" *ngIf="item.skills.length > 1">
 				<div class="skill-container" *ngFor="let skill of dataService.getSkills(item.skills)">
 					<div class="count">
 						{{getSkillCount(item, skill)}}

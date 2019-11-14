@@ -17,7 +17,7 @@ export class ArmorListComponent implements OnInit {
 	public equipmentCategoryType = EquipmentCategoryType;
 	private _itemTypeFilters: ItemType[];
 	private _onlyIceborne: boolean;
-	
+
 	@Input()
 	set itemTypeFilters(itemTypeFilters: ItemType[]) {
 		this._itemTypeFilters = itemTypeFilters;
@@ -38,16 +38,16 @@ export class ArmorListComponent implements OnInit {
 
 	itemsAll: ItemModel[];
 	itemsWorld: ItemModel[];
-	itemsIceborne: ItemModel[]
+	itemsIceborne: ItemModel[];
 	filteredItems: ItemModel[];
 	virtualItems: ItemModel[];
 	armorTypeSort: string;
 
-	headId: number = 0;
-	bodyId: number = 0;
-	armsId: number = 0;
-	torsoId: number = 0;
-	legsId: number = 0;
+	headId = 0;
+	bodyId = 0;
+	armsId = 0;
+	torsoId = 0;
+	legsId = 0;
 
 	showFilterContainer = false;
 	showSortContainer = true;
@@ -235,39 +235,6 @@ export class ArmorListComponent implements OnInit {
 	}
 
 	itemIsSelected(id: number, itemType: ItemType) {
-		//let itemId = 0;
-
-		//switch (itemType) {
-		//	case ItemType.Head:
-		//		if (this.slotService.headSlot.item) {
-		//			itemId = this.slotService.headSlot.item.id;
-		//		}
-		//		break;
-		//	case ItemType.Chest:
-		//		if (this.slotService.chestSlot.item) {
-		//			itemId = this.slotService.chestSlot.item.id;
-		//		}
-		//		break;
-		//	case ItemType.Hands:
-		//		if (this.slotService.handsSlot.item) {
-		//			itemId = this.slotService.handsSlot.item.id;
-		//		}
-		//		break;
-		//	case ItemType.Legs:
-		//		if (this.slotService.legsSlot.item) {
-		//			itemId = this.slotService.legsSlot.item.id;
-		//		}
-		//		break;
-		//	case ItemType.Feet:
-		//		if (this.slotService.feetSlot.item) {
-		//			itemId = this.slotService.feetSlot.item.id;
-		//		}
-		//		break;
-		//	default:
-		//		break;
-		//}
-		//return id == itemId;
-
 		let itemId = 0;
 
 		switch (itemType) {

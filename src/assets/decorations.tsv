@@ -375,7 +375,7 @@ id	rarity	level	name	skills
 2064	0	4	Sheath/Handicraft Jewel+ 4	quickSheath-1;handicraft-1
 5112	9	4	Slider/Attack Jewel+ 4	affinitySliding-1;attackBoost-1
 5186	9	4	Slider/Physique Jewel+ 4	affinitySliding-1;constitution-1
-5119	9	4	Slider/Expert Jewel+ 4 affinitySliding-1;criticalEye-1
+5119	9	4	Slider/Expert Jewel+ 4	affinitySliding-1;criticalEye-1
 5159	0	4	Slider/Evasion Jewel+ 4	affinitySliding-1;evadeWindow-1
 5196	10	4	Slider/Release Jewel+ 4	affinitySliding-1;freeElemAmmoUp-1
 5164	0	4	Slider/Handicraft Jewel+ 4	affinitySliding-1;handicraft-1
