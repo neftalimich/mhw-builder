@@ -12,13 +12,19 @@ import { SlotService } from '../../services/slot.service';
 	styleUrls: ['./kinsect-list.component.scss']
 })
 export class KinsectListComponent implements OnInit {
+	private onlyIceborne = true;
 
 	@ViewChild('searchBox', { static: true }) searchBox: ElementRef;
 	@ViewChild('itemList', { static: false }) itemList: VirtualScrollerComponent;
 
 	kinsects: KinsectModel[];
+	kinsectsWorld: KinsectModel[];
+	kinsectsIceborne: KinsectModel[];
 	filteredKinsects: KinsectModel[];
 	virtualKinsects: KinsectModel[];
+
+	showSortContainer = true;
+	sortType = '';
 
 	@HostListener('window:resize')
 	onResize() {
@@ -42,16 +48,18 @@ export class KinsectListComponent implements OnInit {
 
 	loadKinsects() {
 		this.kinsects = this.dataService.getKinsects();
+		this.kinsectsWorld = this.kinsects.filter(item => item.id <= 100);
+		this.kinsectsIceborne = this.kinsects.filter(item => item.id > 100);
 		this.resetSearchResults();
 	}
 
 	search(query: string) {
-		this.filteredKinsects = this.kinsects;
+		this.applyIceborneFilter();
 
 		if (query) {
 			query = query.toLocaleLowerCase().trim();
 
-			this.filteredKinsects = _.filter(this.kinsects, (k: KinsectModel) =>
+			this.filteredKinsects = _.filter(this.filteredKinsects, (k: KinsectModel) =>
 				k.name.toLocaleLowerCase().includes(query) ||
 				k.attackType.toString().toLocaleLowerCase().includes(query) ||
 				k.dustEffect.toString().toLocaleLowerCase().includes(query));
@@ -62,7 +70,21 @@ export class KinsectListComponent implements OnInit {
 
 	resetSearchResults() {
 		this.searchBox.nativeElement.value = null;
-		this.filteredKinsects = this.kinsects;
+		this.applyIceborneFilter();
+		this.sortType = '';
+	}
+
+	applyIceborneFilter() {
+		if (this.onlyIceborne) {
+			this.filteredKinsects = this.kinsectsIceborne;
+		} else {
+			this.filteredKinsects = this.kinsectsIceborne.concat(this.kinsectsWorld);
+		}
+	}
+
+	setOnlyIceborne() {
+		this.onlyIceborne = !this.onlyIceborne;
+		this.applyIceborneFilter();
 	}
 
 	onKinsectListUpdate(kinsects: KinsectModel[]) {
@@ -73,5 +95,19 @@ export class KinsectListComponent implements OnInit {
 		const newKinsect = Object.assign({}, kinsect);
 		newKinsect.element = ElementType.None;
 		this.slotService.selectKinsect(newKinsect);
+	}
+
+	sortByProperty(property: string) {
+		this.sortType = property;
+		this.filteredKinsects.sort(function (a, b) {
+			if (a[property] > b[property]) {
+				return -1;
+			} else if (a[property] < b[property]) {
+				return 1;
+			} else {
+				return 0;
+			}
+		});
+		this.virtualKinsects = this.filteredKinsects;
 	}
 }

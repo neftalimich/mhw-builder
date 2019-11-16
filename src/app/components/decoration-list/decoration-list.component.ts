@@ -62,12 +62,25 @@ export class DecorationListComponent implements OnInit {
 			} else if (a.skills.length > b.skills.length) {
 				return 1;
 			} else {
-				if (a.name < b.name) {
+				if (a.skills[0].id < b.skills[0].id) {
 					return -1;
-				} else if (a.name > b.name) {
+				} else if (a.skills[0].id > b.skills[0].id) {
 					return 1;
 				} else {
-					return 0;
+					if (a.skills.length > 1 && b.skills.length > 1) {
+						if (a.skills[1].id < b.skills[1].id) {
+							return -1;
+						} else if (a.skills[1].id > b.skills[1].id) {
+							return 1;
+						}
+					}
+					if (a.name < b.name) {
+						return -1;
+					} else if (a.name > b.name) {
+						return 1;
+					} else {
+						return 0;
+					}
 				}
 			}
 		});
@@ -80,6 +93,7 @@ export class DecorationListComponent implements OnInit {
 
 		if (query) {
 			query = query.toLowerCase().trim();
+			const queryParts = query.split(' ');
 
 			if (this.decorations) {
 				for (const decoration of this.decorations) {
@@ -87,7 +101,14 @@ export class DecorationListComponent implements OnInit {
 					const skills = this.dataService.getSkills(decoration.skills);
 
 					const nameMatch = itemName.includes(query);
-					const skillMatch = _.some(skills, skill => skill.name.toLowerCase().includes(query));
+
+					let skillMatch = true;
+					for (const queryPart of queryParts) {
+						skillMatch = _.some(skills, skill => skill.name.toLowerCase().includes(queryPart));
+						if (!skillMatch) {
+							break;
+						}
+					}
 
 					if (!nameMatch && !skillMatch) {
 						this.filteredDecorations = _.reject(this.filteredDecorations, d => d.name === decoration.name);
