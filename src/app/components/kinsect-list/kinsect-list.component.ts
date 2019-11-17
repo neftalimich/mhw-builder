@@ -12,7 +12,7 @@ import { SlotService } from '../../services/slot.service';
 	styleUrls: ['./kinsect-list.component.scss']
 })
 export class KinsectListComponent implements OnInit {
-	private onlyIceborne = true;
+	onlyIceborne = true;
 
 	@ViewChild('searchBox', { static: true }) searchBox: ElementRef;
 	@ViewChild('itemList', { static: false }) itemList: VirtualScrollerComponent;
