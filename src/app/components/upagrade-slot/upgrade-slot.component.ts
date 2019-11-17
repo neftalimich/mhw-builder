@@ -15,10 +15,6 @@ export class UpgradeSlotComponent implements OnInit {
 	slotName = ItemType.Upgrade;
 
 	@Input()
-	slots: number;
-	@Input()
-	weaponType: WeaponType;
-	@Input()
 	upgradeContainer: UpgradeContainerModel;
 
 	public selected: boolean;
@@ -33,8 +29,6 @@ export class UpgradeSlotComponent implements OnInit {
 	}
 
 	clicked() {
-		this.upgradeContainer.slots = this.slots;
-		this.upgradeContainer.weaponType = this.weaponType;
 		this.slotService.selectUpgradeSlot(this);
 	}
 

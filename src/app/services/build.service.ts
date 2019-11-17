@@ -318,7 +318,6 @@ export class BuildService {
 							}
 						}
 
-						slot.upgradeSlot.slots = upgradeContainer.slots;
 						slot.upgradeSlot.upgradeContainer = upgradeContainer;
 
 						this.slotService.selectUpgradeSlot(slot.upgradeSlot);

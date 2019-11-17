@@ -7,12 +7,7 @@
 					<span [class]="'hex-'+i" style="font-size: 26px;">&#x2B22;</span>
 				</span>
 			</span>
-			<span *ngFor="let key of (slots - upgradeContainer.used) | numbersArr">
-				<span class="hex-gray" style="font-size: 26px;">&#x2B22;</span>
-			</span>
-		</span>
-		<span *ngIf="!upgradeContainer?.upgradeDetails">
-			<span *ngFor="let key of slots | numbersArr">
+			<span *ngFor="let key of (upgradeContainer.slots - upgradeContainer.used) | numbersArr">
 				<span class="hex-gray" style="font-size: 26px;">&#x2B22;</span>
 			</span>
 		</span>

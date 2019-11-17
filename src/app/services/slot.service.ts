@@ -194,14 +194,13 @@ export class SlotService {
 		this.equipmentService.removeUpgrade();
 		this.applySlotUpgrade(0);
 		if (slot.upgradeContainer) {
-			slot.upgradeContainer.used = 0;
-			slot.upgradeContainer.hasCustomUpgrades = false;
 			this.clearUpgradeContainer(slot.upgradeContainer);
 		}
 		this.upgradeSelected$.next({ slot: slot, equipment: null });
 	}
 
 	clearUpgradeContainer(upgradeContainer: UpgradeContainerModel) {
+		upgradeContainer.used = 0;
 		for (const detail of upgradeContainer.upgradeDetails) {
 			detail.level = 0;
 			detail.totalSlots = 0;
@@ -247,21 +246,15 @@ export class SlotService {
 			this.selectedItemSlot.item = item;
 
 			if (item.equipmentCategory == EquipmentCategoryType.Weapon) {
+				this.selectedItemSlot.augmentations = [];
+
 				if (this.selectedItemSlot.upgradeSlot) {
 					this.clearUpgradeSlot(this.selectedItemSlot.upgradeSlot);
 				}
-				if (this.selectedItemSlot.upgradeContainer) {
-					this.clearUpgradeContainer(this.selectedItemSlot.upgradeContainer);
-				} else {
-					this.selectedItemSlot.upgradeContainer = new UpgradeContainerModel();
-				}
-				this.selectedItemSlot.upgradeContainer.slots = 0;
+
+				this.selectedItemSlot.upgradeContainer = new UpgradeContainerModel();
 				this.selectedItemSlot.upgradeContainer.hasCustomUpgrades = item.hasCustomUpgrades ? true : false;
 				this.selectedItemSlot.upgradeContainer.weaponType = item.weaponType;
-				this.selectedItemSlot.augmentations = [];
-				if (this.selectedItemSlot.upgradeSlot && this.selectedItemSlot.upgradeContainer) {
-					this.selectedItemSlot.upgradeSlot.upgradeContainer = this.selectedItemSlot.upgradeContainer;
-				}
 
 				if (item.rarity == 6) {
 					this.selectedItemSlot.augmentations = [

@@ -22,7 +22,6 @@ export class UpgradesListComponent implements OnInit {
 		if (upgradeContainer) {
 			this._upgradeContainer = JSON.parse(JSON.stringify(upgradeContainer));
 
-			this.loadUpgrades();
 			if (this.upgradeContainer.upgradeDetails && this.upgradeContainer.upgradeDetails.length == 0) {
 				for (const cUpg of this.upgrades) {
 					const newDetail = new UpgradeLevelModel();
@@ -56,42 +55,36 @@ export class UpgradesListComponent implements OnInit {
 				}
 			}
 
-			this.checkUpgrades();
+			this.verifyUpgrades();
 		}
 	}
 	get upgradeContainer(): UpgradeContainerModel { return this._upgradeContainer; }
-
-	@Output() upgradeContainerSelected = new EventEmitter<UpgradeContainerModel>();
 
 	constructor(
 		private dataService: DataService,
 		private slotService: SlotService
 	) {
+		this.upgrades = this.dataService.getUpgrades();
 	}
 
-	ngOnInit(): void {
+	ngOnInit(): void { }
+
+	selectUpgrade() {
+		const newUpg = JSON.parse(JSON.stringify(this.upgradeContainer));
+		this.slotService.selectUpgradeContainer(newUpg);
 	}
 
-	checkUpgrades() {
+	verifyUpgrades() {
 		if (this.upgradeContainer.used > this.upgradeContainer.slots) {
 			for (let i = 0; i < this.upgradeContainer.upgradeDetails.length; i++) {
 				const detail = this.upgradeContainer.upgradeDetails[i];
 				if (detail.level > 0) {
 					this.selectUpgLevel(i, detail.level);
-					this.checkUpgrades();
+					this.verifyUpgrades();
 					break;
 				}
 			}
 		}
-	}
-
-	loadUpgrades() {
-		this.upgrades = this.dataService.getUpgrades();
-	}
-
-	selectUpgrade() {
-		const newUpg = JSON.parse(JSON.stringify(this.upgradeContainer));
-		this.slotService.selectUpgradeContainer(newUpg);
 	}
 
 	selectUpgLevel(augIndex: number, level: number) {

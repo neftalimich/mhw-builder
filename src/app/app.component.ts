@@ -7,7 +7,6 @@ import { EquippedSkillsComponent } from './components/equipped-skills/equipped-s
 import { EquippedStatsComponent } from './components/equipped-stats/equipped-stats.component';
 import { ItemSlotComponent } from './components/item-slot/item-slot.component';
 import { TooltipComponent } from './components/tooltip/tooltip.component';
-import { UpgradeSlotComponent } from './components/upagrade-slot/upgrade-slot.component';
 import { BuildService } from './services/build.service';
 import { DataService } from './services/data.service';
 import { SlotService } from './services/slot.service';
@@ -56,7 +55,6 @@ export class AppComponent implements OnInit, AfterViewInit {
 	selectedEquipmentSlot: ItemSlotComponent;
 	selectedDecorationSlot: DecorationSlotComponent;
 	selectedAugmentationSlot: AugmentationSlotComponent;
-	selectedUpgradeSlot: UpgradeSlotComponent;
 
 	@HostListener('window:resize')
 	onResize() {
