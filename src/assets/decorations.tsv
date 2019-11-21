@@ -84,7 +84,7 @@ id	rarity	level	name	skills
 90	7	2	Flawless Jewel 2	peakPerformance-1
 91	7	2	Enhancer Jewel 2	powerProlonger-1
 92	8	2	Draw Jewel 2	criticalDraw-1
-93	8	2	Guardian Jewel 2	offensiveGuard-1
+93	10	2	Guardian Jewel 2	offensiveGuard-1
 94	7	2	Challenger Jewel 2	agitator-1
 63	6	3	Earplugs Jewel 3	earplugs-1
 64	8	3	Handicraft Jewel 3	handicraft-1
@@ -111,12 +111,12 @@ id	rarity	level	name	skills
 110	9	4	Ice Res Jewel+ 4	iceResistance-2
 111	9	4	Dragon Res Jewel+ 4	dragonResistance-2
 112	12	4	Attack Jewel+ 4	attackBoost-2
-113	9	4	Blaze Jewel+ 4	fireAttack-2
-114	9	4	Stream Jewel+ 4	waterAttack-2
-115	9	4	Bolt Jewel+ 4	thunderAttack-2
-116	9	4	Frost Jewel+ 4	iceAttack-2
-117	9	4	Dragon Jewel+ 4	dragonAttack-2
-118	9	4	Venom Jewel+ 4	poisonAttack-2
+113	11	4	Blaze Jewel+ 4	fireAttack-2
+114	11	4	Stream Jewel+ 4	waterAttack-2
+115	11	4	Bolt Jewel+ 4	thunderAttack-2
+116	11	4	Frost Jewel+ 4	iceAttack-2
+117	11	4	Dragon Jewel+ 4	dragonAttack-2
+118	11	4	Venom Jewel+ 4	poisonAttack-2
 119	12	4	Expert Jewel+ 4	criticalEye-2
 120	9	4	Sheath Jewel+ 4	quickSheath-2
 121	9	4	Stonethrower Jewel+ 4	slingerCapacity-2
@@ -127,7 +127,7 @@ id	rarity	level	name	skills
 126	9	4	Grinder Jewel+ 4	speedSharpening-2
 127	9	4	Defense Jewel+ 4	defenseBoost-2
 128	9	4	Drain Jewel+ 4	staminaThief-2
-129	9	4	Friendship Jewel+ 4	wideRange-2
+129	10	4	Friendship Jewel+ 4	wideRange-2
 130	9	4	Meowster Jewel+ 4	palicoRally-2
 133	9	4	Intimidator Jewel+ 4	intimidator-2
 134	9	4	Hungerless Jewel+ 4	hungerResistance-2
@@ -246,7 +246,7 @@ id	rarity	level	name	skills
 9159	0	4	Enhancer/Evasion Jewel+ 4	powerProlonger-1;evadeWindow-1
 9125	0	4	Enhancer/Vitality Jewel+ 4	powerProlonger-1;healthBoost-1
 9176	0	4	Enhancer/Medicine Jewel+ 4	powerProlonger-1;recoveryUp-1
-9148	0	4	Enhancer/Maintenance Jewel+ 4	powerProlonger-1;toolSpecialist-1
+9148	10	4	Enhancer/Maintenance Jewel+ 4	powerProlonger-1;toolSpecialist-1
 9086	0	4	Flawless/Physique Jewel+ 4	peakPerformance-1;constitution-1
 9042	0	4	Flawless/Protection Jewel+ 4	peakPerformance-1;divineBlessing-1
 9059	0	4	Flawless/Evasion Jewel+ 4	peakPerformance-1;evadeWindow-1
@@ -262,7 +262,7 @@ id	rarity	level	name	skills
 6086	0	4	Footing/Physique Jewel+ 4	tremorResistance-1;constitution-1
 6042	0	4	Footing/Protection Jewel+ 4	tremorResistance-1;divineBlessing-1
 6059	10	4	Footing/Evasion Jewel+ 4	tremorResistance-1;evadeWindow-1
-6025	0	4	Footing/Vitality Jewel+ 4	tremorResistance-1;healthBoost-1
+6025	10	4	Footing/Vitality Jewel+ 4	tremorResistance-1;healthBoost-1
 6076	0	4	Footing/Medicine Jewel+ 4	tremorResistance-1;recoveryUp-1
 6048	0	4	Footing/Maintenance Jewel+ 4	tremorResistance-1;toolSpecialist-1
 3912	9	4	Fortitude/Attack Jewel+ 4	fortify-1;attackBoost-1
@@ -271,7 +271,7 @@ id	rarity	level	name	skills
 3959	0	4	Fortitude/Evasion Jewel+ 4	fortify-1;evadeWindow-1
 3996	0	4	Fortitude/Release Jewel+ 4	fortify-1;freeElemAmmoUp-1
 3964	10	4	Fortitude/Handicraft Jewel+ 4	fortify-1;handicraft-1
-2912	0	4	Friendship/Attack Jewel+ 4	wideRange-1;attackBoost-1
+2912	10	4	Friendship/Attack Jewel+ 4	wideRange-1;attackBoost-1
 2986	0	4	Friendship/Physique Jewel+ 4	wideRange-1;constitution-1
 2919	0	4	Friendship/Expert Jewel+ 4	wideRange-1;criticalEye-1
 2959	10	4	Friendship/Evasion Jewel+ 4	wideRange-1;evadeWindow-1
@@ -356,7 +356,7 @@ id	rarity	level	name	skills
 9676	11	4	Release/Medicine Jewel+ 4	freeElemAmmoUp-1;recoveryUp-1
 9648	11	4	Release/Maintenance Jewel+ 4	freeElemAmmoUp-1;toolSpecialist-1
 2412	0	4	Resistor/Attack Jewel+ 4	blightResistance-1;attackBoost-1
-2486	0	4	Resistor/Physique Jewel+ 4	blightResistance-1;constitution-1
+2486	10	4	Resistor/Physique Jewel+ 4	blightResistance-1;constitution-1
 2419	10	4	Resistor/Expert Jewel+ 4	blightResistance-1;criticalEye-1
 2459	10	4	Resistor/Evasion Jewel+ 4	blightResistance-1;evadeWindow-1
 2496	0	4	Resistor/Release Jewel+ 4	blightResistance-1;freeElemAmmoUp-1
@@ -379,7 +379,7 @@ id	rarity	level	name	skills
 5159	0	4	Slider/Evasion Jewel+ 4	affinitySliding-1;evadeWindow-1
 5196	10	4	Slider/Release Jewel+ 4	affinitySliding-1;freeElemAmmoUp-1
 5164	10	4	Slider/Handicraft Jewel+ 4	affinitySliding-1;handicraft-1
-8212	0	4	Sprinter/Attack Jewel+ 4	marathonRunner-1;attackBoost-1
+8212	10	4	Sprinter/Attack Jewel+ 4	marathonRunner-1;attackBoost-1
 8286	0	4	Sprinter/Physique Jewel+ 4	marathonRunner-1;constitution-1
 8219	10	4	Sprinter/Expert Jewel+ 4	marathonRunner-1;criticalEye-1
 8259	10	4	Sprinter/Evasion Jewel+ 4	marathonRunner-1;evadeWindow-1
@@ -398,7 +398,7 @@ id	rarity	level	name	skills
 5276	0	4	Tenderizer/Medicine Jewel+ 4	weaknessExploit-1;recoveryUp-1
 5248	0	4	Tenderizer/Maintenance Jewel+ 4	weaknessExploit-1;toolSpecialist-1
 8186	0	4	Throttle/Physique Jewel+ 4	latentPower-1;constitution-1
-8142	0	4	Throttle/Protection Jewel+ 4	latentPower-1;divineBlessing-1
+8142	10	4	Throttle/Protection Jewel+ 4	latentPower-1;divineBlessing-1
 8159	0	4	Throttle/Evasion Jewel+ 4	latentPower-1;evadeWindow-1
 8125	10	4	Throttle/Vitality Jewel+ 4	latentPower-1;healthBoost-1
 8176	0	4	Throttle/Medicine Jewel+ 4	latentPower-1;recoveryUp-1

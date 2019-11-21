@@ -14,7 +14,7 @@
 				<td class="border-left-blue">{{aug.type}}</td>
 				<td *ngFor="let level of aug.levels; let levelIndex = index" (click)="selectUpgLevel(augIndex, levelIndex + 1)" class="text-center" style="cursor:pointer;" [style.background-color]="getBackgroundColor(augIndex, levelIndex)">
 					<!--[{{level.requiredSlots}}] {{getLevelColor(augIndex, levelIndex)}}-->
-					<span *ngFor="let key of level.requiredSlots | numbersArr" [class]="getHexagonClass(augIndex,levelIndex)" style="font-size:26px;">&#x2B22;</span>
+					<span *ngFor="let key of level.requiredSlots | numbersArr" [class]="getHexagonClass(augIndex,levelIndex)" style="font-size:24px;">&#x2B22;</span>
 				</td>
 			</tr>
 		</tbody>
@@ -23,7 +23,7 @@
 				<td colspan="4" class="text-center border-left-blue" style="background-color:#323232!important;">
 					<span *ngFor="let detail of upgradeContainer.upgradeDetails; let i = index">
 						<span *ngFor="let key of detail.totalSlots | numbersArr">
-							<span [class]="'hex-o-'+i" style="font-size: 28px;">&#x2B22;</span>
+							<span [class]="'hex-o-'+i" style="font-size: 26px;">&#x2B22;</span>
 						</span>
 					</span>
 					<span *ngFor="let key of (upgradeContainer.slots - upgradeContainer.used) | numbersArr">

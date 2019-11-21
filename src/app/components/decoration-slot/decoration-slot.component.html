@@ -1,5 +1,8 @@
 <div class="container" (click)="clicked()" (pointerenter)="setTooltipItem($event)" (pointerleave)="clearTooltipItem()" [class.selected]="selected">
-	<div class="slot-icon"><img [src]="'assets/images/slot-' + level + '-icon.png'" alt="slot"></div>
+	<div class="slot-icon">
+		<img [src]="'assets/images/decorations/' + level + '-0.png'" [hidden]="decoration" alt="slot">
+		<img [src]="'assets/images/decorations/' + level + '-' + decoration?.level + '.png'" [hidden]="!decoration" alt="slot">
+	</div>
 	<div class="selected-decoration">{{decoration?.name}}</div>
 
 	<button type="button" class="clear-button" (click)="clearClicked($event)">
