@@ -3,7 +3,7 @@ $slotPadding: 2px;
 
 .container {
 	display: grid;
-	grid-template-columns: 40px auto 36px;
+	grid-template-columns: 36px auto min-content 30px;
 	height: $slotHeight;
 	font-size: 14px;
 	cursor: pointer;
@@ -12,28 +12,47 @@ $slotPadding: 2px;
 	padding: $slotPadding;
 
 	.slot-icon {
+		grid-column: 1;
 		line-height: $slotHeight;
 		width: 36px;
 		margin-left: 4px;
 
 		img {
-			height: $slotHeight - $slotPadding * 2;
+			height: ($slotHeight - 2) - $slotPadding * 2;
 			width: auto;
 		}
 	}
 
 	.selected-decoration {
+		grid-column: 2;
 		line-height: $slotHeight;
 		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
 	}
 
+	.info-button {
+		grid-column: 3;
+		height: $slotHeight;
+	}
+
 	.clear-button {
+		grid-column: 4;
 		height: $slotHeight;
 	}
 }
 
 .selected {
 	background-color: #525252;
+}
+
+@media (max-width:576px) {
+	.icon-xs {
+		display: block !important;
+	}
+
+	.icon-md {
+		display: none !important;
+		float: right;
+	}
 }

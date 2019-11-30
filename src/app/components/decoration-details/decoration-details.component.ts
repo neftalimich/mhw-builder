@@ -3,6 +3,7 @@ import * as _ from 'lodash';
 import { DecorationModel } from '../../models/decoration.model';
 import { SkillModel } from '../../models/skill.model';
 import { DataService } from '../../services/data.service';
+import { TooltipService } from '../../services/tooltip.service';
 
 @Component({
 	selector: 'mhw-builder-decoration-details',
@@ -28,7 +29,8 @@ export class DecorationDetailsComponent implements OnInit {
 	skills: SkillModel[];
 
 	constructor(
-		private dataService: DataService
+		private dataService: DataService,
+		private tooltipService: TooltipService
 	) { }
 
 	ngOnInit() { }
@@ -41,5 +43,9 @@ export class DecorationDetailsComponent implements OnInit {
 		const itemSkill = _.find(this.decoration.skills, s => s.id == skill.id);
 		const result = `${itemSkill.level}/${skill.levels.length}`;
 		return result;
+	}
+
+	clearTooltipItem() {
+		this.tooltipService.setDecoration(null);
 	}
 }

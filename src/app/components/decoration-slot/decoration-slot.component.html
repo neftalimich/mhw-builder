@@ -1,9 +1,18 @@
-<div class="container" (click)="clicked()" (pointerenter)="setTooltipItem($event)" (pointerleave)="clearTooltipItem()" [class.selected]="selected">
+<div class="container" [class.selected]="selected">
 	<div class="slot-icon">
-		<img [src]="'assets/images/decorations/' + level + '-0.png'" [hidden]="decoration" alt="slot">
-		<img [src]="'assets/images/decorations/' + level + '-' + decoration?.level + '.png'" [hidden]="!decoration" alt="slot">
+		<img [src]="'assets/images/decorations/' + level + '-' + (decoration?.level ? decoration?.level : 0) + '.png'" alt="slot">
 	</div>
-	<div class="selected-decoration">{{decoration?.name}}</div>
+	<div class="selected-decoration"
+		 (click)="clicked()"
+		 (pointerenter)="setTooltipItem($event)"
+		 (pointerleave)="clearTooltipItem()">
+		{{decoration?.name}}
+	</div>
+
+	<button type="button" class="info-button" (click)="showOnClickTooltipItem()" aria-label="info">
+		<i class="fas fa-grip-lines-vertical fa-sm icon-xs" [ngClass]="'rarity-'+decoration?.rarity" style="display:none;"></i>
+		<i class="fas fa-grip-lines-vertical icon-md fa-sm" [ngClass]="'rarity-'+decoration?.rarity"></i>
+	</button>
 
 	<button type="button" class="clear-button" (click)="clearClicked($event)">
 		<i class="fas fa-times"></i>

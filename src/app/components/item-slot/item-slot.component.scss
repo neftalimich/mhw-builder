@@ -12,10 +12,10 @@ $equipmentHeight: 38px;
 	height: $equipmentHeight;
 	background-color: rgb(50,50,50);
 	cursor: pointer;
-	padding: 8px;
+	padding: 8px 4px;
 	border-radius: 3px;
 	display: grid;
-	grid-template-columns: $equipmentHeight auto min-content min-content 28px;
+	grid-template-columns: 36px auto min-content min-content 28px;
 	// .slot-name {
 	// 	grid-column: 1;
 	// 	color: #b7b7b7;

@@ -1,411 +1,411 @@
-id	rarity	level	name	skills
-1	5	1	Antidote Jewel 1	poisonResistance-1
-2	5	1	Antipara Jewel 1	paralysisResistance-1
-3	5	1	Pep Jewel 1	sleepResistance-1
-4	6	1	Steadfast Jewel 1	stunResistance-1
-5	5	1	Antiblast Jewel 1	blastResistance-1
-6	5	1	Def Lock Jewel 1	ironSkin-1
-7	5	1	Fire Res Jewel 1	fireResistance-1
-8	5	1	Water Res Jewel 1	waterResistance-1
-9	5	1	Thunder Res Jewel 1	thunderResistance-1
-10	5	1	Ice Res Jewel 1	iceResistance-1
-11	5	1	Dragon Res Jewel 1	dragonResistance-1
-12	7	1	Attack Jewel 1	attackBoost-1
-13	6	1	Blaze Jewel 1	fireAttack-1
-14	6	1	Stream Jewel 1	waterAttack-1
-15	6	1	Bolt Jewel 1	thunderAttack-1
-16	6	1	Frost Jewel 1	iceAttack-1
-17	6	1	Dragon Jewel 1	dragonAttack-1
-18	6	1	Venom Jewel 1	poisonAttack-1
-19	6	1	Expert Jewel 1	criticalEye-1
-20	6	1	Sheath Jewel 1	quickSheath-1
-21	6	1	Stonethrower Jewel 1	slingerCapacity-1
-22	6	1	Enduring Jewel 1	itemProlonger-1
-23	6	1	Gobbler Jewel 1	speedEating-1
-24	6	1	Resistor Jewel 1	blightResistance-1
-25	6	1	Vitality Jewel 1	healthBoost-1
-26	6	1	Grinder Jewel 1	speedSharpening-1
-27	6	1	Defense Jewel 1	defenseBoost-1
-28	6	1	Drain Jewel 1	staminaThief-1
-29	6	1	Friendship Jewel 1	wideRange-1
-30	5	1	Meowster Jewel 1	palicoRally-1
-31	5	1	Crisis Jewel 1	resuscitate-1
-32	5	1	Scent Jewel 1	scenthound-1
-33	5	1	Intimidator Jewel 1	intimidator-1
-34	5	1	Hungerless Jewel 1	hungerResistance-1
-35	5	1	Heavy Artillery Jewel 1	heavyArtillery-1
-36	5	1	Survival Jewel 1	survivalExpert-1
-37	5	1	Geology Jewel 1	geologist-1
-38	5	1	Tip Toe Jewel 1	stealth-1
-39	5	1	Fortitude Jewel 1	fortify-1
-40	5	1	Specimen Jewel 1	entomologist-1
-41	5	1	Miasma Jewel 1	effluviaResistance-1
-42	5	1	Protection Jewel 1	divineBlessing-1
-43	5	1	Mirewalker Jewel 1	aquaticExpert-1
-44	5	1	Botany Jewel 1	botanist-1
-45	5	1	Suture Jewel 1	bleedingResistance-1
-46	5	1	Satiated Jewel 1	freeMeal-1
-47	6	1	Sonorous Jewel 1	hornMaestro-1
-48	5	1	Maintenance Jewel 1	toolSpecialist-1
-69	8	1	Fungiform Jewel 1	mushroomancer-1
-72	7	1	Trueshot Jewel 1	specialAmmoBoost-1
-73	7	1	Sleep Jewel 1	sleepAttack-1
-74	6	1	Recovery Jewel 1	recoverySpeed-1
-75	7	1	Paralyzer Jewel 1	paralysisAttack-1
-76	6	1	Medicine Jewel 1	recoveryUp-1
-77	7	1	Ironwall Jewel 1	guard-1
-78	6	1	Bomber Jewel 1	bombardier-1
-79	7	1	Blast Jewel 1	blastAttack-1
-80	8	1	Artillery Jewel 1	artillery-1
-49	8	2	Critical Jewel 2	criticalBoost-1
-50	5	2	Flight Jewel 2	airborne-1
-51	6	2	Slider Jewel 2	affinitySliding-1
-52	6	2	Tenderizer Jewel 2	weaknessExploit-1
-53	6	2	KO Jewel 2	slugger-1
-54	7	2	Mighty Jewel 2	maximumMight-1
-55	8	2	Mighty Bow Jewel 2	bowChargePlus-1
-56	8	2	Charger Jewel 2	focus-1
-57	6	2	Destroyer Jewel 2	partbreaker-1
-58	6	2	Elementless Jewel 2	nonElementalBoost-1
-59	6	2	Evasion Jewel 2	evadeWindow-1
-60	6	2	Footing Jewel 2	tremorResistance-1
-61	6	2	Wind Resist Jewel 2	windproof-1
-62	7	2	Potential Jewel 2	heroics-1
-71	8	2	Mind's Eye Jewel 2	mindsEyeBallistics-1
-81	7	2	Throttle Jewel 2	latentPower-1
-82	8	2	Sprinter Jewel 2	marathonRunner-1
-83	7	2	Shield Jewel 2	guardUp-1
-84	7	2	Sharp Jewel 2	protectivePolish-1
-85	7	2	Refresh Jewel 2	staminaSurge-1
-86	6	2	Physique Jewel 2	constitution-1
-87	7	2	Magazine Jewel 2	capacityBoost-1
-88	6	2	Jumping Jewel 2	evadeExtender-1
-89	7	2	Furor Jewel 2	resentment-1
-90	7	2	Flawless Jewel 2	peakPerformance-1
-91	7	2	Enhancer Jewel 2	powerProlonger-1
-92	8	2	Draw Jewel 2	criticalDraw-1
-93	10	2	Guardian Jewel 2	offensiveGuard-1
-94	7	2	Challenger Jewel 2	agitator-1
-63	6	3	Earplugs Jewel 3	earplugs-1
-64	8	3	Handicraft Jewel 3	handicraft-1
-65	6	3	Poisoncoat Jewel 3	poisonFunctionality-1
-66	6	3	Brace Jewel 3	flinchFree-1
-67	7	3	Paracoat Jewel 3	paraFunctionality-1
-68	7	3	Forceshot Jewel 3	normalShots-1
-70	8	3	Spread Jewel 3	spreadPowerShots-1
-95	7	3	Sleepcoat Jewel 3	sleepFunctionality-1
-96	8	3	Release Jewel 3	freeElemAmmoUp-1
-97	8	3	Pierce Jewel 3	piercingShots-1
-98	7	3	Dragonseal Jewel 3	eldersealBoost-1
-99	7	3	Blastcoat Jewel 3	blastFunctionality-1
-100	7	3	Coalescence Jewel 3	coalescence-1
-101	9	4	Antidote Jewel+ 4	poisonResistance-2
-102	9	4	Antipara Jewel+ 4	paralysisResistance-2
-103	9	4	Pep Jewel+ 4	sleepResistance-2
-104	9	4	Steadfast Jewel+ 4	stunResistance-2
-105	9	4	Antiblast Jewel+ 4	blastResistance-2
-106	9	4	Def Lock Jewel+ 4	ironSkin-2
-107	9	4	Fire Res Jewel+ 4	fireResistance-2
-108	9	4	Water Res Jewel+ 4	waterResistance-2
-109	9	4	Thunder Res Jewel+ 4	thunderResistance-2
-110	9	4	Ice Res Jewel+ 4	iceResistance-2
-111	9	4	Dragon Res Jewel+ 4	dragonResistance-2
-112	12	4	Attack Jewel+ 4	attackBoost-2
-113	11	4	Blaze Jewel+ 4	fireAttack-2
-114	11	4	Stream Jewel+ 4	waterAttack-2
-115	11	4	Bolt Jewel+ 4	thunderAttack-2
-116	11	4	Frost Jewel+ 4	iceAttack-2
-117	11	4	Dragon Jewel+ 4	dragonAttack-2
-118	11	4	Venom Jewel+ 4	poisonAttack-2
-119	12	4	Expert Jewel+ 4	criticalEye-2
-120	9	4	Sheath Jewel+ 4	quickSheath-2
-121	9	4	Stonethrower Jewel+ 4	slingerCapacity-2
-122	9	4	Enduring Jewel+ 4	itemProlonger-2
-123	9	4	Gobbler Jewel+ 4	speedEating-2
-124	9	4	Resistor Jewel+ 4	blightResistance-2
-125	9	4	Vitality Jewel+ 4	healthBoost-2
-126	9	4	Grinder Jewel+ 4	speedSharpening-2
-127	9	4	Defense Jewel+ 4	defenseBoost-2
-128	9	4	Drain Jewel+ 4	staminaThief-2
-129	10	4	Friendship Jewel+ 4	wideRange-2
-130	9	4	Meowster Jewel+ 4	palicoRally-2
-133	9	4	Intimidator Jewel+ 4	intimidator-2
-134	9	4	Hungerless Jewel+ 4	hungerResistance-2
-135	9	4	Heavy Artillery Jewel+ 4	heavyArtillery-2
-136	9	4	Survival Jewel+ 4	survivalExpert-2
-137	9	4	Geology Jewel+ 4	geologist-2
-138	9	4	Tip Toe Jewel+ 4	stealth-2
-140	9	4	Specimen Jewel+ 4	entomologist-2
-141	9	4	Miasma Jewel+ 4	effluviaResistance-2
-142	9	4	Protection Jewel+ 4	divineBlessing-2
-143	9	4	Mirewalker Jewel+ 4	aquaticExpert-2
-144	9	4	Botany Jewel+ 4	botanist-2
-145	9	4	Suture Jewel+ 4	bleedingResistance-2
-146	9	4	Satiated Jewel+ 4	freeMeal-2
-147	9	4	Sonorous Jewel+ 4	hornMaestro-2
-148	9	4	Maintenance Jewel+ 4	toolSpecialist-2
-159	12	4	Evasion Jewel+ 4	evadeWindow-2
-161	12	4	Wind Resist Jewel+ 4	windproof-2
-163	12	4	Earplugs Jewel+ 4	earplugs-2
-164	12	4	Handicraft Jewel+ 4	handicraft-2
-169	9	4	Fungiform Jewel+ 4	mushroomancer-2
-172	12	4	Trueshot Jewel+ 4	specialAmmoBoost-2
-173	11	4	Sleep Jewel+ 4	sleepAttack-2
-174	9	4	Recovery Jewel+ 4	recoverySpeed-2
-175	12	4	Paralyzer Jewel+ 4	paralysisAttack-2
-176	9	4	Medicine Jewel+ 4	recoveryUp-2
-177	12	4	Ironwall Jewel+ 4	guard-2
-178	11	4	Bomber Jewel+ 4	bombardier-2
-179	12	4	Blast Jewel+ 4	blastAttack-2
-180	12	4	Artillery Jewel+ 4	artillery-2
-181	12	4	Throttle Jewel+ 4	latentPower-2
-186	12	4	Physique Jewel+ 4	constitution-2
-194	12	4	Challenger Jewel+ 4	agitator-2
-207	12	4	Hard Fire Res Jewel 4	fireResistance-3
-208	12	4	Hard Water Res Jewel 4	waterResistance-3
-209	12	4	Hard Thunder Res Jewel 4	thunderResistance-3
-210	12	4	Hard Ice Res Jewel 4	iceResistance-3
-211	12	4	Hard Dragon Res Jewel 4	dragonResistance-3
-222	12	4	Hard Enduring Jewel 4	itemProlonger-3
-227	12	4	Hard Defense Jewel 4	defenseBoost-3
-230	9	4	Hard Meowster Jewel 4	palicoRally-3
-233	9	4	Hard Intimidator Jewel 4	intimidator-3
-236	9	4	Hard Survival Jewel 4	survivalExpert-3
-237	9	4	Hard Geology Jewel 4	geologist-3
-238	9	4	Hard Tip Toe Jewel 4	stealth-3
-240	9	4	Hard Specimen Jewel 4	entomologist-3
-244	9	4	Hard Botany Jewel 4	botanist-4
-7812	0	4	Bomber/Attack Jewel+ 4	bombardier-1;attackBoost-1
-7886	0	4	Bomber/Physique Jewel+ 4	bombardier-1;constitution-1
-7819	0	4	Bomber/Expert Jewel+ 4	bombardier-1;criticalEye-1
-7859	0	4	Bomber/Evasion Jewel+ 4	bombardier-1;evadeWindow-1
-7896	0	4	Bomber/Release Jewel+ 4	bombardier-1;freeElemAmmoUp-1
-7864	0	4	Bomber/Handicraft Jewel+ 4	bombardier-1;handicraft-1
-6686	0	4	Brace/Physique Jewel+ 4	flinchFree-1;constitution-1
-6642	0	4	Brace/Protection Jewel+ 4	flinchFree-1;divineBlessing-1
-6659	0	4	Brace/Evasion Jewel+ 4	flinchFree-1;evadeWindow-1
-6625	0	4	Brace/Vitality Jewel+ 4	flinchFree-1;healthBoost-1
-6676	0	4	Brace/Medicine Jewel+ 4	flinchFree-1;recoveryUp-1
-6648	10	4	Brace/Maintenance Jewel+ 4	flinchFree-1;toolSpecialist-1
-9486	0	4	Challenger/Physique Jewel+ 4	agitator-1;constitution-1
-9442	10	4	Challenger/Protection Jewel+ 4	agitator-1;divineBlessing-1
-9459	0	4	Challenger/Evasion Jewel+ 4	agitator-1;evadeWindow-1
-9425	0	4	Challenger/Vitality Jewel+ 4	agitator-1;healthBoost-1
-9476	0	4	Challenger/Medicine Jewel+ 4	agitator-1;recoveryUp-1
-9448	0	4	Challenger/Maintenance Jewel+ 4	agitator-1;toolSpecialist-1
-5686	0	4	Charger/Physique Jewel+ 4	focus-1;constitution-1
-5642	10	4	Charger/Protection Jewel+ 4	focus-1;divineBlessing-1
-5659	0	4	Charger/Evasion Jewel+ 4	focus-1;evadeWindow-1
-5625	0	4	Charger/Vitality Jewel+ 4	focus-1;healthBoost-1
-5676	0	4	Charger/Medicine Jewel+ 4	focus-1;recoveryUp-1
-5648	0	4	Charger/Maintenance Jewel+ 4	focus-1;toolSpecialist-1
-10086	0	4	Coalescence/Physique Jewel+ 4	coalescence-1;constitution-1
-10042	0	4	Coalescence/Protection Jewel+ 4	coalescence-1;divineBlessing-1
-10059	0	4	Coalescence/Evasion Jewel+ 4	coalescence-1;evadeWindow-1
-10025	0	4	Coalescence/Vitality Jewel+ 4	coalescence-1;healthBoost-1
-10076	0	4	Coalescence/Medicine Jewel+ 4	coalescence-1;recoveryUp-1
-10048	0	4	Coalescence/Maintenance Jewel+ 4	coalescence-1;toolSpecialist-1
-3112	9	4	Crisis/Attack Jewel+ 4	resuscitate-1;attackBoost-1
-3186	9	4	Crisis/Physique Jewel+ 4	resuscitate-1;constitution-1
-3119	0	4	Crisis/Expert Jewel+ 4	resuscitate-1;criticalEye-1
-3159	9	4	Crisis/Evasion Jewel+ 4	resuscitate-1;evadeWindow-1
-3196	10	4	Crisis/Release Jewel+ 4	resuscitate-1;freeElemAmmoUp-1
-3164	0	4	Crisis/Handicraft Jewel+ 4	resuscitate-1;handicraft-1
-4986	0	4	Critical/Physique Jewel+ 4	criticalBoost-1;constitution-1
-4942	0	4	Critical/Protection Jewel+ 4	criticalBoost-1;divineBlessing-1
-4959	0	4	Critical/Evasion Jewel+ 4	criticalBoost-1;evadeWindow-1
-4925	0	4	Critical/Vitality Jewel+ 4	criticalBoost-1;healthBoost-1
-4976	0	4	Critical/Medicine Jewel+ 4	criticalBoost-1;recoveryUp-1
-4948	0	4	Critical/Maintenance Jewel+ 4	criticalBoost-1;toolSpecialist-1
-5786	0	4	Destroyer/Physique Jewel+ 4	partbreaker-1;constitution-1
-5742	0	4	Destroyer/Protection Jewel+ 4	partbreaker-1;divineBlessing-1
-5759	0	4	Destroyer/Evasion Jewel+ 4	partbreaker-1;evadeWindow-1
-5725	0	4	Destroyer/Vitality Jewel+ 4	partbreaker-1;healthBoost-1
-5776	10	4	Destroyer/Medicine Jewel+ 4	partbreaker-1;recoveryUp-1
-5748	0	4	Destroyer/Maintenance Jewel+ 4	partbreaker-1;toolSpecialist-1
-2812	10	4	Drain/Attack Jewel+ 4	staminaThief-1;attackBoost-1
-2886	0	4	Drain/Physique Jewel+ 4	staminaThief-1;constitution-1
-2819	0	4	Drain/Expert Jewel+ 4	staminaThief-1;criticalEye-1
-2859	10	4	Drain/Evasion Jewel+ 4	staminaThief-1;evadeWindow-1
-2896	0	4	Drain/Release Jewel+ 4	staminaThief-1;freeElemAmmoUp-1
-2864	0	4	Drain/Handicraft Jewel+ 4	staminaThief-1;handicraft-1
-9286	0	4	Draw/Physique Jewel+ 4	criticalDraw-1;constitution-1
-9242	0	4	Draw/Protection Jewel+ 4	criticalDraw-1;divineBlessing-1
-9259	10	4	Draw/Evasion Jewel+ 4	criticalDraw-1;evadeWindow-1
-9225	0	4	Draw/Vitality Jewel+ 4	criticalDraw-1;healthBoost-1
-9276	0	4	Draw/Medicine Jewel+ 4	criticalDraw-1;recoveryUp-1
-9248	0	4	Draw/Maintenance Jewel+ 4	criticalDraw-1;toolSpecialist-1
-6386	0	4	Earplugs/Physique Jewel+ 4	earplugs-1;constitution-1
-6342	0	4	Earplugs/Protection Jewel+ 4	earplugs-1;divineBlessing-1
-6359	0	4	Earplugs/Evasion Jewel+ 4	earplugs-1;evadeWindow-1
-6325	0	4	Earplugs/Vitality Jewel+ 4	earplugs-1;healthBoost-1
-6376	0	4	Earplugs/Medicine Jewel+ 4	earplugs-1;recoveryUp-1
-6348	0	4	Earplugs/Maintenance Jewel+ 4	earplugs-1;toolSpecialist-1
-9186	0	4	Enhancer/Physique Jewel+ 4	powerProlonger-1;constitution-1
-9142	0	4	Enhancer/Protection Jewel+ 4	powerProlonger-1;divineBlessing-1
-9159	0	4	Enhancer/Evasion Jewel+ 4	powerProlonger-1;evadeWindow-1
-9125	0	4	Enhancer/Vitality Jewel+ 4	powerProlonger-1;healthBoost-1
-9176	0	4	Enhancer/Medicine Jewel+ 4	powerProlonger-1;recoveryUp-1
-9148	10	4	Enhancer/Maintenance Jewel+ 4	powerProlonger-1;toolSpecialist-1
-9086	0	4	Flawless/Physique Jewel+ 4	peakPerformance-1;constitution-1
-9042	0	4	Flawless/Protection Jewel+ 4	peakPerformance-1;divineBlessing-1
-9059	0	4	Flawless/Evasion Jewel+ 4	peakPerformance-1;evadeWindow-1
-9025	0	4	Flawless/Vitality Jewel+ 4	peakPerformance-1;healthBoost-1
-9076	0	4	Flawless/Medicine Jewel+ 4	peakPerformance-1;recoveryUp-1
-9048	0	4	Flawless/Maintenance Jewel+ 4	peakPerformance-1;toolSpecialist-1
-5012	10	4	Flight/Attack Jewel+ 4	airborne-1;attackBoost-1
-5086	0	4	Flight/Physique Jewel+ 4	airborne-1;constitution-1
-5019	0	4	Flight/Expert Jewel+ 4	airborne-1;criticalEye-1
-5059	10	4	Flight/Evasion Jewel+ 4	airborne-1;evadeWindow-1
-5096	0	4	Flight/Release Jewel+ 4	airborne-1;freeElemAmmoUp-1
-5064	0	4	Flight/Handicraft Jewel+ 4	airborne-1;handicraft-1
-6086	0	4	Footing/Physique Jewel+ 4	tremorResistance-1;constitution-1
-6042	0	4	Footing/Protection Jewel+ 4	tremorResistance-1;divineBlessing-1
-6059	10	4	Footing/Evasion Jewel+ 4	tremorResistance-1;evadeWindow-1
-6025	10	4	Footing/Vitality Jewel+ 4	tremorResistance-1;healthBoost-1
-6076	0	4	Footing/Medicine Jewel+ 4	tremorResistance-1;recoveryUp-1
-6048	0	4	Footing/Maintenance Jewel+ 4	tremorResistance-1;toolSpecialist-1
-3912	9	4	Fortitude/Attack Jewel+ 4	fortify-1;attackBoost-1
-3986	9	4	Fortitude/Physique Jewel+ 4	fortify-1;constitution-1
-3919	9	4	Fortitude/Expert Jewel+ 4	fortify-1;criticalEye-1
-3959	0	4	Fortitude/Evasion Jewel+ 4	fortify-1;evadeWindow-1
-3996	0	4	Fortitude/Release Jewel+ 4	fortify-1;freeElemAmmoUp-1
-3964	10	4	Fortitude/Handicraft Jewel+ 4	fortify-1;handicraft-1
-2912	10	4	Friendship/Attack Jewel+ 4	wideRange-1;attackBoost-1
-2986	0	4	Friendship/Physique Jewel+ 4	wideRange-1;constitution-1
-2919	0	4	Friendship/Expert Jewel+ 4	wideRange-1;criticalEye-1
-2959	10	4	Friendship/Evasion Jewel+ 4	wideRange-1;evadeWindow-1
-2996	0	4	Friendship/Release Jewel+ 4	wideRange-1;freeElemAmmoUp-1
-2964	11	4	Friendship/Handicraft Jewel+ 4	wideRange-1;handicraft-1
-6912	0	4	Fungiform/Attack Jewel+ 4	mushroomancer-1;attackBoost-1
-6986	0	4	Fungiform/Physique Jewel+ 4	mushroomancer-1;constitution-1
-6919	0	4	Fungiform/Expert Jewel+ 4	mushroomancer-1;criticalEye-1
-6959	0	4	Fungiform/Evasion Jewel+ 4	mushroomancer-1;evadeWindow-1
-6996	0	4	Fungiform/Release Jewel+ 4	mushroomancer-1;freeElemAmmoUp-1
-6964	0	4	Fungiform/Handicraft Jewel+ 4	mushroomancer-1;handicraft-1
-8986	0	4	Furor/Physique Jewel+ 4	resentment-1;constitution-1
-8942	0	4	Furor/Protection Jewel+ 4	resentment-1;divineBlessing-1
-8959	0	4	Furor/Evasion Jewel+ 4	resentment-1;evadeWindow-1
-8925	10	4	Furor/Vitality Jewel+ 4	resentment-1;healthBoost-1
-8976	0	4	Furor/Medicine Jewel+ 4	resentment-1;recoveryUp-1
-8948	10	4	Furor/Maintenance Jewel+ 4	resentment-1;toolSpecialist-1
-2312	10	4	Gobbler/Attack Jewel+ 4	speedEating-1;attackBoost-1
-2386	0	4	Gobbler/Physique Jewel+ 4	speedEating-1;constitution-1
-2319	0	4	Gobbler/Expert Jewel+ 4	speedEating-1;criticalEye-1
-2359	0	4	Gobbler/Evasion Jewel+ 4	speedEating-1;evadeWindow-1
-2396	0	4	Gobbler/Release Jewel+ 4	speedEating-1;freeElemAmmoUp-1
-2364	0	4	Gobbler/Handicraft Jewel+ 4	speedEating-1;handicraft-1
-2612	10	4	Grinder/Attack Jewel+ 4	speedSharpening-1;attackBoost-1
-2686	10	4	Grinder/Physique Jewel+ 4	speedSharpening-1;constitution-1
-2619	0	4	Grinder/Expert Jewel+ 4	speedSharpening-1;criticalEye-1
-2659	0	4	Grinder/Evasion Jewel+ 4	speedSharpening-1;evadeWindow-1
-2696	0	4	Grinder/Release Jewel+ 4	speedSharpening-1;freeElemAmmoUp-1
-2664	0	4	Grinder/Handicraft Jewel+ 4	speedSharpening-1;handicraft-1
-9312	9	4	Guardian/Attack Jewel+ 4	offensiveGuard-1;attackBoost-1
-9386	0	4	Guardian/Physique Jewel+ 4	offensiveGuard-1;constitution-1
-9319	0	4	Guardian/Expert Jewel+ 4	offensiveGuard-1;criticalEye-1
-9359	9	4	Guardian/Evasion Jewel+ 4	offensiveGuard-1;evadeWindow-1
-9396	0	4	Guardian/Release Jewel+ 4	offensiveGuard-1;freeElemAmmoUp-1
-9364	0	4	Guardian/Handicraft Jewel+ 4	offensiveGuard-1;handicraft-1
-6486	0	4	Handicraft/Physique Jewel+ 4	handicraft-1;constitution-1
-6442	0	4	Handicraft/Protection Jewel+ 4	handicraft-1;divineBlessing-1
-6459	0	4	Handicraft/Evasion Jewel+ 4	handicraft-1;evadeWindow-1
-6425	0	4	Handicraft/Vitality Jewel+ 4	handicraft-1;healthBoost-1
-6476	0	4	Handicraft/Medicine Jewel+ 4	handicraft-1;recoveryUp-1
-6448	0	4	Handicraft/Maintenance Jewel+ 4	handicraft-1;toolSpecialist-1
-7712	0	4	Ironwall/Attack Jewel+ 4	guard-1;attackBoost-1
-7786	10	4	Ironwall/Physique Jewel+ 4	guard-1;constitution-1
-7719	0	4	Ironwall/Expert Jewel+ 4	guard-1;criticalEye-1
-7759	10	4	Ironwall/Evasion Jewel+ 4	guard-1;evadeWindow-1
-7796	0	4	Ironwall/Release Jewel+ 4	guard-1;freeElemAmmoUp-1
-7764	0	4	Ironwall/Handicraft Jewel+ 4	guard-1;handicraft-1
-8812	10	4	Jumping/Attack Jewel+ 4	evadeExtender-1;attackBoost-1
-8886	0	4	Jumping/Physique Jewel+ 4	evadeExtender-1;constitution-1
-8819	0	4	Jumping/Expert Jewel+ 4	evadeExtender-1;criticalEye-1
-8859	0	4	Jumping/Evasion Jewel+ 4	evadeExtender-1;evadeWindow-1
-8896	11	4	Jumping/Release Jewel+ 4	evadeExtender-1;freeElemAmmoUp-1
-8864	0	4	Jumping/Handicraft Jewel+ 4	evadeExtender-1;handicraft-1
-5386	0	4	KO/Physique Jewel+ 4	slugger-1;constitution-1
-5342	0	4	KO/Protection Jewel+ 4	slugger-1;divineBlessing-1
-5359	0	4	KO/Evasion Jewel+ 4	slugger-1;evadeWindow-1
-5325	0	4	KO/Vitality Jewel+ 4	slugger-1;healthBoost-1
-5376	0	4	KO/Medicine Jewel+ 4	slugger-1;recoveryUp-1
-5348	0	4	KO/Maintenance Jewel+ 4	slugger-1;toolSpecialist-1
-5486	0	4	Mighty/Physique Jewel+ 4	maximumMight-1;constitution-1
-5442	10	4	Mighty/Protection Jewel+ 4	maximumMight-1;divineBlessing-1
-5459	0	4	Mighty/Evasion Jewel+ 4	maximumMight-1;evadeWindow-1
-5425	0	4	Mighty/Vitality Jewel+ 4	maximumMight-1;healthBoost-1
-5476	0	4	Mighty/Medicine Jewel+ 4	maximumMight-1;recoveryUp-1
-5448	0	4	Mighty/Maintenance Jewel+ 4	maximumMight-1;toolSpecialist-1
-6286	0	4	Potential/Physique Jewel+ 4	heroics-1;constitution-1
-6242	0	4	Potential/Protection Jewel+ 4	heroics-1;divineBlessing-1
-6259	0	4	Potential/Evasion Jewel+ 4	heroics-1;evadeWindow-1
-6225	10	4	Potential/Vitality Jewel+ 4	heroics-1;healthBoost-1
-6276	0	4	Potential/Medicine Jewel+ 4	heroics-1;recoveryUp-1
-6248	0	4	Potential/Maintenance Jewel+ 4	heroics-1;toolSpecialist-1
-8512	10	4	Refresh/Attack Jewel+ 4	staminaSurge-1;attackBoost-1
-8586	0	4	Refresh/Physique Jewel+ 4	staminaSurge-1;constitution-1
-8519	0	4	Refresh/Expert Jewel+ 4	staminaSurge-1;criticalEye-1
-8559	10	4	Refresh/Evasion Jewel+ 4	staminaSurge-1;evadeWindow-1
-8596	0	4	Refresh/Release Jewel+ 4	staminaSurge-1;freeElemAmmoUp-1
-8564	0	4	Refresh/Handicraft Jewel+ 4	staminaSurge-1;handicraft-1
-9686	0	4	Release/Physique Jewel+ 4	freeElemAmmoUp-1;constitution-1
-9642	0	4	Release/Protection Jewel+ 4	freeElemAmmoUp-1;divineBlessing-1
-9659	12	4	Release/Evasion Jewel+ 4	freeElemAmmoUp-1;evadeWindow-1
-9625	11	4	Release/Vitality Jewel+ 4	freeElemAmmoUp-1;healthBoost-1
-9676	11	4	Release/Medicine Jewel+ 4	freeElemAmmoUp-1;recoveryUp-1
-9648	11	4	Release/Maintenance Jewel+ 4	freeElemAmmoUp-1;toolSpecialist-1
-2412	0	4	Resistor/Attack Jewel+ 4	blightResistance-1;attackBoost-1
-2486	10	4	Resistor/Physique Jewel+ 4	blightResistance-1;constitution-1
-2419	10	4	Resistor/Expert Jewel+ 4	blightResistance-1;criticalEye-1
-2459	10	4	Resistor/Evasion Jewel+ 4	blightResistance-1;evadeWindow-1
-2496	0	4	Resistor/Release Jewel+ 4	blightResistance-1;freeElemAmmoUp-1
-2464	0	4	Resistor/Handicraft Jewel+ 4	blightResistance-1;handicraft-1
-4612	0	4	Satiated/Attack Jewel+ 4	freeMeal-1;attackBoost-1
-4686	9	4	Satiated/Physique Jewel+ 4	freeMeal-1;constitution-1
-4619	0	4	Satiated/Expert Jewel+ 4	freeMeal-1;criticalEye-1
-4659	0	4	Satiated/Evasion Jewel+ 4	freeMeal-1;evadeWindow-1
-4696	0	4	Satiated/Release Jewel+ 4	freeMeal-1;freeElemAmmoUp-1
-4664	0	4	Satiated/Handicraft Jewel+ 4	freeMeal-1;handicraft-1
-2012	0	4	Sheath/Attack Jewel+ 4	quickSheath-1;attackBoost-1
-2086	0	4	Sheath/Physique Jewel+ 4	quickSheath-1;constitution-1
-2019	10	4	Sheath/Expert Jewel+ 4	quickSheath-1;criticalEye-1
-2059	0	4	Sheath/Evasion Jewel+ 4	quickSheath-1;evadeWindow-1
-2096	0	4	Sheath/Release Jewel+ 4	quickSheath-1;freeElemAmmoUp-1
-2064	0	4	Sheath/Handicraft Jewel+ 4	quickSheath-1;handicraft-1
-5112	9	4	Slider/Attack Jewel+ 4	affinitySliding-1;attackBoost-1
-5186	9	4	Slider/Physique Jewel+ 4	affinitySliding-1;constitution-1
-5119	9	4	Slider/Expert Jewel+ 4	affinitySliding-1;criticalEye-1
-5159	0	4	Slider/Evasion Jewel+ 4	affinitySliding-1;evadeWindow-1
-5196	10	4	Slider/Release Jewel+ 4	affinitySliding-1;freeElemAmmoUp-1
-5164	10	4	Slider/Handicraft Jewel+ 4	affinitySliding-1;handicraft-1
-8212	10	4	Sprinter/Attack Jewel+ 4	marathonRunner-1;attackBoost-1
-8286	0	4	Sprinter/Physique Jewel+ 4	marathonRunner-1;constitution-1
-8219	10	4	Sprinter/Expert Jewel+ 4	marathonRunner-1;criticalEye-1
-8259	10	4	Sprinter/Evasion Jewel+ 4	marathonRunner-1;evadeWindow-1
-8296	0	4	Sprinter/Release Jewel+ 4	marathonRunner-1;freeElemAmmoUp-1
-8264	0	4	Sprinter/Handicraft Jewel+ 4	marathonRunner-1;handicraft-1
-2112	0	4	Stonethrower/Attack Jewel+ 4	slingerCapacity-1;attackBoost-1
-2186	9	4	Stonethrower/Physique Jewel+ 4	slingerCapacity-1;constitution-1
-2119	9	4	Stonethrower/Expert Jewel+ 4	slingerCapacity-1;criticalEye-1
-2159	0	4	Stonethrower/Evasion Jewel+ 4	slingerCapacity-1;evadeWindow-1
-2196	0	4	Stonethrower/Release Jewel+ 4	slingerCapacity-1;freeElemAmmoUp-1
-2164	0	4	Stonethrower/Handicraft Jewel+ 4	slingerCapacity-1;handicraft-1
-5286	0	4	Tenderizer/Physique Jewel+ 4	weaknessExploit-1;constitution-1
-5242	0	4	Tenderizer/Protection Jewel+ 4	weaknessExploit-1;divineBlessing-1
-5259	0	4	Tenderizer/Evasion Jewel+ 4	weaknessExploit-1;evadeWindow-1
-5225	0	4	Tenderizer/Vitality Jewel+ 4	weaknessExploit-1;healthBoost-1
-5276	0	4	Tenderizer/Medicine Jewel+ 4	weaknessExploit-1;recoveryUp-1
-5248	0	4	Tenderizer/Maintenance Jewel+ 4	weaknessExploit-1;toolSpecialist-1
-8186	0	4	Throttle/Physique Jewel+ 4	latentPower-1;constitution-1
-8142	10	4	Throttle/Protection Jewel+ 4	latentPower-1;divineBlessing-1
-8159	0	4	Throttle/Evasion Jewel+ 4	latentPower-1;evadeWindow-1
-8125	10	4	Throttle/Vitality Jewel+ 4	latentPower-1;healthBoost-1
-8176	0	4	Throttle/Medicine Jewel+ 4	latentPower-1;recoveryUp-1
-8148	0	4	Throttle/Maintenance Jewel+ 4	latentPower-1;toolSpecialist-1
-6186	0	4	Wind Resist/Physique Jewel+ 4	windproof-1;constitution-1
-6142	0	4	Wind Resist/Protection Jewel+ 4	windproof-1;divineBlessing-1
-6159	0	4	Wind Resist/Evasion Jewel+ 4	windproof-1;evadeWindow-1
-6125	10	4	Wind Resist/Vitality Jewel+ 4	windproof-1;healthBoost-1
-6176	0	4	Wind Resist/Medicine Jewel+ 4	windproof-1;recoveryUp-1
-6148	0	4	Wind Resist/Maintenance Jewel+ 4	windproof-1;toolSpecialist-1
+id	rarity	level	priority	name	skills
+1	5	1	30	Antidote Jewel 1	poisonResistance-1
+2	5	1	30	Antipara Jewel 1	paralysisResistance-1
+3	5	1	30	Pep Jewel 1	sleepResistance-1
+4	6	1	30	Steadfast Jewel 1	stunResistance-1
+5	5	1	30	Antiblast Jewel 1	blastResistance-1
+6	5	1	30	Def Lock Jewel 1	ironSkin-1
+7	5	1	30	Fire Res Jewel 1	fireResistance-1
+8	5	1	30	Water Res Jewel 1	waterResistance-1
+9	5	1	30	Thunder Res Jewel 1	thunderResistance-1
+10	5	1	30	Ice Res Jewel 1	iceResistance-1
+11	5	1	30	Dragon Res Jewel 1	dragonResistance-1
+12	7	1	90	Attack Jewel 1	attackBoost-1
+13	6	1	80	Blaze Jewel 1	fireAttack-1
+14	6	1	80	Stream Jewel 1	waterAttack-1
+15	6	1	80	Bolt Jewel 1	thunderAttack-1
+16	6	1	80	Frost Jewel 1	iceAttack-1
+17	6	1	80	Dragon Jewel 1	dragonAttack-1
+18	6	1	80	Venom Jewel 1	poisonAttack-1
+19	6	1	90	Expert Jewel 1	criticalEye-1
+20	6	1	50	Sheath Jewel 1	quickSheath-1
+21	6	1	50	Stonethrower Jewel 1	slingerCapacity-1
+22	6	1	50	Enduring Jewel 1	itemProlonger-1
+23	6	1	50	Gobbler Jewel 1	speedEating-1
+24	6	1	30	Resistor Jewel 1	blightResistance-1
+25	6	1	70	Vitality Jewel 1	healthBoost-1
+26	6	1	50	Grinder Jewel 1	speedSharpening-1
+27	6	1	50	Defense Jewel 1	defenseBoost-1
+28	6	1	50	Drain Jewel 1	staminaThief-1
+29	6	1	70	Friendship Jewel 1	wideRange-1
+30	5	1	10	Meowster Jewel 1	palicoRally-1
+31	5	1	50	Crisis Jewel 1	resuscitate-1
+32	5	1	10	Scent Jewel 1	scenthound-1
+33	5	1	10	Intimidator Jewel 1	intimidator-1
+34	5	1	10	Hungerless Jewel 1	hungerResistance-1
+35	5	1	50	Heavy Artillery Jewel 1	heavyArtillery-1
+36	5	1	10	Survival Jewel 1	survivalExpert-1
+37	5	1	10	Geology Jewel 1	geologist-1
+38	5	1	10	Tip Toe Jewel 1	stealth-1
+39	5	1	50	Fortitude Jewel 1	fortify-1
+40	5	1	10	Specimen Jewel 1	entomologist-1
+41	5	1	10	Miasma Jewel 1	effluviaResistance-1
+42	5	1	70	Protection Jewel 1	divineBlessing-1
+43	5	1	10	Mirewalker Jewel 1	aquaticExpert-1
+44	5	1	10	Botany Jewel 1	botanist-1
+45	5	1	10	Suture Jewel 1	bleedingResistance-1
+46	5	1	50	Satiated Jewel 1	freeMeal-1
+47	6	1	60	Sonorous Jewel 1	hornMaestro-1
+48	5	1	70	Maintenance Jewel 1	toolSpecialist-1
+69	8	1	60	Fungiform Jewel 1	mushroomancer-1
+72	7	1	50	Trueshot Jewel 1	specialAmmoBoost-1
+73	7	1	80	Sleep Jewel 1	sleepAttack-1
+74	6	1	50	Recovery Jewel 1	recoverySpeed-1
+75	7	1	80	Paralyzer Jewel 1	paralysisAttack-1
+76	6	1	50	Medicine Jewel 1	recoveryUp-1
+77	7	1	50	Ironwall Jewel 1	guard-1
+78	6	1	50	Bomber Jewel 1	bombardier-1
+79	7	1	80	Blast Jewel 1	blastAttack-1
+80	8	1	50	Artillery Jewel 1	artillery-1
+49	8	2	90	Critical Jewel 2	criticalBoost-1
+50	5	2	50	Flight Jewel 2	airborne-1
+51	6	2	50	Slider Jewel 2	affinitySliding-1
+52	6	2	90	Tenderizer Jewel 2	weaknessExploit-1
+53	6	2	60	KO Jewel 2	slugger-1
+54	7	2	40	Mighty Jewel 2	maximumMight-1
+55	8	2	60	Mighty Bow Jewel 2	bowChargePlus-1
+56	8	2	60	Charger Jewel 2	focus-1
+57	6	2	60	Destroyer Jewel 2	partbreaker-1
+58	6	2	60	Elementless Jewel 2	nonElementalBoost-1
+59	6	2	40	Evasion Jewel 2	evadeWindow-1
+60	6	2	40	Footing Jewel 2	tremorResistance-1
+61	6	2	40	Wind Resist Jewel 2	windproof-1
+62	7	2	40	Potential Jewel 2	heroics-1
+71	8	2	40	Mind's Eye Jewel 2	mindsEyeBallistics-1
+81	7	2	40	Throttle Jewel 2	latentPower-1
+82	8	2	60	Sprinter Jewel 2	marathonRunner-1
+83	7	2	40	Shield Jewel 2	guardUp-1
+84	7	2	40	Sharp Jewel 2	protectivePolish-1
+85	7	2	60	Refresh Jewel 2	staminaSurge-1
+86	6	2	60	Physique Jewel 2	constitution-1
+87	7	2	60	Magazine Jewel 2	capacityBoost-1
+88	6	2	40	Jumping Jewel 2	evadeExtender-1
+89	7	2	40	Furor Jewel 2	resentment-1
+90	7	2	40	Flawless Jewel 2	peakPerformance-1
+91	7	2	60	Enhancer Jewel 2	powerProlonger-1
+92	8	2	40	Draw Jewel 2	criticalDraw-1
+93	10	2	60	Guardian Jewel 2	offensiveGuard-1
+94	7	2	90	Challenger Jewel 2	agitator-1
+63	6	3	40	Earplugs Jewel 3	earplugs-1
+64	8	3	70	Handicraft Jewel 3	handicraft-1
+65	6	3	20	Poisoncoat Jewel 3	poisonFunctionality-1
+66	6	3	20	Brace Jewel 3	flinchFree-1
+67	7	3	20	Paracoat Jewel 3	paraFunctionality-1
+68	7	3	60	Forceshot Jewel 3	normalShots-1
+70	8	3	60	Spread Jewel 3	spreadPowerShots-1
+95	7	3	20	Sleepcoat Jewel 3	sleepFunctionality-1
+96	8	3	60	Release Jewel 3	freeElemAmmoUp-1
+97	8	3	60	Pierce Jewel 3	piercingShots-1
+98	7	3	20	Dragonseal Jewel 3	eldersealBoost-1
+99	7	3	20	Blastcoat Jewel 3	blastFunctionality-1
+100	11	3	90	Phoenix Jewel 3	coalescence-1
+101	9	4	31	Antidote Jewel+ 4	poisonResistance-2
+102	9	4	31	Antipara Jewel+ 4	paralysisResistance-2
+103	9	4	31	Pep Jewel+ 4	sleepResistance-2
+104	9	4	31	Steadfast Jewel+ 4	stunResistance-2
+105	9	4	31	Antiblast Jewel+ 4	blastResistance-2
+106	9	4	31	Def Lock Jewel+ 4	ironSkin-2
+107	9	4	31	Fire Res Jewel+ 4	fireResistance-2
+108	9	4	31	Water Res Jewel+ 4	waterResistance-2
+109	9	4	31	Thunder Res Jewel+ 4	thunderResistance-2
+110	9	4	31	Ice Res Jewel+ 4	iceResistance-2
+111	9	4	31	Dragon Res Jewel+ 4	dragonResistance-2
+112	12	4	91	Attack Jewel+ 4	attackBoost-2
+113	11	4	81	Blaze Jewel+ 4	fireAttack-2
+114	11	4	81	Stream Jewel+ 4	waterAttack-2
+115	11	4	81	Bolt Jewel+ 4	thunderAttack-2
+116	11	4	81	Frost Jewel+ 4	iceAttack-2
+117	11	4	81	Dragon Jewel+ 4	dragonAttack-2
+118	11	4	81	Venom Jewel+ 4	poisonAttack-2
+119	12	4	91	Expert Jewel+ 4	criticalEye-2
+120	9	4	51	Sheath Jewel+ 4	quickSheath-2
+121	9	4	51	Stonethrower Jewel+ 4	slingerCapacity-2
+122	9	4	51	Enduring Jewel+ 4	itemProlonger-2
+123	9	4	51	Gobbler Jewel+ 4	speedEating-2
+124	9	4	31	Resistor Jewel+ 4	blightResistance-2
+125	9	4	71	Vitality Jewel+ 4	healthBoost-2
+126	9	4	51	Grinder Jewel+ 4	speedSharpening-2
+127	9	4	51	Defense Jewel+ 4	defenseBoost-2
+128	9	4	51	Drain Jewel+ 4	staminaThief-2
+129	10	4	71	Friendship Jewel+ 4	wideRange-2
+130	9	4	11	Meowster Jewel+ 4	palicoRally-2
+133	9	4	11	Intimidator Jewel+ 4	intimidator-2
+134	9	4	11	Hungerless Jewel+ 4	hungerResistance-2
+135	9	4	51	Heavy Artillery Jewel+ 4	heavyArtillery-2
+136	9	4	11	Survival Jewel+ 4	survivalExpert-2
+137	9	4	11	Geology Jewel+ 4	geologist-2
+138	9	4	11	Tip Toe Jewel+ 4	stealth-2
+140	9	4	11	Specimen Jewel+ 4	entomologist-2
+141	9	4	11	Miasma Jewel+ 4	effluviaResistance-2
+142	9	4	71	Protection Jewel+ 4	divineBlessing-2
+143	9	4	11	Mirewalker Jewel+ 4	aquaticExpert-2
+144	9	4	11	Botany Jewel+ 4	botanist-2
+145	9	4	11	Suture Jewel+ 4	bleedingResistance-2
+146	9	4	51	Satiated Jewel+ 4	freeMeal-2
+147	9	4	61	Sonorous Jewel+ 4	hornMaestro-2
+148	9	4	71	Maintenance Jewel+ 4	toolSpecialist-2
+159	12	4	41	Evasion Jewel+ 4	evadeWindow-2
+161	12	4	41	Wind Resist Jewel+ 4	windproof-2
+163	12	4	41	Earplugs Jewel+ 4	earplugs-2
+164	12	4	71	Handicraft Jewel+ 4	handicraft-2
+169	9	4	61	Fungiform Jewel+ 4	mushroomancer-2
+172	12	4	51	Trueshot Jewel+ 4	specialAmmoBoost-2
+173	11	4	81	Sleep Jewel+ 4	sleepAttack-2
+174	9	4	51	Recovery Jewel+ 4	recoverySpeed-2
+175	12	4	81	Paralyzer Jewel+ 4	paralysisAttack-2
+176	9	4	51	Medicine Jewel+ 4	recoveryUp-2
+177	12	4	51	Ironwall Jewel+ 4	guard-2
+178	11	4	51	Bomber Jewel+ 4	bombardier-2
+179	12	4	81	Blast Jewel+ 4	blastAttack-2
+180	12	4	51	Artillery Jewel+ 4	artillery-2
+181	12	4	41	Throttle Jewel+ 4	latentPower-2
+186	12	4	61	Physique Jewel+ 4	constitution-2
+194	12	4	90	Challenger Jewel+ 4	agitator-2
+207	11	4	32	Hard Fire Res Jewel 4	fireResistance-3
+208	11	4	32	Hard Water Res Jewel 4	waterResistance-3
+209	11	4	32	Hard Thunder Res Jewel 4	thunderResistance-3
+210	11	4	32	Hard Ice Res Jewel 4	iceResistance-3
+211	11	4	32	Hard Dragon Res Jewel 4	dragonResistance-3
+222	11	4	32	Hard Enduring Jewel 4	itemProlonger-3
+227	11	4	32	Hard Defense Jewel 4	defenseBoost-3
+230	9	4	12	Hard Meowster Jewel 4	palicoRally-3
+233	9	4	12	Hard Intimidator Jewel 4	intimidator-3
+236	9	4	12	Hard Survival Jewel 4	survivalExpert-3
+237	9	4	12	Hard Geology Jewel 4	geologist-3
+238	9	4	12	Hard Tip Toe Jewel 4	stealth-3
+240	9	4	12	Hard Specimen Jewel 4	entomologist-3
+244	9	4	12	Hard Botany Jewel 4	botanist-4
+7812	0	4	0	Bomber/Attack Jewel+ 4	bombardier-1;attackBoost-1
+7886	0	4	0	Bomber/Physique Jewel+ 4	bombardier-1;constitution-1
+7819	0	4	0	Bomber/Expert Jewel+ 4	bombardier-1;criticalEye-1
+7859	0	4	0	Bomber/Evasion Jewel+ 4	bombardier-1;evadeWindow-1
+7896	0	4	0	Bomber/Release Jewel+ 4	bombardier-1;freeElemAmmoUp-1
+7864	0	4	0	Bomber/Handicraft Jewel+ 4	bombardier-1;handicraft-1
+6686	0	4	0	Brace/Physique Jewel+ 4	flinchFree-1;constitution-1
+6642	0	4	0	Brace/Protection Jewel+ 4	flinchFree-1;divineBlessing-1
+6659	0	4	0	Brace/Evasion Jewel+ 4	flinchFree-1;evadeWindow-1
+6625	0	4	0	Brace/Vitality Jewel+ 4	flinchFree-1;healthBoost-1
+6676	0	4	0	Brace/Medicine Jewel+ 4	flinchFree-1;recoveryUp-1
+6648	10	4	0	Brace/Maintenance Jewel+ 4	flinchFree-1;toolSpecialist-1
+9486	0	4	0	Challenger/Physique Jewel+ 4	agitator-1;constitution-1
+9442	10	4	0	Challenger/Protection Jewel+ 4	agitator-1;divineBlessing-1
+9459	0	4	0	Challenger/Evasion Jewel+ 4	agitator-1;evadeWindow-1
+9425	0	4	0	Challenger/Vitality Jewel+ 4	agitator-1;healthBoost-1
+9476	0	4	0	Challenger/Medicine Jewel+ 4	agitator-1;recoveryUp-1
+9448	0	4	0	Challenger/Maintenance Jewel+ 4	agitator-1;toolSpecialist-1
+5686	0	4	0	Charger/Physique Jewel+ 4	focus-1;constitution-1
+5642	10	4	0	Charger/Protection Jewel+ 4	focus-1;divineBlessing-1
+5659	0	4	0	Charger/Evasion Jewel+ 4	focus-1;evadeWindow-1
+5625	0	4	0	Charger/Vitality Jewel+ 4	focus-1;healthBoost-1
+5676	0	4	0	Charger/Medicine Jewel+ 4	focus-1;recoveryUp-1
+5648	0	4	0	Charger/Maintenance Jewel+ 4	focus-1;toolSpecialist-1
+3112	9	4	0	Crisis/Attack Jewel+ 4	resuscitate-1;attackBoost-1
+3186	9	4	0	Crisis/Physique Jewel+ 4	resuscitate-1;constitution-1
+3119	0	4	0	Crisis/Expert Jewel+ 4	resuscitate-1;criticalEye-1
+3159	9	4	0	Crisis/Evasion Jewel+ 4	resuscitate-1;evadeWindow-1
+3196	10	4	0	Crisis/Release Jewel+ 4	resuscitate-1;freeElemAmmoUp-1
+3164	0	4	0	Crisis/Handicraft Jewel+ 4	resuscitate-1;handicraft-1
+4986	0	4	0	Critical/Physique Jewel+ 4	criticalBoost-1;constitution-1
+4942	0	4	0	Critical/Protection Jewel+ 4	criticalBoost-1;divineBlessing-1
+4959	0	4	0	Critical/Evasion Jewel+ 4	criticalBoost-1;evadeWindow-1
+4925	0	4	0	Critical/Vitality Jewel+ 4	criticalBoost-1;healthBoost-1
+4976	0	4	0	Critical/Medicine Jewel+ 4	criticalBoost-1;recoveryUp-1
+4948	0	4	0	Critical/Maintenance Jewel+ 4	criticalBoost-1;toolSpecialist-1
+5786	0	4	0	Destroyer/Physique Jewel+ 4	partbreaker-1;constitution-1
+5742	0	4	0	Destroyer/Protection Jewel+ 4	partbreaker-1;divineBlessing-1
+5759	0	4	0	Destroyer/Evasion Jewel+ 4	partbreaker-1;evadeWindow-1
+5725	0	4	0	Destroyer/Vitality Jewel+ 4	partbreaker-1;healthBoost-1
+5776	10	4	0	Destroyer/Medicine Jewel+ 4	partbreaker-1;recoveryUp-1
+5748	0	4	0	Destroyer/Maintenance Jewel+ 4	partbreaker-1;toolSpecialist-1
+2812	10	4	0	Drain/Attack Jewel+ 4	staminaThief-1;attackBoost-1
+2886	0	4	0	Drain/Physique Jewel+ 4	staminaThief-1;constitution-1
+2819	0	4	0	Drain/Expert Jewel+ 4	staminaThief-1;criticalEye-1
+2859	10	4	0	Drain/Evasion Jewel+ 4	staminaThief-1;evadeWindow-1
+2896	0	4	0	Drain/Release Jewel+ 4	staminaThief-1;freeElemAmmoUp-1
+2864	0	4	0	Drain/Handicraft Jewel+ 4	staminaThief-1;handicraft-1
+9286	0	4	0	Draw/Physique Jewel+ 4	criticalDraw-1;constitution-1
+9242	0	4	0	Draw/Protection Jewel+ 4	criticalDraw-1;divineBlessing-1
+9259	10	4	0	Draw/Evasion Jewel+ 4	criticalDraw-1;evadeWindow-1
+9225	0	4	0	Draw/Vitality Jewel+ 4	criticalDraw-1;healthBoost-1
+9276	0	4	0	Draw/Medicine Jewel+ 4	criticalDraw-1;recoveryUp-1
+9248	0	4	0	Draw/Maintenance Jewel+ 4	criticalDraw-1;toolSpecialist-1
+6386	0	4	0	Earplugs/Physique Jewel+ 4	earplugs-1;constitution-1
+6342	0	4	0	Earplugs/Protection Jewel+ 4	earplugs-1;divineBlessing-1
+6359	0	4	0	Earplugs/Evasion Jewel+ 4	earplugs-1;evadeWindow-1
+6325	0	4	0	Earplugs/Vitality Jewel+ 4	earplugs-1;healthBoost-1
+6376	0	4	0	Earplugs/Medicine Jewel+ 4	earplugs-1;recoveryUp-1
+6348	0	4	0	Earplugs/Maintenance Jewel+ 4	earplugs-1;toolSpecialist-1
+9186	0	4	0	Enhancer/Physique Jewel+ 4	powerProlonger-1;constitution-1
+9142	0	4	0	Enhancer/Protection Jewel+ 4	powerProlonger-1;divineBlessing-1
+9159	0	4	0	Enhancer/Evasion Jewel+ 4	powerProlonger-1;evadeWindow-1
+9125	0	4	0	Enhancer/Vitality Jewel+ 4	powerProlonger-1;healthBoost-1
+9176	10	4	0	Enhancer/Medicine Jewel+ 4	powerProlonger-1;recoveryUp-1
+9148	10	4	0	Enhancer/Maintenance Jewel+ 4	powerProlonger-1;toolSpecialist-1
+9086	0	4	0	Flawless/Physique Jewel+ 4	peakPerformance-1;constitution-1
+9042	0	4	0	Flawless/Protection Jewel+ 4	peakPerformance-1;divineBlessing-1
+9059	0	4	0	Flawless/Evasion Jewel+ 4	peakPerformance-1;evadeWindow-1
+9025	0	4	0	Flawless/Vitality Jewel+ 4	peakPerformance-1;healthBoost-1
+9076	0	4	0	Flawless/Medicine Jewel+ 4	peakPerformance-1;recoveryUp-1
+9048	0	4	0	Flawless/Maintenance Jewel+ 4	peakPerformance-1;toolSpecialist-1
+5012	10	4	0	Flight/Attack Jewel+ 4	airborne-1;attackBoost-1
+5086	0	4	0	Flight/Physique Jewel+ 4	airborne-1;constitution-1
+5019	0	4	0	Flight/Expert Jewel+ 4	airborne-1;criticalEye-1
+5059	10	4	0	Flight/Evasion Jewel+ 4	airborne-1;evadeWindow-1
+5096	0	4	0	Flight/Release Jewel+ 4	airborne-1;freeElemAmmoUp-1
+5064	0	4	0	Flight/Handicraft Jewel+ 4	airborne-1;handicraft-1
+6086	0	4	0	Footing/Physique Jewel+ 4	tremorResistance-1;constitution-1
+6042	0	4	0	Footing/Protection Jewel+ 4	tremorResistance-1;divineBlessing-1
+6059	10	4	0	Footing/Evasion Jewel+ 4	tremorResistance-1;evadeWindow-1
+6025	10	4	0	Footing/Vitality Jewel+ 4	tremorResistance-1;healthBoost-1
+6076	0	4	0	Footing/Medicine Jewel+ 4	tremorResistance-1;recoveryUp-1
+6048	0	4	0	Footing/Maintenance Jewel+ 4	tremorResistance-1;toolSpecialist-1
+3912	9	4	0	Fortitude/Attack Jewel+ 4	fortify-1;attackBoost-1
+3986	9	4	0	Fortitude/Physique Jewel+ 4	fortify-1;constitution-1
+3919	9	4	0	Fortitude/Expert Jewel+ 4	fortify-1;criticalEye-1
+3959	0	4	0	Fortitude/Evasion Jewel+ 4	fortify-1;evadeWindow-1
+3996	0	4	0	Fortitude/Release Jewel+ 4	fortify-1;freeElemAmmoUp-1
+3964	10	4	0	Fortitude/Handicraft Jewel+ 4	fortify-1;handicraft-1
+2912	10	4	0	Friendship/Attack Jewel+ 4	wideRange-1;attackBoost-1
+2986	0	4	0	Friendship/Physique Jewel+ 4	wideRange-1;constitution-1
+2919	0	4	0	Friendship/Expert Jewel+ 4	wideRange-1;criticalEye-1
+2959	10	4	0	Friendship/Evasion Jewel+ 4	wideRange-1;evadeWindow-1
+2996	0	4	0	Friendship/Release Jewel+ 4	wideRange-1;freeElemAmmoUp-1
+2964	11	4	0	Friendship/Handicraft Jewel+ 4	wideRange-1;handicraft-1
+6912	10	4	0	Fungiform/Attack Jewel+ 4	mushroomancer-1;attackBoost-1
+6986	0	4	0	Fungiform/Physique Jewel+ 4	mushroomancer-1;constitution-1
+6919	0	4	0	Fungiform/Expert Jewel+ 4	mushroomancer-1;criticalEye-1
+6959	0	4	0	Fungiform/Evasion Jewel+ 4	mushroomancer-1;evadeWindow-1
+6996	0	4	0	Fungiform/Release Jewel+ 4	mushroomancer-1;freeElemAmmoUp-1
+6964	0	4	0	Fungiform/Handicraft Jewel+ 4	mushroomancer-1;handicraft-1
+8986	0	4	0	Furor/Physique Jewel+ 4	resentment-1;constitution-1
+8942	10	4	0	Furor/Protection Jewel+ 4	resentment-1;divineBlessing-1
+8959	0	4	0	Furor/Evasion Jewel+ 4	resentment-1;evadeWindow-1
+8925	10	4	0	Furor/Vitality Jewel+ 4	resentment-1;healthBoost-1
+8976	0	4	0	Furor/Medicine Jewel+ 4	resentment-1;recoveryUp-1
+8948	10	4	0	Furor/Maintenance Jewel+ 4	resentment-1;toolSpecialist-1
+2312	10	4	0	Gobbler/Attack Jewel+ 4	speedEating-1;attackBoost-1
+2386	0	4	0	Gobbler/Physique Jewel+ 4	speedEating-1;constitution-1
+2319	0	4	0	Gobbler/Expert Jewel+ 4	speedEating-1;criticalEye-1
+2359	0	4	0	Gobbler/Evasion Jewel+ 4	speedEating-1;evadeWindow-1
+2396	0	4	0	Gobbler/Release Jewel+ 4	speedEating-1;freeElemAmmoUp-1
+2364	0	4	0	Gobbler/Handicraft Jewel+ 4	speedEating-1;handicraft-1
+2612	10	4	0	Grinder/Attack Jewel+ 4	speedSharpening-1;attackBoost-1
+2686	10	4	0	Grinder/Physique Jewel+ 4	speedSharpening-1;constitution-1
+2619	0	4	0	Grinder/Expert Jewel+ 4	speedSharpening-1;criticalEye-1
+2659	0	4	0	Grinder/Evasion Jewel+ 4	speedSharpening-1;evadeWindow-1
+2696	0	4	0	Grinder/Release Jewel+ 4	speedSharpening-1;freeElemAmmoUp-1
+2664	0	4	0	Grinder/Handicraft Jewel+ 4	speedSharpening-1;handicraft-1
+9312	9	4	0	Guardian/Attack Jewel+ 4	offensiveGuard-1;attackBoost-1
+9386	0	4	0	Guardian/Physique Jewel+ 4	offensiveGuard-1;constitution-1
+9319	0	4	0	Guardian/Expert Jewel+ 4	offensiveGuard-1;criticalEye-1
+9359	9	4	0	Guardian/Evasion Jewel+ 4	offensiveGuard-1;evadeWindow-1
+9396	0	4	0	Guardian/Release Jewel+ 4	offensiveGuard-1;freeElemAmmoUp-1
+9364	10	4	0	Guardian/Handicraft Jewel+ 4	offensiveGuard-1;handicraft-1
+6486	0	4	0	Handicraft/Physique Jewel+ 4	handicraft-1;constitution-1
+6442	0	4	0	Handicraft/Protection Jewel+ 4	handicraft-1;divineBlessing-1
+6459	0	4	0	Handicraft/Evasion Jewel+ 4	handicraft-1;evadeWindow-1
+6425	0	4	0	Handicraft/Vitality Jewel+ 4	handicraft-1;healthBoost-1
+6476	0	4	0	Handicraft/Medicine Jewel+ 4	handicraft-1;recoveryUp-1
+6448	0	4	0	Handicraft/Maintenance Jewel+ 4	handicraft-1;toolSpecialist-1
+7712	0	4	0	Ironwall/Attack Jewel+ 4	guard-1;attackBoost-1
+7786	10	4	0	Ironwall/Physique Jewel+ 4	guard-1;constitution-1
+7719	0	4	0	Ironwall/Expert Jewel+ 4	guard-1;criticalEye-1
+7759	10	4	0	Ironwall/Evasion Jewel+ 4	guard-1;evadeWindow-1
+7796	0	4	0	Ironwall/Release Jewel+ 4	guard-1;freeElemAmmoUp-1
+7764	0	4	0	Ironwall/Handicraft Jewel+ 4	guard-1;handicraft-1
+8812	10	4	0	Jumping/Attack Jewel+ 4	evadeExtender-1;attackBoost-1
+8886	0	4	0	Jumping/Physique Jewel+ 4	evadeExtender-1;constitution-1
+8819	10	4	0	Jumping/Expert Jewel+ 4	evadeExtender-1;criticalEye-1
+8859	0	4	0	Jumping/Evasion Jewel+ 4	evadeExtender-1;evadeWindow-1
+8896	11	4	0	Jumping/Release Jewel+ 4	evadeExtender-1;freeElemAmmoUp-1
+8864	0	4	0	Jumping/Handicraft Jewel+ 4	evadeExtender-1;handicraft-1
+5386	0	4	0	KO/Physique Jewel+ 4	slugger-1;constitution-1
+5342	10	4	0	KO/Protection Jewel+ 4	slugger-1;divineBlessing-1
+5359	0	4	0	KO/Evasion Jewel+ 4	slugger-1;evadeWindow-1
+5325	0	4	0	KO/Vitality Jewel+ 4	slugger-1;healthBoost-1
+5376	0	4	0	KO/Medicine Jewel+ 4	slugger-1;recoveryUp-1
+5348	0	4	0	KO/Maintenance Jewel+ 4	slugger-1;toolSpecialist-1
+5486	0	4	0	Mighty/Physique Jewel+ 4	maximumMight-1;constitution-1
+5442	10	4	0	Mighty/Protection Jewel+ 4	maximumMight-1;divineBlessing-1
+5459	0	4	0	Mighty/Evasion Jewel+ 4	maximumMight-1;evadeWindow-1
+5425	0	4	0	Mighty/Vitality Jewel+ 4	maximumMight-1;healthBoost-1
+5476	0	4	0	Mighty/Medicine Jewel+ 4	maximumMight-1;recoveryUp-1
+5448	0	4	0	Mighty/Maintenance Jewel+ 4	maximumMight-1;toolSpecialist-1
+10086	0	4	0	Phoenix/Physique Jewel+ 4	coalescence-1;constitution-1
+10042	0	4	0	Phoenix/Protection Jewel+ 4	coalescence-1;divineBlessing-1
+10059	0	4	0	Phoenix/Evasion Jewel+ 4	coalescence-1;evadeWindow-1
+10025	0	4	0	Phoenix/Vitality Jewel+ 4	coalescence-1;healthBoost-1
+10076	0	4	0	Phoenix/Medicine Jewel+ 4	coalescence-1;recoveryUp-1
+10048	0	4	0	Phoenix/Maintenance Jewel+ 4	coalescence-1;toolSpecialist-1
+6286	0	4	0	Potential/Physique Jewel+ 4	heroics-1;constitution-1
+6242	0	4	0	Potential/Protection Jewel+ 4	heroics-1;divineBlessing-1
+6259	0	4	0	Potential/Evasion Jewel+ 4	heroics-1;evadeWindow-1
+6225	10	4	0	Potential/Vitality Jewel+ 4	heroics-1;healthBoost-1
+6276	0	4	0	Potential/Medicine Jewel+ 4	heroics-1;recoveryUp-1
+6248	0	4	0	Potential/Maintenance Jewel+ 4	heroics-1;toolSpecialist-1
+8512	10	4	0	Refresh/Attack Jewel+ 4	staminaSurge-1;attackBoost-1
+8586	0	4	0	Refresh/Physique Jewel+ 4	staminaSurge-1;constitution-1
+8519	0	4	0	Refresh/Expert Jewel+ 4	staminaSurge-1;criticalEye-1
+8559	10	4	0	Refresh/Evasion Jewel+ 4	staminaSurge-1;evadeWindow-1
+8596	0	4	0	Refresh/Release Jewel+ 4	staminaSurge-1;freeElemAmmoUp-1
+8564	0	4	0	Refresh/Handicraft Jewel+ 4	staminaSurge-1;handicraft-1
+9686	0	4	0	Release/Physique Jewel+ 4	freeElemAmmoUp-1;constitution-1
+9642	10	4	0	Release/Protection Jewel+ 4	freeElemAmmoUp-1;divineBlessing-1
+9659	12	4	0	Release/Evasion Jewel+ 4	freeElemAmmoUp-1;evadeWindow-1
+9625	11	4	0	Release/Vitality Jewel+ 4	freeElemAmmoUp-1;healthBoost-1
+9676	11	4	0	Release/Medicine Jewel+ 4	freeElemAmmoUp-1;recoveryUp-1
+9648	11	4	0	Release/Maintenance Jewel+ 4	freeElemAmmoUp-1;toolSpecialist-1
+2412	0	4	0	Resistor/Attack Jewel+ 4	blightResistance-1;attackBoost-1
+2486	10	4	0	Resistor/Physique Jewel+ 4	blightResistance-1;constitution-1
+2419	10	4	0	Resistor/Expert Jewel+ 4	blightResistance-1;criticalEye-1
+2459	10	4	0	Resistor/Evasion Jewel+ 4	blightResistance-1;evadeWindow-1
+2496	0	4	0	Resistor/Release Jewel+ 4	blightResistance-1;freeElemAmmoUp-1
+2464	0	4	0	Resistor/Handicraft Jewel+ 4	blightResistance-1;handicraft-1
+4612	0	4	0	Satiated/Attack Jewel+ 4	freeMeal-1;attackBoost-1
+4686	9	4	0	Satiated/Physique Jewel+ 4	freeMeal-1;constitution-1
+4619	0	4	0	Satiated/Expert Jewel+ 4	freeMeal-1;criticalEye-1
+4659	0	4	0	Satiated/Evasion Jewel+ 4	freeMeal-1;evadeWindow-1
+4696	0	4	0	Satiated/Release Jewel+ 4	freeMeal-1;freeElemAmmoUp-1
+4664	0	4	0	Satiated/Handicraft Jewel+ 4	freeMeal-1;handicraft-1
+2012	0	4	0	Sheath/Attack Jewel+ 4	quickSheath-1;attackBoost-1
+2086	0	4	0	Sheath/Physique Jewel+ 4	quickSheath-1;constitution-1
+2019	10	4	0	Sheath/Expert Jewel+ 4	quickSheath-1;criticalEye-1
+2059	0	4	0	Sheath/Evasion Jewel+ 4	quickSheath-1;evadeWindow-1
+2096	0	4	0	Sheath/Release Jewel+ 4	quickSheath-1;freeElemAmmoUp-1
+2064	11	4	0	Sheath/Handicraft Jewel+ 4	quickSheath-1;handicraft-1
+5112	9	4	0	Slider/Attack Jewel+ 4	affinitySliding-1;attackBoost-1
+5186	9	4	0	Slider/Physique Jewel+ 4	affinitySliding-1;constitution-1
+5119	9	4	0	Slider/Expert Jewel+ 4	affinitySliding-1;criticalEye-1
+5159	0	4	0	Slider/Evasion Jewel+ 4	affinitySliding-1;evadeWindow-1
+5196	10	4	0	Slider/Release Jewel+ 4	affinitySliding-1;freeElemAmmoUp-1
+5164	10	4	0	Slider/Handicraft Jewel+ 4	affinitySliding-1;handicraft-1
+8212	10	4	0	Sprinter/Attack Jewel+ 4	marathonRunner-1;attackBoost-1
+8286	0	4	0	Sprinter/Physique Jewel+ 4	marathonRunner-1;constitution-1
+8219	10	4	0	Sprinter/Expert Jewel+ 4	marathonRunner-1;criticalEye-1
+8259	10	4	0	Sprinter/Evasion Jewel+ 4	marathonRunner-1;evadeWindow-1
+8296	0	4	0	Sprinter/Release Jewel+ 4	marathonRunner-1;freeElemAmmoUp-1
+8264	0	4	0	Sprinter/Handicraft Jewel+ 4	marathonRunner-1;handicraft-1
+2112	10	4	0	Stonethrower/Attack Jewel+ 4	slingerCapacity-1;attackBoost-1
+2186	9	4	0	Stonethrower/Physique Jewel+ 4	slingerCapacity-1;constitution-1
+2119	9	4	0	Stonethrower/Expert Jewel+ 4	slingerCapacity-1;criticalEye-1
+2159	9	4	0	Stonethrower/Evasion Jewel+ 4	slingerCapacity-1;evadeWindow-1
+2196	10	4	0	Stonethrower/Release Jewel+ 4	slingerCapacity-1;freeElemAmmoUp-1
+2164	0	4	0	Stonethrower/Handicraft Jewel+ 4	slingerCapacity-1;handicraft-1
+5286	0	4	0	Tenderizer/Physique Jewel+ 4	weaknessExploit-1;constitution-1
+5242	11	4	0	Tenderizer/Protection Jewel+ 4	weaknessExploit-1;divineBlessing-1
+5259	0	4	0	Tenderizer/Evasion Jewel+ 4	weaknessExploit-1;evadeWindow-1
+5225	0	4	0	Tenderizer/Vitality Jewel+ 4	weaknessExploit-1;healthBoost-1
+5276	0	4	0	Tenderizer/Medicine Jewel+ 4	weaknessExploit-1;recoveryUp-1
+5248	0	4	0	Tenderizer/Maintenance Jewel+ 4	weaknessExploit-1;toolSpecialist-1
+8186	0	4	0	Throttle/Physique Jewel+ 4	latentPower-1;constitution-1
+8142	10	4	0	Throttle/Protection Jewel+ 4	latentPower-1;divineBlessing-1
+8159	0	4	0	Throttle/Evasion Jewel+ 4	latentPower-1;evadeWindow-1
+8125	10	4	0	Throttle/Vitality Jewel+ 4	latentPower-1;healthBoost-1
+8176	0	4	0	Throttle/Medicine Jewel+ 4	latentPower-1;recoveryUp-1
+8148	0	4	0	Throttle/Maintenance Jewel+ 4	latentPower-1;toolSpecialist-1
+6186	0	4	0	Wind Resist/Physique Jewel+ 4	windproof-1;constitution-1
+6142	0	4	0	Wind Resist/Protection Jewel+ 4	windproof-1;divineBlessing-1
+6159	0	4	0	Wind Resist/Evasion Jewel+ 4	windproof-1;evadeWindow-1
+6125	10	4	0	Wind Resist/Vitality Jewel+ 4	windproof-1;healthBoost-1
+6176	0	4	0	Wind Resist/Medicine Jewel+ 4	windproof-1;recoveryUp-1
+6148	0	4	0	Wind Resist/Maintenance Jewel+ 4	windproof-1;toolSpecialist-1

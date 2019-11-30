@@ -1,5 +1,5 @@
-<div class="container">
-	<h3>{{decoration?.name}}</h3>
+<div class="container" (click)="clearTooltipItem()">
+	<h3>{{decoration?.name}}<span class="close-btn-sm" style="visibility:hidden;"><i class="fa fa-times"></i></span></h3>
 	<hr>
 	<ul class="striped-light">
 		<li>

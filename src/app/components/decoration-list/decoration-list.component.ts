@@ -57,37 +57,17 @@ export class DecorationListComponent implements OnInit {
 	loadItems() {
 		this.decorations = this.dataService.getDecorations(this.decorationLevel);
 		this.decorations = this.decorations.sort((a, b) => {
-
-			if (a.skills.length < b.skills.length) {
-				return -1;
-			} else if (a.skills.length > b.skills.length) {
+			if (a.priority < b.priority) {
 				return 1;
+			} else if (a.priority > b.priority) {
+				return -1;
 			} else {
-				if (a.skills[0].id < b.skills[0].id) {
+				if (a.skills.length < b.skills.length) {
 					return -1;
-				} else if (a.skills[0].id > b.skills[0].id) {
+				} else if (a.skills.length > b.skills.length) {
 					return 1;
 				} else {
-					if (a.level > b.level) {
-						return -1;
-					} else if (a.level < b.level) {
-						return 1;
-					} else {
-						if (a.skills.length > 1 && b.skills.length > 1) {
-							if (a.skills[1].id < b.skills[1].id) {
-								return -1;
-							} else if (a.skills[1].id > b.skills[1].id) {
-								return 1;
-							}
-						}
-						if (a.name < b.name) {
-							return -1;
-						} else if (a.name > b.name) {
-							return 1;
-						} else {
-							return 0;
-						}
-					}
+					return 0;
 				}
 			}
 		});
