@@ -87,16 +87,16 @@
 		</button>
 	</div>
 
-	<virtual-scroller id="items-list" #itemList class="scroll-container" *ngIf="items" [items]="filteredItems" (vsUpdate)="onItemListUpdate($event)">
+	<virtual-scroller id="items-list" #itemList class="scroll-container" *ngIf="items" [items]="filteredItems" (vsUpdate)="onItemListUpdate($event)" [enableUnequalChildrenSizes]="true" [bufferAmount]="8">
 		<div *ngFor="let item of virtualItems" class="scroll-item-container" (click)="selectItem(item)">
 			<div class="name-container">
 				<div class="name" [ngClass]="'vcolor-'+ item.color">
 					{{item.name}}
 				</div>
-				<div class="upgrade">
-					<img *ngIf="item.hasCustomUpgrades" src="assets/images/custom-upgrade.png" alt="upgrade"/>
+				<div class="upgrade" *ngIf="item.hasCustomUpgrades">
+					<img src="assets/images/custom-upgrade.png" alt="upgrade" />
 				</div>
-				<div class="slots">
+				<div class="slots" *ngIf="item.slots.length > 0">
 					<div *ngIf="item.slots[0]?.level">
 						<img [src]="'assets/images/decorations/' + item?.slots[0]?.level + '-0.png'" alt="slot">
 					</div>
@@ -131,11 +131,15 @@
 					</div>
 					<div class="stat-value" [class.red]="item.baseAffinityPercent < 0">{{item.baseAffinityPercent}}%</div>
 				</div>
-				<div class="stat-container">
+				<div class="monsters-container">
 					<div class="icon-container">
 						<img src="assets/images/defense-icon.png" alt="defense">
 					</div>
 					<div class="stat-value">{{item.defense}}</div>
+					<div class="monster-icon" *ngFor="let monster of item.monsters">
+						<img [src]="getMonsterIcon(monster, item)" [alt]="monster" />
+					</div>
+					<span>{{monster}}</span>
 				</div>
 				<div class="stat-container" *ngIf="item.ailment">
 					<div class="icon-container">

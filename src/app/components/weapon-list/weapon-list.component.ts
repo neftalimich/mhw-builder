@@ -184,6 +184,20 @@ export class WeaponListComponent implements OnInit {
 		return result;
 	}
 
+	getMonsterIcon(monster: string, item: ItemModel): string {
+		if (monster != 'element') {
+			return `assets/images/monsters/${monster}.png`;
+		} else {
+			if (item.ailment) {
+				return `assets/images/${item.ailment.toLowerCase()}-icon.png`;
+			} else if (item.element) {
+				return `assets/images/${item.element.toLowerCase()}-icon.png`;
+			} else {
+				return `assets/images/monsters/question.png`;
+			}
+		}
+	}
+
 	getElementIcon(item: ItemModel): string {
 		if (item.element) {
 			return `assets/images/${item.element.toLowerCase()}${item.elementHidden ? '-gray' : ''}-icon.png`;

@@ -1,6 +1,6 @@
 {
   "name": "mhw-builder",
-  "version": "2.9.0",
+  "version": "2.9.5",
   "license": "MIT",
   "scripts": {
     "ng": "ng",

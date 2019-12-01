@@ -125,6 +125,7 @@ $listItemHeight: 66px;
 			grid-gap: 8px;
 
 			.name {
+				grid-column: 1;
 				line-height: 30px;
 				white-space: nowrap;
 				text-overflow: ellipsis;
@@ -133,6 +134,8 @@ $listItemHeight: 66px;
 			}
 
 			.upgrade {
+				grid-column: 2;
+
 				img {
 					height: 16px;
 					margin: 6px 0;
@@ -140,6 +143,7 @@ $listItemHeight: 66px;
 			}
 
 			.slots {
+				grid-column: 3;
 				display: grid;
 				grid-template-columns: repeat(3, auto);
 				grid-gap: 4px;
@@ -151,6 +155,7 @@ $listItemHeight: 66px;
 			}
 
 			.type {
+				grid-column: 4;
 				height: 22px;
 				line-height: 22px;
 				background-color: #272727;
@@ -167,6 +172,7 @@ $listItemHeight: 66px;
 			}
 
 			.rarity {
+				grid-column: 5;
 				// width: 22px;
 				height: 22px;
 				line-height: 22px;
@@ -213,6 +219,51 @@ $listItemHeight: 66px;
 					white-space: nowrap;
 					text-overflow: ellipsis;
 					overflow: hidden;
+				}
+			}
+
+			.monsters-container {
+				background-color: #272727;
+				border-radius: 3px;
+				display: grid;
+				grid-template-columns: min-content auto min-content min-content;
+
+				.icon-container {
+					grid-column: 1;
+					height: 26px;
+					width: 26px;
+					text-align: center;
+
+					img {
+						height: 18px;
+						margin: 4px 2px;
+					}
+				}
+
+				.stat-value {
+					grid-column: 2;
+					border-left: 1px solid #323232;
+					border-right: 1px solid #323232;
+					line-height: 26px;
+					text-align: center;
+					font-size: 12px;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					overflow: hidden;
+				}
+
+				.monster-icon {
+					height: 26px;
+					text-align: center;
+					background-color: #FFF;
+					border-radius: 3px;
+					padding: 0 2px;
+					border: 1px solid #525252;
+
+					img {
+						height: 18px;
+						margin: 4px 2px;
+					}
 				}
 			}
 		}
