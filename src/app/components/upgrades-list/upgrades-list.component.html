@@ -27,7 +27,7 @@
 						</span>
 					</span>
 					<span *ngFor="let key of (upgradeContainer.slots - upgradeContainer.used) | numbersArr">
-						<span class="hex-gray" style="font-size: 28px;">&#x2B22;</span>
+						<span class="hex-gray" style="font-size: 26px;">&#x2B22;</span>
 					</span>
 				</td>
 				<td class="text-center bg-52" (click)="selectUpgrade()" style="cursor:pointer;">
@@ -36,7 +36,6 @@
 			</tr>
 		</tfoot>
 	</table>
-	<br />
 	<table class="upgrades-table" *ngIf="upgradeContainer.hasCustomUpgrades">
 		<thead>
 			<tr>
@@ -54,8 +53,8 @@
 			<tr *ngFor="let customUpg of customUpgrades">
 				<td class="border-left-blue">
 					{{customUpg.type}}
-					<br />
-					<span style="font-size:12px;">(max: {{customUpg.maximum}})</span>
+					<!--<br />
+					<span style="font-size:12px;">(max: {{customUpg.maximum}})</span>-->
 				</td>
 				<td class="text-center upgrade-td" (click)="selectCustomUpg(customUpg.type,0)" [class.selected]="upgradeContainer.customUpgrades[0]==customUpg.type">+{{customUpg.multiplier}}</td>
 				<td class="text-center upgrade-td" (click)="selectCustomUpg(customUpg.type,1)" [class.selected]="upgradeContainer.customUpgrades[1]==customUpg.type">+{{customUpg.multiplier}}</td>
@@ -64,7 +63,7 @@
 				<td class="text-center upgrade-td" (click)="selectCustomUpg(customUpg.type,4)" [class.selected]="upgradeContainer.customUpgrades[4]==customUpg.type">+{{customUpg.multiplier}}</td>
 				<td class="text-center upgrade-td" (click)="selectCustomUpg(customUpg.type,5)" [class.selected]="upgradeContainer.customUpgrades[5]==customUpg.type">+{{customUpg.multiplier}}</td>
 				<td class="text-center upgrade-td bg-52">
-					+{{countCustomUpg(customUpg.type)*customUpg.multiplier}}
+					{{countCustomUpg(customUpg.type)*customUpg.multiplier}}/{{customUpg.maximum*customUpg.multiplier}}
 				</td>
 			</tr>
 		</tbody>
@@ -72,7 +71,7 @@
 			<tr>
 				<td colspan="7" class="text-center border-left-blue" style="background-color:#323232!important;">
 					<span *ngFor="let custom of upgradeContainer.customUpgrades; let i = index">
-						<span [ngClass]="'hex-'+getCustomColor(custom)" style="font-size: 25px;">&#9672;</span>
+						<span [ngClass]="'hex-'+getCustomColor(custom)" style="font-size: 22px;">&#9672;</span>
 					</span>
 				</td>
 				<td class="text-center bg-52" (click)="selectUpgrade()" style="cursor:pointer;">

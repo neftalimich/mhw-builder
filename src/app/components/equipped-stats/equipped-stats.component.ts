@@ -8,6 +8,8 @@ import { CalculationService } from '../../services/calculation.service';
 import { TooltipService } from '../../services/tooltip.service';
 import { PointerType } from '../../types/pointer.type';
 import { SharpnessBarComponent } from '../sharpness-bar/sharpness-bar.component';
+import { WeaponType } from '../../types/weapon.type';
+import { CalculationVariableModel } from '../../models/calculation-variable.model';
 
 @Component({
 	selector: 'mhw-builder-equipped-stats',
@@ -99,6 +101,43 @@ export class EquippedStatsComponent implements OnInit {
 
 	clearSharpDetails() {
 		this.tooltipService.setCalc(null);
+	}
+
+	showExtraDetails(event: PointerEvent) {
+		if (event.pointerType == PointerType.Mouse) {
+			this.setExtraDatailsTooltip();
+		}
+	}
+	showOnClickExtraDetails(event: PointerEvent) {
+		
+			this.setExtraDatailsTooltip();
+	
+	}
+
+	clearExtraDetails() {
+		this.tooltipService.setCalc(null);
+	}
+
+	private setExtraDatailsTooltip() {
+		let calculationVariables: CalculationVariableModel[] = [];
+		for (let other of this.extraData.otherData) {
+			let variable: CalculationVariableModel = {
+				displayName: other.value,
+				name: other.value,
+				colorClass: 'white',
+				value: other.data
+			};
+			calculationVariables.push(variable);
+		}
+		const otherDetail: StatDetailModel = {
+			name: 'Weapon Info',
+			value: '',
+			calculationTemplate: '',
+			calculationVariables: calculationVariables,
+			info: []
+		};
+
+		this.tooltipService.setCalc(otherDetail);
 	}
 
 	private setSharpTooltip(sharp: SharpnessBarModel) {

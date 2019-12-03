@@ -59,5 +59,23 @@ li {
 	.value {
 		grid-column: 3;
 		white-space: nowrap;
+
+		.other-container {
+			display: inline;
+			white-space: nowrap;
+
+			img {
+				display: inline;
+				position: relative;
+				height: 18px;
+				bottom: -2px;
+			}
+
+			span {
+				display: inline;
+				text-transform: capitalize;
+				margin-bottom: 2px;
+			}
+		}
 	}
 }

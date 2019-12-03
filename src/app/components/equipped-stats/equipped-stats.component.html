@@ -40,11 +40,14 @@
 				</mhw-builder-sharpness-bar>
 			</li>
 
-			<li *ngIf="extraData && extraData.otherData[0].value">
-				<span class="detail-icon">
-				</span>
-				<span *ngIf="extraData.icon" class="detail-icon">
-					<img [src]="'assets/images/' + calc.icon + '-icon.png'" alt="stat icon">
+			<li *ngIf="extraData && extraData.otherData[0].value"
+				(pointerenter)="showExtraDetails($event)" (click)="showOnClickExtraDetails(calc)"
+				(pointerleave)="clearExtraDetails()">
+				<span class="detail-icon text-center">
+					<img *ngIf="extraData.weaponType=='Bow'" [src]="'assets/images/phials/phial-close.png'" alt="icon" />
+					<img *ngIf="extraData.weaponType=='ChargeBlade' || extraData.weaponType=='SwitchAxe'" [src]="'assets/images/phials/phial-close.png'" alt="icon" />
+					<img *ngIf="extraData.weaponType=='Gunlance'" [src]="'assets/images/special-ammo-icon.png'" alt="icon" />
+					<img *ngIf="extraData.weaponType=='InsectGlaive'" [src]="'assets/images/dust-effect-icon.png'" alt="icon" />
 				</span>
 				<span class="name">
 					<span *ngIf="extraData.weaponType=='Bow'">Coatings</span>
@@ -53,8 +56,21 @@
 					<span *ngIf="extraData.weaponType=='InsectGlaive'">Boost Type</span>
 				</span>
 				<div class="value">
-					<div *ngFor="let other of extraData.otherData; let i = index">
-						{{other.value}}<span *ngIf="other.data && other.data!=0">-{{other.data}}</span>
+					<div *ngFor="let other of extraData.otherData; let i = index" style="display:inline;white-space:nowrap;">
+						<div *ngIf="extraData.weaponType=='Bow'" class="other-container">
+							<img [src]="'assets/images/phials/phial-' + other.value + '.png'" alt="coat" />
+							&nbsp;
+						</div>
+						<div *ngIf="extraData.weaponType=='ChargeBlade' || extraData.weaponType=='SwitchAxe'" class="other-container">
+							<img [src]="'assets/images/phials/phial-' + other.value + '.png'" alt="phial" />
+							<span>
+								{{other.value}}<span *ngIf="other.data && other.data!=0">-{{other.data}}</span>
+							</span>
+						</div>
+						<div *ngIf="extraData.weaponType=='Gunlance' || extraData.weaponType=='InsectGlaive'" class="other-container">
+							{{other.value}}<span *ngIf="other.data && other.data!=0">-{{other.data}}</span>
+							&nbsp;
+						</div>
 					</div>
 				</div>
 			</li>

@@ -219,6 +219,7 @@ $listItemHeight: 66px;
 					white-space: nowrap;
 					text-overflow: ellipsis;
 					overflow: hidden;
+					text-transform: capitalize;
 				}
 			}
 
@@ -255,10 +256,26 @@ $listItemHeight: 66px;
 				.monster-icon {
 					height: 26px;
 					text-align: center;
-					background-color: #FFF;
+					background-color: #828282;
 					border-radius: 3px;
 					padding: 0 2px;
-					border: 1px solid #525252;
+					border: 1px solid #323232;
+
+					img {
+						height: 18px;
+						margin: 4px 2px;
+					}
+				}
+			}
+
+			.coats-container {
+				background-color: #272727;
+				border-radius: 3px;
+				display: grid;
+				grid-template-columns: repeat(5, 1fr);
+
+				.icon-container {
+					text-align: center;
 
 					img {
 						height: 18px;

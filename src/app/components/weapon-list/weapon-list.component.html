@@ -179,6 +179,28 @@
 					</div>
 					<div class="stat-value">{{item.otherData[0].value}}-{{item.otherData[0].data}}</div>
 				</div>
+				<div class="stat-container" *ngIf="item.weaponType=='InsectGlaive'">
+					<div class="icon-container">
+						<img [src]="'assets/images/dust-effect-icon.png'" alt="boost">
+					</div>
+					<div class="stat-value">
+						{{item.otherData[0].value}}
+					</div>
+				</div>
+				<div class="stat-container" *ngIf="item.weaponType=='SwitchAxe' || item.weaponType=='ChargeBlade'">
+					<div class="icon-container">
+						<img [src]="'assets/images/phials/phial-' + item.otherData[0].value + '.png'" alt="phial">
+					</div>
+					<div class="stat-value">
+						{{item.otherData[0].value}}
+						<span *ngIf="item.otherData[0] && item.otherData[0].data">- {{item.otherData[0].data}}</span>
+					</div>
+				</div>
+				<div class="coats-container" *ngIf="item.weaponType=='Bow'">
+					<div class="icon-container" *ngFor="let phial of item.otherData">
+						<img [src]="'assets/images/phials/phial-' + phial.value + '.png'" alt="coat">
+					</div>
+				</div>
 				<div class="stat-container" *ngIf="item.elderseal">
 					<div class="icon-container">
 						<img *ngIf="item.elderseal" src="assets/images/elderseal.png" alt="elderseal" />

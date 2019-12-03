@@ -16,6 +16,10 @@ ul {
 	margin: 0;
 
 	li {
+		.name {
+			text-transform: capitalize;
+		}
+
 		.value {
 			float: right;
 		}
