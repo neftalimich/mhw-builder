@@ -1143,27 +1143,27 @@
 		"maxLevel": 5,
 		"levels": [
 			{
-				"description": "While active, increases affinity by 10% and reduces stamina depletion by 30%",
+				"description": "While active, increases affinity by 10% and reduces stamina depletion by 30%.",
 				"activeAffinity": 10,
 				"activeStaminaDepletionReductionPercent": 30
 			},
 			{
-				"description": "While active, increases affinity by 20% and reduces stamina depletion by 30%",
+				"description": "While active, increases affinity by 20% and reduces stamina depletion by 30%.",
 				"activeAffinity": 20,
 				"activeStaminaDepletionReductionPercent": 30
 			},
 			{
-				"description": "While active, increases affinity by 30% and reduces stamina depletion by 50%",
+				"description": "While active, increases affinity by 30% and reduces stamina depletion by 50%.",
 				"activeAffinity": 30,
 				"activeStaminaDepletionReductionPercent": 50
 			},
 			{
-				"description": "While active, increases affinity by 40% and reduces stamina depletion by 50%",
+				"description": "While active, increases affinity by 40% and reduces stamina depletion by 50%.",
 				"activeAffinity": 40,
 				"activeStaminaDepletionReductionPercent": 50
 			},
 			{
-				"description": "While active, increases affinity by 50% and reduces stamina depletion by 50%",
+				"description": "While active, increases affinity by 50% and reduces stamina depletion by 50%.",
 				"activeAffinity": 50,
 				"activeStaminaDepletionReductionPercent": 50
 			},

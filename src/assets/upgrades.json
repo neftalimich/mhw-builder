@@ -25,8 +25,8 @@
 				"totalSlots": 7
 			},
 			{
-				"description": "+20",
-				"passiveAttack": 20,
+				"description": "+25",
+				"passiveAttack": 25,
 				"requiredSlots": 2,
 				"totalSlots": 9
 			}

@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { KinsectModel } from 'src/app/models/kinsect.model';
 import { AmmoCapacitiesModel } from '../../models/ammo-capacities.model';
+import { CalculationVariableModel } from '../../models/calculation-variable.model';
 import { ExtraDataModel } from '../../models/extra-data.model';
 import { SharpnessBarModel } from '../../models/sharpness-bar.model';
 import { StatDetailModel } from '../../models/stat-detail.model';
@@ -8,8 +9,6 @@ import { CalculationService } from '../../services/calculation.service';
 import { TooltipService } from '../../services/tooltip.service';
 import { PointerType } from '../../types/pointer.type';
 import { SharpnessBarComponent } from '../sharpness-bar/sharpness-bar.component';
-import { WeaponType } from '../../types/weapon.type';
-import { CalculationVariableModel } from '../../models/calculation-variable.model';
 
 @Component({
 	selector: 'mhw-builder-equipped-stats',
@@ -109,9 +108,7 @@ export class EquippedStatsComponent implements OnInit {
 		}
 	}
 	showOnClickExtraDetails(event: PointerEvent) {
-		
-			this.setExtraDatailsTooltip();
-	
+		this.setExtraDatailsTooltip();
 	}
 
 	clearExtraDetails() {
@@ -119,9 +116,9 @@ export class EquippedStatsComponent implements OnInit {
 	}
 
 	private setExtraDatailsTooltip() {
-		let calculationVariables: CalculationVariableModel[] = [];
-		for (let other of this.extraData.otherData) {
-			let variable: CalculationVariableModel = {
+		const calculationVariables: CalculationVariableModel[] = [];
+		for (const other of this.extraData.otherData) {
+			const variable: CalculationVariableModel = {
 				displayName: other.value,
 				name: other.value,
 				colorClass: 'white',

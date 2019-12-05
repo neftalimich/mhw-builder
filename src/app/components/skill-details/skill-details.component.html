@@ -2,7 +2,6 @@
 	<h3>{{skill?.name}}<span class="close-btn-sm" style="visibility:hidden;"><i class="fa fa-times"></i></span></h3>
 	<hr>
 	<div [hidden]="skill?.levels.length == 1">{{skill?.description}}</div>
-	<br [hidden]="skill?.levels.length == 1" />
 	<ul>
 		<li *ngFor="let level of skill?.levels; let i = index" [style.color]="getLevelColor(i + 1)">
 			<div class="level">

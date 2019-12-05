@@ -1109,3 +1109,13 @@ id	itemType	rarity	name	defense	fireResist	waterResist	thunderResist	iceResist	d
 1678	Hands	11	Claire's Arms α +	150;156;168	3	2	2	3	0	agitator-2;evadeWindow-1;survivor	4	resident;evil;event	0
 1679	Legs	11	Claire's Torso α +	150;156;168	3	2	2	3	0	agitator-1;staminaSurge-2;survivor	4	resident;evil;event	0
 1680	Feet	11	Claire's Feet α +	150;156;168	3	2	2	3	0	staminaSurge-1;normalShots-1;survivor	4;3;1	resident;evil;event	0
+1681	Head	11	Stygian Zin Helm α +	160;168;184	2	-4	-4	0	4	latentPower-3;tremorResistance-2;zinogreEssence	2;1	zinogre;stygian	0
+1682	Chest	11	Stygian Zin Mail α +	160;168;184	2	-4	-4	0	4	windproof-3;flinchFree-2;zinogreEssence	2	zinogre;stygian	0
+1683	Hands	11	Stygian Zin Vambraces α +	160;168;184	2	-4	-4	0	4	partbreaker-2;dragonAttack-3;zinogreEssence	2	zinogre;stygian	0
+1684	Legs	11	Stygian Zin coil α +	160;168;184	2	-4	-4	0	4	latentPower-3;earplugs-2;zinogreEssence	1;1;1	zinogre;stygian	0
+1685	Feet	11	Stygian Zin Greaves α +	160;168;184	2	-4	-4	0	4	focus-2;eldersealBoost-1;zinogreEssence	1;1	zinogre;stygian	0
+1686	Head	11	Stygian Zin Helm β +	160;168;184	2	-4	-4	0	4	latentPower-3;tremorResistance-1;zinogreEssence	4;1	zinogre;stygian	0
+1687	Chest	11	Stygian Zin Mail β +	160;168;184	2	-4	-4	0	4	windproof-3;flinchFree-1;zinogreEssence	4	zinogre;stygian	0
+1688	Hands	11	Stygian Zin Vambraces β +	160;168;184	2	-4	-4	0	4	partbreaker-2;zinogreEssence	4;3	zinogre;stygian	0
+1689	Legs	11	Stygian Zin coil β +	160;168;184	2	-4	-4	0	4	latentPower-3;earplugs-1;zinogreEssence	4;1;1	zinogre;stygian	0
+1690	Feet	11	Stygian Zin Greaves β +	160;168;184	2	-4	-4	0	4	focus-2;zinogreEssence	4;1	zinogre;stygian	0
