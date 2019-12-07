@@ -213,10 +213,33 @@ export class StatService {
 			}
 		}
 
-		const upgradePassiveAttack = upgradeContainer.customUpgrades.filter(custom => custom == 'Attack').length;
-		const upgradePassiveAffinity = upgradeContainer.customUpgrades.filter(custom => custom == 'Affinity').length;
-		const upgradePassiveAilmentElement = upgradeContainer.customUpgrades.filter(custom => custom == 'Element').length * 10;
-		const upgradePassiveDefense = upgradeContainer.customUpgrades.filter(custom => custom == 'Defense').length * 15;
+		let upgradePassiveAttack = 0;
+		let upgradePassiveAffinity = 0;
+		let upgradePassiveAilmentElement = 0;
+		let upgradePassiveDefense = 0;
+		const upgrades = this.dataService.getUpgrades();
+		for (const [i, customId] of upgradeContainer.customUpgradeIds.entries()) {
+			if (customId > 0) {
+				const value = upgrades.find(x => x.id == customId).customLevel[i];
+				upgradeContainer.customUpgradeValues[i] = value;
+				switch (customId) {
+					case 1: // Attack
+						upgradePassiveAttack += value;
+						break;
+					case 2: // Affinity
+						upgradePassiveAffinity += value;
+						break;
+					case 3: // Defense
+						upgradePassiveDefense += value;
+						break;
+					case 6: // Element / Ailment
+						upgradePassiveAilmentElement += value * 10;
+						break;
+					default:
+						break;
+				}
+			}
+		}
 
 		this.stats.passiveAttack += upgradePassiveAttack;
 		this.stats.passiveAffinity += upgradePassiveAffinity;

@@ -8,7 +8,8 @@ export class UpgradeModel {
 	description: string;
 	levels: UpgradeLevelModel[];
 	multiplier: number;
-	customMaxLevel: number[];
+	customLevel: number[];
+	customLevelMax: number[];
 }
 
 export class UpgradeLevelModel {

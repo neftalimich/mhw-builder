@@ -1,6 +1,5 @@
 <div class="container">
 	<div class="item-container" [class.selected]="selected">
-
 		<!--<div class="slot-name">{{slotName}}</div>-->
 		<div class="slot-icon" (click)="equipmentSlotClicked()">
 			<img [src]="getItemIconName()" alt="slot icon">
@@ -47,7 +46,7 @@
 		</mhw-builder-augmentation-slot>
 	</div>
 
-	<div class="augmentation-container" *ngIf="upgradeContainer?.slots > 0">
+	<div class="upgrade-container" *ngIf="upgradeContainer?.slots > 0">
 		<mhw-builder-upgrade-slot [upgradeContainer]="upgradeContainer">
 		</mhw-builder-upgrade-slot>
 	</div>

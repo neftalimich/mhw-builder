@@ -140,12 +140,18 @@ export class BuildService {
 
 			const customs = itemGroup.match(custRegex);
 			if (customs) {
-				buildItem.customLevels = [];
-				buildItem.customLevels.push(parseInt(customs.toString().substring(0, 1), 10)); // Attack
-				buildItem.customLevels.push(parseInt(customs.toString().substring(1, 2), 10)); // Affinity
-				buildItem.customLevels.push(parseInt(customs.toString().substring(2, 3), 10)); // Defense
-				buildItem.customLevels.push(parseInt(customs.toString().substring(3, 4), 10)); // Element
-
+				if (customs.toString().length == 4) { // V2
+					// Empty
+				} else if (customs.toString().length == 7) { // v3
+					buildItem.customLevelIds = [];
+					buildItem.customLevelIds.push(parseInt(customs.toString().substring(0, 1), 10)); // Lv 1
+					buildItem.customLevelIds.push(parseInt(customs.toString().substring(1, 2), 10)); // Lv 2
+					buildItem.customLevelIds.push(parseInt(customs.toString().substring(2, 3), 10)); // Lv 3
+					buildItem.customLevelIds.push(parseInt(customs.toString().substring(3, 4), 10)); // Lv 4
+					buildItem.customLevelIds.push(parseInt(customs.toString().substring(4, 5), 10)); // Lv 5
+					buildItem.customLevelIds.push(parseInt(customs.toString().substring(5, 6), 10)); // Lv 6
+					buildItem.customLevelIds.push(parseInt(customs.toString().substring(6, 7), 10)); // Lv 7
+				}
 			}
 
 			const mods = itemGroup.match(modRegex);
@@ -255,11 +261,11 @@ export class BuildService {
 						upgradeContainer.hasCustomUpgrades = item.hasCustomUpgrades;
 						upgradeContainer.weaponType = item.weaponType;
 						if (item.rarity == 10) {
-							upgradeContainer.slots = 9;
+							upgradeContainer.slots = 10;
 						} else if (item.rarity == 11) {
-							upgradeContainer.slots = 6;
+							upgradeContainer.slots = 8;
 						} else if (item.rarity == 12) {
-							upgradeContainer.slots = 5;
+							upgradeContainer.slots = 6;
 						} else {
 							upgradeContainer.slots = 0;
 						}
@@ -298,24 +304,8 @@ export class BuildService {
 							upgradeContainer.upgradeDetails.push(detail);
 						}
 
-						if (buildItem.customLevels) {
-							let idx = 0;
-							for (let i = 0; i < buildItem.customLevels[0]; i++) {
-								upgradeContainer.customUpgrades[idx] = 'Attack';
-								idx += 1;
-							}
-							for (let i = 0; i < buildItem.customLevels[1]; i++) {
-								upgradeContainer.customUpgrades[idx] = 'Affinity';
-								idx += 1;
-							}
-							for (let i = 0; i < buildItem.customLevels[2]; i++) {
-								upgradeContainer.customUpgrades[idx] = 'Defense';
-								idx += 1;
-							}
-							for (let i = 0; i < buildItem.customLevels[3]; i++) {
-								upgradeContainer.customUpgrades[idx] = 'Element';
-								idx += 1;
-							}
+						if (buildItem.customLevelIds) {
+							upgradeContainer.customUpgradeIds = buildItem.customLevelIds;
 						}
 
 						slot.upgradeSlot.upgradeContainer = upgradeContainer;
@@ -442,13 +432,12 @@ export class BuildService {
 								result += '0';
 							}
 						}
-						const countAttack = this.equipmentService.upgradeContainer.customUpgrades.filter(custom => custom == 'Attack').length;
-						const countAffinity = this.equipmentService.upgradeContainer.customUpgrades.filter(custom => custom == 'Affinity').length;
-						const countDefense = this.equipmentService.upgradeContainer.customUpgrades.filter(custom => custom == 'Defense').length;
-						const countElement = this.equipmentService.upgradeContainer.customUpgrades.filter(custom => custom == 'Element').length;
-						result += 'c' + countAttack + countAffinity + countDefense + countElement;
+						result += 'c';
+						for (const customId of this.equipmentService.upgradeContainer.customUpgradeIds) {
+							result += customId;
+						}
 					} else {
-						result += 'u000000c0000';
+						result += 'u000000c0000000';
 					}
 				}
 

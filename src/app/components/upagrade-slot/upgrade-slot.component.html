@@ -1,22 +1,24 @@
-<div class="container"  [class.selected]="selected" >
+<div class="container" [class.selected]="selected">
 	<div class="slot-icon"><img [src]="'assets/images/augment-icon.png'" alt="augment"></div>
-	<div class="selected-upgrade" (click)="clicked()" (pointerenter)="setTooltipUpgrade($event, upgradeContainer)" (pointerleave)="clearTooltipUpgrade()">
-		<span *ngIf="upgradeContainer?.upgradeDetails">
-			<span *ngFor="let detail of upgradeContainer.upgradeDetails; let i = index">
-				<span *ngFor="let key of detail.totalSlots | numbersArr">
-					<span [class]="'hex-'+i" style="font-size: 26px;">&#x2B22;</span>
+	<div class="upgrades">
+		<div class="selected-upgrade" (click)="clicked()" (pointerenter)="setTooltipUpgrade($event, upgradeContainer)" (pointerleave)="clearTooltipUpgrade()">
+			<span *ngIf="upgradeContainer?.upgradeDetails">
+				<span *ngFor="let detail of upgradeContainer.upgradeDetails; let i = index">
+					<span *ngFor="let key of detail.totalSlots | numbersArr">
+						<span [class]="'hex-' + (i + 1)" style="font-size: 24px;">&#x2B22;</span>
+					</span>
+				</span>
+				<span *ngFor="let key of (upgradeContainer.slots - upgradeContainer.used) | numbersArr">
+					<span class="hex-0" style="font-size: 24px;">&#x2B22;</span>
 				</span>
 			</span>
-			<span *ngFor="let key of (upgradeContainer.slots - upgradeContainer.used) | numbersArr">
-				<span class="hex-gray" style="font-size: 26px;">&#x2B22;</span>
-			</span>
-		</span>
-	</div>
-	<div class="selected-custom" (click)="clicked()" (pointerenter)="setTooltipUpgrade($event, upgradeContainer)" (pointerleave)="clearTooltipUpgrade()">
-		<div *ngIf="upgradeContainer?.hasCustomUpgrades">
-			<span *ngFor="let custom of upgradeContainer.customUpgrades; let i = index">
-				<span [ngClass]="'hex-' + getCustomColor(custom)" style="font-size: 14px;">&#9672;</span>
-			</span>
+		</div>
+		<div class="selected-custom" (click)="clicked()" (pointerenter)="setTooltipUpgrade($event, upgradeContainer)" (pointerleave)="clearTooltipUpgrade()">
+			<div *ngIf="upgradeContainer?.hasCustomUpgrades">
+				<span *ngFor="let customId of upgradeContainer.customUpgradeIds; let i = index">
+					<span [ngClass]="'hex-' + customId" style="font-size: 14px;">&#9672;</span>
+				</span>
+			</div>
 		</div>
 	</div>
 

@@ -214,7 +214,7 @@ export class SlotService {
 			detail.passiveElement = 0;
 			detail.passiveAilment = 0;
 		}
-		upgradeContainer.customUpgrades = ['', '', '', '', '', ''];
+		upgradeContainer.customUpgradeIds = [0, 0, 0, 0, 0, 0, 0];
 	}
 
 	clearModificationSlot(slot: ModificationSlotComponent) {
@@ -272,11 +272,11 @@ export class SlotService {
 						new AugmentationModel()
 					];
 				} else if (item.rarity == 10) {
-					this.selectedItemSlot.upgradeContainer.slots = 9;
+					this.selectedItemSlot.upgradeContainer.slots = 10;
 				} else if (item.rarity == 11) {
-					this.selectedItemSlot.upgradeContainer.slots = 6;
+					this.selectedItemSlot.upgradeContainer.slots = 8;
 				} else if (item.rarity == 12) {
-					this.selectedItemSlot.upgradeContainer.slots = 5;
+					this.selectedItemSlot.upgradeContainer.slots = 6;
 				}
 
 				this.selectedItemSlot.kinsect = null;

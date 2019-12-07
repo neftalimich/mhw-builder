@@ -12,9 +12,15 @@
 		<tbody>
 			<tr *ngFor="let aug of upgrades; let augIndex = index" class="">
 				<td class="border-left-blue">{{aug.type}}</td>
-				<td *ngFor="let level of aug.levels; let levelIndex = index" (click)="selectUpgLevel(augIndex, levelIndex + 1)" class="text-center" style="cursor:pointer;" [style.background-color]="getBackgroundColor(augIndex, levelIndex)">
-					<!--[{{level.requiredSlots}}] {{getLevelColor(augIndex, levelIndex)}}-->
-					<span *ngFor="let key of level.requiredSlots | numbersArr" [class]="getHexagonClass(augIndex,levelIndex)" style="font-size:24px;">&#x2B22;</span>
+				<td *ngFor="let level of aug.levels; let levelIndex = index"
+					(click)="selectUpgLevel(augIndex, levelIndex + 1)"
+					[style.background-color]="getBackgroundColor(augIndex, levelIndex)"
+					class="text-center" style="cursor:pointer;">
+					<span *ngFor="let key of level.requiredSlots | numbersArr"
+						  [class]="getHexagonClass(augIndex,levelIndex)"
+						  style="font-size:24px;">
+						&#x2B22;
+					</span>
 				</td>
 			</tr>
 		</tbody>
@@ -23,11 +29,11 @@
 				<td colspan="4" class="text-center border-left-blue" style="background-color:#323232!important;">
 					<span *ngFor="let detail of upgradeContainer.upgradeDetails; let i = index">
 						<span *ngFor="let key of detail.totalSlots | numbersArr">
-							<span [class]="'hex-o-'+i" style="font-size: 26px;">&#x2B22;</span>
+							<span [class]="'hex-o-' + (i + 1)" style="font-size: 26px;">&#x2B22;</span>
 						</span>
 					</span>
 					<span *ngFor="let key of (upgradeContainer.slots - upgradeContainer.used) | numbersArr">
-						<span class="hex-gray" style="font-size: 26px;">&#x2B22;</span>
+						<span class="hex-0" style="font-size: 26px;">&#x2B22;</span>
 					</span>
 				</td>
 				<td class="text-center bg-52" (click)="selectUpgrade()" style="cursor:pointer;">
@@ -46,32 +52,34 @@
 				<th class="upgrade-th">IV</th>
 				<th class="upgrade-th">V</th>
 				<th class="upgrade-th">VI</th>
+				<th class="upgrade-th">VII</th>
 				<th class="upgrade-th">Total</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr *ngFor="let customUpg of customUpgrades">
-				<td class="border-left-blue">
+				<td>
 					{{customUpg.type}}
-					<!--<br />
-					<span style="font-size:12px;">(max: {{customUpg.maximum}})</span>-->
+					<br />
+					<span style="font-size: 14px;">[{{countCustomUpg(customUpg.id)}}/{{customUpg.maximum}}]</span>
 				</td>
-				<td class="text-center upgrade-td" (click)="selectCustomUpg(customUpg.type,0)" [class.selected]="upgradeContainer.customUpgrades[0]==customUpg.type">+{{customUpg.multiplier}}</td>
-				<td class="text-center upgrade-td" (click)="selectCustomUpg(customUpg.type,1)" [class.selected]="upgradeContainer.customUpgrades[1]==customUpg.type">+{{customUpg.multiplier}}</td>
-				<td class="text-center upgrade-td" (click)="selectCustomUpg(customUpg.type,2)" [class.selected]="upgradeContainer.customUpgrades[2]==customUpg.type">+{{customUpg.multiplier}}</td>
-				<td class="text-center upgrade-td" (click)="selectCustomUpg(customUpg.type,3)" [class.selected]="upgradeContainer.customUpgrades[3]==customUpg.type">+{{customUpg.multiplier}}</td>
-				<td class="text-center upgrade-td" (click)="selectCustomUpg(customUpg.type,4)" [class.selected]="upgradeContainer.customUpgrades[4]==customUpg.type">+{{customUpg.multiplier}}</td>
-				<td class="text-center upgrade-td" (click)="selectCustomUpg(customUpg.type,5)" [class.selected]="upgradeContainer.customUpgrades[5]==customUpg.type">+{{customUpg.multiplier}}</td>
+
+				<td *ngFor="let level of customUpg.levels; let i = index"
+					(click)="selectCustomUpg(customUpg.id, i)"
+					[class.selected]="upgradeContainer.customUpgradeIds[i] == customUpg.id"
+					class="text-center upgrade-td">
+					{{level}}
+				</td>
 				<td class="text-center upgrade-td bg-52">
-					{{countCustomUpg(customUpg.type)*customUpg.multiplier}}/{{customUpg.maximum*customUpg.multiplier}}
+					+{{sumCustomUpg(customUpg.id)}}
 				</td>
 			</tr>
 		</tbody>
 		<tfoot>
 			<tr>
-				<td colspan="7" class="text-center border-left-blue" style="background-color:#323232!important;">
-					<span *ngFor="let custom of upgradeContainer.customUpgrades; let i = index">
-						<span [ngClass]="'hex-'+getCustomColor(custom)" style="font-size: 22px;">&#9672;</span>
+				<td colspan="8" class="text-center border-left-blue" style="background-color:#323232!important;">
+					<span *ngFor="let customId of upgradeContainer.customUpgradeIds; let i = index">
+						<span [ngClass]="'hex-' + customId" style="font-size: 22px;">&#9672;</span>
 					</span>
 				</td>
 				<td class="text-center bg-52" (click)="selectUpgrade()" style="cursor:pointer;">

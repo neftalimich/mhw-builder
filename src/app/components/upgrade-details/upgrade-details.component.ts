@@ -37,22 +37,42 @@ export class UpgradeDetailsComponent implements OnInit {
 			}
 		}
 
-		const countAttack = this.upgradeContainer.customUpgrades.filter(custom => custom == 'Attack').length;
-		const countAffinity = this.upgradeContainer.customUpgrades.filter(custom => custom == 'Affinity').length;
-		const countDefense = this.upgradeContainer.customUpgrades.filter(custom => custom == 'Defense').length;
-		const countElement = this.upgradeContainer.customUpgrades.filter(custom => custom == 'Element').length;
+		let upgradePassiveAttack = 0;
+		let upgradePassiveAffinity = 0;
+		let upgradePassiveAilmentElement = 0;
+		let upgradePassiveDefense = 0;
 
-		if (countAttack > 0) {
-			this.stats.push({ name: 'Custom Attack', value: `+${countAttack}` });
+		for (const [i, customId] of this.upgradeContainer.customUpgradeIds.entries()) {
+			switch (customId) {
+				case 1: // Attack
+					upgradePassiveAttack += this.upgradeContainer.customUpgradeValues[i];
+					break;
+				case 2: // Affinity
+					upgradePassiveAffinity += this.upgradeContainer.customUpgradeValues[i];
+					break;
+				case 3: // Defense
+					upgradePassiveDefense += this.upgradeContainer.customUpgradeValues[i];
+					break;
+				case 6: // Element / Ailment
+					upgradePassiveAilmentElement += this.upgradeContainer.customUpgradeValues[i] * 10;
+					break;
+				default:
+					break;
+			}
 		}
-		if (countAffinity > 0) {
-			this.stats.push({ name: 'Custom Affinity', value: `+${countAffinity}` });
+
+
+		if (upgradePassiveAttack > 0) {
+			this.stats.push({ name: 'Custom Attack', value: `+${upgradePassiveAttack}` });
 		}
-		if (countDefense > 0) {
-			this.stats.push({ name: 'Custom Defense', value: `+${countDefense * 15}` });
+		if (upgradePassiveAffinity > 0) {
+			this.stats.push({ name: 'Custom Affinity', value: `+${upgradePassiveAffinity}` });
 		}
-		if (countElement > 0) {
-			this.stats.push({ name: 'Custom Element/Ailment', value: `+${countElement * 10}` });
+		if (upgradePassiveDefense > 0) {
+			this.stats.push({ name: 'Custom Defense', value: `+${upgradePassiveDefense}` });
+		}
+		if (upgradePassiveAilmentElement > 0) {
+			this.stats.push({ name: 'Custom Element/Ailment', value: `+${upgradePassiveAilmentElement}` });
 		}
 	}
 

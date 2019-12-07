@@ -1166,4 +1166,4 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2796	Bow	12	Soulfire Arch 'Ruin'	336	0	0				Blast	120	false		false		2;2	lunastra;ruiner-nergigante	blast	hastenRecovery-1	close;power;poison;sleep		0
 2797	Bow	12	Soulfire Arch 'Styx'	312	10	0				Blast	240	false		false			lunastra;xeno-jiiva	blast	razorSharpSpareShot-1	close;power		0
 3014	Bow	12	Beastking Thunderbow	372	-10	0	Thunder	120	false					false		4	rajang	thunder		close;power		0
-3032	Bow	12	Stygian Patientia	336	0	0	Dragon	300	false					false		2	stygian-zinogre	dragon		close;power		0
+3032	Bow	12	Stygian Patientia	336	0	0	Dragon	300	false				Average	false		2	stygian-zinogre	dragon		close;power		0

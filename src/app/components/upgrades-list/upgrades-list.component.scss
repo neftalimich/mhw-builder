@@ -1,4 +1,4 @@
-@import "../../../sass/variables";
+@import "../../../sass/common";
 
 .upgrades-table {
 	width: 100%;
@@ -41,107 +41,8 @@
 .upgrade-th {
 	font-size: 16px;
 }
+
 .upgrade-td {
-	cursor:pointer;
-	font-size:14px;
-}
-
-.hex-gray {
-	color: #202020;
-}
-
-.hex-0 {
-	color: $attack;
-}
-
-.hex-1 {
-	color: $affinity;
-}
-
-.hex-2 {
-	color: $defense;
-}
-
-.hex-3 {
-	color: $slot;
-}
-
-.hex-4 {
-	color: $health;
-}
-
-.hex-5 {
-	color: $element;
-}
-
-.hex-o-0 {
-	color: darken($attack,10%);
-}
-
-.hex-o-1 {
-	color: darken($affinity,10%);
-}
-
-.hex-o-2 {
-	color: darken($defense,10%);
-}
-
-.hex-o-3 {
-	color: darken($slot,10%);
-}
-
-.hex-o-4 {
-	color: darken($health,10%);
-}
-
-.hex-o-5 {
-	color: darken($element,10%);
-}
-
-.hex-l-0 {
-	color: lighten($attack,10%);
-}
-
-.hex-l-1 {
-	color: lighten($affinity,10%);
-}
-
-.hex-l-2 {
-	color: lighten($defense,10%);
-}
-
-.hex-l-3 {
-	color: lighten($slot,15%);
-}
-
-.hex-l-4 {
-	color: lighten($health,10%);
-}
-
-.hex-l-5 {
-	color: lighten($element,10%);
-}
-
-.hex-bl-0 {
-	background-color: lighten($attack,20%);
-}
-
-.hex-bl-1 {
-	background-color: lighten($affinity,20%);
-}
-
-.hex-bl-2 {
-	background-color: lighten($defense,20%);
-}
-
-.hex-bl-3 {
-	background-color: lighten($slot,20%);
-}
-
-.hex-bl-4 {
-	background-color: lighten($health,20%);
-}
-
-.hex-bl-5 {
-	background-color: lighten($element,20%);
+	cursor: pointer;
+	font-size: 14px;
 }

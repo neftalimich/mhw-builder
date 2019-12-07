@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { UpgradeContainerModel } from '../../models/upgrade-container.model';
 import { UpgradeLevelModel, UpgradeModel } from '../../models/upgrade.model';
 import { DataService } from '../../services/data.service';
@@ -46,11 +46,12 @@ export class UpgradesListComponent implements OnInit {
 			}
 
 			for (const cUpg of this.upgrades) {
-				if (cUpg.customMaxLevel[this.weaponIndex] > 0) {
+				if (cUpg.customLevelMax[this.weaponIndex] > 0) {
 					this.customUpgrades.push({
+						id: cUpg.id,
 						type: cUpg.type,
-						multiplier: cUpg.multiplier,
-						maximum: cUpg.customMaxLevel[this.weaponIndex]
+						levels: cUpg.customLevel,
+						maximum: cUpg.customLevelMax[this.weaponIndex]
 					});
 				}
 			}
@@ -145,12 +146,12 @@ export class UpgradesListComponent implements OnInit {
 		const auxLevel = this.upgrades[upgIndex].levels[levelIndex];
 
 		if (levelIndex + 1 <= auxUpg.level) {
-			return 'hex-o-' + upgIndex;
+			return 'hex-o-' + (upgIndex + 1);
 		} else {
 			if (this.upgradeContainer.used - auxUpg.totalSlots + auxLevel.totalSlots <= this.upgradeContainer.slots) {
-				return 'hex-' + upgIndex;
+				return 'hex-' + (upgIndex + 1);
 			} else {
-				return 'hex-' + upgIndex;
+				return 'hex-' + (upgIndex + 1);
 			}
 		}
 	}
@@ -170,22 +171,36 @@ export class UpgradesListComponent implements OnInit {
 		}
 	}
 
-	selectCustomUpg(augType: string, levelIndex: number) {
-		const maximum = this.upgrades.filter(x => x.type == augType)[0].customMaxLevel[this.weaponIndex];
-		const levels = this.upgradeContainer.customUpgrades.filter(custom => custom == augType).length;
+	selectCustomUpg(augId: number, levelIndex: number) {
+		const maximum = this.upgrades.find(x => x.id == augId).customLevelMax[this.weaponIndex];
+		const levels = this.upgradeContainer.customUpgradeIds.filter(customId => customId == augId).length;
 
-		if (this.upgradeContainer.customUpgrades[levelIndex] == augType) {
-			this.upgradeContainer.customUpgrades[levelIndex] = '';
+		if (this.upgradeContainer.customUpgradeIds[levelIndex] == augId) {
+			this.upgradeContainer.customUpgradeIds[levelIndex] = 0;
+			this.upgradeContainer.customUpgradeValues[levelIndex] = 0;
 		} else {
 			if (levels < maximum) {
-				this.upgradeContainer.customUpgrades[levelIndex] = augType;
+				this.upgradeContainer.customUpgradeIds[levelIndex] = augId;
+				this.upgradeContainer.customUpgradeValues[levelIndex] = this.upgrades.find(x => x.id == augId).customLevel[levelIndex];
 			}
 		}
 	}
 
-	countCustomUpg(augType: string) {
-		return this.upgradeContainer.customUpgrades.filter(custom => custom == augType).length;
+	countCustomUpg(augId: number) {
+		return this.upgradeContainer.customUpgradeIds.filter(customId => customId == augId).length;
 	}
+
+	sumCustomUpg(augId: number) {
+		let result = 0;
+		const upgrade = this.upgrades.find(x => x.id == augId);
+		for (const [i, customId] of this.upgradeContainer.customUpgradeIds.entries()) {
+			if (customId == augId) {
+				result += upgrade.customLevel[i];
+			}
+		}
+		return result;
+	}
+
 
 	getCustomColor(augType: string) {
 		if (augType == 'Attack') {

@@ -4,7 +4,6 @@ import { SlotService } from '../../services/slot.service';
 import { TooltipService } from '../../services/tooltip.service';
 import { ItemType } from '../../types/item.type';
 import { PointerType } from '../../types/pointer.type';
-import { WeaponType } from '../../types/weapon.type';
 
 @Component({
 	selector: 'mhw-builder-upgrade-slot',
@@ -35,20 +34,6 @@ export class UpgradeSlotComponent implements OnInit {
 	clearClicked(event: Event) {
 		event.stopPropagation();
 		this.slotService.clearUpgradeSlot(this);
-	}
-
-	getCustomColor(augType: string) {
-		if (augType == 'Attack') {
-			return '0';
-		} else if (augType == 'Affinity') {
-			return '1';
-		} else if (augType == 'Defense') {
-			return '2';
-		} else if (augType == 'Element') {
-			return '5';
-		} else {
-			return 'gray';
-		}
 	}
 
 	setTooltipUpgrade(event: PointerEvent, upgradeContainer: UpgradeContainerModel) {

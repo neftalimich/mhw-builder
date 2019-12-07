@@ -6,7 +6,8 @@ export class UpgradeContainerModel {
 	used: number;
 	hasCustomUpgrades: boolean;
 	upgradeDetails: UpgradeLevelModel[];
-	customUpgrades: string[];
+	customUpgradeIds: number[];
+	customUpgradeValues: number[];
 	weaponType: WeaponType;
 
 	constructor() {
@@ -14,6 +15,7 @@ export class UpgradeContainerModel {
 		this.used = 0;
 		this.hasCustomUpgrades = false;
 		this.upgradeDetails = new Array<UpgradeLevelModel>();
-		this.customUpgrades = ['', '', '', '', '', ''];
+		this.customUpgradeIds = [0, 0, 0, 0, 0, 0, 0];
+		this.customUpgradeValues = [0, 0, 0, 0, 0, 0, 0];
 	}
 }
