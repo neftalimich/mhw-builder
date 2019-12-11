@@ -10,19 +10,21 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr *ngFor="let aug of upgrades; let augIndex = index" class="">
-				<td class="border-left-blue">{{aug.type}}</td>
-				<td *ngFor="let level of aug.levels; let levelIndex = index"
-					(click)="selectUpgLevel(augIndex, levelIndex + 1)"
-					[style.background-color]="getBackgroundColor(augIndex, levelIndex)"
-					class="text-center" style="cursor:pointer;">
-					<span *ngFor="let key of level.requiredSlots | numbersArr"
-						  [class]="getHexagonClass(augIndex,levelIndex)"
-						  style="font-size:24px;">
-						&#x2B22;
-					</span>
-				</td>
-			</tr>
+			<ng-container *ngFor="let aug of upgrades; let augIndex = index">
+				<tr *ngIf="aug.levels.length > 0">
+					<td class="border-left-blue">{{aug.type}}</td>
+					<td *ngFor="let level of aug.levels; let levelIndex = index"
+						(click)="selectUpgLevel(augIndex, levelIndex + 1)"
+						[style.background-color]="getBackgroundColor(augIndex, levelIndex)"
+						class="text-center" style="cursor:pointer;">
+						<span *ngFor="let key of level.requiredSlots | numbersArr"
+							  [class]="getHexagonClass(augIndex,levelIndex)"
+							  style="font-size:24px;">
+							&#x2B22;
+						</span>
+					</td>
+				</tr>
+			</ng-container>
 		</tbody>
 		<tfoot>
 			<tr>
@@ -60,15 +62,12 @@
 			<tr *ngFor="let customUpg of customUpgrades">
 				<td>
 					{{customUpg.type}}
-					<br />
-					<span style="font-size: 14px;">[{{countCustomUpg(customUpg.id)}}/{{customUpg.maximum}}]</span>
 				</td>
-
-				<td *ngFor="let level of customUpg.levels; let i = index"
-					(click)="selectCustomUpg(customUpg.id, i)"
+				<td *ngFor="let value of customUpg.values; let i = index"
+					(click)="selectCustomUpg(customUpg.id, i, value)"
 					[class.selected]="upgradeContainer.customUpgradeIds[i] == customUpg.id"
 					class="text-center upgrade-td">
-					{{level}}
+					<span [hidden]="value==0">{{value}}</span>
 				</td>
 				<td class="text-center upgrade-td bg-52">
 					+{{sumCustomUpg(customUpg.id)}}

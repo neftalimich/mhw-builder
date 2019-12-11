@@ -33,7 +33,6 @@ export class UpgradesListComponent implements OnInit {
 				}
 			}
 
-			this.customUpgrades = [];
 			this.weaponIndex = 0;
 			for (const item in WeaponType) {
 				if (isNaN(Number(item))) {
@@ -45,13 +44,16 @@ export class UpgradesListComponent implements OnInit {
 				}
 			}
 
+			this.customUpgrades = [];
 			for (const cUpg of this.upgrades) {
-				if (cUpg.customLevelMax[this.weaponIndex] > 0) {
+				const levels = cUpg.WeaponCustomUpgrades[this.weaponIndex];
+				const maximum = levels.reduce((acumulator, currentValue) => acumulator + currentValue, 0);
+				if (maximum > 0) {
 					this.customUpgrades.push({
 						id: cUpg.id,
 						type: cUpg.type,
-						levels: cUpg.customLevel,
-						maximum: cUpg.customLevelMax[this.weaponIndex]
+						maximum: maximum,
+						values: cUpg.WeaponCustomUpgrades[this.weaponIndex]
 					});
 				}
 			}
@@ -171,17 +173,14 @@ export class UpgradesListComponent implements OnInit {
 		}
 	}
 
-	selectCustomUpg(augId: number, levelIndex: number) {
-		const maximum = this.upgrades.find(x => x.id == augId).customLevelMax[this.weaponIndex];
-		const levels = this.upgradeContainer.customUpgradeIds.filter(customId => customId == augId).length;
-
-		if (this.upgradeContainer.customUpgradeIds[levelIndex] == augId) {
-			this.upgradeContainer.customUpgradeIds[levelIndex] = 0;
-			this.upgradeContainer.customUpgradeValues[levelIndex] = 0;
-		} else {
-			if (levels < maximum) {
+	selectCustomUpg(augId: number, levelIndex: number, level: number) {
+		if (level > 0) {
+			if (this.upgradeContainer.customUpgradeIds[levelIndex] == augId) {
+				this.upgradeContainer.customUpgradeIds[levelIndex] = 0;
+				this.upgradeContainer.customUpgradeValues[levelIndex] = 0;
+			} else {
 				this.upgradeContainer.customUpgradeIds[levelIndex] = augId;
-				this.upgradeContainer.customUpgradeValues[levelIndex] = this.upgrades.find(x => x.id == augId).customLevel[levelIndex];
+				this.upgradeContainer.customUpgradeValues[levelIndex] = level;
 			}
 		}
 	}
@@ -192,10 +191,10 @@ export class UpgradesListComponent implements OnInit {
 
 	sumCustomUpg(augId: number) {
 		let result = 0;
-		const upgrade = this.upgrades.find(x => x.id == augId);
+		const customUpgrade = this.customUpgrades.find(x => x.id == augId);
 		for (const [i, customId] of this.upgradeContainer.customUpgradeIds.entries()) {
 			if (customId == augId) {
-				result += upgrade.customLevel[i];
+				result += customUpgrade.values[i];
 			}
 		}
 		return result;

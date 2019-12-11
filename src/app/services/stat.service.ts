@@ -217,10 +217,22 @@ export class StatService {
 		let upgradePassiveAffinity = 0;
 		let upgradePassiveAilmentElement = 0;
 		let upgradePassiveDefense = 0;
+
+		let weaponIndex = 0;
+		for (const item in WeaponType) {
+			if (isNaN(Number(item))) {
+				if (item == upgradeContainer.weaponType) {
+					break;
+				} else {
+					weaponIndex += 1;
+				}
+			}
+		}
+
 		const upgrades = this.dataService.getUpgrades();
 		for (const [i, customId] of upgradeContainer.customUpgradeIds.entries()) {
 			if (customId > 0) {
-				const value = upgrades.find(x => x.id == customId).customLevel[i];
+				const value = upgrades.find(x => x.id == customId).WeaponCustomUpgrades[weaponIndex][i];
 				upgradeContainer.customUpgradeValues[i] = value;
 				switch (customId) {
 					case 1: // Attack
@@ -234,6 +246,9 @@ export class StatService {
 						break;
 					case 6: // Element / Ailment
 						upgradePassiveAilmentElement += value * 10;
+						break;
+					case 7: // Sharpness
+						this.stats.extraSharpness += value;
 						break;
 					default:
 						break;
@@ -350,21 +365,47 @@ export class StatService {
 		}
 
 		if (weapon && weapon.sharpnessLevelsBar) {
-			this.stats.sharpnessLevelsBar = weapon.sharpnessLevelsBar;
+			this.stats.sharpnessLevelsBar = JSON.parse(JSON.stringify(weapon.sharpnessLevelsBar));
+
 			if (weapon.sharpnessLevelsBar && !isNaN(weapon.sharpnessLevelsBar[0])) {
+				// Extra Sharpness	
+				if (this.stats.extraSharpness > 0) {
+					const extraSharpness = this.stats.extraSharpness / 10;
+
+					const total = this.stats.sharpnessLevelsBar.reduce((a, b) => a + b, 0);
+					let maxHandicraft = 40 + 5 - total;
+					let currentSharpnessIndex = 0;
+					for (let i = this.stats.sharpnessLevelsBar.length - 1; i >= 0; i--) {
+						if (maxHandicraft > 0) {
+							const toSubstract = Math.min(this.stats.sharpnessLevelsBar[i], maxHandicraft);
+							if (toSubstract < this.stats.sharpnessLevelsBar[i]) {
+								currentSharpnessIndex = i;
+							} else if (toSubstract == this.stats.sharpnessLevelsBar[i]) {
+								currentSharpnessIndex = i - 1;
+							}
+							maxHandicraft -= toSubstract;
+						}
+						if (this.stats.sharpnessLevelsBar[i] == 0) {
+							currentSharpnessIndex = i - 1;
+						}
+					}
+					this.stats.sharpnessLevelsBar[currentSharpnessIndex] += extraSharpness;
+					this.stats.sharpnessLevelsBar[0] -= extraSharpness;
+				}
+				// Handicraft
 				let levelsToSubstract = 5 - (this.stats.passiveSharpness / 10);
-				let colorIndex = weapon.sharpnessLevelsBar.length - 1;
-				for (let i = weapon.sharpnessLevelsBar.length - 1; i >= 0; i--) {
+				let colorIndex = this.stats.sharpnessLevelsBar.length - 1;
+				for (let i = this.stats.sharpnessLevelsBar.length - 1; i >= 0; i--) {
 					if (levelsToSubstract > 0) {
-						const toSubstract = Math.min(weapon.sharpnessLevelsBar[i], levelsToSubstract);
-						if (toSubstract < weapon.sharpnessLevelsBar[i]) {
+						const toSubstract = Math.min(this.stats.sharpnessLevelsBar[i], levelsToSubstract);
+						if (toSubstract < this.stats.sharpnessLevelsBar[i]) {
 							colorIndex = i;
-						} else if (toSubstract == weapon.sharpnessLevelsBar[i]) {
+						} else if (toSubstract == this.stats.sharpnessLevelsBar[i]) {
 							colorIndex = i - 1;
 						}
 						levelsToSubstract -= toSubstract;
 					}
-					if (weapon.sharpnessLevelsBar[i] == 0) {
+					if (this.stats.sharpnessLevelsBar[i] == 0) {
 						colorIndex = i - 1;
 					}
 				}

@@ -14,6 +14,7 @@ export class StatsModel {
 	activeAttackPercent: number;
 	sharpnessDataNeeded: boolean;
 	passiveSharpness: number;
+	extraSharpness: number;
 	sharpnessLevelsBar: number[];
 	effectivePhysicalSharpnessModifier: number;
 	effectiveElementalSharpnessModifier: number;
@@ -128,6 +129,7 @@ export class StatsModel {
 
 		this.sharpnessDataNeeded = false;
 		this.passiveSharpness = 0;
+		this.extraSharpness = 0;
 		this.effectivePhysicalSharpnessModifier = 1;
 		this.effectiveElementalSharpnessModifier = 1;
 		this.weaponAttackModifier = 0;
