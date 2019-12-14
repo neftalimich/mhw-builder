@@ -40,7 +40,7 @@ export class SetService {
 			let itemGroupsLenght = 0;
 			if (buildV == '#v3') {
 				itemGroupsLenght = 9;
-			}else if (buildV == '#v2') {
+			} else if (buildV == '#v2') {
 				itemGroupsLenght = 9;
 			} else if (buildId.substring(0, 3) == '#v1') {
 				itemGroupsLenght = 8;

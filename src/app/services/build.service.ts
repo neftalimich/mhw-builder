@@ -80,37 +80,35 @@ export class BuildService {
 
 		const buildId = buildParts[0];
 
-		var urlParams = new URLSearchParams(buildHash);
+		const urlParams = new URLSearchParams(buildHash);
 
-
-		if (urlParams.has('WeaponId') && parseInt(urlParams.get('WeaponId')) > 40000) {
+		if (urlParams.has('WeaponId') && parseInt(urlParams.get('WeaponId'), 10) > 40000) {
 			this.weaponItem = new ItemModel;
 
-			let slots: SlotModel[] = [];
+			const slots: SlotModel[] = [];
 			if (urlParams.has('WeaponSlots')) {
-				let slotParts = urlParams.get('WeaponSlots').split(';');
-
+				const slotParts = urlParams.get('WeaponSlots').split(';');
 				for (const slot of slotParts) {
-					slots.push({ level: parseInt(slot) });
+					slots.push({ level: parseInt(slot, 10) });
 				}
 			}
 			if (urlParams.has('WeaponElement')) {
-				let elementParts = urlParams.get('WeaponElement').split('-');
+				const elementParts = urlParams.get('WeaponElement').split('-');
 				this.weaponItem.element = ElementType[elementParts[0]];
-				this.weaponItem.elementBaseAttack = parseInt(elementParts[1]);
+				this.weaponItem.elementBaseAttack = parseInt(elementParts[1], 10);
 				this.weaponItem.elementAttackIncreaseCapOverride = 100000;
 			}
 			if (urlParams.has('WeaponAilment')) {
-				let ailmentParts = urlParams.get('WeaponAilment').split('-');
+				const ailmentParts = urlParams.get('WeaponAilment').split('-');
 				this.weaponItem.ailment = AilmentType[ailmentParts[0]];
-				this.weaponItem.ailmentBaseAttack = parseInt(ailmentParts[1]);
+				this.weaponItem.ailmentBaseAttack = parseInt(ailmentParts[1], 10);
 				this.weaponItem.ailmentAttackIncreaseCapOverride = 100000;
 			}
 			if (urlParams.has('WeaponSharpness')) {
-				let sharpnessParts = urlParams.get('WeaponSharpness').split(';');
-				let sharpnessLevels: number[] = [];
+				const sharpnessParts = urlParams.get('WeaponSharpness').split(';');
+				const sharpnessLevels: number[] = [];
 				for (const level of sharpnessParts) {
-					sharpnessLevels.push(parseInt(level));
+					sharpnessLevels.push(parseInt(level, 10));
 				}
 				this.weaponItem.sharpnessLevelsBar = sharpnessLevels;
 			} else {
@@ -121,8 +119,8 @@ export class BuildService {
 			}
 			this.weaponItem.skills = [];
 			if (urlParams.has('WeaponSkills')) {
-				let skillParts = urlParams.get('WeaponSkills').split(';');
-				let skills: SkillReferenceModel[] = [];
+				const skillParts = urlParams.get('WeaponSkills').split(';');
+				const skills: SkillReferenceModel[] = [];
 				for (const skill of skillParts) {
 					skills.push({
 						id: skill,
@@ -131,13 +129,13 @@ export class BuildService {
 				}
 				this.weaponItem.skills = skills;
 			}
-			this.weaponItem.id = parseInt(urlParams.get('WeaponId'));
+			this.weaponItem.id = parseInt(urlParams.get('WeaponId'), 10);
 			this.weaponItem.weaponType = WeaponType[urlParams.get('WeaponType')];
-			this.weaponItem.rarity = urlParams.has('WeaponRarity') ? parseInt(urlParams.get('WeaponRarity')) : 12;
+			this.weaponItem.rarity = urlParams.has('WeaponRarity') ? parseInt(urlParams.get('WeaponRarity'), 10) : 12;
 			this.weaponItem.name = urlParams.has('WeaponName') ? urlParams.get('WeaponName') : 'Weapon ' + this.weaponItem.id;
-			this.weaponItem.baseAttack = urlParams.has('WeaponAttack') ? parseInt(urlParams.get('WeaponAttack')) : 1000;
-			this.weaponItem.baseAffinityPercent = urlParams.has('WeaponAffinity') ? parseInt(urlParams.get('WeaponAffinity')) : 0;
-			this.weaponItem.defense = [urlParams.has('WeaponDefense') ? parseInt(urlParams.get('WeaponDefense')) : 0];
+			this.weaponItem.baseAttack = urlParams.has('WeaponAttack') ? parseInt(urlParams.get('WeaponAttack'), 10) : 1000;
+			this.weaponItem.baseAffinityPercent = urlParams.has('WeaponAffinity') ? parseInt(urlParams.get('WeaponAffinity'), 10) : 0;
+			this.weaponItem.defense = [urlParams.has('WeaponDefense') ? parseInt(urlParams.get('WeaponDefense'), 10) : 0];
 			this.weaponItem.elderseal = EldersealType['Average'];
 			this.weaponItem.sharpnessDataNeeded = false;
 
@@ -145,7 +143,7 @@ export class BuildService {
 			this.weaponItem.monsters = ['event'];
 			this.weaponItem.tags = ['custom'];
 
-			this.weaponItem.otherData = [{ value: "", data: null }];
+			this.weaponItem.otherData = [{ value: '', data: null }];
 			this.weaponItem.hasCustomUpgrades = true;
 			this.weaponItem.itemType = ItemType.Weapon;
 			this.weaponItem.equipmentCategory = EquipmentCategoryType.Weapon;
@@ -302,11 +300,12 @@ export class BuildService {
 			switch (this.dataService.getEquipmentCategory(slot.slotName)) {
 				case EquipmentCategoryType.Weapon:
 					if (buildItem.itemId > 40000) {
-						let weaponCustom = localStorage.getItem('weapon-' + buildItem.itemId);
+						const weaponCustom = localStorage.getItem('weapon-' + buildItem.itemId);
 						if (weaponCustom) {
 							item = JSON.parse(weaponCustom);
 						} else if (this.weaponItem) {
 							item = this.weaponItem;
+							this.updateBuildId();
 						}
 					} else {
 						item = this.dataService.getWeapon(buildItem.itemId);

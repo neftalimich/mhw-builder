@@ -2668,9 +2668,11 @@
 			{
 				"description": "Elem., abnormal status, & affinity up with weapon drawn. Take damage when attacking, but can be recovered by continually attacking.",
 				"activeAffinity": 20,
-				"activeElementAttack": 80
+				"activeElementAttack": 80,
+				"activeAilmentAttackBuildUpPercent": 15
 			}
-		]
+		],
+		"hasActiveStats": true
 	},
 	{
 		"id": "trueDragonveinAwakening",
@@ -2680,8 +2682,10 @@
 			{
 				"description": "Enhances attacks even more with weapo drawn. Take damage when attacking, but can be recovered by continually attacking.",
 				"activeAffinity": 40,
-				"activeElementAttack": 150
+				"activeElementAttack": 150,
+				"activeAilmentAttackBuildUpPercent": 25
 			}
-		]
+		],
+		"hasActiveStats": true
 	}
 ]

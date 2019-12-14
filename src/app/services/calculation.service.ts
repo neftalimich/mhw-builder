@@ -404,9 +404,9 @@ export class CalculationService {
 					colorClass: 'yellow'
 				},
 				{
-					displayName: 'Ailment Attack Cap',
-					name: 'cap',
-					value: stats.ailmentCap,
+					displayName: 'Active Ailment Attack Buildup',
+					name: 'active',
+					value: stats.activeAilmentAttackBuildUpPercent / 100,
 					colorClass: 'orange'
 				}
 			]
@@ -421,12 +421,12 @@ export class CalculationService {
 			});
 
 			if (stats.elementAttackMultiplier) {
-				ailmentAttackCalc.calculationTemplate = `{base} × {multiplier} + {passive} ≈ ${stats.totalAilmentAttack}`;
+				ailmentAttackCalc.calculationTemplate = `({base} × {multiplier} + {passive}) × (1 + {active}) ≈ ${stats.totalAilmentAttack}`;
 			} else {
-				ailmentAttackCalc.calculationTemplate = `({base} + {passive}) × {multiplier} ≈ ${stats.totalAilmentAttack}`;
+				ailmentAttackCalc.calculationTemplate = `({base} + {passive}) × {multiplier} × (1 + {active}) ≈ ${stats.totalAilmentAttack}`;
 			}
 		} else {
-			ailmentAttackCalc.calculationTemplate = `{base} + {passive} = ${stats.totalAilmentAttack}`;
+			ailmentAttackCalc.calculationTemplate = `({base} + {passive}) × (1 + {active}) = ${stats.totalAilmentAttack}`;
 		}
 
 		return ailmentAttackCalc;
@@ -455,7 +455,7 @@ export class CalculationService {
 	private getElementAttack(stats: StatsModel, elementCalc: StatDetailModel): StatDetailModel {
 		const elementAttackCalc: StatDetailModel = {
 			name: 'Elment Attack',
-			value: stats.totalElementAttack,
+			value: stats.totalElementAttack + stats.effectivePassiveElementAttack + stats.activeElementAttack,
 			valueColor: elementCalc.color,
 			icon: stats.element.toLowerCase() + (stats.effectiveElementAttack == 0 ? '-gray' : ''),
 			color: elementCalc.color,
@@ -474,9 +474,9 @@ export class CalculationService {
 					colorClass: 'yellow'
 				},
 				{
-					displayName: 'Element Attack Cap',
-					name: 'cap',
-					value: stats.elementCap,
+					displayName: 'Active Element Attack',
+					name: 'active',
+					value: stats.activeElementAttack,
 					colorClass: 'orange'
 				}
 			]
@@ -491,12 +491,12 @@ export class CalculationService {
 			});
 
 			if (stats.elementAttackMultiplier) {
-				elementAttackCalc.calculationTemplate = `{base} × {multiplier} + {passive} ≈ ${stats.totalElementAttack}`;
+				elementAttackCalc.calculationTemplate = `{base} × {multiplier} + {passive} + {active} ≈ ${stats.totalElementAttack}`;
 			} else {
-				elementAttackCalc.calculationTemplate = `({base} + {passive}) × {multiplier} ≈ ${stats.totalElementAttack}`;
+				elementAttackCalc.calculationTemplate = `({base} + {passive} + {active}) × {multiplier} ≈ ${stats.totalElementAttack}`;
 			}
 		} else {
-			elementAttackCalc.calculationTemplate = `{base} + {passive} = ${stats.totalElementAttack}`;
+			elementAttackCalc.calculationTemplate = `{base} + {passive} + {active} = ${stats.totalElementAttack}`;
 		}
 
 		return elementAttackCalc;

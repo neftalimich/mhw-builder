@@ -87,6 +87,11 @@ export class WeaponListComponent implements OnInit {
 	loadItems() {
 		this.itemsWorld = this.items.filter(item => item.id < 1000);
 		this.itemsIceborne = this.items.filter(item => item.id >= 1000);
+		for (let i = 0; i < localStorage.length; i++) {
+			if (localStorage.getItem('weapon-' + (40000 + i)) != null) {
+				this.itemsIceborne.push(JSON.parse(localStorage.getItem('weapon-' + (40000 + i))));
+			}
+		}
 		this.resetSearchResults();
 		setTimeout(() => this.searchBox.nativeElement.focus(), 250);
 	}

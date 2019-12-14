@@ -143,8 +143,8 @@ export class EquippedSkillsComponent implements OnInit {
 							equippedSkill.isNatureBonus = true;
 						}
 					}
-					this.equipmentService.updateSkillMode(this.skills);
 				}
+				this.equipmentService.updateSkillMode(this.skills);
 			} else if (detail.mode == ModeType.AllSkillActive) {
 				detail.mode = ModeType.Active;
 				for (const skillExtra of detail.skill.levels[0].activeSkills) {
@@ -164,6 +164,16 @@ export class EquippedSkillsComponent implements OnInit {
 				}
 				this.equipmentService.updateSkillMode(this.skills);
 			}
+		}
+		if (equippedCount >= detail.requiredCount && detail.skill.hasActiveStats) {
+			const skill = this.skills.find(x => x.id == detail.skill.id);
+			if (detail.mode == ModeType.Active) {
+				detail.mode = ModeType.AllSkillActive;
+			} else if (detail.mode == ModeType.AllSkillActive) {
+				detail.mode = ModeType.Active;
+			}
+			skill.mode = detail.mode;
+			this.equipmentService.updateSkillMode(this.skills);
 		}
 	}
 

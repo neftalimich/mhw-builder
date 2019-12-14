@@ -106,16 +106,19 @@ export class StatService {
 				const levelIndex = Math.min(equippedSkill.equippedCount, equippedSkill.skill.levels.length) - 1;
 				level = equippedSkill.skill.levels[levelIndex];
 			}
-
 			if (level) {
 				if (equippedSkill.mode == ModeType.AllSkillActive) {
-					if (level.activeElementAttack) { this.stats.activeElementAttack += level.activeElementAttack; }
-					if (level.activeAilmentAttackBuildUpPercent) { this.stats.activeAilmentAttackBuildUpPercent += level.activeAilmentAttackBuildUpPercent; }
-					if (level.activeAttack) { this.stats.activeAttack += level.activeAttack; }
-					if (level.activeAttackPercent) { this.stats.activeAttackPercent += level.activeAttackPercent; }
-					if (level.activeAffinity) { this.stats.activeAffinity += level.activeAffinity; }
-					if (level.activeWeakPointAffinity) { this.stats.weakPointAffinity += level.activeWeakPointAffinity; }
-					if (level.activeDefense) { this.stats.activeDefense += level.activeDefense; }
+					const skillUpgrade = equippedSkills.find(x => x.id == 'true' + equippedSkill.id.substring(0, 1).toUpperCase() + equippedSkill.id.substring(1, equippedSkill.id.length));
+					if (skillUpgrade == null || skillUpgrade.mode == ModeType.Active) {
+						if (level.activeElementAttack) { this.stats.activeElementAttack += level.activeElementAttack; }
+						if (level.activeAilmentAttackBuildUpPercent) { this.stats.activeAilmentAttackBuildUpPercent += level.activeAilmentAttackBuildUpPercent; }
+						if (level.activeAttack) { this.stats.activeAttack += level.activeAttack; }
+						if (level.activeAttackPercent) { this.stats.activeAttackPercent += level.activeAttackPercent; }
+						if (level.activeAffinity) { this.stats.activeAffinity += level.activeAffinity; }
+						if (level.activeWeakPointAffinity) { this.stats.weakPointAffinity += level.activeWeakPointAffinity; }
+						if (level.activeDefense) { this.stats.activeDefense += level.activeDefense; }
+						console.log(this.stats.activeAilmentAttackBuildUpPercent);
+					}
 				}
 				if (equippedSkill.mode == ModeType.Active || equippedSkill.mode == ModeType.AllSkillActive) {
 					if (level.passiveAttack) { this.stats.passiveAttack += level.passiveAttack; }
@@ -368,7 +371,7 @@ export class StatService {
 			this.stats.sharpnessLevelsBar = JSON.parse(JSON.stringify(weapon.sharpnessLevelsBar));
 
 			if (weapon.sharpnessLevelsBar && !isNaN(weapon.sharpnessLevelsBar[0])) {
-				// Extra Sharpness	
+				// Extra Sharpness
 				if (this.stats.extraSharpness > 0) {
 					const extraSharpness = this.stats.extraSharpness / 10;
 
