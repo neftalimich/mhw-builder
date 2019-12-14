@@ -2659,5 +2659,29 @@
 				"description": "Prevents zombie and effluvial buildup."
 			}
 		]
+	},
+	{
+		"id": "dragonveinAwakening",
+		"name": "Dragonvein Awakening",
+		"description": "",
+		"levels": [
+			{
+				"description": "Elem., abnormal status, & affinity up with weapon drawn. Take damage when attacking, but can be recovered by continually attacking.",
+				"activeAffinity": 20,
+				"activeElementAttack": 80
+			}
+		]
+	},
+	{
+		"id": "trueDragonveinAwakening",
+		"name": "True Dragonvein Awakening",
+		"description": "",
+		"levels": [
+			{
+				"description": "Enhances attacks even more with weapo drawn. Take damage when attacking, but can be recovered by continually attacking.",
+				"activeAffinity": 40,
+				"activeElementAttack": 150
+			}
+		]
 	}
 ]

@@ -562,5 +562,19 @@
 				"pieces": 4
 			}
 		]
+	},
+	{
+		"id": "safijiivaSeal",
+		"name": "Safi'Jiiva Seal",
+		"setLevels": [
+			{
+				"id": "dragonveinAwakening",
+				"pieces": 3
+			},
+			{
+				"id": "trueDragonveinAwakening",
+				"pieces": 5
+			}
+		]
 	}
 ]

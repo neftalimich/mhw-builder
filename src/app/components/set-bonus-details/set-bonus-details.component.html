@@ -11,6 +11,10 @@
 	<table class="skill-part-table">
 		<tr>
 			<td>
+				<img src="assets/images/armor/weapon-icon.png" [hidden]="!(equippedSetBonus?.weaponCount == 0)" class="armor-icon info-opaque" alt="head">
+				<img src="assets/images/armor/weapon-icon-gold.png" [hidden]="!(equippedSetBonus?.weaponCount > 0)" class="armor-icon" alt="head">
+			</td>
+			<td>
 				<img src="assets/images/armor/head-icon.png" [hidden]="!(equippedSetBonus?.headCount == 0)" class="armor-icon info-opaque" alt="head">
 				<img src="assets/images/armor/head-icon-gold.png" [hidden]="!(equippedSetBonus?.headCount > 0)" class="armor-icon" alt="head">
 			</td>

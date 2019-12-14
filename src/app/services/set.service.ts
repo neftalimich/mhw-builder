@@ -31,13 +31,16 @@ export class SetService {
 	}
 
 	importSet() {
-		const buildId = location.hash;
+		const buildParts = location.hash.split('&');
+		const buildId = buildParts[0];
 		const buildV = buildId.substring(0, 3);
 		if (buildId.length > 0) {
 			const itemGroupRegex = /(i[.]*[^i]*)/g;
 			const itemGroups = buildId.match(itemGroupRegex);
 			let itemGroupsLenght = 0;
-			if (buildV == '#v2') {
+			if (buildV == '#v3') {
+				itemGroupsLenght = 9;
+			}else if (buildV == '#v2') {
 				itemGroupsLenght = 9;
 			} else if (buildId.substring(0, 3) == '#v1') {
 				itemGroupsLenght = 8;

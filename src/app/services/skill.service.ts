@@ -134,6 +134,7 @@ export class SkillService {
 			const setLevels = _.filter(setBonus.setLevels, sl => sl.pieces <= setCounts[setBonusName]);
 			const setParts = _.filter(setBonusParts, x => x[0].localeCompare(setBonusName) == 0);
 
+			const weaponCount = _.filter(setParts, x => x[1] == 'Weapon').length > 0 ? 1 : 0;
 			const headCount = _.filter(setParts, x => x[1] == 'Head').length > 0 ? 1 : 0;
 			const chestCount = _.filter(setParts, x => x[1] == 'Chest').length > 0 ? 1 : 0;
 			const handsCount = _.filter(setParts, x => x[1] == 'Hands').length > 0 ? 1 : 0;
@@ -179,6 +180,7 @@ export class SkillService {
 			equippedSetBonus.id = setBonus.id;
 			equippedSetBonus.name = setBonus.name;
 			equippedSetBonus.equippedCount = setCounts[setBonusName];
+			equippedSetBonus.weaponCount = weaponCount;
 			equippedSetBonus.headCount = headCount;
 			equippedSetBonus.chestCount = chestCount;
 			equippedSetBonus.handsCount = handsCount;

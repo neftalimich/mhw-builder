@@ -1119,8 +1119,18 @@ id	itemType	rarity	name	defense	fireResist	waterResist	thunderResist	iceResist	d
 1688	Hands	11	Stygian Zin Vambraces β +	160;168;184	2	-4	-4	0	4	partbreaker-2;zinogreEssence	4;3	zinogre;stygian	0
 1689	Legs	11	Stygian Zin coil β +	160;168;184	2	-4	-4	0	4	latentPower-3;earplugs-1;zinogreEssence	4;1;1	zinogre;stygian	0
 1690	Feet	11	Stygian Zin Greaves β +	160;168;184	2	-4	-4	0	4	focus-2;zinogreEssence	4;1	zinogre;stygian	0
-1691	Head	12	Banuk Helm α +	160;166;178	2	0	2	2	2	focus-2;aquaticExpert-1;anjanathDominance	4;1;1	horizon;banuk	0
-1692	Chest	12	Banuk Mail α +	160;166;178	2	0	2	2	2	marathonRunner-1;staminaSurge-1;anjanathDominance	4;3	horizon;banuk	0
-1693	Hands	12	Banuk Arms α +	160;166;178	2	0	2	2	2	focus-1;staminaSurge-1;anjanathDominance	4;3	horizon;banuk	0
-1694	Legs	12	Banuk coil α +	160;166;178	2	0	2	2	2	marathonRunner-2;aquaticExpert-1;anjanathDominance	4;1;1	horizon;banuk	0
-1695	Feet	12	Banuk Greaves α +	160;166;178	2	0	2	2	2	staminaSurge-1;resuscitate-1;anjanathDominance	4;2;2	horizon;banuk	0
+1691	Head	12	Safi'Jiiva Crown α +	168;174;186	2	1	1	1	-1	evadeWindow-2;criticalBoost-1;safijiivaSeal	2;1;1	safi;jiiva	0
+1692	Chest	12	Safi'Jiiva Chest α +	168;174;186	2	1	1	1	-1	blightResistance-2;criticalBoost-1;safijiivaSeal	3;2	safi;jiiva	0
+1693	Hands	12	Safi'Jiiva Vambraces α +	168;174;186	2	1	1	1	-1	blightResistance-1;maximumMight-1;safijiivaSeal	2;2;2	safi;jiiva	0
+1694	Legs	12	Safi'Jiiva Belt α +	168;174;186	2	1	1	1	-1	evadeWindow-2;maximumMight-1;safijiivaSeal	3	safi;jiiva	0
+1695	Feet	12	Safi'Jiiva Boots α +	168;174;186	2	1	1	1	-1	criticalBoost-1;maximumMight-1;safijiivaSeal	3;2;1	safi;jiiva	0
+1696	Head	12	Safi'Jiiva Crown β +	168;174;186	2	1	1	1	-1	evadeWindow-1;criticalBoost-1;safijiivaSeal	4;1;1	safi;jiiva	0
+1697	Chest	12	Safi'Jiiva Chest β +	168;174;186	2	1	1	1	-1	blightResistance-1;criticalBoost-1;safijiivaSeal	4;2	safi;jiiva	0
+1698	Hands	12	Safi'Jiiva Vambraces β +	168;174;186	2	1	1	1	-1	blightResistance-1;safijiivaSeal	4;2;2	safi;jiiva	0
+1699	Legs	12	Safi'Jiiva Belt β +	168;174;186	2	1	1	1	-1	evadeWindow-2;safijiivaSeal	4;1	safi;jiiva	0
+1700	Feet	12	Safi'Jiiva Boots β +	168;174;186	2	1	1	1	-1	criticalBoost-1;safijiivaSeal	4;2;1	safi;jiiva	0
+1711	Head	12	Banuk Helm α +	160;166;178	2	0	2	2	2	focus-2;aquaticExpert-1;anjanathDominance	4;1;1	horizon;banuk	0
+1712	Chest	12	Banuk Mail α +	160;166;178	2	0	2	2	2	marathonRunner-1;staminaSurge-1;anjanathDominance	4;3	horizon;banuk	0
+1713	Hands	12	Banuk Arms α +	160;166;178	2	0	2	2	2	focus-1;staminaSurge-1;anjanathDominance	4;3	horizon;banuk	0
+1714	Legs	12	Banuk coil α +	160;166;178	2	0	2	2	2	marathonRunner-2;aquaticExpert-1;anjanathDominance	4;1;1	horizon;banuk	0
+1715	Feet	12	Banuk Greaves α +	160;166;178	2	0	2	2	2	staminaSurge-1;resuscitate-1;anjanathDominance	4;2;2	horizon;banuk	0

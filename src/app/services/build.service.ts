@@ -4,8 +4,12 @@ import { Subject } from 'rxjs';
 import { ItemSlotComponent } from '../components/item-slot/item-slot.component';
 import { BuildItemModel, BuildModel } from '../models/build.model';
 import { ItemModel } from '../models/item.model';
+import { SkillReferenceModel } from '../models/skill-reference.model';
+import { SlotModel } from '../models/slot.model';
 import { UpgradeContainerModel } from '../models/upgrade-container.model';
 import { UpgradeLevelModel } from '../models/upgrade.model';
+import { AilmentType } from '../types/ailment.type';
+import { EldersealType } from '../types/elderseal.type';
 import { ElementType } from '../types/element.type';
 import { EquipmentCategoryType } from '../types/equipment-category.type';
 import { ItemType } from '../types/item.type';
@@ -20,6 +24,8 @@ export class BuildService {
 
 	private changeDetector: ChangeDetectorRef;
 	private loadingBuild = false;
+
+	private weaponItem: ItemModel;
 
 	constructor(
 		private dataService: DataService,
@@ -68,8 +74,86 @@ export class BuildService {
 		});
 	}
 
-	loadBuild(buildId: string) {
+	loadBuild(buildHash: string) {
 		this.loadingBuild = true;
+		const buildParts = buildHash.split('&');
+
+		const buildId = buildParts[0];
+
+		var urlParams = new URLSearchParams(buildHash);
+
+
+		if (urlParams.has('WeaponId') && parseInt(urlParams.get('WeaponId')) > 40000) {
+			this.weaponItem = new ItemModel;
+
+			let slots: SlotModel[] = [];
+			if (urlParams.has('WeaponSlots')) {
+				let slotParts = urlParams.get('WeaponSlots').split(';');
+
+				for (const slot of slotParts) {
+					slots.push({ level: parseInt(slot) });
+				}
+			}
+			if (urlParams.has('WeaponElement')) {
+				let elementParts = urlParams.get('WeaponElement').split('-');
+				this.weaponItem.element = ElementType[elementParts[0]];
+				this.weaponItem.elementBaseAttack = parseInt(elementParts[1]);
+				this.weaponItem.elementAttackIncreaseCapOverride = 100000;
+			}
+			if (urlParams.has('WeaponAilment')) {
+				let ailmentParts = urlParams.get('WeaponAilment').split('-');
+				this.weaponItem.ailment = AilmentType[ailmentParts[0]];
+				this.weaponItem.ailmentBaseAttack = parseInt(ailmentParts[1]);
+				this.weaponItem.ailmentAttackIncreaseCapOverride = 100000;
+			}
+			if (urlParams.has('WeaponSharpness')) {
+				let sharpnessParts = urlParams.get('WeaponSharpness').split(';');
+				let sharpnessLevels: number[] = [];
+				for (const level of sharpnessParts) {
+					sharpnessLevels.push(parseInt(level));
+				}
+				this.weaponItem.sharpnessLevelsBar = sharpnessLevels;
+			} else {
+				this.weaponItem.sharpnessLevelsBar = [11, 4, 5, 5, 6, 10, 0];
+			}
+			if (urlParams.has('WeaponElderseal')) {
+				this.weaponItem.elderseal = EldersealType[urlParams.get('WeaponElderseal')];
+			}
+			this.weaponItem.skills = [];
+			if (urlParams.has('WeaponSkills')) {
+				let skillParts = urlParams.get('WeaponSkills').split(';');
+				let skills: SkillReferenceModel[] = [];
+				for (const skill of skillParts) {
+					skills.push({
+						id: skill,
+						level: null
+					});
+				}
+				this.weaponItem.skills = skills;
+			}
+			this.weaponItem.id = parseInt(urlParams.get('WeaponId'));
+			this.weaponItem.weaponType = WeaponType[urlParams.get('WeaponType')];
+			this.weaponItem.rarity = urlParams.has('WeaponRarity') ? parseInt(urlParams.get('WeaponRarity')) : 12;
+			this.weaponItem.name = urlParams.has('WeaponName') ? urlParams.get('WeaponName') : 'Weapon ' + this.weaponItem.id;
+			this.weaponItem.baseAttack = urlParams.has('WeaponAttack') ? parseInt(urlParams.get('WeaponAttack')) : 1000;
+			this.weaponItem.baseAffinityPercent = urlParams.has('WeaponAffinity') ? parseInt(urlParams.get('WeaponAffinity')) : 0;
+			this.weaponItem.defense = [urlParams.has('WeaponDefense') ? parseInt(urlParams.get('WeaponDefense')) : 0];
+			this.weaponItem.elderseal = EldersealType['Average'];
+			this.weaponItem.sharpnessDataNeeded = false;
+
+			this.weaponItem.slots = slots;
+			this.weaponItem.monsters = ['event'];
+			this.weaponItem.tags = ['custom'];
+
+			this.weaponItem.otherData = [{ value: "", data: null }];
+			this.weaponItem.hasCustomUpgrades = true;
+			this.weaponItem.itemType = ItemType.Weapon;
+			this.weaponItem.equipmentCategory = EquipmentCategoryType.Weapon;
+			this.weaponItem.active = true;
+
+			localStorage.setItem('weapon-' + this.weaponItem.id, JSON.stringify(this.weaponItem));
+		}
+
 		const build = this.parseBuildId(buildId);
 
 		this.loadBuildSlot(build.head, this.slotService.headSlot);
@@ -217,7 +301,16 @@ export class BuildService {
 			let item: ItemModel;
 			switch (this.dataService.getEquipmentCategory(slot.slotName)) {
 				case EquipmentCategoryType.Weapon:
-					item = this.dataService.getWeapon(buildItem.itemId);
+					if (buildItem.itemId > 40000) {
+						let weaponCustom = localStorage.getItem('weapon-' + buildItem.itemId);
+						if (weaponCustom) {
+							item = JSON.parse(weaponCustom);
+						} else if (this.weaponItem) {
+							item = this.weaponItem;
+						}
+					} else {
+						item = this.dataService.getWeapon(buildItem.itemId);
+					}
 					break;
 				case EquipmentCategoryType.Armor:
 					item = this.dataService.getArmor(buildItem.itemId);
