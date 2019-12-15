@@ -117,7 +117,6 @@ export class StatService {
 						if (level.activeAffinity) { this.stats.activeAffinity += level.activeAffinity; }
 						if (level.activeWeakPointAffinity) { this.stats.weakPointAffinity += level.activeWeakPointAffinity; }
 						if (level.activeDefense) { this.stats.activeDefense += level.activeDefense; }
-						console.log(this.stats.activeAilmentAttackBuildUpPercent);
 					}
 				}
 				if (equippedSkill.mode == ModeType.Active || equippedSkill.mode == ModeType.AllSkillActive) {

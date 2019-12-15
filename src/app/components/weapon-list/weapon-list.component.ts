@@ -8,6 +8,7 @@ import { SlotService } from '../../services/slot.service';
 import { EquipmentCategoryType } from '../../types/equipment-category.type';
 import { ItemType } from '../../types/item.type';
 import { WeaponType } from '../../types/weapon.type';
+import { SkillReferenceModel } from '../../models/skill-reference.model';
 
 @Component({
 	selector: 'mhw-builder-weapon-list',
@@ -30,7 +31,8 @@ export class WeaponListComponent implements OnInit {
 	@Input()
 	set onlyIceborne(onlyIceborne: boolean) {
 		this._onlyIceborne = onlyIceborne;
-		this.search(this.searchBox.nativeElement.value);
+		this.applyIcborneFilter();
+		this.search({key:'Filter'},this.searchBox.nativeElement.value);
 		this.weaponTypeSort = '';
 	}
 	get onlyIceborne(): boolean { return this._onlyIceborne; }
@@ -87,47 +89,34 @@ export class WeaponListComponent implements OnInit {
 	loadItems() {
 		this.itemsWorld = this.items.filter(item => item.id < 1000);
 		this.itemsIceborne = this.items.filter(item => item.id >= 1000);
-		for (let i = 0; i < localStorage.length; i++) {
-			if (localStorage.getItem('weapon-' + (40000 + i)) != null) {
-				this.itemsIceborne.push(JSON.parse(localStorage.getItem('weapon-' + (40000 + i))));
-			}
-		}
 		this.resetSearchResults();
 		setTimeout(() => this.searchBox.nativeElement.focus(), 250);
 	}
 
-	search(query: string) {
-		this.applyIcborneFilter();
+	search(event, query: string) {
+		if (event && (event.key === 'FilterHard' || event.key === 'Backspace' || event.key === 'Delete')) {
+			this.applyIcborneFilter();
+		}
 
 		if (query) {
-			if (query.length > 2) {
+			if (query.length > 1) {
 				query = query.toLowerCase().trim();
 				const queryParts = query.split(' ');
 
-				if (this.items) {
+				if (this.filteredItems) {
 					for (const item of this.filteredItems) {
 						const itemName = item.name.toLowerCase();
-						const skills = this.dataService.getSkills(item.skills);
 
 						let match = _.some(queryParts, queryPart => {
 							const nameMatch = itemName.includes(queryPart);
-							const skillMatch = _.some(skills, skill => skill.name.toLowerCase().includes(queryPart));
+							const skillMatch = _.some(item.skills, skill => skill.id.toLowerCase().includes(queryPart));
 							const tagMatch = _.some(item.tags, tag => tag.toLowerCase().includes(queryPart));
 							const monstersMatch = _.some(item.monsters, tag => tag.toLowerCase().includes(queryPart));
 
 							return nameMatch || skillMatch || tagMatch || monstersMatch;
 						});
 
-						let hiddenMatch = true;
-						if (_.some(queryParts, queryPart => queryPart === 'hidden')) {
-							hiddenMatch = (item.elementHidden || item.ailmentHidden);
-
-							if (queryParts.length < 2) {
-								match = true;
-							}
-						}
-
-						if (!match || !hiddenMatch) {
+						if (!match) {
 							this.filteredItems = _.reject(this.filteredItems, i => i.name === item.name);
 						}
 					}
@@ -162,13 +151,23 @@ export class WeaponListComponent implements OnInit {
 	}
 
 	weaponFilterClicked(weaponType: WeaponType) {
-		if (!this.weaponTypeFilter || this.weaponTypeFilter != weaponType) {
+		console.log(this.weaponTypeFilter);
+		if (this.weaponTypeFilter) {
+			if (this.weaponTypeFilter == weaponType) {
+				this.weaponTypeFilter = null;
+				this.search({ key: 'FilterHard' }, this.searchBox.nativeElement.value);
+				console.log('Null Hard')
+			} else {
+				this.weaponTypeFilter = weaponType;
+				this.search({ key: 'FilterHard' }, this.searchBox.nativeElement.value);
+				console.log('Change Hard')
+			}
+		} else {
 			this.weaponTypeFilter = weaponType;
-		} else if (this.weaponTypeFilter == weaponType) {
-			this.weaponTypeFilter = null;
+			this.search({ key: 'FilterSoft' }, this.searchBox.nativeElement.value);
+			console.log('New Hard')
 		}
 
-		this.search(this.searchBox.nativeElement.value);
 		this.weaponTypeSort = '';
 	}
 

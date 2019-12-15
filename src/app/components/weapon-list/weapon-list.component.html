@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="search-container">
-		<input #searchBox (keyup)="search(searchBox.value)" placeholder="Search names, skills, monster" />
+		<input #searchBox (keyup)="search($event,searchBox.value)" placeholder="Search names, skills, monster" />
 		<button type="button" class="iceborne-button" (click)="onlyIceborne = !onlyIceborne" title="Only Iceborne">
 			<i class="fas fa-toggle-on" [hidden]="!onlyIceborne"></i>
 			<i class="fas fa-toggle-off" [hidden]="onlyIceborne"></i>
@@ -87,7 +87,7 @@
 		</button>
 	</div>
 
-	<virtual-scroller id="items-list" #itemList class="scroll-container" *ngIf="items" [items]="filteredItems" (vsUpdate)="onItemListUpdate($event)" [enableUnequalChildrenSizes]="true" [bufferAmount]="8">
+	<virtual-scroller id="items-list" #itemList class="scroll-container" *ngIf="items" [items]="filteredItems" (vsUpdate)="onItemListUpdate($event)" [enableUnequalChildrenSizes]="true" [bufferAmount]="10">
 		<div *ngFor="let item of virtualItems" class="scroll-item-container" (click)="selectItem(item)">
 			<div class="name-container">
 				<div class="name" [ngClass]="'vcolor-'+ item.color">
