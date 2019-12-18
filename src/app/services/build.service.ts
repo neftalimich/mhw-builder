@@ -367,12 +367,34 @@ export class BuildService {
 					}
 
 					// Element/Ailment
-					console.log(buildItem.elementId, buildItem.ailmentId)
-					if (buildItem.elementId!=null) {
-						item.element = this.getElementById(buildItem.elementId);
+					let weaponIndex = 0;
+					for (const types in WeaponType) {
+						if (isNaN(Number(types))) {
+							if (types == item.weaponType) {
+								break;
+							} else {
+								weaponIndex += 1;
+							}
+						}
+					}
+					if (buildItem.elementId != null) {
+						item.element = this.dataService.getElement(buildItem.elementId);
+						if (item.element != null) {
+							item.elementBaseAttack = this.dataService.getSafiElementAttack(weaponIndex);
+						}
 					}
 					if (buildItem.ailmentId != null) {
-						item.ailment = this.getAilmentById(buildItem.ailmentId);
+						item.ailment = this.dataService.getAilment(buildItem.ailmentId);
+						if (item.ailment != null) {
+							let ailmentType = 0;
+							if (item.ailment == AilmentType.Poison || item.ailment == AilmentType.Blast) {
+								ailmentType = 1;
+							}
+							item.ailmentBaseAttack = this.dataService.getSafiAilmentAttack(weaponIndex, ailmentType);
+						}
+					}
+					if (buildItem.elementId != null || buildItem.ailmentId != null) {
+						item.name += this.dataService.getSafiWeaponName(item.weaponType, item.element, item.ailment);
 					}
 
 					// Upgrades
@@ -586,13 +608,13 @@ export class BuildService {
 					}
 				}
 				if (item.element) {
-					let elementId = this.getElementId(item.element);
+					let elementId = this.dataService.getElementId(item.element);
 					result += `f${elementId}`;
 				} else {
 					result += `f${0}`;
 				}
 				if (item.ailment) {
-					let ailmentId = this.getAilmentId(item.ailment);
+					let ailmentId = this.dataService.getAilmentId(item.ailment);
 					result += `g${ailmentId}`;
 				} else {
 					result += `g${0}`;
@@ -616,93 +638,5 @@ export class BuildService {
 		return result;
 	}
 
-	private getElementId(element: ElementType):number {
-		let elementId = 0;
-		switch (element) {
-			case ElementType.Fire:
-				elementId = 1;
-				break;
-			case ElementType.Water:
-				elementId = 2;
-				break;
-			case ElementType.Thunder:
-				elementId = 3;
-				break;
-			case ElementType.Ice:
-				elementId = 4;
-				break;
-			case ElementType.Dragon:
-				elementId = 5;
-				break;
-			default:
-				break;
-		}
-		return elementId;
-	}
-
-	private getAilmentId(ailment: AilmentType):number {
-		let ailmentId = 0;
-		switch (ailment) {
-			case AilmentType.Paralysis:
-				ailmentId = 1;
-				break;
-			case AilmentType.Sleep:
-				ailmentId = 2;
-				break;
-			case AilmentType.Poison:
-				ailmentId = 3;
-				break;
-			case AilmentType.Blast:
-				ailmentId = 4;
-				break;
-			default:
-				break;
-		}
-		return ailmentId;
-	}
-
-	private getElementById(elementId: number): ElementType {
-		let element = null;
-		switch (elementId) {
-			case 1:
-				element = ElementType.Fire;
-				break;
-			case 2:
-				element = ElementType.Water;
-				break;
-			case 3:
-				element = ElementType.Thunder;
-				break;
-			case 4:
-				element = ElementType.Ice;
-				break;
-			case 5:
-				element = ElementType.Dragon;
-				break;
-			default:
-				break;
-		}
-		return element;
-	}
-
-	private getAilmentById(ailmentId: number): AilmentType {
-		let ailment = null;
-		switch (ailmentId) {
-			case 1:
-				ailment = AilmentType.Paralysis;
-				break;
-			case 2:
-				ailment = AilmentType.Sleep;
-				break;
-			case 3:
-				ailment = AilmentType.Poison;
-				break;
-			case 4:
-				ailment = AilmentType.Blast;
-				break;
-			default:
-				break;
-		}
-		return ailment;
-	}
+	
 }

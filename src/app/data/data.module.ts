@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { AmmoCapacitiesLoader } from './loaders/ammo-capacities.loader';
 import { ArmorLoader } from './loaders/armor.loader';
 import { AugmentationsLoader } from './loaders/augmentations.loader';
+import { AwakeningsLoader } from './loaders/awakenings.loader';
 import { CharmsLoader } from './loaders/charms.loader';
 import { DecorationsLoader } from './loaders/decorations.loader';
 import { KinsectsLoader } from './loaders/kinsects.loader';
@@ -33,7 +34,8 @@ import { WeaponsLoader } from './loaders/weapons.loader';
 		MelodiesLoader,
 		MelodyEffectLoader,
 		ToolsLoader,
-		UpgradesLoader
+		UpgradesLoader,
+		AwakeningsLoader
 	],
 })
 export class DataModule { }

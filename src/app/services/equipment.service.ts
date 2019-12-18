@@ -7,11 +7,11 @@ import { ItemModel } from '../models/item.model';
 import { KinsectModel } from '../models/kinsect.model';
 import { ModificationModel } from '../models/modification.model';
 import { UpgradeContainerModel } from '../models/upgrade-container.model';
-import { SkillService } from './skill.service';
-import { StatService } from './stat.service';
+import { AilmentType } from '../types/ailment.type';
 import { ElementType } from '../types/element.type';
 import { ItemType } from '../types/item.type';
-import { AilmentType } from '../types/ailment.type';
+import { SkillService } from './skill.service';
+import { StatService } from './stat.service';
 
 @Injectable()
 export class EquipmentService {
@@ -22,6 +22,7 @@ export class EquipmentService {
 	public upgradeContainer: UpgradeContainerModel;
 	public modifications: ModificationModel[];
 	public kinsect: KinsectModel;
+	private weaponName = '';
 
 	constructor(
 		private skillService: SkillService,
@@ -39,6 +40,9 @@ export class EquipmentService {
 	}
 
 	addItem(item: ItemModel, updateStats: boolean = true) {
+		if (item.itemType == ItemType.Weapon) {
+			this.weaponName = item.name;
+		}
 		this.items.push(item);
 		if (updateStats) {
 			this.updateSkills();
@@ -66,28 +70,37 @@ export class EquipmentService {
 		}
 	}
 
-	changeElement(element: ElementType, updateStats: boolean = true) {
+	changeElement(element: ElementType, elementAttack: number, updateStats: boolean = true) {
 		let weapon = this.items.find(x => x.itemType == ItemType.Weapon);
 		if (element != ElementType.None) {
 			weapon.element = element;
+			weapon.elementBaseAttack = elementAttack;
 		} else {
 			weapon.element = null;
+			weapon.elementBaseAttack = null;
 		}
 		if (updateStats) {
 			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.modifications, this.kinsect);
 		}
 	}
 
-	changeAilment(ailment: AilmentType, updateStats: boolean = true) {
+	changeAilment(ailment: AilmentType, ailmentAttack:number, updateStats: boolean = true) {
 		let weapon = this.items.find(x => x.itemType == ItemType.Weapon);
 		if (ailment != AilmentType.None) {
 			weapon.ailment = ailment;
+			weapon.ailmentBaseAttack = ailmentAttack;
 		} else {
 			weapon.ailment = null;
+			weapon.ailmentBaseAttack = null;
 		}
 		if (updateStats) {
 			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.modifications, this.kinsect);
 		}
+	}
+
+	changeWeaponName(weaponName: string) {
+		let weapon = this.items.find(x => x.itemType == ItemType.Weapon);
+		weapon.name = this.weaponName + weaponName;
 	}
 
 	addModification(modification: ModificationModel, updateStats: boolean = true) {

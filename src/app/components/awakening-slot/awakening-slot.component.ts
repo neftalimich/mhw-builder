@@ -1,7 +1,9 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { AwakeningLevelModel } from '../../models/awakening-level.model';
+import { AwakeningModel } from '../../models/awakening.model';
 import { KeyValuePair } from '../../models/common/key-value-pair.model';
 import { KinsectModel } from '../../models/kinsect.model';
+import { DataService } from '../../services/data.service';
 import { SlotService } from '../../services/slot.service';
 import { TooltipService } from '../../services/tooltip.service';
 import { AilmentType } from '../../types/ailment.type';
@@ -19,10 +21,13 @@ export class AwakeningSlotComponent implements OnInit {
 	private _weaponElement: ElementType;
 	private _weaponAilment: AilmentType;
 	private _weaponType: WeaponType;
+
+	weaponIndex = 0;
 	elementTypes = ElementType;
 	ailmentTypes = AilmentType;
 	elements: KeyValuePair<string, string>[];
 	ailments: KeyValuePair<string, string>[];
+	awakenings: AwakeningModel[];
 
 	@Input()
 	set awakeningsLevel(awakenings: AwakeningLevelModel[]) {
@@ -57,6 +62,17 @@ export class AwakeningSlotComponent implements OnInit {
 	@Input()
 	set weaponType(weaponType: WeaponType) {
 		this._weaponType = weaponType;
+
+		this.weaponIndex = 0;
+		for (const item in WeaponType) {
+			if (isNaN(Number(item))) {
+				if (item == weaponType) {
+					break;
+				} else {
+					this.weaponIndex += 1;
+				}
+			}
+		}
 	}
 	get weaponType(): WeaponType {
 		return this._weaponType;
@@ -68,8 +84,11 @@ export class AwakeningSlotComponent implements OnInit {
 
 	constructor(
 		private slotService: SlotService,
+		private dataService: DataService,
 		private tooltipService: TooltipService
-	) { }
+	) {
+		this.awakenings = dataService.getAwakenings();
+	}
 
 	ngOnInit(): void {
 		this.elements = [];
@@ -103,20 +122,26 @@ export class AwakeningSlotComponent implements OnInit {
 	}
 
 	selectElement(selectedElement: ElementType) {
-		console.log(selectedElement);
 		this.weaponElement = selectedElement;
-		this.slotService.selectWeaponElement(selectedElement);
-		//this.kinsect.element = selectedElement;
-		//this.slotService.selectAwakeningSlot(this);
-		//this.slotService.selectKinsect(this.kinsect);
+		let elementAttack = this.dataService.getSafiElementAttack(this.weaponIndex);
+		this.changeWeaponName();
+		this.slotService.selectWeaponElement(selectedElement, elementAttack);
 	}
 	selectAilment(selectedAilment: AilmentType) {
 		this.weaponAilment = selectedAilment;
-		this.slotService.selectWeaponAilment(selectedAilment);
-		//this.kinsect.element = selectedElement;
-		//this.slotService.selectAwakeningSlot(this);
-		//this.slotService.selectKinsect(this.kinsect);
+		let ailmentType = 0;
+		if (selectedAilment == AilmentType.Poison || selectedAilment == AilmentType.Blast) {
+			ailmentType = 1;
+		}
+		let ailmentAttack = this.dataService.getSafiAilmentAttack(this.weaponIndex, ailmentType);
+		this.changeWeaponName();
+		this.slotService.selectWeaponAilment(selectedAilment, ailmentAttack);
 	}
+
+	private changeWeaponName() {
+		this.slotService.changeWeaponName(this.dataService.getSafiWeaponName(this.weaponType, this.weaponElement, this.weaponAilment));
+	}
+
 	selectAwakeningType(selectedAwakening: any, awakening: AwakeningLevelModel) {
 		awakening.id = selectedAwakening.id;
 		awakening.type = selectedAwakening.type;

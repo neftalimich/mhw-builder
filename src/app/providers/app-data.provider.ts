@@ -3,6 +3,7 @@ import { forkJoin, Observable, Observer } from 'rxjs';
 import { AmmoCapacitiesLoader } from '../data/loaders/ammo-capacities.loader';
 import { ArmorLoader } from '../data/loaders/armor.loader';
 import { AugmentationsLoader } from '../data/loaders/augmentations.loader';
+import { AwakeningsLoader } from '../data/loaders/awakenings.loader';
 import { CharmsLoader } from '../data/loaders/charms.loader';
 import { DecorationsLoader } from '../data/loaders/decorations.loader';
 import { KinsectsLoader } from '../data/loaders/kinsects.loader';
@@ -38,7 +39,8 @@ export class AppDataProvider {
 		private melodiesLoader: MelodiesLoader,
 		private melodyEffectLoader: MelodyEffectLoader,
 		private toolsLoader: ToolsLoader,
-		private upgradesLoader: UpgradesLoader
+		private upgradesLoader: UpgradesLoader,
+		private awakeningsLoader: AwakeningsLoader
 	) {
 		this.appData = new AppDataModel();
 	}
@@ -61,7 +63,8 @@ export class AppDataProvider {
 				this.melodiesLoader.load('melodies.tsv', false),
 				this.melodyEffectLoader.load('melody-effect.tsv', false),
 				this.toolsLoader.load('tools.tsv', false),
-				this.upgradesLoader.load('upgrades.json', false)
+				this.upgradesLoader.load('upgrades.json', false),
+				this.awakeningsLoader.load('awakenings.json', false),
 			).subscribe(results => {
 				this.appData.weapons = results[0];
 				this.appData.armors = results[1];
@@ -79,6 +82,7 @@ export class AppDataProvider {
 				this.appData.melodyEffect = results[13];
 				this.appData.tools = results[14];
 				this.appData.upgrades = results[15];
+				this.appData.awakenings = results[16];
 
 				observer.next(true);
 				observer.complete();

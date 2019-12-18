@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import * as _ from 'lodash';
 import { AmmoCapacitiesModel } from '../models/ammo-capacities.model';
 import { AugmentationModel } from '../models/augmentation.model';
+import { AwakeningModel } from '../models/awakening.model';
 import { DecorationModel } from '../models/decoration.model';
 import { ItemModel } from '../models/item.model';
 import { KinsectModel } from '../models/kinsect.model';
@@ -18,6 +19,8 @@ import { DamageType } from '../types/damage.type';
 import { EquipmentCategoryType } from '../types/equipment-category.type';
 import { ItemType } from '../types/item.type';
 import { WeaponType } from '../types/weapon.type';
+import { ElementType } from '../types/element.type';
+import { AilmentType } from '../types/ailment.type';
 
 @Injectable()
 export class DataService {
@@ -137,6 +140,150 @@ export class DataService {
 		return this.appDataProvider.appData.upgrades;
 	}
 
+	getAwakenings(): AwakeningModel[] {
+		return this.appDataProvider.appData.awakenings;
+	}
+
+	getSafiElementAttack(weaponIndex:number): number {
+		let elementAttack = 0;
+		let elementAwakening: AwakeningModel = this.appDataProvider.appData.awakenings.find(x => x.id == 6);
+		elementAttack = elementAwakening.safiElements[weaponIndex];
+		return elementAttack;
+	}
+
+	getSafiAilmentAttack(weaponIndex: number, ailmentType: number): number {
+		let ailmentAttack = 0;
+		let ailmentAwakening = this.appDataProvider.appData.awakenings.find(x => x.id == 5);
+		ailmentAttack = ailmentAwakening.safiAilments[weaponIndex][ailmentType];
+		return ailmentAttack;
+	}
+
+	getSafiElementName(element: ElementType):string {
+		let elementName = '';
+		switch (element) {
+			case ElementType.Fire:
+				elementName = 'Hell';
+				break;
+			case ElementType.Water:
+				elementName = 'Aqua';
+				break;
+			case ElementType.Thunder:
+				elementName = 'Bolt';
+				break;
+			case ElementType.Ice:
+				elementName = 'Frost';
+				break;
+			case ElementType.Dragon:
+				elementName = 'Draks';
+				break;
+			default:
+				break;
+		}
+		return elementName;
+	}
+
+	getSafiAilmentName(ailment: AilmentType):string {
+		let ailmentName = '';
+		switch (ailment) {
+			case AilmentType.Paralysis:
+				ailmentName = 'Bind';
+				break;
+			case AilmentType.Sleep:
+				ailmentName = 'Dream';
+				break;
+			case AilmentType.Poison:
+				ailmentName = 'Venom';
+				break;
+			case AilmentType.Blast:
+				ailmentName = 'Shatter';
+				break;
+			default:
+				break;
+		}
+		return ailmentName;
+	}
+
+	getSafiName(weaponType: WeaponType):string {
+		let name = '';
+		switch (weaponType) {
+			case WeaponType.GreatSword:
+				name = 'splitter';
+				break;
+			case WeaponType.LongSword:
+				name = 'blade';
+				break;
+			case WeaponType.SwordAndShield:
+				name = 'fang';
+				break;
+			case WeaponType.DualBlades:
+				name = 'claws';
+				break;
+			case WeaponType.Hammer:
+				name = 'crusher';
+				break;
+			case WeaponType.HuntingHorn:
+				name = 'horn';
+				break;
+			case WeaponType.Lance:
+				name = 'snout';
+				break;
+			case WeaponType.Gunlance:
+				name = 'buster';
+				break;
+			case WeaponType.SwitchAxe:
+				name = 'axe';
+				break;
+			case WeaponType.ChargeBlade:
+				name = 'shield';
+				break;
+			case WeaponType.InsectGlaive:
+				name = 'spear';
+				break;
+			case WeaponType.LightBowgun:
+				name = 'shot';
+				break;
+			case WeaponType.HeavyBowgun:
+				name = 'cannon';
+				break;
+			case WeaponType.Bow:
+				name = 'bow';
+				break;
+			default:
+				break;
+		}
+		return name;
+	}
+
+	getSafiWeaponName(weaponType: WeaponType, weaponElement: ElementType, weaponAilment: AilmentType):string {
+		let weaponName = ' ';
+
+		let safiName = this.getSafiName(weaponType);
+		let elementName = '';
+
+		if (weaponElement != ElementType.None) {
+			elementName = this.getSafiElementName(weaponElement);
+		}
+
+		let ailmentName = '';
+
+		if (weaponAilment != AilmentType.None) {
+			ailmentName = this.getSafiAilmentName(weaponAilment);
+		}
+
+		if (elementName != '' || ailmentName != '') {
+			if (ailmentName == '') {
+				weaponName += elementName + safiName;
+			} else if (elementName == '') {
+				weaponName += ailmentName + safiName;
+			} else {
+				weaponName += elementName + safiName + '/' + ailmentName + safiName;
+			}
+		} else {
+			weaponName += safiName;
+		}
+		return weaponName;
+	}
+
 	getModifications(): ModificationModel[] {
 		return this.appDataProvider.appData.modifications;
 	}
@@ -202,6 +349,97 @@ export class DataService {
 			default:
 				return null;
 		}
+	}
+
+	getElementId(element: ElementType): number {
+		let elementId = 0;
+		switch (element) {
+			case ElementType.Fire:
+				elementId = 1;
+				break;
+			case ElementType.Water:
+				elementId = 2;
+				break;
+			case ElementType.Thunder:
+				elementId = 3;
+				break;
+			case ElementType.Ice:
+				elementId = 4;
+				break;
+			case ElementType.Dragon:
+				elementId = 5;
+				break;
+			default:
+				break;
+		}
+		return elementId;
+	}
+
+	getAilmentId(ailment: AilmentType): number {
+		let ailmentId = 0;
+		switch (ailment) {
+			case AilmentType.Paralysis:
+				ailmentId = 1;
+				break;
+			case AilmentType.Sleep:
+				ailmentId = 2;
+				break;
+			case AilmentType.Poison:
+				ailmentId = 3;
+				break;
+			case AilmentType.Blast:
+				ailmentId = 4;
+				break;
+			default:
+				break;
+		}
+		return ailmentId;
+	}
+
+	getElement(elementId: number): ElementType {
+		let element = null;
+		switch (elementId) {
+			case 1:
+				element = ElementType.Fire;
+				break;
+			case 2:
+				element = ElementType.Water;
+				break;
+			case 3:
+				element = ElementType.Thunder;
+				break;
+			case 4:
+				element = ElementType.Ice;
+				break;
+			case 5:
+				element = ElementType.Dragon;
+				break;
+			default:
+				break;
+		}
+		return element;
+	}
+
+	getAilment(ailmentId: number): AilmentType {
+		let ailment = null;
+		let ailmentAttack = 0;
+		switch (ailmentId) {
+			case 1:
+				ailment = AilmentType.Paralysis;
+				break;
+			case 2:
+				ailment = AilmentType.Sleep;
+				break;
+			case 3:
+				ailment = AilmentType.Poison;
+				break;
+			case 4:
+				ailment = AilmentType.Blast;
+				break;
+			default:
+				break;
+		}
+		return ailment;
 	}
 
 	getAmmoCapacities(weaponId: number): AmmoCapacitiesModel {

@@ -1,5 +1,6 @@
 import { AmmoCapacitiesModel } from './ammo-capacities.model';
 import { AugmentationModel } from './augmentation.model';
+import { AwakeningModel } from './awakening.model';
 import { DecorationModel } from './decoration.model';
 import { ItemModel } from './item.model';
 import { KinsectModel } from './kinsect.model';
@@ -29,6 +30,7 @@ export class AppDataModel {
 	melodies: MelodiesModel[];
 	melodyEffect: MelodyEffectModel[];
 	upgrades: UpgradeModel[];
+	awakenings: AwakeningModel[];
 
 	constructor() {
 		this.weaponModifiers = new Array<WeaponModifierModel>();
@@ -47,5 +49,6 @@ export class AppDataModel {
 		this.melodyEffect = new Array<MelodyEffectModel>();
 		this.tools = new Array<ItemModel>();
 		this.upgrades = new Array<UpgradeModel>();
+		this.awakenings = new Array<AwakeningModel>();
 	}
 }

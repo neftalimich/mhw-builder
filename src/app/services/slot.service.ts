@@ -445,15 +445,20 @@ export class SlotService {
 		this.equipmentService.updateItemLevel();
 	}
 
-	selectWeaponAilment(ailment: AilmentType) {
-		this.equipmentService.changeAilment(ailment);
+	selectWeaponElement(element: ElementType, elementAttack: number) {
+		this.equipmentService.changeElement(element, elementAttack);
+		this.weaponElementSelected$.next(element);
+	}
+
+	selectWeaponAilment(ailment: AilmentType, ailmentAttack: number) {
+		this.equipmentService.changeAilment(ailment, ailmentAttack);
 		this.weaponAilmentSelected$.next(ailment);
 	}
 
-	selectWeaponElement(element: ElementType) {
-		this.equipmentService.changeElement(element);
-		this.weaponElementSelected$.next(element);
+	changeWeaponName(weaponName: string) {
+		this.equipmentService.changeWeaponName(weaponName);
 	}
+
 	selectWeaponSkill() {
 
 	}
