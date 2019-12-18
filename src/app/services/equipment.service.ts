@@ -9,6 +9,9 @@ import { ModificationModel } from '../models/modification.model';
 import { UpgradeContainerModel } from '../models/upgrade-container.model';
 import { SkillService } from './skill.service';
 import { StatService } from './stat.service';
+import { ElementType } from '../types/element.type';
+import { ItemType } from '../types/item.type';
+import { AilmentType } from '../types/ailment.type';
 
 @Injectable()
 export class EquipmentService {
@@ -55,8 +58,33 @@ export class EquipmentService {
 			this.updateSkills();
 		}
 	}
+
 	addUpgrade(upgradeContainer: UpgradeContainerModel, updateStats: boolean = true) {
 		this.upgradeContainer = upgradeContainer;
+		if (updateStats) {
+			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.modifications, this.kinsect);
+		}
+	}
+
+	changeElement(element: ElementType, updateStats: boolean = true) {
+		let weapon = this.items.find(x => x.itemType == ItemType.Weapon);
+		if (element != ElementType.None) {
+			weapon.element = element;
+		} else {
+			weapon.element = null;
+		}
+		if (updateStats) {
+			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.modifications, this.kinsect);
+		}
+	}
+
+	changeAilment(ailment: AilmentType, updateStats: boolean = true) {
+		let weapon = this.items.find(x => x.itemType == ItemType.Weapon);
+		if (ailment != AilmentType.None) {
+			weapon.ailment = ailment;
+		} else {
+			weapon.ailment = null;
+		}
 		if (updateStats) {
 			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.modifications, this.kinsect);
 		}

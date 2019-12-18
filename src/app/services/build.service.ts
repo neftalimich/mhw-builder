@@ -72,6 +72,14 @@ export class BuildService {
 		this.slotService.itemLevelChanged$.subscribe(() => {
 			if (!this.loadingBuild) { this.updateBuildId(); }
 		});
+
+		this.slotService.weaponElementSelected$.subscribe(() => {
+			if (!this.loadingBuild) { this.updateBuildId(); }
+		});
+
+		this.slotService.weaponAilmentSelected$.subscribe(() => {
+			if (!this.loadingBuild) { this.updateBuildId(); }
+		});
 	}
 
 	loadBuild(buildHash: string) {
@@ -144,7 +152,7 @@ export class BuildService {
 			this.weaponItem.tags = ['custom'];
 
 			this.weaponItem.otherData = [{ value: '', data: null }];
-			this.weaponItem.hasCustomUpgrades = true;
+			this.weaponItem.upgradeType = 2;
 			this.weaponItem.itemType = ItemType.Weapon;
 			this.weaponItem.equipmentCategory = EquipmentCategoryType.Weapon;
 			this.weaponItem.active = true;
@@ -177,8 +185,10 @@ export class BuildService {
 		const upgRegex = /(?<=u)([\d]+)/g;
 		const custRegex = /(?<=c)([\d]+)/g;
 		const kinsectRegex = /(?<=k)([\d]+)/g;
+		const kinsectElementRegex = /(?<=e)([\d]+)/g;
+		const elementRegex = /(?<=f)([\d]+)/g;
+		const ailmentRegex = /(?<=g)([\d]+)/g;
 		const modRegex = /(?<=m)([\d]+)/g;
-		const elementRegex = /(?<=e)([\d]+)/g;
 		const levelRegex = /(?<=l)([\d]+)/g;
 
 		const build = new BuildModel();
@@ -236,6 +246,15 @@ export class BuildService {
 				}
 			}
 
+			const element = itemGroup.match(elementRegex);
+			if (element) {
+				buildItem.elementId = parseInt(element[0], 10);
+			}
+			const ailment = itemGroup.match(ailmentRegex);
+			if (ailment) {
+				buildItem.ailmentId = parseInt(ailment[0], 10);
+			}
+
 			const mods = itemGroup.match(modRegex);
 			if (mods) {
 				buildItem.modificationIds = [];
@@ -249,9 +268,9 @@ export class BuildService {
 				buildItem.kinsectId = parseInt(kinsect[0], 10);
 			}
 
-			const element = itemGroup.match(elementRegex);
-			if (element) {
-				buildItem.kinsectElementId = parseInt(element[0], 10);
+			const kinsectElement = itemGroup.match(kinsectElementRegex);
+			if (kinsectElement) {
+				buildItem.kinsectElementId = parseInt(kinsectElement[0], 10);
 			}
 
 			const level = itemGroup.match(levelRegex);
@@ -347,10 +366,20 @@ export class BuildService {
 						}
 					}
 
+					// Element/Ailment
+					console.log(buildItem.elementId, buildItem.ailmentId)
+					if (buildItem.elementId!=null) {
+						item.element = this.getElementById(buildItem.elementId);
+					}
+					if (buildItem.ailmentId != null) {
+						item.ailment = this.getAilmentById(buildItem.ailmentId);
+					}
+
+					// Upgrades
 					if (buildItem.upgradeLevels && slot.upgradeSlot) {
 						const upgrades = this.dataService.getUpgrades();
 						const upgradeContainer = new UpgradeContainerModel();
-						upgradeContainer.hasCustomUpgrades = item.hasCustomUpgrades;
+						upgradeContainer.hasCustomUpgrades = item.upgradeType == 1;
 						upgradeContainer.weaponType = item.weaponType;
 						if (item.rarity == 10) {
 							upgradeContainer.slots = 10;
@@ -556,6 +585,18 @@ export class BuildService {
 						result += `e${elementIndex}`;
 					}
 				}
+				if (item.element) {
+					let elementId = this.getElementId(item.element);
+					result += `f${elementId}`;
+				} else {
+					result += `f${0}`;
+				}
+				if (item.ailment) {
+					let ailmentId = this.getAilmentId(item.ailment);
+					result += `g${ailmentId}`;
+				} else {
+					result += `g${0}`;
+				}
 			}
 
 			if (item.slots) {
@@ -573,5 +614,95 @@ export class BuildService {
 		}
 
 		return result;
+	}
+
+	private getElementId(element: ElementType):number {
+		let elementId = 0;
+		switch (element) {
+			case ElementType.Fire:
+				elementId = 1;
+				break;
+			case ElementType.Water:
+				elementId = 2;
+				break;
+			case ElementType.Thunder:
+				elementId = 3;
+				break;
+			case ElementType.Ice:
+				elementId = 4;
+				break;
+			case ElementType.Dragon:
+				elementId = 5;
+				break;
+			default:
+				break;
+		}
+		return elementId;
+	}
+
+	private getAilmentId(ailment: AilmentType):number {
+		let ailmentId = 0;
+		switch (ailment) {
+			case AilmentType.Paralysis:
+				ailmentId = 1;
+				break;
+			case AilmentType.Sleep:
+				ailmentId = 2;
+				break;
+			case AilmentType.Poison:
+				ailmentId = 3;
+				break;
+			case AilmentType.Blast:
+				ailmentId = 4;
+				break;
+			default:
+				break;
+		}
+		return ailmentId;
+	}
+
+	private getElementById(elementId: number): ElementType {
+		let element = null;
+		switch (elementId) {
+			case 1:
+				element = ElementType.Fire;
+				break;
+			case 2:
+				element = ElementType.Water;
+				break;
+			case 3:
+				element = ElementType.Thunder;
+				break;
+			case 4:
+				element = ElementType.Ice;
+				break;
+			case 5:
+				element = ElementType.Dragon;
+				break;
+			default:
+				break;
+		}
+		return element;
+	}
+
+	private getAilmentById(ailmentId: number): AilmentType {
+		let ailment = null;
+		switch (ailmentId) {
+			case 1:
+				ailment = AilmentType.Paralysis;
+				break;
+			case 2:
+				ailment = AilmentType.Sleep;
+				break;
+			case 3:
+				ailment = AilmentType.Poison;
+				break;
+			case 4:
+				ailment = AilmentType.Blast;
+				break;
+			default:
+				break;
+		}
+		return ailment;
 	}
 }

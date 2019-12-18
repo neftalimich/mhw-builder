@@ -36,7 +36,7 @@ export class ItemModel {
 	elementAttackIncreaseCapOverride: number;
 	elderseal?: EldersealType;
 	otherData?: OtherDataModel[];
-	hasCustomUpgrades?: boolean;
+	upgradeType?: number;
 	ammoCapacities?: AmmoCapacitiesModel;
 	melodies?: MelodiesModel;
 
@@ -54,7 +54,7 @@ export class ItemModel {
 
 	monsters?: string[];
 	tags?: string[];
-	color: number;
+	vColor: number;
 
 	equippedLevel?: number;
 	active: boolean;

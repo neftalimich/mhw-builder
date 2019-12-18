@@ -8,12 +8,15 @@ import { KinsectSlotComponent } from '../components/kinsect-slot/kinsect-slot.co
 import { ModificationSlotComponent } from '../components/modification-slot/modification-slot.component';
 import { UpgradeSlotComponent } from '../components/upagrade-slot/upgrade-slot.component';
 import { AugmentationModel } from '../models/augmentation.model';
+import { AwakeningLevelModel } from '../models/awakening-level.model';
 import { DecorationModel } from '../models/decoration.model';
 import { ItemModel } from '../models/item.model';
 import { KinsectModel } from '../models/kinsect.model';
 import { ModificationModel } from '../models/modification.model';
 import { SlotEventModel } from '../models/slot-event.model';
 import { UpgradeContainerModel } from '../models/upgrade-container.model';
+import { AilmentType } from '../types/ailment.type';
+import { ElementType } from '../types/element.type';
 import { EquipmentCategoryType } from '../types/equipment-category.type';
 import { ItemType } from '../types/item.type';
 import { WeaponType } from '../types/weapon.type';
@@ -35,6 +38,9 @@ export class SlotService {
 	public itemActiveChanged$ = new Subject();
 	public weaponSlotSelected$ = new Subject();
 	public armorSlotSelected$ = new Subject();
+
+	public weaponElementSelected$ = new Subject<ElementType>();
+	public weaponAilmentSelected$ = new Subject<AilmentType>();
 
 	weaponSlot: ItemSlotComponent;
 	headSlot: ItemSlotComponent;
@@ -253,7 +259,7 @@ export class SlotService {
 				}
 
 				this.selectedItemSlot.upgradeContainer = new UpgradeContainerModel();
-				this.selectedItemSlot.upgradeContainer.hasCustomUpgrades = item.hasCustomUpgrades ? true : false;
+				this.selectedItemSlot.upgradeContainer.hasCustomUpgrades = item.upgradeType == 1;
 				this.selectedItemSlot.upgradeContainer.weaponType = item.weaponType;
 
 				if (item.rarity == 6) {
@@ -277,6 +283,16 @@ export class SlotService {
 					this.selectedItemSlot.upgradeContainer.slots = 8;
 				} else if (item.rarity == 12) {
 					this.selectedItemSlot.upgradeContainer.slots = 6;
+				}
+
+				if (item.upgradeType == 2) {
+					this.selectedItemSlot.awakeningsLevel = [
+						new AwakeningLevelModel(),
+						new AwakeningLevelModel(),
+						new AwakeningLevelModel(),
+						new AwakeningLevelModel(),
+						new AwakeningLevelModel()
+					];
 				}
 
 				this.selectedItemSlot.kinsect = null;
@@ -427,6 +443,19 @@ export class SlotService {
 	updateItemLevel() {
 		this.itemLevelChanged$.next();
 		this.equipmentService.updateItemLevel();
+	}
+
+	selectWeaponAilment(ailment: AilmentType) {
+		this.equipmentService.changeAilment(ailment);
+		this.weaponAilmentSelected$.next(ailment);
+	}
+
+	selectWeaponElement(element: ElementType) {
+		this.equipmentService.changeElement(element);
+		this.weaponElementSelected$.next(element);
+	}
+	selectWeaponSkill() {
+
 	}
 
 	activeItemTool(itemType: ItemType, active: boolean) {

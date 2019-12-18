@@ -46,15 +46,17 @@ export class UpgradesListComponent implements OnInit {
 
 			this.customUpgrades = [];
 			for (const cUpg of this.upgrades) {
-				const levels = cUpg.WeaponCustomUpgrades[this.weaponIndex];
-				const maximum = levels.reduce((acumulator, currentValue) => acumulator + currentValue, 0);
-				if (maximum > 0) {
-					this.customUpgrades.push({
-						id: cUpg.id,
-						type: cUpg.type,
-						maximum: maximum,
-						values: cUpg.WeaponCustomUpgrades[this.weaponIndex]
-					});
+				if (cUpg.WeaponCustomUpgrades) {
+					const levels = cUpg.WeaponCustomUpgrades[this.weaponIndex];
+					const maximum = levels.reduce((acumulator, currentValue) => acumulator + currentValue, 0);
+					if (maximum > 0) {
+						this.customUpgrades.push({
+							id: cUpg.id,
+							type: cUpg.type,
+							maximum: maximum,
+							values: cUpg.WeaponCustomUpgrades[this.weaponIndex]
+						});
+					}
 				}
 			}
 

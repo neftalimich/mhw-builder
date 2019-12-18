@@ -13,10 +13,10 @@ import { SetBonusesLoader } from '../data/loaders/set-bonuses.loader';
 import { SharpnessModifiersLoader } from '../data/loaders/sharpness-modifiers.loader';
 import { SkillsLoader } from '../data/loaders/skills.loader';
 import { ToolsLoader } from '../data/loaders/tools.loader';
+import { UpgradesLoader } from '../data/loaders/upgrades.loader';
 import { WeaponModifiersLoader } from '../data/loaders/weapon-modifiers.loader';
 import { WeaponsLoader } from '../data/loaders/weapons.loader';
 import { AppDataModel } from '../models/app-data.model';
-import { UpgradesLoader } from '../data/loaders/upgrades.loader';
 
 @Injectable()
 export class AppDataProvider {
@@ -61,7 +61,7 @@ export class AppDataProvider {
 				this.melodiesLoader.load('melodies.tsv', false),
 				this.melodyEffectLoader.load('melody-effect.tsv', false),
 				this.toolsLoader.load('tools.tsv', false),
-				this.upgradesLoader.load('upgrades.json', false),
+				this.upgradesLoader.load('upgrades.json', false)
 			).subscribe(results => {
 				this.appData.weapons = results[0];
 				this.appData.armors = results[1];

@@ -8,6 +8,7 @@ import { AmmoCapacitiesComponent } from './components/ammo-capacities/ammo-capac
 import { ArmorListComponent } from './components/armor-list/armor-list.component';
 import { AugmentationSlotComponent } from './components/augmentation-slot/augmentation-slot.component';
 import { AugmentationsListComponent } from './components/augmentations-list/augmentations-list.component';
+import { AwakeningSlotComponent } from './components/awakening-slot/awakening-slot.component';
 import { CalcDetailsComponent } from './components/calc-details/calc-details.component';
 import { CharmListComponent } from './components/charm-list/charm-list.component';
 import { CommonDetailsComponent } from './components/common-details/common-details.component';
@@ -71,6 +72,7 @@ import { TooltipService } from './services/tooltip.service';
 		ItemSlotComponent,
 		AugmentationSlotComponent,
 		UpgradeSlotComponent,
+		AwakeningSlotComponent,
 		ModificationSlotComponent,
 		KinsectSlotComponent,
 		DecorationSlotComponent,

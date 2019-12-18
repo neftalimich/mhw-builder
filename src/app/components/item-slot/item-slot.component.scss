@@ -99,6 +99,12 @@ $equipmentHeight: 38px;
 	grid-gap: 4px;
 }
 
+.awakening-container {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-gap: 4px;
+}
+
 .modification-container {
 	display: grid;
 	grid-template-columns: repeat(3, minmax(100px, 1fr));

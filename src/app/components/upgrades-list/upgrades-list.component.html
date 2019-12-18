@@ -11,7 +11,7 @@
 		</thead>
 		<tbody>
 			<ng-container *ngFor="let aug of upgrades; let augIndex = index">
-				<tr *ngIf="aug.levels.length > 0">
+				<tr *ngIf="aug.levels && aug.levels.length > 0">
 					<td class="border-left-blue">{{aug.type}}</td>
 					<td *ngFor="let level of aug.levels; let levelIndex = index"
 						(click)="selectUpgLevel(augIndex, levelIndex + 1)"

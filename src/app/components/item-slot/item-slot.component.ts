@@ -2,6 +2,7 @@ import { Component, Input, OnInit, QueryList, ViewChild, ViewChildren } from '@a
 import { KinsectModel } from 'src/app/models/kinsect.model';
 import { ModificationModel } from 'src/app/models/modification.model';
 import { AugmentationModel } from '../../models/augmentation.model';
+import { AwakeningLevelModel } from '../../models/awakening-level.model';
 import { ItemModel } from '../../models/item.model';
 import { UpgradeContainerModel } from '../../models/upgrade-container.model';
 import { DataService } from '../../services/data.service';
@@ -34,6 +35,7 @@ export class ItemSlotComponent implements OnInit {
 
 	public augmentations = new Array<AugmentationModel>();
 	public upgradeContainer: UpgradeContainerModel;
+	public awakeningsLevel = new Array<AwakeningLevelModel>();
 	public modifications = new Array<ModificationModel>();
 	public kinsect: KinsectModel;
 	public selected: boolean;

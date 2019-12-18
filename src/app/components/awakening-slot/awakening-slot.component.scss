@@ -1,0 +1,183 @@
+$slotHeight: 28px;
+$slotPadding: 2px;
+
+.container {
+	display: grid;
+	height: auto;
+	grid-template-rows: auto auto auto;
+	font-size: 14px;
+	cursor: pointer;
+	border-radius: 3px;
+	background-color: rgb(50,50,50);
+	padding: $slotPadding;
+
+	.elementAilment {
+		grid-row: 1;
+		display: grid;
+		height: $slotHeight;
+		grid-template-columns: 36px auto auto;
+
+		.slot-icon {
+			grid-column: 1;
+			line-height: $slotHeight;
+			width: 32px;
+			margin-left: 4px;
+			margin-top: $slotPadding;
+
+			img {
+				height: $slotHeight - $slotPadding * 2;
+				width: auto;
+			}
+		}
+
+		.element-slot {
+			grid-column: 2;
+			width: 100%;
+			height: $slotHeight;
+			background-color: rgb(41, 41, 41);
+			border-radius: 3px;
+			align-self: start;
+			margin-right: 3px;
+
+			.element {
+				$elementSize: 24px;
+				$elementSpacing: 4px;
+
+				display: flex;
+				margin: $elementSpacing;
+				height: $elementSize;
+
+				span {
+					padding: $elementSpacing;
+					line-height: $elementSize - $elementSpacing * 2;
+				}
+
+				.image-container {
+					$elementImagePadding: $elementSpacing / 2;
+
+					padding: $elementImagePadding;
+					height: $elementSize - $elementImagePadding * 2;
+					width: $elementSize - $elementImagePadding * 2;
+
+					img {
+						width: 100%;
+						height: 100%;
+					}
+				}
+			}
+		}
+
+		.ailment-slot {
+			grid-column: 3;
+			width: 100%;
+			height: $slotHeight;
+			background-color: rgb(41, 41, 41);
+			border-radius: 3px;
+			align-self: start;
+			margin-left: 3px;
+
+			.ailment {
+				$ailmentSize: 24px;
+				$ailmentSpacing: 4px;
+
+				display: flex;
+				margin: $ailmentSpacing;
+				height: $ailmentSize;
+
+				span {
+					padding: $ailmentSpacing;
+					line-height: $ailmentSize - $ailmentSpacing * 2;
+				}
+
+				.image-container {
+					$ailmentImagePadding: $ailmentSpacing / 2;
+
+					padding: $ailmentImagePadding;
+					height: $ailmentSize - $ailmentImagePadding * 2;
+					width: $ailmentSize - $ailmentImagePadding * 2;
+
+					img {
+						width: 100%;
+						height: 100%;
+					}
+				}
+			}
+		}
+	}
+
+	.skill {
+		grid-row: 2;
+		height: $slotHeight;
+		display: grid;
+		grid-template-columns: 36px auto 34px;
+
+		.slot-icon {
+			grid-column: 1;
+			line-height: $slotHeight;
+			width: 32px;
+			margin-left: 4px;
+			margin-top: $slotPadding;
+
+			img {
+				height: $slotHeight - $slotPadding * 2;
+				width: auto;
+			}
+		}
+
+		.skill-name {
+			height: $slotHeight;
+			line-height: $slotHeight;
+			margin-top: $slotPadding;
+			margin-left: 4px;
+		}
+
+		.clear-button {
+			height: $slotHeight;
+		}
+	}
+
+	.awakenings {
+		grid-row: 3;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+
+		.awakening-slot {
+			height: $slotHeight;
+			display: grid;
+			grid-template-columns: 40% 60%;
+
+			.awakening-type {
+				grid-column: 1;
+				height: $slotHeight;
+
+				.awakening {
+					$awakeningSize: 24px;
+					$awakeningSpacing: 2px;
+
+					display: flex;
+					margin: $awakeningSpacing;
+					height: $awakeningSize;
+
+					span {
+						padding: $awakeningSpacing;
+						line-height: $awakeningSize - $awakeningSpacing * 2;
+					}
+				}
+			}
+
+			.awakening-level {
+				grid-column: 2;
+				height: $slotHeight;
+				line-height: $slotHeight;
+				margin-top: $slotPadding;
+				margin-left: 2px;
+			}
+		}
+	}
+}
+
+	
+
+.selected {
+	background-color: #525252;
+}

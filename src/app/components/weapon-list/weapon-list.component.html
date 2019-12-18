@@ -93,7 +93,7 @@
 				<div class="name" [ngClass]="'vcolor-'+ item.color">
 					{{item.name}}
 				</div>
-				<div class="upgrade" *ngIf="item.hasCustomUpgrades">
+				<div class="upgrade" *ngIf="item.upgradeType==1">
 					<img src="assets/images/custom-upgrade.png" alt="upgrade" />
 				</div>
 				<div class="slots" *ngIf="item.slots.length > 0">

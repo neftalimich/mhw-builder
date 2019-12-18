@@ -1,4 +1,5 @@
 export enum AilmentType {
+	None = 'None',
 	Poison = 'Poison',
 	Paralysis = 'Paralysis',
 	Blast = 'Blast',

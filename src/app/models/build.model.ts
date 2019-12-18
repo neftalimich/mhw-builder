@@ -17,6 +17,8 @@ export class BuildItemModel {
 	decorationIds?: number[];
 	augmentationIds?: number[];
 	upgradeLevels: number[];
+	elementId?: number;
+	ailmentId?: number;
 	customLevelIds: number[];
 	level?: number;
 	modificationIds: number[];

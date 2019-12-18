@@ -63,4 +63,11 @@
 									 [itemType]="item.itemType">
 		</mhw-builder-decoration-slot>
 	</div>
+	<div class="awakening-container" *ngIf="item?.weaponType && item?.upgradeType && item?.upgradeType==2">
+		<mhw-builder-awakening-slot [awakeningsLevel]="awakeningsLevel"
+									[weaponElement]="item?.element"
+									[weaponAilment]="item?.ailment"
+									[weaponType]="item?.weaponType">
+		</mhw-builder-awakening-slot>
+	</div>
 </div>

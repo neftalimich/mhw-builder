@@ -1,0 +1,68 @@
+<div class="container" (click)="clicked()" [class.selected]="selected" (pointerenter)="setTooltipKinsect($event, kinsect)" (pointerleave)="clearTooltipKinsect()">
+	<div class="elementAilment">
+		<div class="slot-icon">EL</div>
+		<div class="element-slot" (click)="elementDropdown.toggle($event)">
+			<div class="element selected-element">
+				<div *ngIf="weaponElement && weaponElement != elementTypes.None" class="image-container">
+					<img *ngIf="weaponElement" [src]="getElementIcon(weaponElement)">
+				</div>
+				<span>{{weaponElement}}</span>
+			</div>
+			<mhw-builder-dropdown #elementDropdown>
+				<div class="element" *ngFor="let e of elements" (click)="selectElement(e.value)">
+					<div class="image-container">
+						<img *ngIf="e.value != elementTypes.None" [src]="getElementIcon(e.value)">
+					</div>
+					<span>{{e.value}}</span>
+				</div>
+			</mhw-builder-dropdown>
+		</div>
+		<div class="ailment-slot" (click)="ailmentDropdown.toggle($event)">
+			<div class="ailment selected-ailment">
+				<div *ngIf="weaponAilment && weaponAilment != ailmentTypes.None" class="image-container">
+					<img *ngIf="weaponAilment" [src]="getElementIcon(weaponAilment)">
+				</div>
+				<span>{{weaponAilment}}</span>
+			</div>
+			<mhw-builder-dropdown #ailmentDropdown>
+				<div class="ailment" *ngFor="let e of ailments" (click)="selectAilment(e.value)">
+					<div class="image-container">
+						<img *ngIf="e.value != ailmentTypes.None" [src]="getAilmentIcon(e.value)">
+					</div>
+					<span>{{e.value}}</span>
+				</div>
+			</mhw-builder-dropdown>
+		</div>
+	</div>
+	<div class="skill">
+		<div class="slot-icon">SK</div>
+		<div class="skill-name">Teostra Technique</div>
+		<button class="clear-button" (click)="clearSkillClicked($event)">
+			<i class="fas fa-times"></i>
+		</button>
+	</div>
+	<div class="awakenings">
+		<div class="awakening-slot" *ngFor="let awakening of awakenings; let i = index">
+			<div class="awakening-type" (click)="awakeningDropdown.toggle($event)">
+				<div class="awakening selected-awakening">
+					<span>{{awakening.name}}</span>
+				</div>
+				<mhw-builder-dropdown #awakeningDropdown>
+					<div class="awakening" *ngFor="let e of awakeningTypes" (click)="selectAwakeningType(e, awakening)">
+						<span>{{e.name}}</span>
+					</div>
+				</mhw-builder-dropdown>
+			</div>
+			<div class="awakening-level">
+				<!--{{awakening.level}}-->
+				<span *ngFor="let key of awakening.level | numbersArr">
+					<i class="fas fa-star c-pointer" (click)="selectAwakeningLevel(key+1,awakening)"></i>
+				</span>
+				<span *ngFor="let key of ((i==0?6:5) - awakening.level) | numbersArr">
+					<i class="far fa-star c-pointer" (click)="selectAwakeningLevel(key+1+awakening.level,awakening)"></i>
+				</span>
+
+			</div>
+		</div>
+	</div>
+</div>
