@@ -39,7 +39,7 @@ export class SkillLevelModel {
 	passiveDragonAttack: number;
 	passiveDragonAttackPercent: number;
 
-	activeBlightAttack?: number;
+	activeAilmentAttack?: number;
 	activeAilmentAttackBuildUpPercent?: number;
 	passivePoisonAttack: number;
 	passivePoisonBuildupPercent: number;

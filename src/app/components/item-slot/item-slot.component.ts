@@ -16,6 +16,7 @@ import { DecorationSlotComponent } from '../decoration-slot/decoration-slot.comp
 import { KinsectSlotComponent } from '../kinsect-slot/kinsect-slot.component';
 import { ModificationSlotComponent } from '../modification-slot/modification-slot.component';
 import { UpgradeSlotComponent } from '../upagrade-slot/upgrade-slot.component';
+import { AwakeningSlotComponent } from '../awakening-slot/awakening-slot.component';
 
 @Component({
 	selector: 'mhw-builder-item-slot',
@@ -28,6 +29,7 @@ export class ItemSlotComponent implements OnInit {
 	@ViewChildren(DecorationSlotComponent) decorationSlots: QueryList<DecorationSlotComponent>;
 	@ViewChildren(AugmentationSlotComponent) augmentationSlots: QueryList<AugmentationSlotComponent>;
 	@ViewChild(UpgradeSlotComponent, { static: false }) upgradeSlot: UpgradeSlotComponent;
+	@ViewChild(AwakeningSlotComponent, { static: false }) awakeningSlot: AwakeningSlotComponent;
 	@ViewChildren(ModificationSlotComponent) modificationSlots: QueryList<ModificationSlotComponent>;
 	@ViewChild(KinsectSlotComponent, { static: false }) kinsectSlot: KinsectSlotComponent;
 
@@ -35,7 +37,7 @@ export class ItemSlotComponent implements OnInit {
 
 	public augmentations = new Array<AugmentationModel>();
 	public upgradeContainer: UpgradeContainerModel;
-	public awakeningsLevel = new Array<AwakeningLevelModel>();
+	public awakenings = new Array<AwakeningLevelModel>();
 	public modifications = new Array<ModificationModel>();
 	public kinsect: KinsectModel;
 	public selected: boolean;

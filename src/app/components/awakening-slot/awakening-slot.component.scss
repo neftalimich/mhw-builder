@@ -1,6 +1,9 @@
 $slotHeight: 28px;
 $slotPadding: 2px;
 
+$elementSize: 24px;
+$elementSpacing: 4px;
+
 .container {
 	display: grid;
 	height: auto;
@@ -15,34 +18,18 @@ $slotPadding: 2px;
 		grid-row: 1;
 		display: grid;
 		height: $slotHeight;
-		grid-template-columns: 36px auto auto;
-
-		.slot-icon {
-			grid-column: 1;
-			line-height: $slotHeight;
-			width: 32px;
-			margin-left: 4px;
-			margin-top: $slotPadding;
-
-			img {
-				height: $slotHeight - $slotPadding * 2;
-				width: auto;
-			}
-		}
+		grid-template-columns: repeat(2,1fr);
+		padding: 2px 8px;
+		grid-gap:8px;
 
 		.element-slot {
-			grid-column: 2;
-			width: 100%;
+			grid-column: 1;
 			height: $slotHeight;
 			background-color: rgb(41, 41, 41);
 			border-radius: 3px;
 			align-self: start;
-			margin-right: 3px;
 
 			.element {
-				$elementSize: 24px;
-				$elementSpacing: 4px;
-
 				display: flex;
 				margin: $elementSpacing;
 				height: $elementSize;
@@ -68,33 +55,28 @@ $slotPadding: 2px;
 		}
 
 		.ailment-slot {
-			grid-column: 3;
-			width: 100%;
+			grid-column: 2;
 			height: $slotHeight;
 			background-color: rgb(41, 41, 41);
 			border-radius: 3px;
 			align-self: start;
-			margin-left: 3px;
 
 			.ailment {
-				$ailmentSize: 24px;
-				$ailmentSpacing: 4px;
-
 				display: flex;
-				margin: $ailmentSpacing;
-				height: $ailmentSize;
+				margin: $elementSpacing;
+				height: $elementSize;
 
 				span {
-					padding: $ailmentSpacing;
-					line-height: $ailmentSize - $ailmentSpacing * 2;
+					padding: $elementSpacing;
+					line-height: $elementSize - $elementSpacing * 2;
 				}
 
 				.image-container {
-					$ailmentImagePadding: $ailmentSpacing / 2;
+					$ailmentImagePadding: $elementSpacing / 2;
 
 					padding: $ailmentImagePadding;
-					height: $ailmentSize - $ailmentImagePadding * 2;
-					width: $ailmentSize - $ailmentImagePadding * 2;
+					height: $elementSize - $ailmentImagePadding * 2;
+					width: $elementSize - $ailmentImagePadding * 2;
 
 					img {
 						width: 100%;
@@ -105,41 +87,36 @@ $slotPadding: 2px;
 		}
 	}
 
-	.skill {
-		grid-row: 2;
-		height: $slotHeight;
-		display: grid;
-		grid-template-columns: 36px auto 34px;
-
-		.slot-icon {
-			grid-column: 1;
-			line-height: $slotHeight;
-			width: 32px;
-			margin-left: 4px;
-			margin-top: $slotPadding;
-
-			img {
-				height: $slotHeight - $slotPadding * 2;
-				width: auto;
-			}
-		}
-
-		.skill-name {
-			height: $slotHeight;
-			line-height: $slotHeight;
-			margin-top: $slotPadding;
-			margin-left: 4px;
-		}
-
-		.clear-button {
-			height: $slotHeight;
-		}
-	}
-
 	.awakenings {
-		grid-row: 3;
+		grid-row: 2;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
+		padding: 2px 8px;
+		grid-gap: 8px;
+
+		.awakening-skill {
+			height: $slotHeight;
+			display: grid;
+			grid-template-columns: auto;
+
+			.awakening-type {
+				grid-column: 1;
+				height: $slotHeight;
+				background-color: rgb(41, 41, 41);
+				border-radius: 3px;
+
+				.awakening {
+					display: flex;
+					margin: $elementSpacing;
+					height: $elementSize;
+
+					span {
+						padding: $elementSpacing;
+						line-height: $elementSize - $elementSpacing * 2;
+					}
+				}
+			}
+		}
 
 		.awakening-slot {
 			height: $slotHeight;
@@ -149,6 +126,8 @@ $slotPadding: 2px;
 			.awakening-type {
 				grid-column: 1;
 				height: $slotHeight;
+				background-color: rgb(41, 41, 41);
+				border-radius: 3px;
 
 				.awakening {
 					$awakeningSize: 24px;
@@ -169,14 +148,11 @@ $slotPadding: 2px;
 				grid-column: 2;
 				height: $slotHeight;
 				line-height: $slotHeight;
-				margin-top: $slotPadding;
-				margin-left: 2px;
+				margin-left: 4px;
 			}
 		}
 	}
 }
-
-	
 
 .selected {
 	background-color: #525252;

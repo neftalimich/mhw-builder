@@ -2669,7 +2669,7 @@
 				"description": "Elem., abnormal status, & affinity up with weapon drawn. Take damage when attacking, but can be recovered by continually attacking.",
 				"activeAffinity": 20,
 				"activeElementAttack": 80,
-				"activeAilmentAttackBuildUpPercent": 15
+				"activeAilmentAttack": 80
 			}
 		],
 		"hasActiveStats": true
@@ -2683,7 +2683,7 @@
 				"description": "Enhances attacks even more with weapo drawn. Take damage when attacking, but can be recovered by continually attacking.",
 				"activeAffinity": 40,
 				"activeElementAttack": 150,
-				"activeAilmentAttackBuildUpPercent": 25
+				"activeAilmentAttack": 120
 			}
 		],
 		"hasActiveStats": true

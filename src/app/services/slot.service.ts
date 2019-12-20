@@ -21,6 +21,7 @@ import { EquipmentCategoryType } from '../types/equipment-category.type';
 import { ItemType } from '../types/item.type';
 import { WeaponType } from '../types/weapon.type';
 import { EquipmentService } from './equipment.service';
+import { AwakeningSlotComponent } from '../components/awakening-slot/awakening-slot.component';
 
 @Injectable()
 export class SlotService {
@@ -32,6 +33,7 @@ export class SlotService {
 	public decorationSelected$ = new Subject<SlotEventModel<DecorationSlotComponent, DecorationModel>>();
 	public augmentationSelected$ = new Subject<SlotEventModel<AugmentationSlotComponent, AugmentationModel>>();
 	public upgradeSelected$ = new Subject<SlotEventModel<UpgradeSlotComponent, UpgradeContainerModel>>();
+	public awakeningSelected$ = new Subject<SlotEventModel<AwakeningSlotComponent, AwakeningLevelModel[]>>();
 	public modificationSelected$ = new Subject<SlotEventModel<ModificationSlotComponent, ModificationModel>>();
 	public kinsectSelected$ = new Subject<SlotEventModel<KinsectSlotComponent, KinsectModel>>();
 	public itemLevelChanged$ = new Subject();
@@ -39,8 +41,7 @@ export class SlotService {
 	public weaponSlotSelected$ = new Subject();
 	public armorSlotSelected$ = new Subject();
 
-	public weaponElementSelected$ = new Subject<ElementType>();
-	public weaponAilmentSelected$ = new Subject<AilmentType>();
+	public weaponModSelected$ = new Subject();
 
 	weaponSlot: ItemSlotComponent;
 	headSlot: ItemSlotComponent;
@@ -58,6 +59,7 @@ export class SlotService {
 	selectedDecorationSlot: DecorationSlotComponent;
 	selectedAugmentationSlot: AugmentationSlotComponent;
 	selectedUpgradeSlot: UpgradeSlotComponent;
+	selectedAwakeningSlot: AwakeningSlotComponent;
 	selectedModificationSlot: ModificationSlotComponent;
 	selectedKinsectSlot: KinsectSlotComponent;
 
@@ -137,6 +139,16 @@ export class SlotService {
 		if (this.selectedUpgradeSlot) {
 			this.selectedUpgradeSlot.selected = true;
 			this.anySlotSelected$.next(this.selectedUpgradeSlot);
+		}
+	}
+
+	selectAwakeningSlot(slot: AwakeningSlotComponent) {
+		this.clearSlotSelect();
+		this.selectedAwakeningSlot = slot;
+
+		if (this.selectedAwakeningSlot) {
+			this.selectedAwakeningSlot.selected = true;
+			//this.anySlotSelected$.next(this.selectedUpgradeSlot);
 		}
 	}
 
@@ -286,7 +298,7 @@ export class SlotService {
 				}
 
 				if (item.upgradeType == 2) {
-					this.selectedItemSlot.awakeningsLevel = [
+					this.selectedItemSlot.awakenings = [
 						new AwakeningLevelModel(),
 						new AwakeningLevelModel(),
 						new AwakeningLevelModel(),
@@ -447,16 +459,27 @@ export class SlotService {
 
 	selectWeaponElement(element: ElementType, elementAttack: number) {
 		this.equipmentService.changeElement(element, elementAttack);
-		this.weaponElementSelected$.next(element);
+		this.weaponModSelected$.next(element);
 	}
 
 	selectWeaponAilment(ailment: AilmentType, ailmentAttack: number) {
 		this.equipmentService.changeAilment(ailment, ailmentAttack);
-		this.weaponAilmentSelected$.next(ailment);
+		this.weaponModSelected$.next(ailment);
 	}
 
 	changeWeaponName(weaponName: string) {
 		this.equipmentService.changeWeaponName(weaponName);
+	}
+
+	selectAwakenings(awakenings: AwakeningLevelModel[]) {
+		this.equipmentService.addAwakenings(awakenings);
+		if (this.selectedAwakeningSlot) {
+			console.log("set", this.selectedAwakeningSlot);
+			this.selectedAwakeningSlot.awakenings = awakenings;
+		}
+		console.log("test",this.selectedAwakeningSlot);
+		//this.awakeningSelected$.next({ slot: this.selectedAwakeningSlot, equipment: awakenings });
+		this.weaponModSelected$.next();
 	}
 
 	selectWeaponSkill() {

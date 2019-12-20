@@ -10,6 +10,8 @@ import { AilmentType } from '../../types/ailment.type';
 import { ElementType } from '../../types/element.type';
 import { WeaponType } from '../../types/weapon.type';
 import { DropdownComponent } from '../common/dropdown/dropdown.component';
+import { AwakeningType } from '../../types/awakening.type';
+import { ItemType } from '../../types/item.type';
 
 @Component({
 	selector: 'mhw-builder-awakening-slot',
@@ -17,6 +19,8 @@ import { DropdownComponent } from '../common/dropdown/dropdown.component';
 	styleUrls: ['./awakening-slot.component.scss']
 })
 export class AwakeningSlotComponent implements OnInit {
+	slotName = ItemType.Awakening;
+
 	private _awakeningsLevel: AwakeningLevelModel[];
 	private _weaponElement: ElementType;
 	private _weaponAilment: AilmentType;
@@ -25,12 +29,18 @@ export class AwakeningSlotComponent implements OnInit {
 	weaponIndex = 0;
 	elementTypes = ElementType;
 	ailmentTypes = AilmentType;
-	elements: KeyValuePair<string, string>[];
-	ailments: KeyValuePair<string, string>[];
+	awakeningTypes = AwakeningType;
+
+	elementValues: KeyValuePair<string, string>[];
+	ailmentValues: KeyValuePair<string, string>[];
+	awakeningValues: KeyValuePair<number, string>[];
+
 	awakenings: AwakeningModel[];
+	awakeningsData: AwakeningModel[];
 
 	@Input()
 	set awakeningsLevel(awakenings: AwakeningLevelModel[]) {
+		console.log(awakenings);
 		this._awakeningsLevel = awakenings;
 	}
 	get awakeningsLevel(): AwakeningLevelModel[] {
@@ -87,17 +97,23 @@ export class AwakeningSlotComponent implements OnInit {
 		private dataService: DataService,
 		private tooltipService: TooltipService
 	) {
-		this.awakenings = dataService.getAwakenings();
+		this.awakeningsData = dataService.getAwakenings();
+		this.awakenings = JSON.parse(JSON.stringify(this.awakeningsData));
+		this.awakenings.pop();
 	}
 
 	ngOnInit(): void {
-		this.elements = [];
+		this.elementValues = [];
 		Object.keys(ElementType).map(key => {
-			this.elements.push({ key: key, value: key });
+			this.elementValues.push({ key: key, value: key });
 		});
-		this.ailments = [];
+		this.ailmentValues = [];
 		Object.keys(AilmentType).map(key => {
-			this.ailments.push({ key: key, value: key });
+			this.ailmentValues.push({ key: key, value: key });
+		});
+		this.awakeningValues = [];
+		Object.keys(AwakeningType).map((key, index) => {
+			this.awakeningValues.push({ key: index, value: key });
 		});
 	}
 
@@ -142,18 +158,21 @@ export class AwakeningSlotComponent implements OnInit {
 		this.slotService.changeWeaponName(this.dataService.getSafiWeaponName(this.weaponType, this.weaponElement, this.weaponAilment));
 	}
 
-	selectAwakeningType(selectedAwakening: any, awakening: AwakeningLevelModel) {
-		awakening.id = selectedAwakening.id;
-		awakening.type = selectedAwakening.type;
+	selectAwakeningType(selectedAwakening: KeyValuePair<number, string>, awakeningLevel: AwakeningLevelModel) {
+		awakeningLevel.id = selectedAwakening.key;
+		awakeningLevel.type = AwakeningType[selectedAwakening.value];
+		this.slotService.selectAwakenings(this.awakeningsLevel);
 	}
-	selectAwakeningLevel(level, awakening: AwakeningLevelModel) {
-		if (awakening.id != 0) {
-			if (awakening.level == level) {
-				awakening.level -= 1;
+
+	selectAwakeningLevel(level: number, awakeningLevel: AwakeningLevelModel) {
+		if (awakeningLevel.type != AwakeningType.None) {
+			if (awakeningLevel.level == level) {
+				awakeningLevel.level -= 1;
 			} else {
-				awakening.level = level;
+				awakeningLevel.level = level;
 			}
 		}
+		this.slotService.selectAwakenings(this.awakeningsLevel);
 	}
 
 	getElementIcon(element: ElementType): string {

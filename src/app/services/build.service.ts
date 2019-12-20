@@ -2,14 +2,12 @@ import { ChangeDetectorRef, Injectable } from '@angular/core';
 import * as _ from 'lodash';
 import { Subject } from 'rxjs';
 import { ItemSlotComponent } from '../components/item-slot/item-slot.component';
+import { AwakeningLevelModel } from '../models/awakening-level.model';
 import { BuildItemModel, BuildModel } from '../models/build.model';
 import { ItemModel } from '../models/item.model';
-import { SkillReferenceModel } from '../models/skill-reference.model';
-import { SlotModel } from '../models/slot.model';
 import { UpgradeContainerModel } from '../models/upgrade-container.model';
 import { UpgradeLevelModel } from '../models/upgrade.model';
 import { AilmentType } from '../types/ailment.type';
-import { EldersealType } from '../types/elderseal.type';
 import { ElementType } from '../types/element.type';
 import { EquipmentCategoryType } from '../types/equipment-category.type';
 import { ItemType } from '../types/item.type';
@@ -73,11 +71,7 @@ export class BuildService {
 			if (!this.loadingBuild) { this.updateBuildId(); }
 		});
 
-		this.slotService.weaponElementSelected$.subscribe(() => {
-			if (!this.loadingBuild) { this.updateBuildId(); }
-		});
-
-		this.slotService.weaponAilmentSelected$.subscribe(() => {
+		this.slotService.weaponModSelected$.subscribe(() => {
 			if (!this.loadingBuild) { this.updateBuildId(); }
 		});
 	}
@@ -87,78 +81,6 @@ export class BuildService {
 		const buildParts = buildHash.split('&');
 
 		const buildId = buildParts[0];
-
-		const urlParams = new URLSearchParams(buildHash);
-
-		if (urlParams.has('WeaponId') && parseInt(urlParams.get('WeaponId'), 10) > 40000) {
-			this.weaponItem = new ItemModel;
-
-			const slots: SlotModel[] = [];
-			if (urlParams.has('WeaponSlots')) {
-				const slotParts = urlParams.get('WeaponSlots').split(';');
-				for (const slot of slotParts) {
-					slots.push({ level: parseInt(slot, 10) });
-				}
-			}
-			if (urlParams.has('WeaponElement')) {
-				const elementParts = urlParams.get('WeaponElement').split('-');
-				this.weaponItem.element = ElementType[elementParts[0]];
-				this.weaponItem.elementBaseAttack = parseInt(elementParts[1], 10);
-				this.weaponItem.elementAttackIncreaseCapOverride = 100000;
-			}
-			if (urlParams.has('WeaponAilment')) {
-				const ailmentParts = urlParams.get('WeaponAilment').split('-');
-				this.weaponItem.ailment = AilmentType[ailmentParts[0]];
-				this.weaponItem.ailmentBaseAttack = parseInt(ailmentParts[1], 10);
-				this.weaponItem.ailmentAttackIncreaseCapOverride = 100000;
-			}
-			if (urlParams.has('WeaponSharpness')) {
-				const sharpnessParts = urlParams.get('WeaponSharpness').split(';');
-				const sharpnessLevels: number[] = [];
-				for (const level of sharpnessParts) {
-					sharpnessLevels.push(parseInt(level, 10));
-				}
-				this.weaponItem.sharpnessLevelsBar = sharpnessLevels;
-			} else {
-				this.weaponItem.sharpnessLevelsBar = [11, 4, 5, 5, 6, 10, 0];
-			}
-			if (urlParams.has('WeaponElderseal')) {
-				this.weaponItem.elderseal = EldersealType[urlParams.get('WeaponElderseal')];
-			}
-			this.weaponItem.skills = [];
-			if (urlParams.has('WeaponSkills')) {
-				const skillParts = urlParams.get('WeaponSkills').split(';');
-				const skills: SkillReferenceModel[] = [];
-				for (const skill of skillParts) {
-					skills.push({
-						id: skill,
-						level: null
-					});
-				}
-				this.weaponItem.skills = skills;
-			}
-			this.weaponItem.id = parseInt(urlParams.get('WeaponId'), 10);
-			this.weaponItem.weaponType = WeaponType[urlParams.get('WeaponType')];
-			this.weaponItem.rarity = urlParams.has('WeaponRarity') ? parseInt(urlParams.get('WeaponRarity'), 10) : 12;
-			this.weaponItem.name = urlParams.has('WeaponName') ? urlParams.get('WeaponName') : 'Weapon ' + this.weaponItem.id;
-			this.weaponItem.baseAttack = urlParams.has('WeaponAttack') ? parseInt(urlParams.get('WeaponAttack'), 10) : 1000;
-			this.weaponItem.baseAffinityPercent = urlParams.has('WeaponAffinity') ? parseInt(urlParams.get('WeaponAffinity'), 10) : 0;
-			this.weaponItem.defense = [urlParams.has('WeaponDefense') ? parseInt(urlParams.get('WeaponDefense'), 10) : 0];
-			this.weaponItem.elderseal = EldersealType['Average'];
-			this.weaponItem.sharpnessDataNeeded = false;
-
-			this.weaponItem.slots = slots;
-			this.weaponItem.monsters = ['event'];
-			this.weaponItem.tags = ['custom'];
-
-			this.weaponItem.otherData = [{ value: '', data: null }];
-			this.weaponItem.upgradeType = 2;
-			this.weaponItem.itemType = ItemType.Weapon;
-			this.weaponItem.equipmentCategory = EquipmentCategoryType.Weapon;
-			this.weaponItem.active = true;
-
-			localStorage.setItem('weapon-' + this.weaponItem.id, JSON.stringify(this.weaponItem));
-		}
 
 		const build = this.parseBuildId(buildId);
 
@@ -184,6 +106,7 @@ export class BuildService {
 		const augRegex = /(?<=a)([\d]+)/g;
 		const upgRegex = /(?<=u)([\d]+)/g;
 		const custRegex = /(?<=c)([\d]+)/g;
+		const awkRegex = /(?<=w)([\d]+)(l)([\d]+)/g;
 		const kinsectRegex = /(?<=k)([\d]+)/g;
 		const kinsectElementRegex = /(?<=e)([\d]+)/g;
 		const elementRegex = /(?<=f)([\d]+)/g;
@@ -243,6 +166,15 @@ export class BuildService {
 					buildItem.customLevelIds.push(parseInt(customs.toString().substring(4, 5), 10)); // Lv 5
 					buildItem.customLevelIds.push(parseInt(customs.toString().substring(5, 6), 10)); // Lv 6
 					buildItem.customLevelIds.push(parseInt(customs.toString().substring(6, 7), 10)); // Lv 7
+				}
+			}
+
+			const awks = itemGroup.match(awkRegex);
+			if (awks) {
+				buildItem.awakenings = [];
+				for (const awk of awks) {
+					const awkAux = awk.split('l');
+					buildItem.awakenings.push([parseInt(awkAux[0], 10), parseInt(awkAux[1], 10)]);
 				}
 			}
 
@@ -318,17 +250,7 @@ export class BuildService {
 			let item: ItemModel;
 			switch (this.dataService.getEquipmentCategory(slot.slotName)) {
 				case EquipmentCategoryType.Weapon:
-					if (buildItem.itemId > 40000) {
-						const weaponCustom = localStorage.getItem('weapon-' + buildItem.itemId);
-						if (weaponCustom) {
-							item = JSON.parse(weaponCustom);
-						} else if (this.weaponItem) {
-							item = this.weaponItem;
-							this.updateBuildId();
-						}
-					} else {
-						item = this.dataService.getWeapon(buildItem.itemId);
-					}
+					item = this.dataService.getWeapon(buildItem.itemId);
 					break;
 				case EquipmentCategoryType.Armor:
 					item = this.dataService.getArmor(buildItem.itemId);
@@ -352,21 +274,7 @@ export class BuildService {
 				this.changeDetector.detectChanges();
 
 				if (item.equipmentCategory == EquipmentCategoryType.Weapon) {
-					if (buildItem.augmentationIds) {
-						for (let i = 0; i < 9 - item.rarity; i++) {
-							const augId = buildItem.augmentationIds[i];
-							if (augId) {
-								const aug = this.dataService.getAugmentation(augId);
-								if (aug) {
-									this.slotService.selectAugmentationSlot(slot.augmentationSlots.toArray()[i]);
-									const newAug = Object.assign({}, aug);
-									this.slotService.selectAugmentation(newAug, updateStats);
-								}
-							}
-						}
-					}
-
-					// Element/Ailment
+					// -------------------- Element
 					let weaponIndex = 0;
 					for (const types in WeaponType) {
 						if (isNaN(Number(types))) {
@@ -381,8 +289,11 @@ export class BuildService {
 						item.element = this.dataService.getElement(buildItem.elementId);
 						if (item.element != null) {
 							item.elementBaseAttack = this.dataService.getSafiElementAttack(weaponIndex);
+						} else {
+							item.elementBaseAttack = null;
 						}
 					}
+					// -------------------- Ailment
 					if (buildItem.ailmentId != null) {
 						item.ailment = this.dataService.getAilment(buildItem.ailmentId);
 						if (item.ailment != null) {
@@ -391,13 +302,48 @@ export class BuildService {
 								ailmentType = 1;
 							}
 							item.ailmentBaseAttack = this.dataService.getSafiAilmentAttack(weaponIndex, ailmentType);
+						} else {
+							item.ailmentBaseAttack = null;
 						}
 					}
-					if (buildItem.elementId != null || buildItem.ailmentId != null) {
-						item.name += this.dataService.getSafiWeaponName(item.weaponType, item.element, item.ailment);
+					if (item.upgradeType==2 &&( buildItem.elementId != null || buildItem.ailmentId != null)) {
+						item.name = this.dataService.getSafiWeaponName(item.weaponType, item.element, item.ailment);
+					}
+					// -------------------- Awakenings
+					if (buildItem.awakenings != null) {
+						let awakenings: AwakeningLevelModel[] = [];
+						for (const awk of buildItem.awakenings) {
+							let awkAux = this.dataService.getAwakening(awk[0]);
+							awakenings.push({
+								id: awkAux.id,
+								type: awkAux.type,
+								level: awk[1]
+							});
+						}
+						slot.awakeningSlot.awakenings = awakenings;
+						this.slotService.selectAwakeningSlot(slot.awakeningSlot);
+						this.slotService.selectAwakenings(awakenings);
+						console.log("slot", awakenings, slot);
 					}
 
-					// Upgrades
+					// --------------------
+
+					// -------------------- Augmentations
+					if (buildItem.augmentationIds) {
+						for (let i = 0; i < 9 - item.rarity; i++) {
+							const augId = buildItem.augmentationIds[i];
+							if (augId) {
+								const aug = this.dataService.getAugmentation(augId);
+								if (aug) {
+									this.slotService.selectAugmentationSlot(slot.augmentationSlots.toArray()[i]);
+									const newAug = Object.assign({}, aug);
+									this.slotService.selectAugmentation(newAug, updateStats);
+								}
+							}
+						}
+					}
+
+					// -------------------- Upgrades
 					if (buildItem.upgradeLevels && slot.upgradeSlot) {
 						const upgrades = this.dataService.getUpgrades();
 						const upgradeContainer = new UpgradeContainerModel();
@@ -457,7 +403,7 @@ export class BuildService {
 						const newUpg = JSON.parse(JSON.stringify(upgradeContainer));
 						this.slotService.selectUpgradeContainer(newUpg, updateStats);
 					}
-
+					// --------------------
 					switch (item.weaponType) {
 						case WeaponType.InsectGlaive:
 							if (buildItem.kinsectId) {
@@ -561,11 +507,14 @@ export class BuildService {
 
 			if (item.equipmentCategory == EquipmentCategoryType.Weapon) {
 				if (item.rarity >= 6) {
+					// -------------------- Augmentations
+
 					for (const aug of this.equipmentService.augmentations) {
 						if (aug.id) {
 							result += `a${aug.id}`;
 						}
 					}
+					// -------------------- Upgrades
 					if (this.equipmentService.upgradeContainer) {
 						result += 'u';
 						for (const detail of this.equipmentService.upgradeContainer.upgradeDetails) {
@@ -582,6 +531,13 @@ export class BuildService {
 					} else {
 						result += 'u000000c0000000';
 					}
+					// -------------------- Awakenings
+					if (this.equipmentService.awakenings.length) {
+						for (const awakening of this.equipmentService.awakenings) {
+							result += `w${awakening.id}l${awakening.level}`;
+						}
+					}
+					// --------------------
 				}
 
 				for (const mod of this.equipmentService.modifications) {

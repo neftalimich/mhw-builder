@@ -12,6 +12,7 @@ import { ElementType } from '../types/element.type';
 import { ItemType } from '../types/item.type';
 import { SkillService } from './skill.service';
 import { StatService } from './stat.service';
+import { AwakeningLevelModel } from '../models/awakening-level.model';
 
 @Injectable()
 export class EquipmentService {
@@ -20,9 +21,9 @@ export class EquipmentService {
 	public decorations: DecorationModel[];
 	public augmentations: AugmentationModel[];
 	public upgradeContainer: UpgradeContainerModel;
+	public awakenings: AwakeningLevelModel[];
 	public modifications: ModificationModel[];
 	public kinsect: KinsectModel;
-	private weaponName = '';
 
 	constructor(
 		private skillService: SkillService,
@@ -31,18 +32,16 @@ export class EquipmentService {
 		this.items = [];
 		this.decorations = [];
 		this.augmentations = [];
+		this.awakenings = [];
 		this.modifications = [];
 
 		this.skillService.skillsUpdated$.subscribe(skills => {
 			this.skills = skills;
-			this.statService.update(skills, this.items, this.augmentations, this.upgradeContainer, this.modifications, this.kinsect);
+			this.statService.update(skills, this.items, this.augmentations, this.upgradeContainer, this.awakenings, this.modifications, this.kinsect);
 		});
 	}
 
 	addItem(item: ItemModel, updateStats: boolean = true) {
-		if (item.itemType == ItemType.Weapon) {
-			this.weaponName = item.name;
-		}
 		this.items.push(item);
 		if (updateStats) {
 			this.updateSkills();
@@ -66,7 +65,7 @@ export class EquipmentService {
 	addUpgrade(upgradeContainer: UpgradeContainerModel, updateStats: boolean = true) {
 		this.upgradeContainer = upgradeContainer;
 		if (updateStats) {
-			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.modifications, this.kinsect);
+			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.awakenings, this.modifications, this.kinsect);
 		}
 	}
 
@@ -80,7 +79,7 @@ export class EquipmentService {
 			weapon.elementBaseAttack = null;
 		}
 		if (updateStats) {
-			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.modifications, this.kinsect);
+			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.awakenings, this.modifications, this.kinsect);
 		}
 	}
 
@@ -94,13 +93,20 @@ export class EquipmentService {
 			weapon.ailmentBaseAttack = null;
 		}
 		if (updateStats) {
-			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.modifications, this.kinsect);
+			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.awakenings, this.modifications, this.kinsect);
 		}
 	}
 
 	changeWeaponName(weaponName: string) {
 		let weapon = this.items.find(x => x.itemType == ItemType.Weapon);
-		weapon.name = this.weaponName + weaponName;
+		weapon.name = weaponName;
+	}
+
+	addAwakenings(awakenings: AwakeningLevelModel[], updateStats: boolean = true) {
+		this.awakenings = awakenings;
+		if (awakenings.length && updateStats) {
+			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.awakenings, this.modifications, this.kinsect);
+		}
 	}
 
 	addModification(modification: ModificationModel, updateStats: boolean = true) {
@@ -115,11 +121,14 @@ export class EquipmentService {
 	addKinsect(kinsect: KinsectModel, updateStats: boolean = true) {
 		this.kinsect = kinsect;
 		if (updateStats) {
-			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.modifications, this.kinsect);
+			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.awakenings, this.modifications, this.kinsect);
 		}
 	}
 
 	removeItem(item: ItemModel) {
+		if (item && item.itemType == ItemType.Weapon) {
+			this.awakenings = [];
+		}
 		this.items = _.reject(this.items, i => i === item);
 		this.updateSkills();
 	}
@@ -157,7 +166,7 @@ export class EquipmentService {
 	}
 
 	updateSkillMode(equippedSkills: EquippedSkillModel[]) {
-		this.statService.update(equippedSkills, this.items, this.augmentations, this.upgradeContainer, this.modifications, this.kinsect);
+		this.statService.update(equippedSkills, this.items, this.augmentations, this.upgradeContainer, this.awakenings, this.modifications, this.kinsect);
 	}
 
 	private updateSkills() {

@@ -385,7 +385,7 @@ export class CalculationService {
 	private getAilmentAttack(stats: StatsModel, ailmentCalc: StatDetailModel): StatDetailModel {
 		const ailmentAttackCalc: StatDetailModel = {
 			name: 'Ailment Attack',
-			value: stats.totalAilmentAttack,
+			value: stats.totalAilmentAttack + stats.activeAilmentAttack,
 			valueColor: ailmentCalc.color,
 			icon: stats.ailment.toLowerCase() + (stats.effectiveAilmentAttack == 0 ? '-gray' : ''),
 			color: ailmentCalc.color,
@@ -404,10 +404,16 @@ export class CalculationService {
 					colorClass: 'yellow'
 				},
 				{
-					displayName: 'Active Ailment Attack Buildup',
+					displayName: 'Active Ailment Attack',
 					name: 'active',
-					value: stats.activeAilmentAttackBuildUpPercent / 100,
+					value: stats.activeAilmentAttack,
 					colorClass: 'orange'
+				},
+				{
+					displayName: 'Active Ailment Attack Buildup',
+					name: 'builup',
+					value: stats.activeAilmentAttackBuildUpPercent / 100,
+					colorClass: 'red'
 				}
 			]
 		};
@@ -421,12 +427,12 @@ export class CalculationService {
 			});
 
 			if (stats.elementAttackMultiplier) {
-				ailmentAttackCalc.calculationTemplate = `({base} × {multiplier} + {passive}) × (1 + {active}) ≈ ${stats.totalAilmentAttack}`;
+				ailmentAttackCalc.calculationTemplate = `({base} × {multiplier} + {passive} + {active}) × (1 + {buildup}) ≈ ${stats.totalAilmentAttack}`;
 			} else {
-				ailmentAttackCalc.calculationTemplate = `({base} + {passive}) × {multiplier} × (1 + {active}) ≈ ${stats.totalAilmentAttack}`;
+				ailmentAttackCalc.calculationTemplate = `({base} + {passive} + {active}) × {multiplier} × (1 + {buildup}) ≈ ${stats.totalAilmentAttack}`;
 			}
 		} else {
-			ailmentAttackCalc.calculationTemplate = `({base} + {passive}) × (1 + {active}) = ${stats.totalAilmentAttack}`;
+			ailmentAttackCalc.calculationTemplate = `({base} + {passive} + {active}) × (1 + {buildup}) = ${stats.totalAilmentAttack}`;
 		}
 
 		return ailmentAttackCalc;
@@ -622,7 +628,7 @@ export class CalculationService {
 		}
 		const trueAilmentPotential =
 			this.getAilmentAverage(
-				stats.totalAilmentAttack * (100 + stats.effectivePassiveAilmentBuildupPercent) / 100,
+				(stats.totalAilmentAttack + stats.activeAilmentAttack) * (100 + stats.effectivePassiveAilmentBuildupPercent) / 100,
 				Math.max(ailmentAffinity, 0),
 				criticalStatusModifier,
 				stats.effectiveElementalSharpnessModifier,

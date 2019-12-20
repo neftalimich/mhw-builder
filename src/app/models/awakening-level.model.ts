@@ -1,13 +1,13 @@
-import { SkillReferenceModel } from './skill-reference.model';
+import { AwakeningType } from '../types/awakening.type';
 
 export class AwakeningLevelModel {
 	id: number;
-	type: string;
+	type: AwakeningType;
 	level: number;
 
 	constructor() {
 		this.id = 0;
-		this.type = 'None';
+		this.type = AwakeningType.None;
 		this.level = 0;
 	}
 }

@@ -11,6 +11,7 @@ export enum ItemType {
 	Decoration = 'Decoration',
 	Augmentation = 'Augmentation',
 	Upgrade = 'Upgrade',
+	Awakening = 'Awakening',
 	Modification = 'Modification',
 	Kinsect = 'Kinsect'
 }

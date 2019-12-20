@@ -143,6 +143,9 @@ export class DataService {
 	getAwakenings(): AwakeningModel[] {
 		return this.appDataProvider.appData.awakenings;
 	}
+	getAwakening(id: number): AwakeningModel {
+		return _.find(this.appDataProvider.appData.awakenings, awakening => awakening.id == id);
+	}
 
 	getSafiElementAttack(weaponIndex:number): number {
 		let elementAttack = 0;
@@ -255,7 +258,7 @@ export class DataService {
 	}
 
 	getSafiWeaponName(weaponType: WeaponType, weaponElement: ElementType, weaponAilment: AilmentType):string {
-		let weaponName = ' ';
+		let weaponName = 'Safi\'s ';
 
 		let safiName = this.getSafiName(weaponType);
 		let elementName = '';

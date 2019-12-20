@@ -151,21 +151,17 @@ export class WeaponListComponent implements OnInit {
 	}
 
 	weaponFilterClicked(weaponType: WeaponType) {
-		console.log(this.weaponTypeFilter);
 		if (this.weaponTypeFilter) {
 			if (this.weaponTypeFilter == weaponType) {
 				this.weaponTypeFilter = null;
 				this.search({ key: 'FilterHard' }, this.searchBox.nativeElement.value);
-				console.log('Null Hard')
 			} else {
 				this.weaponTypeFilter = weaponType;
 				this.search({ key: 'FilterHard' }, this.searchBox.nativeElement.value);
-				console.log('Change Hard')
 			}
 		} else {
 			this.weaponTypeFilter = weaponType;
 			this.search({ key: 'FilterSoft' }, this.searchBox.nativeElement.value);
-			console.log('New Hard')
 		}
 
 		this.weaponTypeSort = '';

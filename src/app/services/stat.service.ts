@@ -18,6 +18,9 @@ import { ModeType } from '../types/mode.type';
 import { WeaponType } from '../types/weapon.type';
 import { CalculationService } from './calculation.service';
 import { DataService } from './data.service';
+import { AwakeningLevelModel } from '../models/awakening-level.model';
+import { AwakeningType } from '../types/awakening.type';
+import { AwakeningModel } from '../models/awakening.model';
 
 @Injectable()
 export class StatService {
@@ -27,13 +30,23 @@ export class StatService {
 
 	stats = new StatsModel();
 
+	awakeningsData: AwakeningModel[] = [];
+
 	constructor(
 		private dataService: DataService,
 		private calcService: CalculationService
-	) { }
+	) {
+		this.awakeningsData = this.dataService.getAwakenings();
+	}
 
-	update(skills: EquippedSkillModel[], items: ItemModel[], augmentations: AugmentationModel[], upgradeContainer: UpgradeContainerModel, modifications: ModificationModel[], kinsect: KinsectModel) {
+	update(skills: EquippedSkillModel[], items: ItemModel[], augmentations: AugmentationModel[], upgradeContainer: UpgradeContainerModel, awakenings: AwakeningLevelModel[], modifications: ModificationModel[], kinsect: KinsectModel) {
 		this.stats = new StatsModel();
+		// ---------------------------- Awakenings
+		let weaponItem = items.find(x => x.itemType == ItemType.Weapon);
+		if (weaponItem && awakenings.length) {
+			this.updateWeaponAwakenings(weaponItem, awakenings);
+		}
+		// ----------------------------
 		this.updateItemStats(items);
 		this.updateSkillStats(skills);
 		this.updateAugmentations(augmentations);
@@ -66,10 +79,72 @@ export class StatService {
 		this.calcService.updateCalcs(this.stats);
 	}
 
+	private updateWeaponAwakenings(weapon: ItemModel, awakenings: AwakeningLevelModel[]) {
+		//console.log(weapon, awakenings);
+		let weaponIndex = 0;
+		for (const type in WeaponType) {
+			if (isNaN(Number(type))) {
+				if (type == weapon.weaponType) {
+					break;
+				} else {
+					weaponIndex += 1;
+				}
+			}
+		}
+		let weaponModifier = this.dataService.getWeaponModifier(weapon.weaponType).attackModifier;
+
+		//let weaponAttack = weapon.baseAttack;
+		//let weaponAffinity = weapon.baseAffinityPercent;
+		//let weaponDefense = weapon.defense[0];
+		//let weaponSlots = weapon.slots;
+		//let weaponAilment = weapon.ailmentBaseAttack;
+		//let weaponElement = weapon.elementBaseAttack;
+
+		let awakeningAttack:number[] = this.awakeningsData.find(x => x.type == AwakeningType.Attack).awakenings[0];
+		let awakeningAffinity: number[] = this.awakeningsData.find(x => x.type == AwakeningType.Affinity).awakenings[0];
+		let awakeningDefense: number[] = this.awakeningsData.find(x => x.type == AwakeningType.Defense).awakenings[0];
+		let awakeningSlot: number[] = this.awakeningsData.find(x => x.type == AwakeningType.Slot).awakenings[0];
+		let awakeningAilment: number[] = this.awakeningsData.find(x => x.type == AwakeningType.Ailment).awakenings[weaponIndex];
+		let awakeningElement: number[] = this.awakeningsData.find(x => x.type == AwakeningType.Element).awakenings[weaponIndex];
+		let awakeningSharpness: number[] = this.awakeningsData.find(x => x.type == AwakeningType.Sharpness).awakenings[0];
+
+		for (let awakening of awakenings) {
+			if (awakening.level > 0) {
+				switch (awakening.type) {
+					case AwakeningType.Attack:
+						this.stats.attack += (awakeningAttack[awakening.level - 1] * weaponModifier);
+						break;
+					case AwakeningType.Affinity:
+						this.stats.affinity += awakeningAffinity[awakening.level - 1];
+						break;
+					case AwakeningType.Defense:
+						this.stats.defense[0] += awakeningDefense[awakening.level - 1];
+						break;
+					case AwakeningType.Slot:
+						break;
+					case AwakeningType.Ailment:
+						this.stats.baseAilmentAttack += awakeningAilment[awakening.level - 1];
+						break;
+					case AwakeningType.Element:
+						this.stats.baseElementAttack += awakeningElement[awakening.level - 1];
+						break;
+					case AwakeningType.Sharpness:
+						this.stats.extraSharpness += awakeningSharpness[awakening.level - 1];
+						break;
+					default:
+						break;
+				}
+			}
+		}
+	}
+
 	private updateItemStats(items: ItemModel[]) {
 		for (const item of items) {
 			if (item.itemType != ItemType.Tool1 && item.itemType != ItemType.Tool2) {
-				if (item.baseAttack) { this.stats.attack += item.baseAttack; }
+				if (item.baseAttack) {					
+					this.stats.attack += item.baseAttack;
+					this.stats.attack = this.nearestTen(this.stats.attack * 10) / 10;
+				}
 				if (item.baseAffinityPercent) { this.stats.affinity += item.baseAffinityPercent; }
 				if (item.itemType == ItemType.Weapon) {
 					if (item.defense) {
@@ -111,6 +186,7 @@ export class StatService {
 					const skillUpgrade = equippedSkills.find(x => x.id == 'true' + equippedSkill.id.substring(0, 1).toUpperCase() + equippedSkill.id.substring(1, equippedSkill.id.length));
 					if (skillUpgrade == null || skillUpgrade.mode == ModeType.Active) {
 						if (level.activeElementAttack) { this.stats.activeElementAttack += level.activeElementAttack; }
+						if (level.activeAilmentAttack) { this.stats.activeAilmentAttack += level.activeAilmentAttack; }
 						if (level.activeAilmentAttackBuildUpPercent) { this.stats.activeAilmentAttackBuildUpPercent += level.activeAilmentAttackBuildUpPercent; }
 						if (level.activeAttack) { this.stats.activeAttack += level.activeAttack; }
 						if (level.activeAttackPercent) { this.stats.activeAttackPercent += level.activeAttackPercent; }
@@ -372,7 +448,7 @@ export class StatService {
 			if (weapon.sharpnessLevelsBar && !isNaN(weapon.sharpnessLevelsBar[0])) {
 				// Extra Sharpness
 				if (this.stats.extraSharpness > 0) {
-					const extraSharpness = this.stats.extraSharpness / 10;
+					let extraSharpness = this.stats.extraSharpness / 10;
 
 					const total = this.stats.sharpnessLevelsBar.reduce((a, b) => a + b, 0);
 					let maxHandicraft = 40 + 5 - total;
@@ -391,8 +467,31 @@ export class StatService {
 							currentSharpnessIndex = i - 1;
 						}
 					}
-					this.stats.sharpnessLevelsBar[currentSharpnessIndex] += extraSharpness;
-					this.stats.sharpnessLevelsBar[0] -= extraSharpness;
+					let extraSharpnessAdd = extraSharpness;
+					for (let i = currentSharpnessIndex; i < this.stats.sharpnessLevelsBar.length; i++) {
+						let toAdd = 0;
+						if (i < 6) {
+							toAdd = Math.min(12 - this.stats.sharpnessLevelsBar[i], extraSharpnessAdd);
+							this.stats.sharpnessLevelsBar[i] += toAdd;
+						} else {
+							toAdd = extraSharpnessAdd;
+							this.stats.sharpnessLevelsBar[i] += toAdd;
+						}
+						extraSharpnessAdd -= toAdd;
+						if (extraSharpnessAdd == 0) {
+							break;
+						}
+					}
+					let extraSharpnessRemove = extraSharpness;
+					for (let i = 0; i < this.stats.sharpnessLevelsBar.length; i++) {
+						let toRemove = Math.min(this.stats.sharpnessLevelsBar[i] - 1, extraSharpnessRemove);
+						this.stats.sharpnessLevelsBar[i] -= toRemove;
+						extraSharpnessRemove -= toRemove;
+						if (extraSharpnessRemove == 0) {
+							break;
+						}
+					}
+					
 				}
 				// Handicraft
 				let levelsToSubstract = 5 - (this.stats.passiveSharpness / 10);
