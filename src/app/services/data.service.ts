@@ -98,6 +98,10 @@ export class DataService {
 		return result;
 	}
 
+	getSetBonuses(): SetBonusModel[] {
+		return _.find(this.appDataProvider.appData.setBonuses, setBonus => setBonus.buildId);
+	}
+
 	getSetBonus(id: string): SetBonusModel {
 		return _.find(this.appDataProvider.appData.setBonuses, setBonus => setBonus.id === id);
 	}

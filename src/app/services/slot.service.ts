@@ -2,6 +2,7 @@ import { ChangeDetectorRef, Injectable } from '@angular/core';
 import * as _ from 'lodash';
 import { Subject } from 'rxjs';
 import { AugmentationSlotComponent } from '../components/augmentation-slot/augmentation-slot.component';
+import { AwakeningSlotComponent } from '../components/awakening-slot/awakening-slot.component';
 import { DecorationSlotComponent } from '../components/decoration-slot/decoration-slot.component';
 import { ItemSlotComponent } from '../components/item-slot/item-slot.component';
 import { KinsectSlotComponent } from '../components/kinsect-slot/kinsect-slot.component';
@@ -21,12 +22,11 @@ import { EquipmentCategoryType } from '../types/equipment-category.type';
 import { ItemType } from '../types/item.type';
 import { WeaponType } from '../types/weapon.type';
 import { EquipmentService } from './equipment.service';
-import { AwakeningSlotComponent } from '../components/awakening-slot/awakening-slot.component';
 
 @Injectable()
 export class SlotService {
 	public anySlotSelected$ =
-		new Subject<ItemSlotComponent | DecorationSlotComponent | AugmentationSlotComponent | UpgradeSlotComponent | ModificationSlotComponent | KinsectSlotComponent>();
+		new Subject<ItemSlotComponent | DecorationSlotComponent | AugmentationSlotComponent | UpgradeSlotComponent | AwakeningSlotComponent | ModificationSlotComponent | KinsectSlotComponent>();
 
 	public itemSelected$ = new Subject<SlotEventModel<ItemSlotComponent, ItemModel>>();
 	public itemSelectedNew$ = new Subject<SlotEventModel<ItemSlotComponent, ItemModel>>();
@@ -148,7 +148,7 @@ export class SlotService {
 
 		if (this.selectedAwakeningSlot) {
 			this.selectedAwakeningSlot.selected = true;
-			//this.anySlotSelected$.next(this.selectedUpgradeSlot);
+			this.anySlotSelected$.next(this.selectedAwakeningSlot);
 		}
 	}
 
@@ -185,6 +185,7 @@ export class SlotService {
 			this.clearUpgradeContainer(slot.upgradeContainer);
 			this.equipmentService.upgradeContainer = slot.upgradeContainer;
 		}
+		slot.awakenings = [];
 		slot.kinsect = null;
 		this.itemSelected$.next({ slot: slot, equipment: null });
 	}
@@ -217,22 +218,10 @@ export class SlotService {
 		this.upgradeSelected$.next({ slot: slot, equipment: null });
 	}
 
-	clearUpgradeContainer(upgradeContainer: UpgradeContainerModel) {
-		upgradeContainer.used = 0;
-		for (const detail of upgradeContainer.upgradeDetails) {
-			detail.level = 0;
-			detail.totalSlots = 0;
-			detail.requiredSlots = 0;
-
-			detail.passiveAttack = 0;
-			detail.passiveAffinity = 0;
-			detail.passiveDefense = 0;
-			detail.slotLevel = 0;
-			detail.healOnHitPercent = 0;
-			detail.passiveElement = 0;
-			detail.passiveAilment = 0;
-		}
-		upgradeContainer.customUpgradeIds = [0, 0, 0, 0, 0, 0, 0];
+	clearAwakeningSlot(slot: AwakeningSlotComponent) {
+		this.equipmentService.removeAwakening();
+		slot.awakenings = [];
+		this.awakeningSelected$.next({ slot: slot, equipment: null });
 	}
 
 	clearModificationSlot(slot: ModificationSlotComponent) {
@@ -429,6 +418,20 @@ export class SlotService {
 		}
 	}
 
+	selectAwakenings(awakenings: AwakeningLevelModel[], updateStats: boolean = true) {
+		if (this.selectedAwakeningSlot) {
+		} else {
+			this.selectedAwakeningSlot = this.weaponSlot.awakeningSlot;
+		}
+		if (this.selectedAwakeningSlot.awakenings) {
+			this.equipmentService.removeAwakening();
+		}
+		this.equipmentService.addAwakenings(awakenings, updateStats);
+		//ToDo: Slots
+		this.selectedAwakeningSlot.awakenings = awakenings;
+		this.awakeningSelected$.next({ slot: this.selectedAwakeningSlot, equipment: awakenings });
+	}
+
 	selectModification(modification: ModificationModel, updateStats: boolean = true) {
 		if (this.selectedModificationSlot) {
 			if (this.selectedModificationSlot.modification) {
@@ -471,17 +474,6 @@ export class SlotService {
 		this.equipmentService.changeWeaponName(weaponName);
 	}
 
-	selectAwakenings(awakenings: AwakeningLevelModel[]) {
-		this.equipmentService.addAwakenings(awakenings);
-		if (this.selectedAwakeningSlot) {
-			console.log("set", this.selectedAwakeningSlot);
-			this.selectedAwakeningSlot.awakenings = awakenings;
-		}
-		console.log("test",this.selectedAwakeningSlot);
-		//this.awakeningSelected$.next({ slot: this.selectedAwakeningSlot, equipment: awakenings });
-		this.weaponModSelected$.next();
-	}
-
 	selectWeaponSkill() {
 
 	}
@@ -497,6 +489,24 @@ export class SlotService {
 		}
 		this.itemActiveChanged$.next();
 		this.equipmentService.updateItemActive();
+	}
+
+	private clearUpgradeContainer(upgradeContainer: UpgradeContainerModel) {
+		upgradeContainer.used = 0;
+		for (const detail of upgradeContainer.upgradeDetails) {
+			detail.level = 0;
+			detail.totalSlots = 0;
+			detail.requiredSlots = 0;
+
+			detail.passiveAttack = 0;
+			detail.passiveAffinity = 0;
+			detail.passiveDefense = 0;
+			detail.slotLevel = 0;
+			detail.healOnHitPercent = 0;
+			detail.passiveElement = 0;
+			detail.passiveAilment = 0;
+		}
+		upgradeContainer.customUpgradeIds = [0, 0, 0, 0, 0, 0, 0];
 	}
 
 	private applySlotAugmentation() {

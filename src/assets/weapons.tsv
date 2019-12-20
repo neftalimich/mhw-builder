@@ -671,8 +671,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3001	GreatSword	12	Great Demon Rod	1488	-15	0	Thunder	180	false					false	10;10;4;5;6;5;0	4	rajang	thunder				0
 3015	GreatSword	12	Wyvern Impact 'Silver'	1296	-15	0	Fire	690	true					false	16;2;2;7;4;3;6	1;1	workshop	fire				0
 3018	GreatSword	12	Infernal Executioner+	1296	0	0	Dragon	420	false				Average	false	13;2;2;7;4;3;9	2	stygian-zinogre	dragon				0
-3041	GreatSword	12	Safi's	1296	5	0	Dragon	150	false	Blast	180	false	Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
-4041	GreatSword	12	Safi's	1464	5	0	Dragon	180	false	Blast	300	false	Average	false	1;4;5;5;6;12;7	4	safi-jiiva	dragon				0
+3041	GreatSword	12	Safi's Greatsword	1296	5	0	Dragon	150	false	Blast	180	false	Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
 1871	LongSword	11	Iron Eschaton III	858	0	0	Water	270	true					false	12;3;3;6;5;8;3	1;1	ore	water			1	0
 1873	LongSword	11	Daito Wolf	891	25	0				Poison	240	false		false	14;3;9;3;3;6;2	3	yian-garuga	poison				0
 1876	LongSword	12	Despot's Boltbreaker	858	0	0	Thunder	450	false					false	12;3;9;3;3;8;2	2	zinogre	thunder				0
@@ -714,7 +713,6 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3002	LongSword	12	Great Demon Halberd	1023	-15	0	Thunder	120	false					false	10;10;4;5;6;5;0	4	rajang	thunder				0
 3019	LongSword	12	Stygian Gula	891	0	0	Dragon	300	false				Average	false	13;2;2;7;4;3;9	2	stygian-zinogre	dragon				0
 3042	LongSword	12	Safi's Longsword	891	5	0	Dragon	180	false	Blast	210		Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon				0
-4042	LongSword	12	Safi's Longsword Awakened	1007	5	0	Dragon	180	false	Blast	210	false	Average	false	1;4;5;5;6;12;7	4	safi-jiiva	dragon				0
 1945	SwordAndShield	11	Chrome Knight Sword III	364	0	0				Sleep	330	true		false	11;3;3;6;5;9;3	1;1	ore	sleep			1	0
 1946	SwordAndShield	12	Ruinous Eradication	406	0	0	Dragon	180	false				High	false	7;3;3;11;4;17;0	1	ruiner-nergigante	dragon				0
 1949	SwordAndShield	12	Shining Wyvern Blade	378	20	0	Fire	390	false					false	12;3;3;6;5;8;3	2	silver-rathalos	fire				0

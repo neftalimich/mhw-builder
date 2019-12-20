@@ -28,6 +28,7 @@ import { ModificationSlotComponent } from './components/modification-slot/modifi
 import { ModificationsListComponent } from './components/modifications-list/modifications-list.component';
 import { SetBonusDetailsComponent } from './components/set-bonus-details/set-bonus-details.component';
 import { SetListComponent } from './components/set-list/set-list.component';
+import { SetbonusListComponent } from './components/setbonus-list/setbonus-list.component';
 import { SharpnessBarComponent } from './components/sharpness-bar/sharpness-bar.component';
 import { SkillDetailsComponent } from './components/skill-details/skill-details.component';
 import { ToolListComponent } from './components/tool-list/tool-list.component';
@@ -64,6 +65,7 @@ import { TooltipService } from './services/tooltip.service';
 		DecorationListComponent,
 		CharmListComponent,
 		ToolListComponent,
+		SetbonusListComponent,
 		ItemDetailsComponent,
 		CommonDetailsComponent,
 		UpgradeDetailsComponent,

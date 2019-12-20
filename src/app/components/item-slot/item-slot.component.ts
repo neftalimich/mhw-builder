@@ -12,11 +12,11 @@ import { EquipmentCategoryType } from '../../types/equipment-category.type';
 import { ItemType } from '../../types/item.type';
 import { PointerType } from '../../types/pointer.type';
 import { AugmentationSlotComponent } from '../augmentation-slot/augmentation-slot.component';
+import { AwakeningSlotComponent } from '../awakening-slot/awakening-slot.component';
 import { DecorationSlotComponent } from '../decoration-slot/decoration-slot.component';
 import { KinsectSlotComponent } from '../kinsect-slot/kinsect-slot.component';
 import { ModificationSlotComponent } from '../modification-slot/modification-slot.component';
 import { UpgradeSlotComponent } from '../upagrade-slot/upgrade-slot.component';
-import { AwakeningSlotComponent } from '../awakening-slot/awakening-slot.component';
 
 @Component({
 	selector: 'mhw-builder-item-slot',

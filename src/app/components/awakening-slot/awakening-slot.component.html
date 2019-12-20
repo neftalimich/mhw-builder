@@ -35,13 +35,13 @@
 	</div>
 	<div class="awakenings">
 		<div class="awakening-skill">
-			<div class="awakening-type" (click)="awakeningDropdown.toggle($event)">
+			<div class="awakening-type">
 				<div class="awakening selected-awakening">
 					<span>TEOSTRA TECHNIQUE</span>
 				</div>
 			</div>
 		</div>
-		<div class="awakening-slot" *ngFor="let awakeningLevel of awakeningsLevel; let i = index">
+		<div class="awakening-slot" *ngFor="let awakeningLevel of awakenings; let i = index">
 			<div class="awakening-type" (click)="awakeningDropdown.toggle($event)">
 				<div class="awakening selected-awakening">
 					<span>{{awakeningLevel.type}}</span>

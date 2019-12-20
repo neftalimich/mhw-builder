@@ -1,0 +1,42 @@
+<div class="container">
+	<div class="search-container">
+		<input #searchBox (keyup)="search(searchBox.value)" placeholder="Search names" />
+		<button type="button" class="clear-button" (click)="resetSearchResults()">
+			<i class="fas fa-times"></i>
+		</button>
+	</div>
+
+	<virtual-scroller id="setbonuses-list" #setbonusList class="scroll-container" *ngIf="setbonuses" [items]="filteredSetbonuses" (vsUpdate)="onSetbonusListUpdate($event)">
+		<div *ngFor="let setbonus of virtualSetbonuses" class="scroll-item-container" (click)="selectSetbonus(setbonus)">
+			<div class="name-container">
+				<div class="name">
+					{{setbonus.name}}
+				</div>
+				<div class="rarity" *ngIf="setbonus.rarity">
+					<span class="r1">Rarity </span><span class="r2">R</span>{{setbonus.rarity}}
+				</div>
+			</div>
+
+			<div class="skills-container" *ngIf="setbonus.skills.length == 1">
+				<div class="skill-container" *ngFor="let skill of getSkills(setbonus)">
+					<div class="count">
+						{{getSkillCount(setbonus, skill)}}
+					</div>
+					<div class="name">
+						{{skill.name}}
+					</div>
+				</div>
+			</div>
+			<div class="skills-container-2" *ngIf="setbonus.skills.length > 1">
+				<div class="skill-container" *ngFor="let skill of getSkills(setbonus)">
+					<div class="count">
+						{{getSkillCount(setbonus, skill)}}
+					</div>
+					<div class="name">
+						{{skill.name}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</virtual-scroller>
+</div>

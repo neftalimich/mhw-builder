@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import * as _ from 'lodash';
 import { AugmentationModel } from '../models/augmentation.model';
+import { AwakeningLevelModel } from '../models/awakening-level.model';
 import { DecorationModel } from '../models/decoration.model';
 import { EquippedSkillModel } from '../models/equipped-skill.model';
 import { ItemModel } from '../models/item.model';
@@ -12,7 +13,6 @@ import { ElementType } from '../types/element.type';
 import { ItemType } from '../types/item.type';
 import { SkillService } from './skill.service';
 import { StatService } from './stat.service';
-import { AwakeningLevelModel } from '../models/awakening-level.model';
 
 @Injectable()
 export class EquipmentService {
@@ -69,39 +69,6 @@ export class EquipmentService {
 		}
 	}
 
-	changeElement(element: ElementType, elementAttack: number, updateStats: boolean = true) {
-		let weapon = this.items.find(x => x.itemType == ItemType.Weapon);
-		if (element != ElementType.None) {
-			weapon.element = element;
-			weapon.elementBaseAttack = elementAttack;
-		} else {
-			weapon.element = null;
-			weapon.elementBaseAttack = null;
-		}
-		if (updateStats) {
-			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.awakenings, this.modifications, this.kinsect);
-		}
-	}
-
-	changeAilment(ailment: AilmentType, ailmentAttack:number, updateStats: boolean = true) {
-		let weapon = this.items.find(x => x.itemType == ItemType.Weapon);
-		if (ailment != AilmentType.None) {
-			weapon.ailment = ailment;
-			weapon.ailmentBaseAttack = ailmentAttack;
-		} else {
-			weapon.ailment = null;
-			weapon.ailmentBaseAttack = null;
-		}
-		if (updateStats) {
-			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.awakenings, this.modifications, this.kinsect);
-		}
-	}
-
-	changeWeaponName(weaponName: string) {
-		let weapon = this.items.find(x => x.itemType == ItemType.Weapon);
-		weapon.name = weaponName;
-	}
-
 	addAwakenings(awakenings: AwakeningLevelModel[], updateStats: boolean = true) {
 		this.awakenings = awakenings;
 		if (awakenings.length && updateStats) {
@@ -148,6 +115,11 @@ export class EquipmentService {
 		this.updateSkills();
 	}
 
+	removeAwakening() {
+		this.awakenings = [];
+		this.updateSkills();
+	}
+
 	removeModification(modification: ModificationModel) {
 		this.modifications = _.reject(this.modifications, a => a === modification);
 		this.updateSkills();
@@ -155,6 +127,39 @@ export class EquipmentService {
 
 	removeKinsect() {
 		this.kinsect = null;
+	}
+
+	changeElement(element: ElementType, elementAttack: number, updateStats: boolean = true) {
+		let weapon = this.items.find(x => x.itemType == ItemType.Weapon);
+		if (element != ElementType.None) {
+			weapon.element = element;
+			weapon.elementBaseAttack = elementAttack;
+		} else {
+			weapon.element = null;
+			weapon.elementBaseAttack = null;
+		}
+		if (updateStats) {
+			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.awakenings, this.modifications, this.kinsect);
+		}
+	}
+
+	changeAilment(ailment: AilmentType, ailmentAttack: number, updateStats: boolean = true) {
+		let weapon = this.items.find(x => x.itemType == ItemType.Weapon);
+		if (ailment != AilmentType.None) {
+			weapon.ailment = ailment;
+			weapon.ailmentBaseAttack = ailmentAttack;
+		} else {
+			weapon.ailment = null;
+			weapon.ailmentBaseAttack = null;
+		}
+		if (updateStats) {
+			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.awakenings, this.modifications, this.kinsect);
+		}
+	}
+
+	changeWeaponName(weaponName: string) {
+		let weapon = this.items.find(x => x.itemType == ItemType.Weapon);
+		weapon.name = weaponName;
 	}
 
 	updateItemLevel() {

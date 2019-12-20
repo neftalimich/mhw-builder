@@ -51,6 +51,7 @@
 	},
 	{
 		"id": "teostraTechnique",
+		"buildId": 1,
 		"name": "Teostra Technique",
 		"setLevels": [
 			{

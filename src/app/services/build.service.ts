@@ -59,6 +59,10 @@ export class BuildService {
 			if (!this.loadingBuild) { this.updateBuildId(); }
 		});
 
+		this.slotService.awakeningSelected$.subscribe(() => {
+			if (!this.loadingBuild) { this.updateBuildId(); }
+		});
+
 		this.slotService.modificationSelected$.subscribe(() => {
 			if (!this.loadingBuild) { this.updateBuildId(); }
 		});
@@ -311,19 +315,18 @@ export class BuildService {
 					}
 					// -------------------- Awakenings
 					if (buildItem.awakenings != null) {
-						let awakenings: AwakeningLevelModel[] = [];
+						let awakeningLevels: AwakeningLevelModel[] = [];
 						for (const awk of buildItem.awakenings) {
 							let awkAux = this.dataService.getAwakening(awk[0]);
-							awakenings.push({
+							awakeningLevels.push({
 								id: awkAux.id,
 								type: awkAux.type,
 								level: awk[1]
 							});
 						}
-						slot.awakeningSlot.awakenings = awakenings;
+						slot.awakeningSlot.awakenings = awakeningLevels;
 						this.slotService.selectAwakeningSlot(slot.awakeningSlot);
-						this.slotService.selectAwakenings(awakenings);
-						console.log("slot", awakenings, slot);
+						this.slotService.selectAwakenings(awakeningLevels);
 					}
 
 					// --------------------

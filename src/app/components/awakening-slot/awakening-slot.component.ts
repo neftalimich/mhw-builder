@@ -7,11 +7,11 @@ import { DataService } from '../../services/data.service';
 import { SlotService } from '../../services/slot.service';
 import { TooltipService } from '../../services/tooltip.service';
 import { AilmentType } from '../../types/ailment.type';
+import { AwakeningType } from '../../types/awakening.type';
 import { ElementType } from '../../types/element.type';
+import { ItemType } from '../../types/item.type';
 import { WeaponType } from '../../types/weapon.type';
 import { DropdownComponent } from '../common/dropdown/dropdown.component';
-import { AwakeningType } from '../../types/awakening.type';
-import { ItemType } from '../../types/item.type';
 
 @Component({
 	selector: 'mhw-builder-awakening-slot',
@@ -35,15 +35,11 @@ export class AwakeningSlotComponent implements OnInit {
 	ailmentValues: KeyValuePair<string, string>[];
 	awakeningValues: KeyValuePair<number, string>[];
 
-	awakenings: AwakeningModel[];
-	awakeningsData: AwakeningModel[];
-
 	@Input()
-	set awakeningsLevel(awakenings: AwakeningLevelModel[]) {
-		console.log(awakenings);
+	set awakenings(awakenings: AwakeningLevelModel[]) {
 		this._awakeningsLevel = awakenings;
 	}
-	get awakeningsLevel(): AwakeningLevelModel[] {
+	get awakenings(): AwakeningLevelModel[] {
 		return this._awakeningsLevel;
 	}
 
@@ -97,9 +93,6 @@ export class AwakeningSlotComponent implements OnInit {
 		private dataService: DataService,
 		private tooltipService: TooltipService
 	) {
-		this.awakeningsData = dataService.getAwakenings();
-		this.awakenings = JSON.parse(JSON.stringify(this.awakeningsData));
-		this.awakenings.pop();
 	}
 
 	ngOnInit(): void {
@@ -161,7 +154,7 @@ export class AwakeningSlotComponent implements OnInit {
 	selectAwakeningType(selectedAwakening: KeyValuePair<number, string>, awakeningLevel: AwakeningLevelModel) {
 		awakeningLevel.id = selectedAwakening.key;
 		awakeningLevel.type = AwakeningType[selectedAwakening.value];
-		this.slotService.selectAwakenings(this.awakeningsLevel);
+		this.slotService.selectAwakenings(this.awakenings);
 	}
 
 	selectAwakeningLevel(level: number, awakeningLevel: AwakeningLevelModel) {
@@ -172,7 +165,7 @@ export class AwakeningSlotComponent implements OnInit {
 				awakeningLevel.level = level;
 			}
 		}
-		this.slotService.selectAwakenings(this.awakeningsLevel);
+		this.slotService.selectAwakenings(this.awakenings);
 	}
 
 	getElementIcon(element: ElementType): string {
