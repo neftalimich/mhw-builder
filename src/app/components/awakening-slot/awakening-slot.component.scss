@@ -19,8 +19,8 @@ $elementSpacing: 4px;
 		display: grid;
 		height: $slotHeight;
 		grid-template-columns: repeat(2,1fr);
-		padding: 2px 8px;
-		grid-gap:8px;
+		padding: 2px 4px;
+		grid-gap: 8px;
 
 		.element-slot {
 			grid-column: 1;
@@ -91,7 +91,7 @@ $elementSpacing: 4px;
 		grid-row: 2;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		padding: 2px 8px;
+		padding: 2px 4px;
 		grid-gap: 8px;
 
 		.awakening-skill {
@@ -121,7 +121,7 @@ $elementSpacing: 4px;
 		.awakening-slot {
 			height: $slotHeight;
 			display: grid;
-			grid-template-columns: 40% 60%;
+			grid-template-columns: auto max-content;
 
 			.awakening-type {
 				grid-column: 1;
@@ -130,16 +130,13 @@ $elementSpacing: 4px;
 				border-radius: 3px;
 
 				.awakening {
-					$awakeningSize: 24px;
-					$awakeningSpacing: 2px;
-
 					display: flex;
-					margin: $awakeningSpacing;
-					height: $awakeningSize;
+					margin: $elementSpacing;
+					height: $elementSize;
 
 					span {
-						padding: $awakeningSpacing;
-						line-height: $awakeningSize - $awakeningSpacing * 2;
+						padding: $elementSpacing;
+						line-height: $elementSize - $elementSpacing * 2;
 					}
 				}
 			}

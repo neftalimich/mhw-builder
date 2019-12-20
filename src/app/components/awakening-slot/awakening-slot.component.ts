@@ -12,6 +12,7 @@ import { ElementType } from '../../types/element.type';
 import { ItemType } from '../../types/item.type';
 import { WeaponType } from '../../types/weapon.type';
 import { DropdownComponent } from '../common/dropdown/dropdown.component';
+import { SetBonusModel } from '../../models/set-bonus.model';
 
 @Component({
 	selector: 'mhw-builder-awakening-slot',
@@ -20,6 +21,9 @@ import { DropdownComponent } from '../common/dropdown/dropdown.component';
 })
 export class AwakeningSlotComponent implements OnInit {
 	slotName = ItemType.Awakening;
+	setbonus: SetBonusModel;
+
+	public selected: boolean;
 
 	private _awakeningsLevel: AwakeningLevelModel[];
 	private _weaponElement: ElementType;
@@ -84,8 +88,6 @@ export class AwakeningSlotComponent implements OnInit {
 		return this._weaponType;
 	}
 
-	public selected: boolean;
-
 	@ViewChild(DropdownComponent, { static: true }) elementDropdown: DropdownComponent;
 
 	constructor(
@@ -111,7 +113,7 @@ export class AwakeningSlotComponent implements OnInit {
 	}
 
 	clicked() {
-		//this.slotService.selectAwakeningSlot(this);
+		this.slotService.selectSetbonusSlot(this);
 	}
 
 	clearSkillClicked(event: Event) {

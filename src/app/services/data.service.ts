@@ -99,11 +99,15 @@ export class DataService {
 	}
 
 	getSetBonuses(): SetBonusModel[] {
-		return _.find(this.appDataProvider.appData.setBonuses, setBonus => setBonus.buildId);
+		return this.appDataProvider.appData.setBonuses.filter(setBonus => setBonus.buildId);
 	}
 
 	getSetBonus(id: string): SetBonusModel {
 		return _.find(this.appDataProvider.appData.setBonuses, setBonus => setBonus.id === id);
+	}
+
+	getSetBonusByBuildId(buildId: number): SetBonusModel {
+		return _.find(this.appDataProvider.appData.setBonuses, setBonus => setBonus.buildId === buildId);
 	}
 
 	getSkill(id: string): SkillModel {

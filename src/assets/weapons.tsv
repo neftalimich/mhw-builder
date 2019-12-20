@@ -671,7 +671,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3001	GreatSword	12	Great Demon Rod	1488	-15	0	Thunder	180	false					false	10;10;4;5;6;5;0	4	rajang	thunder				0
 3015	GreatSword	12	Wyvern Impact 'Silver'	1296	-15	0	Fire	690	true					false	16;2;2;7;4;3;6	1;1	workshop	fire				0
 3018	GreatSword	12	Infernal Executioner+	1296	0	0	Dragon	420	false				Average	false	13;2;2;7;4;3;9	2	stygian-zinogre	dragon				0
-3041	GreatSword	12	Safi's Greatsword	1296	5	0	Dragon	150	false	Blast	180	false	Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
+4041	GreatSword	12	Safi's Greatsword	1296	5	0			false			false	Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
 1871	LongSword	11	Iron Eschaton III	858	0	0	Water	270	true					false	12;3;3;6;5;8;3	1;1	ore	water			1	0
 1873	LongSword	11	Daito Wolf	891	25	0				Poison	240	false		false	14;3;9;3;3;6;2	3	yian-garuga	poison				0
 1876	LongSword	12	Despot's Boltbreaker	858	0	0	Thunder	450	false					false	12;3;9;3;3;8;2	2	zinogre	thunder				0
@@ -712,7 +712,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 1942	LongSword	12	Soulfire Lash 'Styx'	825	10	0				Blast	330	false		false	12;3;9;3;3;8;2	3;3	lunastra;xeno-jiiva	blast	razorSharpSpareShot-1			0
 3002	LongSword	12	Great Demon Halberd	1023	-15	0	Thunder	120	false					false	10;10;4;5;6;5;0	4	rajang	thunder				0
 3019	LongSword	12	Stygian Gula	891	0	0	Dragon	300	false				Average	false	13;2;2;7;4;3;9	2	stygian-zinogre	dragon				0
-3042	LongSword	12	Safi's Longsword	891	5	0	Dragon	180	false	Blast	210		Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon				0
+4042	LongSword	12	Safi's Longsword	891	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
 1945	SwordAndShield	11	Chrome Knight Sword III	364	0	0				Sleep	330	true		false	11;3;3;6;5;9;3	1;1	ore	sleep			1	0
 1946	SwordAndShield	12	Ruinous Eradication	406	0	0	Dragon	180	false				High	false	7;3;3;11;4;17;0	1	ruiner-nergigante	dragon				0
 1949	SwordAndShield	12	Shining Wyvern Blade	378	20	0	Fire	390	false					false	12;3;3;6;5;8;3	2	silver-rathalos	fire				0
@@ -750,6 +750,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2015	SwordAndShield	12	Soulfire Barb 'Styx'	350	10	0				Blast	240	false		false	12;3;3;6;5;8;3	3;3	lunastra;xeno-jiiva	blast	razorSharpSpareShot-1			0
 3003	SwordAndShield	12	Banned Rajang Club	434	-15	0	Thunder	90	false					false	9;10;4;5;7;5;0	4	rajang	thunder				0
 3020	SwordAndShield	12	Stygian Luxuria	378	0	0	Dragon	240	false				Average	false	10;2;2;7;4;3;12	2	stygian-zinogre	dragon				0
+4043	SwordAndShield	12	Safi's SwordAndShield	378	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
 2018	DualBlades	11	Chrome Cross III	364	0	0				Poison	360	true		false	10;3;3;6;5;10;3	1;1	ore	poison			1	0
 2021	DualBlades	12	Despot's Blitz	364	0	0	Thunder	240	false					false	11;3;9;3;3;9;2	2	zinogre	thunder				0
 2022	DualBlades	12	Ruinous Decimation	406	0	0	Dragon	180	false				High	false	7;3;3;11;4;17;0	1	ruiner-nergigante	dragon				0
@@ -792,8 +793,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2091	DualBlades	11	Downy Paradise	364	0	0				Sleep	180	false		false	4;8;3;3;8;14;0		workshop	sleep				0
 3004	DualBlades	12	Suzuka Otakemaru	434	-10	0	Thunder	90	false					false	8;10;4;5;8;5;0	4	rajang	thunder				0
 3021	DualBlades	12	Stygian Bloodclaws	378	0	0	Dragon	210	false				Average	false	10;2;2;7;4;3;12	2	stygian-zinogre	dragon				0
-3044	DualBlades	12	Safi's DualBlades	378	5	0	Dragon	120	false	Blast	150		Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon				0
-4044	DualBlades	12	Safi's DualBlades Michelet	378	5	0				Blast	320		Average	false	1;3;5;5;6;12;8	4	safi-jiiva	dragon				0
+4044	DualBlades	12	Safi's DualBlades	378	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
 2094	Hammer	11	Kurogane III	1352	0	0				Blast	360	true		false	12;3;3;6;5;8;3	1;1	ore	blast			1	0
 2097	Hammer	12	Leonid Starcrusher	1404	20	0	Fire	420	false					false	13;3;3;6;5;7;3	2	silver-rathalos	fire				0
 2098	Hammer	12	Ruinous Obliteration	1508	0	0	Dragon	180	false				High	false	8;3;3;11;4;16;0	1	ruiner-nergigante	dragon				0
@@ -833,8 +833,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2166	Hammer	11	Bristly Inferno	1352	0	0				Poison	360	false		false	6;3;3;11;4;13;0		workshop	poison				0
 3005	Hammer	12	Mane Malice Rajang	1612	-15	0	Thunder	120	false					false	10;10;4;5;6;5;0	4	rajang	thunder				0
 3022	Hammer	12	Stygian Industria	1404	0	0	Dragon	270	false				Average	false	13;2;2;7;4;3;9	2	stygian-zinogre	dragon				0
-3045	Hammer	12	Safi's Hammer	1404	5	0	Dragon	180	false	Blast	210	false	Average	false	7;5;5;5;6;12;0	4	safi-jiiva	dragon				0
-4045	Hammer	12	Safi's Hammer Awakened	1586	5	0	Dragon	180	false	Blast	210	false	Average	false	1;4;5;5;6;12;7	4	safi-jiiva	dragon				0
+4045	Hammer	12	Safi's Hammer	1404	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
 2169	HuntingHorn	11	Sforzando III	1092	0	0				Paralysis	360	true		false	12;3;3;6;5;8;3	1;1	ore	paralysis			1	0
 2171	HuntingHorn	11	Wolf Shamisen	1134	25	0				Poison	240	false		false	15;3;9;3;3;5;2	3	yian-garuga	poison				0
 2172	HuntingHorn	12	Ruinous Desolation	1218	0	0	Dragon	210	false				High	false	8;3;3;11;4;16;0	1	ruiner-nergigante	dragon				0
@@ -872,6 +871,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2237	HuntingHorn	12	Soulfire Chorus 'Styx'	1050	10	0				Blast	330	false		false	12;3;9;3;3;8;2	3;3	lunastra;xeno-jiiva	blast	razorSharpSpareShot-1			0
 3006	HuntingHorn	12	Denden Doomsounder	1302	-15	0	Thunder	120	false					false	10;10;4;5;6;5;0	4	rajang	thunder				0
 3023	HuntingHorn	12	Stygian Tristitia	1134	0	0	Dragon	360	false				Average	false	13;2;2;7;4;3;9	2	stygian-zinogre	dragon				0
+4046	HuntingHorn	12	Safi's HuntingHorn	1134	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
 2240	Lance	11	Chrome Drill III	598	0	0				Paralysis	360	true		false	12;3;3;6;5;8;3	1;1	ore	paralysis			1	0
 2242	Lance	11	Incessant Wolf	621	25	0				Poison	240	false		false	15;3;9;3;3;5;2	3	yian-garuga	poison				0
 2243	Lance	12	Ruinous Perdition	667	0	0	Dragon	180	false				High	false	8;3;4;10;3;17;0	1	ruiner-nergigante	dragon				0
@@ -912,7 +912,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2309	Lance	11	Sweeping Gale Lance	598	0	0				Sleep	270	false		false	7;8;3;3;8;11;0		workshop	sleep				0
 3007	Lance	12	Great Demon Lance	713	-15	0	Thunder	120	false					false	10;10;4;5;6;5;0	4	rajang	thunder				0
 3024	Lance	12	Infernal Warlance	621	0	0	Dragon	330	false				Average	false	11;2;2;7;4;3;11	2	stygian-zinogre	dragon				0
-4047	Lance	12	Safi's Lance	621	5	0	Dragon	180	false	Blast	210		Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon				0
+4047	Lance	12	Safi's Lance	621	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
 2312	Gunlance	11	Chrome Halberd III	598	0	0				Blast	360	true		false	11;3;3;6;5;9;3	1;1	ore	blast;normal6		Normal-6	1	0
 2314	Gunlance	11	Blackwing Gunlance II	621	25	0				Poison	240	false		false	14;3;9;3;3;6;2	3	yian-garuga	poison;long6		Long-6	1	0
 2315	Gunlance	12	Ruinous Eradication GL	667	0	0	Dragon	210	false				High	false	8;3;3;12;3;16;0	2	ruiner-nergigante	dragon;wide5		Wide-5		0
@@ -952,6 +952,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2381	Gunlance	11	Gajalaka Firepike	621	0	30	Dragon	450	true				High	false	4;10;4;4;18;0;0	4	workshop	dragon;normal5		Normal-5		0
 3008	Gunlance	12	Great Demon Gunlance	656	-15	0	Thunder	120	false					false	9;10;4;5;7;5;0	4	rajang	thunder;wide6		Wide-6		0
 3025	Gunlance	12	Stygian Avaritia	621	0	0	Dragon	360	false				Average	false	11;2;2;7;4;3;11	2	stygian-zinogre	dragon;normal7		Normal-7		0
+4048	Gunlance	12	Safi's Gunlance	621	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
 2384	SwitchAxe	11	Chrome Machina III	945	0	0				Poison	510	true		false	12;3;3;6;5;8;3	1;1	ore	poison		poison-540	1	0
 2386	SwitchAxe	11	Blackwing Switch Axe II	945	25	0				Poison	240	false		false	15;3;9;3;3;5;2	3	yian-garuga	poison		power	1	0
 2387	SwitchAxe	12	Ruinous Light	1015	0	0	Dragon	210	false				High	false	8;3;3;11;4;16;0	1	ruiner-nergigante	dragon		power		0
@@ -993,6 +994,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2457	SwitchAxe	12	Soulfire Scourge 'Styx'	875	10	0				Blast	330	false		false	12;3;9;3;3;8;2	3;3	lunastra;xeno-jiiva	blast	razorSharpSpareShot-1	power		0
 3009	SwitchAxe	12	Undying Light	1085	-15	0	Thunder	120	false					false	10;10;4;5;6;5;0	4	rajang	thunder		power		0
 3026	SwitchAxe	12	Infernal Cleave-axe+	945	0	0	Dragon	300	false				Average	false	13;2;2;7;4;3;9	2	stygian-zinogre	dragon		power		0
+4049	SwitchAxe	12	Safi's SwitchAxe	945	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
 2460	ChargeBlade	11	Chrome Fortress III	972	0	0	Thunder	360	true					false	13;3;3;6;5;7;3	1;1	ore	thunder		Impact	1	0
 2463	ChargeBlade	12	Despot's Thundergale	936	0	0	Thunder	390	false					false	11;3;9;3;3;9;2	2	zinogre	thunder		element		0
 2464	ChargeBlade	12	Ruinous Devastation	1044	0	0	Dragon	210	false				High	false	8;3;3;11;4;16;0	1	ruiner-nergigante	dragon		Impact		0
@@ -1030,6 +1032,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3010	ChargeBlade	12	Rajang Beastblade Ikazuchi	1116	-15	0	Thunder	120	false					false	9;10;4;5;7;5;0	4	rajang	thunder		Impact		0
 3016	ChargeBlade	12	Black Lightning Eagle	864	10	0	Thunder	270	false					false	1;1;3;5;5;10;15	1;1	workshop	thunder		Impact		0
 3027	ChargeBlade	12	Stygian Maledicta	972	0	0	Dragon	360	false				Average	false	10;2;2;7;4;3;12	2	stygian-zinogre	dragon		Impact		0
+4050	ChargeBlade	12	Safi's ChargeBlade	972	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
 2525	InsectGlaive	11	Chrome Trident III	806	0	0				Blast	360	true		false	11;3;3;6;5;9;3	1;1	ore	blast		Sever	1	0
 2528	InsectGlaive	12	Despot's Twinbolt	806	0	0	Thunder	360	false					false	11;3;9;3;3;9;2	2	zinogre	thunder		Spirit & Strength Boost		0
 2529	InsectGlaive	12	Ruinous Catastrophe	899	0	0	Dragon	180	false				High	false	8;3;3;11;4;16;0	1	ruiner-nergigante	dragon		Sever		0
@@ -1069,6 +1072,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2594	InsectGlaive	12	Soulfire Reach 'Styx'	775	10	0				Blast	240	false		false	11;3;9;3;3;9;2	3;3	lunastra;xeno-jiiva	blast	razorSharpSpareShot-1	Speed		0
 3011	InsectGlaive	12	Metalmangler	961	-15	0	Thunder	90	false					false	9;10;4;5;7;5;0	4	rajang	thunder		Blunt		0
 3029	InsectGlaive	12	Stygian Oblivia	837	0	0	Dragon	240	false				Average	false	11;2;2;7;4;3;11	2	stygian-zinogre	dragon		Spirit & Strength Boost		0
+4051	InsectGlaive	12	Safi's InsectGlaive	837	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
 2597	LightBowgun	11	Crossblitzer III	338	0	0								false		1;1	ore				1	0
 2599	LightBowgun	11	Blackwing Bowgun II	351	25	0								false		3	yian-garuga				1	0
 2600	LightBowgun	12	Ruinous Cataclysm	351	0	0								false		1;1	ruiner-nergigante					0
@@ -1105,6 +1109,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2664	LightBowgun	12	Soulfire Rasp 'Styx'	338	10	0								false		3;3	lunastra;xeno-jiiva		razorSharpSpareShot-1			0
 3012	LightBowgun	12	Ten Thousand Volts	403	-15	0								false		4	rajang					0
 3030	LightBowgun	12	Brimstren Drakevow	351	0	0								false		2	stygian-zinogre	dragon				0
+4052	LightBowgun	12	Safi's LightBowgun	325	5	0								false		4	safi-jiiva	dragon			2	0
 2667	HeavyBowgun	11	Fatal Assault III	420	0	0								false		1;1	ore				1	0
 2669	HeavyBowgun	10	Icicle Assault II	360	30	0								false		1	barioth				1	0
 2670	HeavyBowgun	12	Ruinous Destruction	465	0	0								false		1	ruiner-nergigante					0
@@ -1137,6 +1142,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2726	HeavyBowgun	12	Soulfire Roar 'Styx'	420	10	0								false		3;3	lunastra;xeno-jiiva		razorSharpSpareShot-1			0
 3013	HeavyBowgun	12	Rajang Destroyer	495	-15	0								false		4	rajang					0
 3031	HeavyBowgun	12	Stygian Humilitas	435	0	0								false		2	stygian-zinogre	dragon				0
+4053	HeavyBowgun	12	Safi's HeavyBowgun	375	5	0								false		4	safi-jiiva	dragon			2	0
 2729	Bow	11	Dragon Perforator III	312	0	0	Thunder	240	true					false		2;2	ore	thunder		close;power	1	0
 2732	Bow	12	Despot's Earlybolt	324	0	0	Thunder	240	false					false		2	zinogre	thunder		close;power		0
 2733	Bow	12	Ruinous Doom	324	0	0	Dragon	240	false				High	false		1;1	ruiner-nergigante	dragon		close;power		0
@@ -1174,3 +1180,4 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2797	Bow	12	Soulfire Arch 'Styx'	312	10	0				Blast	240	false		false			lunastra;xeno-jiiva	blast	razorSharpSpareShot-1	close;power		0
 3014	Bow	12	Beastking Thunderbow	372	-10	0	Thunder	120	false					false		4	rajang	thunder		close;power		0
 3032	Bow	12	Stygian Patientia	336	0	0	Dragon	300	false				Average	false		2	stygian-zinogre	dragon		close;power		0
+4054	Bow	12	Safi's Bow	312	5	0			false				Average	false		4	safi-jiiva	dragon			2	0

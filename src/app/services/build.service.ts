@@ -59,10 +59,6 @@ export class BuildService {
 			if (!this.loadingBuild) { this.updateBuildId(); }
 		});
 
-		this.slotService.awakeningSelected$.subscribe(() => {
-			if (!this.loadingBuild) { this.updateBuildId(); }
-		});
-
 		this.slotService.modificationSelected$.subscribe(() => {
 			if (!this.loadingBuild) { this.updateBuildId(); }
 		});
@@ -76,6 +72,10 @@ export class BuildService {
 		});
 
 		this.slotService.weaponModSelected$.subscribe(() => {
+			if (!this.loadingBuild) { this.updateBuildId(); }
+		});
+
+		this.slotService.setbonusSelected$.subscribe(() => {
 			if (!this.loadingBuild) { this.updateBuildId(); }
 		});
 	}
@@ -111,6 +111,7 @@ export class BuildService {
 		const upgRegex = /(?<=u)([\d]+)/g;
 		const custRegex = /(?<=c)([\d]+)/g;
 		const awkRegex = /(?<=w)([\d]+)(l)([\d]+)/g;
+		const setbRegex = /(?<=s)([\d]+)/g;
 		const kinsectRegex = /(?<=k)([\d]+)/g;
 		const kinsectElementRegex = /(?<=e)([\d]+)/g;
 		const elementRegex = /(?<=f)([\d]+)/g;
@@ -180,6 +181,11 @@ export class BuildService {
 					const awkAux = awk.split('l');
 					buildItem.awakenings.push([parseInt(awkAux[0], 10), parseInt(awkAux[1], 10)]);
 				}
+			}
+
+			const setb = itemGroup.match(setbRegex);
+			if (setb) {
+				buildItem.setbonusId = parseInt(setb[0], 10);
 			}
 
 			const element = itemGroup.match(elementRegex);
@@ -328,7 +334,15 @@ export class BuildService {
 						this.slotService.selectAwakeningSlot(slot.awakeningSlot);
 						this.slotService.selectAwakenings(awakeningLevels);
 					}
-
+					// -------------------- Setbonus
+					if (buildItem.setbonusId != null) {
+						let setbonus = this.dataService.getSetBonusByBuildId(buildItem.setbonusId);
+						if (setbonus) {
+							slot.awakeningSlot.setbonus = setbonus;
+							this.slotService.selectSetbonusSlot(slot.awakeningSlot);
+							this.slotService.selectSetbonus(setbonus);
+						}
+					}
 					// --------------------
 
 					// -------------------- Augmentations
@@ -481,7 +495,7 @@ export class BuildService {
 		const tool1 = this.equipmentService.items.find(item => item.itemType == ItemType.Tool1);
 		const tool2 = this.equipmentService.items.find(item => item.itemType == ItemType.Tool2);
 
-		let buildId = 'v2';
+		let buildId = 'v3';
 
 		this.changeDetector.detectChanges();
 
@@ -539,6 +553,12 @@ export class BuildService {
 						for (const awakening of this.equipmentService.awakenings) {
 							result += `w${awakening.id}l${awakening.level}`;
 						}
+					}
+					// --------------------
+
+					// -------------------- Setbonus
+					if (this.equipmentService.awakeningSetbonus) {
+						result += `s${this.equipmentService.awakeningSetbonus.buildId}`
 					}
 					// --------------------
 				}

@@ -324,6 +324,7 @@
 	},
 	{
 		"id": "nargacugaEssence",
+		"buildId": 2,
 		"name": "Nargacuga Essence",
 		"setLevels": [
 			{
@@ -354,6 +355,8 @@
 	},
 	{
 		"id": "tigrexEssence",
+		"buildId": 3,
+		"rarity": 3,
 		"name": "Tigrex Essence",
 		"setLevels": [
 			{

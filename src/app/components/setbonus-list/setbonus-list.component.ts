@@ -21,14 +21,14 @@ export class SetbonusListComponent implements OnInit {
 	//}
 	//get setbonusLevel(): number { return this._setbonusLevel; }
 
-	//@Output() setbonusSelected = new EventEmitter<SetbonusModel>();
+	@Output() setbonusSelected = new EventEmitter<SetBonusModel>();
 
 	@ViewChild('searchBox', { static: true }) searchBox: ElementRef;
 	@ViewChild('setbonusList', { static: false }) setbonusList: VirtualScrollerComponent;
 
 	setbonuses: SetBonusModel[];
-	filteredSetbonuss: SetBonusModel[];
-	virtualSetbonuss: SetBonusModel[];
+	filteredSetbonuses: SetBonusModel[];
+	virtualSetbonuses: SetBonusModel[];
 
 	@HostListener('window:resize')
 	onResize() {
@@ -41,7 +41,9 @@ export class SetbonusListComponent implements OnInit {
 		private tooltipService: TooltipService
 	) { }
 
-	ngOnInit(): void { }
+	ngOnInit(): void {
+		this.loadItems();
+	}
 
 	refreshList() {
 		if (this.setbonusList) {
@@ -49,8 +51,8 @@ export class SetbonusListComponent implements OnInit {
 		}
 	}
 
-	onSetbonusListUpdate(setbonuss: SetBonusModel[]) {
-		this.virtualSetbonuss = setbonuss;
+	onSetbonusListUpdate(setbonuses: SetBonusModel[]) {
+		this.virtualSetbonuses = setbonuses;
 	}
 
 	loadItems() {
@@ -60,45 +62,36 @@ export class SetbonusListComponent implements OnInit {
 	}
 
 	search(query: string) {
-		this.filteredSetbonuss = this.setbonuses;
+		this.filteredSetbonuses = this.setbonuses;
 
-		//if (query) {
-		//	query = query.toLowerCase().trim();
-		//	const queryParts = query.split(' ');
+		if (query) {
+			query = query.toLowerCase().trim();
+			const queryParts = query.split(' ');
 
-		//	if (this.setbonuses) {
-		//		for (const setbonus of this.setbonuses) {
-		//			const itemName = setbonus.name.toLowerCase();
-		//			const skills = this.dataService.getSkills(setbonus.skills);
+			if (this.setbonuses) {
+				for (const setbonus of this.setbonuses) {
+					const itemName = setbonus.name.toLowerCase();
 
-		//			const nameMatch = itemName.includes(query);
+					const nameMatch = itemName.includes(query);
 
-		//			let skillMatch = true;
-		//			for (const queryPart of queryParts) {
-		//				skillMatch = _.some(skills, skill => skill.name.toLowerCase().includes(queryPart));
-		//				if (!skillMatch) {
-		//					break;
-		//				}
-		//			}
-
-		//			if (!nameMatch && !skillMatch) {
-		//				this.filteredSetbonuss = _.reject(this.filteredSetbonuss, d => d.name === setbonus.name);
-		//			}
-		//		}
-		//	}
-		//} else {
-		//	this.resetSearchResults();
-		//}
+					if (!nameMatch) {
+						this.filteredSetbonuses = _.reject(this.filteredSetbonuses, d => d.name === setbonus.name);
+					}
+				}
+			}
+		} else {
+			this.resetSearchResults();
+		}
 	}
 
 	resetSearchResults() {
 		this.searchBox.nativeElement.value = null;
-		this.filteredSetbonuss = this.setbonuses;
+		this.filteredSetbonuses = this.setbonuses;
 	}
 
 	selectSetbonus(setbonus: SetBonusModel) {
-		//const newSetbonus = Object.assign({}, setbonus);
-		//this.slotService.selectSetbonus(newSetbonus);
+		const newSetbonus = Object.assign({}, setbonus);
+		this.slotService.selectSetbonus(newSetbonus);
 	}
 
 	getSkills(setbonus: SetBonusModel): SkillModel[] {

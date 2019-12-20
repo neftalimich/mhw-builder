@@ -122,6 +122,12 @@ export class AppComponent implements OnInit, AfterViewInit {
 			}
 		});
 
+		this.slotService.setbonusSelected$.subscribe(setBonus => {
+			if (this.itemListModal) {
+				this.itemListModal.isOpen = !setBonus;
+			}
+		});
+
 		this.slotService.modificationSelected$.subscribe(modification => {
 			if (this.itemListModal) {
 				this.itemListModal.isOpen = !modification;
@@ -214,7 +220,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
 	clearAllItems() {
 		if (confirm('Are you sure you want to clear all items?')) {
-			this.buildService.loadBuild('#v2iiiiiiiii');
+			this.buildService.loadBuild('#v3iiiiiiiii');
 		} else {
 		}
 	}

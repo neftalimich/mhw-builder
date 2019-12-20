@@ -1,4 +1,4 @@
-<div class="container" (click)="clicked()" (pointerenter)="setTooltipKinsect($event, kinsect)" (pointerleave)="clearTooltipKinsect()">
+<div class="container" (pointerenter)="setTooltipKinsect($event, kinsect)" (pointerleave)="clearTooltipKinsect()">
 	<div class="elementAilment">
 		<div class="element-slot" (click)="elementDropdown.toggle($event)">
 			<div class="element selected-element">
@@ -34,10 +34,10 @@
 		</div>
 	</div>
 	<div class="awakenings">
-		<div class="awakening-skill">
+		<div class="awakening-skill" (click)="clicked()">
 			<div class="awakening-type">
 				<div class="awakening selected-awakening">
-					<span>TEOSTRA TECHNIQUE</span>
+					<span>{{setbonus?.name}}</span>
 				</div>
 			</div>
 		</div>
@@ -55,10 +55,13 @@
 			<div class="awakening-level">
 				<div *ngIf="awakeningLevel.type != awakeningTypes.None">
 					<span *ngFor="let key of awakeningLevel.level | numbersArr">
-						<i class="fas fa-star c-pointer" (click)="selectAwakeningLevel(key+1,awakeningLevel)"></i>
+						<i class="fas fa-star fa-sm c-pointer" style="color:#ffc836" (click)="selectAwakeningLevel(key+1,awakeningLevel)"></i>
 					</span>
 					<span *ngFor="let key of ((i==0 ? 6:5) - awakeningLevel.level) | numbersArr">
-						<i class="far fa-star c-pointer" (click)="selectAwakeningLevel(key+1+awakeningLevel.level,awakeningLevel)"></i>
+						<i class="far fa-star fa-sm c-pointer" style="color:#ffc836" (click)="selectAwakeningLevel(key+1+awakeningLevel.level,awakeningLevel)"></i>
+					</span>
+					<span *ngIf="i!=0">
+						<i class="far fa-star fa-sm c-pointer" style="color:#525252"></i>
 					</span>
 				</div>
 			</div>

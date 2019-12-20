@@ -16,27 +16,6 @@
 					<span class="r1">Rarity </span><span class="r2">R</span>{{setbonus.rarity}}
 				</div>
 			</div>
-
-			<div class="skills-container" *ngIf="setbonus.skills.length == 1">
-				<div class="skill-container" *ngFor="let skill of getSkills(setbonus)">
-					<div class="count">
-						{{getSkillCount(setbonus, skill)}}
-					</div>
-					<div class="name">
-						{{skill.name}}
-					</div>
-				</div>
-			</div>
-			<div class="skills-container-2" *ngIf="setbonus.skills.length > 1">
-				<div class="skill-container" *ngFor="let skill of getSkills(setbonus)">
-					<div class="count">
-						{{getSkillCount(setbonus, skill)}}
-					</div>
-					<div class="name">
-						{{skill.name}}
-					</div>
-				</div>
-			</div>
 		</div>
 	</virtual-scroller>
 </div>

@@ -13,6 +13,8 @@ import { ElementType } from '../types/element.type';
 import { ItemType } from '../types/item.type';
 import { SkillService } from './skill.service';
 import { StatService } from './stat.service';
+import { SetBonusModel } from '../models/set-bonus.model';
+import { SkillReferenceModel } from '../models/skill-reference.model';
 
 @Injectable()
 export class EquipmentService {
@@ -22,6 +24,7 @@ export class EquipmentService {
 	public augmentations: AugmentationModel[];
 	public upgradeContainer: UpgradeContainerModel;
 	public awakenings: AwakeningLevelModel[];
+	public awakeningSetbonus: SetBonusModel;
 	public modifications: ModificationModel[];
 	public kinsect: KinsectModel;
 
@@ -33,6 +36,7 @@ export class EquipmentService {
 		this.decorations = [];
 		this.augmentations = [];
 		this.awakenings = [];
+		this.awakeningSetbonus = null;
 		this.modifications = [];
 
 		this.skillService.skillsUpdated$.subscribe(skills => {
@@ -73,6 +77,22 @@ export class EquipmentService {
 		this.awakenings = awakenings;
 		if (awakenings.length && updateStats) {
 			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.awakenings, this.modifications, this.kinsect);
+		}
+	}
+
+	addSetbonus(setbonus: SetBonusModel, updateStats: boolean = true) {
+		this.awakeningSetbonus = setbonus;
+		let weapon = this.items.find(x => x.itemType == ItemType.Weapon);
+		if (!weapon.skills.find(skill => skill.id == setbonus.id)) {
+			let skillBonus: SkillReferenceModel = {
+				id: setbonus.id,
+				level: null
+			};
+			weapon.skills.push(skillBonus);
+		}
+
+		if (updateStats) {
+			this.updateSkills();
 		}
 	}
 
@@ -117,6 +137,13 @@ export class EquipmentService {
 
 	removeAwakening() {
 		this.awakenings = [];
+		this.updateSkills();
+	}
+
+	removeSetbonus() {
+		let weapon = this.items.find(x => x.itemType == ItemType.Weapon);
+		weapon.skills.splice(weapon.skills.findIndex(skill => skill.id == this.awakeningSetbonus.id), 1);
+		this.awakeningSetbonus = null;
 		this.updateSkills();
 	}
 

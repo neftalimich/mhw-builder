@@ -19,6 +19,7 @@ export class BuildItemModel {
 	upgradeLevels?: number[];
 	customLevelIds?: number[];
 	awakenings?: number[][];
+	setbonusId?: number;
 	level?: number;
 	modificationIds: number[];
 

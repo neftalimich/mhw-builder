@@ -22,6 +22,7 @@ import { EquipmentCategoryType } from '../types/equipment-category.type';
 import { ItemType } from '../types/item.type';
 import { WeaponType } from '../types/weapon.type';
 import { EquipmentService } from './equipment.service';
+import { SetBonusModel } from '../models/set-bonus.model';
 
 @Injectable()
 export class SlotService {
@@ -33,7 +34,7 @@ export class SlotService {
 	public decorationSelected$ = new Subject<SlotEventModel<DecorationSlotComponent, DecorationModel>>();
 	public augmentationSelected$ = new Subject<SlotEventModel<AugmentationSlotComponent, AugmentationModel>>();
 	public upgradeSelected$ = new Subject<SlotEventModel<UpgradeSlotComponent, UpgradeContainerModel>>();
-	public awakeningSelected$ = new Subject<SlotEventModel<AwakeningSlotComponent, AwakeningLevelModel[]>>();
+	public setbonusSelected$ = new Subject();
 	public modificationSelected$ = new Subject<SlotEventModel<ModificationSlotComponent, ModificationModel>>();
 	public kinsectSelected$ = new Subject<SlotEventModel<KinsectSlotComponent, KinsectModel>>();
 	public itemLevelChanged$ = new Subject();
@@ -62,6 +63,7 @@ export class SlotService {
 	selectedAwakeningSlot: AwakeningSlotComponent;
 	selectedModificationSlot: ModificationSlotComponent;
 	selectedKinsectSlot: KinsectSlotComponent;
+	selectedSetbonusSlot: AwakeningSlotComponent;
 
 	onlyIceborne: boolean;
 
@@ -152,6 +154,16 @@ export class SlotService {
 		}
 	}
 
+	selectSetbonusSlot(slot: AwakeningSlotComponent) {
+		this.clearSlotSelect();
+		this.selectedSetbonusSlot = slot;
+
+		if (this.selectedSetbonusSlot) {
+			this.selectedSetbonusSlot.selected = true;
+			this.anySlotSelected$.next(this.selectedSetbonusSlot);
+		}
+	}
+
 	selectModificationSlot(slot: ModificationSlotComponent) {
 		this.clearSlotSelect();
 		this.selectedModificationSlot = slot;
@@ -221,7 +233,7 @@ export class SlotService {
 	clearAwakeningSlot(slot: AwakeningSlotComponent) {
 		this.equipmentService.removeAwakening();
 		slot.awakenings = [];
-		this.awakeningSelected$.next({ slot: slot, equipment: null });
+		this.weaponModSelected$.next({ slot: slot, equipment: null });
 	}
 
 	clearModificationSlot(slot: ModificationSlotComponent) {
@@ -429,7 +441,18 @@ export class SlotService {
 		this.equipmentService.addAwakenings(awakenings, updateStats);
 		//ToDo: Slots
 		this.selectedAwakeningSlot.awakenings = awakenings;
-		this.awakeningSelected$.next({ slot: this.selectedAwakeningSlot, equipment: awakenings });
+		this.weaponModSelected$.next({ slot: this.selectedAwakeningSlot, equipment: awakenings });
+	}
+
+	selectSetbonus(setbonus: SetBonusModel, updateStats: boolean = true) {
+		if (this.selectedSetbonusSlot) {
+			if (this.selectedSetbonusSlot.setbonus) {
+				this.equipmentService.removeSetbonus();
+			}
+			this.equipmentService.addSetbonus(setbonus, updateStats);
+			this.selectedSetbonusSlot.setbonus = setbonus;
+			this.setbonusSelected$.next({ slot: this.selectedSetbonusSlot, equipment: setbonus });
+		}
 	}
 
 	selectModification(modification: ModificationModel, updateStats: boolean = true) {
@@ -594,6 +617,10 @@ export class SlotService {
 			this.selectedUpgradeSlot.selected = false;
 		}
 
+		if (this.selectedSetbonusSlot) {
+			this.selectedSetbonusSlot.selected = false;
+		}
+
 		if (this.selectedModificationSlot) {
 			this.selectedModificationSlot.selected = false;
 		}
@@ -606,6 +633,7 @@ export class SlotService {
 		this.selectedDecorationSlot = null;
 		this.selectedAugmentationSlot = null;
 		this.selectedUpgradeSlot = null;
+		this.selectedSetbonusSlot = null;
 		this.selectedModificationSlot = null;
 		this.selectedKinsectSlot = null;
 	}
