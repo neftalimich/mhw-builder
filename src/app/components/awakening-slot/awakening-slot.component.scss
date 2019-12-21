@@ -1,14 +1,14 @@
-$slotHeight: 28px;
+$slotHeight: 24px;
 $slotPadding: 2px;
 
-$elementSize: 24px;
-$elementSpacing: 4px;
+$elementSize: 22px;
+$elementSpacing: 2px;
 
 .container {
 	display: grid;
 	height: auto;
 	grid-template-rows: auto auto auto;
-	font-size: 14px;
+	font-size: 12px;
 	cursor: pointer;
 	border-radius: 3px;
 	background-color: rgb(50,50,50);
@@ -19,8 +19,8 @@ $elementSpacing: 4px;
 		display: grid;
 		height: $slotHeight;
 		grid-template-columns: repeat(2,1fr);
-		padding: 2px 4px;
-		grid-gap: 8px;
+		padding: 2px 2px;
+		grid-gap: 6px;
 
 		.element-slot {
 			grid-column: 1;
@@ -91,21 +91,31 @@ $elementSpacing: 4px;
 		grid-row: 2;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		padding: 2px 4px;
-		grid-gap: 8px;
+		padding: 2px 2px;
+		grid-gap: 6px;
 
 		.awakening-skill {
 			height: $slotHeight;
-			display: grid;
-			grid-template-columns: auto;
 
 			.awakening-type {
-				grid-column: 1;
+				display: grid;
+				grid-template-columns: auto max-content;
 				height: $slotHeight;
 				background-color: rgb(41, 41, 41);
 				border-radius: 3px;
 
 				.awakening {
+					display: flex;
+					margin: $elementSpacing;
+					height: $elementSize;
+
+					span {
+						padding: $elementSpacing;
+						line-height: $elementSize - $elementSpacing * 2;
+					}
+				}
+
+				.awakening-level {
 					display: flex;
 					margin: $elementSpacing;
 					height: $elementSize;
@@ -145,14 +155,10 @@ $elementSpacing: 4px;
 				grid-column: 2;
 				height: $slotHeight;
 				line-height: $slotHeight;
-				margin-left: 4px;
+				margin-left: 2px;
 			}
 		}
 	}
-}
-
-.star-icon {
-	color: #ffd800;
 }
 
 .selected {

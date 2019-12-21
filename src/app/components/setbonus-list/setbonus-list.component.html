@@ -12,8 +12,10 @@
 				<div class="name">
 					{{setbonus.name}}
 				</div>
-				<div class="rarity" *ngIf="setbonus.rarity">
-					<span class="r1">Rarity </span><span class="r2">R</span>{{setbonus.rarity}}
+				<div class="level" *ngIf="setbonus.level">
+					<span *ngFor="let key of setbonus.level | numbersArr">
+						<i class="fas fa-star fa-sm star-icon"></i>
+					</span>
 				</div>
 			</div>
 		</div>

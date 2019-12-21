@@ -68,7 +68,7 @@ $searchHeight: 38px;
 				overflow: hidden;
 			}
 
-			.rarity {
+			.level {
 				height: 22px;
 				line-height: 22px;
 				background-color: #272727;
@@ -155,17 +155,5 @@ $searchHeight: 38px;
 
 	.scroll-item-container:hover {
 		background-color: #525252;
-	}
-}
-
-@media only screen and (max-width: 716px) {
-	.rarity {
-		.r1 {
-			display: none !important;
-		}
-
-		.r2 {
-			display: inline !important;
-		}
 	}
 }

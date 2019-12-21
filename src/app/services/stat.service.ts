@@ -305,14 +305,7 @@ export class StatService {
 		}
 		let weaponModifier = this.dataService.getWeaponModifier(weapon.weaponType).attackModifier;
 
-		//let weaponAttack = weapon.baseAttack;
-		//let weaponAffinity = weapon.baseAffinityPercent;
-		//let weaponDefense = weapon.defense[0];
-		//let weaponSlots = weapon.slots;
-		//let weaponAilment = weapon.ailmentBaseAttack;
-		//let weaponElement = weapon.elementBaseAttack;
-
-		let awakeningAttack: number[] = this.awakeningsData.find(x => x.type == AwakeningType.Attack).awakenings[0];
+		let awakeningAttack: number[] = this.awakeningsData.find(x => x.type == AwakeningType.Attack).awakenings[weaponIndex];
 		let awakeningAffinity: number[] = this.awakeningsData.find(x => x.type == AwakeningType.Affinity).awakenings[0];
 		let awakeningDefense: number[] = this.awakeningsData.find(x => x.type == AwakeningType.Defense).awakenings[0];
 		let awakeningSlot: number[] = this.awakeningsData.find(x => x.type == AwakeningType.Slot).awakenings[0];

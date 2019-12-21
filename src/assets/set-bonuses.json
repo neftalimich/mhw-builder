@@ -12,6 +12,8 @@
 	{
 		"id": "kirinFavor",
 		"name": "Kirin Favor",
+		"buildId": 10,
+		"level": 4,
 		"setLevels": [
 			{
 				"id": "captureMaster",
@@ -42,6 +44,8 @@
 	{
 		"id": "kushalaDaoraFlight",
 		"name": "Kushala Daora Flight",
+		"buildId": 11,
+		"level": 4,
 		"setLevels": [
 			{
 				"id": "nullifyWindPressure",
@@ -51,8 +55,9 @@
 	},
 	{
 		"id": "teostraTechnique",
-		"buildId": 1,
 		"name": "Teostra Technique",
+		"buildId": 1,
+		"level": 4,
 		"setLevels": [
 			{
 				"id": "mastersTouch",
@@ -111,6 +116,8 @@
 	{
 		"id": "odogaronMastery",
 		"name": "Odogaron Mastery",
+		"buildId": 14,
+		"level": 3,
 		"setLevels": [
 			{
 				"id": "punishingDraw",
@@ -225,6 +232,8 @@
 	{
 		"id": "anjanathDominance",
 		"name": "Anjanath Dominance",
+		"buildId": 23,
+		"level": 3,
 		"setLevels": [
 			{
 				"id": "staminaCapUp",
@@ -235,6 +244,8 @@
 	{
 		"id": "rathianEssence",
 		"name": "Rathian Essence",
+		"buildId": 4,
+		"level": 3,
 		"setLevels": [
 			{
 				"id": "poisonDurationUp",
@@ -245,6 +256,8 @@
 	{
 		"id": "ancientDivinity",
 		"name": "Ancient Divinity",
+		"buildId": 18,
+		"level": 3,
 		"setLevels": [
 			{
 				"id": "criticalStatus",
@@ -255,6 +268,8 @@
 	{
 		"id": "commissionAlchemy",
 		"name": "Commission Alchemy",
+		"buildId": 20,
+		"level": 3,
 		"setLevels": [
 			{
 				"id": "bombardierSecret",
@@ -265,6 +280,8 @@
 	{
 		"id": "bariothHiddenArt",
 		"name": "Barioth Hidden Art",
+		"buildId": 24,
+		"level": 3,
 		"setLevels": [
 			{
 				"id": "punishingDraw",
@@ -275,6 +292,8 @@
 	{
 		"id": "rathalosEssence",
 		"name": "Rathalos Essence",
+		"buildId": 3,
+		"level": 3,
 		"setLevels": [
 			{
 				"id": "mindsEyeBallistics",
@@ -285,6 +304,8 @@
 	{
 		"id": "diablosAmbition",
 		"name": "Diablos Ambition",
+		"buildId": 5,
+		"level": 3,
 		"setLevels": [
 			{
 				"id": "sluggerSecret",
@@ -295,6 +316,8 @@
 	{
 		"id": "legianaAmbition",
 		"name": "Legiana Ambition",
+		"buildId": 26,
+		"level": 3,
 		"setLevels": [
 			{
 				"id": "bowChargePlus",
@@ -315,6 +338,8 @@
 	{
 		"id": "uragaanAmbition",
 		"name": "Uragaan Ambition",
+		"buildId": 21,
+		"level": 3,
 		"setLevels": [
 			{
 				"id": "guardUp",
@@ -324,8 +349,9 @@
 	},
 	{
 		"id": "nargacugaEssence",
-		"buildId": 2,
 		"name": "Nargacuga Essence",
+		"buildId": 17,
+		"level": 4,
 		"setLevels": [
 			{
 				"id": "trueRazorSharpSpareShot",
@@ -336,6 +362,8 @@
 	{
 		"id": "glavenusEssence",
 		"name": "Glavenus Essence",
+		"buildId": 15,
+		"level": 3,
 		"setLevels": [
 			{
 				"id": "maximumMightSecret",
@@ -346,6 +374,8 @@
 	{
 		"id": "brachydiosEssence",
 		"name": "Brachydios Essence",
+		"buildId": 13,
+		"level": 3,
 		"setLevels": [
 			{
 				"id": "agitatorSecret",
@@ -355,9 +385,9 @@
 	},
 	{
 		"id": "tigrexEssence",
-		"buildId": 3,
-		"rarity": 3,
 		"name": "Tigrex Essence",
+		"buildId": 12,
+		"level": 3,
 		"setLevels": [
 			{
 				"id": "freeMealSecret",
@@ -378,6 +408,8 @@
 	{
 		"id": "bazelgeuseAmbition",
 		"name": "Bazelgeuse Ambition",
+		"buildId": 22,
+		"level": 3,
 		"setLevels": [
 			{
 				"id": "guts",
@@ -388,6 +420,8 @@
 	{
 		"id": "deviljhoEssence",
 		"name": "Deviljho Essence",
+		"buildId": 6,
+		"level": 4,
 		"setLevels": [
 			{
 				"id": "staminaThiefSecrect",
@@ -398,6 +432,8 @@
 	{
 		"id": "velkhanaDivinity",
 		"name": "Velkhana Divinity",
+		"buildId": 25,
+		"level": 4,
 		"setLevels": [
 			{
 				"id": "criticalElement",
@@ -412,6 +448,8 @@
 	{
 		"id": "vaalSoulvein",
 		"name": "Vaal Soulvein",
+		"buildId": 16,
+		"level": 4,
 		"setLevels": [
 			{
 				"id": "superRecovery",
@@ -432,6 +470,8 @@
 	{
 		"id": "namielleDivinity",
 		"name": "Namielle Divinity",
+		"buildId": 27,
+		"level": 4,
 		"setLevels": [
 			{
 				"id": "elementAcceleration",
@@ -446,6 +486,8 @@
 	{
 		"id": "sharaIshvaldaDivinity",
 		"name": "Shara Ishvalda Divinity",
+		"buildId": 19,
+		"level": 5,
 		"setLevels": [
 			{
 				"id": "gaiasVeil",
@@ -460,6 +502,8 @@
 	{
 		"id": "zorahMagdarosEssence",
 		"name": "Zorah Magdaros Essence",
+		"buildId": 29,
+		"level": 5,
 		"setLevels": [
 			{
 				"id": "artillerySecret",
@@ -470,6 +514,8 @@
 	{
 		"id": "zinogreEssence",
 		"name": "Zinogre Essence",
+		"buildId": 30,
+		"level": 5,
 		"setLevels": [
 			{
 				"id": "latentPowerSecret",
@@ -480,6 +526,8 @@
 	{
 		"id": "goldenRathianEssence",
 		"name": "Golden Rathian Essence",
+		"buildId": 8,
+		"level": 5,
 		"setLevels": [
 			{
 				"id": "divineBlessingSecret",
@@ -494,6 +542,8 @@
 	{
 		"id": "silverRathalosEssence",
 		"name": "Silver Rathalos Essence",
+		"buildId": 7,
+		"level": 5,
 		"setLevels": [
 			{
 				"id": "slingerAmmoSecret",
@@ -508,6 +558,8 @@
 	{
 		"id": "lunastraEssence",
 		"name": "Lunastra Essence",
+		"buildId": 2,
+		"level": 5,
 		"setLevels": [
 			{
 				"id": "toolSpecialistSecret",
@@ -518,6 +570,8 @@
 	{
 		"id": "nergiganteAmbition",
 		"name": "Nergigante Ambition",
+		"buildId": 28,
+		"level": 5,
 		"setLevels": [
 			{
 				"id": "hastenRecovery",
@@ -542,6 +596,8 @@
 	{
 		"id": "rajangRage",
 		"name": "Rajang Rage",
+		"buildId": 9,
+		"level": 5,
 		"setLevels": [
 			{
 				"id": "mindsEyeBallistics",

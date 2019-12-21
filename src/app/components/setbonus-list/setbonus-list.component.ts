@@ -57,6 +57,16 @@ export class SetbonusListComponent implements OnInit {
 
 	loadItems() {
 		this.setbonuses = this.dataService.getSetBonuses();
+		console.log(this.setbonuses);
+		this.setbonuses = this.setbonuses.sort((a, b) => {
+			if (a.name > b.name) {
+				return 1;
+			} else if (a.name < b.name) {
+				return -1;
+			} else {
+				return 0;
+			}
+		});
 		this.resetSearchResults();
 		setTimeout(() => this.searchBox.nativeElement.focus(), 250);
 	}
