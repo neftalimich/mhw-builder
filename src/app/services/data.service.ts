@@ -15,12 +15,12 @@ import { SkillModel } from '../models/skill.model';
 import { UpgradeModel } from '../models/upgrade.model';
 import { WeaponModifierModel } from '../models/weapon-modifier.model';
 import { AppDataProvider } from '../providers/app-data.provider';
+import { AilmentType } from '../types/ailment.type';
 import { DamageType } from '../types/damage.type';
+import { ElementType } from '../types/element.type';
 import { EquipmentCategoryType } from '../types/equipment-category.type';
 import { ItemType } from '../types/item.type';
 import { WeaponType } from '../types/weapon.type';
-import { ElementType } from '../types/element.type';
-import { AilmentType } from '../types/ailment.type';
 
 @Injectable()
 export class DataService {
@@ -155,7 +155,7 @@ export class DataService {
 		return _.find(this.appDataProvider.appData.awakenings, awakening => awakening.id == id);
 	}
 
-	getSafiElementAttack(weaponIndex:number): number {
+	getSafiElementAttack(weaponIndex: number): number {
 		let elementAttack = 0;
 		let elementAwakening: AwakeningModel = this.appDataProvider.appData.awakenings.find(x => x.id == 6);
 		elementAttack = elementAwakening.safiElements[weaponIndex];
@@ -169,7 +169,7 @@ export class DataService {
 		return ailmentAttack;
 	}
 
-	getSafiElementName(element: ElementType):string {
+	getSafiElementName(element: ElementType): string {
 		let elementName = '';
 		switch (element) {
 			case ElementType.Fire:
@@ -193,7 +193,7 @@ export class DataService {
 		return elementName;
 	}
 
-	getSafiAilmentName(ailment: AilmentType):string {
+	getSafiAilmentName(ailment: AilmentType): string {
 		let ailmentName = '';
 		switch (ailment) {
 			case AilmentType.Paralysis:
@@ -214,7 +214,7 @@ export class DataService {
 		return ailmentName;
 	}
 
-	getSafiName(weaponType: WeaponType):string {
+	getSafiName(weaponType: WeaponType): string {
 		let name = '';
 		switch (weaponType) {
 			case WeaponType.GreatSword:
@@ -265,7 +265,7 @@ export class DataService {
 		return name;
 	}
 
-	getSafiWeaponName(weaponType: WeaponType, weaponElement: ElementType, weaponAilment: AilmentType):string {
+	getSafiWeaponName(weaponType: WeaponType, weaponElement: ElementType, weaponAilment: AilmentType): string {
 		let weaponName = 'Safi\'s ';
 
 		let safiName = this.getSafiName(weaponType);

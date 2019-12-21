@@ -316,7 +316,7 @@ export class BuildService {
 							item.ailmentBaseAttack = null;
 						}
 					}
-					if (item.upgradeType==2 &&( buildItem.elementId != null || buildItem.ailmentId != null)) {
+					if (item.upgradeType == 2 && (buildItem.elementId != null || buildItem.ailmentId != null)) {
 						item.name = this.dataService.getSafiWeaponName(item.weaponType, item.element, item.ailment);
 					}
 					// -------------------- Awakenings
@@ -331,7 +331,6 @@ export class BuildService {
 							});
 						}
 						slot.awakeningSlot.awakenings = awakeningLevels;
-						this.slotService.selectAwakeningSlot(slot.awakeningSlot);
 						this.slotService.selectAwakenings(awakeningLevels);
 					}
 					// -------------------- Setbonus
@@ -616,6 +615,4 @@ export class BuildService {
 
 		return result;
 	}
-
-	
 }

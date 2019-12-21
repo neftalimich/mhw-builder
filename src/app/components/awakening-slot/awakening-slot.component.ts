@@ -1,8 +1,8 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { AwakeningLevelModel } from '../../models/awakening-level.model';
-import { AwakeningModel } from '../../models/awakening.model';
 import { KeyValuePair } from '../../models/common/key-value-pair.model';
 import { KinsectModel } from '../../models/kinsect.model';
+import { SetBonusModel } from '../../models/set-bonus.model';
 import { DataService } from '../../services/data.service';
 import { SlotService } from '../../services/slot.service';
 import { TooltipService } from '../../services/tooltip.service';
@@ -12,7 +12,6 @@ import { ElementType } from '../../types/element.type';
 import { ItemType } from '../../types/item.type';
 import { WeaponType } from '../../types/weapon.type';
 import { DropdownComponent } from '../common/dropdown/dropdown.component';
-import { SetBonusModel } from '../../models/set-bonus.model';
 
 @Component({
 	selector: 'mhw-builder-awakening-slot',

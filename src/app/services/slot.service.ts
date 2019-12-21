@@ -14,6 +14,7 @@ import { DecorationModel } from '../models/decoration.model';
 import { ItemModel } from '../models/item.model';
 import { KinsectModel } from '../models/kinsect.model';
 import { ModificationModel } from '../models/modification.model';
+import { SetBonusModel } from '../models/set-bonus.model';
 import { SlotEventModel } from '../models/slot-event.model';
 import { UpgradeContainerModel } from '../models/upgrade-container.model';
 import { AilmentType } from '../types/ailment.type';
@@ -22,7 +23,6 @@ import { EquipmentCategoryType } from '../types/equipment-category.type';
 import { ItemType } from '../types/item.type';
 import { WeaponType } from '../types/weapon.type';
 import { EquipmentService } from './equipment.service';
-import { SetBonusModel } from '../models/set-bonus.model';
 
 @Injectable()
 export class SlotService {
@@ -141,16 +141,6 @@ export class SlotService {
 		if (this.selectedUpgradeSlot) {
 			this.selectedUpgradeSlot.selected = true;
 			this.anySlotSelected$.next(this.selectedUpgradeSlot);
-		}
-	}
-
-	selectAwakeningSlot(slot: AwakeningSlotComponent) {
-		this.clearSlotSelect();
-		this.selectedAwakeningSlot = slot;
-
-		if (this.selectedAwakeningSlot) {
-			this.selectedAwakeningSlot.selected = true;
-			this.anySlotSelected$.next(this.selectedAwakeningSlot);
 		}
 	}
 

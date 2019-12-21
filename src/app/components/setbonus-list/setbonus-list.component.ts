@@ -1,11 +1,11 @@
-import { Component, ElementRef, EventEmitter, HostListener, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, HostListener, OnInit, Output, ViewChild } from '@angular/core';
 import * as _ from 'lodash';
 import { VirtualScrollerComponent } from 'ngx-virtual-scroller';
+import { SetBonusModel } from '../../models/set-bonus.model';
 import { SkillModel } from '../../models/skill.model';
 import { DataService } from '../../services/data.service';
 import { SlotService } from '../../services/slot.service';
 import { TooltipService } from '../../services/tooltip.service';
-import { SetBonusModel } from '../../models/set-bonus.model';
 
 @Component({
 	selector: 'mhw-builder-setbonus-list',

@@ -55,13 +55,13 @@
 			<div class="awakening-level">
 				<div *ngIf="awakeningLevel.type != awakeningTypes.None">
 					<span *ngFor="let key of awakeningLevel.level | numbersArr">
-						<i class="fas fa-star fa-sm c-pointer" style="color:#ffc836" (click)="selectAwakeningLevel(key+1,awakeningLevel)"></i>
+						<i class="fas fa-star fa-sm c-pointer" (click)="selectAwakeningLevel(key+1,awakeningLevel)"></i>
 					</span>
 					<span *ngFor="let key of ((i==0 ? 6:5) - awakeningLevel.level) | numbersArr">
-						<i class="far fa-star fa-sm c-pointer" style="color:#ffc836" (click)="selectAwakeningLevel(key+1+awakeningLevel.level,awakeningLevel)"></i>
+						<i class="far fa-star fa-sm star-icon c-pointer" (click)="selectAwakeningLevel(key+1+awakeningLevel.level,awakeningLevel)"></i>
 					</span>
 					<span *ngIf="i!=0">
-						<i class="far fa-star fa-sm c-pointer" style="color:#525252"></i>
+						<i class="far fa-star fa-sm star-icon c-pointer" style="color:#525252"></i>
 					</span>
 				</div>
 			</div>

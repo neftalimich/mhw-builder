@@ -7,14 +7,14 @@ import { EquippedSkillModel } from '../models/equipped-skill.model';
 import { ItemModel } from '../models/item.model';
 import { KinsectModel } from '../models/kinsect.model';
 import { ModificationModel } from '../models/modification.model';
+import { SetBonusModel } from '../models/set-bonus.model';
+import { SkillReferenceModel } from '../models/skill-reference.model';
 import { UpgradeContainerModel } from '../models/upgrade-container.model';
 import { AilmentType } from '../types/ailment.type';
 import { ElementType } from '../types/element.type';
 import { ItemType } from '../types/item.type';
 import { SkillService } from './skill.service';
 import { StatService } from './stat.service';
-import { SetBonusModel } from '../models/set-bonus.model';
-import { SkillReferenceModel } from '../models/skill-reference.model';
 
 @Injectable()
 export class EquipmentService {
