@@ -159,7 +159,7 @@ export class AwakeningSlotComponent implements OnInit {
 	selectAwakeningType(selectedAwakening: KeyValuePair<number, string>, awakeningLevel: AwakeningLevelModel) {
 		awakeningLevel.id = selectedAwakening.key;
 		awakeningLevel.type = AwakeningType[selectedAwakening.value];
-		awakeningLevel.level = awakeningLevel.level ?? 5;
+		awakeningLevel.level = awakeningLevel.level != 0 ? awakeningLevel.level: 5;
 		this.slotService.selectAwakenings(this.awakenings);
 	}
 
