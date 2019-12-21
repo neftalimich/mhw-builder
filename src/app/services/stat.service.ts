@@ -533,11 +533,28 @@ export class StatService {
 		this.stats.elementCap = this.nearestTen(Math.round(this.stats.effectiveElementAttack + (this.stats.effectiveElementAttack * elementAttackIncreaseCap)));
 		this.stats.ailmentCap = this.nearestTen(Math.round(this.stats.effectiveAilmentAttack + (this.stats.effectiveAilmentAttack * ailmentAttackIncreaseCap)));
 
-		this.stats.totalElementAttack = Math.min(this.stats.effectiveElementAttack + this.stats.effectivePassiveElementAttack, this.stats.elementCap);
-		this.stats.totalAilmentAttack = Math.min(this.stats.effectiveAilmentAttack + this.stats.effectivePassiveAilmentAttack, this.stats.ailmentCap);
+		// this.stats.totalElementAttack = Math.min(this.stats.effectiveElementAttack + this.stats.effectivePassiveElementAttack, this.stats.elementCap);
+		// this.stats.totalAilmentAttack = Math.min(this.stats.effectiveAilmentAttack + this.stats.effectivePassiveAilmentAttack, this.stats.ailmentCap);
+		// this.stats.elementCapped = this.stats.totalElementAttack > 0 && (this.stats.effectiveElementAttack + this.stats.effectivePassiveElementAttack) > this.stats.elementCap;
+		// this.stats.ailmentCapped = this.stats.totalAilmentAttack > 0 && (this.stats.effectiveAilmentAttack + this.stats.effectivePassiveAilmentAttack) > this.stats.ailmentCap;
 
-		this.stats.elementCapped = this.stats.totalElementAttack > 0 && (this.stats.effectiveElementAttack + this.stats.effectivePassiveElementAttack) > this.stats.elementCap;
-		this.stats.ailmentCapped = this.stats.totalAilmentAttack > 0 && (this.stats.effectiveAilmentAttack + this.stats.effectivePassiveAilmentAttack) > this.stats.ailmentCap;
+		this.stats.totalElementAttack =
+			this.stats.effectiveElementAttack
+			+ this.stats.effectivePassiveElementAttack;
+		this.stats.totalElementAttackPotential =
+			this.stats.effectiveElementAttack
+			+ this.stats.effectivePassiveElementAttack
+			+ this.stats.activeElementAttack;
+		this.stats.totalElementAttackPotential = this.nearestTen(this.stats.totalElementAttackPotential * 10) / 10
+
+		this.stats.totalAilmentAttack =
+			this.stats.effectiveAilmentAttack * (1 + this.stats.effectivePassiveAilmentBuildupPercent / 100)
+			+ this.stats.effectivePassiveAilmentAttack;
+		this.stats.totalAilmentAttackPotential =
+			this.stats.effectiveAilmentAttack * (1 + this.stats.effectivePassiveAilmentBuildupPercent / 100 + this.stats.activeAilmentAttackBuildUpPercent / 100)
+			+ this.stats.effectivePassiveAilmentAttack
+			+ this.stats.activeAilmentAttack;
+		this.stats.totalAilmentAttackPotential = this.nearestTen(this.stats.totalAilmentAttackPotential * 10) / 10
 
 		if (this.checkElementless()) {
 			this.stats.totalAttack =

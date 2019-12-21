@@ -115,19 +115,23 @@ export class AwakeningSlotComponent implements OnInit {
 		this.slotService.selectSetbonusSlot(this);
 	}
 
-	clearSkillClicked(event: Event) {
-		//event.stopPropagation();
-		//this.slotService.clearAwakeningSlot(this);
-		//this.clearTooltipWeaponMod();
+	clearAwakeninsClicked(even: Event) {
+		
 	}
 
-	setTooltipKinsect(event: PointerEvent, kinsect: KinsectModel) {
+	clearSkillClicked(event: Event) {
+		this.setbonus = null;
+		event.stopPropagation();
+		this.slotService.clearSkillSlot(this);
+	}
+
+	setTooltipAwakening(event: PointerEvent, awakenins: AwakeningLevelModel[]) {
 		//if (event.pointerType == PointerType.Mouse) {
 		//	this.tooltipService.setKinsect(weaponMod);
 		//}
 	}
 
-	clearTooltipKinsect() {
+	clearTooltipAwakening() {
 		//this.tooltipService.setKinsect(null);
 	}
 
@@ -155,6 +159,7 @@ export class AwakeningSlotComponent implements OnInit {
 	selectAwakeningType(selectedAwakening: KeyValuePair<number, string>, awakeningLevel: AwakeningLevelModel) {
 		awakeningLevel.id = selectedAwakening.key;
 		awakeningLevel.type = AwakeningType[selectedAwakening.value];
+		awakeningLevel.level = awakeningLevel.level ?? 5;
 		this.slotService.selectAwakenings(this.awakenings);
 	}
 

@@ -9,7 +9,7 @@
 					{{weaponElement}}
 				</span>
 				<span *ngIf="!weaponElement || weaponElement == elementTypes.None">
-					Element
+					Element Type
 				</span>
 			</div>
 			<mhw-builder-dropdown #elementDropdown>
@@ -30,7 +30,7 @@
 					{{weaponAilment}}
 				</span>
 				<span *ngIf="!weaponAilment || weaponAilment == ailmentTypes.None">
-					Ailment
+					Ailment Type
 				</span>
 			</div>
 			<mhw-builder-dropdown #ailmentDropdown>
@@ -44,20 +44,25 @@
 		</div>
 	</div>
 	<div class="awakenings">
-		<div class="awakening-skill" (click)="clicked()">
+		<div class="awakening-skill">
 			<div class="awakening-type">
-				<div class="awakening selected-awakening">
+				<div class="awakening selected-awakening" (click)="clicked()">
 					<span *ngIf="setbonus">
 						{{setbonus?.name}}
 					</span>
 					<span *ngIf="!setbonus">
-						Skill
+						Ability
 					</span>
 				</div>
 				<div class="awakening-level">
 					<span *ngIf="setbonus?.level">
 						{{setbonus?.level}} <i class="fas fa-star star-icon"></i>
 					</span>
+				</div>
+				<div class="awakening-clear">
+					<button type="button" class="clear-button" (click)="clearSkillClicked($event)">
+						<i class="fas fa-times fa-sm"></i>
+					</button>
 				</div>
 			</div>
 		</div>

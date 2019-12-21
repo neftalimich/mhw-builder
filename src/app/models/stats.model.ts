@@ -45,6 +45,7 @@ export class StatsModel {
 	elementCap: number;
 	elementCapped: boolean;
 	totalElementAttack: number;
+	totalElementAttackPotential: number;
 
 	ailment: AilmentType;
 	baseAilmentAttack: number;
@@ -54,6 +55,7 @@ export class StatsModel {
 	ailmentCap: number;
 	ailmentCapped: boolean;
 	totalAilmentAttack: number;
+	totalAilmentAttackPotential: number;
 
 	elementAttackMultiplier: number;
 
@@ -155,6 +157,7 @@ export class StatsModel {
 		this.elementCap = 0;
 		this.elementCapped = false;
 		this.totalElementAttack = 0;
+		this.totalElementAttackPotential = 0;
 
 		this.ailment = null;
 		this.baseAilmentAttack = 0;
@@ -163,6 +166,7 @@ export class StatsModel {
 		this.ailmentCap = 0;
 		this.ailmentCapped = false;
 		this.totalAilmentAttack = 0;
+		this.totalAilmentAttackPotential = 0;
 
 		this.elementAttackMultiplier = 0;
 

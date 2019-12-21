@@ -18,6 +18,27 @@
 					</span>
 				</div>
 			</div>
+
+			<div class="skills-container" *ngIf="setbonus?.setLevels.length == 1">
+				<div class="skill-container" *ngFor="let bonus of getSkills(setbonus)">
+					<div class="count">
+						{{bonus.requiredCount}}
+					</div>
+					<div class="name">
+						{{bonus.skill.name}}
+					</div>
+				</div>
+			</div>
+			<div class="skills-container-2" *ngIf="setbonus?.setLevels.length > 1">
+				<div class="skill-container" *ngFor="let bonus of getSkills(setbonus)">
+					<div class="count">
+						{{bonus.requiredCount}}
+					</div>
+					<div class="name">
+						{{bonus.skill.name}}
+					</div>
+				</div>
+			</div>
 		</div>
 	</virtual-scroller>
 </div>

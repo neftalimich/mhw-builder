@@ -1004,7 +1004,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3009	SwitchAxe	12	Undying Light	1085	-15	0	Thunder	120	false					false	10;10;4;5;6;5;0	4	rajang	thunder		power		0
 3026	SwitchAxe	12	Infernal Cleave-axe+	945	0	0	Dragon	300	false				Average	false	13;2;2;7;4;3;9	2	stygian-zinogre	dragon		power		0
 3049	SwitchAxe	12	Xeno Martshu+	980	15	0	Dragon	270	false				Low	false	10;8;3;3;8;8;0	4;4	xeno-jiiva	dragon		power		0
-4049	SwitchAxe	12	Safi's SwitchAxe	945	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
+4049	SwitchAxe	12	Safi's SwitchAxe	945	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon		power	2	0
 2460	ChargeBlade	11	Chrome Fortress III	972	0	0	Thunder	360	true					false	13;3;3;6;5;7;3	1;1	ore	thunder		Impact	1	0
 2463	ChargeBlade	12	Despot's Thundergale	936	0	0	Thunder	390	false					false	11;3;9;3;3;9;2	2	zinogre	thunder		element		0
 2464	ChargeBlade	12	Ruinous Devastation	1044	0	0	Dragon	210	false				High	false	8;3;3;11;4;16;0	1	ruiner-nergigante	dragon		Impact		0
@@ -1043,7 +1043,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3016	ChargeBlade	12	Black Lightning Eagle	864	10	0	Thunder	270	false					false	1;1;3;5;5;10;15	1;1	workshop	thunder		Impact		0
 3027	ChargeBlade	12	Stygian Maledicta	972	0	0	Dragon	360	false				Average	false	10;2;2;7;4;3;12	2	stygian-zinogre	dragon		Impact		0
 3050	ChargeBlade	12	Xeno Ra'atz+	1008	15	0	Dragon	240	false				Low	false	9;8;3;3;8;9;0	4;4	xeno-jiiva	dragon		Impact		0
-4050	ChargeBlade	12	Safi's ChargeBlade	972	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
+4050	ChargeBlade	12	Safi's ChargeBlade	972	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon		Impact	2	0
 2525	InsectGlaive	11	Chrome Trident III	806	0	0				Blast	360	true		false	11;3;3;6;5;9;3	1;1	ore	blast		Sever	1	0
 2528	InsectGlaive	12	Despot's Twinbolt	806	0	0	Thunder	360	false					false	11;3;9;3;3;9;2	2	zinogre	thunder		Spirit & Strength Boost		0
 2529	InsectGlaive	12	Ruinous Catastrophe	899	0	0	Dragon	180	false				High	false	8;3;3;11;4;16;0	1	ruiner-nergigante	dragon		Sever		0

@@ -7,7 +7,7 @@ $elementSpacing: 2px;
 .container {
 	display: grid;
 	height: auto;
-	grid-template-rows: auto auto auto;
+	grid-template-rows: auto auto auto auto;
 	font-size: 12px;
 	cursor: pointer;
 	border-radius: 3px;
@@ -99,7 +99,7 @@ $elementSpacing: 2px;
 
 			.awakening-type {
 				display: grid;
-				grid-template-columns: auto max-content;
+				grid-template-columns: auto max-content min-content;
 				height: $slotHeight;
 				background-color: rgb(41, 41, 41);
 				border-radius: 3px;
@@ -124,6 +124,12 @@ $elementSpacing: 2px;
 						padding: $elementSpacing;
 						line-height: $elementSize - $elementSpacing * 2;
 					}
+				}
+
+				.awakening-clear {
+					display: flex;
+					margin: $elementSpacing;
+					height: $elementSize;
 				}
 			}
 		}

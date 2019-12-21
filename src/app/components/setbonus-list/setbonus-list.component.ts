@@ -1,11 +1,13 @@
 import { Component, ElementRef, EventEmitter, HostListener, OnInit, Output, ViewChild } from '@angular/core';
 import * as _ from 'lodash';
 import { VirtualScrollerComponent } from 'ngx-virtual-scroller';
+import { EquippedSetBonusDetailModel } from '../../models/equipped-set-bonus.model';
 import { SetBonusModel } from '../../models/set-bonus.model';
 import { SkillModel } from '../../models/skill.model';
 import { DataService } from '../../services/data.service';
 import { SlotService } from '../../services/slot.service';
 import { TooltipService } from '../../services/tooltip.service';
+import { ModeType } from '../../types/mode.type';
 
 @Component({
 	selector: 'mhw-builder-setbonus-list',
@@ -13,14 +15,6 @@ import { TooltipService } from '../../services/tooltip.service';
 	styleUrls: ['./setbonus-list.component.scss']
 })
 export class SetbonusListComponent implements OnInit {
-
-	//@Input()
-	//set setbonusLevel(setbonusLevel: number) {
-	//	this._setbonusLevel = setbonusLevel;
-	//	this.loadItems();
-	//}
-	//get setbonusLevel(): number { return this._setbonusLevel; }
-
 	@Output() setbonusSelected = new EventEmitter<SetBonusModel>();
 
 	@ViewChild('searchBox', { static: true }) searchBox: ElementRef;
@@ -57,7 +51,6 @@ export class SetbonusListComponent implements OnInit {
 
 	loadItems() {
 		this.setbonuses = this.dataService.getSetBonuses();
-		console.log(this.setbonuses);
 		this.setbonuses = this.setbonuses.sort((a, b) => {
 			if (a.name > b.name) {
 				return 1;
@@ -104,18 +97,17 @@ export class SetbonusListComponent implements OnInit {
 		this.slotService.selectSetbonus(newSetbonus);
 	}
 
-	getSkills(setbonus: SetBonusModel): SkillModel[] {
-		const result: SkillModel[] = [];
-		//for (const skill of setbonus.skills) {
-		//	result.push(this.dataService.getSkill(skill.id));
-		//}
+	getSkills(setbonus: SetBonusModel): EquippedSetBonusDetailModel[] {
+		const result: EquippedSetBonusDetailModel[] = [];
+		for (const level of setbonus.setLevels) {
+			let skill: SkillModel = JSON.parse(JSON.stringify(this.dataService.getSkill(level.id)));
+			let setbonus: EquippedSetBonusDetailModel = {
+				skill: skill,
+				mode: ModeType.Active,
+				requiredCount: level.pieces
+			};
+			result.push(setbonus);
+		}
 		return result;
-	}
-
-	getSkillCount(setbonus: SetBonusModel, skill: SkillModel): string {
-		//const itemSkill = _.find(setbonus.skills, s => s.id == skill.id);
-		//const result = `${itemSkill.level}/${skill.levels.length}`;
-		//return result;
-		return '';
 	}
 }

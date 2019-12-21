@@ -13,12 +13,10 @@
 				</span>
 			</span>
 		</div>
-		<div class="selected-custom" (click)="clicked()" (pointerenter)="setTooltipUpgrade($event, upgradeContainer)" (pointerleave)="clearTooltipUpgrade()">
-			<div *ngIf="upgradeContainer?.hasCustomUpgrades">
-				<span *ngFor="let customId of upgradeContainer.customUpgradeIds; let i = index">
-					<span [ngClass]="'hex-' + customId" style="font-size: 14px;">&#9672;</span>
-				</span>
-			</div>
+		<div *ngIf="upgradeContainer?.hasCustomUpgrades" class="selected-custom" (click)="clicked()" (pointerenter)="setTooltipUpgrade($event, upgradeContainer)" (pointerleave)="clearTooltipUpgrade()">
+			<span *ngFor="let customId of upgradeContainer.customUpgradeIds; let i = index">
+				<span [ngClass]="'hex-' + customId" style="font-size: 14px;">&#9672;</span>
+			</span>
 		</div>
 	</div>
 

@@ -226,6 +226,12 @@ export class SlotService {
 		this.weaponModSelected$.next({ slot: slot, equipment: null });
 	}
 
+	clearSkillSlot(slot: AwakeningSlotComponent) {
+		this.equipmentService.removeSetbonus();
+		slot.setbonus = null;
+		this.weaponModSelected$.next({ slot: slot, equipment: null });
+	}
+
 	clearModificationSlot(slot: ModificationSlotComponent) {
 		this.equipmentService.removeModification(slot.modification);
 		slot.modification = null;

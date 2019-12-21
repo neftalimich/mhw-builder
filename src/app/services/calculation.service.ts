@@ -385,7 +385,7 @@ export class CalculationService {
 	private getAilmentAttack(stats: StatsModel, ailmentCalc: StatDetailModel): StatDetailModel {
 		const ailmentAttackCalc: StatDetailModel = {
 			name: 'Ailment Attack',
-			value: stats.totalAilmentAttack + stats.activeAilmentAttack,
+			value: stats.totalAilmentAttack,
 			valueColor: ailmentCalc.color,
 			icon: stats.ailment.toLowerCase() + (stats.effectiveAilmentAttack == 0 ? '-gray' : ''),
 			color: ailmentCalc.color,
@@ -395,6 +395,12 @@ export class CalculationService {
 					displayName: 'Weapon Base Ailment Attack',
 					name: 'base',
 					value: stats.baseAilmentAttack,
+					colorClass: 'blue'
+				},
+				{
+					displayName: 'Passive Ailment Buildup Percent',
+					name: 'passiveBuildup',
+					value: stats.effectivePassiveAilmentBuildupPercent / 100,
 					colorClass: 'green'
 				},
 				{
@@ -410,8 +416,8 @@ export class CalculationService {
 					colorClass: 'orange'
 				},
 				{
-					displayName: 'Active Ailment Attack Buildup',
-					name: 'builup',
+					displayName: 'Active Ailment Buildup Percent',
+					name: 'activeBuildup',
 					value: stats.activeAilmentAttackBuildUpPercent / 100,
 					colorClass: 'red'
 				}
@@ -423,16 +429,16 @@ export class CalculationService {
 				displayName: 'Hidden Ailment Multiplier',
 				name: 'multiplier',
 				value: stats.elementAttackMultiplier,
-				colorClass: 'blue'
+				colorClass: 'kakhi'
 			});
 
 			if (stats.elementAttackMultiplier) {
-				ailmentAttackCalc.calculationTemplate = `({base} × {multiplier} + {passive} + {active}) × (1 + {buildup}) ≈ ${stats.totalAilmentAttack}`;
+				ailmentAttackCalc.calculationTemplate = `({base} × {multiplier} (1 + {passiveBuildup} + {activeBuildup}) + {passive} + {active} ≈ ${stats.totalAilmentAttackPotential}`;
 			} else {
-				ailmentAttackCalc.calculationTemplate = `({base} + {passive} + {active}) × {multiplier} × (1 + {buildup}) ≈ ${stats.totalAilmentAttack}`;
+				ailmentAttackCalc.calculationTemplate = `({base} × (1 + {passiveBuildup} + {activeBuildup}) + {passive} + {active}) × {multiplier} ≈ ${stats.totalAilmentAttackPotential}`;
 			}
 		} else {
-			ailmentAttackCalc.calculationTemplate = `({base} + {passive} + {active}) × (1 + {buildup}) = ${stats.totalAilmentAttack}`;
+			ailmentAttackCalc.calculationTemplate = `{base} × (1 + {passiveBuildup} + {activeBuildup}) + {passive} + {active} ≈ ${stats.totalAilmentAttackPotential}`;
 		}
 
 		return ailmentAttackCalc;
@@ -461,7 +467,7 @@ export class CalculationService {
 	private getElementAttack(stats: StatsModel, elementCalc: StatDetailModel): StatDetailModel {
 		const elementAttackCalc: StatDetailModel = {
 			name: 'Elment Attack',
-			value: stats.totalElementAttack + stats.effectivePassiveElementAttack + stats.activeElementAttack,
+			value: stats.totalElementAttack,
 			valueColor: elementCalc.color,
 			icon: stats.element.toLowerCase() + (stats.effectiveElementAttack == 0 ? '-gray' : ''),
 			color: elementCalc.color,
@@ -497,12 +503,12 @@ export class CalculationService {
 			});
 
 			if (stats.elementAttackMultiplier) {
-				elementAttackCalc.calculationTemplate = `{base} × {multiplier} + {passive} + {active} ≈ ${stats.totalElementAttack}`;
+				elementAttackCalc.calculationTemplate = `{base} × {multiplier} + {passive} + {active} ≈ ${stats.totalElementAttackPotential}`;
 			} else {
-				elementAttackCalc.calculationTemplate = `({base} + {passive} + {active}) × {multiplier} ≈ ${stats.totalElementAttack}`;
+				elementAttackCalc.calculationTemplate = `({base} + {passive} + {active}) × {multiplier} ≈ ${stats.totalElementAttackPotential}`;
 			}
 		} else {
-			elementAttackCalc.calculationTemplate = `{base} + {passive} + {active} = ${stats.totalElementAttack}`;
+			elementAttackCalc.calculationTemplate = `{base} + {passive} + {active} = ${stats.totalElementAttackPotential}`;
 		}
 
 		return elementAttackCalc;
@@ -542,7 +548,7 @@ export class CalculationService {
 
 		const trueAilment =
 			this.getAilmentAverage(
-				stats.totalAilmentAttack * (100 + stats.effectivePassiveAilmentBuildupPercent) / 100,
+				stats.totalAilmentAttack,
 				0,
 				0,
 				1,
@@ -552,10 +558,10 @@ export class CalculationService {
 		const rawAttackAvgCalc: StatDetailModel = {
 			name: 'True Raw Average',
 			value: Number.isInteger(rawAttackAvg) ? rawAttackAvg : 0,
-			extra1: stats.totalAilmentAttack ? trueAilment : null,
-			class1: stats.totalAilmentAttack ? stats.ailment : null,
-			extra2: stats.totalElementAttack ? trueElement : null,
-			class2: stats.totalElementAttack ? stats.element : null,
+			extra1: stats.ailment ? trueAilment : null,
+			class1: stats.ailment ? stats.ailment : null,
+			extra2: stats.element ? trueElement : null,
+			class2: stats.element ? stats.element : null,
 			calculationTemplate: `({totalAttack} × {totalAffinity} × {criticalBoost} + {totalAttack} × (100% - {totalAffinity})) <br>÷ {weaponModifier} <br>=<br> [${rawAttackAvg}`,
 			calculationVariables: [
 				{
@@ -599,7 +605,7 @@ export class CalculationService {
 				totalAffinityPotential,
 				stats.passiveCriticalBoostPercent,
 				stats.weaponAttackModifier);
-		const auxDivider = stats.totalAilmentAttack && stats.totalElementAttack ? 2 : 1;
+		const auxDivider = (stats.ailment && stats.element) ? 2 : 1;
 
 		let elementAffinity = totalAffinityPotential;
 		let criticalElementModifier = 0;
@@ -611,7 +617,7 @@ export class CalculationService {
 			elementAffinity = 0;
 		}
 		const trueElementPotential = this.getElementAverage(
-			stats.totalElementAttack + stats.activeElementAttack,
+			stats.totalElementAttackPotential,
 			Math.max(elementAffinity, 0),
 			criticalElementModifier,
 			stats.effectiveElementalSharpnessModifier,
@@ -628,7 +634,7 @@ export class CalculationService {
 		}
 		const trueAilmentPotential =
 			this.getAilmentAverage(
-				(stats.totalAilmentAttack + stats.activeAilmentAttack) * (100 + stats.effectivePassiveAilmentBuildupPercent) / 100,
+				stats.totalAilmentAttackPotential,
 				Math.max(ailmentAffinity, 0),
 				criticalStatusModifier,
 				stats.effectiveElementalSharpnessModifier,
@@ -638,10 +644,10 @@ export class CalculationService {
 		const rawAttackAveragePotentialCalc: StatDetailModel = {
 			name: 'True Raw Average Potential',
 			value: Number.isInteger(rawAttackAveragePotential) ? rawAttackAveragePotential : 0,
-			extra1: stats.totalAilmentAttack ? trueAilmentPotential : null,
-			class1: stats.totalAilmentAttack ? stats.ailment : null,
-			extra2: stats.totalElementAttack ? trueElementPotential : null,
-			class2: stats.totalElementAttack ? stats.element : null,
+			extra1: stats.ailment ? trueAilmentPotential : null,
+			class1: stats.ailment ? stats.ailment : null,
+			extra2: stats.element ? trueElementPotential : null,
+			class2: stats.element ? stats.element : null,
 			calculationTemplate:
 				`({totalAttackPotential} × {totalAffinityPotential} × {criticalBoost} + {totalAttackPotential} × (100% - {totalAffinityPotential})) <br>÷ {weaponModifier} <br>=<br> [${rawAttackAveragePotential}`,
 			calculationVariables: [
