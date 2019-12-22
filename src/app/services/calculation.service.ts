@@ -540,19 +540,20 @@ export class CalculationService {
 
 		const trueElement =
 			this.getElementAverage(
-				stats.totalElementAttack,
-				0,
-				0,
-				1,
-				auxDivider);
+				stats.totalElementAttack, // Attack
+				0, // Affinity
+				0, // Critical Modifier
+				1, // Weaponn Modifier
+				auxDivider // Divider
+			);
 
 		const trueAilment =
 			this.getAilmentAverage(
-				stats.totalAilmentAttack,
-				0,
-				0,
-				1,
-				auxDivider
+				stats.totalAilmentAttack, // Attack
+				0, // Affinity
+				0, // Critical Modifier
+				1, // Weapon Modifier
+				auxDivider // Divider
 			);
 
 		const rawAttackAvgCalc: StatDetailModel = {

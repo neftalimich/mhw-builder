@@ -157,14 +157,14 @@ export class DataService {
 
 	getSafiElementAttack(weaponIndex: number): number {
 		let elementAttack = 0;
-		let elementAwakening: AwakeningModel = this.appDataProvider.appData.awakenings.find(x => x.id == 6);
+		const elementAwakening: AwakeningModel = this.appDataProvider.appData.awakenings.find(x => x.id == 6);
 		elementAttack = elementAwakening.safiElements[weaponIndex];
 		return elementAttack;
 	}
 
 	getSafiAilmentAttack(weaponIndex: number, ailmentType: number): number {
 		let ailmentAttack = 0;
-		let ailmentAwakening = this.appDataProvider.appData.awakenings.find(x => x.id == 5);
+		const ailmentAwakening = this.appDataProvider.appData.awakenings.find(x => x.id == 5);
 		ailmentAttack = ailmentAwakening.safiAilments[weaponIndex][ailmentType];
 		return ailmentAttack;
 	}
@@ -268,7 +268,7 @@ export class DataService {
 	getSafiWeaponName(weaponType: WeaponType, weaponElement: ElementType, weaponAilment: AilmentType): string {
 		let weaponName = 'Safi\'s ';
 
-		let safiName = this.getSafiName(weaponType);
+		const safiName = this.getSafiName(weaponType);
 		let elementName = '';
 
 		if (weaponElement != ElementType.None) {
@@ -433,7 +433,6 @@ export class DataService {
 
 	getAilment(ailmentId: number): AilmentType {
 		let ailment = null;
-		let ailmentAttack = 0;
 		switch (ailmentId) {
 			case 1:
 				ailment = AilmentType.Paralysis;

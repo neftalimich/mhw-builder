@@ -1,3 +1,5 @@
+@import "../../../sass/common";
+
 $slotHeight: 24px;
 $slotPadding: 2px;
 
@@ -17,8 +19,7 @@ $elementSpacing: 2px;
 	.elementAilment {
 		grid-row: 1;
 		display: grid;
-		height: $slotHeight;
-		grid-template-columns: repeat(2,1fr);
+		grid-template-columns: repeat(2, 1fr);
 		padding: 2px 2px;
 		grid-gap: 6px;
 
@@ -95,14 +96,13 @@ $elementSpacing: 2px;
 		grid-gap: 6px;
 
 		.awakening-skill {
-			height: $slotHeight;
-
 			.awakening-type {
 				display: grid;
 				grid-template-columns: auto max-content min-content;
 				height: $slotHeight;
 				background-color: rgb(41, 41, 41);
 				border-radius: 3px;
+				align-self: start;
 
 				.awakening {
 					display: flex;

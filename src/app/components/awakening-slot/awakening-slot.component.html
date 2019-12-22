@@ -66,29 +66,29 @@
 				</div>
 			</div>
 		</div>
-		<div class="awakening-slot" *ngFor="let awakeningLevel of awakenings; let i = index">
+		<div class="awakening-slot" *ngFor="let awakening of awakenings; let i = index">
 			<div class="awakening-type" (click)="awakeningDropdown.toggle($event)">
 				<div class="awakening selected-awakening">
-					<span *ngIf="awakeningLevel.type != awakeningTypes.None">
-						{{awakeningLevel.type}}
+					<span *ngIf="awakening.type != awakeningTypes.None">
+						{{awakening.type}}
 					</span>
-					<span *ngIf="awakeningLevel.type == awakeningTypes.None">
+					<span *ngIf="awakening.type == awakeningTypes.None">
 						Awakening
 					</span>
 				</div>
 				<mhw-builder-dropdown #awakeningDropdown>
-					<div class="awakening" *ngFor="let e of awakeningValues" (click)="selectAwakeningType(e,awakeningLevel)">
+					<div class="awakening" *ngFor="let e of awakeningValues" (click)="selectAwakeningType(e,awakening)">
 						<span>{{e.value}}</span>
 					</div>
 				</mhw-builder-dropdown>
 			</div>
 			<div class="awakening-level">
-				<div *ngIf="awakeningLevel.type != awakeningTypes.None">
-					<span *ngFor="let key of awakeningLevel.level | numbersArr">
-						<i class="fas fa-star fa-sm star-icon c-pointer" (click)="selectAwakeningLevel(key+1,awakeningLevel)"></i>
+				<div *ngIf="awakening.type != awakeningTypes.None">
+					<span *ngFor="let key of awakening.level | numbersArr">
+						<i class="fas fa-star fa-sm c-pointer" [ngClass]="awakening.type" (click)="selectAwakeningLevel(key+1,awakening)"></i>
 					</span>
-					<span *ngFor="let key of ((i==0 ? 6:5) - awakeningLevel.level) | numbersArr">
-						<i class="far fa-star fa-sm star-icon c-pointer" (click)="selectAwakeningLevel(key+1+awakeningLevel.level,awakeningLevel)"></i>
+					<span *ngFor="let key of ((i==0 ? 6:5) - awakening.level) | numbersArr">
+						<i class="far fa-star fa-sm c-pointer" [ngClass]="awakening.type" (click)="selectAwakeningLevel(key+1+awakening.level,awakening)"></i>
 					</span>
 					<span *ngIf="i!=0">
 						<i class="far fa-star fa-sm c-pointer" style="color:#525252"></i>

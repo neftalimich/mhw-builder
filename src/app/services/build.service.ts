@@ -321,9 +321,9 @@ export class BuildService {
 					}
 					// -------------------- Awakenings
 					if (buildItem.awakenings != null) {
-						let awakeningLevels: AwakeningLevelModel[] = [];
+						const awakeningLevels: AwakeningLevelModel[] = [];
 						for (const awk of buildItem.awakenings) {
-							let awkAux = this.dataService.getAwakening(awk[0]);
+							const awkAux = this.dataService.getAwakening(awk[0]);
 							awakeningLevels.push({
 								id: awkAux.id,
 								type: awkAux.type,
@@ -335,7 +335,7 @@ export class BuildService {
 					}
 					// -------------------- Setbonus
 					if (buildItem.setbonusId != null) {
-						let setbonus = this.dataService.getSetBonusByBuildId(buildItem.setbonusId);
+						const setbonus = this.dataService.getSetBonusByBuildId(buildItem.setbonusId);
 						if (setbonus) {
 							slot.awakeningSlot.setbonus = setbonus;
 							this.slotService.selectSetbonusSlot(slot.awakeningSlot);
@@ -557,7 +557,7 @@ export class BuildService {
 
 					// -------------------- Setbonus
 					if (this.equipmentService.awakeningSetbonus) {
-						result += `s${this.equipmentService.awakeningSetbonus.buildId}`
+						result += `s${this.equipmentService.awakeningSetbonus.buildId}`;
 					}
 					// --------------------
 				}
@@ -586,13 +586,13 @@ export class BuildService {
 					}
 				}
 				if (item.element) {
-					let elementId = this.dataService.getElementId(item.element);
+					const elementId = this.dataService.getElementId(item.element);
 					result += `f${elementId}`;
 				} else {
 					result += `f${0}`;
 				}
 				if (item.ailment) {
-					let ailmentId = this.dataService.getAilmentId(item.ailment);
+					const ailmentId = this.dataService.getAilmentId(item.ailment);
 					result += `g${ailmentId}`;
 				} else {
 					result += `g${0}`;

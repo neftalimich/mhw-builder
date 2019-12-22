@@ -18,6 +18,7 @@ import { SetBonusModel } from '../models/set-bonus.model';
 import { SlotEventModel } from '../models/slot-event.model';
 import { UpgradeContainerModel } from '../models/upgrade-container.model';
 import { AilmentType } from '../types/ailment.type';
+import { AwakeningType } from '../types/awakening.type';
 import { ElementType } from '../types/element.type';
 import { EquipmentCategoryType } from '../types/equipment-category.type';
 import { ItemType } from '../types/item.type';
@@ -435,7 +436,8 @@ export class SlotService {
 			this.equipmentService.removeAwakening();
 		}
 		this.equipmentService.addAwakenings(awakenings, updateStats);
-		//ToDo: Slots
+		this.applySlotAwakening();
+
 		this.selectedAwakeningSlot.awakenings = awakenings;
 		this.weaponModSelected$.next({ slot: this.selectedAwakeningSlot, equipment: awakenings });
 	}
@@ -577,6 +579,24 @@ export class SlotService {
 				this.weaponSlot.item.slots = _.reject(this.weaponSlot.item.slots, decorationSlot => decorationSlot === augDecorationSlot);
 				this.equipmentService.removeDecoration(this.weaponSlot.decorationSlots.last.decoration);
 			}
+		}
+	}
+
+	private applySlotAwakening() {
+		// ToImprove
+		const slotAwakening = this.equipmentService.awakenings.find(x => x.type == AwakeningType.Slot);
+		if (slotAwakening && slotAwakening.level - 1 > 0) {
+			if (slotAwakening.level - 1 > 0) {
+				if (slotAwakening.level - 1 < 5) {
+					this.weaponSlot.item.slots = [{ level: 4 }, { level: slotAwakening.level - 1 }];
+				} else {
+					this.weaponSlot.item.slots = [{ level: 4 }, { level: 4 }, { level: 1 }];
+				}
+			} else {
+				this.weaponSlot.item.slots = [{ level: 4 }];
+			}
+		} else {
+			this.weaponSlot.item.slots = [{ level: 4 }];
 		}
 	}
 

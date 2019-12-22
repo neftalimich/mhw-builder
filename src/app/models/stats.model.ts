@@ -6,6 +6,7 @@ import { ExtraDataModel } from './extra-data.model';
 import { KinsectModel } from './kinsect.model';
 
 export class StatsModel {
+	weaponType?: WeaponType;
 	totalAttack: number;
 	totalAttackPotential: number;
 	attack: number;
@@ -18,7 +19,7 @@ export class StatsModel {
 	sharpnessLevelsBar: number[];
 	effectivePhysicalSharpnessModifier: number;
 	effectiveElementalSharpnessModifier: number;
-	weaponType?: WeaponType;
+	extraSlot: number;
 	weaponAttackModifier: number;
 	critElementModifier: number;
 	trueCritElementModifier: number;
@@ -135,6 +136,7 @@ export class StatsModel {
 		this.extraSharpness = 0;
 		this.effectivePhysicalSharpnessModifier = 1;
 		this.effectiveElementalSharpnessModifier = 1;
+		this.extraSlot = 0;
 		this.weaponAttackModifier = 0;
 		this.critElementModifier = 0;
 		this.trueCritElementModifier = 0;

@@ -1,7 +1,6 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { AwakeningLevelModel } from '../../models/awakening-level.model';
 import { KeyValuePair } from '../../models/common/key-value-pair.model';
-import { KinsectModel } from '../../models/kinsect.model';
 import { SetBonusModel } from '../../models/set-bonus.model';
 import { DataService } from '../../services/data.service';
 import { SlotService } from '../../services/slot.service';
@@ -10,6 +9,7 @@ import { AilmentType } from '../../types/ailment.type';
 import { AwakeningType } from '../../types/awakening.type';
 import { ElementType } from '../../types/element.type';
 import { ItemType } from '../../types/item.type';
+import { PointerType } from '../../types/pointer.type';
 import { WeaponType } from '../../types/weapon.type';
 import { DropdownComponent } from '../common/dropdown/dropdown.component';
 
@@ -105,6 +105,7 @@ export class AwakeningSlotComponent implements OnInit {
 		Object.keys(AilmentType).map(key => {
 			this.ailmentValues.push({ key: key, value: key });
 		});
+		this.ailmentValues.pop();
 		this.awakeningValues = [];
 		Object.keys(AwakeningType).map((key, index) => {
 			this.awakeningValues.push({ key: index, value: key });
@@ -115,9 +116,7 @@ export class AwakeningSlotComponent implements OnInit {
 		this.slotService.selectSetbonusSlot(this);
 	}
 
-	clearAwakeninsClicked(even: Event) {
-		
-	}
+	clearAwakeninsClicked(even: Event) { }
 
 	clearSkillClicked(event: Event) {
 		this.setbonus = null;
@@ -126,18 +125,16 @@ export class AwakeningSlotComponent implements OnInit {
 	}
 
 	setTooltipAwakening(event: PointerEvent, awakenins: AwakeningLevelModel[]) {
-		//if (event.pointerType == PointerType.Mouse) {
-		//	this.tooltipService.setKinsect(weaponMod);
-		//}
+		if (event.pointerType == PointerType.Mouse) {
+		}
 	}
 
 	clearTooltipAwakening() {
-		//this.tooltipService.setKinsect(null);
 	}
 
 	selectElement(selectedElement: ElementType) {
 		this.weaponElement = selectedElement;
-		let elementAttack = this.dataService.getSafiElementAttack(this.weaponIndex);
+		const elementAttack = this.dataService.getSafiElementAttack(this.weaponIndex);
 		this.changeWeaponName();
 		this.slotService.selectWeaponElement(selectedElement, elementAttack);
 	}
@@ -147,7 +144,7 @@ export class AwakeningSlotComponent implements OnInit {
 		if (selectedAilment == AilmentType.Poison || selectedAilment == AilmentType.Blast) {
 			ailmentType = 1;
 		}
-		let ailmentAttack = this.dataService.getSafiAilmentAttack(this.weaponIndex, ailmentType);
+		const ailmentAttack = this.dataService.getSafiAilmentAttack(this.weaponIndex, ailmentType);
 		this.changeWeaponName();
 		this.slotService.selectWeaponAilment(selectedAilment, ailmentAttack);
 	}
@@ -159,7 +156,7 @@ export class AwakeningSlotComponent implements OnInit {
 	selectAwakeningType(selectedAwakening: KeyValuePair<number, string>, awakeningLevel: AwakeningLevelModel) {
 		awakeningLevel.id = selectedAwakening.key;
 		awakeningLevel.type = AwakeningType[selectedAwakening.value];
-		awakeningLevel.level = awakeningLevel.level != 0 ? awakeningLevel.level: 5;
+		awakeningLevel.level = awakeningLevel.level != 0 ? awakeningLevel.level : 5;
 		this.slotService.selectAwakenings(this.awakenings);
 	}
 

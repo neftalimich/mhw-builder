@@ -21,6 +21,7 @@ import { ModeType } from '../types/mode.type';
 import { WeaponType } from '../types/weapon.type';
 import { CalculationService } from './calculation.service';
 import { DataService } from './data.service';
+import { SlotModel } from '../models/slot.model';
 
 @Injectable()
 export class StatService {
@@ -39,10 +40,18 @@ export class StatService {
 		this.awakeningsData = this.dataService.getAwakenings();
 	}
 
-	update(skills: EquippedSkillModel[], items: ItemModel[], augmentations: AugmentationModel[], upgradeContainer: UpgradeContainerModel, awakenings: AwakeningLevelModel[], modifications: ModificationModel[], kinsect: KinsectModel) {
+	update(
+		skills: EquippedSkillModel[],
+		items: ItemModel[],
+		augmentations: AugmentationModel[],
+		upgradeContainer: UpgradeContainerModel,
+		awakenings: AwakeningLevelModel[],
+		modifications: ModificationModel[],
+		kinsect: KinsectModel) {
+
 		this.stats = new StatsModel();
 		// ---------------------------- Awakenings
-		let weaponItem = items.find(x => x.itemType == ItemType.Weapon);
+		const weaponItem = items.find(x => x.itemType == ItemType.Weapon);
 		if (weaponItem && awakenings.length) {
 			this.updateAwakenings(weaponItem, awakenings);
 		}
@@ -292,7 +301,6 @@ export class StatService {
 	}
 
 	private updateAwakenings(weapon: ItemModel, awakenings: AwakeningLevelModel[]) {
-		//console.log(weapon, awakenings);
 		let weaponIndex = 0;
 		for (const type in WeaponType) {
 			if (isNaN(Number(type))) {
@@ -303,17 +311,17 @@ export class StatService {
 				}
 			}
 		}
-		let weaponModifier = this.dataService.getWeaponModifier(weapon.weaponType).attackModifier;
+		const weaponModifier = this.dataService.getWeaponModifier(weapon.weaponType).attackModifier;
 
-		let awakeningAttack: number[] = this.awakeningsData.find(x => x.type == AwakeningType.Attack).awakenings[weaponIndex];
-		let awakeningAffinity: number[] = this.awakeningsData.find(x => x.type == AwakeningType.Affinity).awakenings[0];
-		let awakeningDefense: number[] = this.awakeningsData.find(x => x.type == AwakeningType.Defense).awakenings[0];
-		let awakeningSlot: number[] = this.awakeningsData.find(x => x.type == AwakeningType.Slot).awakenings[0];
-		let awakeningAilment: number[] = this.awakeningsData.find(x => x.type == AwakeningType.Ailment).awakenings[weaponIndex];
-		let awakeningElement: number[] = this.awakeningsData.find(x => x.type == AwakeningType.Element).awakenings[weaponIndex];
-		let awakeningSharpness: number[] = this.awakeningsData.find(x => x.type == AwakeningType.Sharpness).awakenings[0];
+		const awakeningAttack: number[] = this.awakeningsData.find(x => x.type == AwakeningType.Attack).awakenings[weaponIndex];
+		const awakeningAffinity: number[] = this.awakeningsData.find(x => x.type == AwakeningType.Affinity).awakenings[0];
+		const awakeningDefense: number[] = this.awakeningsData.find(x => x.type == AwakeningType.Defense).awakenings[0];
+		const awakeningSlot: number[] = this.awakeningsData.find(x => x.type == AwakeningType.Slot).awakenings[0];
+		const awakeningAilment: number[] = this.awakeningsData.find(x => x.type == AwakeningType.Ailment).awakenings[weaponIndex];
+		const awakeningElement: number[] = this.awakeningsData.find(x => x.type == AwakeningType.Element).awakenings[weaponIndex];
+		const awakeningSharpness: number[] = this.awakeningsData.find(x => x.type == AwakeningType.Sharpness).awakenings[0];
 
-		for (let awakening of awakenings) {
+		for (const awakening of awakenings) {
 			if (awakening.level > 0) {
 				switch (awakening.type) {
 					case AwakeningType.Attack:
@@ -326,6 +334,7 @@ export class StatService {
 						this.stats.defense[0] += awakeningDefense[awakening.level - 1];
 						break;
 					case AwakeningType.Slot:
+						this.stats.extraSlot += awakeningSlot[awakening.level - 1];
 						break;
 					case AwakeningType.Ailment:
 						this.stats.baseAilmentAttack += awakeningAilment[awakening.level - 1];
@@ -437,11 +446,10 @@ export class StatService {
 
 		if (weapon && weapon.sharpnessLevelsBar) {
 			this.stats.sharpnessLevelsBar = JSON.parse(JSON.stringify(weapon.sharpnessLevelsBar));
-
 			if (weapon.sharpnessLevelsBar && !isNaN(weapon.sharpnessLevelsBar[0])) {
 				// Extra Sharpness
 				if (this.stats.extraSharpness > 0) {
-					let extraSharpness = this.stats.extraSharpness / 10;
+					const extraSharpness = this.stats.extraSharpness / 10;
 
 					const total = this.stats.sharpnessLevelsBar.reduce((a, b) => a + b, 0);
 					let maxHandicraft = 40 + 5 - total;
@@ -477,7 +485,7 @@ export class StatService {
 					}
 					let extraSharpnessRemove = extraSharpness;
 					for (let i = 0; i < this.stats.sharpnessLevelsBar.length; i++) {
-						let toRemove = Math.min(this.stats.sharpnessLevelsBar[i] - 1, extraSharpnessRemove);
+						const toRemove = Math.min(this.stats.sharpnessLevelsBar[i] - 1, extraSharpnessRemove);
 						this.stats.sharpnessLevelsBar[i] -= toRemove;
 						extraSharpnessRemove -= toRemove;
 						if (extraSharpnessRemove == 0) {
@@ -545,7 +553,7 @@ export class StatService {
 			this.stats.effectiveElementAttack
 			+ this.stats.effectivePassiveElementAttack
 			+ this.stats.activeElementAttack;
-		this.stats.totalElementAttackPotential = this.nearestTen(this.stats.totalElementAttackPotential * 10) / 10
+		this.stats.totalElementAttackPotential = this.nearestTen(this.stats.totalElementAttackPotential * 10) / 10;
 
 		this.stats.totalAilmentAttack =
 			this.stats.effectiveAilmentAttack * (1 + this.stats.effectivePassiveAilmentBuildupPercent / 100)
@@ -554,7 +562,7 @@ export class StatService {
 			this.stats.effectiveAilmentAttack * (1 + this.stats.effectivePassiveAilmentBuildupPercent / 100 + this.stats.activeAilmentAttackBuildUpPercent / 100)
 			+ this.stats.effectivePassiveAilmentAttack
 			+ this.stats.activeAilmentAttack;
-		this.stats.totalAilmentAttackPotential = this.nearestTen(this.stats.totalAilmentAttackPotential * 10) / 10
+		this.stats.totalAilmentAttackPotential = this.nearestTen(this.stats.totalAilmentAttackPotential * 10) / 10;
 
 		if (this.checkElementless()) {
 			this.stats.totalAttack =

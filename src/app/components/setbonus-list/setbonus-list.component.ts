@@ -100,13 +100,12 @@ export class SetbonusListComponent implements OnInit {
 	getSkills(setbonus: SetBonusModel): EquippedSetBonusDetailModel[] {
 		const result: EquippedSetBonusDetailModel[] = [];
 		for (const level of setbonus.setLevels) {
-			let skill: SkillModel = JSON.parse(JSON.stringify(this.dataService.getSkill(level.id)));
-			let setbonus: EquippedSetBonusDetailModel = {
+			const skill: SkillModel = JSON.parse(JSON.stringify(this.dataService.getSkill(level.id)));
+			result.push({
 				skill: skill,
 				mode: ModeType.Active,
 				requiredCount: level.pieces
-			};
-			result.push(setbonus);
+			});
 		}
 		return result;
 	}

@@ -8,7 +8,6 @@ import { ItemModel } from '../models/item.model';
 import { KinsectModel } from '../models/kinsect.model';
 import { ModificationModel } from '../models/modification.model';
 import { SetBonusModel } from '../models/set-bonus.model';
-import { SkillReferenceModel } from '../models/skill-reference.model';
 import { UpgradeContainerModel } from '../models/upgrade-container.model';
 import { AilmentType } from '../types/ailment.type';
 import { ElementType } from '../types/element.type';
@@ -82,13 +81,12 @@ export class EquipmentService {
 
 	addSetbonus(setbonus: SetBonusModel, updateStats: boolean = true) {
 		this.awakeningSetbonus = setbonus;
-		let weapon = this.items.find(x => x.itemType == ItemType.Weapon);
+		const weapon = this.items.find(x => x.itemType == ItemType.Weapon);
 		if (!weapon.skills.find(skill => skill.id == setbonus.id)) {
-			let skillBonus: SkillReferenceModel = {
+			weapon.skills.push({
 				id: setbonus.id,
 				level: null
-			};
-			weapon.skills.push(skillBonus);
+			});
 		}
 
 		if (updateStats) {
@@ -141,7 +139,7 @@ export class EquipmentService {
 	}
 
 	removeSetbonus() {
-		let weapon = this.items.find(x => x.itemType == ItemType.Weapon);
+		const weapon = this.items.find(x => x.itemType == ItemType.Weapon);
 		weapon.skills.splice(weapon.skills.findIndex(skill => skill.id == this.awakeningSetbonus.id), 1);
 		this.awakeningSetbonus = null;
 		this.updateSkills();
@@ -157,7 +155,7 @@ export class EquipmentService {
 	}
 
 	changeElement(element: ElementType, elementAttack: number, updateStats: boolean = true) {
-		let weapon = this.items.find(x => x.itemType == ItemType.Weapon);
+		const weapon = this.items.find(x => x.itemType == ItemType.Weapon);
 		if (element != ElementType.None) {
 			weapon.element = element;
 			weapon.elementBaseAttack = elementAttack;
@@ -171,7 +169,7 @@ export class EquipmentService {
 	}
 
 	changeAilment(ailment: AilmentType, ailmentAttack: number, updateStats: boolean = true) {
-		let weapon = this.items.find(x => x.itemType == ItemType.Weapon);
+		const weapon = this.items.find(x => x.itemType == ItemType.Weapon);
 		if (ailment != AilmentType.None) {
 			weapon.ailment = ailment;
 			weapon.ailmentBaseAttack = ailmentAttack;
@@ -185,7 +183,7 @@ export class EquipmentService {
 	}
 
 	changeWeaponName(weaponName: string) {
-		let weapon = this.items.find(x => x.itemType == ItemType.Weapon);
+		const weapon = this.items.find(x => x.itemType == ItemType.Weapon);
 		weapon.name = weaponName;
 	}
 

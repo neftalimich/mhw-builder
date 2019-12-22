@@ -1,5 +1,5 @@
 export enum AwakeningType {
-	None='None',
+	None = 'None',
 	Attack = 'Attack',
 	Affinity = 'Affinity',
 	Defense = 'Defense',

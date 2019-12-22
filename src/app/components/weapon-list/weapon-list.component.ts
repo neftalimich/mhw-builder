@@ -8,7 +8,6 @@ import { SlotService } from '../../services/slot.service';
 import { EquipmentCategoryType } from '../../types/equipment-category.type';
 import { ItemType } from '../../types/item.type';
 import { WeaponType } from '../../types/weapon.type';
-import { SkillReferenceModel } from '../../models/skill-reference.model';
 
 @Component({
 	selector: 'mhw-builder-weapon-list',
@@ -32,7 +31,7 @@ export class WeaponListComponent implements OnInit {
 	set onlyIceborne(onlyIceborne: boolean) {
 		this._onlyIceborne = onlyIceborne;
 		this.applyIcborneFilter();
-		this.search({key:'Filter'},this.searchBox.nativeElement.value);
+		this.search({ key: 'Filter' }, this.searchBox.nativeElement.value);
 		this.weaponTypeSort = '';
 	}
 	get onlyIceborne(): boolean { return this._onlyIceborne; }
@@ -107,7 +106,7 @@ export class WeaponListComponent implements OnInit {
 					for (const item of this.filteredItems) {
 						const itemName = item.name.toLowerCase();
 
-						let match = _.some(queryParts, queryPart => {
+						const match = _.some(queryParts, queryPart => {
 							const nameMatch = itemName.includes(queryPart);
 							const skillMatch = _.some(item.skills, skill => skill.id.toLowerCase().includes(queryPart));
 							const tagMatch = _.some(item.tags, tag => tag.toLowerCase().includes(queryPart));
