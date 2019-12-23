@@ -214,7 +214,7 @@ export class SlotService {
 
 	clearUpgradeSlot(slot: UpgradeSlotComponent) {
 		this.equipmentService.removeUpgrade();
-		this.applySlotUpgrade(0);
+		this.applySlotUpgrade();
 		if (slot.upgradeContainer) {
 			this.clearUpgradeContainer(slot.upgradeContainer);
 		}
@@ -417,11 +417,8 @@ export class SlotService {
 
 			this.equipmentService.addUpgrade(upgradeContainer, updateStats);
 
-			if (upgradeContainer.upgradeDetails.length > 0) {
-				this.applySlotUpgrade(upgradeContainer.upgradeDetails[3].level);
-			} else {
-				this.applySlotUpgrade(0);
-			}
+			this.applySlotUpgrade();
+
 			this.selectedUpgradeSlot.upgradeContainer = upgradeContainer;
 			this.upgradeSelected$.next({ slot: this.selectedUpgradeSlot, equipment: upgradeContainer });
 		}
@@ -557,46 +554,95 @@ export class SlotService {
 		}
 	}
 
-	private applySlotUpgrade(slotLevel: number) {
-		const augDecorationSlot = _.find(this.weaponSlot.item.slots, slot => slot.augmentation);
-
-		if (slotLevel > 0) {
-			this.changeDetector.detectChanges();
-			if (augDecorationSlot) {
-				augDecorationSlot.level = slotLevel;
-				const decoSlot = this.weaponSlot.decorationSlots.last;
-				if (decoSlot && decoSlot.decoration && augDecorationSlot.level < decoSlot.decoration.level) {
-					this.clearDecorationSlot(decoSlot);
-				}
-			} else {
-				if (!this.weaponSlot.item.slots) {
-					this.weaponSlot.item.slots = [];
-				}
-				this.weaponSlot.item.slots.push({ level: slotLevel, augmentation: true });
-			}
+	private applySlotUpgrade() {
+		const upgradeContainer = this.equipmentService.upgradeContainer;
+		if (upgradeContainer && upgradeContainer.upgradeDetails && upgradeContainer.upgradeDetails.length > 0) {
+			this.applySlotIncrement(upgradeContainer.upgradeDetails[3].level, ItemType.Upgrade);
 		} else {
-			if (_.some(this.weaponSlot.item.slots, decorationSlot => decorationSlot.augmentation)) {
-				this.weaponSlot.item.slots = _.reject(this.weaponSlot.item.slots, decorationSlot => decorationSlot === augDecorationSlot);
-				this.equipmentService.removeDecoration(this.weaponSlot.decorationSlots.last.decoration);
-			}
+			this.applySlotIncrement(0, ItemType.Upgrade);
 		}
 	}
 
 	private applySlotAwakening() {
-		// ToImprove
 		const slotAwakening = this.equipmentService.awakenings.find(x => x.type == AwakeningType.Slot);
 		if (slotAwakening && slotAwakening.level - 1 > 0) {
-			if (slotAwakening.level - 1 > 0) {
-				if (slotAwakening.level - 1 < 5) {
-					this.weaponSlot.item.slots = [{ level: 4 }, { level: slotAwakening.level - 1 }];
-				} else {
-					this.weaponSlot.item.slots = [{ level: 4 }, { level: 4 }, { level: 1 }];
+			this.applySlotIncrement(slotAwakening.level - 1, ItemType.Awakening);
+		} else {
+			this.applySlotIncrement(0, ItemType.Awakening);
+		}
+	}
+
+	private applySlotIncrement(extraSlots: number, itemType: ItemType) {
+		const decoSlotsIncremented = this.weaponSlot.item.slots.filter(x => x.slotsAdded && x.slotsAdded.some(y => y.itemType == itemType));
+		let totalAdded = 0;
+		if (decoSlotsIncremented) {
+			for (const decoSlot of decoSlotsIncremented) {
+				if (decoSlot.slotsAdded.length) {
+					for (const added of decoSlot.slotsAdded) {
+						if (added.itemType == itemType) {
+							totalAdded += added.level;
+						}
+					}
 				}
-			} else {
-				this.weaponSlot.item.slots = [{ level: 4 }];
+			}
+			if (totalAdded != extraSlots) {
+				this.slotsIncrementRecursive(extraSlots - totalAdded, itemType);
+			}
+		}
+	}
+
+	private slotsIncrementRecursive(extraSlots: number, itemType: ItemType) {
+		if (extraSlots > 0) {
+			for (const slot of this.weaponSlot.item.slots) {
+				if (slot.level < 4) {
+					const toAdd = Math.min(4 - slot.level, extraSlots);
+
+					if (!slot.slotsAdded) {
+						slot.slotsAdded = [];
+					}
+					const added = slot.slotsAdded.find(x => x.itemType == itemType);
+					if (added) {
+						added.level += toAdd;
+					} else {
+						slot.slotsAdded.push({ level: toAdd, itemType: itemType });
+					}
+
+					slot.level += toAdd;
+					extraSlots -= toAdd;
+				}
+				if (extraSlots == 0) {
+					break;
+				}
+			}
+			if (extraSlots > 0 && this.weaponSlot.item.slots.length < 3) {
+				if (!this.weaponSlot.item.slots) {
+					this.weaponSlot.item.slots = [];
+				}
+				this.weaponSlot.item.slots.push({ level: 0 });
+				this.slotsIncrementRecursive(extraSlots, itemType);
 			}
 		} else {
-			this.weaponSlot.item.slots = [{ level: 4 }];
+			for (let i = this.weaponSlot.item.slots.length - 1; i >= 0; i--) {
+				const slot = this.weaponSlot.item.slots[i];
+				const toRemove = Math.min(slot.level, -extraSlots);
+
+				const added = slot.slotsAdded.find(x => x.itemType == itemType);
+				if (added) {
+					added.level -= toRemove;
+				}
+				const decoSlot = this.weaponSlot.decorationSlots.toArray()[i];
+				if (decoSlot && decoSlot.decoration && decoSlot.decoration.level > slot.level - toRemove) {
+					this.clearDecorationSlot(decoSlot);
+				}
+				slot.level -= toRemove;
+				extraSlots += toRemove;
+				if (slot.level == 0) {
+					this.weaponSlot.item.slots.pop();
+				}
+				if (extraSlots == 0) {
+					break;
+				}
+			}
 		}
 	}
 

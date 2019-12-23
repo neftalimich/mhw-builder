@@ -7,6 +7,6 @@ export class SlotModel {
 }
 
 export class SlotLevelAddedModel {
-	slotType: ItemType;
+	itemType: ItemType;
 	level: number;
 }
