@@ -25,7 +25,7 @@
 					<span *ngIf="calc.extra1 || calc.extra2">)</span>
 				</span>
 			</li>
-			<li *ngIf="sharpnessBar && sharpnessBar.levels" (pointerenter)="showSharpDetails($event)"
+			<li *ngIf="sharpnessBar && sharpnessBar.levels && sharpnessBar.levels.length" (pointerenter)="showSharpDetails($event)"
 				(pointerleave)="clearSharpDetails()" (click)="showOnClickSharpDetails()">
 				<span class="detail-icon" [ngClass]="sharpnessBar.color">
 					<img [src]="'assets/images/sharpness3-icon.png'" alt="sharpness">

@@ -21,7 +21,6 @@ import { ModeType } from '../types/mode.type';
 import { WeaponType } from '../types/weapon.type';
 import { CalculationService } from './calculation.service';
 import { DataService } from './data.service';
-import { SlotModel } from '../models/slot.model';
 
 @Injectable()
 export class StatService {
@@ -444,7 +443,7 @@ export class StatService {
 			}
 		}
 
-		if (weapon && weapon.sharpnessLevelsBar) {
+		if (weapon && weapon.sharpnessLevelsBar.length && !isNaN(weapon.sharpnessLevelsBar[0])) {
 			this.stats.sharpnessLevelsBar = JSON.parse(JSON.stringify(weapon.sharpnessLevelsBar));
 			if (weapon.sharpnessLevelsBar && !isNaN(weapon.sharpnessLevelsBar[0])) {
 				// Extra Sharpness
@@ -534,6 +533,7 @@ export class StatService {
 
 		if (this.stats.ailmentHidden) {
 			this.stats.effectiveAilmentAttack = this.nearestTen(Math.round(this.stats.baseAilmentAttack * this.stats.elementAttackMultiplier));
+
 		} else {
 			this.stats.effectiveAilmentAttack = this.stats.baseAilmentAttack;
 		}

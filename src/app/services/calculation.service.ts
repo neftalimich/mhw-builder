@@ -559,10 +559,10 @@ export class CalculationService {
 		const rawAttackAvgCalc: StatDetailModel = {
 			name: 'True Raw Average',
 			value: Number.isInteger(rawAttackAvg) ? rawAttackAvg : 0,
-			extra1: stats.ailment ? trueAilment : null,
-			class1: stats.ailment ? stats.ailment : null,
-			extra2: stats.element ? trueElement : null,
-			class2: stats.element ? stats.element : null,
+			extra1: stats.ailment && trueAilment ? trueAilment : null,
+			class1: stats.ailment && trueAilment ? stats.ailment : null,
+			extra2: stats.element && trueElement ? trueElement : null,
+			class2: stats.element && trueElement ? stats.element : null,
 			calculationTemplate: `({totalAttack} × {totalAffinity} × {criticalBoost} + {totalAttack} × (100% - {totalAffinity})) <br>÷ {weaponModifier} <br>=<br> [${rawAttackAvg}`,
 			calculationVariables: [
 				{
@@ -645,10 +645,10 @@ export class CalculationService {
 		const rawAttackAveragePotentialCalc: StatDetailModel = {
 			name: 'True Raw Average Potential',
 			value: Number.isInteger(rawAttackAveragePotential) ? rawAttackAveragePotential : 0,
-			extra1: stats.ailment ? trueAilmentPotential : null,
-			class1: stats.ailment ? stats.ailment : null,
-			extra2: stats.element ? trueElementPotential : null,
-			class2: stats.element ? stats.element : null,
+			extra1: stats.ailment && trueAilmentPotential ? trueAilmentPotential : null,
+			class1: stats.ailment && trueAilmentPotential ? stats.ailment : null,
+			extra2: stats.element && trueElementPotential ? trueElementPotential : null,
+			class2: stats.element && trueElementPotential ? stats.element : null,
 			calculationTemplate:
 				`({totalAttackPotential} × {totalAffinityPotential} × {criticalBoost} + {totalAttackPotential} × (100% - {totalAffinityPotential})) <br>÷ {weaponModifier} <br>=<br> [${rawAttackAveragePotential}`,
 			calculationVariables: [

@@ -297,23 +297,27 @@ export class BuildService {
 					}
 					if (buildItem.elementId != null) {
 						item.element = this.dataService.getElement(buildItem.elementId);
-						if (item.element != null) {
-							item.elementBaseAttack = this.dataService.getSafiElementAttack(weaponIndex);
-						} else {
-							item.elementBaseAttack = null;
+						if (item.upgradeType == 2) {
+							if (item.element != null) {
+								item.elementBaseAttack = this.dataService.getSafiElementAttack(weaponIndex);
+							} else {
+								item.elementBaseAttack = null;
+							}
 						}
 					}
 					// -------------------- Ailment
 					if (buildItem.ailmentId != null) {
 						item.ailment = this.dataService.getAilment(buildItem.ailmentId);
-						if (item.ailment != null) {
-							let ailmentType = 0;
-							if (item.ailment == AilmentType.Poison || item.ailment == AilmentType.Blast) {
-								ailmentType = 1;
+						if (item.upgradeType == 2) {
+							if (item.ailment != null) {
+								let ailmentType = 0;
+								if (item.ailment == AilmentType.Poison || item.ailment == AilmentType.Blast) {
+									ailmentType = 1;
+								}
+								item.ailmentBaseAttack = this.dataService.getSafiAilmentAttack(weaponIndex, ailmentType);
+							} else {
+								item.ailmentBaseAttack = null;
 							}
-							item.ailmentBaseAttack = this.dataService.getSafiAilmentAttack(weaponIndex, ailmentType);
-						} else {
-							item.ailmentBaseAttack = null;
 						}
 					}
 					if (item.upgradeType == 2 && (buildItem.elementId != null || buildItem.ailmentId != null)) {

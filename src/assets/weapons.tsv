@@ -1121,7 +1121,8 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2664	LightBowgun	12	Soulfire Rasp 'Styx'	338	10	0								false		3;3	lunastra;xeno-jiiva		razorSharpSpareShot-1			0
 3012	LightBowgun	12	Ten Thousand Volts	403	-15	0								false		4	rajang					0
 3030	LightBowgun	12	Brimstren Drakevow	351	0	0								false		2	stygian-zinogre	dragon				0
-3052	LightBowgun	12	Safi's Neqiina+	351	0	0								false		4;4	xeno-jiiva	dragon		Wyvernblast		0
+3052	LightBowgun	12	Xeno Neqiina+	351	0	0								false		4;4	xeno-jiiva	dragon		Wyvernblast		0
+3072	LightBowgun	12	Adept Stormslinger	416	0	0								false		4	event	horizon		Wyvernblast		0
 4052	LightBowgun	12	Safi's LightBowgun	325	5	0								false		4	safi-jiiva	dragon			2	0
 2667	HeavyBowgun	11	Fatal Assault III	420	0	0								false		1;1	ore				1	0
 2669	HeavyBowgun	10	Icicle Assault II	360	30	0								false		1	barioth				1	0
@@ -1155,7 +1156,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2726	HeavyBowgun	12	Soulfire Roar 'Styx'	420	10	0								false		3;3	lunastra;xeno-jiiva		razorSharpSpareShot-1			0
 3013	HeavyBowgun	12	Rajang Destroyer	495	-15	0								false		4	rajang					0
 3031	HeavyBowgun	12	Stygian Humilitas	435	0	0								false		2	stygian-zinogre	dragon				0
-3053	HeavyBowgun	12	Safi's Neqiina+	420	0	0								false		4;4	xeno-jiiva	dragon		Wyvernheart		0
+3053	HeavyBowgun	12	Xeno Jiiqa+	420	0	0								false		4;4	xeno-jiiva	dragon		Wyvernheart		0
 4053	HeavyBowgun	12	Safi's HeavyBowgun	375	5	0								false		4	safi-jiiva	dragon			2	0
 2729	Bow	11	Dragon Perforator III	312	0	0	Thunder	240	true					false		2;2	ore	thunder		close;power	1	0
 2732	Bow	12	Despot's Earlybolt	324	0	0	Thunder	240	false					false		2	zinogre	thunder		close;power		0
@@ -1195,4 +1196,5 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3014	Bow	12	Beastking Thunderbow	372	-10	0	Thunder	120	false					false		4	rajang	thunder		close;power		0
 3032	Bow	12	Stygian Patientia	336	0	0	Dragon	300	false				Average	false		2	stygian-zinogre	dragon		close;power		0
 3054	Bow	12	Xeno Metora+	324	15	0	Dragon	210	false				Low	false		4;4	xeno-jiiva	dragon		close;power		0
+3074	Bow	12	Aloy's Adept War Bow	300	30	0	Thunder	270	true					false		4	event	thunder;horizon		close;paralysis;poison		0
 4054	Bow	12	Safi's Bow	312	5	0			false				Average	false		4	safi-jiiva	dragon		close;power	2	0
