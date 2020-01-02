@@ -1,3 +1,4 @@
+import { AmmoType } from '../types/ammo.type';
 import { DeviationType } from '../types/deviation.type';
 import { SpecialAmmoType } from '../types/special-ammo.type';
 
@@ -11,7 +12,7 @@ export class AmmoCapacitiesModel {
 }
 
 export class AmmoTypeModel {
-	name: string;
+	name: AmmoType;
 	levels: AmmoLevelModel[];
 }
 

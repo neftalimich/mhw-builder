@@ -22,5 +22,8 @@
 				"node_modules/core-js/proposals/reflect-metadata"
 			]
 		}
-	}
+	},
+	"exclude": [
+		"dist"
+	]
 }

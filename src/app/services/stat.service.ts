@@ -12,6 +12,7 @@ import { SkillLevelModel } from '../models/skill-level.model';
 import { StatsModel } from '../models/stats.model';
 import { UpgradeContainerModel } from '../models/upgrade-container.model';
 import { AilmentType } from '../types/ailment.type';
+import { AmmoType } from '../types/ammo.type';
 import { AwakeningType } from '../types/awakening.type';
 import { DamageType } from '../types/damage.type';
 import { EldersealType } from '../types/elderseal.type';
@@ -131,9 +132,9 @@ export class StatService {
 				level = equippedSkill.skill.levels[levelIndex];
 			}
 			if (level) {
-				if (equippedSkill.mode == ModeType.AllSkillActive) {
+				if (equippedSkill.skill.mode == ModeType.AllSkillActive) {
 					const skillUpgrade = equippedSkills.find(x => x.id == 'true' + equippedSkill.id.substring(0, 1).toUpperCase() + equippedSkill.id.substring(1, equippedSkill.id.length));
-					if (skillUpgrade == null || skillUpgrade.mode == ModeType.Active) {
+					if (skillUpgrade == null || skillUpgrade.skill.mode == ModeType.Active) {
 						if (level.activeElementAttack) { this.stats.activeElementAttack += level.activeElementAttack; }
 						if (level.activeAilmentAttack) { this.stats.activeAilmentAttack += level.activeAilmentAttack; }
 						if (level.activeAilmentAttackBuildUpPercent) { this.stats.activeAilmentAttackBuildUpPercent += level.activeAilmentAttackBuildUpPercent; }
@@ -144,7 +145,7 @@ export class StatService {
 						if (level.activeDefense) { this.stats.activeDefense += level.activeDefense; }
 					}
 				}
-				if (equippedSkill.mode == ModeType.Active || equippedSkill.mode == ModeType.AllSkillActive) {
+				if (equippedSkill.skill.mode == ModeType.Active || equippedSkill.skill.mode == ModeType.AllSkillActive) {
 					if (level.passiveAttack) { this.stats.passiveAttack += level.passiveAttack; }
 					if (level.elementlessBoostPercent) { this.stats.elementlessBoostPercent += level.elementlessBoostPercent; }
 					if (level.passiveAffinity) { this.stats.passiveAffinity += level.passiveAffinity; }
@@ -346,6 +347,81 @@ export class StatService {
 						break;
 					default:
 						break;
+				}
+			}
+		}
+
+		if (weapon.ammoCapacities) {
+			weapon.ammoCapacities = JSON.parse(JSON.stringify(this.dataService.getAmmoCapacities(weapon.id)));
+
+			const awakeningNormalCapacity: number[] = this.awakeningsData.find(x => x.type == AwakeningType.NormalCapacity).awakenings[0];
+			const awakeningPierceCapacity: number[] = this.awakeningsData.find(x => x.type == AwakeningType.PierceCapacity).awakenings[0];
+			const awakeningSpreadCapacity: number[] = this.awakeningsData.find(x => x.type == AwakeningType.SpreadCapacity).awakenings[0];
+			const awakeningElementalCapacity: number[] = this.awakeningsData.find(x => x.type == AwakeningType.ElementalCapacity).awakenings[0];
+
+			const normalCapacity = awakenings.find(x => x.type == AwakeningType.NormalCapacity);
+			if (normalCapacity && normalCapacity.level >= 4) {
+				const normalAmmo = awakeningNormalCapacity[normalCapacity.level - 1];
+				const ammo = weapon.ammoCapacities.ammo.find(x => x.name == AmmoType.normal);
+				if (ammo) {
+					for (const level of ammo.levels) {
+						if (level.capacity > 0) {
+							level.capacity += normalAmmo;
+						}
+					}
+				}
+			}
+
+			const pierceCapacity = awakenings.find(x => x.type == AwakeningType.PierceCapacity);
+			if (pierceCapacity && pierceCapacity.level >= 4) {
+				const pierceAmmo = awakeningPierceCapacity[pierceCapacity.level - 1];
+				const ammo = weapon.ammoCapacities.ammo.find(x => x.name == AmmoType.pierce);
+				if (ammo) {
+					for (const level of ammo.levels) {
+						if (level.capacity > 0) {
+							level.capacity += pierceAmmo;
+						}
+					}
+				}
+			}
+
+			const spreadCapacity = awakenings.find(x => x.type == AwakeningType.SpreadCapacity);
+			if (spreadCapacity && spreadCapacity.level >= 4) {
+				const spreadAmmo = awakeningSpreadCapacity[spreadCapacity.level - 1];
+				const ammo = weapon.ammoCapacities.ammo.find(x => x.name == AmmoType.spread);
+				if (ammo) {
+					for (const level of ammo.levels) {
+						if (level.capacity > 0) {
+							level.capacity += spreadAmmo;
+						}
+					}
+				}
+			}
+
+			const elementalCapacity = awakenings.find(x => x.type == AwakeningType.ElementalCapacity);
+			if (elementalCapacity && elementalCapacity.level >= 4) {
+				const elementalAmmo = awakeningElementalCapacity[elementalCapacity.level - 1];
+
+				const fire = weapon.ammoCapacities.ammo.find(x => x.name == AmmoType.flaming);
+				const water = weapon.ammoCapacities.ammo.find(x => x.name == AmmoType.water);
+				const thunder = weapon.ammoCapacities.ammo.find(x => x.name == AmmoType.thunder);
+				const ice = weapon.ammoCapacities.ammo.find(x => x.name == AmmoType.freeze);
+				const dragon = weapon.ammoCapacities.ammo.find(x => x.name == AmmoType.dragon);
+
+				if (fire && fire.levels[0].capacity > 0) {
+					fire.levels[0].capacity += elementalAmmo;
+				}
+				if (water && water.levels[0].capacity > 0) {
+					water.levels[0].capacity += elementalAmmo;
+				}
+				if (thunder && thunder.levels[0].capacity > 0) {
+					thunder.levels[0].capacity += elementalAmmo;
+				}
+				if (ice && ice.levels[0].capacity > 0) {
+					ice.levels[0].capacity += elementalAmmo;
+				}
+				if (dragon && dragon.levels[0].capacity > 0) {
+					dragon.levels[0].capacity = Math.min(dragon.levels[0].capacity + elementalAmmo, 3); // Dragon Max = 3
 				}
 			}
 		}

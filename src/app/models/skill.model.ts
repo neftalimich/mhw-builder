@@ -1,3 +1,4 @@
+import { ModeType } from '../types/mode.type';
 import { SkillLevelModel } from './skill-level.model';
 
 export class SkillModel {
@@ -8,4 +9,5 @@ export class SkillModel {
 	raiseSkillId?: string;
 	levels: SkillLevelModel[];
 	hasActiveStats?: boolean;
+	mode?: ModeType;
 }

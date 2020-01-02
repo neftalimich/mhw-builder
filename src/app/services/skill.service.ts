@@ -20,7 +20,7 @@ export class SkillService {
 
 	constructor(
 		private dataService: DataService
-	) {}
+	) { }
 
 	updateSkills(items: ItemModel[], decorations: DecorationModel[], augmentations: AugmentationModel[]) {
 		const equippedSkills = new Array<EquippedSkillModel>();
@@ -31,13 +31,11 @@ export class SkillService {
 				decoration.active = item.active;
 			}
 		}
-
-		// IMPROVEMENT: this code loops through items several times.
+		// IMPROVEMENT: this code loops through items several times. Neftalí Michelet: Fixed :)
 		this.addItemSkills(items, equippedSkills);
 		this.addDecorationSkills(decorations, equippedSkills);
 		this.addSetSkills(items, equippedSkills, equippedSetBonuses);
 		this.addAugmentationSkills(augmentations, equippedSkills);
-
 		this.skills = equippedSkills;
 		this.setBonuses = equippedSetBonuses;
 
@@ -160,6 +158,7 @@ export class SkillService {
 						equippedSkill.equippedCount = 1;
 						equippedSkill.equippedArmorCount = 1;
 						equippedSkill.totalLevelCount = skill.levels.length;
+						equippedSkill.mode = ModeType.Active;
 						equippedSkills.push(equippedSkill);
 
 						if (skill.raiseSkillId) {
@@ -192,6 +191,9 @@ export class SkillService {
 				const detail = new EquippedSetBonusDetailModel();
 				detail.requiredCount = bonusLevel.pieces;
 				detail.skill = this.dataService.getSkill(bonusLevel.id);
+				if (!detail.skill.levels[0].activeSkills) {
+					detail.mode = ModeType.AllSkillActive;
+				}
 				equippedSetBonus.details.push(detail);
 			}
 			equippedSetBonuses.push(equippedSetBonus);
@@ -279,8 +281,15 @@ export class SkillService {
 		equippedSkill.totalLevelCount = skill.maxLevel ? skill.maxLevel : skill.levels.length;
 		this.countSkillItemPart(equippedSkill, level, itemType);
 		equippedSkill.hasActiveStats = skill.hasActiveStats;
-		if (skill.hasActiveStats) { equippedSkill.mode = ModeType.AllSkillActive; }
 
+		if (skill.mode == null) {
+			if (skill.hasActiveStats) {
+				skill.mode = ModeType.AllSkillActive;
+			} else {
+				skill.mode = ModeType.Active;
+			}
+		}
+		equippedSkill.skill.mode = skill.mode;
 		return equippedSkill;
 	}
 }

@@ -1,16 +1,4 @@
 id	rarity	name	attackType	dustEffect	power	speed	heal	elementPower
-1	7	Monarch Alucanid III	Sever	Poison	14	7	11	15
-2	7	Empresswing III	Sever	Blast	15	5	10	15
-3	7	Cancadaman III	Sever	Paralysis	4	12	15	15
-4	7	Fiddlebrix III	Sever	Blast	11	4	15	15
-5	7	Grancathar III	Sever	Heal	4	15	11	15
-6	7	Pseudocath III	Sever	Blast	12	15	3	15
-51	7	Carnage Beetle III	Blunt	Poison	13	11	4	15
-52	7	Bonnetfille III	Blunt	Blast	14	6	8	14
-53	7	Ladypavise III	Blunt	Paralysis	9	6	15	13
-54	7	Arkmaiden III	Blunt	Blast	7	6	15	14
-55	7	Bullshroud III	Blunt	Heal	5	15	7	15
-56	7	Whispervesp III	Blunt	Blast	3	15	11	14
 101	11	Vezirstag III Velox	Sever	Poison	16	11	12	20
 102	11	Vezirstag III Forz	Sever	Blast	20	7	13	20
 103	11	Bilbobrix III Velox	Sever	Paralysis	6	15	20	20
@@ -25,4 +13,3 @@ id	rarity	name	attackType	dustEffect	power	speed	heal	elementPower
 155	11	Valorwing III Forz	Blunt	Heal	10	20	9	20
 156	11	Valorwing III Medis	Blunt	Blast	5	20	14	19
 157	12	Arginesse III	Blunt	Heal	11	12	20	20
-200	7	True Dragon Soul	Blunt	Blast	15	14	1	14

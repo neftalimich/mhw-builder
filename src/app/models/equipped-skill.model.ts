@@ -1,4 +1,3 @@
-import { ModeType } from '../types/mode.type';
 import { SkillModel } from './skill.model';
 
 export class EquippedSkillModel {
@@ -27,7 +26,6 @@ export class EquippedSkillModel {
 	isNatureBonus: boolean;
 	requiredCount?: number;
 
-	mode: ModeType;
 	hasActiveStats?: boolean;
 
 	constructor() {
@@ -50,7 +48,5 @@ export class EquippedSkillModel {
 
 		this.isSetBonus = false;
 		this.isNatureBonus = false;
-
-		this.mode = ModeType.Active;
 	}
 }

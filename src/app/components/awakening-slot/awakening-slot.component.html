@@ -1,5 +1,5 @@
 <div class="container">
-	<div class="elementAilment">
+	<div class="elementAilment" *ngIf="weaponType != weaponTypes.LightBowgun && weaponType != weaponTypes.HeavyBowgun">
 		<div class="element-slot" (click)="elementDropdown.toggle($event)">
 			<div class="element selected-element">
 				<div *ngIf="weaponElement && weaponElement != elementTypes.None" class="image-container">
@@ -77,7 +77,7 @@
 					</span>
 				</div>
 				<mhw-builder-dropdown #awakeningDropdown>
-					<div class="awakening" *ngFor="let e of awakeningValues" (click)="selectAwakeningType(e,awakening)">
+					<div class="awakening" *ngFor="let e of awakeningValues" (click)="selectAwakeningType(e, awakening, i)">
 						<span>{{e.value}}</span>
 					</div>
 				</mhw-builder-dropdown>

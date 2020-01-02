@@ -320,7 +320,10 @@ export class BuildService {
 							}
 						}
 					}
-					if (item.upgradeType == 2 && (buildItem.elementId != null || buildItem.ailmentId != null)) {
+					if (item.upgradeType == 2
+						&& item.weaponType != WeaponType.LightBowgun
+						&& item.weaponType != WeaponType.HeavyBowgun
+						&& (buildItem.elementId != null || buildItem.ailmentId != null)) {
 						item.name = this.dataService.getSafiWeaponName(item.weaponType, item.element, item.ailment);
 					}
 					// -------------------- Awakenings

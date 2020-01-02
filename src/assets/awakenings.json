@@ -119,16 +119,22 @@
 	},
 	{
 		"id": 8,
-		"type": "Skill",
-		"skills": [
-			{
-				"id": "tigrexEssence",
-				"level": 3
-			},
-			{
-				"id": "teostraTechnique",
-				"level": 4
-			}
-		]
+		"type": "NormalCapacity",
+		"awakenings": [ [ 0, 0, 0, 1, 2, 3 ] ]
+	},
+	{
+		"id": 9,
+		"type": "PierceCapacity",
+		"awakenings": [ [ 0, 0, 0, 1, 2, 3 ] ]
+	},
+	{
+		"id": 10,
+		"type": "SpreadCapacity",
+		"awakenings": [ [ 0, 0, 0, 1, 2, 3 ] ]
+	},
+	{
+		"id": 11,
+		"type": "ElementalCapacity",
+		"awakenings": [ [ 0, 0, 0, 1, 2, 3 ] ]
 	}
 ]

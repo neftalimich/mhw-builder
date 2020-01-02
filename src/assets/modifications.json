@@ -16,6 +16,10 @@
 			{
 				"description": "Recoil -3",
 				"recoil": -3
+			},
+			{
+				"description": "Recoil -4",
+				"recoil": -4
 			}
 		]
 	},
@@ -36,6 +40,10 @@
 			{
 				"description": "Reload +3",
 				"reload": 3
+			},
+			{
+				"description": "Reload +4",
+				"reload": 4
 			}
 		]
 	},
@@ -56,6 +64,10 @@
 			{
 				"description": "Deviation -3",
 				"deviation": -3
+			},
+			{
+				"description": "Deviation -4",
+				"deviation": -4
 			}
 		]
 	},
@@ -76,6 +88,10 @@
 			{
 				"description": "Close +3",
 				"close": 3
+			},
+			{
+				"description": "Close +4",
+				"close": 4
 			}
 		]
 	},
@@ -83,19 +99,23 @@
 		"id": 5,
 		"code": "LNG",
 		"name": "Long Range Up",
-		"description": "Regain health as you land attacks. Stack with other upgrades to increase the amount of health regained.",
+		"description": "",
 		"levels": [
 			{
 				"description": "Long +1",
 				"long": 1
 			},
 			{
-				"description": "Heal on hit +15%",
+				"description": "Long +2",
 				"long": 2
 			},
 			{
-				"description": "Heal on hit +20%",
+				"description": "Long +3",
 				"long": 3
+			},
+			{
+				"description": "Long +4",
+				"long": 4
 			}
 		]
 	},
@@ -103,7 +123,7 @@
 		"id": 6,
 		"code": "SHI",
 		"name": "Shield",
-		"description": "Regain health as you land attacks. Stack with other upgrades to increase the amount of health regained.",
+		"description": "",
 		"levels": [
 			{
 				"description": "Shield +1",
@@ -116,6 +136,10 @@
 			{
 				"description": "Shield +3",
 				"shield": 3
+			},
+			{
+				"description": "Shield +4",
+				"shield": 4
 			}
 		]
 	},

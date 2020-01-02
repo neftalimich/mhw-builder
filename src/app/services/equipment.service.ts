@@ -45,6 +45,7 @@ export class EquipmentService {
 	}
 
 	addItem(item: ItemModel, updateStats: boolean = true) {
+		// console.log("addItem",item);
 		this.items.push(item);
 		if (updateStats) {
 			this.updateSkills();
@@ -52,6 +53,7 @@ export class EquipmentService {
 	}
 
 	addDecoration(decoration: DecorationModel, updateStats: boolean = true) {
+		// console.log("addDecoration");
 		this.decorations.push(decoration);
 		if (updateStats) {
 			this.updateSkills();
@@ -59,6 +61,7 @@ export class EquipmentService {
 	}
 
 	addAugmentation(augmentation: AugmentationModel, updateStats: boolean = true) {
+		// console.log("addAugmentation");
 		this.augmentations.push(augmentation);
 		if (updateStats) {
 			this.updateSkills();
@@ -66,6 +69,7 @@ export class EquipmentService {
 	}
 
 	addUpgrade(upgradeContainer: UpgradeContainerModel, updateStats: boolean = true) {
+		// console.log("addUpgrade");
 		this.upgradeContainer = upgradeContainer;
 		if (updateStats) {
 			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.awakenings, this.modifications, this.kinsect);
@@ -73,6 +77,7 @@ export class EquipmentService {
 	}
 
 	addAwakenings(awakenings: AwakeningLevelModel[], updateStats: boolean = true) {
+		// console.log("addAwakening");
 		this.awakenings = awakenings;
 		if (awakenings.length && updateStats) {
 			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.awakenings, this.modifications, this.kinsect);
@@ -80,6 +85,7 @@ export class EquipmentService {
 	}
 
 	addSetbonus(setbonus: SetBonusModel, updateStats: boolean = true) {
+		// console.log("addSetbonus");
 		this.awakeningSetbonus = setbonus;
 		const weapon = this.items.find(x => x.itemType == ItemType.Weapon);
 		if (!weapon.skills.find(skill => skill.id == setbonus.id)) {
@@ -95,6 +101,7 @@ export class EquipmentService {
 	}
 
 	addModification(modification: ModificationModel, updateStats: boolean = true) {
+		// console.log("addModification");
 		this.modifications.push(modification);
 		if (updateStats) {
 			if (modification.id < 4) {
@@ -104,6 +111,7 @@ export class EquipmentService {
 	}
 
 	addKinsect(kinsect: KinsectModel, updateStats: boolean = true) {
+		// console.log("addKinsect");
 		this.kinsect = kinsect;
 		if (updateStats) {
 			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.awakenings, this.modifications, this.kinsect);
@@ -111,6 +119,7 @@ export class EquipmentService {
 	}
 
 	removeItem(item: ItemModel) {
+		// console.log("removeItem");
 		if (item && item.itemType == ItemType.Weapon) {
 			this.awakenings = [];
 		}
@@ -119,26 +128,31 @@ export class EquipmentService {
 	}
 
 	removeDecoration(decoration: DecorationModel) {
+		// console.log("removeDeco");
 		this.decorations = _.reject(this.decorations, d => d === decoration);
 		this.updateSkills();
 	}
 
 	removeAugmentation(augmentation: AugmentationModel) {
+		// console.log("RemoveAug");
 		this.augmentations = _.reject(this.augmentations, a => a === augmentation);
 		this.updateSkills();
 	}
 
 	removeUpgrade() {
+		// console.log("RemoveUpgrade");
 		this.upgradeContainer = null;
 		this.updateSkills();
 	}
 
 	removeAwakening() {
+		// console.log("RemoveAwake");
 		this.awakenings = [];
 		this.updateSkills();
 	}
 
 	removeSetbonus() {
+		// console.log("RemoveSetbonus");
 		const weapon = this.items.find(x => x.itemType == ItemType.Weapon);
 		weapon.skills.splice(weapon.skills.findIndex(skill => skill.id == this.awakeningSetbonus.id), 1);
 		this.awakeningSetbonus = null;
@@ -146,15 +160,18 @@ export class EquipmentService {
 	}
 
 	removeModification(modification: ModificationModel) {
+		// console.log("RemoveModification");
 		this.modifications = _.reject(this.modifications, a => a === modification);
 		this.updateSkills();
 	}
 
 	removeKinsect() {
+		// console.log("RemoveKin");
 		this.kinsect = null;
 	}
 
 	changeElement(element: ElementType, elementAttack: number, updateStats: boolean = true) {
+		// console.log("changeElement");
 		const weapon = this.items.find(x => x.itemType == ItemType.Weapon);
 		if (element != ElementType.None) {
 			weapon.element = element;
@@ -169,6 +186,7 @@ export class EquipmentService {
 	}
 
 	changeAilment(ailment: AilmentType, ailmentAttack: number, updateStats: boolean = true) {
+		// console.log("changeAilment");
 		const weapon = this.items.find(x => x.itemType == ItemType.Weapon);
 		if (ailment != AilmentType.None) {
 			weapon.ailment = ailment;
@@ -183,19 +201,23 @@ export class EquipmentService {
 	}
 
 	changeWeaponName(weaponName: string) {
+		// console.log("changeWeaponName");
 		const weapon = this.items.find(x => x.itemType == ItemType.Weapon);
 		weapon.name = weaponName;
 	}
 
 	updateItemLevel() {
+		// console.log("updateItemLevel");
 		this.updateSkills();
 	}
 
 	updateItemActive() {
+		// console.log("updateItemActive");
 		this.updateSkills();
 	}
 
 	updateSkillMode(equippedSkills: EquippedSkillModel[]) {
+		// console.log("UpdateSkillMode");
 		this.statService.update(equippedSkills, this.items, this.augmentations, this.upgradeContainer, this.awakenings, this.modifications, this.kinsect);
 	}
 

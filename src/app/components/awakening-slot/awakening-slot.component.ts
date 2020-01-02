@@ -33,6 +33,7 @@ export class AwakeningSlotComponent implements OnInit {
 	elementTypes = ElementType;
 	ailmentTypes = AilmentType;
 	awakeningTypes = AwakeningType;
+	weaponTypes = WeaponType;
 
 	elementValues: KeyValuePair<string, string>[];
 	ailmentValues: KeyValuePair<string, string>[];
@@ -82,6 +83,12 @@ export class AwakeningSlotComponent implements OnInit {
 				}
 			}
 		}
+		this.initAwakeningValues();
+		if (weaponType == WeaponType.Bow) {
+			this.awakeningValues.splice(7, 5);
+		} else if (weaponType != WeaponType.LightBowgun && weaponType != WeaponType.HeavyBowgun) {
+			this.awakeningValues.splice(8, 4);
+		}
 	}
 	get weaponType(): WeaponType {
 		return this._weaponType;
@@ -106,6 +113,9 @@ export class AwakeningSlotComponent implements OnInit {
 			this.ailmentValues.push({ key: key, value: key });
 		});
 		this.ailmentValues.pop();
+	}
+
+	initAwakeningValues() {
 		this.awakeningValues = [];
 		Object.keys(AwakeningType).map((key, index) => {
 			this.awakeningValues.push({ key: index, value: key });
@@ -153,10 +163,10 @@ export class AwakeningSlotComponent implements OnInit {
 		this.slotService.changeWeaponName(this.dataService.getSafiWeaponName(this.weaponType, this.weaponElement, this.weaponAilment));
 	}
 
-	selectAwakeningType(selectedAwakening: KeyValuePair<number, string>, awakeningLevel: AwakeningLevelModel) {
+	selectAwakeningType(selectedAwakening: KeyValuePair<number, string>, awakeningLevel: AwakeningLevelModel, index: number) {
 		awakeningLevel.id = selectedAwakening.key;
 		awakeningLevel.type = AwakeningType[selectedAwakening.value];
-		awakeningLevel.level = awakeningLevel.level != 0 ? awakeningLevel.level : 5;
+		awakeningLevel.level = awakeningLevel.level != 0 ? awakeningLevel.level : (index == 0 ? 6 : 5);
 		this.slotService.selectAwakenings(this.awakenings);
 	}
 

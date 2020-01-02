@@ -647,8 +647,9 @@ export class SlotService {
 	}
 
 	private clearSlotItems(slot: ItemSlotComponent) {
-		this.equipmentService.removeItem(slot.item);
-
+		if (slot.item) {
+			this.equipmentService.removeItem(slot.item);
+		}
 		slot.decorationSlots.forEach(ds => {
 			this.equipmentService.removeDecoration(ds.decoration);
 		});

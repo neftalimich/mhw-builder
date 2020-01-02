@@ -6,5 +6,9 @@ export enum AwakeningType {
 	Slot = 'Slot',
 	Ailment = 'Ailment',
 	Element = 'Element',
-	Sharpness = 'Sharpness'
+	Sharpness = 'Sharpness',
+	NormalCapacity = 'NormalCapacity',
+	PierceCapacity = 'PierceCapacity',
+	SpreadCapacity = 'SpreadCapacity',
+	ElementalCapacity = 'ElementalCapacity'
 }

@@ -19,17 +19,17 @@
 					</span>
 					<span class="value">
 						<span (click)="skillMode(skill)" class="cursor-p" style="font-size:14px !important;">
-							<i [ngClass]="getIconModeClass(skill.mode)" [style.color]="getModeColor(skill.mode)"></i>
+							<i [ngClass]="getIconModeClass(skill.skill.mode)" [style.color]="getModeColor(skill.skill.mode)"></i>
 							[{{skill.equippedCount}}]
 						</span>
 						<span class="skill-box" style="display:inline-block;position:relative;">
 							<span *ngFor="let key of getMinCount(skill.equippedArmorCount, skill.totalLevelCount - skill.secretLevelCount) | numbersArr">
 								<span *ngIf="!skill.isNatureBonus">
-									<span class="skill-square skill-bg-active" *ngIf="skill.mode == 1">
+									<span class="skill-square skill-bg-active" *ngIf="skill.skill.mode == 1">
 									</span>
-									<span class="skill-square skill-bg-mode2" *ngIf="skill.mode == 2">
+									<span class="skill-square skill-bg-mode2" *ngIf="skill.skill.mode == 2">
 									</span>
-									<span class="skill-square skill-bg-mode3" *ngIf="skill.mode == 3">
+									<span class="skill-square skill-bg-mode3" *ngIf="skill.skill.mode == 3">
 									</span>
 								</span>
 								<span class="skill-square skill-bg-nature" *ngIf="skill.isNatureBonus">
