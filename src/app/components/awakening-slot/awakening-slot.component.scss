@@ -95,8 +95,13 @@ $elementSpacing: 2px;
 		padding: 2px 2px;
 		grid-gap: 6px;
 
-		.awakening-skill {
+		.awakening-slot {
+			height: $slotHeight;
+			display: grid;
+			grid-template-columns: auto max-content;
+
 			.awakening-type {
+				grid-column: 1;
 				display: grid;
 				grid-template-columns: auto max-content min-content;
 				height: $slotHeight;
@@ -105,6 +110,7 @@ $elementSpacing: 2px;
 				align-self: start;
 
 				.awakening {
+					grid-column: 1;
 					display: flex;
 					margin: $elementSpacing;
 					height: $elementSize;
@@ -116,6 +122,7 @@ $elementSpacing: 2px;
 				}
 
 				.awakening-level {
+					grid-column: 2;
 					display: flex;
 					margin: $elementSpacing;
 					height: $elementSize;
@@ -127,33 +134,8 @@ $elementSpacing: 2px;
 				}
 
 				.awakening-clear {
+					grid-column: 3;
 					display: flex;
-					margin: $elementSpacing;
-					height: $elementSize;
-				}
-			}
-		}
-
-		.awakening-slot {
-			height: $slotHeight;
-			display: grid;
-			grid-template-columns: auto max-content;
-
-			.awakening-type {
-				grid-column: 1;
-				height: $slotHeight;
-				background-color: rgb(41, 41, 41);
-				border-radius: 3px;
-
-				.awakening {
-					display: flex;
-					margin: $elementSpacing;
-					height: $elementSize;
-
-					span {
-						padding: $elementSpacing;
-						line-height: $elementSize - $elementSpacing * 2;
-					}
 				}
 			}
 

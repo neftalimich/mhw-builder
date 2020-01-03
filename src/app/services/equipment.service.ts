@@ -6,6 +6,7 @@ import { DecorationModel } from '../models/decoration.model';
 import { EquippedSkillModel } from '../models/equipped-skill.model';
 import { ItemModel } from '../models/item.model';
 import { KinsectModel } from '../models/kinsect.model';
+import { MelodiesModel } from '../models/melodies.model';
 import { ModificationModel } from '../models/modification.model';
 import { SetBonusModel } from '../models/set-bonus.model';
 import { UpgradeContainerModel } from '../models/upgrade-container.model';
@@ -148,6 +149,7 @@ export class EquipmentService {
 	removeAwakening() {
 		// console.log("RemoveAwake");
 		this.awakenings = [];
+		this.awakeningSetbonus = null;
 		this.updateSkills();
 	}
 
@@ -157,6 +159,10 @@ export class EquipmentService {
 		weapon.skills.splice(weapon.skills.findIndex(skill => skill.id == this.awakeningSetbonus.id), 1);
 		this.awakeningSetbonus = null;
 		this.updateSkills();
+	}
+
+	removeMelody() {
+		const weapon = this.items.find(x => x.itemType == ItemType.Weapon);
 	}
 
 	removeModification(modification: ModificationModel) {
@@ -204,6 +210,11 @@ export class EquipmentService {
 		// console.log("changeWeaponName");
 		const weapon = this.items.find(x => x.itemType == ItemType.Weapon);
 		weapon.name = weaponName;
+	}
+
+	changeWeaponMelody(melodies: MelodiesModel) {
+		const weapon = this.items.find(x => x.itemType == ItemType.Weapon);
+		weapon.melodies = melodies;
 	}
 
 	updateItemLevel() {

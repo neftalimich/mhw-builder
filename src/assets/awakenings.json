@@ -21,24 +21,31 @@
 			[ 2, 4, 6, 8, 10, 15 ],
 			[ 2, 4, 6, 8, 10, 15 ],
 			[ 2, 4, 6, 8, 10, 15 ]
-		]
+		],
+		"minLevel": 1,
+		"maxLevel": 6
 	},
 	{
 		"id": 2,
 		"type": "Affinity",
-		"awakenings": [ [ 2, 4, 6, 8, 10, 15 ] ]
+		"awakenings": [ [ 2, 4, 6, 8, 10, 15 ] ],
+		"minLevel": 1,
+		"maxLevel": 6
 	},
 	{
 		"id": 3,
 		"type": "Defense",
 		"name": "Defense Increase",
-		"awakenings": [ [ 10, 20, 30, 40, 50, 50 ] ],
-		"maximum": 1
+		"awakenings": [ [ 10, 20, 30, 40, 50, 60 ] ],
+		"minLevel": 1,
+		"maxLevel": 6
 	},
 	{
 		"id": 4,
 		"type": "Slot",
-		"awakenings": [ [ 0, 1, 2, 3, 4, 5 ] ]
+		"awakenings": [ [ 0, 1, 2, 3, 4, 5 ] ],
+		"minLevel": 1,
+		"maxLevel": 6
 	},
 	{
 		"id": 5,
@@ -74,7 +81,9 @@
 			[ 0, 0 ],
 			[ 0, 0 ],
 			[ 0, 120 ]
-		]
+		],
+		"minLevel": 1,
+		"maxLevel": 6
 	},
 	{
 		"id": 6,
@@ -110,31 +119,43 @@
 			0,
 			0,
 			120
-		]
+		],
+		"minLevel": 1,
+		"maxLevel": 6
 	},
 	{
 		"id": 7,
 		"type": "Sharpness",
-		"awakenings": [ [ 10, 20, 30, 40, 50, 70 ] ]
+		"awakenings": [ [ 10, 20, 30, 40, 50, 70 ] ],
+		"minLevel": 1,
+		"maxLevel": 6
 	},
 	{
 		"id": 8,
 		"type": "NormalCapacity",
-		"awakenings": [ [ 0, 0, 0, 1, 2, 3 ] ]
+		"awakenings": [ [ 0, 0, 0, 1, 2, 3 ] ],
+		"minLevel": 4,
+		"maxLevel": 6
 	},
 	{
 		"id": 9,
 		"type": "PierceCapacity",
-		"awakenings": [ [ 0, 0, 0, 1, 2, 3 ] ]
+		"awakenings": [ [ 0, 0, 0, 1, 2, 3 ] ],
+		"minLevel": 4,
+		"maxLevel": 6
 	},
 	{
 		"id": 10,
 		"type": "SpreadCapacity",
-		"awakenings": [ [ 0, 0, 0, 1, 2, 3 ] ]
+		"awakenings": [ [ 0, 0, 0, 1, 2, 3 ] ],
+		"minLevel": 4,
+		"maxLevel": 6
 	},
 	{
 		"id": 11,
 		"type": "ElementalCapacity",
-		"awakenings": [ [ 0, 0, 0, 1, 2, 3 ] ]
+		"awakenings": [ [ 0, 0, 0, 1, 2, 3 ] ],
+		"minLevel": 4,
+		"maxLevel": 6
 	}
 ]

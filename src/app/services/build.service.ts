@@ -116,6 +116,7 @@ export class BuildService {
 		const kinsectElementRegex = /(?<=e)([\d]+)/g;
 		const elementRegex = /(?<=f)([\d]+)/g;
 		const ailmentRegex = /(?<=g)([\d]+)/g;
+		const melodyRegex = /(?<=hh)([\d]+)/g;
 		const modRegex = /(?<=m)([\d]+)/g;
 		const levelRegex = /(?<=l)([\d]+)/g;
 
@@ -195,6 +196,10 @@ export class BuildService {
 			const ailment = itemGroup.match(ailmentRegex);
 			if (ailment) {
 				buildItem.ailmentId = parseInt(ailment[0], 10);
+			}
+			const melody = itemGroup.match(melodyRegex);
+			if (melody) {
+				buildItem.melodyId = parseInt(melody[0], 10);
 			}
 
 			const mods = itemGroup.match(modRegex);
@@ -320,6 +325,16 @@ export class BuildService {
 							}
 						}
 					}
+					// -------------------- Melody
+					if (buildItem.melodyId != null) {
+						if (item.weaponType == WeaponType.HuntingHorn) {
+							item.melodies = this.dataService.getMelodies(buildItem.melodyId);
+							if (item.upgradeType == 2) {
+								slot.awakeningSlot.melody = slot.awakeningSlot.melodyValues.find(x => x.melodyId == buildItem.melodyId);
+							}
+						}
+					}
+					// --------------------
 					if (item.upgradeType == 2
 						&& item.weaponType != WeaponType.LightBowgun
 						&& item.weaponType != WeaponType.HeavyBowgun
@@ -344,8 +359,10 @@ export class BuildService {
 					if (buildItem.setbonusId != null) {
 						const setbonus = this.dataService.getSetBonusByBuildId(buildItem.setbonusId);
 						if (setbonus) {
-							slot.awakeningSlot.setbonus = setbonus;
-							this.slotService.selectSetbonusSlot(slot.awakeningSlot);
+							if (slot.awakeningSlot) {
+								slot.awakeningSlot.setbonus = setbonus;
+								this.slotService.selectSetbonusSlot(slot.awakeningSlot);
+							}
 							this.slotService.selectSetbonus(setbonus);
 						}
 					}
@@ -603,6 +620,9 @@ export class BuildService {
 					result += `g${ailmentId}`;
 				} else {
 					result += `g${0}`;
+				}
+				if (item.melodies && item.weaponType == WeaponType.HuntingHorn) {
+					result += `hh${item.melodies.id}`;
 				}
 			}
 

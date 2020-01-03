@@ -13,6 +13,7 @@ import { AwakeningLevelModel } from '../models/awakening-level.model';
 import { DecorationModel } from '../models/decoration.model';
 import { ItemModel } from '../models/item.model';
 import { KinsectModel } from '../models/kinsect.model';
+import { MelodiesModel } from '../models/melodies.model';
 import { ModificationModel } from '../models/modification.model';
 import { SetBonusModel } from '../models/set-bonus.model';
 import { SlotEventModel } from '../models/slot-event.model';
@@ -189,6 +190,11 @@ export class SlotService {
 			this.equipmentService.upgradeContainer = slot.upgradeContainer;
 		}
 		slot.awakenings = [];
+		if (slot.awakeningSlot) {
+			slot.awakeningSlot.setbonus = null;
+			this.equipmentService.removeSetbonus();
+			slot.awakeningSlot.melody = null;
+		}
 		slot.kinsect = null;
 		this.itemSelected$.next({ slot: slot, equipment: null });
 	}
@@ -221,16 +227,30 @@ export class SlotService {
 		this.upgradeSelected$.next({ slot: slot, equipment: null });
 	}
 
-	clearAwakeningSlot(slot: AwakeningSlotComponent) {
+	clearAwakeningSlot(slot: AwakeningSlotComponent, update: boolean = true) {
 		this.equipmentService.removeAwakening();
 		slot.awakenings = [];
-		this.weaponModSelected$.next({ slot: slot, equipment: null });
+		this.clearSkillSlot(slot, false);
+		this.clearMelodySlot(slot, false);
+		if (update) {
+			this.weaponModSelected$.next({ slot: slot, equipment: null });
+		}
 	}
 
-	clearSkillSlot(slot: AwakeningSlotComponent) {
+	clearSkillSlot(slot: AwakeningSlotComponent, update: boolean = true) {
 		this.equipmentService.removeSetbonus();
 		slot.setbonus = null;
-		this.weaponModSelected$.next({ slot: slot, equipment: null });
+		if (update) {
+			this.weaponModSelected$.next({ slot: slot, equipment: null });
+		}
+	}
+
+	clearMelodySlot(slot: AwakeningSlotComponent, update: boolean = true) {
+		this.equipmentService.removeMelody();
+		slot.melody = null;
+		if (update) {
+			this.weaponModSelected$.next({ slot: slot, equipment: null });
+		}
 	}
 
 	clearModificationSlot(slot: ModificationSlotComponent) {
@@ -311,16 +331,6 @@ export class SlotService {
 					case WeaponType.InsectGlaive:
 						this.selectedItemSlot.kinsect = new KinsectModel();
 						break;
-					case WeaponType.HeavyBowgun:
-						this.selectedItemSlot.modifications = [
-							new ModificationModel(),
-							new ModificationModel(),
-							new ModificationModel()
-						];
-						if (item.rarity >= 10) {
-							this.selectedItemSlot.modifications.push(new ModificationModel());
-						}
-						break;
 					case WeaponType.LightBowgun:
 						this.selectedItemSlot.modifications = [
 							new ModificationModel(),
@@ -329,6 +339,24 @@ export class SlotService {
 						];
 						if (item.rarity >= 10) {
 							this.selectedItemSlot.modifications.push(new ModificationModel());
+						}
+						if (item.rarity >= 12) {
+							this.selectedItemSlot.modifications.push(new ModificationModel());
+						}
+						break;
+					case WeaponType.HeavyBowgun:
+						this.selectedItemSlot.modifications = [
+							new ModificationModel(),
+							new ModificationModel(),
+							new ModificationModel()
+						];
+						if (item.rarity >= 9) {
+							this.selectedItemSlot.modifications.push(new ModificationModel());
+						}
+						if (item.rarity >= 10) {
+							this.selectedItemSlot.modifications.push(new ModificationModel());
+						}
+						if (item.rarity >= 12) {
 							this.selectedItemSlot.modifications.push(new ModificationModel());
 						}
 						break;
@@ -492,8 +520,9 @@ export class SlotService {
 		this.equipmentService.changeWeaponName(weaponName);
 	}
 
-	selectWeaponSkill() {
-
+	changeWeaponMelody(melodies: MelodiesModel) {
+		this.equipmentService.changeWeaponMelody(melodies);
+		this.weaponModSelected$.next();
 	}
 
 	activeItemTool(itemType: ItemType, active: boolean) {
@@ -649,18 +678,25 @@ export class SlotService {
 	private clearSlotItems(slot: ItemSlotComponent) {
 		if (slot.item) {
 			this.equipmentService.removeItem(slot.item);
+
+			this.equipmentService.removeAwakening();
+
+			slot.decorationSlots.forEach(ds => {
+				this.equipmentService.removeDecoration(ds.decoration);
+			});
+
+			slot.augmentationSlots.forEach(as => {
+				this.equipmentService.removeAugmentation(as.augmentation);
+			});
+
+			slot.modificationSlots.forEach(md => {
+				this.equipmentService.removeModification(md.modification);
+			});
+
+			if (slot.awakeningSlot) {
+				slot.awakeningSlot.setbonus = null;
+			}
 		}
-		slot.decorationSlots.forEach(ds => {
-			this.equipmentService.removeDecoration(ds.decoration);
-		});
-
-		slot.augmentationSlots.forEach(as => {
-			this.equipmentService.removeAugmentation(as.augmentation);
-		});
-
-		slot.modificationSlots.forEach(md => {
-			this.equipmentService.removeModification(md.modification);
-		});
 	}
 
 	private clearSlotSelect() {

@@ -8,4 +8,6 @@ export class AwakeningModel {
 	safiElements?: number[];
 	safiAilments?: number[][];
 	skills?: SkillReferenceModel[];
+	minLevel?: number;
+	maxLevel?: number;
 }

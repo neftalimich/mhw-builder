@@ -3,7 +3,7 @@
 		"id": 1,
 		"code": "REC",
 		"name": "Recoil Suppressor",
-		"description": "Lowers the recoil when firing. Note that lower recoil also means higher rate of fire, essentially improving damage output. Effectiveness varies with what ammo type is being used.",
+		"description": "Reduce recoil for certain ammo types. Equipping two or more increase its efficacy.",
 		"levels": [
 			{
 				"description": "Recoil -1",
@@ -27,7 +27,7 @@
 		"id": 2,
 		"code": "REL",
 		"name": "Reload Assist",
-		"description": "Speeds up reload times. Effectiveness varies with what ammo type is being used.",
+		"description": "Reduce reload time for specific ammo. Equipping two or more alters its effect.",
 		"levels": [
 			{
 				"description": "Reload +1",
@@ -51,7 +51,7 @@
 		"id": 3,
 		"code": "DEV",
 		"name": "Deviation Suppressor",
-		"description": "Lowers deviation. Can only be used if the bowgun has deviation.",
+		"description": "Reduces deviation when firing. Can be equipped multiple times.",
 		"levels": [
 			{
 				"description": "Deviation -1",
@@ -75,7 +75,7 @@
 		"id": 4,
 		"code": "CLO",
 		"name": "Close Range Up",
-		"description": "Adds an extra slot. Stack with other upgrades to increase the slot's level.",
+		"description": "Increases attack power when firing at close range. Can be equipped multiple times.",
 		"levels": [
 			{
 				"description": "Close +1",
@@ -98,7 +98,7 @@
 	{
 		"id": 5,
 		"code": "LNG",
-		"name": "Long Range Up",
+		"name": "Increases attack power when firing at long range. Can be equipped multiple times.",
 		"description": "",
 		"levels": [
 			{
@@ -123,7 +123,7 @@
 		"id": 6,
 		"code": "SHI",
 		"name": "Shield",
-		"description": "",
+		"description": "Automatic defend yourselft when your weapon is drawn. Equip two or more for better shielding. (HBG Only)",
 		"levels": [
 			{
 				"description": "Shield +1",
@@ -158,7 +158,7 @@
 		"id": 8,
 		"code": "EVR",
 		"name": "Evading Reload",
-		"description": "Reload ammo while performing an evasive slide. Equipping two or more increases amount reloaded. (LHB Only)",
+		"description": "Reload ammo while performing an evasive slide. Equipping two or more increases amount reloaded. (LBG Only)",
 		"levels": [
 			{
 				"description": "Evading Reload +1",

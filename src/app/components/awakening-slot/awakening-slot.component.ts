@@ -21,6 +21,7 @@ import { DropdownComponent } from '../common/dropdown/dropdown.component';
 export class AwakeningSlotComponent implements OnInit {
 	slotName = ItemType.Awakening;
 	setbonus: SetBonusModel;
+	melody: any = null;
 
 	public selected: boolean;
 
@@ -38,6 +39,7 @@ export class AwakeningSlotComponent implements OnInit {
 	elementValues: KeyValuePair<string, string>[];
 	ailmentValues: KeyValuePair<string, string>[];
 	awakeningValues: KeyValuePair<number, string>[];
+	melodyValues: any[] = [];
 
 	@Input()
 	set awakenings(awakenings: AwakeningLevelModel[]) {
@@ -113,6 +115,25 @@ export class AwakeningSlotComponent implements OnInit {
 			this.ailmentValues.push({ key: key, value: key });
 		});
 		this.ailmentValues.pop();
+
+		this.melodyValues.push({ level: 0, name: 'Melody', melodyId: 4046 });
+		this.melodyValues.push({ level: 2, name: 'Attack Melody I', melodyId: 2189 });
+		this.melodyValues.push({ level: 3, name: 'Attack Melody II', melodyId: 2183 });
+		this.melodyValues.push({ level: 4, name: 'Attack Melody III', melodyId: 2169 });
+		this.melodyValues.push({ level: 5, name: 'Attack Melody IV', melodyId: 2211 });
+
+		this.melodyValues.push({ level: 2, name: 'Stamina Melody I', melodyId: 2195 });
+		this.melodyValues.push({ level: 3, name: 'Stamina Melody II', melodyId: 2178 });
+		this.melodyValues.push({ level: 4, name: 'Stamina Melody III', melodyId: 2186 });
+		this.melodyValues.push({ level: 5, name: 'Stamina Melody IV', melodyId: 2230 });
+
+		this.melodyValues.push({ level: 2, name: 'Elemental Melody I', melodyId: 2215 });
+		this.melodyValues.push({ level: 3, name: 'Elemental Melody II', melodyId: 2229 });
+		this.melodyValues.push({ level: 4, name: 'Elemental Melody III', melodyId: 2231 });
+		this.melodyValues.push({ level: 5, name: 'Elemental Melody IV', melodyId: 2176 });
+
+		this.melodyValues.push({ level: 2, name: 'Status Melody', melodyId: 2219 });
+		this.melodyValues.push({ level: 2, name: 'Earplugs Melody', melodyId: 2171 });
 	}
 
 	initAwakeningValues() {
@@ -179,6 +200,17 @@ export class AwakeningSlotComponent implements OnInit {
 			}
 		}
 		this.slotService.selectAwakenings(this.awakenings);
+	}
+
+	selectMelodyType(melody: any) {
+		this.melody = melody;
+		this.slotService.changeWeaponMelody(this.dataService.getMelodies(melody.melodyId));
+	}
+
+	clearMelodyClicked(event: Event) {
+		event.stopPropagation();
+		this.melody = this.melodyValues[0];
+		this.slotService.changeWeaponMelody(this.dataService.getMelodies(this.melody.melodyId));
 	}
 
 	getElementIcon(element: ElementType): string {
