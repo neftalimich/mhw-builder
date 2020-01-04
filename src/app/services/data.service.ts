@@ -185,7 +185,7 @@ export class DataService {
 				elementName = 'Frost';
 				break;
 			case ElementType.Dragon:
-				elementName = 'Draks';
+				elementName = 'Drak';
 				break;
 			default:
 				break;
