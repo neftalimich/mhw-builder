@@ -1,11 +1,15 @@
 [
 	{
 		"id": 0,
-		"type": "None"
+		"type": "None",
+		"name": "None",
+		"minLevel": 0,
+		"maxLevel": 0
 	},
 	{
 		"id": 1,
 		"type": "Attack",
+		"name": "Attack",
 		"awakenings": [
 			[ 2, 4, 6, 8, 9, 14 ],
 			[ 2, 4, 6, 8, 10, 15 ],
@@ -28,6 +32,7 @@
 	{
 		"id": 2,
 		"type": "Affinity",
+		"name": "Affinity",
 		"awakenings": [ [ 2, 4, 6, 8, 10, 15 ] ],
 		"minLevel": 1,
 		"maxLevel": 6
@@ -35,21 +40,25 @@
 	{
 		"id": 3,
 		"type": "Defense",
-		"name": "Defense Increase",
+		"name": "Defense",
 		"awakenings": [ [ 10, 20, 30, 40, 50, 60 ] ],
 		"minLevel": 1,
-		"maxLevel": 6
+		"maxLevel": 6,
+		"max": 1
 	},
 	{
 		"id": 4,
 		"type": "Slot",
+		"name": "Slot",
 		"awakenings": [ [ 0, 1, 2, 3, 4, 5 ] ],
 		"minLevel": 1,
-		"maxLevel": 6
+		"maxLevel": 6,
+		"max": 1
 	},
 	{
 		"id": 5,
 		"type": "Ailment",
+		"name": "Ailment",
 		"awakenings": [
 			[ 10, 20, 30, 40, 50, 70 ],
 			[ 0, 0, 0, 20, 30, 50 ],
@@ -88,6 +97,7 @@
 	{
 		"id": 6,
 		"type": "Element",
+		"name": "Element",
 		"awakenings": [
 			[ 20, 40, 60, 90, 120, 150 ],
 			[ 10, 30, 50, 70, 90, 120 ],
@@ -126,6 +136,7 @@
 	{
 		"id": 7,
 		"type": "Sharpness",
+		"name": "Sharpness",
 		"awakenings": [ [ 10, 20, 30, 40, 50, 70 ] ],
 		"minLevel": 1,
 		"maxLevel": 6
@@ -133,29 +144,82 @@
 	{
 		"id": 8,
 		"type": "NormalCapacity",
+		"name": "Normal Capacity",
 		"awakenings": [ [ 0, 0, 0, 1, 2, 3 ] ],
 		"minLevel": 4,
-		"maxLevel": 6
+		"maxLevel": 6,
+		"max": 1
 	},
 	{
 		"id": 9,
 		"type": "PierceCapacity",
+		"name": "Pierce Capacity",
 		"awakenings": [ [ 0, 0, 0, 1, 2, 3 ] ],
 		"minLevel": 4,
-		"maxLevel": 6
+		"maxLevel": 6,
+		"max": 1
 	},
 	{
 		"id": 10,
 		"type": "SpreadCapacity",
+		"name": "Spread Capacity",
 		"awakenings": [ [ 0, 0, 0, 1, 2, 3 ] ],
 		"minLevel": 4,
-		"maxLevel": 6
+		"maxLevel": 6,
+		"max": 1
 	},
 	{
 		"id": 11,
 		"type": "ElementalCapacity",
+		"name": "Elemental Capacity",
 		"awakenings": [ [ 0, 0, 0, 1, 2, 3 ] ],
 		"minLevel": 4,
-		"maxLevel": 6
+		"maxLevel": 6,
+		"max": 1
+	},
+	{
+		"id": 12,
+		"type": "AttackMelody",
+		"name": "Attack Melody",
+		"awakenings": [ [ 4046, 2189, 2183, 2169, 2211, 2211 ] ],
+		"minLevel": 2,
+		"maxLevel": 5,
+		"max": 1
+	},
+	{
+		"id": 13,
+		"type": "StaminaMelody",
+		"name": "Stamina Melody",
+		"awakenings": [ [ 4046, 2195, 2178, 2186, 2230, 2230 ] ],
+		"minLevel": 2,
+		"maxLevel": 5,
+		"max": 1
+	},
+	{
+		"id": 14,
+		"type": "ElementalMelody",
+		"name": "Elemental Melody",
+		"awakenings": [ [ 4046, 2215, 2229, 2231, 2176, 2176 ] ],
+		"minLevel": 2,
+		"maxLevel": 5,
+		"max": 1
+	},
+	{
+		"id": 15,
+		"type": "StatusMelody",
+		"name": "Status Melody",
+		"awakenings": [ [ 4046, 2219, 2219, 2219, 2219, 2219 ] ],
+		"minLevel": 2,
+		"maxLevel": 2,
+		"max": 1
+	},
+	{
+		"id": 16,
+		"type": "EarplugsMelody",
+		"name": "Earplugs Melody",
+		"awakenings": [ [ 4046, 2171, 2171, 2171, 2171, 2171 ] ],
+		"minLevel": 2,
+		"maxLevel": 2,
+		"max": 1
 	}
 ]

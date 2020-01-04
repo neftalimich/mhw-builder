@@ -70,7 +70,7 @@
 			<div class="awakening-type" (click)="awakeningDropdown.toggle($event)">
 				<div class="awakening selected-awakening">
 					<span *ngIf="awakening.type != awakeningTypes.None">
-						{{awakening.type}}
+						{{awakening.name}}
 					</span>
 					<span *ngIf="awakening.type == awakeningTypes.None">
 						Awakening
@@ -83,46 +83,30 @@
 				<div class="awakening-clear">
 				</div>
 				<mhw-builder-dropdown #awakeningDropdown>
-					<div class="awakening" *ngFor="let e of awakeningValues" (click)="selectAwakeningType(e, awakening, i)">
-						<span>{{e.value}}</span>
+					<div class="awakening" *ngFor="let e of awakeningValues"
+						(click)="selectAwakeningType(e, awakening, i)">
+						<span>{{e.name}}</span>
 					</div>
 				</mhw-builder-dropdown>
 			</div>
 			<div class="awakening-level">
 				<div *ngIf="awakening.type != awakeningTypes.None">
-					<span *ngFor="let key of awakening.level | numbersArr">
-						<i class="fas fa-star fa-sm c-pointer" [ngClass]="awakening.type" (click)="selectAwakeningLevel(key+1,awakening)"></i>
+					<span *ngFor="let key of awakening.minLevel - 1 | numbersArr">
+						<i class="far fa-star fa-sm c-pointer" style="color:#525252"></i>
 					</span>
-					<span *ngFor="let key of ((i==0 ? 6:5) - awakening.level) | numbersArr">
-						<i class="far fa-star fa-sm c-pointer" [ngClass]="awakening.type" (click)="selectAwakeningLevel(key+1+awakening.level,awakening)"></i>
+					<span *ngFor="let key of (awakening.level - awakening.minLevel + 1) | numbersArr">
+						<i class="fas fa-star fa-sm c-pointer" [ngClass]="awakening.type"
+							(click)="selectAwakeningLevel(key + 1 + awakening.minLevel - 1, awakening)">
+						</i>
 					</span>
-					<span *ngIf="i!=0">
+					<span *ngFor="let key of (6 - awakening.level - (i == 0 ? 0 : 1)) | numbersArr">
+						<i class="far fa-star fa-sm c-pointer" [ngClass]="awakening.type"
+							(click)="selectAwakeningLevel(key + 1 + awakening.level, awakening)"></i>
+					</span>
+					<span *ngIf="i != 0">
 						<i class="far fa-star fa-sm c-pointer" style="color:#525252"></i>
 					</span>
 				</div>
-			</div>
-		</div>
-		<div class="awakening-slot" *ngIf="weaponType == weaponTypes.HuntingHorn">
-			<div class="awakening-type" (click)="melodyDropdown.toggle($event)">
-				<div class="awakening selected-awakening">
-					<span *ngIf="melody">{{melody?.name}}</span>
-					<span *ngIf="!melody">Melody</span>
-				</div>
-				<div class="awakening-level">
-					<span *ngIf="melody?.level">
-						{{melody?.level}} <i class="fas fa-star star-icon"></i>
-					</span>
-				</div>
-				<div class="awakening-clear">
-					<button type="button" class="clear-button" (click)="clearMelodyClicked($event)">
-						<i class="fas fa-times fa-sm"></i>
-					</button>
-				</div>
-				<mhw-builder-dropdown #melodyDropdown>
-					<div class="awakening" *ngFor="let e of melodyValues" (click)="selectMelodyType(e)">
-						<span>{{e.name}}</span>
-					</div>
-				</mhw-builder-dropdown>
 			</div>
 		</div>
 	</div>

@@ -116,7 +116,6 @@ export class BuildService {
 		const kinsectElementRegex = /(?<=e)([\d]+)/g;
 		const elementRegex = /(?<=f)([\d]+)/g;
 		const ailmentRegex = /(?<=g)([\d]+)/g;
-		const melodyRegex = /(?<=hh)([\d]+)/g;
 		const modRegex = /(?<=m)([\d]+)/g;
 		const levelRegex = /(?<=l)([\d]+)/g;
 
@@ -196,10 +195,6 @@ export class BuildService {
 			const ailment = itemGroup.match(ailmentRegex);
 			if (ailment) {
 				buildItem.ailmentId = parseInt(ailment[0], 10);
-			}
-			const melody = itemGroup.match(melodyRegex);
-			if (melody) {
-				buildItem.melodyId = parseInt(melody[0], 10);
 			}
 
 			const mods = itemGroup.match(modRegex);
@@ -325,15 +320,6 @@ export class BuildService {
 							}
 						}
 					}
-					// -------------------- Melody
-					if (buildItem.melodyId != null) {
-						if (item.weaponType == WeaponType.HuntingHorn) {
-							item.melodies = this.dataService.getMelodies(buildItem.melodyId);
-							if (item.upgradeType == 2) {
-								slot.awakeningSlot.melody = slot.awakeningSlot.melodyValues.find(x => x.melodyId == buildItem.melodyId);
-							}
-						}
-					}
 					// --------------------
 					if (item.upgradeType == 2
 						&& item.weaponType != WeaponType.LightBowgun
@@ -349,7 +335,10 @@ export class BuildService {
 							awakeningLevels.push({
 								id: awkAux.id,
 								type: awkAux.type,
-								level: awk[1]
+								name: awkAux.name,
+								level: awk[1],
+								minLevel: awkAux.minLevel,
+								maxLevel: awkAux.maxLevel
 							});
 						}
 						slot.awakeningSlot.awakenings = awakeningLevels;
@@ -620,9 +609,6 @@ export class BuildService {
 					result += `g${ailmentId}`;
 				} else {
 					result += `g${0}`;
-				}
-				if (item.melodies && item.weaponType == WeaponType.HuntingHorn) {
-					result += `hh${item.melodies.id}`;
 				}
 			}
 

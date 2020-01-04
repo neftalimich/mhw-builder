@@ -25,5 +25,4 @@ export class BuildItemModel {
 
 	elementId?: number;
 	ailmentId?: number;
-	melodyId?: number;
 }

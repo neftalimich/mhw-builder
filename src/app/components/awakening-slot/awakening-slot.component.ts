@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { AwakeningModel } from 'src/app/models/awakening.model';
 import { AwakeningLevelModel } from '../../models/awakening-level.model';
 import { KeyValuePair } from '../../models/common/key-value-pair.model';
 import { SetBonusModel } from '../../models/set-bonus.model';
@@ -21,7 +22,6 @@ import { DropdownComponent } from '../common/dropdown/dropdown.component';
 export class AwakeningSlotComponent implements OnInit {
 	slotName = ItemType.Awakening;
 	setbonus: SetBonusModel;
-	melody: any = null;
 
 	public selected: boolean;
 
@@ -38,8 +38,7 @@ export class AwakeningSlotComponent implements OnInit {
 
 	elementValues: KeyValuePair<string, string>[];
 	ailmentValues: KeyValuePair<string, string>[];
-	awakeningValues: KeyValuePair<number, string>[];
-	melodyValues: any[] = [];
+	awakeningValues: AwakeningModel[];
 
 	@Input()
 	set awakenings(awakenings: AwakeningLevelModel[]) {
@@ -86,10 +85,14 @@ export class AwakeningSlotComponent implements OnInit {
 			}
 		}
 		this.initAwakeningValues();
-		if (weaponType == WeaponType.Bow) {
-			this.awakeningValues.splice(7, 5);
-		} else if (weaponType != WeaponType.LightBowgun && weaponType != WeaponType.HeavyBowgun) {
+		if (weaponType != WeaponType.HuntingHorn) {
+			this.awakeningValues.splice(12, 5);
+		}
+		if (weaponType != WeaponType.LightBowgun && weaponType != WeaponType.HeavyBowgun) {
 			this.awakeningValues.splice(8, 4);
+		}
+		if (weaponType == WeaponType.Bow || weaponType == WeaponType.LightBowgun || weaponType == WeaponType.HeavyBowgun) {
+			this.awakeningValues.splice(7, 1);
 		}
 	}
 	get weaponType(): WeaponType {
@@ -115,32 +118,10 @@ export class AwakeningSlotComponent implements OnInit {
 			this.ailmentValues.push({ key: key, value: key });
 		});
 		this.ailmentValues.pop();
-
-		this.melodyValues.push({ level: 0, name: 'Melody', melodyId: 4046 });
-		this.melodyValues.push({ level: 2, name: 'Attack Melody I', melodyId: 2189 });
-		this.melodyValues.push({ level: 3, name: 'Attack Melody II', melodyId: 2183 });
-		this.melodyValues.push({ level: 4, name: 'Attack Melody III', melodyId: 2169 });
-		this.melodyValues.push({ level: 5, name: 'Attack Melody IV', melodyId: 2211 });
-
-		this.melodyValues.push({ level: 2, name: 'Stamina Melody I', melodyId: 2195 });
-		this.melodyValues.push({ level: 3, name: 'Stamina Melody II', melodyId: 2178 });
-		this.melodyValues.push({ level: 4, name: 'Stamina Melody III', melodyId: 2186 });
-		this.melodyValues.push({ level: 5, name: 'Stamina Melody IV', melodyId: 2230 });
-
-		this.melodyValues.push({ level: 2, name: 'Elemental Melody I', melodyId: 2215 });
-		this.melodyValues.push({ level: 3, name: 'Elemental Melody II', melodyId: 2229 });
-		this.melodyValues.push({ level: 4, name: 'Elemental Melody III', melodyId: 2231 });
-		this.melodyValues.push({ level: 5, name: 'Elemental Melody IV', melodyId: 2176 });
-
-		this.melodyValues.push({ level: 2, name: 'Status Melody', melodyId: 2219 });
-		this.melodyValues.push({ level: 2, name: 'Earplugs Melody', melodyId: 2171 });
 	}
 
 	initAwakeningValues() {
-		this.awakeningValues = [];
-		Object.keys(AwakeningType).map((key, index) => {
-			this.awakeningValues.push({ key: index, value: key });
-		});
+		this.awakeningValues = JSON.parse(JSON.stringify(this.dataService.getAwakenings()));
 	}
 
 	clicked() {
@@ -184,33 +165,35 @@ export class AwakeningSlotComponent implements OnInit {
 		this.slotService.changeWeaponName(this.dataService.getSafiWeaponName(this.weaponType, this.weaponElement, this.weaponAilment));
 	}
 
-	selectAwakeningType(selectedAwakening: KeyValuePair<number, string>, awakeningLevel: AwakeningLevelModel, index: number) {
-		awakeningLevel.id = selectedAwakening.key;
-		awakeningLevel.type = AwakeningType[selectedAwakening.value];
-		awakeningLevel.level = awakeningLevel.level != 0 ? awakeningLevel.level : (index == 0 ? 6 : 5);
+	selectAwakeningType(selectedAwakening: AwakeningModel, awakeningLevel: AwakeningLevelModel, index: number) {
+		awakeningLevel.id = selectedAwakening.id;
+		awakeningLevel.type = selectedAwakening.type;
+		awakeningLevel.name = selectedAwakening.name;
+		if (index == 0) {
+			awakeningLevel.maxLevel = Math.min(selectedAwakening.maxLevel, 6);
+		} else {
+			awakeningLevel.maxLevel = Math.min(selectedAwakening.maxLevel, 5);
+		}
+		awakeningLevel.minLevel = selectedAwakening.minLevel;
+
+		if (awakeningLevel.level == 0) {
+			awakeningLevel.level = awakeningLevel.maxLevel;
+		} else {
+			awakeningLevel.level = Math.min(Math.max(awakeningLevel.level, awakeningLevel.minLevel), awakeningLevel.maxLevel);
+		}
+
 		this.slotService.selectAwakenings(this.awakenings);
 	}
 
 	selectAwakeningLevel(level: number, awakeningLevel: AwakeningLevelModel) {
 		if (awakeningLevel.type != AwakeningType.None) {
-			if (awakeningLevel.level == level) {
+			if (awakeningLevel.level == level && awakeningLevel.minLevel < level) {
 				awakeningLevel.level -= 1;
 			} else {
 				awakeningLevel.level = level;
 			}
 		}
 		this.slotService.selectAwakenings(this.awakenings);
-	}
-
-	selectMelodyType(melody: any) {
-		this.melody = melody;
-		this.slotService.changeWeaponMelody(this.dataService.getMelodies(melody.melodyId));
-	}
-
-	clearMelodyClicked(event: Event) {
-		event.stopPropagation();
-		this.melody = this.melodyValues[0];
-		this.slotService.changeWeaponMelody(this.dataService.getMelodies(this.melody.melodyId));
 	}
 
 	getElementIcon(element: ElementType): string {

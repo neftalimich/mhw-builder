@@ -13,7 +13,6 @@ import { AwakeningLevelModel } from '../models/awakening-level.model';
 import { DecorationModel } from '../models/decoration.model';
 import { ItemModel } from '../models/item.model';
 import { KinsectModel } from '../models/kinsect.model';
-import { MelodiesModel } from '../models/melodies.model';
 import { ModificationModel } from '../models/modification.model';
 import { SetBonusModel } from '../models/set-bonus.model';
 import { SlotEventModel } from '../models/slot-event.model';
@@ -193,7 +192,6 @@ export class SlotService {
 		if (slot.awakeningSlot) {
 			slot.awakeningSlot.setbonus = null;
 			this.equipmentService.removeSetbonus();
-			slot.awakeningSlot.melody = null;
 		}
 		slot.kinsect = null;
 		this.itemSelected$.next({ slot: slot, equipment: null });
@@ -231,7 +229,6 @@ export class SlotService {
 		this.equipmentService.removeAwakening();
 		slot.awakenings = [];
 		this.clearSkillSlot(slot, false);
-		this.clearMelodySlot(slot, false);
 		if (update) {
 			this.weaponModSelected$.next({ slot: slot, equipment: null });
 		}
@@ -240,14 +237,6 @@ export class SlotService {
 	clearSkillSlot(slot: AwakeningSlotComponent, update: boolean = true) {
 		this.equipmentService.removeSetbonus();
 		slot.setbonus = null;
-		if (update) {
-			this.weaponModSelected$.next({ slot: slot, equipment: null });
-		}
-	}
-
-	clearMelodySlot(slot: AwakeningSlotComponent, update: boolean = true) {
-		this.equipmentService.removeMelody();
-		slot.melody = null;
 		if (update) {
 			this.weaponModSelected$.next({ slot: slot, equipment: null });
 		}
@@ -457,9 +446,6 @@ export class SlotService {
 		} else {
 			this.selectedAwakeningSlot = this.weaponSlot.awakeningSlot;
 		}
-		if (this.selectedAwakeningSlot.awakenings) {
-			this.equipmentService.removeAwakening();
-		}
 		this.equipmentService.addAwakenings(awakenings, updateStats);
 		this.applySlotAwakening();
 
@@ -518,11 +504,6 @@ export class SlotService {
 
 	changeWeaponName(weaponName: string) {
 		this.equipmentService.changeWeaponName(weaponName);
-	}
-
-	changeWeaponMelody(melodies: MelodiesModel) {
-		this.equipmentService.changeWeaponMelody(melodies);
-		this.weaponModSelected$.next();
 	}
 
 	activeItemTool(itemType: ItemType, active: boolean) {

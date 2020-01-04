@@ -351,6 +351,33 @@ export class StatService {
 			}
 		}
 
+		if (weapon.weaponType == WeaponType.HuntingHorn) {
+			let melodyId = weapon.id;
+
+			const attackMelody = awakenings.find(x => x.type == AwakeningType.AttackMelody);
+			if (attackMelody && attackMelody.level > 0) {
+				melodyId = this.awakeningsData.find(x => x.type == AwakeningType.AttackMelody).awakenings[0][attackMelody.level - 1];
+			}
+			const staminaMelody = awakenings.find(x => x.type == AwakeningType.StaminaMelody);
+			if (staminaMelody && staminaMelody.level > 0) {
+				melodyId = this.awakeningsData.find(x => x.type == AwakeningType.StaminaMelody).awakenings[0][staminaMelody.level - 1];
+			}
+			const elementalMelody = awakenings.find(x => x.type == AwakeningType.ElementalMelody);
+			if (elementalMelody && elementalMelody.level > 0) {
+				melodyId = this.awakeningsData.find(x => x.type == AwakeningType.ElementalMelody).awakenings[0][elementalMelody.level - 1];
+			}
+			const statusMelody = awakenings.find(x => x.type == AwakeningType.StatusMelody);
+			if (statusMelody && statusMelody.level > 0) {
+				melodyId = this.awakeningsData.find(x => x.type == AwakeningType.StatusMelody).awakenings[0][statusMelody.level - 1];
+			}
+			const earplugsMelody = awakenings.find(x => x.type == AwakeningType.EarplugsMelody);
+			if (earplugsMelody && earplugsMelody.level > 0) {
+				melodyId = this.awakeningsData.find(x => x.type == AwakeningType.EarplugsMelody).awakenings[0][earplugsMelody.level - 1];
+			}
+
+			weapon.melodies = this.dataService.getMelodies(melodyId);
+		}
+
 		if (weapon.ammoCapacities) {
 			weapon.ammoCapacities = JSON.parse(JSON.stringify(this.dataService.getAmmoCapacities(weapon.id)));
 

@@ -10,5 +10,10 @@ export enum AwakeningType {
 	NormalCapacity = 'NormalCapacity',
 	PierceCapacity = 'PierceCapacity',
 	SpreadCapacity = 'SpreadCapacity',
-	ElementalCapacity = 'ElementalCapacity'
+	ElementalCapacity = 'ElementalCapacity',
+	AttackMelody = 'AttackMelody',
+	StaminaMelody = 'StaminaMelody',
+	ElementalMelody = 'ElementalMelody',
+	StatusMelody = 'StatusMelody',
+	EarplugsMelody = 'EarplugsMelody'
 }
