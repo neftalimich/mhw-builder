@@ -5,6 +5,7 @@ export class AwakeningModel {
 	id: number;
 	type: AwakeningType;
 	name: string;
+	short?: string;
 	awakenings?: number[][];
 	safiElements?: number[];
 	safiAilments?: number[][];

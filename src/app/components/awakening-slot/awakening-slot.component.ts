@@ -169,6 +169,7 @@ export class AwakeningSlotComponent implements OnInit {
 		awakeningLevel.id = selectedAwakening.id;
 		awakeningLevel.type = selectedAwakening.type;
 		awakeningLevel.name = selectedAwakening.name;
+		awakeningLevel.short = selectedAwakening.short;
 		if (index == 0) {
 			awakeningLevel.maxLevel = Math.min(selectedAwakening.maxLevel, 6);
 		} else {
@@ -196,6 +197,10 @@ export class AwakeningSlotComponent implements OnInit {
 		this.slotService.selectAwakenings(this.awakenings);
 	}
 
+	getMin(a: number, b: number): number {
+		return Math.min(a, b);
+	}
+
 	getElementIcon(element: ElementType): string {
 		let assetPath;
 		if (element && element != ElementType.None) {
@@ -203,6 +208,7 @@ export class AwakeningSlotComponent implements OnInit {
 		}
 		return `assets/images/${assetPath}.png`;
 	}
+
 	getAilmentIcon(ailment: AilmentType): string {
 		let assetPath;
 		if (ailment && ailment != AilmentType.None) {

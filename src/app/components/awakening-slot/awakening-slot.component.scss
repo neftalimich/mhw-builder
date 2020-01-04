@@ -152,3 +152,13 @@ $elementSpacing: 2px;
 .selected {
 	background-color: #525252;
 }
+
+@media only screen and (max-width: 716px) {
+	.name1 {
+		display: none !important;
+	}
+
+	.name2 {
+		display: inline !important;
+	}
+}

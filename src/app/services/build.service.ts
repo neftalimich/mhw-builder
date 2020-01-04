@@ -336,6 +336,7 @@ export class BuildService {
 								id: awkAux.id,
 								type: awkAux.type,
 								name: awkAux.name,
+								short: awkAux.short,
 								level: awk[1],
 								minLevel: awkAux.minLevel,
 								maxLevel: awkAux.maxLevel
