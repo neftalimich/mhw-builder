@@ -186,7 +186,7 @@
 		"type": "AttackMelody",
 		"name": "Attack Melody",
 		"short": "Attack Mel.",
-		"awakenings": [ [ 4046, 2189, 2183, 2169, 2211, 2211 ] ],
+		"awakenings": [ [ 4046, 2181, 2183, 2169, 2211, 2211 ] ],
 		"minLevel": 2,
 		"maxLevel": 5,
 		"max": 1
