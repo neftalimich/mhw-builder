@@ -1,6 +1,7 @@
 import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import * as _ from 'lodash';
 import { VirtualScrollerComponent } from 'ngx-virtual-scroller';
+import { ToolModel } from 'src/app/models/tool.model';
 import { ItemModel } from '../../models/item.model';
 import { DataService } from '../../services/data.service';
 import { SlotService } from '../../services/slot.service';
@@ -31,9 +32,9 @@ export class ToolListComponent implements OnInit {
 	@ViewChild('searchBox', { static: true }) searchBox: ElementRef;
 	@ViewChild('itemList', { static: false }) itemList: VirtualScrollerComponent;
 
-	items: ItemModel[];
-	filteredItems: ItemModel[];
-	virtualItems: ItemModel[];
+	items: ToolModel[];
+	filteredItems: ToolModel[];
+	virtualItems: ToolModel[];
 	toolTypeFilter?: ToolType;
 	weaponTypeSort: String;
 
@@ -55,7 +56,7 @@ export class ToolListComponent implements OnInit {
 		}
 	}
 
-	onItemListUpdate(items: ItemModel[]) {
+	onItemListUpdate(items: ToolModel[]) {
 		this.virtualItems = items;
 	}
 
@@ -78,11 +79,7 @@ export class ToolListComponent implements OnInit {
 
 					const nameMatch = itemName.includes(query);
 
-					const tagMatch = _.some(queryParts, queryPart => {
-						return _.some(item.tags, tag => tag.toLowerCase().includes(queryPart));
-					});
-
-					if (!nameMatch && !tagMatch) {
+					if (!nameMatch) {
 						this.filteredItems = _.reject(this.filteredItems, i => i.name === item.name);
 					}
 				}

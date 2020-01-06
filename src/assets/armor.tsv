@@ -7,7 +7,7 @@ id	itemType	rarity	name	defense	fireResist	waterResist	thunderResist	iceResist	d
 1006	Head	9	Bone Helm β +	114;130;152	2	0	2	0	2	healthBoost-1;partbreaker-1	4	bone	0
 1007	Chest	9	Bone Mail β +	114;130;152	2	0	2	0	2	attackBoost-2	4;1	bone	0
 1008	Hands	9	Bone Vambraces β +	114;130;152	2	0	2	0	2	slugger-2	4;1	bone	0
-1009	Legs	9	Bone Coil Betaa +	114;130;152	2	0	2	0	2	hornMaestro-1	4;1	bone	0
+1009	Legs	9	Bone Coil β +	114;130;152	2	0	2	0	2	hornMaestro-1	4;1	bone	0
 1010	Feet	9	Bone Greaves β +	114;130;152	2	0	2	0	2	slugger-1	4	bone	0
 1011	Head	9	Alloy Helm α +	114;130;152	-2	0	-2	-2	0	windproof-2;defenseBoost-1	2	alloy;alpha	0
 1012	Chest	9	Alloy Mail α +	114;130;152	-2	0	-2	-2	0	waterResistance-2;defenseBoost-1	3	alloy;alpha	0

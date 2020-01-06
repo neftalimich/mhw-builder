@@ -12,6 +12,7 @@ import { SetBonusModel } from '../models/set-bonus.model';
 import { SharpnessModifierModel } from '../models/sharpness-modifier.model';
 import { SkillReferenceModel } from '../models/skill-reference.model';
 import { SkillModel } from '../models/skill.model';
+import { ToolModel } from '../models/tool.model';
 import { UpgradeModel } from '../models/upgrade.model';
 import { WeaponModifierModel } from '../models/weapon-modifier.model';
 import { AppDataProvider } from '../providers/app-data.provider';
@@ -80,7 +81,7 @@ export class DataService {
 		return this.appDataProvider.appData.charms;
 	}
 
-	getTools(type: ItemType): ItemModel[] {
+	getTools(type: ItemType): ToolModel[] {
 		const items = this.appDataProvider.appData.tools.map(x => Object.assign({}, x));
 		_.each(items, tool => {
 			tool.itemType = type;
