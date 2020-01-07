@@ -179,21 +179,6 @@ export class SlotService {
 		this.clearSlotItems(slot);
 
 		slot.item = null;
-		slot.augmentations = [];
-		slot.modifications = [];
-		if (slot.upgradeContainer) {
-			slot.upgradeContainer.slots = 0;
-			slot.upgradeContainer.used = 0;
-			slot.upgradeContainer.hasCustomUpgrades = false;
-			this.clearUpgradeContainer(slot.upgradeContainer);
-			this.equipmentService.upgradeContainer = slot.upgradeContainer;
-		}
-		slot.awakenings = [];
-		if (slot.awakeningSlot) {
-			slot.awakeningSlot.setbonus = null;
-			this.equipmentService.removeSetbonus();
-		}
-		slot.kinsect = null;
 		this.itemSelected$.next({ slot: slot, equipment: null });
 	}
 	clearArmorSlot(slot: ItemSlotComponent) {
@@ -660,8 +645,6 @@ export class SlotService {
 		if (slot.item) {
 			this.equipmentService.removeItem(slot.item);
 
-			this.equipmentService.removeAwakening();
-
 			slot.decorationSlots.forEach(ds => {
 				this.equipmentService.removeDecoration(ds.decoration);
 			});
@@ -675,6 +658,7 @@ export class SlotService {
 			});
 
 			if (slot.awakeningSlot) {
+				this.equipmentService.removeAwakening();
 				slot.awakeningSlot.setbonus = null;
 			}
 		}

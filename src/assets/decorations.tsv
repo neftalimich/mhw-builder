@@ -176,7 +176,7 @@ id	rarity	level	priority	name	skills
 238	9	4	12	Hard Tip Toe Jewel 4	stealth-3
 240	9	4	12	Hard Specimen Jewel 4	entomologist-3
 244	9	4	12	Hard Botany Jewel 4	botanist-4
-7812	0	4	0	Bomber/Attack Jewel+ 4	bombardier-1;attackBoost-1
+7812	10	4	0	Bomber/Attack Jewel+ 4	bombardier-1;attackBoost-1
 7886	0	4	0	Bomber/Physique Jewel+ 4	bombardier-1;constitution-1
 7819	0	4	0	Bomber/Expert Jewel+ 4	bombardier-1;criticalEye-1
 7859	0	4	0	Bomber/Evasion Jewel+ 4	bombardier-1;evadeWindow-1
@@ -229,7 +229,7 @@ id	rarity	level	priority	name	skills
 9259	10	4	0	Draw/Evasion Jewel+ 4	criticalDraw-1;evadeWindow-1
 9225	0	4	0	Draw/Vitality Jewel+ 4	criticalDraw-1;healthBoost-1
 9276	10	4	0	Draw/Medicine Jewel+ 4	criticalDraw-1;recoveryUp-1
-9248	0	4	0	Draw/Maintenance Jewel+ 4	criticalDraw-1;toolSpecialist-1
+9248	10	4	0	Draw/Maintenance Jewel+ 4	criticalDraw-1;toolSpecialist-1
 6386	12	4	0	Earplugs/Physique Jewel+ 4	earplugs-1;constitution-1
 6342	0	4	0	Earplugs/Protection Jewel+ 4	earplugs-1;divineBlessing-1
 6359	12	4	0	Earplugs/Evasion Jewel+ 4	earplugs-1;evadeWindow-1
@@ -245,7 +245,7 @@ id	rarity	level	priority	name	skills
 9086	0	4	0	Flawless/Physique Jewel+ 4	peakPerformance-1;constitution-1
 9042	0	4	0	Flawless/Protection Jewel+ 4	peakPerformance-1;divineBlessing-1
 9059	0	4	0	Flawless/Evasion Jewel+ 4	peakPerformance-1;evadeWindow-1
-9025	0	4	0	Flawless/Vitality Jewel+ 4	peakPerformance-1;healthBoost-1
+9025	10	4	0	Flawless/Vitality Jewel+ 4	peakPerformance-1;healthBoost-1
 9076	0	4	0	Flawless/Medicine Jewel+ 4	peakPerformance-1;recoveryUp-1
 9048	10	4	0	Flawless/Maintenance Jewel+ 4	peakPerformance-1;toolSpecialist-1
 5012	10	4	0	Flight/Attack Jewel+ 4	airborne-1;attackBoost-1
@@ -324,13 +324,13 @@ id	rarity	level	priority	name	skills
 5342	10	4	0	KO/Protection Jewel+ 4	slugger-1;divineBlessing-1
 5359	11	4	0	KO/Evasion Jewel+ 4	slugger-1;evadeWindow-1
 5325	0	4	0	KO/Vitality Jewel+ 4	slugger-1;healthBoost-1
-5376	0	4	0	KO/Medicine Jewel+ 4	slugger-1;recoveryUp-1
+5376	10	4	0	KO/Medicine Jewel+ 4	slugger-1;recoveryUp-1
 5348	0	4	0	KO/Maintenance Jewel+ 4	slugger-1;toolSpecialist-1
 5486	11	4	0	Mighty/Physique Jewel+ 4	maximumMight-1;constitution-1
 5442	10	4	0	Mighty/Protection Jewel+ 4	maximumMight-1;divineBlessing-1
 5459	11	4	0	Mighty/Evasion Jewel+ 4	maximumMight-1;evadeWindow-1
 5425	10	4	0	Mighty/Vitality Jewel+ 4	maximumMight-1;healthBoost-1
-5476	0	4	0	Mighty/Medicine Jewel+ 4	maximumMight-1;recoveryUp-1
+5476	10	4	0	Mighty/Medicine Jewel+ 4	maximumMight-1;recoveryUp-1
 5448	10	4	0	Mighty/Maintenance Jewel+ 4	maximumMight-1;toolSpecialist-1
 10086	12	4	0	Phoenix/Physique Jewel+ 4	coalescence-1;constitution-1
 10042	0	4	0	Phoenix/Protection Jewel+ 4	coalescence-1;divineBlessing-1
@@ -371,7 +371,7 @@ id	rarity	level	priority	name	skills
 2012	0	4	0	Sheath/Attack Jewel+ 4	quickSheath-1;attackBoost-1
 2086	10	4	0	Sheath/Physique Jewel+ 4	quickSheath-1;constitution-1
 2019	10	4	0	Sheath/Expert Jewel+ 4	quickSheath-1;criticalEye-1
-2059	0	4	0	Sheath/Evasion Jewel+ 4	quickSheath-1;evadeWindow-1
+2059	10	4	0	Sheath/Evasion Jewel+ 4	quickSheath-1;evadeWindow-1
 2096	11	4	0	Sheath/Release Jewel+ 4	quickSheath-1;freeElemAmmoUp-1
 2064	11	4	0	Sheath/Handicraft Jewel+ 4	quickSheath-1;handicraft-1
 5112	9	4	0	Slider/Attack Jewel+ 4	affinitySliding-1;attackBoost-1

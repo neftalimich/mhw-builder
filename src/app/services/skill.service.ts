@@ -158,8 +158,15 @@ export class SkillService {
 						equippedSkill.equippedCount = 1;
 						equippedSkill.equippedArmorCount = 1;
 						equippedSkill.totalLevelCount = skill.levels.length;
-						equippedSkill.mode = ModeType.Active;
 						equippedSkills.push(equippedSkill);
+
+						if (skill.mode == null) {
+							if (skill.hasActiveStats) {
+								skill.mode = ModeType.AllSkillActive;
+							} else {
+								skill.mode = ModeType.Active;
+							}
+						}
 
 						if (skill.raiseSkillId) {
 							const equippedSkillToRaise = _.find(equippedSkills, es => es.id == skill.raiseSkillId);
@@ -289,7 +296,7 @@ export class SkillService {
 				skill.mode = ModeType.Active;
 			}
 		}
-		equippedSkill.skill.mode = skill.mode;
+		
 		return equippedSkill;
 	}
 }
