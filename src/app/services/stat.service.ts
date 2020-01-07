@@ -56,12 +56,15 @@ export class StatService {
 			this.updateAwakenings(weaponItem, awakenings);
 		}
 		// ----------------------------
-		this.updateItemStats(items);
-		this.updateSkillStats(skills);
-		this.updateAugmentations(augmentations);
+		// ---------------------------- Upgrades
 		if (upgradeContainer) {
 			this.updateUpgrades(upgradeContainer);
 		}
+		// ----------------------------
+		this.updateItemStats(items);
+		this.updateSkillStats(skills);
+		this.updateAugmentations(augmentations);
+		
 		this.updateModifications(modifications);
 
 		const weapon = _.find(items, item => item.weaponType != null);
@@ -222,22 +225,15 @@ export class StatService {
 
 	private updateUpgrades(upgradeContainer: UpgradeContainerModel) {
 		for (const detail of upgradeContainer.upgradeDetails) {
-			if (detail.passiveAttack) { this.stats.passiveAttack += detail.passiveAttack; }
-			if (detail.passiveAffinity) { this.stats.passiveAffinity += detail.passiveAffinity; }
+			if (detail.passiveAttack) { this.stats.attack += detail.passiveAttack; }
+			if (detail.passiveAffinity) { this.stats.affinity += detail.passiveAffinity; }
 			if (detail.passiveDefense) { this.stats.passiveDefense += detail.passiveDefense; }
 			if (detail.healOnHitPercent) { this.stats.healOnHitPercent += detail.healOnHitPercent; }
 			if (detail.passiveElement) {
-				this.stats.passiveFireAttack += detail.passiveElement;
-				this.stats.passiveWaterAttack += detail.passiveElement;
-				this.stats.passiveThunderAttack += detail.passiveElement;
-				this.stats.passiveIceAttack += detail.passiveElement;
-				this.stats.passiveDragonAttack += detail.passiveElement;
+				this.stats.baseElementAttack += detail.passiveElement;
 			}
 			if (detail.passiveAilment) {
-				this.stats.passivePoisonAttack += detail.passiveAilment;
-				this.stats.passiveSleepAttack += detail.passiveAilment;
-				this.stats.passiveParalysisAttack += detail.passiveAilment;
-				this.stats.passiveBlastAttack += detail.passiveAilment;
+				this.stats.baseAilmentAttack += detail.passiveAilment;
 			}
 		}
 
@@ -284,20 +280,12 @@ export class StatService {
 			}
 		}
 
-		this.stats.passiveAttack += upgradePassiveAttack;
-		this.stats.passiveAffinity += upgradePassiveAffinity;
+		this.stats.attack += upgradePassiveAttack;
+		this.stats.affinity += upgradePassiveAffinity;
 		this.stats.passiveDefense += upgradePassiveDefense;
 
-		this.stats.passiveFireAttack += upgradePassiveAilmentElement;
-		this.stats.passiveWaterAttack += upgradePassiveAilmentElement;
-		this.stats.passiveThunderAttack += upgradePassiveAilmentElement;
-		this.stats.passiveIceAttack += upgradePassiveAilmentElement;
-		this.stats.passiveDragonAttack += upgradePassiveAilmentElement;
-
-		this.stats.passivePoisonAttack += upgradePassiveAilmentElement;
-		this.stats.passiveSleepAttack += upgradePassiveAilmentElement;
-		this.stats.passiveParalysisAttack += upgradePassiveAilmentElement;
-		this.stats.passiveBlastAttack += upgradePassiveAilmentElement;
+		this.stats.baseElementAttack += upgradePassiveAilmentElement;
+		this.stats.baseAilmentAttack += upgradePassiveAilmentElement;
 	}
 
 	private updateAwakenings(weapon: ItemModel, awakenings: AwakeningLevelModel[]) {

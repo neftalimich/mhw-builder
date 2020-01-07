@@ -662,6 +662,13 @@ export class SlotService {
 				slot.awakeningSlot.setbonus = null;
 			}
 		}
+		if (slot.upgradeContainer) {
+			slot.upgradeContainer.slots = 0;
+			slot.upgradeContainer.used = 0;
+			slot.upgradeContainer.hasCustomUpgrades = false;
+			this.clearUpgradeContainer(slot.upgradeContainer);
+			this.equipmentService.upgradeContainer = slot.upgradeContainer;
+		}
 	}
 
 	private clearSlotSelect() {
