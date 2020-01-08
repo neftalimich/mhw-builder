@@ -257,7 +257,7 @@ id	itemType	rarity	name	defense	fireResist	waterResist	thunderResist	iceResist	d
 1256	Head	10	Artian Helm β +	142;152;174	1	-2	-2	2	3	slingerCapacity-1;freeElemAmmoUp-1;ancientDivinity	4;1	mineral	0
 1257	Chest	10	Artian Mail β +	142;152;174	1	-2	-2	2	3	criticalEye-2;peakPerformance-1;ancientDivinity	4	mineral	0
 1258	Hands	10	Artian Vambraces β +	142;152;174	1	-2	-2	2	3	freeElemAmmoUp-2;ancientDivinity	4	mineral	0
-1259	Legs	10	Artian Coil β +	142;152;174	1	-2	-2	2	3	toolSpecialist-1;criticalEye-1	4;1	mineral	0
+1259	Legs	10	Artian Coil β +	142;152;174	1	-2	-2	2	3	toolSpecialist-1;criticalEye-1;ancientDivinity	4;1	mineral	0
 1260	Feet	10	Artian Greaves β +	142;152;174	1	-2	-2	2	3	peakPerformance-2;ancientDivinity	4	mineral	0
 1261	Head	10	Clockwork Helm α +	142;152;174	2	2	2	-1	-1	agitator-2;partbreaker-1;commissionAlchemy	1;1	steam	0
 1262	Chest	10	Clockwork Mail α +	142;152;174	2	2	2	-1	-1	agitator-2;specialAmmoBoost-1;commissionAlchemy	1;1	steam	0

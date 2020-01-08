@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="search-container">
-		<input #searchBox (keyup)="search(searchBox.value)" placeholder="Search names, skills, monster" />
+		<input #searchBox (keyup)="search($event, searchBox.value)" placeholder="Search names, skills, monster" />
 		<button type="button" class="iceborne-button" (click)="onlyIceborne = !onlyIceborne" title="Only Iceborne">
 			<i class="fas fa-toggle-on" [hidden]="!onlyIceborne"></i>
 			<i class="fas fa-toggle-off" [hidden]="onlyIceborne"></i>

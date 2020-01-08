@@ -296,7 +296,7 @@ export class SkillService {
 				skill.mode = ModeType.Active;
 			}
 		}
-		
+
 		return equippedSkill;
 	}
 }

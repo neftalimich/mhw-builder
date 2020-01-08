@@ -10,9 +10,12 @@ export class StatsModel {
 	totalAttack: number;
 	totalAttackPotential: number;
 	attack: number;
+	upgradeAttack: number;
+	awakeningAttack: number;
 	passiveAttack: number;
 	activeAttack: number;
 	activeAttackPercent: number;
+
 	sharpnessDataNeeded: boolean;
 	passiveSharpness: number;
 	extraSharpness: number;
@@ -20,12 +23,15 @@ export class StatsModel {
 	effectivePhysicalSharpnessModifier: number;
 	effectiveElementalSharpnessModifier: number;
 	extraSlot: number;
+
 	weaponAttackModifier: number;
 	critElementModifier: number;
 	trueCritElementModifier: number;
 	critStatusModifier: number;
 	trueCritStatusModifier: number;
 	affinity: number;
+	upgradeAffinity: number;
+	awakeningAffinity: number;
 	passiveAffinity: number;
 	activeAffinity: number;
 	weakPointAffinity: number;
@@ -40,6 +46,8 @@ export class StatsModel {
 
 	element: ElementType;
 	baseElementAttack: number;
+	upgradeElementAttack: number;
+	awakeningElementAttack: number;
 	effectivePassiveElementAttack: number;
 	elementHidden: boolean;
 	effectiveElementAttack: number;
@@ -50,6 +58,8 @@ export class StatsModel {
 
 	ailment: AilmentType;
 	baseAilmentAttack: number;
+	upgradeAilmentAttack: number;
+	awakeningAilmentAttack: number;
 	effectivePassiveAilmentAttack: number;
 	ailmentHidden: boolean;
 	effectiveAilmentAttack: number;
@@ -124,6 +134,8 @@ export class StatsModel {
 	constructor() {
 		this.totalAttack = 0;
 		this.attack = 0;
+		this.upgradeAttack = 0;
+		this.awakeningAttack = 0;
 		this.passiveAttack = 0;
 		this.activeAttack = 0;
 		this.activeAttackPercent = 0;
@@ -143,6 +155,8 @@ export class StatsModel {
 		this.critStatusModifier = 0;
 		this.trueCritStatusModifier = 0;
 		this.affinity = 0;
+		this.upgradeAffinity = 0;
+		this.awakeningAffinity = 0;
 		this.passiveAffinity = 0;
 		this.activeAffinity = 0;
 		this.weakPointAffinity = 0;
@@ -154,6 +168,8 @@ export class StatsModel {
 
 		this.element = null;
 		this.baseElementAttack = 0;
+		this.upgradeElementAttack = 0;
+		this.awakeningElementAttack = 0;
 		this.elementHidden = false;
 		this.effectiveElementAttack = 0;
 		this.elementCap = 0;
@@ -163,6 +179,8 @@ export class StatsModel {
 
 		this.ailment = null;
 		this.baseAilmentAttack = 0;
+		this.upgradeAilmentAttack = 0;
+		this.awakeningAilmentAttack = 0;
 		this.ailmentHidden = false;
 		this.effectiveAilmentAttack = 0;
 		this.ailmentCap = 0;

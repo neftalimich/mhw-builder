@@ -61,6 +61,10 @@ export class DecorationListComponent implements OnInit {
 				return 1;
 			} else if (a.priority > b.priority) {
 				return -1;
+			} else if (a.level < b.level) {
+				return 1;
+			} else if (a.level > b.level) {
+				return -1;
 			} else {
 				if (a.skills.length < b.skills.length) {
 					return -1;

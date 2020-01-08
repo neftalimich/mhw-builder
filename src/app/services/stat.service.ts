@@ -55,7 +55,6 @@ export class StatService {
 		if (weaponItem && awakenings.length) {
 			this.updateAwakenings(weaponItem, awakenings);
 		}
-		// ----------------------------
 		// ---------------------------- Upgrades
 		if (upgradeContainer) {
 			this.updateUpgrades(upgradeContainer);
@@ -64,7 +63,7 @@ export class StatService {
 		this.updateItemStats(items);
 		this.updateSkillStats(skills);
 		this.updateAugmentations(augmentations);
-		
+
 		this.updateModifications(modifications);
 
 		const weapon = _.find(items, item => item.weaponType != null);
@@ -225,15 +224,23 @@ export class StatService {
 
 	private updateUpgrades(upgradeContainer: UpgradeContainerModel) {
 		for (const detail of upgradeContainer.upgradeDetails) {
-			if (detail.passiveAttack) { this.stats.attack += detail.passiveAttack; }
-			if (detail.passiveAffinity) { this.stats.affinity += detail.passiveAffinity; }
+			if (detail.passiveAttack) {
+				this.stats.attack += detail.passiveAttack;
+				this.stats.upgradeAttack += detail.passiveAttack;
+			}
+			if (detail.passiveAffinity) {
+				this.stats.affinity += detail.passiveAffinity;
+				this.stats.upgradeAffinity += detail.passiveAffinity;
+			}
 			if (detail.passiveDefense) { this.stats.passiveDefense += detail.passiveDefense; }
 			if (detail.healOnHitPercent) { this.stats.healOnHitPercent += detail.healOnHitPercent; }
 			if (detail.passiveElement) {
 				this.stats.baseElementAttack += detail.passiveElement;
+				this.stats.upgradeElementAttack += detail.passiveElement;
 			}
 			if (detail.passiveAilment) {
 				this.stats.baseAilmentAttack += detail.passiveAilment;
+				this.stats.upgradeAilmentAttack += detail.passiveAilment;
 			}
 		}
 
@@ -281,11 +288,15 @@ export class StatService {
 		}
 
 		this.stats.attack += upgradePassiveAttack;
+		this.stats.upgradeAttack += upgradePassiveAttack;
 		this.stats.affinity += upgradePassiveAffinity;
+		this.stats.upgradeAffinity += upgradePassiveAffinity;
 		this.stats.passiveDefense += upgradePassiveDefense;
 
 		this.stats.baseElementAttack += upgradePassiveAilmentElement;
+		this.stats.upgradeElementAttack += upgradePassiveAilmentElement;
 		this.stats.baseAilmentAttack += upgradePassiveAilmentElement;
+		this.stats.upgradeAilmentAttack += upgradePassiveAilmentElement;
 	}
 
 	private updateAwakenings(weapon: ItemModel, awakenings: AwakeningLevelModel[]) {
@@ -314,9 +325,11 @@ export class StatService {
 				switch (awakening.type) {
 					case AwakeningType.Attack:
 						this.stats.attack += (awakeningAttack[awakening.level - 1] * weaponModifier);
+						this.stats.awakeningAttack += (awakeningAttack[awakening.level - 1] * weaponModifier);
 						break;
 					case AwakeningType.Affinity:
 						this.stats.affinity += awakeningAffinity[awakening.level - 1];
+						this.stats.awakeningAffinity += awakeningAffinity[awakening.level - 1];
 						break;
 					case AwakeningType.Defense:
 						this.stats.defense[0] += awakeningDefense[awakening.level - 1];
@@ -326,9 +339,11 @@ export class StatService {
 						break;
 					case AwakeningType.Ailment:
 						this.stats.baseAilmentAttack += awakeningAilment[awakening.level - 1];
+						this.stats.awakeningAilmentAttack += awakeningAilment[awakening.level - 1];
 						break;
 					case AwakeningType.Element:
 						this.stats.baseElementAttack += awakeningElement[awakening.level - 1];
+						this.stats.awakeningElementAttack += awakeningElement[awakening.level - 1];
 						break;
 					case AwakeningType.Sharpness:
 						this.stats.extraSharpness += awakeningSharpness[awakening.level - 1];

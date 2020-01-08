@@ -383,9 +383,13 @@ export class CalculationService {
 	}
 
 	private getAilmentAttack(stats: StatsModel, ailmentCalc: StatDetailModel): StatDetailModel {
+		let value = `${stats.totalAilmentAttack}`;
+		if (stats.totalAilmentAttack != stats.totalAilmentAttackPotential) {
+			value = `${stats.totalAilmentAttack} | ${stats.totalAilmentAttackPotential}`;
+		}
 		const ailmentAttackCalc: StatDetailModel = {
 			name: 'Ailment Attack',
-			value: stats.totalAilmentAttack,
+			value: value,
 			valueColor: ailmentCalc.color,
 			icon: stats.ailment.toLowerCase() + (stats.effectiveAilmentAttack == 0 ? '-gray' : ''),
 			color: ailmentCalc.color,
@@ -394,7 +398,19 @@ export class CalculationService {
 				{
 					displayName: 'Weapon Base Ailment Attack',
 					name: 'base',
-					value: stats.baseAilmentAttack,
+					value: stats.baseAilmentAttack - stats.upgradeAilmentAttack - stats.awakeningAilmentAttack,
+					colorClass: 'purple'
+				},
+				{
+					displayName: 'Weapon Upgrade Ailment Attack',
+					name: 'upgrade',
+					value: stats.upgradeAilmentAttack,
+					colorClass: 'blue'
+				},
+				{
+					displayName: 'Weapon Awakening Ailment Attack',
+					name: 'awakening',
+					value: stats.awakeningAilmentAttack,
 					colorClass: 'blue'
 				},
 				{
@@ -433,12 +449,12 @@ export class CalculationService {
 			});
 
 			if (stats.elementAttackMultiplier) {
-				ailmentAttackCalc.calculationTemplate = `({base} × {multiplier} (1 + {passiveBuildup} + {activeBuildup}) + {passive} + {active} ≈ ${stats.totalAilmentAttackPotential}`;
+				ailmentAttackCalc.calculationTemplate = `(({base} + {upgrade} + {awakening}) × {multiplier} (1 + {passiveBuildup} + {activeBuildup}) + {passive} + {active} ≈ ${stats.totalAilmentAttackPotential}`;
 			} else {
-				ailmentAttackCalc.calculationTemplate = `({base} × (1 + {passiveBuildup} + {activeBuildup}) + {passive} + {active}) × {multiplier} ≈ ${stats.totalAilmentAttackPotential}`;
+				ailmentAttackCalc.calculationTemplate = `(({base} + {upgrade} + {awakening}) × (1 + {passiveBuildup} + {activeBuildup}) + {passive} + {active}) × {multiplier} ≈ ${stats.totalAilmentAttackPotential}`;
 			}
 		} else {
-			ailmentAttackCalc.calculationTemplate = `{base} × (1 + {passiveBuildup} + {activeBuildup}) + {passive} + {active} ≈ ${stats.totalAilmentAttackPotential}`;
+			ailmentAttackCalc.calculationTemplate = `({base} + {upgrade} + {awakening}) × (1 + {passiveBuildup} + {activeBuildup}) + {passive} + {active} ≈ ${stats.totalAilmentAttackPotential}`;
 		}
 
 		return ailmentAttackCalc;
@@ -465,9 +481,13 @@ export class CalculationService {
 	}
 
 	private getElementAttack(stats: StatsModel, elementCalc: StatDetailModel): StatDetailModel {
+		let value = `${stats.totalElementAttack}`;
+		if (stats.totalElementAttack != stats.totalElementAttackPotential) {
+			value = `${stats.totalElementAttack} | ${stats.totalElementAttackPotential}`;
+		}
 		const elementAttackCalc: StatDetailModel = {
 			name: 'Elment Attack',
-			value: stats.totalElementAttack,
+			value: value,
 			valueColor: elementCalc.color,
 			icon: stats.element.toLowerCase() + (stats.effectiveElementAttack == 0 ? '-gray' : ''),
 			color: elementCalc.color,
@@ -476,8 +496,20 @@ export class CalculationService {
 				{
 					displayName: 'Weapon Base Element Attack',
 					name: 'base',
-					value: stats.baseElementAttack,
-					colorClass: 'green'
+					value: stats.baseElementAttack - stats.upgradeElementAttack - stats.awakeningElementAttack,
+					colorClass: 'purple'
+				},
+				{
+					displayName: 'Weapon Upgrade Element Attack',
+					name: 'upgrade',
+					value: stats.upgradeElementAttack,
+					colorClass: 'blue'
+				},
+				{
+					displayName: 'Weapon Awakening Element Attack',
+					name: 'awakening',
+					value: stats.awakeningElementAttack,
+					colorClass: 'blue'
 				},
 				{
 					displayName: 'Passive Element Attack',
@@ -503,12 +535,12 @@ export class CalculationService {
 			});
 
 			if (stats.elementAttackMultiplier) {
-				elementAttackCalc.calculationTemplate = `{base} × {multiplier} + {passive} + {active} ≈ ${stats.totalElementAttackPotential}`;
+				elementAttackCalc.calculationTemplate = `({base} + {upgrade} + {awakening}) × {multiplier} + {passive} + {active} ≈ ${stats.totalElementAttackPotential}`;
 			} else {
-				elementAttackCalc.calculationTemplate = `({base} + {passive} + {active}) × {multiplier} ≈ ${stats.totalElementAttackPotential}`;
+				elementAttackCalc.calculationTemplate = `({base + {upgrade} + {awakening}} + {passive} + {active}) × {multiplier} ≈ ${stats.totalElementAttackPotential}`;
 			}
 		} else {
-			elementAttackCalc.calculationTemplate = `{base} + {passive} + {active} = ${stats.totalElementAttackPotential}`;
+			elementAttackCalc.calculationTemplate = `{base} + {upgrade} + {awakening} + {passive} + {active} = ${stats.totalElementAttackPotential}`;
 		}
 
 		return elementAttackCalc;

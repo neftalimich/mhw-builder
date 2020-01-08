@@ -1,5 +1,4 @@
 import { Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
-import * as _ from 'lodash';
 import { VirtualScrollerComponent } from 'ngx-virtual-scroller';
 import { ItemModel } from '../../models/item.model';
 import { SkillModel } from '../../models/skill.model';
@@ -28,7 +27,7 @@ export class ArmorListComponent implements OnInit {
 	@Input()
 	set onlyIceborne(onlyIceborne: boolean) {
 		this._onlyIceborne = onlyIceborne;
-		this.search(this.searchBox.nativeElement.value);
+		this.search({ key: 'Filter' }, this.searchBox.nativeElement.value);
 		this.armorTypeSort = '';
 	}
 	get onlyIceborne(): boolean { return this._onlyIceborne; }
@@ -105,9 +104,11 @@ export class ArmorListComponent implements OnInit {
 		setTimeout(() => this.searchBox.nativeElement.focus(), 250);
 	}
 
-	search(query: string) {
-		this.applyIceborneFilter();
-
+	search(event, query: string) {
+		if (event && (event.key === 'FilterHard' || event.key === 'Backspace' || event.key === 'Delete')) {
+			this.applyIceborneFilter();
+		}
+		
 		if (query) {
 			if (query.length > 2) {
 				const alphaIndex = query.indexOf('alpha');
@@ -127,20 +128,24 @@ export class ArmorListComponent implements OnInit {
 
 				const queryParts = query.split(' ');
 
+				if (event && event.key === 'FilterSoft' && (alphaIndex > -1 || betaIndex > -1 || gammaIndex > -1)) {
+					this.applyIceborneFilter();
+				}
+
 				if (this.filteredItems) {
 					for (const item of this.filteredItems) {
 						const itemName = item.name.toLowerCase();
 						const skills = this.dataService.getSkills(item.skills);
 
 						const nameMatch = itemName.includes(query);
-						const skillMatch = _.some(skills, skill => skill.name.toLowerCase().includes(query));
+						const skillMatch = skills.some(skill => skill.name.toLowerCase().includes(query));
 
-						const tagMatch = _.some(queryParts, queryPart => {
-							return _.some(item.tags, tag => tag.toLowerCase().includes(queryPart));
+						const tagMatch = queryParts.some(queryPart => {
+							return item.tags.some(tag => tag.toLowerCase().includes(queryPart));
 						});
 
 						if (!nameMatch && !skillMatch && !tagMatch) {
-							this.filteredItems = _.reject(this.filteredItems, i => i.name === item.name);
+							this.filteredItems = this.filteredItems.filter(i => i.name != item.name);
 						}
 						if (alphaIndex > -1 || betaIndex > -1 || gammaIndex > -1) {
 							const abgQuery = [];
@@ -154,20 +159,20 @@ export class ArmorListComponent implements OnInit {
 							if (gammaIndex > -1) {
 								abgQuery.push('γ');
 							}
-							const query2Match = _.some(abgQuery, queryPart => {
+							const query2Match = abgQuery.some(queryPart => {
 								return itemName.includes(queryPart);
 							});
 							if (!query2Match) {
-								this.filteredItems = _.reject(this.filteredItems, i => i.name === item.name);
+								this.filteredItems = this.filteredItems.filter(i => i.name != item.name);
 							}
 						}
 					}
 				}
+				this.applyItemFilter();
 			}
 		} else {
 			this.resetSearchResults();
 		}
-		this.applyItemFilter();
 	}
 
 	resetSearchResults() {
@@ -179,13 +184,13 @@ export class ArmorListComponent implements OnInit {
 
 	applyItemFilter() {
 		if (this.filteredItems && this.itemTypeFilters) {
-			this.filteredItems = _.reject(this.filteredItems, item => {
+			this.filteredItems = this.filteredItems.filter(item => {
 				for (const itemType of this.itemTypeFilters) {
 					if (item.itemType == itemType) {
-						return false;
+						return true;
 					}
 				}
-				return true;
+				return false;
 			});
 		}
 	}
@@ -214,14 +219,15 @@ export class ArmorListComponent implements OnInit {
 			if (index > -1) {
 				this.itemTypeFilters.splice(index, 1);
 			}
+			this.search({ key: 'FilterHard' }, this.searchBox.nativeElement.value);
 		} else {
 			this.itemTypeFilters.push(itemTypeFilter);
+			this.search({ key: 'FilterSoft' }, this.searchBox.nativeElement.value);
 		}
-		this.search(this.searchBox.nativeElement.value);
 	}
 
 	getSkillCount(item: ItemModel, skill: SkillModel): string {
-		const itemSkill = _.find(item.skills, s => s.id == skill.id);
+		const itemSkill = item.skills.find(s => s.id == skill.id);
 		const result = `${itemSkill.level}/${skill.levels.length}`;
 		return result;
 	}

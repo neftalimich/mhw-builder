@@ -30,7 +30,7 @@ export class WeaponListComponent implements OnInit {
 	@Input()
 	set onlyIceborne(onlyIceborne: boolean) {
 		this._onlyIceborne = onlyIceborne;
-		this.applyIcborneFilter();
+		this.applyIceborneFilter();
 		this.search({ key: 'Filter' }, this.searchBox.nativeElement.value);
 		this.weaponTypeSort = '';
 	}
@@ -93,11 +93,10 @@ export class WeaponListComponent implements OnInit {
 	}
 
 	search(event, query: string) {
-		if (event && (event.key === 'FilterHard' || event.key === 'Backspace' || event.key === 'Delete')) {
-			this.applyIcborneFilter();
-		}
-
 		if (query) {
+			if (event && (event.key === 'FilterHard' || event.key === 'Backspace' || event.key === 'Delete')) {
+				this.applyIceborneFilter();
+			}
 			if (query.length > 1) {
 				query = query.toLowerCase().trim();
 				const queryParts = query.split(' ');
@@ -120,7 +119,6 @@ export class WeaponListComponent implements OnInit {
 						}
 					}
 				}
-
 				this.applyWeaponFilter();
 			}
 		} else {
@@ -130,7 +128,7 @@ export class WeaponListComponent implements OnInit {
 
 	resetSearchResults() {
 		this.searchBox.nativeElement.value = null;
-		this.applyIcborneFilter();
+		this.applyIceborneFilter();
 		this.applyWeaponFilter();
 		this.weaponTypeSort = '';
 	}
@@ -141,7 +139,7 @@ export class WeaponListComponent implements OnInit {
 		}
 	}
 
-	applyIcborneFilter() {
+	applyIceborneFilter() {
 		if (this.onlyIceborne) {
 			this.filteredItems = this.itemsIceborne;
 		} else {

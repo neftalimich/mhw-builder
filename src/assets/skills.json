@@ -2356,11 +2356,11 @@
 	},
 	{
 		"id": "staminaCapUp",
-		"name": "Stamina Cap Up",
-		"description": "Increases stamina cap.",
+		"name": "Stamina Cap Up.",
+		"description": "Increases stamina capacity up.",
 		"levels": [
 			{
-				"description": "Increases stamina cap.",
+				"description": "Increases stamina capacity up (+50).",
 				"passiveStamina": 50
 			}
 		]
@@ -2666,7 +2666,7 @@
 		"description": "",
 		"levels": [
 			{
-				"description": "Elem., abnormal status, & affinity up with weapon drawn. Take damage when attacking, but can be recovered by continually attacking.",
+				"description": "Element, abnormal status, & affinity up with weapon drawn (+80, +80, +20%). Take damage when attacking, but can be recovered by continually attacking.",
 				"activeAffinity": 20,
 				"activeElementAttack": 80,
 				"activeAilmentAttack": 80
@@ -2680,7 +2680,7 @@
 		"description": "",
 		"levels": [
 			{
-				"description": "Enhances attacks even more with weapo drawn. Take damage when attacking, but can be recovered by continually attacking.",
+				"description": "Enhances attacks even more with weapon drawn(+150, +120, +40%). Take damage when attacking, but can be recovered by continually attacking.",
 				"activeAffinity": 40,
 				"activeElementAttack": 150,
 				"activeAilmentAttack": 120
