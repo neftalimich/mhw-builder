@@ -11,6 +11,7 @@ import { ModificationModel } from '../models/modification.model';
 import { SkillLevelModel } from '../models/skill-level.model';
 import { StatsModel } from '../models/stats.model';
 import { UpgradeContainerModel } from '../models/upgrade-container.model';
+import { WeaponModifierModel } from '../models/weapon-modifier.model';
 import { AilmentType } from '../types/ailment.type';
 import { AmmoType } from '../types/ammo.type';
 import { AwakeningType } from '../types/awakening.type';
@@ -30,6 +31,7 @@ export class StatService {
 	readonly defaultElementAttackIncreaseCap = 10.0;
 
 	stats = new StatsModel();
+	weaponModifier: WeaponModifierModel;
 
 	awakeningsData: AwakeningModel[] = [];
 
@@ -50,25 +52,12 @@ export class StatService {
 		kinsect: KinsectModel) {
 
 		this.stats = new StatsModel();
-		// ---------------------------- Awakenings
-		const weaponItem = items.find(x => x.itemType == ItemType.Weapon);
-		if (weaponItem && awakenings.length) {
-			this.updateAwakenings(weaponItem, awakenings);
-		}
-		// ---------------------------- Upgrades
-		if (upgradeContainer) {
-			this.updateUpgrades(upgradeContainer);
-		}
-		// ----------------------------
-		this.updateItemStats(items);
-		this.updateSkillStats(skills);
-		this.updateAugmentations(augmentations);
 
-		this.updateModifications(modifications);
-
-		const weapon = _.find(items, item => item.weaponType != null);
-
+		// ---------------------------- Weapon
+		const weapon = items.find(x => x.itemType == ItemType.Weapon);
 		if (weapon) {
+			this.weaponModifier = this.dataService.getWeaponModifier(weapon.weaponType);
+
 			switch (weapon.weaponType) {
 				case WeaponType.HeavyBowgun:
 				case WeaponType.LightBowgun:
@@ -82,6 +71,20 @@ export class StatService {
 			}
 			this.stats.weaponType = weapon.weaponType;
 		}
+		// ---------------------------- Awakenings
+		if (weapon && awakenings.length) {
+			this.updateAwakenings(weapon, awakenings);
+		}
+		// ---------------------------- Upgrades
+		if (upgradeContainer) {
+			this.updateUpgrades(upgradeContainer);
+		}
+		// ----------------------------
+		this.updateItemStats(items);
+		this.updateSkillStats(skills);
+		this.updateAugmentations(augmentations);
+
+		this.updateModifications(modifications);
 
 		this.calculateAttack(weapon);
 
@@ -145,6 +148,9 @@ export class StatService {
 						if (level.activeAffinity) { this.stats.activeAffinity += level.activeAffinity; }
 						if (level.activeWeakPointAffinity) { this.stats.weakPointAffinity += level.activeWeakPointAffinity; }
 						if (level.activeDefense) { this.stats.activeDefense += level.activeDefense; }
+						if (equippedSkill.skill.id == 'frostcraft') {
+							this.stats.activeAttackPercent += this.weaponModifier.frostcraft[2];
+						}
 					}
 				}
 				if (equippedSkill.skill.mode == ModeType.Active || equippedSkill.skill.mode == ModeType.AllSkillActive) {
@@ -198,6 +204,12 @@ export class StatService {
 					if (level.hiddenElementUp) { this.stats.elementAttackMultiplier = level.hiddenElementUp; }
 					if (level.ammoUp) { this.stats.ammoUp += level.ammoUp; }
 					if (level.eldersealLevelBoost) { this.stats.eldersealLevelBoost = level.eldersealLevelBoost; }
+				}
+				if (equippedSkill.skill.id == 'hastenRecovery') {
+					this.stats.hastenRecovery = 0;
+				}
+				if (equippedSkill.skill.id == 'frostcraft') {
+					this.stats.frostcraft = [];
 				}
 			}
 		}
@@ -310,7 +322,7 @@ export class StatService {
 				}
 			}
 		}
-		const weaponModifier = this.dataService.getWeaponModifier(weapon.weaponType).attackModifier;
+		const attackModifier = this.weaponModifier.attackModifier;
 
 		const awakeningAttack: number[] = this.awakeningsData.find(x => x.type == AwakeningType.Attack).awakenings[weaponIndex];
 		const awakeningAffinity: number[] = this.awakeningsData.find(x => x.type == AwakeningType.Affinity).awakenings[0];
@@ -324,8 +336,8 @@ export class StatService {
 			if (awakening.level > 0) {
 				switch (awakening.type) {
 					case AwakeningType.Attack:
-						this.stats.attack += (awakeningAttack[awakening.level - 1] * weaponModifier);
-						this.stats.awakeningAttack += (awakeningAttack[awakening.level - 1] * weaponModifier);
+						this.stats.attack += (awakeningAttack[awakening.level - 1] * attackModifier);
+						this.stats.awakeningAttack += (awakeningAttack[awakening.level - 1] * attackModifier);
 						break;
 					case AwakeningType.Affinity:
 						this.stats.affinity += awakeningAffinity[awakening.level - 1];
@@ -539,13 +551,19 @@ export class StatService {
 				otherData: weapon.otherData
 			};
 
-			const weaponModifier = this.dataService.getWeaponModifier(weapon.weaponType);
-			if (weaponModifier) {
-				this.stats.weaponAttackModifier = weaponModifier.attackModifier;
-				this.stats.critElementModifier = weaponModifier.critElementModifier;
-				this.stats.trueCritElementModifier = weaponModifier.trueCritElementModifier;
-				this.stats.critStatusModifier = weaponModifier.critStatusModifier;
-				this.stats.trueCritStatusModifier = weaponModifier.trueCritStatusModifier;
+			if (this.weaponModifier) {
+				this.stats.weaponAttackModifier = this.weaponModifier.attackModifier;
+				this.stats.critElementModifier = this.weaponModifier.critElementModifier;
+				this.stats.trueCritElementModifier = this.weaponModifier.trueCritElementModifier;
+				this.stats.critStatusModifier = this.weaponModifier.critStatusModifier;
+				this.stats.trueCritStatusModifier = this.weaponModifier.trueCritStatusModifier;
+
+				if (this.stats.hastenRecovery != null) {
+					this.stats.hastenRecovery = this.weaponModifier.hastenRecovery;
+				}
+				if (this.stats.frostcraft != null) {
+					this.stats.frostcraft = this.weaponModifier.frostcraft;
+				}
 			}
 		}
 

@@ -398,16 +398,16 @@
 		"description": "Grants protection from large monsters' roars.",
 		"levels": [
 			{
-				"description": "Slightly reduces the effects of weak monster roars."
+				"description": "Slightly reduces the effects of weak monster roars (+80%)."
 			},
 			{
-				"description": "Reduces the effects of weak monster roars."
+				"description": "Reduces the effects of weak monster roars (+90%)."
 			},
 			{
 				"description": "Nullifies weak monster roars."
 			},
 			{
-				"description": "Nullifies weak monster roars and reduces the effects of strong monster roars."
+				"description": "Nullifies weak monster roars and reduces the effects of strong monster roars (+90%)."
 			},
 			{
 				"description": "Nullifies weak and strong monster roars."
@@ -420,16 +420,16 @@
 		"description": "Grants protection against wind pressure.",
 		"levels": [
 			{
-				"description": "Slightly reduces the effects of minor wind pressure."
+				"description": "Slightly reduces the effects of minor wind pressure (+70%)."
 			},
 			{
-				"description": "Reduces the effects of minor wind pressure."
+				"description": "Reduces the effects of minor wind pressure (+80%)."
 			},
 			{
 				"description": "Negates minor wind pressure."
 			},
 			{
-				"description": "Negates minor wind pressure and reduces the effects of major wind pressure."
+				"description": "Negates minor wind pressure and reduces the effects of major wind pressure (+50%)."
 			},
 			{
 				"description": "Negates major and minor wind pressure."
@@ -766,10 +766,10 @@
 		"description": "Increases the attack power of normal ammo and normal arrows.",
 		"levels": [
 			{
-				"description": "Increases the power of normal ammo and normal arrows."
+				"description": "Increases the power (+10%) of normal ammo and normal arrows."
 			},
 			{
-				"description": "Greatly increases the power of normal ammo and normal arrows."
+				"description": "Greatly increases the power (+20%) of normal ammo and normal arrows."
 			}
 		]
 	},
@@ -779,10 +779,10 @@
 		"description": "Increases the attack power of piercing ammo and Dragon Piercer.",
 		"levels": [
 			{
-				"description": "Increases the power of piercing ammo and Dragon Piercer."
+				"description": "Increases the power (+10%) of piercing ammo and Dragon Piercer."
 			},
 			{
-				"description": "Greatly increases the power of piercing ammo and Dragon Piercer."
+				"description": "Greatly increases the power (+20%) of piercing ammo and Dragon Piercer."
 			}
 		]
 	},
@@ -792,10 +792,10 @@
 		"description": "Increases the attack power of spread ammo and power shot arrows.",
 		"levels": [
 			{
-				"description": "Increases the power of spread ammo and power shot arrows."
+				"description": "Increases the power (+10%) of spread ammo and power shot arrows."
 			},
 			{
-				"description": "Greatly increases the power of spread ammo and power shot arrows."
+				"description": "Greatly increases the power (+15%) of spread ammo and power shot arrows."
 			}
 		]
 	},
@@ -963,16 +963,16 @@
 	{
 		"id": "powerProlonger",
 		"name": "Power Prolonger",
-		"description": "Allows long swords, dual blades, insect glaives, switch axes, and charge blades to stay powered up longer.",
+		"description": "Allows long swords (1), dual blades (1), insect glaives (1), switch axes (2), and charge blades (2) to stay powered up longer.",
 		"levels": [
 			{
-				"description": "Slightly increases the duration weapons are powered up."
+				"description": "Slightly increases the duration weapons are powered up. +10%(1) Or +33%.(2)"
 			},
 			{
-				"description": "Increases the duration weapons are power up."
+				"description": "Increases the duration weapons are power up. +20%(1) Or +66%.(2)"
 			},
 			{
-				"description": "Greatly increases the duration weapons are powered up."
+				"description": "Greatly increases the duration weapons are powered up. +40%(1) Or +100%.(2)"
 			}
 		]
 	},
@@ -1029,7 +1029,8 @@
 		"description": "Adds a stun effect to draw attacks and slightly increases attack power.",
 		"levels": [
 			{
-				"description": "Adds a stun effect to draw attacks and slightly increases attack power."
+				"description": "Adds a stun effect to draw attacks and slightly increases attack power (+5).",
+				"activeAttack": 5
 			}
 		]
 	},
@@ -1101,7 +1102,7 @@
 		"description": "Makes it easier to mount monsters.",
 		"levels": [
 			{
-				"description": "Makes it easier to mount monster and down mounted monsters."
+				"description": "Makes it easier to mount monster and down mounted monsters (+25%)."
 			}
 		]
 	},
@@ -1139,41 +1140,41 @@
 	{
 		"id": "latentPower",
 		"name": "Latent Power",
-		"description": "Temporarily increases affinity and reduces stamina depletion when certain conditions are met.",
+		"description": "Temporarily increases affinity and reduces stamina depletion. (1): After taking 180 damage or after 300 seconds, for 90 seconds. (2): After taking 120 damage or after 270 seconds, for 120 seconds.",
 		"maxLevel": 5,
 		"levels": [
 			{
-				"description": "While active, increases affinity by 10% and reduces stamina depletion by 30%.",
+				"description": "(1) Increases affinity by 10% and reduces stamina depletion by 30%.",
 				"activeAffinity": 10,
 				"activeStaminaDepletionReductionPercent": 30
 			},
 			{
-				"description": "While active, increases affinity by 20% and reduces stamina depletion by 30%.",
+				"description": "(1) Increases affinity by 20% and reduces stamina depletion by 30%.",
 				"activeAffinity": 20,
 				"activeStaminaDepletionReductionPercent": 30
 			},
 			{
-				"description": "While active, increases affinity by 30% and reduces stamina depletion by 50%.",
+				"description": "(1) Increases affinity by 30% and reduces stamina depletion by 50%.",
 				"activeAffinity": 30,
 				"activeStaminaDepletionReductionPercent": 50
 			},
 			{
-				"description": "While active, increases affinity by 40% and reduces stamina depletion by 50%.",
+				"description": "(1) Increases affinity by 40% and reduces stamina depletion by 50%.",
 				"activeAffinity": 40,
 				"activeStaminaDepletionReductionPercent": 50
 			},
 			{
-				"description": "While active, increases affinity by 50% and reduces stamina depletion by 50%.",
+				"description": "(1) Increases affinity by 50% and reduces stamina depletion by 50%.",
 				"activeAffinity": 50,
 				"activeStaminaDepletionReductionPercent": 50
 			},
 			{
-				"description": "While active, increases affinity by 50% and reduces stamina depletion by 50%. Triggers easier.",
+				"description": "(2) Iincreases affinity by 50% and reduces stamina depletion by 50%.",
 				"activeAffinity": 50,
 				"activeStaminaDepletionReductionPercent": 50
 			},
 			{
-				"description": "While active, increases affinity by 60% and reduces stamina depletion by 50%. Triggers easier.",
+				"description": "(2) Increases affinity by 60% and reduces stamina depletion by 50%.",
 				"activeAffinity": 60,
 				"activeStaminaDepletionReductionPercent": 50
 			}
@@ -1331,7 +1332,7 @@
 		"description": "Increases evasion and reduces stamina depletion when afflicted with abnormal status effects.",
 		"levels": [
 			{
-				"description": "While active, greatly improves evasion invulnerability time and reduces stamina depletion."
+				"description": "While active, greatly improves evasion invulnerability time (Evasion Lv5) and reduces stamina depletion (Constitution Lv5)."
 			}
 		]
 	},
@@ -1364,10 +1365,10 @@
 		"description": "Increases the power of bowgun special ammo and Dragon Piercer.",
 		"levels": [
 			{
-				"description": "Increases the power of bowgun special ammo and Dragon Piercer by 10%."
+				"description": "Increases the power (+10%) of bowgun special ammo and Dragon Piercer by 10%."
 			},
 			{
-				"description": "Increases the power of bowgun special ammo and Dragon Piercer by 20%."
+				"description": "Increases the power (+20%) of bowgun special ammo and Dragon Piercer by 20%."
 			}
 		]
 	},
@@ -1493,19 +1494,19 @@
 		"description": "Extends the invulnerability period when evading.",
 		"levels": [
 			{
-				"description": "Very slightly increases invulnerability window."
+				"description": "Very slightly increases invulnerability window (8 frames)."
 			},
 			{
-				"description": "Slightly increases invulnerability window."
+				"description": "Slightly increases invulnerability window (9 frames)."
 			},
 			{
-				"description": "Increases invulnerability window."
+				"description": "Increases invulnerability window (10 frames)."
 			},
 			{
-				"description": "Greatly increases invulnerability window."
+				"description": "Greatly increases invulnerability window (11 frames)."
 			},
 			{
-				"description": "Massively increases invulnerability window."
+				"description": "Massively increases invulnerability window (12 frames)."
 			}
 		]
 	},
@@ -1531,19 +1532,19 @@
 		"description": "Reduces knockbacks and stamina depletion when guarding.",
 		"levels": [
 			{
-				"description": "Very slightly decreases the impact of attacks."
+				"description": "Very slightly decreases the impact of attacks (-10)."
 			},
 			{
-				"description": "Slightly decreases the impact of attacks and reduces stamina depletion by 15%."
+				"description": "Slightly decreases the impact of attacks (-10) and reduces stamina depletion by 15%."
 			},
 			{
-				"description": "Greatly decreases the impact of attacks and reduces stamina depletion by 15%."
+				"description": "Greatly decreases the impact of attacks (-20) and reduces stamina depletion by 15%."
 			},
 			{
-				"description": "Greatly decreases the impact of attacks and reduces stamina depletion by 30%."
+				"description": "Greatly decreases the impact of attacks (-30) and reduces stamina depletion by 30%."
 			},
 			{
-				"description": "Massively decreases the impact of attacks and reduces stamina depletion by 50%."
+				"description": "Massively decreases the impact of attacks (-30) and reduces stamina depletion by 50%."
 			}
 		]
 	},
@@ -1563,13 +1564,13 @@
 		"description": "Speeds up weapon sheathing.",
 		"levels": [
 			{
-				"description": "Slightly increases sheathing speed."
+				"description": "Slightly increases sheathing speed (+10%)."
 			},
 			{
-				"description": "Moderately increases sheathing speed."
+				"description": "Moderately increases sheathing speed (+20%)."
 			},
 			{
-				"description": "Greatly increases sheathing speed."
+				"description": "Greatly increases sheathing speed (+40%)."
 			}
 		]
 	},
@@ -1614,10 +1615,10 @@
 	{
 		"id": "poisonDurationUp",
 		"name": "Poison Duration Up",
-		"description": "Extends the duration of your poison's effect on monsters.",
+		"description": "",
 		"levels": [
 			{
-				"description": "Extends the duration of your poison's effect on monsters."
+				"description": "Extends the duration of your poison's effect on monsters (+20%)."
 			}
 		]
 	},
@@ -1644,13 +1645,13 @@
 		"description": "Increases meat-eating and item-consumption speed.",
 		"levels": [
 			{
-				"description": "Slightly increases item use speed."
+				"description": "Slightly increases item use speed (1 second)."
 			},
 			{
-				"description": "Moderately increases item use speed."
+				"description": "Moderately increases item use speed (2.5 seconds)."
 			},
 			{
-				"description": "Greatly increases item use speed."
+				"description": "Greatly increases item use speed (3.5 second)."
 			}
 		]
 	},
@@ -1768,19 +1769,19 @@
 		"maxLevel": 3,
 		"levels": [
 			{
-				"description": "While active, reduces damage taken by 15%."
+				"description": "While active (25%), reduces damage taken by 15%."
 			},
 			{
-				"description": "While active, reduces damage taken by 30%."
+				"description": "While active (25%), reduces damage taken by 30%."
 			},
 			{
-				"description": "While active, reduces damage taken by 50%."
+				"description": "While active (25%), reduces damage taken by 50%."
 			},
 			{
-				"description": "While active, reduces damage taken by 60%."
+				"description": "While active (25%), reduces damage taken by 60%."
 			},
 			{
-				"description": "While active, reduces damage taken by 60%. Skill becomes easier to activate as well."
+				"description": "While active (60%), reduces damage taken by 60%. Skill becomes easier to activate as well."
 			}
 		]
 	},
@@ -1864,27 +1865,27 @@
 	{
 		"id": "maximumMight",
 		"name": "Maximum Might",
-		"description": "Increases affinity as long asstamina is kept full for a period of time.",
+		"description": "Increases affinity as long asstamina is kept full for a period of time (5 seconds).",
 		"maxLevel": 3,
 		"levels": [
 			{
-				"description": "While active, increases affinity by 10%.",
+				"description": "While active (2 seconds), increases affinity by 10%.",
 				"activeAffinity": 10
 			},
 			{
-				"description": "While active, increases affinity by 20%.",
+				"description": "While active (3 seconds), increases affinity by 20%.",
 				"activeAffinity": 20
 			},
 			{
-				"description": "While active, increases affinity by 30%.",
+				"description": "While active (3 seconds), increases affinity by 30%.",
 				"activeAffinity": 30
 			},
 			{
-				"description": "While active, increases affinity by 40%.",
+				"description": "While active (4 seconds), increases affinity by 40%.",
 				"activeAffinity": 40
 			},
 			{
-				"description": "While active, increases affinity by 50%.",
+				"description": "While active, increases affinity by 50%. (Pre-Iceborne behavior).",
 				"activeAffinity": 50
 			}
 		],
@@ -2130,7 +2131,7 @@
 	{
 		"id": "affinitySliding",
 		"name": "Affinity Sliding",
-		"description": "Sliding increases your affinity for a short time.",
+		"description": "Sliding increases your affinity for a short time (30 seconds).",
 		"levels": [
 			{
 				"description": "Increases affinity by 30% for a short time after sliding.",
@@ -2182,7 +2183,7 @@
 		"description": "Weapon sharpness does not decrease for a set time after sharpening.",
 		"levels": [
 			{
-				"description": "Weapon sharpness does not decrease for a set time after sharpening."
+				"description": "Weapon sharpness does not decrease for a set time after sharpening (1 minute)."
 			}
 		]
 	},
@@ -2192,7 +2193,7 @@
 		"description": "Halves sharpness loss. For bows and bowguns, shots have a chance not to expend coatings or ammo.",
 		"levels": [
 			{
-				"description": "Halves sharpness loss. For bows and bowguns, shots have a chance not to expend coatings or ammo."
+				"description": "Halves sharpness loss (-50%). For bows (-25%) and bowguns (-20%), shots have a chance not to expend coatings or ammo."
 			}
 		]
 	},
@@ -2202,7 +2203,7 @@
 		"description": "Greatly reduces sharpness loss. Bows and bowguns have a chance not to expend coatings or ammo.",
 		"levels": [
 			{
-				"description": "Greatly reduces sharpness loss. Bows and bowguns have a chance not to expend coatings or ammo."
+				"description": "Greatly reduces sharpness loss (-66%). Bows and bowguns have a chance not to expend coatings or ammo (-30%)."
 			}
 		]
 	},
@@ -2327,12 +2328,13 @@
 	{
 		"id": "hastenRecovery",
 		"name": "Hasten Recovery",
-		"description": "Regenerates your health as you continually attack a monster. Recovery varies by weapon.",
+		"description": "",
 		"levels": [
 			{
-				"description": "Regenerates your health as you continually attack a monster. Recovery varies by weapon."
+				"description": "Regenerates your health as you continually attack a monster. Recovery varies by weapon. The skill regenerates a set amount of health if you hit the monster at least 5 times within 5 seconds (every hit exceeding the first every second won't be counted)."
 			}
-		]
+		],
+		"hasActiveStats": true
 	},
 	{
 		"id": "superRecovery",
@@ -2347,10 +2349,10 @@
 	{
 		"id": "guts",
 		"name": "Guts",
-		"description": "Above a certain health threshold, you withstand an attack that would normally cart you (once only).",
+		"description": "",
 		"levels": [
 			{
-				"description": "Above a certain health threshold, you withstand an attack that would normally cart you (once only)."
+				"description": "Above a certain health threshold, you withstand an attack that would normally cart you (once only). The effect will trigger if you have more than 60 hp and the next single hit would deal enough damage to cart you."
 			}
 		]
 	},
@@ -2393,7 +2395,8 @@
 			{
 				"description": "An aura of frost builds when your weapon is sheathed, raising attack. Wanes each melee hit or shot fired."
 			}
-		]
+		],
+		"hasActiveStats": true
 	},
 	{
 		"id": "criticalStatus",
@@ -2567,7 +2570,8 @@
 		"description": "",
 		"levels": [
 			{
-				"description": "Continually attacking a monster activates Free Element/Ammo Up Lv2 and increases elemental damage.",
+				"description": "Continually attacking a monster activates Free Element/Ammo Up Lv2 and increases elemental damage (+60). Triggers after ~5-7 consecutive hits and lasts 45 seconds.",
+				"activeElementAttack": 60,
 				"activeSkills": [
 					{
 						"id": "freeElemAmmoUp",
@@ -2583,7 +2587,8 @@
 		"description": "",
 		"levels": [
 			{
-				"description": "Continually attacking a monster activates Free Element/Ammo Up Lv3 and increases elemental damage.",
+				"description": "Continually attacking a monster activates Free Element/Ammo Up Lv3 and increases elemental damage (+150). Triggers after ~5-7 consecutive hits and lasts 45 seconds.",
+				"activeElementAttack": 150,
 				"activeSkills": [
 					{
 						"id": "freeElemAmmoUp",

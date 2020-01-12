@@ -120,6 +120,7 @@ export class StatsModel {
 	passiveDragonResist: number;
 
 	healOnHitPercent: number;
+	hastenRecovery?: number;
 
 	ammoCapacities: AmmoCapacitiesModel;
 	ammoCapacitiesUp: AmmoCapacitiesModel;
@@ -130,6 +131,8 @@ export class StatsModel {
 	deviation: number;
 
 	kinsect?: KinsectModel;
+
+	frostcraft?: number[];
 
 	constructor() {
 		this.totalAttack = 0;

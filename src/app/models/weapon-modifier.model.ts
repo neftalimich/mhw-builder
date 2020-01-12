@@ -7,5 +7,7 @@ export class WeaponModifierModel {
 	trueCritElementModifier: number;
 	critStatusModifier: number;
 	trueCritStatusModifier: number;
-	nergiganteHunger: number;
+	hastenRecovery: number;
+	elementalAirborne: number;
+	frostcraft: number[];
 }

@@ -108,7 +108,7 @@ export class ArmorListComponent implements OnInit {
 		if (event && (event.key === 'FilterHard' || event.key === 'Backspace' || event.key === 'Delete')) {
 			this.applyIceborneFilter();
 		}
-		
+
 		if (query) {
 			if (query.length > 2) {
 				const alphaIndex = query.indexOf('alpha');
