@@ -674,7 +674,6 @@ export class CalculationService {
 
 	private getRawAttackAveragePotential(stats: StatsModel): StatDetailModel {
 		const totalAffinityPotential = Math.min(stats.affinity + stats.passiveAffinity + stats.weakPointAffinity + stats.activeAffinity, 100);
-		console.log(totalAffinityPotential);
 		const rawAttackAveragePotential =
 			this.getRawAverage(
 				stats.totalAttackPotential,
