@@ -40,6 +40,10 @@ ul.info {
 	color: $blue;
 }
 
+::ng-deep .oblue {
+	color: $oblue;
+}
+
 ::ng-deep .yellow {
 	color: $yellow;
 }

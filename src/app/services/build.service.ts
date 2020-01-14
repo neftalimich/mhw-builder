@@ -284,7 +284,6 @@ export class BuildService {
 				this.changeDetector.detectChanges();
 
 				if (item.equipmentCategory == EquipmentCategoryType.Weapon) {
-					// -------------------- Element
 					let weaponIndex = 0;
 					for (const types in WeaponType) {
 						if (isNaN(Number(types))) {
@@ -295,7 +294,8 @@ export class BuildService {
 							}
 						}
 					}
-					if (buildItem.elementId != null) {
+					// -------------------- Element
+					if (buildItem.elementId != null && buildItem.elementId > 0) {
 						item.element = this.dataService.getElement(buildItem.elementId);
 						if (item.upgradeType == 2) {
 							if (item.element != null) {
@@ -306,7 +306,7 @@ export class BuildService {
 						}
 					}
 					// -------------------- Ailment
-					if (buildItem.ailmentId != null) {
+					if (buildItem.ailmentId != null && buildItem.ailmentId > 0) {
 						item.ailment = this.dataService.getAilment(buildItem.ailmentId);
 						if (item.upgradeType == 2) {
 							if (item.ailment != null) {

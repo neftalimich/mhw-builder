@@ -219,10 +219,10 @@ export class ArmorListComponent implements OnInit {
 			if (index > -1) {
 				this.itemTypeFilters.splice(index, 1);
 			}
-			this.search({ key: 'FilterHard' }, this.searchBox.nativeElement.value);
+			this.search({ key: 'FilterSoft' }, this.searchBox.nativeElement.value);
 		} else {
 			this.itemTypeFilters.push(itemTypeFilter);
-			this.search({ key: 'FilterSoft' }, this.searchBox.nativeElement.value);
+			this.search({ key: 'FilterHard' }, this.searchBox.nativeElement.value);
 		}
 	}
 
