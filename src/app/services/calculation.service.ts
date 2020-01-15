@@ -437,25 +437,25 @@ export class CalculationService {
 					displayName: 'Weapon Base Ailment Attack',
 					name: 'base',
 					value: stats.baseAilmentAttack - stats.upgradeAilmentAttack - stats.awakeningAilmentAttack,
-					colorClass: 'purple'
+					colorClass: 'blue'
 				},
 				{
 					displayName: 'Weapon Upgrade Ailment Attack',
 					name: 'upgrade',
 					value: stats.upgradeAilmentAttack,
-					colorClass: 'blue'
+					colorClass: 'green'
 				},
 				{
 					displayName: 'Weapon Awakening Ailment Attack',
 					name: 'awakening',
 					value: stats.awakeningAilmentAttack,
-					colorClass: 'blue'
+					colorClass: 'green'
 				},
 				{
 					displayName: 'Passive Ailment Buildup Percent',
 					name: 'passiveBuildup',
 					value: stats.effectivePassiveAilmentBuildupPercent / 100,
-					colorClass: 'green'
+					colorClass: 'oyellow'
 				},
 				{
 					displayName: 'Passive Ailment Attack',
@@ -474,12 +474,6 @@ export class CalculationService {
 					name: 'activeBuildup',
 					value: stats.activeAilmentAttackBuildUpPercent / 100,
 					colorClass: 'red'
-				},
-				{
-					displayName: 'Ailment Sharpness Modifier',
-					name: 'modifier',
-					value: stats.effectiveElementalSharpnessModifier,
-					colorClass: 'kakhi'
 				}
 			]
 		};
@@ -541,19 +535,19 @@ export class CalculationService {
 					displayName: 'Weapon Base Element Attack',
 					name: 'base',
 					value: stats.baseElementAttack - stats.upgradeElementAttack - stats.awakeningElementAttack,
-					colorClass: 'purple'
+					colorClass: 'blue'
 				},
 				{
 					displayName: 'Weapon Upgrade Element Attack',
 					name: 'upgrade',
 					value: stats.upgradeElementAttack,
-					colorClass: 'blue'
+					colorClass: 'green'
 				},
 				{
 					displayName: 'Weapon Awakening Element Attack',
 					name: 'awakening',
 					value: stats.awakeningElementAttack,
-					colorClass: 'blue'
+					colorClass: 'green'
 				},
 				{
 					displayName: 'Passive Element Attack',
@@ -566,12 +560,6 @@ export class CalculationService {
 					name: 'active',
 					value: stats.activeElementAttack,
 					colorClass: 'orange'
-				},
-				{
-					displayName: 'Element Sharpness Modifier',
-					name: 'modifier',
-					value: stats.effectiveElementalSharpnessModifier,
-					colorClass: 'kakhi'
 				}
 			]
 		};
@@ -735,7 +723,7 @@ export class CalculationService {
 					colorClass: 'oblue'
 				},
 				{
-					displayName: 'Weapon Sharpness Modifier',
+					displayName: 'Weapon Modifier',
 					name: 'weaponModifier',
 					value: stats.weaponAttackModifier.toFixed(2),
 					colorClass: 'purple'

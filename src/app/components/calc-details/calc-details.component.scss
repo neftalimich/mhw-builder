@@ -48,6 +48,10 @@ ul.info {
 	color: $yellow;
 }
 
+::ng-deep .oyellow {
+	color: $oyellow;
+}
+
 ::ng-deep .orange {
 	color: $orange;
 }
