@@ -686,6 +686,7 @@ export class StatService {
 			this.stats.effectiveAilmentAttack * (1 + this.stats.effectivePassiveAilmentBuildupPercent / 100 + this.stats.activeAilmentAttackBuildUpPercent / 100)
 			+ this.stats.effectivePassiveAilmentAttack
 			+ this.stats.activeAilmentAttack;
+		this.stats.totalAilmentAttack = this.nearestTen(this.stats.totalAilmentAttack * 10) / 10;
 		this.stats.totalAilmentAttackPotential = this.nearestTen(this.stats.totalAilmentAttackPotential * 10) / 10;
 
 		if (this.checkElementless()) {

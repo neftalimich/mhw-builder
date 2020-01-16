@@ -421,7 +421,7 @@ export class CalculationService {
 	}
 
 	private getAilmentAttack(stats: StatsModel, ailmentCalc: StatDetailModel): StatDetailModel {
-		let value = `${stats.totalAilmentAttack}`;
+		let value = `${stats.totalAilmentAttack.toFixed(2)}`;
 		if (stats.totalAilmentAttack != stats.totalAilmentAttackPotential) {
 			value = `${stats.totalAilmentAttack} | ${stats.totalAilmentAttackPotential}`;
 		}

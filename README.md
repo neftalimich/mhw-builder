@@ -4,8 +4,6 @@ Version 1: https://github.com/TurkeyTickle/mhw-builder
 
 Version 1 - Page: http://mhw-builder.com/
 
-Version 2 - Page: https://neftalimich.github.io/mhw-builder-page/
-
 Version 3 - Page: https://neftalimich.github.io/mhworld-builder/
 
 

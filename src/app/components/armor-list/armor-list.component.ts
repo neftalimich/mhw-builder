@@ -111,6 +111,8 @@ export class ArmorListComponent implements OnInit {
 
 		if (query) {
 			if (query.length > 2) {
+				query = query.toLowerCase().trim();
+
 				const alphaIndex = query.indexOf('alpha');
 				if (alphaIndex > -1) {
 					query = query.replace('alpha', '');
@@ -123,8 +125,6 @@ export class ArmorListComponent implements OnInit {
 				if (gammaIndex > -1) {
 					query = query.replace('gamma', '');
 				}
-
-				query = query.toLowerCase().trim();
 
 				const queryParts = query.split(' ');
 
