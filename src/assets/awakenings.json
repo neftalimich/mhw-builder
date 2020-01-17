@@ -186,7 +186,7 @@
 		"type": "AttackMelody",
 		"name": "Attack Melody",
 		"short": "Attack Mel.",
-		"awakenings": [ [ 4046, 2181, 2183, 2169, 2211, 2211 ] ],
+		"awakenings": [ [ 6, 12, 13, 14, 15, 15 ] ],
 		"minLevel": 2,
 		"maxLevel": 5,
 		"max": 1
@@ -196,7 +196,7 @@
 		"type": "StaminaMelody",
 		"name": "Stamina Melody",
 		"short": "Stamina Mel.",
-		"awakenings": [ [ 4046, 2195, 2178, 2186, 2230, 2230 ] ],
+		"awakenings": [ [ 5, 1, 2, 3, 4, 4 ] ],
 		"minLevel": 2,
 		"maxLevel": 5,
 		"max": 1
@@ -206,7 +206,7 @@
 		"type": "ElementalMelody",
 		"name": "Elemental Melody",
 		"short": "Elemental Mel.",
-		"awakenings": [ [ 4046, 2215, 2229, 2231, 2176, 2176 ] ],
+		"awakenings": [ [ 5, 8, 9, 10, 11, 11 ] ],
 		"minLevel": 2,
 		"maxLevel": 5,
 		"max": 1
@@ -216,7 +216,7 @@
 		"type": "StatusMelody",
 		"name": "Status Melody",
 		"short": "Status Mel.",
-		"awakenings": [ [ 4046, 2219, 2219, 2219, 2219, 2219 ] ],
+		"awakenings": [ [ 5, 7, 7, 7, 7, 7 ] ],
 		"minLevel": 2,
 		"maxLevel": 2,
 		"max": 1
@@ -226,7 +226,7 @@
 		"type": "EarplugsMelody",
 		"name": "Earplugs Melody",
 		"short": "Earplugs Mel.",
-		"awakenings": [ [ 4046, 2171, 2171, 2171, 2171, 2171 ] ],
+		"awakenings": [ [ 5, 6, 6, 6, 6, 6 ] ],
 		"minLevel": 2,
 		"maxLevel": 2,
 		"max": 1

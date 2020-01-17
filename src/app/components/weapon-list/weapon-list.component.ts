@@ -167,8 +167,8 @@ export class WeaponListComponent implements OnInit {
 	selectItem(item: ItemModel) {
 		if (item.weaponType == WeaponType.LightBowgun || item.weaponType == WeaponType.HeavyBowgun) {
 			item.ammoCapacities = this.dataService.getAmmoCapacities(item.id);
-		} else if (item.weaponType == WeaponType.HuntingHorn) {
-			item.melodies = this.dataService.getMelodies(item.id);
+		} else if (item.weaponType == WeaponType.HuntingHorn && item.otherData) {
+			item.melodies = this.dataService.getMelodies(item.otherData.map(other => other.value).join(';'));
 		}
 
 		const newItem = Object.assign({}, item);

@@ -43,8 +43,8 @@ export class DataService {
 		const weapon: ItemModel = _.find(this.appDataProvider.appData.weapons, w => w.id === id);
 		if (weapon.weaponType == WeaponType.LightBowgun || weapon.weaponType == WeaponType.HeavyBowgun) {
 			weapon.ammoCapacities = this.getAmmoCapacities(weapon.id);
-		} else if (weapon.weaponType == WeaponType.HuntingHorn) {
-			weapon.melodies = this.getMelodies(weapon.id);
+		} else if (weapon.weaponType == WeaponType.HuntingHorn && weapon.otherData) {
+			weapon.melodies = this.getMelodies(weapon.otherData.map(item => item.value).join(';'));
 		}
 		return weapon;
 	}
@@ -457,21 +457,28 @@ export class DataService {
 		return this.appDataProvider.appData.ammoCapacities.find(c => c.id === weaponId);
 	}
 
-	getMelodies(weaponId: number): MelodiesModel {
-		const result: MelodiesModel = this.appDataProvider.appData.melodies.find(c => c.id === weaponId);
-		if (result) {
-			result.melodyEffects = [];
-			for (let i = 0; i < result.melodies.length; i++) {
-				const melodyEffect = new MelodiesDetailModel();
-				melodyEffect.melody = result.melodies[i];
-				melodyEffect.effects = result.melodiesEffect.filter(e => e.index == i);
-				for (const effect of melodyEffect.effects) {
-					effect.name = this.appDataProvider.appData.melodyEffect.find(m => m.id == effect.id).name;
-				}
-				result.melodyEffects.push(melodyEffect);
+	getMelodies(notes: string): MelodiesModel {
+		const melody: MelodiesModel = this.appDataProvider.appData.melodies.find(c => c.notes.join(';') === notes);
+		return this.getMelodyDetails(melody);
+	}
+
+	getMelodiesById(melodyId: number): MelodiesModel {
+		const melody: MelodiesModel = this.appDataProvider.appData.melodies.find(c => c.id === melodyId);
+		return this.getMelodyDetails(melody);
+	}
+
+	getMelodyDetails(melody: MelodiesModel): MelodiesModel {
+		melody.melodyEffects = [];
+		for (let i = 0; i < melody.melodies.length; i++) {
+			const melodyEffect = new MelodiesDetailModel();
+			melodyEffect.melody = melody.melodies[i];
+			melodyEffect.effects = melody.melodiesEffect.filter(e => e.index == i);
+			for (const effect of melodyEffect.effects) {
+				effect.name = this.appDataProvider.appData.melodyEffect.find(m => m.id == effect.id).name;
 			}
+			melody.melodyEffects.push(melodyEffect);
 		}
 
-		return result;
+		return melody;
 	}
 }

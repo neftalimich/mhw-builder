@@ -390,7 +390,7 @@ export class StatService {
 				melodyId = this.awakeningsData.find(x => x.type == AwakeningType.EarplugsMelody).awakenings[0][earplugsMelody.level - 1];
 			}
 
-			weapon.melodies = this.dataService.getMelodies(melodyId);
+			weapon.melodies = this.dataService.getMelodiesById(melodyId);
 		}
 
 		if (weapon.ammoCapacities) {

@@ -636,5 +636,33 @@
 				"pieces": 5
 			}
 		]
+	},
+	{
+		"id": "joyfulBlessing",
+		"name": "Joyful Blessing",
+		"setLevels": [
+			{
+				"id": "joyfulGift",
+				"pieces": 3
+			},
+			{
+				"id": "joyfulGratitude",
+				"pieces": 5
+			}
+		]
+	},
+	{
+		"id": "appreciationBlessing",
+		"name": "Joyful Blessing",
+		"setLevels": [
+			{
+				"id": "gratitudesGift",
+				"pieces": 3
+			},
+			{
+				"id": "gratitudesBlessing",
+				"pieces": 5
+			}
+		]
 	}
 ]

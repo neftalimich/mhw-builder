@@ -40,6 +40,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3015	GreatSword	12	Wyvern Impact 'Silver'	1296	-15	0	Fire	690	true					false	16;2;2;7;4;3;6	1;1	workshop	fire				0
 3018	GreatSword	12	Infernal Executioner+	1296	0	0	Dragon	420	false				Average	false	13;2;2;7;4;3;9	2	stygian-zinogre	dragon				0
 3041	GreatSword	12	Xeno Maliq+	1344	20	0	Dragon	330	false				Low	false	10;8;3;3;8;8;0	4;4	xeno-jiiva	dragon				0
+3081	GreatSword	12	Royal Venus Blade	1296	15	30	Water	570	true					true	15;3;3;6;5;3;5	3	guild	water				0
 4041	GreatSword	12	Safi's Greatsword	1296	5	0			false			false	Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
 1871	LongSword	11	Iron Eschaton III	858	0	0	Water	270	true					false	12;3;3;6;5;8;3	1;1	ore	water			1	0
 1873	LongSword	11	Daito Wolf	891	25	0				Poison	240	false		false	14;3;9;3;3;6;2	3	yian-garuga	poison				0
@@ -83,6 +84,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3019	LongSword	12	Stygian Gula	891	0	0	Dragon	300	false				Average	false	13;2;2;7;4;3;9	2	stygian-zinogre	dragon				0
 3042	LongSword	12	Xeno Cypher+	924	15	0	Dragon	270	false				Low	false	10;8;3;3;8;8;0	4;4	xeno-jiiva	dragon				0
 3062	LongSword	11	Demon Scavenger Pickaxe	858	30	30				Blast	540	true		false	9;3;3;11;4;10;0		event	blast				0
+3082	LongSword	12	Royal Captain Rapier	891	15	30	Water	510	true					true	15;3;3;6;5;3;5	3	guild	water				0
 4042	LongSword	12	Safi's Longsword	891	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
 1945	SwordAndShield	11	Chrome Knight Sword III	364	0	0				Sleep	330	true		false	11;3;3;6;5;9;3	1;1	ore	sleep			1	0
 1946	SwordAndShield	12	Ruinous Eradication	406	0	0	Dragon	180	false				High	false	7;3;3;11;4;17;0	1	ruiner-nergigante	dragon				0
@@ -122,6 +124,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3003	SwordAndShield	12	Banned Rajang Club	434	-15	0	Thunder	90	false					false	9;10;4;5;7;5;0	4	rajang	thunder				0
 3020	SwordAndShield	12	Stygian Luxuria	378	0	0	Dragon	240	false				Average	false	10;2;2;7;4;3;12	2	stygian-zinogre	dragon				0
 3043	SwordAndShield	12	Xeno Mabura+	392	15	0	Dragon	330	false				Low	false	9;8;3;3;8;9;0	4;4	xeno-jiiva	dragon				0
+3083	SwordAndShield	12	Royal Nova Sword	378	15	30	Water	420	true					true	13;3;3;6;5;5;5	3	guild	water				0
 4043	SwordAndShield	12	Safi's SwordAndShield	378	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
 2018	DualBlades	11	Chrome Cross III	364	0	0				Poison	360	true		false	10;3;3;6;5;10;3	1;1	ore	poison			1	0
 2021	DualBlades	12	Despot's Blitz	364	0	0	Thunder	240	false					false	11;3;9;3;3;9;2	2	zinogre	thunder				0
@@ -166,6 +169,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3004	DualBlades	12	Suzuka Otakemaru	434	-10	0	Thunder	90	false					false	8;10;4;5;8;5;0	4	rajang	thunder				0
 3021	DualBlades	12	Stygian Bloodclaws	378	0	0	Dragon	210	false				Average	false	10;2;2;7;4;3;12	2	stygian-zinogre	dragon				0
 3044	DualBlades	12	Xeno Raqs+	392	15	0	Dragon	240	false				Low	false	8;8;3;3;8;10;0	4;4	xeno-jiiva	dragon				0
+3084	DualBlades	12	Royal Savior Daggers	378	15	30	Water	330	true					true	13;3;3;6;5;5;5	3	guild	water				0
 4044	DualBlades	12	Safi's DualBlades	378	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
 2094	Hammer	11	Kurogane III	1352	0	0				Blast	360	true		false	12;3;3;6;5;8;3	1;1	ore	blast			1	0
 2097	Hammer	12	Leonid Starcrusher	1404	20	0	Fire	420	false					false	13;3;3;6;5;7;3	2	silver-rathalos	fire				0
@@ -207,46 +211,48 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3005	Hammer	12	Mane Malice Rajang	1612	-15	0	Thunder	120	false					false	10;10;4;5;6;5;0	4	rajang	thunder				0
 3022	Hammer	12	Stygian Industria	1404	0	0	Dragon	270	false				Average	false	13;2;2;7;4;3;9	2	stygian-zinogre	dragon				0
 3045	Hammer	12	Xeno Maph'agarna+	1456	15	0	Dragon	270	false				Low	false	10;8;3;3;8;8;0	4;4	xeno-jiiva	dragon				0
+3085	Hammer	12	Royal Cross Maze	1404	15	30	Water	510	true					true	15;3;3;6;5;3;5	3	guild	water				0
 4045	Hammer	12	Safi's Hammer	1404	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
-2169	HuntingHorn	11	Sforzando III	1092	0	0				Paralysis	360	true		false	12;3;3;6;5;8;3	1;1	ore	paralysis			1	0
-2171	HuntingHorn	11	Wolf Shamisen	1134	25	0				Poison	240	false		false	15;3;9;3;3;5;2	3	yian-garuga	poison				0
-2172	HuntingHorn	12	Ruinous Desolation	1218	0	0	Dragon	210	false				High	false	8;3;3;11;4;16;0	1	ruiner-nergigante	dragon				0
-2176	HuntingHorn	12	Despot's Thunderclap	1092	0	0	Thunder	450	false					false	12;3;9;3;3;8;2	2	element	thunder				0
-2178	HuntingHorn	10	Taghrid al-Nasr II	1092	25	0				Sleep	420	true		false	11;3;3;11;4;8;0		kulu-ya-ku	sleep			1	0
-2181	HuntingHorn	11	Tigrex Horn	1176	-20	0				Blast	330	true		false	6;3;3;11;4;13;0		tigrex	blast				0
-2183	HuntingHorn	12	Ogrebite	1218	-30	0				Sleep	270	true		false	9;2;3;9;9;4;4		brute-tigrex	sleep				0
-2186	HuntingHorn	12	Gold Chordmaker	1134	25	0	Fire	420	false					false	12;3;3;6;5;8;3	2	gold-rathian	fire				0
-2189	HuntingHorn	10	Laguna Drum II	1008	0	0	Water	540	false					false	12;3;3;6;5;6;5	2;1	element	water			1	0
-2192	HuntingHorn	11	Cry in the Night	1008	20	0				Poison	600	true		false	14;2;2;7;4;3;8		nargacuga	poison				0
-2195	HuntingHorn	11	Lilim Glacia	1008	0	0	Ice	600	false					false	6;2;3;9;9;7;4		shrieking-legiana	ice				0
-2198	HuntingHorn	11	Mad Bone Horn III	1176	0	35	Ice	330	true					false	9;10;4;5;7;5;0	3	bone	ice			1	0
-2200	HuntingHorn	12	Sonorous Eisfyl	1134	0	0	Ice	270	false					false	14;3;3;6;5;4;5	4	velkhana	ice				0
-2202	HuntingHorn	10	Gama Chorus II	1008	0	0				Blast	270	false		false	14;3;3;6;5;6;3	3;2	dodogama	blast			1	0
-2205	HuntingHorn	11	Glavenus Horn	1092	0	0	Fire	330	false					false	12;3;3;6;5;8;3	1	glavenus	fire				0
-2207	HuntingHorn	10	Anjanath Hum II	1134	-20	0	Fire	600	false					false	8;10;4;5;8;5;0		anjanath	fire			1	0
-2209	HuntingHorn	10	Fulguring Horn II	1050	20	0	Thunder	330	false					false	8;10;4;5;8;5;0	1	fulgur-anjanath	thunder			1	0
-2211	HuntingHorn	11	The Rasping Ballad	1218	0	0				Paralysis	330	true		false	6;5;11;9;6;2;1	4	acidic-glavenus	paralysis				0
-2213	HuntingHorn	10	Datura Maestro II	1008	0	0				Poison	660	false		false	12;3;3;6;5;6;5	2;1	pukei-pukei	poison			1	0
-2215	HuntingHorn	10	Icicle Horn II	1050	30	0	Ice	360	false					false	11;3;3;11;4;8;0	1	barioth	ice			1	0
-2217	HuntingHorn	10	Lumu Drone II	1050	10	0	Water	690	true					false	14;3;3;6;5;6;3	3;1	paolumu	water			1	0
-2219	HuntingHorn	10	Nyx Barone II	1008	0	0				Sleep	450	false		false	6;3;3;11;4;13;0	2	nightshade-paolumu	sleep			1	0
-2221	HuntingHorn	12	Bazel Valdi Rooksearer	1092	-10	0				Blast	300	false		false	16;3;3;6;5;2;5	2;2	seething-bazelgeuse	blast				0
-2223	HuntingHorn	11	Queen's Flute II	1092	0	0				Paralysis	420	false		false	13;3;3;6;5;7;3	4;1	vespoid	paralysis				0
-2225	HuntingHorn	10	Baan Rattle II	1050	0	35				Sleep	330	false		false	11;3;3;11;4;8;0		radobaan	sleep			1	0
-2227	HuntingHorn	10	Brachydios Horn II	1050	0	0				Blast	510	false		false	8;3;3;11;4;11;0	1	brachydios	blast			1	0
-2229	HuntingHorn	11	Dragonseal Aldhorn II	1008	0	0	Dragon	720	false				Average	false	13;10;3;3;8;3;0	1;1	dragonbone	dragon			1	0
-2230	HuntingHorn	12	Austere Paradise	1176	0	30	Dragon	510	true				High	false	17;3;3;6;5;3;3	1;1	shara-ishvalda	dragon				0
-2231	HuntingHorn	11	Thunderwail Feyhorn	1008	0	0	Thunder	660	false					false	6;8;3;3;8;12;0		kirin	thunder			1	0
-2232	HuntingHorn	11	Hydros Horn	1134	10	0	Water	450	false					false	7;8;3;2;9;11;0	1	namielle	water			1	0
-2233	HuntingHorn	11	Teostra's Musica	1092	10	0				Blast	420	false		false	10;8;3;3;8;8;0		kushala-daora;teostra	blacksteel;blast				0
-2234	HuntingHorn	12	Fate's Dirge	1176	-30	0	Dragon	330	false				High	false	16;3;3;6;5;4;3		savage-deviljho	dragon				0
-2235	HuntingHorn	12	Soulfire Chorus 'Blaze'	1050	20	0				Blast	270	false		false	12;3;9;3;3;8;2	2;1	lunastra;teostra	blast	guts-1			0
-2236	HuntingHorn	12	Soulfire Chorus 'Ruin'	1134	0	0				Blast	210	false		false	12;3;9;3;3;8;2	2;2	lunastra;ruiner-nergigante	blast	hastenRecovery-1			0
-2237	HuntingHorn	12	Soulfire Chorus 'Styx'	1050	10	0				Blast	330	false		false	12;3;9;3;3;8;2	3;3	lunastra;xeno-jiiva	blast	razorSharpSpareShot-1			0
-3006	HuntingHorn	12	Denden Doomsounder	1302	-15	0	Thunder	120	false					false	10;10;4;5;6;5;0	4	rajang	thunder				0
-3023	HuntingHorn	12	Stygian Tristitia	1134	0	0	Dragon	360	false				Average	false	13;2;2;7;4;3;9	2	stygian-zinogre	dragon				0
-3046	HuntingHorn	12	Xeno Manasheena+	1176	15	0	Dragon	240	false				Low	false	10;8;3;3;8;8;0	4;4	xeno-jiiva	dragon				0
-4046	HuntingHorn	12	Safi's HuntingHorn	1134	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
+2169	HuntingHorn	11	Sforzando III	1092	0	0				Paralysis	360	true		false	12;3;3;6;5;8;3	1;1	ore	paralysis		p;r;b2;k3	1	0
+2171	HuntingHorn	11	Wolf Shamisen	1134	25	0				Poison	240	false		false	15;3;9;3;3;5;2	3	yian-garuga	poison		p;g;o2;k3		0
+2172	HuntingHorn	12	Ruinous Desolation	1218	0	0	Dragon	210	false				High	false	8;3;3;11;4;16;0	1	ruiner-nergigante	dragon		p;g;o2;k3		0
+2176	HuntingHorn	12	Despot's Thunderclap	1092	0	0	Thunder	450	false					false	12;3;9;3;3;8;2	2	element	thunder		p;y;o2;k3		0
+2178	HuntingHorn	10	Taghrid al-Nasr II	1092	25	0				Sleep	420	true		false	11;3;3;11;4;8;0		kulu-ya-ku	sleep		p;b;lb2;k3	1	0
+2181	HuntingHorn	11	Tigrex Horn	1176	-20	0				Blast	330	true		false	6;3;3;11;4;13;0		tigrex	blast		p;r;lb2;k3		0
+2183	HuntingHorn	12	Ogrebite	1218	-30	0				Sleep	270	true		false	9;2;3;9;9;4;4		brute-tigrex	sleep		p;r;g2;k3		0
+2186	HuntingHorn	12	Gold Chordmaker	1134	25	0	Fire	420	false					false	12;3;3;6;5;8;3	2	gold-rathian	fire		p;b;y2;k3		0
+2189	HuntingHorn	10	Laguna Drum II	1008	0	0	Water	540	false					false	12;3;3;6;5;6;5	2;1	element	water		p;r;lb2;k3	1	0
+2192	HuntingHorn	11	Cry in the Night	1008	20	0				Poison	600	true		false	14;2;2;7;4;3;8		nargacuga	poison		p;b;lb2;k3		0
+2195	HuntingHorn	11	Lilim Glacia	1008	0	0	Ice	600	false					false	6;2;3;9;9;7;4		shrieking-legiana	ice		p;b;g2;k3		0
+2198	HuntingHorn	11	Mad Bone Horn III	1176	0	35	Ice	330	true					false	9;10;4;5;7;5;0	3	bone	ice		p;r;lb2;k3	1	0
+2200	HuntingHorn	12	Sonorous Eisfyl	1134	0	0	Ice	270	false					false	14;3;3;6;5;4;5	4	velkhana	ice		p;r;b2;k3		0
+2202	HuntingHorn	10	Gama Chorus II	1008	0	0				Blast	270	false		false	14;3;3;6;5;6;3	3;2	dodogama	blast		p;r;b2;k3	1	0
+2205	HuntingHorn	11	Glavenus Horn	1092	0	0	Fire	330	false					false	12;3;3;6;5;8;3	1	glavenus	fire		p;r;g2;k3		0
+2207	HuntingHorn	10	Anjanath Hum II	1134	-20	0	Fire	600	false					false	8;10;4;5;8;5;0		anjanath	fire		p;b;g2;k3	1	0
+2209	HuntingHorn	10	Fulguring Horn II	1050	20	0	Thunder	330	false					false	8;10;4;5;8;5;0	1	fulgur-anjanath	thunder		p;r;b2;k3	1	0
+2211	HuntingHorn	11	The Rasping Ballad	1218	0	0				Paralysis	330	true		false	6;5;11;9;6;2;1	4	acidic-glavenus	paralysis		p;r;o2;k3		0
+2213	HuntingHorn	10	Datura Maestro II	1008	0	0				Poison	660	false		false	12;3;3;6;5;6;5	2;1	pukei-pukei	poison		p;g;lb2;k3	1	0
+2215	HuntingHorn	10	Icicle Horn II	1050	30	0	Ice	360	false					false	11;3;3;11;4;8;0	1	barioth	ice		p;r;y2;k3	1	0
+2217	HuntingHorn	10	Lumu Drone II	1050	10	0	Water	690	true					false	14;3;3;6;5;6;3	3;1	paolumu	water		p;b;lb2;k3	1	0
+2219	HuntingHorn	10	Nyx Barone II	1008	0	0				Sleep	450	false		false	6;3;3;11;4;13;0	2	nightshade-paolumu	sleep		p;lb;o2;k3	1	0
+2221	HuntingHorn	12	Bazel Valdi Rooksearer	1092	-10	0				Blast	300	false		false	16;3;3;6;5;2;5	2;2	seething-bazelgeuse	blast		p;r;g2;k3		0
+2223	HuntingHorn	11	Queen's Flute II	1092	0	0				Paralysis	420	false		false	13;3;3;6;5;7;3	4;1	vespoid	paralysis		p;b;y2;k3		0
+2225	HuntingHorn	10	Baan Rattle II	1050	0	35				Sleep	330	false		false	11;3;3;11;4;8;0		radobaan	sleep		p;r;y2;k3	1	0
+2227	HuntingHorn	10	Brachydios Horn II	1050	0	0				Blast	510	false		false	8;3;3;11;4;11;0	1	brachydios	blast		p;b;lb2;k3	1	0
+2229	HuntingHorn	11	Dragonseal Aldhorn II	1008	0	0	Dragon	720	false				Average	false	13;10;3;3;8;3;0	1;1	dragonbone	dragon		p;lb;y2;k3	1	0
+2230	HuntingHorn	12	Austere Paradise	1176	0	30	Dragon	510	true				High	false	17;3;3;6;5;3;3	1;1	shara-ishvalda	dragon		p;b;o2;k3		0
+2231	HuntingHorn	11	Thunderwail Feyhorn	1008	0	0	Thunder	660	false					false	6;8;3;3;8;12;0		kirin	thunder		p;g;y2;k3	1	0
+2232	HuntingHorn	11	Hydros Horn	1134	10	0	Water	450	false					false	7;8;3;2;9;11;0	1	namielle	water		p;y;o2;k3	1	0
+2233	HuntingHorn	11	Teostra's Musica	1092	10	0				Blast	420	false		false	10;8;3;3;8;8;0		kushala-daora;teostra	blacksteel;blast		p;lb;o2;k3		0
+2234	HuntingHorn	12	Fate's Dirge	1176	-30	0	Dragon	330	false				High	false	16;3;3;6;5;4;3		savage-deviljho	dragon		p;r;b2;k3		0
+2235	HuntingHorn	12	Soulfire Chorus 'Blaze'	1050	20	0				Blast	270	false		false	12;3;9;3;3;8;2	2;1	lunastra;teostra	blast	guts-1	p;r;o2;k3		0
+2236	HuntingHorn	12	Soulfire Chorus 'Ruin'	1134	0	0				Blast	210	false		false	12;3;9;3;3;8;2	2;2	lunastra;ruiner-nergigante	blast	hastenRecovery-1	p;g;o2;k3		0
+2237	HuntingHorn	12	Soulfire Chorus 'Styx'	1050	10	0				Blast	330	false		false	12;3;9;3;3;8;2	3;3	lunastra;xeno-jiiva	blast	razorSharpSpareShot-1	p;b;o2;k3		0
+3006	HuntingHorn	12	Denden Doomsounder	1302	-15	0	Thunder	120	false					false	10;10;4;5;6;5;0	4	rajang	thunder		p;b;o2;k3		0
+3023	HuntingHorn	12	Stygian Tristitia	1134	0	0	Dragon	360	false				Average	false	13;2;2;7;4;3;9	2	stygian-zinogre	dragon		p;y;o2;k3		0
+3046	HuntingHorn	12	Xeno Manasheena+	1176	15	0	Dragon	240	false				Low	false	10;8;3;3;8;8;0	4;4	xeno-jiiva	dragon		p;b;o2;k3		0
+3086	HuntingHorn	12	Royal Song Symphony	1134	15	30	Water	540	true					true	14;2;3;6;5;5;5	3	guild	water		p;r;b2;k3		0
+4046	HuntingHorn	12	Safi's HuntingHorn	1134	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon		p;g;lb2;k3	2	0
 2240	Lance	11	Chrome Drill III	598	0	0				Paralysis	360	true		false	12;3;3;6;5;8;3	1;1	ore	paralysis			1	0
 2242	Lance	11	Incessant Wolf	621	25	0				Poison	240	false		false	15;3;9;3;3;5;2	3	yian-garuga	poison				0
 2243	Lance	12	Ruinous Perdition	667	0	0	Dragon	180	false				High	false	8;3;4;10;3;17;0	1	ruiner-nergigante	dragon				0
@@ -288,6 +294,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3007	Lance	12	Great Demon Lance	713	-15	0	Thunder	120	false					false	10;10;4;5;6;5;0	4	rajang	thunder				0
 3024	Lance	12	Infernal Warlance	621	0	0	Dragon	330	false				Average	false	11;2;2;7;4;3;11	2	stygian-zinogre	dragon				0
 3047	Lance	12	Xeno Zauta+	644	15	0	Dragon	210	false				Low	false	9;8;3;3;8;9;0	4;4	xeno-jiiva	dragon				0
+3087	Lance	12	Royal Grace Pike	621	15	30	Water	540	true					true	14;2;3;6;5;5;5	3	guild	water				0
 4047	Lance	12	Safi's Lance	621	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
 2312	Gunlance	11	Chrome Halberd III	598	0	0				Blast	360	true		false	11;3;3;6;5;9;3	1;1	ore	blast;normal6		Normal-6	1	0
 2314	Gunlance	11	Blackwing Gunlance II	621	25	0				Poison	240	false		false	14;3;9;3;3;6;2	3	yian-garuga	poison;long6		Long-6	1	0
@@ -329,6 +336,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3008	Gunlance	12	Great Demon Gunlance	656	-15	0	Thunder	120	false					false	9;10;4;5;7;5;0	4	rajang	thunder;wide6		Wide-6		0
 3025	Gunlance	12	Stygian Avaritia	621	0	0	Dragon	360	false				Average	false	11;2;2;7;4;3;11	2	stygian-zinogre	dragon;normal7		Normal-7		0
 3048	Gunlance	12	Xeno Hemta+	644	15	0	Dragon	300	false				Low	false	10;8;3;3;8;8;0	4;4	xeno-jiiva	dragon		Normal-7		0
+3088	Gunlance	12	Royal Guard Striker	621	15	30	Water	510	true					true	13;3;3;6;5;5;5	3	guild	water		Wide-6		0
 4048	Gunlance	12	Safi's Gunlance	621	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon		Normal-6	2	0
 2384	SwitchAxe	11	Chrome Machina III	945	0	0				Poison	510	true		false	12;3;3;6;5;8;3	1;1	ore	poison		poison-540	1	0
 2386	SwitchAxe	11	Blackwing Switch Axe II	945	25	0				Poison	240	false		false	15;3;9;3;3;5;2	3	yian-garuga	poison		power	1	0
@@ -372,6 +380,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3009	SwitchAxe	12	Undying Light	1085	-15	0	Thunder	120	false					false	10;10;4;5;6;5;0	4	rajang	thunder		power		0
 3026	SwitchAxe	12	Infernal Cleave-axe+	945	0	0	Dragon	300	false				Average	false	13;2;2;7;4;3;9	2	stygian-zinogre	dragon		power		0
 3049	SwitchAxe	12	Xeno Martshu+	980	15	0	Dragon	270	false				Low	false	10;8;3;3;8;8;0	4;4	xeno-jiiva	dragon		power		0
+3089	SwitchAxe	12	Royal Titan Axe	945	15	30	Water	510	true					true	14;2;3;6;5;5;5	3	guild	water		power		0
 4049	SwitchAxe	12	Safi's SwitchAxe	945	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon		power	2	0
 2460	ChargeBlade	11	Chrome Fortress III	972	0	0	Thunder	360	true					false	13;3;3;6;5;7;3	1;1	ore	thunder		Impact	1	0
 2463	ChargeBlade	12	Despot's Thundergale	936	0	0	Thunder	390	false					false	11;3;9;3;3;9;2	2	zinogre	thunder		element		0
@@ -411,6 +420,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3016	ChargeBlade	12	Black Lightning Eagle	864	10	0	Thunder	270	false					false	1;1;3;5;5;10;15	1;1	workshop	thunder		Impact		0
 3027	ChargeBlade	12	Stygian Maledicta	972	0	0	Dragon	360	false				Average	false	10;2;2;7;4;3;12	2	stygian-zinogre	dragon		Impact		0
 3050	ChargeBlade	12	Xeno Ra'atz+	1008	15	0	Dragon	240	false				Low	false	9;8;3;3;8;9;0	4;4	xeno-jiiva	dragon		Impact		0
+3090	ChargeBlade	12	Royal Star Shield	972	15	30	Water	450	true					true	14;2;3;6;5;5;5	3	guild	water		Impact		0
 4050	ChargeBlade	12	Safi's ChargeBlade	972	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon		Impact	2	0
 2525	InsectGlaive	11	Chrome Trident III	806	0	0				Blast	360	true		false	11;3;3;6;5;9;3	1;1	ore	blast		Sever	1	0
 2528	InsectGlaive	12	Despot's Twinbolt	806	0	0	Thunder	360	false					false	11;3;9;3;3;9;2	2	zinogre	thunder		Spirit & Strength Boost		0
@@ -452,6 +462,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3011	InsectGlaive	12	Metalmangler	961	-15	0	Thunder	90	false					false	9;10;4;5;7;5;0	4	rajang	thunder		Blunt		0
 3029	InsectGlaive	12	Stygian Oblivia	837	0	0	Dragon	240	false				Average	false	11;2;2;7;4;3;11	2	stygian-zinogre	dragon		Spirit & Strength Boost		0
 3051	InsectGlaive	12	Xeno Shmaena+	868	15	0	Dragon	240	false				Low	false	9;8;3;3;8;9;0	4;4	xeno-jiiva	dragon		Stamina Upgrade & Healing		0
+3091	InsectGlaive	12	Royal March Banner	837	15	30	Water	450	true					true	14;2;3;6;5;5;5	3	guild	water		Stamina Upgrade & Healing		0
 4051	InsectGlaive	12	Safi's InsectGlaive	837	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
 2597	LightBowgun	11	Crossblitzer III	338	0	0								false		1;1	ore				1	0
 2599	LightBowgun	11	Blackwing Bowgun II	351	25	0								false		3	yian-garuga				1	0
@@ -491,6 +502,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3030	LightBowgun	12	Brimstren Drakevow	351	0	0								false		2	stygian-zinogre	dragon				0
 3052	LightBowgun	12	Xeno Neqiina+	351	0	0								false		4;4	xeno-jiiva	dragon		Wyvernblast		0
 3072	LightBowgun	12	Adept Stormslinger	416	0	0								false		4	event	horizon		Wyvernblast		0
+3092	LightBowgun	12	Royal Surefire Shot	351	20	30								false		3	guild	water		Wyvernblast		0
 4055	LightBowgun	12	Safi's Hellshot	325	5	0								false		4	safi-jiiva	fire			2	0
 4056	LightBowgun	12	Safi's Aquashot	325	5	0								false		4	safi-jiiva	water			2	0
 4057	LightBowgun	12	Safi's Boltshot	325	5	0								false		4	safi-jiiva	thunder			2	0
@@ -529,6 +541,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3013	HeavyBowgun	12	Rajang Destroyer	495	-15	0								false		4	rajang					0
 3031	HeavyBowgun	12	Stygian Humilitas	435	0	0								false		2	stygian-zinogre	dragon				0
 3053	HeavyBowgun	12	Xeno Jiiqa+	420	0	0								false		4;4	xeno-jiiva	dragon		Wyvernheart		0
+3093	HeavyBowgun	12	Royal Light Cortege	435	15	30								false		3	guild	water		Wyvernsnipe		0
 4060	HeavyBowgun	12	Safi's Freezecannon	375	5	0								false		4	safi-jiiva	water;ice			2	0
 4061	HeavyBowgun	12	Safi's Scorchcannon	375	5	0								false		4	safi-jiiva	fire;thunder			2	0
 4062	HeavyBowgun	12	Safi's Snipecannon	375	5	0								false		4	safi-jiiva	pierceing			2	0
@@ -573,4 +586,5 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3032	Bow	12	Stygian Patientia	336	0	0	Dragon	300	false				Average	false		2	stygian-zinogre	dragon		close;power		0
 3054	Bow	12	Xeno Metora+	324	15	0	Dragon	210	false				Low	false		4;4	xeno-jiiva	dragon		close;power		0
 3074	Bow	12	Aloy's Adept War Bow	300	30	0	Thunder	270	true					false		4	event	thunder;horizon		close;paralysis;poison		0
+3094	Bow	12	Royal North Wing	324	15	30	Water	420	true					false		3	guild	water		close;power;sleep		0
 4054	Bow	12	Safi's Bow	312	5	0			false				Average	false		4	safi-jiiva	dragon		close;power	2	0
