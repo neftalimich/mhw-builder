@@ -235,9 +235,10 @@ export class StatService {
 	}
 
 	private updateUpgrades(upgradeContainer: UpgradeContainerModel) {
+		const attackModifier = this.weaponModifier.attackModifier;
+
 		for (const detail of upgradeContainer.upgradeDetails) {
 			if (detail.passiveAttack) {
-				this.stats.attack += detail.passiveAttack;
 				this.stats.upgradeAttack += detail.passiveAttack;
 			}
 			if (detail.passiveAffinity) {
@@ -299,7 +300,6 @@ export class StatService {
 			}
 		}
 
-		this.stats.attack += upgradePassiveAttack;
 		this.stats.upgradeAttack += upgradePassiveAttack;
 		this.stats.affinity += upgradePassiveAffinity;
 		this.stats.upgradeAffinity += upgradePassiveAffinity;
@@ -336,8 +336,7 @@ export class StatService {
 			if (awakening.level > 0) {
 				switch (awakening.type) {
 					case AwakeningType.Attack:
-						this.stats.attack += (awakeningAttack[awakening.level - 1] * attackModifier);
-						this.stats.awakeningAttack += (awakeningAttack[awakening.level - 1] * attackModifier);
+						this.stats.awakeningAttack += awakeningAttack[awakening.level - 1];
 						break;
 					case AwakeningType.Affinity:
 						this.stats.affinity += awakeningAffinity[awakening.level - 1];
@@ -692,13 +691,13 @@ export class StatService {
 		if (this.checkElementless()) {
 			this.stats.totalAttack =
 				Math.round(
-					this.stats.attack
+					(this.stats.attack + (this.stats.upgradeAttack + this.stats.awakeningAttack) * this.stats.weaponAttackModifier)
 					* (1 + this.stats.elementlessBoostPercent / 100)
 					+ this.stats.passiveAttack * this.stats.weaponAttackModifier
 				);
 			this.stats.totalAttackPotential =
 				Math.round(
-					this.stats.attack
+					(this.stats.attack + (this.stats.upgradeAttack + this.stats.awakeningAttack) * this.stats.weaponAttackModifier)
 					* (1 + (this.stats.elementlessBoostPercent / 100) + (this.stats.activeAttackPercent / 100))
 					* this.stats.effectivePhysicalSharpnessModifier
 					+ (this.stats.passiveAttack + this.stats.activeAttack) * this.stats.weaponAttackModifier
@@ -706,10 +705,11 @@ export class StatService {
 			this.stats.elementless = true;
 		} else {
 			this.stats.totalAttack =
-				this.stats.attack + Math.round(this.stats.passiveAttack * this.stats.weaponAttackModifier);
+				this.stats.attack
+				+ Math.round((this.stats.passiveAttack + this.stats.upgradeAttack + this.stats.awakeningAttack) * this.stats.weaponAttackModifier);
 			this.stats.totalAttackPotential =
 				Math.round(
-					this.stats.attack
+					(this.stats.attack + (this.stats.upgradeAttack + this.stats.awakeningAttack) * this.stats.weaponAttackModifier)
 					* this.stats.effectivePhysicalSharpnessModifier
 					* (1 + this.stats.activeAttackPercent / 100)
 					+ (this.stats.passiveAttack + this.stats.activeAttack) * this.stats.weaponAttackModifier

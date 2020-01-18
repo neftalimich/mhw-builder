@@ -183,7 +183,7 @@ export class CalculationService {
 				{
 					displayName: 'Base Weapon Attack',
 					name: 'attack',
-					value: stats.attack - stats.upgradeAttack - stats.awakeningAttack,
+					value: stats.attack,
 					colorClass: 'blue'
 				},
 				{
@@ -215,9 +215,9 @@ export class CalculationService {
 
 		if (stats.elementless) {
 			attackCalc.calculationVariables.push(this.getElementlessVariable(stats));
-			attackCalc.calculationTemplate = `({attack} + {upgrade} + {awakening}) × (1 + {elementlessBoostPercent}) + {passiveAttack} × {weaponModifier} ≈ ${stats.totalAttack}`;
+			attackCalc.calculationTemplate = `({attack} + ({upgrade} + {awakening}) × {weaponModifier}) × (1 + {elementlessBoostPercent}) + {passiveAttack} × {weaponModifier} ≈ ${stats.totalAttack}`;
 		} else {
-			attackCalc.calculationTemplate = `{attack} + {upgrade} + {awakening} + {passiveAttack} × {weaponModifier} ≈ ${stats.totalAttack}`;
+			attackCalc.calculationTemplate = `{attack} + ({upgrade} + {awakening} + {passiveAttack}) × {weaponModifier} ≈ ${stats.totalAttack}`;
 		}
 
 		return attackCalc;
@@ -231,7 +231,7 @@ export class CalculationService {
 				{
 					displayName: 'Base Weapon Attack',
 					name: 'attack',
-					value: stats.attack - stats.upgradeAttack - stats.awakeningAttack,
+					value: stats.attack,
 					colorClass: 'blue'
 				},
 				{
@@ -280,10 +280,10 @@ export class CalculationService {
 		};
 
 		if (stats.elementlessBoostPercent > 0 && stats.totalAilmentAttack == 0 && stats.totalElementAttack == 0) {
-			attackPotentialCalc.calculationTemplate = `({attack} + {upgrade} + {awakening}) × (1 + {elementlessBoostPercent} + {activeAttackPercent}) × {sharpnessModifier} + ({passiveAttack} + {activeAttack}) × {weaponModifier} <br>≈ <br>${stats.totalAttackPotential}`;
+			attackPotentialCalc.calculationTemplate = `({attack} + ({upgrade} + {awakening}) × {weaponModifier}) × (1 + {elementlessBoostPercent} + {activeAttackPercent}) × {sharpnessModifier} + ({passiveAttack} + {activeAttack}) × {weaponModifier} <br>≈ <br>${stats.totalAttackPotential}`;
 			attackPotentialCalc.calculationVariables.push(this.getElementlessVariable(stats));
 		} else {
-			attackPotentialCalc.calculationTemplate = `({attack} + {upgrade} + {awakening}) × (1 + {activeAttackPercent}) × {sharpnessModifier} + ({passiveAttack} + {activeAttack}) × {weaponModifier} <br>≈ <br>${stats.totalAttackPotential}`;
+			attackPotentialCalc.calculationTemplate = `({attack} + ({upgrade} + {awakening}) × {weaponModifier}) × (1 + {activeAttackPercent}) × {sharpnessModifier} + ({passiveAttack} + {activeAttack}) × {weaponModifier} <br>≈ <br>${stats.totalAttackPotential}`;
 		}
 
 		return attackPotentialCalc;
