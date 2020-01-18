@@ -688,31 +688,49 @@ export class StatService {
 		this.stats.totalAilmentAttack = this.nearestTen(this.stats.totalAilmentAttack * 10) / 10;
 		this.stats.totalAilmentAttackPotential = this.nearestTen(this.stats.totalAilmentAttackPotential * 10) / 10;
 
+		const rawAttack = this.stats.attack / this.stats.weaponAttackModifier;
+		const elementless = 1 + this.stats.elementlessBoostPercent / 100;
+		const attackPercent = this.stats.activeAttackPercent / 100;
 		if (this.checkElementless()) {
 			this.stats.totalAttack =
 				Math.round(
-					(this.stats.attack + (this.stats.upgradeAttack + this.stats.awakeningAttack) * this.stats.weaponAttackModifier)
-					* (1 + this.stats.elementlessBoostPercent / 100)
-					+ this.stats.passiveAttack * this.stats.weaponAttackModifier
+					Math.floor(
+						Math.round(rawAttack * elementless)
+						+ this.stats.upgradeAttack
+						+ this.stats.awakeningAttack
+						+ this.stats.passiveAttack
+					) * this.stats.weaponAttackModifier
 				);
 			this.stats.totalAttackPotential =
 				Math.round(
-					(this.stats.attack + (this.stats.upgradeAttack + this.stats.awakeningAttack) * this.stats.weaponAttackModifier)
-					* (1 + (this.stats.elementlessBoostPercent / 100) + (this.stats.activeAttackPercent / 100))
-					* this.stats.effectivePhysicalSharpnessModifier
-					+ (this.stats.passiveAttack + this.stats.activeAttack) * this.stats.weaponAttackModifier
+					Math.floor(
+						Math.round(rawAttack * elementless) * this.stats.effectivePhysicalSharpnessModifier
+						+ (Math.round(rawAttack * elementless) * attackPercent)
+						+ this.stats.upgradeAttack
+						+ this.stats.awakeningAttack
+						+ this.stats.passiveAttack
+					) * this.stats.weaponAttackModifier
 				);
 			this.stats.elementless = true;
 		} else {
 			this.stats.totalAttack =
-				this.stats.attack
-				+ Math.round((this.stats.passiveAttack + this.stats.upgradeAttack + this.stats.awakeningAttack) * this.stats.weaponAttackModifier);
+				Math.round(
+					Math.floor(
+						rawAttack
+						+ this.stats.upgradeAttack
+						+ this.stats.awakeningAttack
+						+ this.stats.passiveAttack
+					) * this.stats.weaponAttackModifier
+				);
 			this.stats.totalAttackPotential =
 				Math.round(
-					(this.stats.attack + (this.stats.upgradeAttack + this.stats.awakeningAttack) * this.stats.weaponAttackModifier)
-					* this.stats.effectivePhysicalSharpnessModifier
-					* (1 + this.stats.activeAttackPercent / 100)
-					+ (this.stats.passiveAttack + this.stats.activeAttack) * this.stats.weaponAttackModifier
+					Math.floor(
+						rawAttack * this.stats.effectivePhysicalSharpnessModifier
+						+ rawAttack * attackPercent
+						+ this.stats.upgradeAttack
+						+ this.stats.awakeningAttack
+						+ this.stats.passiveAttack
+					) * this.stats.weaponAttackModifier
 				);
 			this.stats.elementless = false;
 		}
