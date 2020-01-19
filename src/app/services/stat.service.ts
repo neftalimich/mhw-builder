@@ -709,6 +709,7 @@ export class StatService {
 						+ this.stats.upgradeAttack
 						+ this.stats.awakeningAttack
 						+ this.stats.passiveAttack
+						+ this.stats.activeAttack
 					) * this.stats.weaponAttackModifier
 				);
 			this.stats.elementless = true;
@@ -730,6 +731,7 @@ export class StatService {
 						+ this.stats.upgradeAttack
 						+ this.stats.awakeningAttack
 						+ this.stats.passiveAttack
+						+ this.stats.activeAttack
 					) * this.stats.weaponAttackModifier
 				);
 			this.stats.elementless = false;

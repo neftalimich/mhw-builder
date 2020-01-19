@@ -270,8 +270,7 @@ export class CalculationService {
 		if (stats.elementlessBoostPercent > 0 && stats.totalAilmentAttack == 0 && stats.totalElementAttack == 0) {
 			attackPotentialCalc.calculationTemplate =
 				`{attack} × {elementlessBoostPercent} × {sharpnessModifier}`
-				+ (stats.activeAttackPercent ? ` + {attack} × {elementlessBoostPercent} × {activeAttackPercent}` : '')
-				+ `<br>`
+				+ (stats.activeAttackPercent ? ` + {attack} × {elementlessBoostPercent} × {activeAttackPercent}<br>` : '')
 				+ ` + ({upgrade}${stats.awakeningAttack ? ' + {awakening}' : ''} + {passiveAttack} + {activeAttack}) × {weaponModifier}`
 				+ `<br>≈<br>${stats.totalAttackPotential}`;
 			attackPotentialCalc.calculationVariables.push(this.getElementlessVariable(stats));
@@ -440,7 +439,7 @@ export class CalculationService {
 	}
 
 	private getAilmentAttack(stats: StatsModel, ailmentCalc: StatDetailModel): StatDetailModel {
-		let value = `${stats.totalAilmentAttack.toFixed(2)}`;
+		let value = `${Math.round(stats.totalAilmentAttack)}`;
 		if (stats.totalAilmentAttack != stats.totalAilmentAttackPotential) {
 			value = `${stats.totalAilmentAttack} | ${stats.totalAilmentAttackPotential}`;
 		}
@@ -541,7 +540,7 @@ export class CalculationService {
 	}
 
 	private getElementAttack(stats: StatsModel, elementCalc: StatDetailModel): StatDetailModel {
-		let value = `${stats.totalElementAttack}`;
+		let value = `${Math.round(stats.totalElementAttack)}`;
 		if (stats.totalElementAttack != stats.totalElementAttackPotential) {
 			value = `${stats.totalElementAttack} | ${stats.totalElementAttackPotential}`;
 		}
