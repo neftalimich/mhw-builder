@@ -181,13 +181,13 @@ export class CalculationService {
 			value: stats.totalAttack,
 			calculationVariables: [
 				{
-					displayName: 'Base Weapon Attack',
+					displayName: 'Base Raw Attack',
 					name: 'attack',
-					value: stats.attack,
+					value: Math.round(stats.attack / stats.weaponAttackModifier),
 					colorClass: 'blue'
 				},
 				{
-					displayName: 'Upgrade Weapon Attack',
+					displayName: 'Upgrade Attack',
 					name: 'upgrade',
 					value: stats.upgradeAttack,
 					colorClass: 'green'
@@ -210,10 +210,10 @@ export class CalculationService {
 		if (stats.elementless) {
 			attackCalc.calculationVariables.push(this.getElementlessVariable(stats));
 			attackCalc.calculationTemplate =
-				`{attack} × {elementlessBoostPercent} + ({upgrade}${stats.awakeningAttack ? ' + {awakening}' : ''} + {passiveAttack}) × {weaponModifier} ≈ ${stats.totalAttack}`;
+				`({attack} × {elementlessBoostPercent} + {upgrade}${stats.awakeningAttack ? ' + {awakening}' : ''} + {passiveAttack}) × {weaponModifier} ≈ ${stats.totalAttack}`;
 		} else {
 			attackCalc.calculationTemplate =
-				`{attack} + ({upgrade}${stats.awakeningAttack ? ' + {awakening}' : ''} + {passiveAttack}) × {weaponModifier} ≈ ${stats.totalAttack}`;
+				`({attack} + {upgrade}${stats.awakeningAttack ? ' + {awakening}' : ''} + {passiveAttack}) × {weaponModifier} ≈ ${stats.totalAttack}`;
 		}
 
 		if (stats.awakeningAttack > 0) {
@@ -229,13 +229,13 @@ export class CalculationService {
 			value: stats.totalAttackPotential,
 			calculationVariables: [
 				{
-					displayName: 'Base Weapon Attack',
+					displayName: 'Base Raw Attack',
 					name: 'attack',
-					value: stats.attack,
+					value: Math.round(stats.attack / stats.weaponAttackModifier),
 					colorClass: 'blue'
 				},
 				{
-					displayName: 'Upgrade Weapon Attack',
+					displayName: 'Upgrade Attack',
 					name: 'upgrade',
 					value: stats.upgradeAttack,
 					colorClass: 'green'
@@ -244,7 +244,7 @@ export class CalculationService {
 					displayName: 'Physical Sharpness Modifier',
 					name: 'sharpnessModifier',
 					value: stats.effectivePhysicalSharpnessModifier,
-					colorClass: 'pink'
+					colorClass: 'oblue'
 				},
 				{
 					displayName: 'Passive Attack',
@@ -269,16 +269,18 @@ export class CalculationService {
 
 		if (stats.elementlessBoostPercent > 0 && stats.totalAilmentAttack == 0 && stats.totalElementAttack == 0) {
 			attackPotentialCalc.calculationTemplate =
-				`{attack} × {elementlessBoostPercent} × {sharpnessModifier}`
-				+ (stats.activeAttackPercent ? ` + {attack} × {elementlessBoostPercent} × {activeAttackPercent}<br>` : '')
-				+ ` + ({upgrade}${stats.awakeningAttack ? ' + {awakening}' : ''} + {passiveAttack} + {activeAttack}) × {weaponModifier}`
+				`({attack} × {elementlessBoostPercent}`
+				+ (stats.activeAttackPercent ? ` + {attack} × {elementlessBoostPercent} × {activeAttackPercent}` : '')
+				+ ` + {upgrade}${stats.awakeningAttack ? ' + {awakening}' : ''} + {passiveAttack} + {activeAttack})`
+				+ `<br> × {weaponModifier} × {sharpnessModifier}`
 				+ `<br>≈<br>${stats.totalAttackPotential}`;
 			attackPotentialCalc.calculationVariables.push(this.getElementlessVariable(stats));
 		} else {
 			attackPotentialCalc.calculationTemplate =
-				`{attack} × {sharpnessModifier}`
+				`({attack}`
 				+ (stats.activeAttackPercent ? ` + {attack} × {activeAttackPercent}` : '')
-				+ ` + ({upgrade}${stats.awakeningAttack ? ' + {awakening}' : ''} + {passiveAttack} + {activeAttack}) × {weaponModifier}`
+				+ ` + {upgrade}${stats.awakeningAttack ? ' + {awakening}' : ''} + {passiveAttack} + {activeAttack})`
+				+ ` × {weaponModifier} × {sharpnessModifier}`
 				+ `<br>≈<br>${stats.totalAttackPotential}`;
 		}
 
@@ -309,7 +311,7 @@ export class CalculationService {
 
 	private getAwakeningVariable(stats: StatsModel): CalculationVariableModel {
 		return {
-			displayName: 'Awakening Weapon Attack',
+			displayName: 'Awakening Attack',
 			name: 'awakening',
 			value: stats.awakeningAttack,
 			colorClass: 'green'

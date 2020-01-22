@@ -704,13 +704,15 @@ export class StatService {
 			this.stats.totalAttackPotential =
 				Math.round(
 					Math.floor(
-						Math.round(rawAttack * elementless) * this.stats.effectivePhysicalSharpnessModifier
+						Math.round(rawAttack * elementless)
 						+ (Math.round(rawAttack * elementless) * attackPercent)
 						+ this.stats.upgradeAttack
 						+ this.stats.awakeningAttack
 						+ this.stats.passiveAttack
 						+ this.stats.activeAttack
-					) * this.stats.weaponAttackModifier
+					)
+					* this.stats.effectivePhysicalSharpnessModifier
+					* this.stats.weaponAttackModifier
 				);
 			this.stats.elementless = true;
 		} else {
@@ -726,13 +728,15 @@ export class StatService {
 			this.stats.totalAttackPotential =
 				Math.round(
 					Math.floor(
-						rawAttack * this.stats.effectivePhysicalSharpnessModifier
+						rawAttack
 						+ rawAttack * attackPercent
 						+ this.stats.upgradeAttack
 						+ this.stats.awakeningAttack
 						+ this.stats.passiveAttack
 						+ this.stats.activeAttack
-					) * this.stats.weaponAttackModifier
+					)
+					* this.stats.effectivePhysicalSharpnessModifier
+					* this.stats.weaponAttackModifier
 				);
 			this.stats.elementless = false;
 		}

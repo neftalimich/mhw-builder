@@ -88,7 +88,7 @@ id	rarity	name	levels	skills
 311	7	Clearmind Charm	1	heatGuard-1;effluvialExpert-1
 312	7	Rider's Charm	1	masterMounter-1;jumpMaster-1
 313	7	Surveyor's Charm	1	scoutflyRangeUp-1;scholar-1
-314	12	Critical Charm	3	criticalBoost-1
+314	12	Critical Charm	2	criticalBoost-1
 315	11	Invigorate Charm	3	powerProlonger-1
 316	11	Penetration Charm	2	piercingShots-1
 317	11	Dispersal Charm	2	spreadPowerShots-1
