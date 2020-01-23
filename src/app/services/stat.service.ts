@@ -690,11 +690,11 @@ export class StatService {
 
 		const rawAttack = this.stats.attack / this.stats.weaponAttackModifier;
 		const elementless = 1 + this.stats.elementlessBoostPercent / 100;
-		const attackPercent = this.stats.activeAttackPercent / 100;
+		const attackPercent = 1 + this.stats.activeAttackPercent / 100;
 		if (this.checkElementless()) {
 			this.stats.totalAttack =
 				Math.round(
-					Math.floor(
+					Math.round(
 						Math.round(rawAttack * elementless)
 						+ this.stats.upgradeAttack
 						+ this.stats.awakeningAttack
@@ -703,15 +703,15 @@ export class StatService {
 				);
 			this.stats.totalAttackPotential =
 				Math.round(
-					Math.floor(
-						Math.round(rawAttack * elementless)
-						+ (Math.round(rawAttack * elementless) * attackPercent)
-						+ this.stats.upgradeAttack
-						+ this.stats.awakeningAttack
+					Math.round(
+						(
+							Math.round(rawAttack * elementless)
+							+ this.stats.upgradeAttack
+							+ this.stats.awakeningAttack
+						) * attackPercent
 						+ this.stats.passiveAttack
 						+ this.stats.activeAttack
 					)
-					* this.stats.effectivePhysicalSharpnessModifier
 					* this.stats.weaponAttackModifier
 				);
 			this.stats.elementless = true;
@@ -728,14 +728,14 @@ export class StatService {
 			this.stats.totalAttackPotential =
 				Math.round(
 					Math.floor(
-						rawAttack
-						+ rawAttack * attackPercent
-						+ this.stats.upgradeAttack
-						+ this.stats.awakeningAttack
+						(
+							rawAttack
+							+ this.stats.upgradeAttack
+							+ this.stats.awakeningAttack
+						) * attackPercent
 						+ this.stats.passiveAttack
 						+ this.stats.activeAttack
 					)
-					* this.stats.effectivePhysicalSharpnessModifier
 					* this.stats.weaponAttackModifier
 				);
 			this.stats.elementless = false;

@@ -171,8 +171,8 @@ export class CalculationService {
 				value: `+[${stats.frostcraft.join(', ')}]% ATK`
 			});
 		}
+		this.attackCalcs.push(this.getRawAttack(stats));
 		this.attackCalcs.push(this.getRawAttackAverage(stats));
-		this.attackCalcs.push(this.getRawAttackAveragePotential(stats));
 	}
 
 	private getAttack(stats: StatsModel): StatDetailModel {
@@ -202,7 +202,7 @@ export class CalculationService {
 					displayName: 'Weapon Modifier',
 					name: 'weaponModifier',
 					value: stats.weaponAttackModifier,
-					colorClass: 'purple'
+					colorClass: 'ogreen'
 				}
 			]
 		};
@@ -241,12 +241,6 @@ export class CalculationService {
 					colorClass: 'green'
 				},
 				{
-					displayName: 'Physical Sharpness Modifier',
-					name: 'sharpnessModifier',
-					value: stats.effectivePhysicalSharpnessModifier,
-					colorClass: 'oblue'
-				},
-				{
 					displayName: 'Passive Attack',
 					name: 'passiveAttack',
 					value: stats.passiveAttack,
@@ -262,6 +256,12 @@ export class CalculationService {
 					displayName: 'Weapon Modifier',
 					name: 'weaponModifier',
 					value: stats.weaponAttackModifier,
+					colorClass: 'ogreen'
+				},
+				{
+					displayName: 'Physical Sharpness Modifier',
+					name: 'sharpnessModifier',
+					value: stats.effectivePhysicalSharpnessModifier,
 					colorClass: 'purple'
 				}
 			]
@@ -269,23 +269,27 @@ export class CalculationService {
 
 		if (stats.elementlessBoostPercent > 0 && stats.totalAilmentAttack == 0 && stats.totalElementAttack == 0) {
 			attackPotentialCalc.calculationTemplate =
-				`({attack} × {elementlessBoostPercent}`
-				+ (stats.activeAttackPercent ? ` + {attack} × {elementlessBoostPercent} × {activeAttackPercent}` : '')
-				+ ` + {upgrade}${stats.awakeningAttack ? ' + {awakening}' : ''} + {passiveAttack} + {activeAttack})`
+				(stats.activeAttackPercent > 0 ? `(` : ``)
+				+ `({attack} × {elementlessBoostPercent}`
+				+ ` + {upgrade}${stats.awakeningAttack ? ` + {awakening}` : ``}`
+				+ (stats.activeAttackPercent > 0 ? `) × {activeAttackPercent}` : ``)
+				+ ` + {passiveAttack} + {activeAttack})`
 				+ `<br> × {weaponModifier} × {sharpnessModifier}`
-				+ `<br>≈<br>${stats.totalAttackPotential}`;
+				+ `<br>≈<br>${Math.round(stats.totalAttackPotential * stats.effectivePhysicalSharpnessModifier)}`;
 			attackPotentialCalc.calculationVariables.push(this.getElementlessVariable(stats));
 		} else {
 			attackPotentialCalc.calculationTemplate =
-				`({attack}`
-				+ (stats.activeAttackPercent ? ` + {attack} × {activeAttackPercent}` : '')
-				+ ` + {upgrade}${stats.awakeningAttack ? ' + {awakening}' : ''} + {passiveAttack} + {activeAttack})`
+				(stats.activeAttackPercent > 0 ? `(` : ``)
+				+ `({attack}`
+				+ ` + {upgrade}${stats.awakeningAttack ? ` + {awakening}` : ``}`
+				+ (stats.activeAttackPercent > 0 ? `) × {activeAttackPercent}` : ``)
+				+ ` + {passiveAttack} + {activeAttack})`
 				+ ` × {weaponModifier} × {sharpnessModifier}`
-				+ `<br>≈<br>${stats.totalAttackPotential}`;
+				+ `<br>≈<br>${Math.round(stats.totalAttackPotential * stats.effectivePhysicalSharpnessModifier)}`;
 		}
 
 		if (stats.activeAttackPercent > 0) {
-			attackPotentialCalc.calculationVariables.splice(5, 0, {
+			attackPotentialCalc.calculationVariables.splice(4, 0, {
 				displayName: 'Active Attack Percent',
 				name: 'activeAttackPercent',
 				value: stats.activeAttackPercent / 100,
@@ -614,15 +618,9 @@ export class CalculationService {
 		};
 	}
 
-	private getRawAttackAverage(stats: StatsModel): StatDetailModel {
-		const totalAffinity = Math.min(stats.affinity + stats.passiveAffinity, 100);
-		const rawAttackAvg =
-			this.getRawAverage(
-				stats.totalAttack,
-				totalAffinity,
-				stats.passiveCriticalBoostPercent,
-				stats.weaponAttackModifier);
-		const auxDivider = stats.totalAilmentAttack && stats.totalElementAttack ? 2 : 1;
+	private getRawAttack(stats: StatsModel): StatDetailModel {
+		const totalAffinityPotential = Math.min(stats.affinity + stats.passiveAffinity + stats.weakPointAffinity + stats.activeAffinity, 100);
+		const auxDivider = (stats.ailment && stats.element) ? 2 : 1;
 
 		const trueElement =
 			this.getElementAverage(
@@ -642,48 +640,58 @@ export class CalculationService {
 				auxDivider // Divider
 			);
 
-		const rawAttackAvgCalc: StatDetailModel = {
-			name: 'True Raw Average',
-			value: Number.isInteger(rawAttackAvg) ? rawAttackAvg : 0,
+		const rawAttackAveragePotentialCalc: StatDetailModel = {
+			name: 'True Raw',
+			value: Number.isInteger(stats.totalAttackPotential) ?
+				(
+					`${Math.round(stats.totalAttackPotential * stats.effectivePhysicalSharpnessModifier / stats.weaponAttackModifier)}`
+					+ ` | ${Math.round(stats.totalAttackPotential * (1.25 + stats.passiveCriticalBoostPercent / 100) * stats.effectivePhysicalSharpnessModifier / stats.weaponAttackModifier)}`
+				) : 0,
 			extra1: stats.ailment && trueAilment ? trueAilment : null,
 			class1: stats.ailment && trueAilment ? stats.ailment : null,
 			extra2: stats.element && trueElement ? trueElement : null,
 			class2: stats.element && trueElement ? stats.element : null,
-			calculationTemplate: `<i class="fas fa-bullseye fa-xs"></i> ({totalAttack} × {totalAffinity} × {criticalBoost} + {totalAttack} × (1 - {totalAffinity})) <br>÷ {weaponModifier} <br>≈<br> [${rawAttackAvg}`,
+			calculationTemplate:
+				`<i class="fas fa-bullseye fa-sm"></i> Non Critical: {totalAttackPotential} × {sharpnessModifier} ÷ {weaponModifier} ≈ ${Math.round(stats.totalAttackPotential * stats.effectivePhysicalSharpnessModifier / stats.weaponAttackModifier)}`
+				+ `<br><i class="fas fa-bullseye fa-sm"></i> Critical: {totalAttackPotential} × {criticalBoost} × {sharpnessModifier} ÷ {weaponModifier} ≈ ${Math.round(stats.totalAttackPotential * (1.25 + stats.passiveCriticalBoostPercent / 100) * stats.effectivePhysicalSharpnessModifier / stats.weaponAttackModifier)}`,
 			calculationVariables: [
 				{
-					displayName: 'Total Attack',
-					name: 'totalAttack',
-					value: stats.totalAttack,
+					displayName: 'Total Attack Potential',
+					name: 'totalAttackPotential',
+					value: stats.totalAttackPotential,
 					colorClass: 'green'
 				},
 				{
-					displayName: 'Total Affinity',
-					name: 'totalAffinity',
-					value: totalAffinity / 100,
+					displayName: 'Total Affinity Potential',
+					name: 'totalAffinityPotential',
+					value: (totalAffinityPotential / 100).toFixed(2),
 					colorClass: 'blue'
 				},
 				{
 					displayName: 'Total Critical Boost',
 					name: 'criticalBoost',
-					value: (stats.passiveCriticalBoostPercent + 125) / 100,
-					colorClass: 'kakhi'
+					value: ((stats.passiveCriticalBoostPercent + 125) / 100).toFixed(2),
+					colorClass: 'oblue'
+				},
+				{
+					displayName: 'Physical Sharpness Modifier',
+					name: 'sharpnessModifier',
+					value: stats.effectivePhysicalSharpnessModifier,
+					colorClass: 'purple'
 				},
 				{
 					displayName: 'Weapon Modifier',
 					name: 'weaponModifier',
-					value: stats.weaponAttackModifier,
-					colorClass: 'purple'
+					value: stats.weaponAttackModifier.toFixed(2),
+					colorClass: 'ogreen'
 				}
 			]
 		};
 
-		rawAttackAvgCalc.calculationTemplate += ']';
-
-		return rawAttackAvgCalc;
+		return rawAttackAveragePotentialCalc;
 	}
 
-	private getRawAttackAveragePotential(stats: StatsModel): StatDetailModel {
+	private getRawAttackAverage(stats: StatsModel): StatDetailModel {
 		const totalAffinityPotential = Math.min(stats.affinity + stats.passiveAffinity + stats.weakPointAffinity + stats.activeAffinity, 100);
 		const rawAttackAveragePotential =
 			this.getRawAverage(
@@ -722,10 +730,11 @@ export class CalculationService {
 			);
 
 		const rawAttackAveragePotentialCalc: StatDetailModel = {
-			name: 'True Raw Average Potential',
-			value: Number.isInteger(rawAttackAveragePotential) ? rawAttackAveragePotential : 0,
+			name: 'True Raw Average',
+			value: Number.isInteger(rawAttackAveragePotential) ? Math.round(rawAttackAveragePotential * stats.effectivePhysicalSharpnessModifier) : 0,
 			calculationTemplate:
-				`<i class="fas fa-bullseye fa-xs"></i> ({totalAttackPotential} × {totalAffinityPotential} × {criticalBoost} + {totalAttackPotential} × (1 - {totalAffinityPotential}))<br> ÷ {weaponModifier} ≈ ${rawAttackAveragePotential}`,
+				`<i class="fas fa-bullseye fa-sm"></i> ({totalAttackPotential} × {totalAffinityPotential} × {criticalBoost} + {totalAttackPotential} × (1 - {totalAffinityPotential}))`
+				+ `<br>× {sharpnessModifier} ÷ {weaponModifier} ≈ ${rawAttackAveragePotential}`,
 			calculationVariables: [
 				{
 					displayName: 'Total Attack Potential',
@@ -746,10 +755,16 @@ export class CalculationService {
 					colorClass: 'oblue'
 				},
 				{
+					displayName: 'Physical Sharpness Modifier',
+					name: 'sharpnessModifier',
+					value: stats.effectivePhysicalSharpnessModifier,
+					colorClass: 'purple'
+				},
+				{
 					displayName: 'Weapon Modifier',
 					name: 'weaponModifier',
 					value: stats.weaponAttackModifier.toFixed(2),
-					colorClass: 'purple'
+					colorClass: 'ogreen'
 				}
 			]
 		};
@@ -758,7 +773,8 @@ export class CalculationService {
 			rawAttackAveragePotentialCalc.extra1 = trueAilmentPotential;
 			rawAttackAveragePotentialCalc.class1 = stats.ailment;
 			rawAttackAveragePotentialCalc.calculationTemplate +=
-				`<br><i class="fas fa-bullseye fa-xs"></i> ({totalAilmentPotential} × {totalAffinityPotential} × {criticalAilmentBoost} + {totalAilmentPotential} × (1 - {totalAffinityPotential}))<br> × {sharpnessModifier} ÷ 30${auxDivider == 2 ? ' ÷ 2' : ''} ≈ ${trueAilmentPotential}`;
+				`<br><i class="fas fa-bullseye fa-xs"></i> ({totalAilmentPotential} × {totalAffinityPotential} × {criticalAilmentBoost} + {totalAilmentPotential} × (1 - {totalAffinityPotential}))`
+				+ `<br> × {elementSharpnessModifier} ÷ 30${auxDivider == 2 ? ' ÷ 2' : ''} ≈ ${trueAilmentPotential}`;
 			rawAttackAveragePotentialCalc.calculationVariables.push(
 				{
 					displayName: 'Ailement Attack Potential',
@@ -778,7 +794,8 @@ export class CalculationService {
 			rawAttackAveragePotentialCalc.extra2 = trueElementPotential;
 			rawAttackAveragePotentialCalc.class2 = stats.element;
 			rawAttackAveragePotentialCalc.calculationTemplate +=
-				`<br><i class="fas fa-bullseye fa-xs"></i> ({totalElementPotential} × {totalAffinityPotential} × {criticalElementBoost} + {totalElementPotential} × (1 - {totalAffinityPotential}))<br> × {sharpnessModifier} ÷ 10${auxDivider == 2 ? ' ÷ 2' : ''} ≈ ${trueElementPotential}`;
+				`<br><i class="fas fa-bullseye fa-xs"></i> ({totalElementPotential} × {totalAffinityPotential} × {criticalElementBoost} + {totalElementPotential} × (1 - {totalAffinityPotential}))`
+				+ `<br> × {elementSharpnessModifier} ÷ 10${auxDivider == 2 ? ' ÷ 2' : ''} ≈ ${trueElementPotential}`;
 			rawAttackAveragePotentialCalc.calculationVariables.push(
 				{
 					displayName: 'Element Attack Potential',
@@ -798,11 +815,10 @@ export class CalculationService {
 		if (stats.ailment && trueAilmentPotential || stats.element && trueElementPotential) {
 			rawAttackAveragePotentialCalc.calculationVariables.push({
 				displayName: 'Element Sharpness Modifier',
-				name: 'sharpnessModifier',
+				name: 'elementSharpnessModifier',
 				value: stats.effectiveElementalSharpnessModifier.toFixed(2),
 				colorClass: 'purple'
-			}
-			);
+			});
 		}
 
 		return rawAttackAveragePotentialCalc;

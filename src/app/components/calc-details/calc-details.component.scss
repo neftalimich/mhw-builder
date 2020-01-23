@@ -36,6 +36,10 @@ ul.info {
 	color: $green;
 }
 
+::ng-deep .ogreen {
+	color: $ogreen;
+}
+
 ::ng-deep .blue {
 	color: $blue;
 }
