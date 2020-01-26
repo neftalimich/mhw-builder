@@ -19,7 +19,6 @@ export class SharpnessBarComponent implements OnInit {
 
 	@Input()
 	set sharpnessLevels(sharpnessLevels: number[]) {
-
 		this._sharpnessLevels = sharpnessLevels;
 		this.generateSharpnessBar();
 	}
@@ -79,6 +78,13 @@ export class SharpnessBarComponent implements OnInit {
 					level: this._sharpnessLevels[i] - levelsToAdd,
 					active: false
 				};
+				// When handicraft is not needed
+				if (total > 40 && this._sharpnessLevels[i] > 0) {
+					const toSubstract2 = Math.min(this._sharpnessLevels[i], total - 40);
+					this.sharpnessBar.levels[i] -= toSubstract2;
+					total -= toSubstract2;
+					sharpnessAux.level -= toSubstract2;
+				}
 				this.sharpnessBar.sharps.push(sharpnessAux);
 			}
 			if (levelsToAdd == 0 && this._sharpnessLevels[i] == 0) {
@@ -91,12 +97,7 @@ export class SharpnessBarComponent implements OnInit {
 			}
 			levelsToAdd -= aux;
 
-			// When handicraft is not needed
-			if (total > 40 && this._sharpnessLevels[i] > 0) {
-				const toSubstract2 = Math.min(this._sharpnessLevels[i], total - 40);
-				this._sharpnessLevels[i] -= toSubstract2;
-				total -= toSubstract2;
-			}
+
 
 			this.sharpnessBar.tooltipTemplate =
 				`| <span class="sharp-${i}">${this._sharpnessLevels[i] * 10}</span> ${this.sharpnessBar.tooltipTemplate}`;
