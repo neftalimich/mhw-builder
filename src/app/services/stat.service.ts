@@ -343,10 +343,8 @@ export class StatService {
 						this.stats.awakeningAffinity += awakeningAffinity[awakening.level - 1];
 						break;
 					case AwakeningType.Defense:
-						this.stats.defense[0] += awakeningDefense[awakening.level - 1];
 						break;
 					case AwakeningType.Slot:
-						this.stats.extraSlot += awakeningSlot[awakening.level - 1];
 						break;
 					case AwakeningType.Ailment:
 						this.stats.baseAilmentAttack += awakeningAilment[awakening.level - 1];
@@ -363,6 +361,15 @@ export class StatService {
 						break;
 				}
 			}
+		}
+
+		const defense = awakenings.find(x => x.type == AwakeningType.Defense);
+		if (defense) {
+			this.stats.passiveDefense += awakeningDefense[defense.level - 1];
+		}
+		const slot = awakenings.find(x => x.type == AwakeningType.Slot);
+		if (slot) {
+			this.stats.extraSlot += awakeningSlot[slot.level - 1];
 		}
 
 		if (weapon.weaponType == WeaponType.HuntingHorn) {
