@@ -17,25 +17,35 @@
 	</div>
 
 	<div class="filter-container" *ngIf="showFilterContainer">
-		<button type="button" class="armor-filter" [class.selected]="itemTypeIsSelected('Head')" (click)="addItemTypeFilter('Head')" title="Head">
+		<button type="button" class="armor-filter" [class.selected]="itemTypeIsSelected('Head')"
+			(click)="addItemTypeFilter('Head')" title="Head">
 			<img src="assets/images/armor/head-icon.png" [hidden]="headId == 0" alt="Head">
-			<img src="assets/images/armor/head-icon.png" [hidden]="headId != 0" class="armor-icon info-opaque" alt="head">
+			<img src="assets/images/armor/head-icon.png" [hidden]="headId != 0" class="armor-icon info-opaque"
+				alt="head">
 		</button>
-		<button type="button" class="armor-filter" [class.selected]="itemTypeIsSelected('Chest')" (click)="addItemTypeFilter('Chest')" title="Chest">
+		<button type="button" class="armor-filter" [class.selected]="itemTypeIsSelected('Chest')"
+			(click)="addItemTypeFilter('Chest')" title="Chest">
 			<img src="assets/images/armor/chest-icon.png" [hidden]="bodyId == 0" alt="Chest">
-			<img src="assets/images/armor/chest-icon.png" [hidden]="bodyId != 0" class="armor-icon info-opaque" alt="Chest">
+			<img src="assets/images/armor/chest-icon.png" [hidden]="bodyId != 0" class="armor-icon info-opaque"
+				alt="Chest">
 		</button>
-		<button type="button" class="armor-filter" [class.selected]="itemTypeIsSelected('Hands')" (click)="addItemTypeFilter('Hands')" title="Hands">
-			<img src="assets/images/armor/hands-icon.png" [hidden]="armsId == 0" alt="Hands">
-			<img src="assets/images/armor/hands-icon.png" [hidden]="armsId != 0" class="armor-icon info-opaque" alt="Hands">
+		<button type="button" class="armor-filter" [class.selected]="itemTypeIsSelected('Arms')"
+			(click)="addItemTypeFilter('Arms')" title="Hands">
+			<img src="assets/images/armor/arms-icon.png" [hidden]="handsId == 0" alt="Arms">
+			<img src="assets/images/armor/arms-icon.png" [hidden]="handsId != 0" class="armor-icon info-opaque"
+				alt="Arms">
 		</button>
-		<button type="button" class="armor-filter" [class.selected]="itemTypeIsSelected('Legs')" (click)="addItemTypeFilter('Legs')" title="Legs">
-			<img src="assets/images/armor/legs-icon.png" [hidden]="torsoId == 0" alt="Legs">
-			<img src="assets/images/armor/legs-icon.png" [hidden]="torsoId != 0" class="armor-icon info-opaque" alt="Legs">
+		<button type="button" class="armor-filter" [class.selected]="itemTypeIsSelected('Legs')"
+			(click)="addItemTypeFilter('Waist')" title="Legs">
+			<img src="assets/images/armor/waist-icon.png" [hidden]="waistId == 0" alt="Waist">
+			<img src="assets/images/armor/waist-icon.png" [hidden]="waistId != 0" class="armor-icon info-opaque"
+				alt="Waist">
 		</button>
-		<button type="button" class="armor-filter" [class.selected]="itemTypeIsSelected('Feet')" (click)="addItemTypeFilter('Feet')" title="Feet">
-			<img src="assets/images/armor/feet-icon.png" [hidden]="legsId == 0" alt="Feet">
-			<img src="assets/images/armor/feet-icon.png" [hidden]="legsId != 0" class="armor-icon info-opaque" alt="Feet">
+		<button type="button" class="armor-filter" [class.selected]="itemTypeIsSelected('Legs')"
+			(click)="addItemTypeFilter('Legs')" title="Feet">
+			<img src="assets/images/armor/legs-icon.png" [hidden]="legsId == 0" alt="Legs">
+			<img src="assets/images/armor/legs-icon.png" [hidden]="legsId != 0" class="armor-icon info-opaque"
+				alt="Legs">
 		</button>
 	</div>
 
@@ -43,19 +53,24 @@
 		<button type="button" class="item-sort" [class.selected]="armorTypeSort == 'DEF'" (click)="sortByDefense()">
 			<span>DEF</span>
 		</button>
-		<button type="button" class="item-sort" [class.selected]="armorTypeSort == 'FIR'" (click)="sortByResistance('FIR')">
+		<button type="button" class="item-sort" [class.selected]="armorTypeSort == 'FIR'"
+			(click)="sortByResistance('FIR')">
 			<span>FIR</span>
 		</button>
-		<button type="button" class="item-sort" [class.selected]="armorTypeSort == 'WAT'" (click)="sortByResistance('WAT')">
+		<button type="button" class="item-sort" [class.selected]="armorTypeSort == 'WAT'"
+			(click)="sortByResistance('WAT')">
 			<span>WAT</span>
 		</button>
-		<button type="button" class="item-sort" [class.selected]="armorTypeSort == 'THU'" (click)="sortByResistance('THU')">
+		<button type="button" class="item-sort" [class.selected]="armorTypeSort == 'THU'"
+			(click)="sortByResistance('THU')">
 			<span>THU</span>
 		</button>
-		<button type="button" class="item-sort" [class.selected]="armorTypeSort == 'ICE'" (click)="sortByResistance('ICE')">
+		<button type="button" class="item-sort" [class.selected]="armorTypeSort == 'ICE'"
+			(click)="sortByResistance('ICE')">
 			<span>ICE</span>
 		</button>
-		<button type="button" class="item-sort" [class.selected]="armorTypeSort == 'DRA'" (click)="sortByResistance('DRA')">
+		<button type="button" class="item-sort" [class.selected]="armorTypeSort == 'DRA'"
+			(click)="sortByResistance('DRA')">
 			<span>DRA</span>
 		</button>
 		<button type="button" class="item-sort" [class.selected]="armorTypeSort == 'SLOT'" (click)="sortBySlots()">
@@ -63,8 +78,10 @@
 		</button>
 	</div>
 
-	<virtual-scroller id="items-list" #itemList class="scroll-container" *ngIf="itemsAll" [items]="filteredItems" (vsUpdate)="onItemListUpdate($event)">
-		<div *ngFor="let item of virtualItems" class="scroll-item-container" (click)="selectItem(item)" [class.itemSelected]="itemIsSelected(item.id, item.itemType)">
+	<virtual-scroller id="items-list" #itemList class="scroll-container" *ngIf="itemsAll" [items]="filteredItems"
+		(vsUpdate)="onItemListUpdate($event)">
+		<div *ngFor="let item of virtualItems" class="scroll-item-container" (click)="selectItem(item)"
+			[class.itemSelected]="itemIsSelected(item.id, item.itemType)">
 			<div class="name-container">
 				<div class="name" [ngClass]="'vcolor-' + item.color">
 					{{item.name}}
@@ -98,10 +115,12 @@
 						<span *ngFor="let def of item.defense; let i = index">
 							{{def}}
 							<span *ngIf="i < item.defense.length - 2">
-								|<!--➝-->
+								|
+								<!--➝-->
 							</span>
 							<span *ngIf="i == item.defense.length -2">
-								|<!--➟-->
+								|
+								<!--➟-->
 							</span>
 						</span>
 					</div>

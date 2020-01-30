@@ -354,9 +354,9 @@ export class DataService {
 				return EquipmentCategoryType.Tool;
 			case ItemType.Head:
 			case ItemType.Chest:
-			case ItemType.Hands:
+			case ItemType.Arms:
+			case ItemType.Waist:
 			case ItemType.Legs:
-			case ItemType.Feet:
 				return EquipmentCategoryType.Armor;
 			default:
 				return null;

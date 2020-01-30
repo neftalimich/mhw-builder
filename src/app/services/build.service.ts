@@ -501,9 +501,9 @@ export class BuildService {
 		const weapon = this.equipmentService.items.find(item => item.equipmentCategory == EquipmentCategoryType.Weapon);
 		const head = this.equipmentService.items.find(item => item.itemType == ItemType.Head);
 		const chest = this.equipmentService.items.find(item => item.itemType == ItemType.Chest);
-		const hands = this.equipmentService.items.find(item => item.itemType == ItemType.Hands);
-		const legs = this.equipmentService.items.find(item => item.itemType == ItemType.Legs);
-		const feet = this.equipmentService.items.find(item => item.itemType == ItemType.Feet);
+		const hands = this.equipmentService.items.find(item => item.itemType == ItemType.Arms);
+		const legs = this.equipmentService.items.find(item => item.itemType == ItemType.Waist);
+		const feet = this.equipmentService.items.find(item => item.itemType == ItemType.Legs);
 		const charm = this.equipmentService.items.find(item => item.itemType == ItemType.Charm);
 		const tool1 = this.equipmentService.items.find(item => item.itemType == ItemType.Tool1);
 		const tool2 = this.equipmentService.items.find(item => item.itemType == ItemType.Tool2);

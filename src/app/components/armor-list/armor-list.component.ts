@@ -45,7 +45,7 @@ export class ArmorListComponent implements OnInit {
 	headId = 0;
 	bodyId = 0;
 	armsId = 0;
-	torsoId = 0;
+	waistId = 0;
 	legsId = 0;
 
 	showFilterContainer = false;
@@ -125,6 +125,7 @@ export class ArmorListComponent implements OnInit {
 				if (gammaIndex > -1) {
 					query = query.replace('gamma', '');
 				}
+				query = query.trim();
 
 				const queryParts = query.split(' ');
 
@@ -147,6 +148,7 @@ export class ArmorListComponent implements OnInit {
 						if (!nameMatch && !skillMatch && !tagMatch) {
 							this.filteredItems = this.filteredItems.filter(i => i.name != item.name);
 						}
+
 						if (alphaIndex > -1 || betaIndex > -1 || gammaIndex > -1) {
 							const abgQuery = [];
 
@@ -250,13 +252,13 @@ export class ArmorListComponent implements OnInit {
 			case ItemType.Chest:
 				itemId = this.bodyId;
 				break;
-			case ItemType.Hands:
+			case ItemType.Arms:
 				itemId = this.armsId;
 				break;
-			case ItemType.Legs:
-				itemId = this.torsoId;
+			case ItemType.Waist:
+				itemId = this.waistId;
 				break;
-			case ItemType.Feet:
+			case ItemType.Legs:
 				itemId = this.legsId;
 				break;
 			default:
@@ -282,9 +284,9 @@ export class ArmorListComponent implements OnInit {
 			this.armsId = 0;
 		}
 		if (this.slotService.legsSlot.item) {
-			this.torsoId = this.slotService.legsSlot.item.id;
+			this.waistId = this.slotService.legsSlot.item.id;
 		} else {
-			this.torsoId = 0;
+			this.waistId = 0;
 		}
 		if (this.slotService.feetSlot.item) {
 			this.legsId = this.slotService.feetSlot.item.id;
@@ -298,11 +300,11 @@ export class ArmorListComponent implements OnInit {
 			return 1;
 		} else if (type == ItemType.Chest) {
 			return 2;
-		} else if (type == ItemType.Hands) {
+		} else if (type == ItemType.Arms) {
 			return 3;
-		} else if (type == ItemType.Legs) {
+		} else if (type == ItemType.Waist) {
 			return 4;
-		} else if (type == ItemType.Feet) {
+		} else if (type == ItemType.Legs) {
 			return 5;
 		} else {
 			return 0;

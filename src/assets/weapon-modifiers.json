@@ -124,6 +124,7 @@
 		"type": "LightBowgun",
 		"attackModifier": 1.3,
 		"critElementModifier": 1.25,
+		"trueCritElementModifier": 1.50,
 		"critStatusModifier": 1.20,
 		"trueCritStatusModifier": 1.30,
 		"hastenRecovery": 5,
@@ -144,8 +145,8 @@
 	{
 		"type": "Bow",
 		"attackModifier": 1.2,
-		"critElementModifier": 1.35,
-		"trueCritElementModifier": 1.55,
+		"critElementModifier": 1.25,
+		"trueCritElementModifier": 1.50,
 		"critStatusModifier": 1.20,
 		"trueCritStatusModifier": 1.30,
 		"hastenRecovery": 5,

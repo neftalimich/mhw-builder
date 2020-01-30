@@ -11,6 +11,7 @@ import { ModificationModel } from '../models/modification.model';
 import { SetBonusModel } from '../models/set-bonus.model';
 import { UpgradeContainerModel } from '../models/upgrade-container.model';
 import { AilmentType } from '../types/ailment.type';
+import { EldersealType } from '../types/elderseal.type';
 import { ElementType } from '../types/element.type';
 import { ItemType } from '../types/item.type';
 import { SkillService } from './skill.service';
@@ -182,9 +183,13 @@ export class EquipmentService {
 		if (element != ElementType.None) {
 			weapon.element = element;
 			weapon.elementBaseAttack = elementAttack;
+			if (element == ElementType.Dragon) {
+				weapon.elderseal = EldersealType.Average;
+			}
 		} else {
 			weapon.element = null;
 			weapon.elementBaseAttack = null;
+			weapon.elderseal = null;
 		}
 		if (updateStats) {
 			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.awakenings, this.modifications, this.kinsect);

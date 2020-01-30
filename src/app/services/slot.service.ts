@@ -354,13 +354,13 @@ export class SlotService {
 			case ItemType.Chest:
 				slotAux = this.chestSlot;
 				break;
-			case ItemType.Hands:
+			case ItemType.Arms:
 				slotAux = this.handsSlot;
 				break;
-			case ItemType.Legs:
+			case ItemType.Waist:
 				slotAux = this.legsSlot;
 				break;
-			case ItemType.Feet:
+			case ItemType.Legs:
 				slotAux = this.feetSlot;
 				break;
 			default:

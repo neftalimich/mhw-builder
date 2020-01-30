@@ -246,11 +246,11 @@ export class SkillService {
 			equippedSkill.headCount += actualCount;
 		} else if (itemType == ItemType.Chest) {
 			equippedSkill.chestCount += actualCount;
-		} else if (itemType == ItemType.Hands) {
+		} else if (itemType == ItemType.Arms) {
 			equippedSkill.handsCount += actualCount;
-		} else if (itemType == ItemType.Legs) {
+		} else if (itemType == ItemType.Waist) {
 			equippedSkill.legsCount += actualCount;
-		} else if (itemType == ItemType.Feet) {
+		} else if (itemType == ItemType.Legs) {
 			equippedSkill.feetCount += actualCount;
 		} else if (itemType == ItemType.Charm) {
 			equippedSkill.charmCount += actualCount;
