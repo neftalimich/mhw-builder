@@ -16,6 +16,7 @@ export class ArmorListComponent implements OnInit {
 	public equipmentCategoryType = EquipmentCategoryType;
 	private _itemTypeFilters: ItemType[];
 	private _onlyIceborne: boolean;
+	private queryLength = 0;
 
 	@Input()
 	set itemTypeFilters(itemTypeFilters: ItemType[]) {
@@ -105,9 +106,10 @@ export class ArmorListComponent implements OnInit {
 	}
 
 	search(event, query: string) {
-		if (event && (event.key === 'FilterHard' || event.key === 'Backspace' || event.key === 'Delete')) {
+		if (query.length < this.queryLength || (event && (event.key === 'FilterHard' || event.key === 'Backspace' || event.key === 'Delete'))) {
 			this.applyIceborneFilter();
 		}
+		this.queryLength = query.length;
 
 		if (query) {
 			if (query.length > 2) {
