@@ -156,10 +156,12 @@ export class EquipmentService {
 
 	removeSetbonus() {
 		// console.log("RemoveSetbonus");
-		const weapon = this.items.find(x => x.itemType == ItemType.Weapon);
-		weapon.skills.splice(weapon.skills.findIndex(skill => skill.id == this.awakeningSetbonus.id), 1);
-		this.awakeningSetbonus = null;
-		this.updateSkills();
+		if (this.awakeningSetbonus && this.awakeningSetbonus.id) {
+			const weapon = this.items.find(x => x.itemType == ItemType.Weapon);
+			weapon.skills.splice(weapon.skills.findIndex(skill => skill.id == this.awakeningSetbonus.id), 1);
+			this.awakeningSetbonus = null;
+			this.updateSkills();
+		}
 	}
 
 	removeMelody() {
