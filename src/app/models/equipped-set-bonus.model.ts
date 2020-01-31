@@ -10,17 +10,17 @@ export class EquippedSetBonusModel {
 	weaponCount: number;
 	headCount: number;
 	chestCount: number;
-	handsCount: number;
+	armsCount: number;
+	waistCount: number;
 	legsCount: number;
-	feetCount: number;
 
 	constructor() {
 		this.weaponCount = 0;
 		this.headCount = 0;
 		this.chestCount = 0;
-		this.handsCount = 0;
+		this.armsCount = 0;
+		this.waistCount = 0;
 		this.legsCount = 0;
-		this.feetCount = 0;
 	}
 }
 export class EquippedSetBonusDetailModel {

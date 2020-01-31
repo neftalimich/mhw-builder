@@ -132,12 +132,12 @@ export class SkillService {
 			const setLevels = _.filter(setBonus.setLevels, sl => sl.pieces <= setCounts[setBonusName]);
 			const setParts = _.filter(setBonusParts, x => x[0].localeCompare(setBonusName) == 0);
 
-			const weaponCount = _.filter(setParts, x => x[1] == 'Weapon').length > 0 ? 1 : 0;
-			const headCount = _.filter(setParts, x => x[1] == 'Head').length > 0 ? 1 : 0;
-			const chestCount = _.filter(setParts, x => x[1] == 'Chest').length > 0 ? 1 : 0;
-			const handsCount = _.filter(setParts, x => x[1] == 'Hands').length > 0 ? 1 : 0;
-			const legsCount = _.filter(setParts, x => x[1] == 'Legs').length > 0 ? 1 : 0;
-			const feetCount = _.filter(setParts, x => x[1] == 'Feet').length > 0 ? 1 : 0;
+			const weaponCount = _.filter(setParts, x => x[1] == ItemType.Weapon).length > 0 ? 1 : 0;
+			const headCount = _.filter(setParts, x => x[1] == ItemType.Head).length > 0 ? 1 : 0;
+			const chestCount = _.filter(setParts, x => x[1] == ItemType.Chest).length > 0 ? 1 : 0;
+			const armsCount = _.filter(setParts, x => x[1] == ItemType.Arms).length > 0 ? 1 : 0;
+			const waistCount = _.filter(setParts, x => x[1] == ItemType.Waist).length > 0 ? 1 : 0;
+			const legsCount = _.filter(setParts, x => x[1] == ItemType.Legs).length > 0 ? 1 : 0;
 			if (setLevels) {
 				for (const setLevel of setLevels) {
 					let equippedSkill = _.find(equippedSkills, es => es.id == setLevel.id);
@@ -151,9 +151,9 @@ export class SkillService {
 						equippedSkill.description = skill.description;
 						equippedSkill.headCount = headCount;
 						equippedSkill.chestCount = chestCount;
-						equippedSkill.handsCount = handsCount;
+						equippedSkill.armsCount = armsCount;
+						equippedSkill.waistCount = waistCount;
 						equippedSkill.legsCount = legsCount;
-						equippedSkill.feetCount = feetCount;
 						equippedSkill.isSetBonus = true;
 						equippedSkill.equippedCount = 1;
 						equippedSkill.equippedArmorCount = 1;
@@ -189,9 +189,9 @@ export class SkillService {
 			equippedSetBonus.weaponCount = weaponCount;
 			equippedSetBonus.headCount = headCount;
 			equippedSetBonus.chestCount = chestCount;
-			equippedSetBonus.handsCount = handsCount;
+			equippedSetBonus.armsCount = armsCount;
+			equippedSetBonus.waistCount = waistCount;
 			equippedSetBonus.legsCount = legsCount;
-			equippedSetBonus.feetCount = feetCount;
 			equippedSetBonus.details = [];
 
 			for (const bonusLevel of setBonus.setLevels) {
@@ -247,11 +247,11 @@ export class SkillService {
 		} else if (itemType == ItemType.Chest) {
 			equippedSkill.chestCount += actualCount;
 		} else if (itemType == ItemType.Arms) {
-			equippedSkill.handsCount += actualCount;
+			equippedSkill.armsCount += actualCount;
 		} else if (itemType == ItemType.Waist) {
-			equippedSkill.legsCount += actualCount;
+			equippedSkill.waistCount += actualCount;
 		} else if (itemType == ItemType.Legs) {
-			equippedSkill.feetCount += actualCount;
+			equippedSkill.legsCount += actualCount;
 		} else if (itemType == ItemType.Charm) {
 			equippedSkill.charmCount += actualCount;
 		} else if (itemType == ItemType.Tool1 || itemType == ItemType.Tool2) {

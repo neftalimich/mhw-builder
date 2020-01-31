@@ -109,7 +109,6 @@ export class ArmorListComponent implements OnInit {
 		if (query.length < this.queryLength || (event && (event.key === 'FilterHard' || event.key === 'Backspace' || event.key === 'Delete'))) {
 			this.applyIceborneFilter();
 		}
-		this.queryLength = query.length;
 
 		if (query) {
 			if (query.length > 2) {
@@ -131,7 +130,7 @@ export class ArmorListComponent implements OnInit {
 
 				const queryParts = query.split(' ');
 
-				if (event && event.key === 'FilterSoft' && (alphaIndex > -1 || betaIndex > -1 || gammaIndex > -1)) {
+				if ((query.length !== this.queryLength || event && event.key === 'FilterSoft') && (alphaIndex > -1 || betaIndex > -1 || gammaIndex > -1)) {
 					this.applyIceborneFilter();
 				}
 
@@ -177,6 +176,7 @@ export class ArmorListComponent implements OnInit {
 		} else {
 			this.resetSearchResults();
 		}
+		this.queryLength = query.length;
 	}
 
 	resetSearchResults() {

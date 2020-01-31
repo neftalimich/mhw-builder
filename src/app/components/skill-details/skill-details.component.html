@@ -17,36 +17,36 @@
 	<table class="skill-part-table">
 		<tr>
 			<td [hidden]="equippedSkill.isSetBonus">
-				<img src="assets/images/armor/weapon-icon.png" [hidden]="!(equippedSkill.weaponCount == 0)" class="armor-icon info-opaque" alt="weapon">
-				<img src="assets/images/armor/weapon-icon-gold.png" [hidden]="!(equippedSkill.weaponCount > 0)" class="armor-icon" alt="weapon">
+				<img src="assets/images/armor/weapon-icon.png" [hidden]="!(equippedSkill.weaponCount == 0)" class="armor-icon info-opaque" alt="Weapon">
+				<img src="assets/images/armor/weapon-icon-gold.png" [hidden]="!(equippedSkill.weaponCount > 0)" class="armor-icon" alt="Weapon">
 			</td>
 			<td>
-				<img src="assets/images/armor/head-icon.png" [hidden]="!(equippedSkill.headCount == 0)" class="armor-icon info-opaque" alt="head">
-				<img src="assets/images/armor/head-icon-gold.png" [hidden]="!(equippedSkill.headCount > 0)" class="armor-icon" alt="head">
+				<img src="assets/images/armor/head-icon.png" [hidden]="!(equippedSkill.headCount == 0)" class="armor-icon info-opaque" alt="Head">
+				<img src="assets/images/armor/head-icon-gold.png" [hidden]="!(equippedSkill.headCount > 0)" class="armor-icon" alt="Head">
 			</td>
 			<td>
-				<img src="assets/images/armor/chest-icon.png" [hidden]="!(equippedSkill.chestCount == 0)" class="armor-icon info-opaque" alt="body">
-				<img src="assets/images/armor/chest-icon-gold.png" [hidden]="!(equippedSkill.chestCount > 0)" class="armor-icon" alt="body">
+				<img src="assets/images/armor/chest-icon.png" [hidden]="!(equippedSkill.chestCount == 0)" class="armor-icon info-opaque" alt="Chest">
+				<img src="assets/images/armor/chest-icon-gold.png" [hidden]="!(equippedSkill.chestCount > 0)" class="armor-icon" alt="Chest">
 			</td>
 			<td>
-				<img src="assets/images/armor/hands-icon.png" [hidden]="!(equippedSkill.handsCount == 0)" class="armor-icon info-opaque" alt="arms">
-				<img src="assets/images/armor/hands-icon-gold.png" [hidden]="!(equippedSkill.handsCount > 0)" class="armor-icon" alt="arms">
+				<img src="assets/images/armor/arms-icon.png" [hidden]="!(equippedSkill.armsCount == 0)" class="armor-icon info-opaque" alt="Arms">
+				<img src="assets/images/armor/arms-icon-gold.png" [hidden]="!(equippedSkill.armsCount > 0)" class="armor-icon" alt="Arms">
 			</td>
 			<td>
-				<img src="assets/images/armor/legs-icon.png" [hidden]="!(equippedSkill.legsCount == 0)" class="armor-icon info-opaque" alt="torso">
-				<img src="assets/images/armor/legs-icon-gold.png" [hidden]="!(equippedSkill.legsCount > 0)" class="armor-icon" alt="torso">
+				<img src="assets/images/armor/waist-icon.png" [hidden]="!(equippedSkill.waistCount == 0)" class="armor-icon info-opaque" alt="Waist">
+				<img src="assets/images/armor/waist-icon-gold.png" [hidden]="!(equippedSkill.waistCount > 0)" class="armor-icon" alt="Waist">
 			</td>
 			<td>
-				<img src="assets/images/armor/feet-icon.png" [hidden]="!(equippedSkill.feetCount == 0)" class="armor-icon info-opaque" alt="legs">
-				<img src="assets/images/armor/feet-icon-gold.png" [hidden]="!(equippedSkill.feetCount > 0)" class="armor-icon" alt="legs">
+				<img src="assets/images/armor/legs-icon.png" [hidden]="!(equippedSkill.legsCount == 0)" class="armor-icon info-opaque" alt="Legs">
+				<img src="assets/images/armor/legs-icon-gold.png" [hidden]="!(equippedSkill.legsCount > 0)" class="armor-icon" alt="Lgs">
 			</td>
 			<td [hidden]="equippedSkill.isSetBonus">
-				<img src="assets/images/armor/charm-icon.png" [hidden]="!(equippedSkill.charmCount == 0)" class="armor-icon info-opaque" alt="charm">
-				<img src="assets/images/armor/charm-icon-gold.png" [hidden]="!(equippedSkill.charmCount > 0)" class="armor-icon" alt="charm">
+				<img src="assets/images/armor/charm-icon.png" [hidden]="!(equippedSkill.charmCount == 0)" class="armor-icon info-opaque" alt="Charm">
+				<img src="assets/images/armor/charm-icon-gold.png" [hidden]="!(equippedSkill.charmCount > 0)" class="armor-icon" alt="Charm">
 			</td>
 			<td [hidden]="equippedSkill.isSetBonus">
-				<img src="assets/images/armor/tool-icon.png" [hidden]="!(equippedSkill.toolCount == 0)" class="armor-icon info-opaque" alt="tool">
-				<img src="assets/images/armor/tool-icon-gold.png" [hidden]="!(equippedSkill.toolCount > 0)" class="armor-icon" alt="tool">
+				<img src="assets/images/armor/tool-icon.png" [hidden]="!(equippedSkill.toolCount == 0)" class="armor-icon info-opaque" alt="Tool">
+				<img src="assets/images/armor/tool-icon-gold.png" [hidden]="!(equippedSkill.toolCount > 0)" class="armor-icon" alt="Tool">
 			</td>
 		</tr>
 		<tr [hidden]="equippedSkill.isSetBonus">
@@ -60,13 +60,13 @@
 				<span [ngClass]="{'info-opaque':equippedSkill.chestCount==0}">{{equippedSkill.chestCount}}</span>
 			</td>
 			<td>
-				<span [ngClass]="{'info-opaque':equippedSkill.handsCount==0}">{{equippedSkill.handsCount}}</span>
+				<span [ngClass]="{'info-opaque':equippedSkill.armsCount==0}">{{equippedSkill.armsCount}}</span>
+			</td>
+			<td>
+				<span [ngClass]="{'info-opaque':equippedSkill.waistCount==0}">{{equippedSkill.waistCount}}</span>
 			</td>
 			<td>
 				<span [ngClass]="{'info-opaque':equippedSkill.legsCount==0}">{{equippedSkill.legsCount}}</span>
-			</td>
-			<td>
-				<span [ngClass]="{'info-opaque':equippedSkill.feetCount==0}">{{equippedSkill.feetCount}}</span>
 			</td>
 			<td>
 				<span [ngClass]="{'info-opaque':equippedSkill.charmCount==0}">{{equippedSkill.charmCount}}</span>

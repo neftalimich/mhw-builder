@@ -30,19 +30,19 @@
 				alt="Chest">
 		</button>
 		<button type="button" class="armor-filter" [class.selected]="itemTypeIsSelected('Arms')"
-			(click)="addItemTypeFilter('Arms')" title="Hands">
-			<img src="assets/images/armor/arms-icon.png" [hidden]="handsId == 0" alt="Arms">
-			<img src="assets/images/armor/arms-icon.png" [hidden]="handsId != 0" class="armor-icon info-opaque"
+			(click)="addItemTypeFilter('Arms')" title="Arms">
+			<img src="assets/images/armor/arms-icon.png" [hidden]="armsId == 0" alt="Arms">
+			<img src="assets/images/armor/arms-icon.png" [hidden]="armsId != 0" class="armor-icon info-opaque"
 				alt="Arms">
 		</button>
-		<button type="button" class="armor-filter" [class.selected]="itemTypeIsSelected('Legs')"
-			(click)="addItemTypeFilter('Waist')" title="Legs">
+		<button type="button" class="armor-filter" [class.selected]="itemTypeIsSelected('Waist')"
+			(click)="addItemTypeFilter('Waist')" title="Waist">
 			<img src="assets/images/armor/waist-icon.png" [hidden]="waistId == 0" alt="Waist">
 			<img src="assets/images/armor/waist-icon.png" [hidden]="waistId != 0" class="armor-icon info-opaque"
 				alt="Waist">
 		</button>
 		<button type="button" class="armor-filter" [class.selected]="itemTypeIsSelected('Legs')"
-			(click)="addItemTypeFilter('Legs')" title="Feet">
+			(click)="addItemTypeFilter('Legs')" title="Legs">
 			<img src="assets/images/armor/legs-icon.png" [hidden]="legsId == 0" alt="Legs">
 			<img src="assets/images/armor/legs-icon.png" [hidden]="legsId != 0" class="armor-icon info-opaque"
 				alt="Legs">

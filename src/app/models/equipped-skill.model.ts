@@ -16,9 +16,9 @@ export class EquippedSkillModel {
 	weaponCount: number; // Weapon
 	headCount: number; // Helm
 	chestCount: number; // Chest
-	handsCount: number; // Arms
-	legsCount: number; // Waist
-	feetCount: number; // Legs
+	armsCount: number; // Arms
+	waistCount: number; // Waist
+	legsCount: number; // Legs
 	charmCount: number; // Charm
 	toolCount: number; // Tool
 
@@ -32,9 +32,9 @@ export class EquippedSkillModel {
 		this.weaponCount = 0;
 		this.headCount = 0;
 		this.chestCount = 0;
-		this.handsCount = 0;
+		this.armsCount = 0;
+		this.waistCount = 0;
 		this.legsCount = 0;
-		this.feetCount = 0;
 		this.charmCount = 0;
 		this.toolCount = 0;
 

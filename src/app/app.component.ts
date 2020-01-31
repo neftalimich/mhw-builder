@@ -30,9 +30,9 @@ export class AppComponent implements OnInit, AfterViewInit {
 	@ViewChild('weaponSlot', { static: true }) weaponSlot: ItemSlotComponent;
 	@ViewChild('headSlot', { static: true }) headSlot: ItemSlotComponent;
 	@ViewChild('chestSlot', { static: true }) chestSlot: ItemSlotComponent;
-	@ViewChild('handsSlot', { static: true }) handsSlot: ItemSlotComponent;
+	@ViewChild('armsSlot', { static: true }) armsSlot: ItemSlotComponent;
+	@ViewChild('waistSlot', { static: true }) waistSlot: ItemSlotComponent;
 	@ViewChild('legsSlot', { static: true }) legsSlot: ItemSlotComponent;
-	@ViewChild('feetSlot', { static: true }) feetSlot: ItemSlotComponent;
 	@ViewChild('charmSlot', { static: true }) charmSlot: ItemSlotComponent;
 	@ViewChild('tool1Slot', { static: true }) tool1Slot: ItemSlotComponent;
 	@ViewChild('tool2Slot', { static: true }) tool2Slot: ItemSlotComponent;
@@ -74,9 +74,9 @@ export class AppComponent implements OnInit, AfterViewInit {
 			this.weaponSlot,
 			this.headSlot,
 			this.chestSlot,
-			this.handsSlot,
+			this.armsSlot,
+			this.waistSlot,
 			this.legsSlot,
-			this.feetSlot,
 			this.charmSlot,
 			this.tool1Slot,
 			this.tool2Slot,
