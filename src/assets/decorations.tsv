@@ -161,7 +161,7 @@ id	rarity	level	priority	name	skills
 180	9	4	51	Artillery Jewel+ 4	artillery-2
 181	11	4	41	Throttle Jewel+ 4	latentPower-2
 186	10	4	61	Physique Jewel+ 4	constitution-2
-189	11	2	41	Furor Jewel+ 4	resentment-2
+189	11	4	41	Furor Jewel+ 4	resentment-2
 194	11	4	91	Challenger Jewel+ 4	agitator-2
 207	11	4	32	Hard Fire Res Jewel 4	fireResistance-3
 208	11	4	32	Hard Water Res Jewel 4	waterResistance-3

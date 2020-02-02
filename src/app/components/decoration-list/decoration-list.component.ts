@@ -75,7 +75,8 @@ export class DecorationListComponent implements OnInit {
 				}
 			}
 		});
-		this.resetSearchResults();
+		this.filteredDecorations = this.decorations;
+		this.search(this.searchBox.nativeElement.value);
 		setTimeout(() => this.searchBox.nativeElement.focus(), 250);
 	}
 

@@ -16,12 +16,13 @@ export class ArmorListComponent implements OnInit {
 	public equipmentCategoryType = EquipmentCategoryType;
 	private _itemTypeFilters: ItemType[];
 	private _onlyIceborne: boolean;
-	private queryLength = 0;
+	private searchLength = 0;
 
 	@Input()
 	set itemTypeFilters(itemTypeFilters: ItemType[]) {
 		this._itemTypeFilters = itemTypeFilters;
 		this.loadItems();
+		this.search({ key: 'Filter' }, this.searchBox.nativeElement.value);
 	}
 	get itemTypeFilters(): ItemType[] { return this._itemTypeFilters; }
 
@@ -106,7 +107,7 @@ export class ArmorListComponent implements OnInit {
 	}
 
 	search(event, query: string) {
-		if (query.length < this.queryLength || (event && (event.key === 'FilterHard' || event.key === 'Backspace' || event.key === 'Delete'))) {
+		if (query.length < this.searchLength || (event && (event.key === 'FilterHard' || event.key === 'Backspace' || event.key === 'Delete'))) {
 			this.applyIceborneFilter();
 		}
 
@@ -130,7 +131,7 @@ export class ArmorListComponent implements OnInit {
 
 				const queryParts = query.split(' ');
 
-				if ((query.length !== this.queryLength || event && event.key === 'FilterSoft') && (alphaIndex > -1 || betaIndex > -1 || gammaIndex > -1)) {
+				if ((query.length !== this.searchLength || event && event.key === 'FilterSoft') && (alphaIndex > -1 || betaIndex > -1 || gammaIndex > -1)) {
 					this.applyIceborneFilter();
 				}
 
@@ -176,7 +177,7 @@ export class ArmorListComponent implements OnInit {
 		} else {
 			this.resetSearchResults();
 		}
-		this.queryLength = query.length;
+		this.searchLength = query.length;
 	}
 
 	resetSearchResults() {

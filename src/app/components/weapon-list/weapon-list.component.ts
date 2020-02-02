@@ -19,6 +19,7 @@ export class WeaponListComponent implements OnInit {
 	public equipmentCategoryType = EquipmentCategoryType;
 	private _itemType: ItemType;
 	private _onlyIceborne: boolean;
+	private searchLength = 0;
 
 	@Input()
 	set itemType(itemType: ItemType) {
@@ -94,9 +95,10 @@ export class WeaponListComponent implements OnInit {
 
 	search(event, query: string) {
 		if (query) {
-			if (event && (event.key === 'FilterHard' || event.key === 'Backspace' || event.key === 'Delete')) {
+			if (query.length < this.searchLength || (event && (event.key === 'FilterHard' || event.key === 'Backspace' || event.key === 'Delete'))) {
 				this.applyIceborneFilter();
 			}
+
 			if (query.length > 1) {
 				query = query.toLowerCase().trim();
 				const queryParts = query.split(' ');
