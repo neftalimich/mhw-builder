@@ -18,7 +18,7 @@ export class SetbonusListComponent implements OnInit {
 	@Output() setbonusSelected = new EventEmitter<SetBonusModel>();
 
 	@ViewChild('searchBox', { static: true }) searchBox: ElementRef;
-	@ViewChild('setbonusList', { static: false }) setbonusList: VirtualScrollerComponent;
+	@ViewChild('setbonusList') setbonusList: VirtualScrollerComponent;
 
 	setbonuses: SetBonusModel[];
 	filteredSetbonuses: SetBonusModel[];

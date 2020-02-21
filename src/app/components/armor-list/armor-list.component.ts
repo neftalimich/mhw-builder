@@ -35,7 +35,7 @@ export class ArmorListComponent implements OnInit {
 	get onlyIceborne(): boolean { return this._onlyIceborne; }
 
 	@ViewChild('searchBox', { static: true }) searchBox: ElementRef;
-	@ViewChild('itemList', { static: false }) itemList: VirtualScrollerComponent;
+	@ViewChild('itemList') itemList: VirtualScrollerComponent;
 
 	itemsAll: ItemModel[];
 	itemsWorld: ItemModel[];

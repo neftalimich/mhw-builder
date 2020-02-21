@@ -15,7 +15,7 @@ export class KinsectListComponent implements OnInit {
 	onlyIceborne = true;
 
 	@ViewChild('searchBox', { static: true }) searchBox: ElementRef;
-	@ViewChild('itemList', { static: false }) itemList: VirtualScrollerComponent;
+	@ViewChild('itemList') itemList: VirtualScrollerComponent;
 
 	kinsects: KinsectModel[];
 	kinsectsWorld: KinsectModel[];

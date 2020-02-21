@@ -28,10 +28,10 @@ export class ItemSlotComponent implements OnInit {
 
 	@ViewChildren(DecorationSlotComponent) decorationSlots: QueryList<DecorationSlotComponent>;
 	@ViewChildren(AugmentationSlotComponent) augmentationSlots: QueryList<AugmentationSlotComponent>;
-	@ViewChild(UpgradeSlotComponent, { static: false }) upgradeSlot: UpgradeSlotComponent;
-	@ViewChild(AwakeningSlotComponent, { static: false }) awakeningSlot: AwakeningSlotComponent;
+	@ViewChild(UpgradeSlotComponent) upgradeSlot: UpgradeSlotComponent;
+	@ViewChild(AwakeningSlotComponent) awakeningSlot: AwakeningSlotComponent;
 	@ViewChildren(ModificationSlotComponent) modificationSlots: QueryList<ModificationSlotComponent>;
-	@ViewChild(KinsectSlotComponent, { static: false }) kinsectSlot: KinsectSlotComponent;
+	@ViewChild(KinsectSlotComponent) kinsectSlot: KinsectSlotComponent;
 
 	item: ItemModel;
 

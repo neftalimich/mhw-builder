@@ -30,7 +30,7 @@ export class ToolListComponent implements OnInit {
 	@Output() itemSelected = new EventEmitter<ItemModel>();
 
 	@ViewChild('searchBox', { static: true }) searchBox: ElementRef;
-	@ViewChild('itemList', { static: false }) itemList: VirtualScrollerComponent;
+	@ViewChild('itemList') itemList: VirtualScrollerComponent;
 
 	items: ToolModel[];
 	filteredItems: ToolModel[];
