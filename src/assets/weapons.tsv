@@ -339,9 +339,9 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 2381	Gunlance	11	Gajalaka Firepike	621	0	30	Dragon	450	true				High	false	4;10;4;4;18;0;0	4	workshop	dragon;normal5		Normal-5		0
 3008	Gunlance	12	Great Demon Gunlance	656	-15	0	Thunder	120	false					false	9;10;4;5;7;5;0	4	rajang	thunder;wide6		Wide-6		0
 3025	Gunlance	12	Stygian Avaritia	621	0	0	Dragon	360	false				Average	false	11;2;2;7;4;3;11	2	stygian-zinogre	dragon;normal7		Normal-7		0
-3048	Gunlance	12	Xeno Hemta+	644	15	0	Dragon	300	false				Low	false	10;8;3;3;8;8;0	4;4	xeno-jiiva	dragon		Normal-7		0
-3088	Gunlance	12	Royal Guard Striker	621	15	30	Water	510	true					false	13;3;3;6;5;5;5	3	guild	water		Wide-6		0
-4048	Gunlance	12	Safi's Gunlance	621	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon		Normal-6	2	0
+3048	Gunlance	12	Xeno Hemta+	644	15	0	Dragon	300	false				Low	false	10;8;3;3;8;8;0	4;4	xeno-jiiva	dragon;normal7		Normal-7		0
+3088	Gunlance	12	Royal Guard Striker	621	15	30	Water	510	true					false	13;3;3;6;5;5;5	3	guild	water;wide6		Wide-6		0
+4048	Gunlance	12	Safi's Gunlance	621	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon;normal6		Normal-6	2	0
 2384	SwitchAxe	11	Chrome Machina III	945	0	0				Poison	510	true		false	12;3;3;6;5;8;3	1;1	ore	poison		poison-540	1	0
 2386	SwitchAxe	11	Blackwing Switch Axe II	945	25	0				Poison	240	false		false	15;3;9;3;3;5;2	3	yian-garuga	poison		power	1	0
 2387	SwitchAxe	12	Ruinous Light	1015	0	0	Dragon	210	false				High	false	8;3;3;11;4;16;0	1	ruiner-nergigante	dragon		power		0
