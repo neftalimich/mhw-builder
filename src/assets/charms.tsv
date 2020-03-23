@@ -75,13 +75,13 @@ id	rarity	name	levels	skills
 298	8	Exploiter Charm	2	weaknessExploit-1
 299	12	Focus Charm	3	focus-1
 300	11	Breaker Charm	3	partbreaker-1
-301	11	Fury Charm	4	resentment-1
+301	11	Fury Charm	5	resentment-1
 302	12	Grit Charm	5	heroics-1
 303	7	Maintenance Charm	3	toolSpecialist-1
-304	11	Power Charm	4	latentPower-1
-305	11	Challenger Charm	4	agitator-1
+304	11	Power Charm	5	latentPower-1
+305	11	Challenger Charm	5	agitator-1
 306	12	Unscathed Charm	3	peakPerformance-1
-307	8	Mighty Charm	2	maximumMight-1
+307	8	Mighty Charm	3	maximumMight-1
 308	11	Impact Charm	3	flinchFree-1
 309	8	Miasma Charm	3	effluviaResistance-1
 310	11	Normal Shots Charm	2	normalShots-1

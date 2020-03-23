@@ -718,3 +718,23 @@ id	itemType	rarity	name	defense	fireResist	waterResist	thunderResist	iceResist	d
 1743	Arms	9	Astral Scarf α +	140;156;178	2	2	2	2	2	divineBlessing-2;appreciationBlessing	4;1;1	event	0
 1744	Waist	9	Astral Skirt α +	140;156;178	2	2	2	2	2	flinchFree-2;appreciationBlessing	4;1	event	0
 1745	Legs	9	Astral Tights α +	140;156;178	2	2	2	2	2	weaknessExploit-2;appreciationBlessing	1	event	0
+1750	Head	11	Grand God's Peer Mask α +	170;178;194	2	0	3	-5	2	earplugs-3;heroics-3;rajangWill		furious;rajang	0
+1751	Chest	11	Grand God's Peer Garg α +	170;178;195	2	0	3	-5	2	maximumMight-3;earplugs-2;rajangWill	1	furious;rajang	0
+1752	Arms	11	Grand God's Peer Arms α +	170;178;196	2	0	3	-5	2	staminaSurge-2;defenseBoost-3;rajangWill	2;2	furious;rajang	0
+1753	Waist	11	Grand God's Peer Belt α +	170;178;197	2	0	3	-5	2	maximumMight-2;heroics-2;rajangWill	1;1;1	furious;rajang	0
+1754	Legs	11	Grand God's Peer Feet α +	170;178;198	2	0	3	-5	2	healthBoost-3;heroics-2;rajangWill	2;2	furious;rajang	0
+1755	Head	11	Grand God's Peer Mask β +	170;178;199	2	0	3	-5	2	earplugs-3;heroics-1;rajangWill	4	furious;rajang	0
+1756	Chest	11	Grand God's Peer Garg β +	170;178;200	2	0	3	-5	2	maximumMight-3;rajangWill	4;2	furious;rajang	0
+1757	Arms	11	Grand God's Peer Arms β +	170;178;201	2	0	3	-5	2	staminaSurge-2;rajangWill	4;2;1	furious;rajang	0
+1758	Waist	11	Grand God's Peer Belt  β +	170;178;202	2	0	3	-5	2	maximumMight-2;rajangWill	4;2;1	furious;rajang	0
+1759	Legs	11	Grand God's Peer Feet  β +	170;178;203	2	0	3	-5	2	healthBoost-3;rajangWill	4;4	furious;rajang	0
+1761	Head	11	Brachydium Helm α +	170;178;194	3	-2	1	-3	1	weaknessExploit-1;guard-2;brachydiosWill	2;2;1	raging;brachy	0
+1762	Chest	11	Brachydium Mail α +	170;178;194	3	-2	1	-3	1	agitator-2;blastAttack-3;brachydiosWill	2;1;1	raging;brachy	0
+1763	Arms	11	Brachydium Braces α +	170;178;194	3	-2	1	-3	1	agitator-2;artillery-3;brachydiosWill	2;2	raging;brachy	0
+1764	Waist	11	Brachydium Faulds α +	170;178;194	3	-2	1	-3	1	agitator-3;artillery-2;brachydiosWill	3	raging;brachy	0
+1765	Legs	11	Brachydium Greaves α +	170;178;194	3	-2	1	-3	1	weaknessExploit-2;speedSharpening-3;brachydiosWill	3;1	raging;brachy	0
+1766	Head	11	Brachydium Helm β +	170;178;194	3	-2	1	-3	1	weaknessExploit-1;brachydiosWill	4;4;1	raging;brachy	0
+1767	Chest	11	Brachydium Mail β +	170;178;194	3	-2	1	-3	1	agitator-2;brachydiosWill	4;2;1	raging;brachy	0
+1768	Arms	11	Brachydium Braces β +	170;178;194	3	-2	1	-3	1	agitator-2;brachydiosWill	4;4	raging;brachy	0
+1769	Waist	11	Brachydium Faulds  β +	170;178;194	3	-2	1	-3	1	agitator-3;brachydiosWill	4;1	raging;brachy	0
+1770	Legs	11	Brachydium Greaves  β +	170;178;194	3	-2	1	-3	1	weaknessExploit-2;brachydiosWill	4;1;1	raging;brachy	0

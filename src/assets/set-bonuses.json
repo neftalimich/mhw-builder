@@ -664,5 +664,33 @@
 				"pieces": 5
 			}
 		]
+	},
+	{
+		"id": "rajangWill",
+		"name": "Rajang Will",
+		"setLevels": [
+			{
+				"id": "maximumMightSecret",
+				"pieces": 2
+			},
+			{
+				"id": "heroicsSecret",
+				"pieces": 4
+			}
+		]
+	},
+	{
+		"id": "brachydiosWill",
+		"name": "Brachydios Will",
+		"setLevels": [
+			{
+				"id": "agitatorSecret",
+				"pieces": 2
+			},
+			{
+				"id": "artillerySecret",
+				"pieces": 4
+			}
+		]
 	}
 ]

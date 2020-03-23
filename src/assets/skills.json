@@ -1249,6 +1249,7 @@
 		"id": "heroics",
 		"name": "Heroics",
 		"description": "Increases attack power and defense when health drops to 35% or lower.",
+		"maxLevel": 5,
 		"levels": [
 			{
 				"description": "While active, increases defense by 50 points.",
@@ -1274,6 +1275,16 @@
 				"description": "While active, increases attack power by 15% and increases defense by 100 points.",
 				"activeAttackPercent": 15,
 				"activeDefense": 100
+			},
+			{
+				"description": "While active, increases attack power by 25% and increases defense by 150 points.",
+				"activeAttackPercent": 25,
+				"activeDefense": 150
+			},
+			{
+				"description": "While active, increases attack power by 40% and increases defense by 150 points.",
+				"activeAttackPercent": 40,
+				"activeDefense": 150
 			}
 		],
 		"hasActiveStats": true
@@ -2561,6 +2572,17 @@
 		"levels": [
 			{
 				"description": "Raises the maximum level of Tool Specialist Skill."
+			}
+		]
+	},
+	{
+		"id": "heroicsSecret",
+		"name": "Heroics Secrect",
+		"description": "",
+		"raiseSkillId": "heroics",
+		"levels": [
+			{
+				"description": "Raises the maximum level of Heroics Skill."
 			}
 		]
 	},
