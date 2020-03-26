@@ -57,12 +57,9 @@ export class WeaponsLoader extends DataLoader<ItemModel> {
 			item.itemType = ItemType.Weapon;
 			if (item.sharpnessLevelsBar && !isNaN(item.sharpnessLevelsBar[0])) {
 				const total = item.sharpnessLevelsBar.reduce((a, b) => a + b, 0);
-				//if (total != 40 && total != 45 && !item.sharpnessDataNeeded) {
-				//	console.log(item.id, item.name, total);
-				//}
 				const over = total - 40;
 				for (let i = item.sharpnessLevelsBar.length - 1; i >= 0; i--) {
-					let level = item.sharpnessLevelsBar[i];
+					const level = item.sharpnessLevelsBar[i];
 					if (level > 0) {
 						item.sharpnessMaxLevel = level - over;
 						item.sharpnessMaxColorIndex = i;

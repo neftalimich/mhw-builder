@@ -999,7 +999,11 @@ export class CalculationService {
 	private buildDefenseCalcs(stats: StatsModel) {
 		let defValue = '';
 		for (let i = 0; i < stats.defense.length; i++) {
-			defValue += Math.round(stats.defense[i] * (1 + stats.passiveDefensePercent / 100) + stats.passiveDefense + stats.activeDefense);
+			let def = stats.defense[i];
+			if (i == stats.defense.length - 1) {
+				def += 20;
+			}
+			defValue += Math.round(def * (1 + stats.passiveDefensePercent / 100) + stats.passiveDefense + stats.activeDefense);
 			if (i < stats.defense.length - 2) {
 				defValue += ' ➝ ';
 			} else if (i < stats.defense.length - 1) {

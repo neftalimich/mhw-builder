@@ -9,7 +9,7 @@ import { TooltipService } from 'src/app/services/tooltip.service';
 	styleUrls: ['./sharpness-bar.component.scss']
 })
 export class SharpnessBarComponent implements OnInit {
-	private _handicraftLevel: number = 0;
+	private _handicraftLevel = 0;
 	private _sharpnessLevels: number[] = [];
 
 	@Input()
