@@ -184,8 +184,8 @@
 					<div class="icon-container">
 						<img src="assets/images/sharpness3-icon.png" alt="sharpness">
 					</div>
-					<div class="stat-value" [ngClass]="['sharp-'+(item.sharpnessLevelsBar | maxSharpness:true)]">
-						{{(item.sharpnessLevelsBar | maxSharpness) * 10}} <i class="fas fa-circle fa-sm"></i>
+					<div class="stat-value" [ngClass]="['sharp-' + item.sharpnessMaxColorIndex]">
+						{{item.sharpnessMaxLevel * 10}} <i class="fas fa-circle fa-sm"></i>
 					</div>
 				</div>
 				<div class="stat-container" *ngIf="item.ammoCapacities?.deviation">

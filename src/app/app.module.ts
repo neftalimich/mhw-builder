@@ -38,7 +38,6 @@ import { UpgradeDetailsComponent } from './components/upgrade-details/upgrade-de
 import { UpgradesListComponent } from './components/upgrades-list/upgrades-list.component';
 import { WeaponListComponent } from './components/weapon-list/weapon-list.component';
 import { DataModule } from './data/data.module';
-import { MaxSharpnessPipe } from './pipes/max-sharpness.pipe';
 import { NumbersArrPipe } from './pipes/numberArr.pipe';
 import { AppDataProvider } from './providers/app-data.provider';
 import { BuildService } from './services/build.service';
@@ -86,7 +85,6 @@ import { TooltipService } from './services/tooltip.service';
 		TooltipComponent,
 		SharpnessBarComponent,
 		SetListComponent,
-		MaxSharpnessPipe,
 		NumbersArrPipe,
 	],
 	imports: [

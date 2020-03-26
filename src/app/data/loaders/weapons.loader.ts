@@ -52,19 +52,25 @@ export class WeaponsLoader extends DataLoader<ItemModel> {
 			}
 		]);
 
-		_.each(items, item => {
+		items.forEach(item => {
 			item.equipmentCategory = EquipmentCategoryType.Weapon;
 			item.itemType = ItemType.Weapon;
-			/*
 			if (item.sharpnessLevelsBar && !isNaN(item.sharpnessLevelsBar[0])) {
 				const total = item.sharpnessLevelsBar.reduce((a, b) => a + b, 0);
-				if (total != 40 && total != 45 && !item.sharpnessDataNeeded) {
-					console.log(item.id, item.name, total);
+				//if (total != 40 && total != 45 && !item.sharpnessDataNeeded) {
+				//	console.log(item.id, item.name, total);
+				//}
+				const over = total - 40;
+				for (let i = item.sharpnessLevelsBar.length - 1; i >= 0; i--) {
+					let level = item.sharpnessLevelsBar[i];
+					if (level > 0) {
+						item.sharpnessMaxLevel = level - over;
+						item.sharpnessMaxColorIndex = i;
+						break;
+					}
 				}
 			}
-			*/
 		});
-
 		return items;
 	}
 }

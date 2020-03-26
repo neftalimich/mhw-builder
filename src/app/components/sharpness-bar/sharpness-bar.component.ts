@@ -97,10 +97,8 @@ export class SharpnessBarComponent implements OnInit {
 			}
 			levelsToAdd -= aux;
 
-
-
 			this.sharpnessBar.tooltipTemplate =
-				`| <span class="sharp-${i}">${this._sharpnessLevels[i] * 10}</span> ${this.sharpnessBar.tooltipTemplate}`;
+				`| <span class="sharp-${i}">${this.sharpnessBar.levels[i] * 10}</span> ${this.sharpnessBar.tooltipTemplate}`;
 		}
 
 		this.sharpnessBar.sharps = this.sharpnessBar.sharps.reverse();

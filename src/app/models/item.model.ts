@@ -25,6 +25,8 @@ export class ItemModel {
 	baseAttack?: number;
 	sharpnessDataNeeded: boolean;
 	sharpnessLevelsBar: number[];
+	sharpnessMaxLevel?: number;
+	sharpnessMaxColorIndex?: number;
 	baseAffinityPercent?: number;
 	ailment?: AilmentType;
 	ailmentBaseAttack: number;
