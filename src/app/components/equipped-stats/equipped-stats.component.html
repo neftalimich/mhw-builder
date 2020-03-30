@@ -1,15 +1,18 @@
 <div class="container">
 	<h4>
 		Attack
-		<span [hidden]="!attackVisible" (click)="attackVisible = !attackVisible"><i class="fas fa-minus-circle number"></i></span>
-		<span [hidden]="attackVisible" (click)="attackVisible = !attackVisible"><i class="fas fa-plus-circle number"></i></span>
+		<span [hidden]="!attackVisible" (click)="attackVisible = !attackVisible"><i
+				class="fas fa-minus-circle number"></i></span>
+		<span [hidden]="attackVisible" (click)="attackVisible = !attackVisible"><i
+				class="fas fa-plus-circle number"></i></span>
 	</h4>
 	<div [hidden]="!attackVisible">
 		<hr>
 		<ul class="attack-stats striped">
-			<li *ngFor="let calc of attackCalcs" (pointerenter)="showCalcDetails($event, calc)" (pointerleave)="clearCalcDetails()"
-				(click)="showOnClickCalcDetails(calc)">
-				<span *ngIf="(calc.calculationTemplate || calc.info?.length) && !calc.icon" class="detail-icon" [ngClass]="calc.color">
+			<li *ngFor="let calc of attackCalcs" (pointerenter)="showCalcDetails($event, calc)"
+				(pointerleave)="clearCalcDetails()" (click)="showOnClickCalcDetails(calc)">
+				<span *ngIf="(calc.calculationTemplate || calc.info?.length) && !calc.icon" class="detail-icon"
+					[ngClass]="calc.color">
 					<i class="far fa-question-circle"></i>
 				</span>
 				<span *ngIf="calc.icon" class="detail-icon">
@@ -25,49 +28,55 @@
 					<span *ngIf="calc.extra1 || calc.extra2">)</span>
 				</span>
 			</li>
-			<li *ngIf="sharpnessBar && sharpnessBar.levels && sharpnessBar.levels.length" (pointerenter)="showSharpDetails($event)"
-				(pointerleave)="clearSharpDetails()" (click)="showOnClickSharpDetails()">
+			<li *ngIf="sharpnessBar && sharpnessBar.levels && sharpnessBar.levels.length"
+				(pointerenter)="showSharpDetails($event)" (pointerleave)="clearSharpDetails()"
+				(click)="showOnClickSharpDetails()">
 				<span class="detail-icon" [ngClass]="sharpnessBar.color">
 					<img [src]="'assets/images/sharpness3-icon.png'" alt="sharpness">
 				</span>
 				<span class="name">
 					Sharpness
 				</span>
-				<mhw-builder-sharpness-bar class="value"
-										   [sharpnessLevels]="sharpnessBar.levels"
-										   [handicraftLevel]="sharpnessBar.handicraftLevel"
-										   [dataNeeded]="sharpnessBar.sharpnessDataNeeded">
+				<mhw-builder-sharpness-bar class="value" [sharpnessLevels]="sharpnessBar.levels"
+					[handicraftLevel]="sharpnessBar.handicraftLevel" [dataNeeded]="sharpnessBar.sharpnessDataNeeded">
 				</mhw-builder-sharpness-bar>
 			</li>
 
-			<li *ngIf="extraData && extraData.otherData[0].value"
-				(pointerenter)="showExtraDetails($event)" (click)="showOnClickExtraDetails(calc)"
-				(pointerleave)="clearExtraDetails()">
+			<li *ngIf="extraData && extraData.otherData[0].value" (pointerenter)="showExtraDetails($event)"
+				(click)="showOnClickExtraDetails(calc)" (pointerleave)="clearExtraDetails()">
 				<span class="detail-icon text-center">
-					<img *ngIf="extraData.weaponType=='Bow'" [src]="'assets/images/phials/phial-close.png'" alt="icon" />
-					<img *ngIf="extraData.weaponType=='ChargeBlade' || extraData.weaponType=='SwitchAxe'" [src]="'assets/images/phial-icon.png'" alt="icon" />
-					<img *ngIf="extraData.weaponType=='Gunlance'" [src]="'assets/images/special-ammo-icon.png'" alt="icon" />
-					<img *ngIf="extraData.weaponType=='InsectGlaive'" [src]="'assets/images/dust-effect-icon.png'" alt="icon" />
+					<img *ngIf="extraData.weaponType=='Bow'" [src]="'assets/images/phials/phial-close.png'"
+						alt="icon" />
+					<img *ngIf="extraData.weaponType=='ChargeBlade' || extraData.weaponType=='SwitchAxe'"
+						[src]="'assets/images/phial-icon.png'" alt="icon" />
+					<img *ngIf="extraData.weaponType=='Gunlance'" [src]="'assets/images/special-ammo-icon.png'"
+						alt="icon" />
+					<img *ngIf="extraData.weaponType=='InsectGlaive'" [src]="'assets/images/dust-effect-icon.png'"
+						alt="icon" />
 				</span>
 				<span class="name">
 					<span *ngIf="extraData.weaponType=='Bow'">Coatings</span>
-					<span *ngIf="extraData.weaponType=='ChargeBlade' || extraData.weaponType=='SwitchAxe'">Phial Type</span>
+					<span *ngIf="extraData.weaponType=='ChargeBlade' || extraData.weaponType=='SwitchAxe'">Phial
+						Type</span>
 					<span *ngIf="extraData.weaponType=='Gunlance'">Shell Type</span>
 					<span *ngIf="extraData.weaponType=='InsectGlaive'">Boost Type</span>
 				</span>
 				<div class="value">
-					<div *ngFor="let other of extraData.otherData; let i = index" style="display:inline;white-space:nowrap;">
+					<div *ngFor="let other of extraData.otherData; let i = index"
+						style="display:inline;white-space:nowrap;">
 						<div *ngIf="extraData.weaponType=='Bow'" class="other-container">
 							<img [src]="'assets/images/phials/phial-' + other.value + '.png'" alt="coat" />
 							&nbsp;
 						</div>
-						<div *ngIf="extraData.weaponType=='ChargeBlade' || extraData.weaponType=='SwitchAxe'" class="other-container">
+						<div *ngIf="extraData.weaponType=='ChargeBlade' || extraData.weaponType=='SwitchAxe'"
+							class="other-container">
 							<img [src]="'assets/images/phials/phial-' + other.value + '.png'" alt="phial" />
 							<span>
 								{{other.value}}<span *ngIf="other.data && other.data!=0">-{{other.data}}</span>
 							</span>
 						</div>
-						<div *ngIf="extraData.weaponType=='Gunlance' || extraData.weaponType=='InsectGlaive'" class="other-container">
+						<div *ngIf="extraData.weaponType=='Gunlance' || extraData.weaponType=='InsectGlaive'"
+							class="other-container">
 							{{other.value}}<span *ngIf="other.data && other.data!=0">-{{other.data}}</span>
 							&nbsp;
 						</div>
@@ -81,8 +90,10 @@
 	<div class="kinsect-stats" *ngIf="kinsect">
 		<h4>
 			Kinsect
-			<span [hidden]="!kinsectVisible" (click)="kinsectVisible = !kinsectVisible"><i class="fas fa-minus-circle number"></i></span>
-			<span [hidden]="kinsectVisible" (click)="kinsectVisible = !kinsectVisible"><i class="fas fa-plus-circle number"></i></span>
+			<span [hidden]="!kinsectVisible" (click)="kinsectVisible = !kinsectVisible"><i
+					class="fas fa-minus-circle number"></i></span>
+			<span [hidden]="kinsectVisible" (click)="kinsectVisible = !kinsectVisible"><i
+					class="fas fa-plus-circle number"></i></span>
 		</h4>
 		<div class="" [hidden]="!kinsectVisible">
 			<hr>
@@ -94,8 +105,10 @@
 	<div *ngIf="ammoCapacities">
 		<h4>
 			Ammo
-			<span [hidden]="!ammoVisible" (click)="ammoVisible = !ammoVisible"><i class="fas fa-minus-circle number"></i></span>
-			<span [hidden]="ammoVisible" (click)="ammoVisible = !ammoVisible"><i class="fas fa-plus-circle number"></i></span>
+			<span [hidden]="!ammoVisible" (click)="ammoVisible = !ammoVisible"><i
+					class="fas fa-minus-circle number"></i></span>
+			<span [hidden]="ammoVisible" (click)="ammoVisible = !ammoVisible"><i
+					class="fas fa-plus-circle number"></i></span>
 		</h4>
 		<div class="ammo-stats" [hidden]="!ammoVisible">
 			<hr>
@@ -106,13 +119,16 @@
 
 	<h4>
 		Defense
-		<span [hidden]="!defenseVisible" (click)="defenseVisible = !defenseVisible"><i class="fas fa-minus-circle number"></i></span>
-		<span [hidden]="defenseVisible" (click)="defenseVisible = !defenseVisible"><i class="fas fa-plus-circle number"></i></span>
+		<span [hidden]="!defenseVisible" (click)="defenseVisible = !defenseVisible"><i
+				class="fas fa-minus-circle number"></i></span>
+		<span [hidden]="defenseVisible" (click)="defenseVisible = !defenseVisible"><i
+				class="fas fa-plus-circle number"></i></span>
 	</h4>
 	<div [hidden]="!defenseVisible">
 		<hr>
 		<ul class="defense-stats striped">
-			<li *ngFor="let calc of defenseCalcs" (pointerenter)="showCalcDetails($event, calc)" (pointerleave)="clearCalcDetails()">
+			<li *ngFor="let calc of defenseCalcs" (pointerenter)="showCalcDetails($event, calc)"
+				(pointerleave)="clearCalcDetails()">
 				<span *ngIf="calc.icon" class="detail-icon">
 					<img [src]="'assets/images/' + calc.icon + '-icon.png'" alt="stat icon">
 				</span>

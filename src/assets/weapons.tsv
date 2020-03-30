@@ -41,8 +41,8 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3018	GreatSword	12	Infernal Executioner+	1296	0	0	Dragon	420	false				Average	false	13;2;2;7;4;3;9	2	stygian-zinogre	dragon				0
 3041	GreatSword	12	Xeno Maliq+	1344	20	0	Dragon	330	false				Low	false	10;8;3;3;8;8;0	4;4	xeno-jiiva	dragon				0
 3081	GreatSword	12	Royal Venus Blade	1296	15	30	Water	570	true					false	15;3;3;6;5;3;5	3	guild	water				0
-3101	GreatSword	12	Demonlord Goldrod	1344	15	0	Thunder	360	false					true	12;2;2;7;4;3;10		furious-rajang	thunder				0
-3121	GreatSword	12	Lightbreak Blade	1440	0	0				Blast	360	false		true	15;2;9;4;3;5;7	4;3	raging-brachydios	blast				0
+3101	GreatSword	12	Demonlord Goldrod	1344	15	0	Thunder	360	false					false	12;2;2;7;4;3;10		furious-rajang	thunder				0
+3121	GreatSword	12	Lightbreak Blade	1440	0	0				Blast	360	false		false	15;3;9;3;3;5;7	4;3	raging-brachydios	blast				0
 4041	GreatSword	12	Safi's Greatsword	1296	5	0			false			false	Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
 1871	LongSword	11	Iron Eschaton III	858	0	0	Water	270	true					false	12;3;3;6;5;8;3	1;1	ore	water			1	0
 1873	LongSword	11	Daito Wolf	891	25	0				Poison	240	false		false	14;3;9;3;3;6;2	3	yian-garuga	poison				0
@@ -87,8 +87,8 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3042	LongSword	12	Xeno Cypher+	924	15	0	Dragon	270	false				Low	false	10;8;3;3;8;8;0	4;4	xeno-jiiva	dragon				0
 3062	LongSword	11	Demon Scavenger Pickaxe	858	30	30				Blast	540	true		false	9;3;3;11;4;10;0		event	blast				0
 3082	LongSword	12	Royal Captain Rapier	891	15	30	Water	510	true					false	15;3;3;6;5;3;5	3	guild	water				0
-3102	LongSword	12	Demonlord Halberd	957	15	0	Thunder	270	false					true	12;2;2;7;4;3;10		furious-rajang	thunder				0
-3122	LongSword	12	Lightbreak Edge	990	0	0				Blast	270	false		true	15;3;8;4;3;5;7	4;3	raging-brachydios	blast				0
+3102	LongSword	12	Demonlord Halberd	957	15	0	Thunder	270	false					false	12;2;2;7;4;3;10		furious-rajang	thunder				0
+3122	LongSword	12	Lightbreak Edge	990	0	0				Blast	270	false		false	15;3;9;3;3;5;7	4;3	raging-brachydios	blast				0
 4042	LongSword	12	Safi's Longsword	891	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
 1945	SwordAndShield	11	Chrome Knight Sword III	364	0	0				Sleep	330	true		false	11;3;3;6;5;9;3	1;1	ore	sleep			1	0
 1946	SwordAndShield	12	Ruinous Eradication	406	0	0	Dragon	180	false				High	false	7;3;3;11;4;17;0	1	ruiner-nergigante	dragon				0
@@ -130,8 +130,8 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3043	SwordAndShield	12	Xeno Mabura+	392	15	0	Dragon	330	false				Low	false	9;8;3;3;8;9;0	4;4	xeno-jiiva	dragon				0
 3063	SwordAndShield	12	Witcher's Silver Sword++	364	0	0	Dragon	480	false				High	false	5;3;3;11;4;19;0	2;1	event	dragon				0
 3083	SwordAndShield	12	Royal Nova Sword	378	15	30	Water	420	true					false	14;3;3;6;5;4;5	3	guild	water				0
-3103	SwordAndShield	12	Demonlord Mace	406	15	0	Thunder	300	false					true	12;2;2;7;4;3;10		furious-rajang	thunder				0
-3123	SwordAndShield	12	Lightbreak Sword	420	0	0				Blast	180	false		true	15;3;8;4;3;5;7	4;3	raging-brachydios	blast				0
+3103	SwordAndShield	12	Demonlord Mace	406	15	0	Thunder	300	false					false	11;2;2;7;4;3;11		furious-rajang	thunder				0
+3123	SwordAndShield	12	Lightbreak Sword	420	0	0				Blast	180	false		false	14;3;3;6;5;6;8	4;3	raging-brachydios	blast				0
 4043	SwordAndShield	12	Safi's SwordAndShield	378	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
 2018	DualBlades	11	Chrome Cross III	364	0	0				Poison	360	true		false	10;3;3;6;5;10;3	1;1	ore	poison			1	0
 2021	DualBlades	12	Despot's Blitz	364	0	0	Thunder	240	false					false	11;3;9;3;3;9;2	2	zinogre	thunder				0
@@ -178,8 +178,8 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3044	DualBlades	12	Xeno Raqs+	392	15	0	Dragon	240	false				Low	false	8;8;3;3;8;10;0	4;4	xeno-jiiva	dragon				0
 3064	DualBlades	12	Zirael+	364	0	0	Dragon	300	true				High	false	14;2;2;7;4;3;8	4	event	dragon;witcher				0
 3084	DualBlades	12	Royal Savior Daggers	378	15	30	Water	330	true					false	13;3;3;6;5;5;5	3	guild	water				0
-3104	DualBlades	12	Demonlord Hellfists	406	15	0	Thunder	270	false					true	12;2;2;7;4;3;10		furious-rajang	thunder				0
-3124	DualBlades	12	Lightbreak Twins	420	0	0				Blast	120	false		true	15;3;8;4;3;5;7	4;3	raging-brachydios	blast				0
+3104	DualBlades	12	Demonlord Hellfists	406	15	0	Thunder	270	false					false	11;2;2;7;4;3;11		furious-rajang	thunder				0
+3124	DualBlades	12	Lightbreak Twins	420	0	0				Blast	120	false		false	14;3;3;6;5;6;8	4;3	raging-brachydios	blast				0
 4044	DualBlades	12	Safi's DualBlades	378	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
 2094	Hammer	11	Kurogane III	1352	0	0				Blast	360	true		false	12;3;3;6;5;8;3	1;1	ore	blast			1	0
 2097	Hammer	12	Leonid Starcrusher	1404	20	0	Fire	420	false					false	13;3;3;6;5;7;3	2	silver-rathalos	fire				0
@@ -224,8 +224,8 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3065	Hammer	11	Juicy Well-done Hammer	1612	0	30	Fire	210	false					false	3;5;5;8;24;0;0		event	fire				0
 3085	Hammer	12	Royal Cross Maze	1404	15	30	Water	510	true					false	15;3;3;6;5;3;5	3	guild	water				0
 3105	Hammer	12	Space Lord! Super-8	1248	0	40	Water	640	false					false	5;8;3;3;7;12;0		event	water				0
-3105	Hammer	12	Demonlord Sledge	1508	15	0	Thunder	300	false					true	12;2;2;7;4;3;10		furious-rajang	thunder				0
-3125	Hammer	12	Lightbreak Hammer	1560	0	0				Blast	270	false		true	15;3;8;4;3;5;7	4;3	raging-brachydios	blast				0
+3105	Hammer	12	Demonlord Sledge	1508	15	0	Thunder	300	false					false	12;2;2;7;4;3;10		furious-rajang	thunder				0
+3125	Hammer	12	Lightbreak Hammer	1560	0	0				Blast	270	false		false	15;3;9;3;3;5;7	4;3	raging-brachydios	blast				0
 4045	Hammer	12	Safi's Hammer	1404	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
 2169	HuntingHorn	11	Sforzando III	1092	0	0				Paralysis	360	true		false	12;3;3;6;5;8;3	1;1	ore	paralysis		p;r;b2;k3	1	0
 2171	HuntingHorn	11	Wolf Shamisen	1134	25	0				Poison	240	false		false	15;3;9;3;3;5;2	3	yian-garuga	poison		p;g;o2;k3		0
@@ -266,8 +266,8 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3023	HuntingHorn	12	Stygian Tristitia	1134	0	0	Dragon	360	false				Average	false	13;2;2;7;4;3;9	2	stygian-zinogre	dragon		p;y;o2;k3		0
 3046	HuntingHorn	12	Xeno Manasheena+	1176	15	0	Dragon	240	false				Low	false	10;8;3;3;8;8;0	4;4	xeno-jiiva	dragon		p;b;o2;k3		0
 3086	HuntingHorn	12	Royal Song Symphony	1134	15	30	Water	540	true					false	14;3;3;6;5;4;5	3	guild	water		p;r;b2;k3		0
-3106	HuntingHorn	12	Demonlord Wardrum	1176	15	0	Thunder	300	false					true	12;2;2;7;4;3;10		furious-rajang	thunder		p;r;g2;k3		0
-3126	HuntingHorn	12	Lightbreak Timbre	1260	0	0				Blast	270	false		true	15;3;8;4;3;5;7	4;3	raging-brachydios	blast		p;lb;o2;k3		0
+3106	HuntingHorn	12	Demonlord Wardrum	1176	15	0	Thunder	300	false					false	12;2;2;7;4;3;10		furious-rajang	thunder		p;r;g2;k3		0
+3126	HuntingHorn	12	Lightbreak Timbre	1260	0	0				Blast	270	false		false	15;3;9;3;3;5;7	4;3	raging-brachydios	blast		p;lb;o2;k3		0
 4046	HuntingHorn	12	Safi's HuntingHorn	1134	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon		p;g;lb2;k3	2	0
 2240	Lance	11	Chrome Drill III	598	0	0				Paralysis	360	true		false	12;3;3;6;5;8;3	1;1	ore	paralysis			1	0
 2242	Lance	11	Incessant Wolf	621	25	0				Poison	240	false		false	15;3;9;3;3;5;2	3	yian-garuga	poison				0

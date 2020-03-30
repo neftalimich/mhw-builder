@@ -28,7 +28,6 @@ export class SharpnessBarComponent implements OnInit {
 	sharpnessBar: SharpnessBarModel = new SharpnessBarModel();
 
 	constructor(private tooltipService: TooltipService) {
-
 	}
 
 	ngOnInit() {
@@ -82,6 +81,7 @@ export class SharpnessBarComponent implements OnInit {
 				if (total > 40 && this._sharpnessLevels[i] > 0) {
 					const toSubstract2 = Math.min(this._sharpnessLevels[i], total - 40);
 					this.sharpnessBar.levels[i] -= toSubstract2;
+					this._sharpnessLevels[i] -= toSubstract2;
 					total -= toSubstract2;
 					sharpnessAux.level -= toSubstract2;
 				}
@@ -98,7 +98,7 @@ export class SharpnessBarComponent implements OnInit {
 			levelsToAdd -= aux;
 
 			this.sharpnessBar.tooltipTemplate =
-				`| <span class="sharp-${i}">${this.sharpnessBar.levels[i] * 10}</span> ${this.sharpnessBar.tooltipTemplate}`;
+				`| <span class="sharp-${i}">${this._sharpnessLevels[i] * 10}</span> ${this.sharpnessBar.tooltipTemplate}`;
 		}
 
 		this.sharpnessBar.sharps = this.sharpnessBar.sharps.reverse();

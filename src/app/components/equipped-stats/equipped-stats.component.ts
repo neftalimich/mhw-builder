@@ -52,6 +52,9 @@ export class EquippedStatsComponent implements OnInit {
 
 		this.calculationService.sharpnessUpdated$.subscribe(sharp => {
 			this.sharpnessBar = sharp;
+			if (this.sharpnessBarComponent) {
+				this.sharpnessBarComponent.handicraftLevel = sharp.handicraftLevel;
+			}
 		});
 
 		this.calculationService.extraDataUpdated$.subscribe(extraData => {
