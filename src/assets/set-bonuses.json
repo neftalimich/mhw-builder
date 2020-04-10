@@ -638,29 +638,15 @@
 		]
 	},
 	{
-		"id": "joyfulBlessing",
-		"name": "Joyful Blessing",
+		"id": "festivalBlessing",
+		"name": "Festival Blessing",
 		"setLevels": [
 			{
-				"id": "joyfulGift",
+				"id": "festivalGift",
 				"pieces": 3
 			},
 			{
-				"id": "joyfulGratitude",
-				"pieces": 5
-			}
-		]
-	},
-	{
-		"id": "appreciationBlessing",
-		"name": "Joyful Blessing",
-		"setLevels": [
-			{
-				"id": "gratitudesGift",
-				"pieces": 3
-			},
-			{
-				"id": "gratitudesBlessing",
+				"id": "festivalGratitude",
 				"pieces": 5
 			}
 		]

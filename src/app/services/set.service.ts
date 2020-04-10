@@ -107,6 +107,7 @@ export class SetService {
 		}
 		localStorage.setItem('mhwSets', JSON.stringify(this.sets));
 		this.setsUpdated$.next(this.sets);
+		document.title = setName + ' - [MHWBuilder]';
 		return this.selectedSetIndex;
 	}
 
@@ -148,6 +149,7 @@ export class SetService {
 		this.location.replaceState(this.location.path(false), set.hashString);
 		this.buildService.loadBuild(location.hash);
 		this.selectedSetIndex = this.sets.indexOf(set);
+		document.title = set.setName + ' - [MHWBuilder]';
 		return this.selectedSetIndex;
 	}
 

@@ -2716,42 +2716,22 @@
 		"hasActiveStats": true
 	},
 	{
-		"id": "joyfulGift",
-		"name": "Joyful Gift",
+		"id": "festivalGift",
+		"name": "Festival Gift",
 		"description": "",
 		"levels": [
 			{
-				"description": "Increases odds of getting special holiday Joy rewards (No effects when joining mid-quest.)"
+				"description": "Increases odds of getting special Festival rewards (No effects when joining mid-quest.)"
 			}
 		]
 	},
 	{
-		"id": "joyfulGratitude",
-		"name": "Joyful Gratitude",
+		"id": "festivalGratitude",
+		"name": "Festival Gratitude",
 		"description": "",
 		"levels": [
 			{
-				"description": "Joyful Gratitude Greatly increases odds of getting special holiday joy rewards. (No effects when joining mid-quest.)"
-			}
-		]
-	},
-	{
-		"id": "gratitudesGift",
-		"name": "Gratitude's Gift",
-		"description": "",
-		"levels": [
-			{
-				"description": "Increase odds of getting special Grand Appreciation rewards. (No effects when joining mid-quest.)"
-			}
-		]
-	},
-	{
-		"id": "gratitudesBlessing",
-		"name": "Gratitude's Blessing",
-		"description": "",
-		"levels": [
-			{
-				"description": "Greatly increase odds of getting special Grand Appreciation rewards. (No effects when joining mid-quest.)"
+				"description": "Greatly increases odds of getting special Festival rewards. (No effects when joining mid-quest.)"
 			}
 		]
 	}
