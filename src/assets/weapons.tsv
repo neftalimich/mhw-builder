@@ -181,7 +181,7 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3124	DualBlades	12	Lightbreak Twins	420	0	0				Blast	120	false		false	14;3;3;6;5;6;8	4;3	raging-brachydios	blast				0
 4044	DualBlades	12	Safi's DualBlades	378	5	0			false				Average	false	10;5;5;5;6;9;0	4	safi-jiiva	dragon			2	0
 5004	DualBlades	12	Zirael+	364	0	0	Dragon	300	true				High	false	14;2;2;7;4;3;8	4	event	dragon;witcher				0
-5024	DualBlades	11	Whetfish Sabers+	322	5	0	Water	390	false					false	17;3;3;6;5;3;8		event	water;fish				0
+5024	DualBlades	11	Whetfish Sabers+	322	5	0	Water	390	false					false	17;3;3;6;5;3;8		event	water;fish	protectivePolish-1			0
 2094	Hammer	11	Kurogane III	1352	0	0				Blast	360	true		false	12;3;3;6;5;8;3	1;1	ore	blast			1	0
 2097	Hammer	12	Leonid Starcrusher	1404	20	0	Fire	420	false					false	13;3;3;6;5;7;3	2	silver-rathalos	fire				0
 2098	Hammer	12	Ruinous Obliteration	1508	0	0	Dragon	180	false				High	false	8;3;3;11;4;16;0	1	ruiner-nergigante	dragon				0
