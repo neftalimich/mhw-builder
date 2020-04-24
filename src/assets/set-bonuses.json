@@ -678,5 +678,19 @@
 				"pieces": 4
 			}
 		]
+	},
+	{
+		"id": "kulveTarothEssence",
+		"name": "Kulve Taroth Essence",
+		"setLevels": [
+			{
+				"id": "guts",
+				"pieces": 2
+			},
+			{
+				"id": "freeMealSecret",
+				"pieces": 4
+			}
+		]
 	}
 ]

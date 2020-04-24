@@ -1,6 +1,6 @@
 id	rarity	name	levels	skills	
 225	7	Poison Charm	3	poisonResistance-1
-226	11	Attack Charm	4	attackBoost-1
+226	11	Attack Charm	5	attackBoost-1
 227	10	Defense Charm	5	defenseBoost-1
 228	7	Paralysis Charm	3	paralysisResistance-1
 229	7	Sleep Charm	3	sleepResistance-1
@@ -47,7 +47,7 @@ id	rarity	name	levels	skills
 270	6	Blight Charm	3	blightResistance-1
 271	12	Frost Charm	5	iceAttack-1
 272	11	Master's Charm	4	criticalEye-1
-273	12	Evasion Charm	4	evadeWindow-1
+273	12	Evasion Charm	5	evadeWindow-1
 274	8	Sheath Charm	3	quickSheath-1
 275	6	Whetstone Charm	3	speedSharpening-1
 276	6	Blast Charm	3	blastResistance-1
