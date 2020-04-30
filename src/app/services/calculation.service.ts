@@ -1001,7 +1001,7 @@ export class CalculationService {
 		for (let i = 0; i < stats.defense.length; i++) {
 			let def = stats.defense[i];
 			if (i == stats.defense.length - 1) {
-				def += 20;
+				def += 101;
 			}
 			defValue += Math.round(def * (1 + stats.passiveDefensePercent / 100) + stats.passiveDefense + stats.activeDefense);
 			if (i < stats.defense.length - 2) {

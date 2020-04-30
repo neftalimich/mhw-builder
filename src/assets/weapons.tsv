@@ -711,9 +711,13 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 3134	Bow	12	Lightbreak Bow	360	0	0				Blast	210	false		false		4;2	raging-brachydios	blast		close;power;blast		0
 4054	Bow	12	Safi's Bow	312	5	0			false				Average	false		4	safi-jiiva	dragon		close;power	2	0
 5014	Bow	12	Aloy's Adept War Bow	300	30	0	Thunder	270	true					false		4	event	thunder;horizon		close;paralysis;poison		0
-6014	Bow	12	Kjárr Bow 'Blast'	336	10	20				Blast	360			false			kulve-taroth	kjarr;blast	criticalStatus-1	close;paralysis;poison;sleep;blast	1	0
-6034	Bow	12	Kjárr Bow 'Decay'	324	10	20	Dragon	360					Average	false		1	kulve-taroth	kjarr;dragon	criticalElement-1	close;power;sleep	1	0
-6054	Bow	12	Kjárr Bow 'King'	318	15	20	Fire	390						false		1	kulve-taroth	kjarr;fire	criticalElement-1	close;power;poison	1	0
-6074	Bow	12	Kjárr Bow 'Spark'	300	15	20	Thunder	360						false		1	kulve-taroth	kjarr;thunder	criticalElement-1	close;power;paralysis	1	0
-6094	Bow	12	Kjárr Bow 'Stream'	288	10	20	Ice	450						false			kulve-taroth	kjarr;ice	criticalElement-1	close;power;poison;sleep	1	0
-6114	Bow	12	Kjárr Bow 'Water'	324	10	20	Water	420						false			kulve-taroth	kjarr;water	criticalElement-1	close;paralysis;poison	1	0
+6014	Bow	12	Kjárr Bow 'Blast'	336	10	20				Blast	360						kulve-taroth	kjarr;blast	criticalStatus-1	close;paralysis;poison;sleep;blast	1	0
+6034	Bow	12	Kjárr Bow 'Decay'	324	10	20	Dragon	360					Average			1	kulve-taroth	kjarr;dragon	criticalElement-1	close;power;sleep	1	0
+6054	Bow	12	Kjárr Bow 'King'	318	15	20	Fire	390								1	kulve-taroth	kjarr;fire	criticalElement-1	close;power;poison	1	0
+6074	Bow	12	Kjárr Bow 'Spark'	300	15	20	Thunder	360								1	kulve-taroth	kjarr;thunder	criticalElement-1	close;power;paralysis	1	0
+6094	Bow	12	Kjárr Bow 'Stream'	288	10	20	Ice	450									kulve-taroth	kjarr;ice	criticalElement-1	close;power;poison;sleep	1	0
+6114	Bow	12	Kjárr Bow 'Water'	324	10	20	Water	420									kulve-taroth	kjarr;water	criticalElement-1	close;paralysis;poison	1	0
+6134	Bow	12	Taroth Arrow 'Blast'	324	0	50				Blast	480	true				3	kulve-taroth	blast		close;paralysis;poison;sleep;blast	1	0
+6154	Bow	12	Taroth Arrow 'Fire'	324	10	40	Fire	480	true							3	kulve-taroth	fire		close;power	1	0
+6174	Bow	12	Taroth Arrow 'Thunder'	312	10	40	Thunder	480	true							3	kulve-taroth	thunder		close;power	1	0
+6194	Bow	12	Taroth Arrow 'Water'	312	0	50	Water	510	true							3	kulve-taroth	water		close;paralysis;poison	1	0

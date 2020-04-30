@@ -126,52 +126,53 @@ export class EquippedSkillsComponent implements OnInit {
 	}
 
 	SetbonusSkillMode(detail: EquippedSetBonusDetailModel, equippedCount: number) {
-		if (equippedCount >= detail.requiredCount && detail.skill.levels[0].activeSkills) {
-			if (detail.mode == ModeType.Active) {
-				detail.mode = ModeType.AllSkillActive;
-				for (const skillExtra of detail.skill.levels[0].activeSkills) {
-					let equippedSkill = new EquippedSkillModel();
-					equippedSkill = this.skills.find(es => es.id == skillExtra.id);
-					if (!equippedSkill) {
-						equippedSkill = this.skillService.createEquippedSkill(skillExtra.id, skillExtra.level);
-						equippedSkill.isNatureBonus = true;
-						this.skills.push(equippedSkill);
-					} else {
-						if (skillExtra.level > equippedSkill.equippedCount) {
-							equippedSkill.equippedCount = skillExtra.level;
-							equippedSkill.equippedArmorCount = skillExtra.level;
+		if (equippedCount >= detail.requiredCount) {
+			if (detail.skill.levels[0].activeSkills) {
+				if (detail.mode == ModeType.Active) {
+					detail.mode = ModeType.AllSkillActive;
+					for (const skillExtra of detail.skill.levels[0].activeSkills) {
+						let equippedSkill = new EquippedSkillModel();
+						equippedSkill = this.skills.find(es => es.id == skillExtra.id);
+						if (!equippedSkill) {
+							equippedSkill = this.skillService.createEquippedSkill(skillExtra.id, skillExtra.level);
 							equippedSkill.isNatureBonus = true;
+							this.skills.push(equippedSkill);
+						} else {
+							if (skillExtra.level > equippedSkill.equippedCount) {
+								equippedSkill.equippedCount = skillExtra.level;
+								equippedSkill.equippedArmorCount = skillExtra.level;
+								equippedSkill.isNatureBonus = true;
+							}
 						}
 					}
-				}
-				this.equipmentService.updateSkillMode(this.skills);
-			} else if (detail.mode == ModeType.AllSkillActive) {
-				detail.mode = ModeType.Active;
-				for (const skillExtra of detail.skill.levels[0].activeSkills) {
-					let equippedSkill = new EquippedSkillModel();
-					equippedSkill = this.skillsBackup.find(es => es.id == skillExtra.id);
-					if (!equippedSkill) {
-						const skillIndex = this.skills.findIndex(es => es.id == skillExtra.id);
-						if (skillIndex > -1) {
-							this.skills.splice(skillIndex, 1);
-						}
-					} else {
-						const skillIndex = this.skills.findIndex(es => es.id == skillExtra.id);
-						if (skillIndex > -1) {
-							this.skills[skillIndex] = equippedSkill;
+					this.equipmentService.updateSkillMode(this.skills);
+				} else if (detail.mode == ModeType.AllSkillActive) {
+					detail.mode = ModeType.Active;
+					for (const skillExtra of detail.skill.levels[0].activeSkills) {
+						let equippedSkill = new EquippedSkillModel();
+						equippedSkill = this.skillsBackup.find(es => es.id == skillExtra.id);
+						if (!equippedSkill) {
+							const skillIndex = this.skills.findIndex(es => es.id == skillExtra.id);
+							if (skillIndex > -1) {
+								this.skills.splice(skillIndex, 1);
+							}
+						} else {
+							const skillIndex = this.skills.findIndex(es => es.id == skillExtra.id);
+							if (skillIndex > -1) {
+								this.skills[skillIndex] = equippedSkill;
+							}
 						}
 					}
+					this.equipmentService.updateSkillMode(this.skills);
 				}
-				this.equipmentService.updateSkillMode(this.skills);
+			} else if (detail.skill.hasActiveStats) {
+				if (detail.mode == ModeType.Active) {
+					detail.mode = ModeType.AllSkillActive;
+				} else if (detail.mode == ModeType.AllSkillActive) {
+					detail.mode = ModeType.Active;
+				}
 			}
-		}
-		if (equippedCount >= detail.requiredCount && detail.skill.hasActiveStats) {
 			const skill = this.skills.find(x => x.id == detail.skill.id);
-			if (detail.mode == ModeType.Active) {
-				detail.mode = ModeType.AllSkillActive;
-			} else if (detail.mode == ModeType.AllSkillActive) {
-				detail.mode = ModeType.Active;
-			}
 			skill.skill.mode = detail.mode;
 			this.equipmentService.updateSkillMode(this.skills);
 		}

@@ -2601,7 +2601,8 @@
 					}
 				]
 			}
-		]
+		],
+		"hasActiveStats": true
 	},
 	{
 		"id": "trueElementAcceleration",
@@ -2618,7 +2619,8 @@
 					}
 				]
 			}
-		]
+		],
+		"hasActiveStats": true
 	},
 	{
 		"id": "gaiasVeil",
