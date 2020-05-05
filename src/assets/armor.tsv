@@ -738,6 +738,11 @@ id	itemType	rarity	name	defense	fireResist	waterResist	thunderResist	iceResist	d
 1778	Arms	12	Kulve Taroth's Rage β +	176;182;194	4	-2	3	-2	-4	criticalBoost-1;kulveTarothEssence	4;4	kulve;taroth	0
 1779	Waist	12	Kulve Taroth's Malice  β +	176;182;194	4	-2	3	-2	-4	peakPerformance-2;kulveTarothEssence	4;2	kulve;taroth	0
 1780	Legs	12	Kulve Taroth's Wrath  β +	176;182;194	4	-2	3	-2	-4	criticalBoost-2;kulveTarothEssence	4;1;1	kulve;taroth	0
+1781	Head	12	Tentacle Cowl γ +	176;182;194	-3	4	3	0	-2	staminaSurge-3;toolSpecialist-1;namielleDivinity	4;2	namielle	0
+1782	Chest	12	Tentacle Cloak γ +	176;182;194	-3	4	3	0	-2	evadeWindow-4;waterAttack-2;namielleDivinity	4	namielle	0
+1783	Arms	12	Tentacle Gloves γ +	176;182;194	-3	4	3	0	-2	marathonRunner-3;blightResistance-1;namielleDivinity	4;2	namielle	0
+1784	Waist	12	Tentacle Coil γ +	176;182;194	-3	4	3	0	-2	evadeExtender-3;recoverySpeed-2;namielleDivinity	4;2	namielle	0
+1785	Legs	12	Tentacle Greaves γ +	176;182;194	-3	4	3	0	-2	constitution-4;thunderAttack-2;namielleDivinity	4	namielle	0
 3001	Head	9	Oolong Hair α +	120;136;158	1	1	1	4	1	criticalEye-3;festivalBlessing	4	event	0
 3002	Chest	9	Oolong Vest α +	120;136;158	1	1	1	4	1	staminaSurge-2;festivalBlessing	4	event	0
 3003	Arms	9	Oolong Sleeves α +	120;136;158	1	1	1	4	1	coalescence-2;festivalBlessing	4	event	0

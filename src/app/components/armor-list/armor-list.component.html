@@ -101,7 +101,7 @@
 					<span class="typeName">{{item.itemType}}</span>
 					<img [src]="'assets/images/armor/' + (item.itemType | lowercase) + '-icon.png'" alt="item type" />
 				</div>
-				<div class="rarity" *ngIf="item.rarity">
+				<div class="rarity" *ngIf="item.rarity" [ngClass]="'rarity-'+item?.rarity">
 					<span class="r1">Rarity </span><span class="r2">R</span>{{item.rarity}}
 				</div>
 			</div>

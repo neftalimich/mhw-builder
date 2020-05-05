@@ -112,7 +112,7 @@
 		(vsUpdate)="onItemListUpdate($event)" [enableUnequalChildrenSizes]="true" [bufferAmount]="10">
 		<div *ngFor="let item of virtualItems" class="scroll-item-container" (click)="selectItem(item)">
 			<div class="name-container">
-				<div class="name" [ngClass]="'vcolor-'+ item.color">
+				<div class="name" [ngClass]="'vColor-'+ item.vColor">
 					{{item.name}}
 				</div>
 				<div class="upgrade" *ngIf="item.upgradeType==1">
@@ -137,7 +137,7 @@
 					<span class="typeName"
 						*ngIf="item.equipmentCategory == equipmentCategoryType.Weapon">{{dataService.getWeaponTypeName(item.weaponType)}}</span>
 				</div>
-				<div class="rarity" *ngIf="item.rarity">
+				<div class="rarity" *ngIf="item.rarity" [ngClass]="'rarity-'+item?.rarity">
 					<span class="r1">Rarity </span><span class="r2">R</span>{{item.rarity}}
 				</div>
 			</div>
