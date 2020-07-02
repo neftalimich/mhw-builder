@@ -1896,8 +1896,8 @@
 				"activeAffinity": 40
 			},
 			{
-				"description": "While active, increases affinity by 50%. (Pre-Iceborne behavior).",
-				"activeAffinity": 50
+				"description": "Increases Affinity by 40% as soon as the stamina gauge is full. (Pre-Iceborne behavior).",
+				"activeAffinity": 40
 			}
 		],
 		"hasActiveStats": true

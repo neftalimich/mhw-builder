@@ -659,12 +659,16 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 4058	LightBowgun	12	Safi's Frostshot	325	5	0								false		4	safi-jiiva	ice			2	1
 4059	LightBowgun	12	Safi's Drakshot	325	5	0								false		4	safi-jiiva	dragon			2	1
 5012	LightBowgun	12	Adept Stormslinger	416	0	0								false		4	event	horizon		Wyvernblast		0
-6012	LightBowgun	12	Kjárr Blitz 'Bomber'	338	10	20								false			kulve-taroth	kjarr	criticalStatus-1		1	0
-6032	LightBowgun	12	Kjárr Blitz 'Decay'	351	10	20								false			kulve-taroth	kjarr	criticalElement-1		1	0
-6052	LightBowgun	12	Kjárr Blitz 'King'	338	20	20								false			kulve-taroth	kjarr	criticalElement-1		1	0
-6072	LightBowgun	12	Kjárr Blitz 'Thunder'	338	15	20								false		1	kulve-taroth	kjarr	criticalElement-1		1	0
-6092	LightBowgun	12	Kjárr Blitz 'Ice'	338	10	20								false			kulve-taroth	kjarr	criticalElement-1		1	0
-6112	LightBowgun	12	Kjárr Blitz 'Claw'	325	15	20								false			kulve-taroth	kjarr	criticalStatus-1		1	0
+6012	LightBowgun	12	Kjárr Blitz 'Bomber'	338	10	20								false			kulve-taroth	kjarr	criticalStatus-1		1	2
+6032	LightBowgun	12	Kjárr Blitz 'Decay'	351	10	20								false			kulve-taroth	kjarr	criticalElement-1		1	2
+6052	LightBowgun	12	Kjárr Blitz 'King'	338	20	20								false			kulve-taroth	kjarr	criticalElement-1		1	2
+6072	LightBowgun	12	Kjárr Blitz 'Thunder'	338	15	20								false		1	kulve-taroth	kjarr	criticalElement-1		1	2
+6092	LightBowgun	12	Kjárr Blitz 'Ice'	338	10	20								false			kulve-taroth	kjarr	criticalElement-1		1	2
+6112	LightBowgun	12	Kjárr Blitz 'Claw'	325	15	20								false			kulve-taroth	kjarr	criticalStatus-1		1	2
+6132	LightBowgun	12	Taroth Blitz 'Pierce'	338	0	40								false		3	kulve-taroth				1	3
+6152	LightBowgun	12	Taroth Blitz 'Shot'	351	-10	40								false		3	kulve-taroth				1	3
+6172	LightBowgun	12	Taroth Blitz 'Spread'	325	10	40								false		3	kulve-taroth				1	3
+6192	LightBowgun	12	Taroth Blitz 'Support'	325	0	50								false		3	kulve-taroth				1	3
 2667	HeavyBowgun	11	Fatal Assault III	420	0	0								false		1;1	ore				1	0
 2669	HeavyBowgun	10	Icicle Assault II	360	30	0								false		1	barioth				1	0
 2670	HeavyBowgun	12	Ruinous Destruction	465	0	0								false		1	ruiner-nergigante					0
@@ -712,6 +716,10 @@ id	weaponType	rarity	name	baseAttack	baseAffinityPercent	defense	element	element
 6073	HeavyBowgun	12	Kjárr Assault 'Spark'	375	15	20								false			kulve-taroth	kjarr	criticalElement-1		1	0
 6093	HeavyBowgun	12	Kjárr Assault 'Ice'	390	15	20								false		1	kulve-taroth	kjarr	criticalElement-1		1	0
 6113	HeavyBowgun	12	Kjárr Assault 'Water'	375	15	20								false		1	kulve-taroth	kjarr	criticalElement-1		1	0
+6133	HeavyBowgun	12	Taroth Assault 'Blast'	375	10	40								false		3	kulve-taroth				1	3
+6153	HeavyBowgun	12	Taroth Assault 'Icewater'	375	0	40								false		3	kulve-taroth				1	3
+6173	HeavyBowgun	12	Taroth Assault 'Pierce'	375	10	40								false		3	kulve-taroth				1	3
+6193	HeavyBowgun	12	Taroth Assault 'Support'	360	20	40								false		3	kulve-taroth				1	3
 2729	Bow	11	Dragon Perforator III	312	0	0	Thunder	240	true							2;2	ore	thunder		close;power	1	0
 2732	Bow	12	Despot's Earlybolt	324	0	0	Thunder	240	false							2	zinogre	thunder		close;power		0
 2733	Bow	12	Ruinous Doom	324	0	0	Dragon	240	false				High			1;1	ruiner-nergigante	dragon		close;power		0
