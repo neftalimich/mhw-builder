@@ -54,10 +54,10 @@ id	rarity	name	levels	skills
 277	6	Dragon Charm	3	dragonResistance-1
 278	12	Wyrmsbane Charm	5	dragonAttack-1
 279	11	Demolition Charm	4	blastAttack-1
-280	7	Draw Charm	2	criticalDraw-1
+280	11	Draw Charm	3	criticalDraw-1
 281	6	Special Shot Charm	2	specialAmmoBoost-1
 282	12	Marathon Charm	3	marathonRunner-1
-283	11	Fitness Charm	4	constitution-1
+283	12	Fitness Charm	5	constitution-1
 284	9	Surge Charm	3	staminaSurge-1
 285	9	Leaping Charm	3	evadeExtender-1
 286	7	Bombardier Charm	3	bombardier-1
@@ -101,7 +101,7 @@ id	rarity	name	levels	skills
 324	8	Wyrmslayer Charm	1	eldersealBoost-1;dragonAttack-1
 325	8	Bulwark Charm	1	guardUp-1;resuscitate-1
 326	12	Guardian Charm	3	offensiveGuard-1
-327	12	Phoenix Charm	2	coalescence-1
+327	12	Phoenix Charm	3	coalescence-1
 500	8	Fair Wind Charm	1	attackBoost-1;divineBlessing-1
 501	11	Adamantine Charm	1	nonElementalBoost-1;bludgeoner-1
 502	11	Razor Sharp Charm	1	razorSharpSpareShot-1

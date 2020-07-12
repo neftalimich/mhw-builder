@@ -743,6 +743,16 @@ id	itemType	rarity	name	defense	fireResist	waterResist	thunderResist	iceResist	d
 1783	Arms	12	Tentacle Gloves γ +	176;182;194	-3	4	3	0	-2	marathonRunner-3;blightResistance-1;namielleDivinity	4;2	namielle	0
 1784	Waist	12	Tentacle Coil γ +	176;182;194	-3	4	3	0	-2	evadeExtender-3;recoverySpeed-2;namielleDivinity	4;2	namielle	0
 1785	Legs	12	Tentacle Greaves γ +	176;182;194	-3	4	3	0	-2	constitution-4;thunderAttack-2;namielleDivinity	4	namielle	0
+1791	Head	12	Escadora Wisdom α +	160;178;198	3	0	0	3	2	resentment-3;criticalEye-2;alatreonDivinity	3;1	alatreon	4
+1792	Chest	12	Escadora Soul α +	160;178;198	3	0	0	3	2	healthBoost-3;resentment-2;alatreonDivinity	2;1;1	alatreon	4
+1793	Arms	12	Escadora Armguards α +	160;178;198	3	0	0	3	2	attackBoost-3;powerProlonger-3;alatreonDivinity	3;1	alatreon	4
+1794	Waist	12	Escadora Might α +	160;178;198	3	0	0	3	2	attackBoost-4;dragonResistance-3;alatreonDivinity	3;1	alatreon	4
+1795	Legs	12	Escadora Sheath α +	160;178;198	3	0	0	3	2	defenseBoost-3;dragonAttack-4;alatreonDivinity	2;2;2	alatreon	4
+1796	Head	12	Escadora Wisdom β +	160;178;198	3	0	0	3	2	resentment-3;criticalEye-1;alatreonDivinity	4;1	alatreon	4
+1797	Chest	12	Escadora Soul β +	160;178;198	3	0	0	3	2	healthBoost-3;resentment-1;alatreonDivinity	4;1;1	alatreon	4
+1798	Arms	12	Escadora Armguards β +	160;178;198	3	0	0	3	2	attackBoost-3;alatreonDivinity	4;3	alatreon	4
+1799	Waist	12	Escadora Might  β +	160;178;198	3	0	0	3	2	attackBoost-3;dragonResistance-3;alatreonDivinity	4;1	alatreon	4
+1800	Legs	12	Escadora Sheath  β +	160;178;198	3	0	0	3	2	defenseBoost-3;alatreonDivinity	4;4;2	alatreon	4
 3001	Head	9	Oolong Hair α +	120;136;158	1	1	1	4	1	criticalEye-3;festivalBlessing	4	event	0
 3002	Chest	9	Oolong Vest α +	120;136;158	1	1	1	4	1	staminaSurge-2;festivalBlessing	4	event	0
 3003	Arms	9	Oolong Sleeves α +	120;136;158	1	1	1	4	1	coalescence-2;festivalBlessing	4	event	0

@@ -692,5 +692,19 @@
 				"pieces": 4
 			}
 		]
+	},
+	{
+		"id": "alatreonDivinity",
+		"name": "Alatreon Divinity",
+		"setLevels": [
+			{
+				"id": "elementConversion",
+				"pieces": 2
+			},
+			{
+				"id": "allElementalResistance",
+				"pieces": 4
+			}
+		]
 	}
 ]

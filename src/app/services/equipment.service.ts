@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import * as _ from 'lodash';
 import { AugmentationModel } from '../models/augmentation.model';
 import { AwakeningLevelModel } from '../models/awakening-level.model';
+import { BuffModel } from '../models/buffs.model';
 import { DecorationModel } from '../models/decoration.model';
 import { EquippedSkillModel } from '../models/equipped-skill.model';
 import { ItemModel } from '../models/item.model';
@@ -28,6 +29,7 @@ export class EquipmentService {
 	public awakeningSetbonus: SetBonusModel;
 	public modifications: ModificationModel[];
 	public kinsect: KinsectModel;
+	public buffs: BuffModel;
 
 	constructor(
 		private skillService: SkillService,
@@ -39,10 +41,20 @@ export class EquipmentService {
 		this.awakenings = [];
 		this.awakeningSetbonus = null;
 		this.modifications = [];
+		this.buffs = new BuffModel();
 
 		this.skillService.skillsUpdated$.subscribe(skills => {
 			this.skills = skills;
-			this.statService.update(skills, this.items, this.augmentations, this.upgradeContainer, this.awakenings, this.modifications, this.kinsect);
+			this.statService.update(
+				skills,
+				this.items,
+				this.augmentations,
+				this.upgradeContainer,
+				this.awakenings,
+				this.modifications,
+				this.kinsect,
+				this.buffs
+			);
 		});
 	}
 
@@ -74,7 +86,15 @@ export class EquipmentService {
 		// console.log("addUpgrade");
 		this.upgradeContainer = upgradeContainer;
 		if (updateStats) {
-			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.awakenings, this.modifications, this.kinsect);
+			this.statService.update(
+				this.skills,
+				this.items,
+				this.augmentations,
+				this.upgradeContainer,
+				this.awakenings,
+				this.modifications,
+				this.kinsect,
+				this.buffs);
 		}
 	}
 
@@ -82,7 +102,16 @@ export class EquipmentService {
 		// console.log("addAwakening");
 		this.awakenings = awakenings;
 		if (awakenings.length && updateStats) {
-			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.awakenings, this.modifications, this.kinsect);
+			this.statService.update(
+				this.skills,
+				this.items,
+				this.augmentations,
+				this.upgradeContainer,
+				this.awakenings,
+				this.modifications,
+				this.kinsect,
+				this.buffs
+			);
 		}
 	}
 
@@ -116,7 +145,16 @@ export class EquipmentService {
 		// console.log("addKinsect");
 		this.kinsect = kinsect;
 		if (updateStats) {
-			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.awakenings, this.modifications, this.kinsect);
+			this.statService.update(
+				this.skills,
+				this.items,
+				this.augmentations,
+				this.upgradeContainer,
+				this.awakenings,
+				this.modifications,
+				this.kinsect,
+				this.buffs
+			);
 		}
 	}
 
@@ -194,7 +232,16 @@ export class EquipmentService {
 			weapon.elderseal = null;
 		}
 		if (updateStats) {
-			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.awakenings, this.modifications, this.kinsect);
+			this.statService.update(
+				this.skills,
+				this.items,
+				this.augmentations,
+				this.upgradeContainer,
+				this.awakenings,
+				this.modifications,
+				this.kinsect,
+				this.buffs
+			);
 		}
 	}
 
@@ -209,7 +256,16 @@ export class EquipmentService {
 			weapon.ailmentBaseAttack = null;
 		}
 		if (updateStats) {
-			this.statService.update(this.skills, this.items, this.augmentations, this.upgradeContainer, this.awakenings, this.modifications, this.kinsect);
+			this.statService.update(
+				this.skills,
+				this.items,
+				this.augmentations,
+				this.upgradeContainer,
+				this.awakenings,
+				this.modifications,
+				this.kinsect,
+				this.buffs
+			);
 		}
 	}
 
@@ -236,7 +292,30 @@ export class EquipmentService {
 
 	updateSkillMode(equippedSkills: EquippedSkillModel[]) {
 		// console.log("UpdateSkillMode");
-		this.statService.update(equippedSkills, this.items, this.augmentations, this.upgradeContainer, this.awakenings, this.modifications, this.kinsect);
+		this.statService.update(
+			equippedSkills,
+			this.items,
+			this.augmentations,
+			this.upgradeContainer,
+			this.awakenings,
+			this.modifications,
+			this.kinsect,
+			this.buffs
+		);
+	}
+
+	updateElementBuff(value: number) {
+		this.buffs.elementBuff = value;
+		this.statService.update(
+			this.skills,
+			this.items,
+			this.augmentations,
+			this.upgradeContainer,
+			this.awakenings,
+			this.modifications,
+			this.kinsect,
+			this.buffs
+		);
 	}
 
 	private updateSkills() {

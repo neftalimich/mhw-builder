@@ -4,6 +4,7 @@ import { Subject } from 'rxjs';
 import { AugmentationModel } from '../models/augmentation.model';
 import { AwakeningLevelModel } from '../models/awakening-level.model';
 import { AwakeningModel } from '../models/awakening.model';
+import { BuffModel } from '../models/buffs.model';
 import { EquippedSkillModel } from '../models/equipped-skill.model';
 import { ItemModel } from '../models/item.model';
 import { KinsectModel } from '../models/kinsect.model';
@@ -49,7 +50,9 @@ export class StatService {
 		upgradeContainer: UpgradeContainerModel,
 		awakenings: AwakeningLevelModel[],
 		modifications: ModificationModel[],
-		kinsect: KinsectModel) {
+		kinsect: KinsectModel,
+		buffs: BuffModel
+	) {
 
 		this.stats = new StatsModel();
 
@@ -80,7 +83,7 @@ export class StatService {
 			this.updateUpgrades(upgradeContainer);
 		}
 		// ----------------------------
-		this.updateItemStats(items);
+		this.updateItemStats(items, buffs);
 		this.updateSkillStats(skills);
 		this.updateAugmentations(augmentations);
 
@@ -93,7 +96,7 @@ export class StatService {
 		this.calcService.updateCalcs(this.stats);
 	}
 
-	private updateItemStats(items: ItemModel[]) {
+	private updateItemStats(items: ItemModel[], buffs: BuffModel) {
 		for (const item of items) {
 			if (item.itemType != ItemType.Tool1 && item.itemType != ItemType.Tool2) {
 				if (item.baseAttack) {
@@ -126,6 +129,12 @@ export class StatService {
 				if (item.elderseal) { this.stats.elderseal = item.elderseal; }
 			}
 		}
+
+		this.stats.fireResist += (buffs.elementBuff * 5);
+		this.stats.waterResist += (buffs.elementBuff * 5);
+		this.stats.thunderResist += (buffs.elementBuff * 5);
+		this.stats.iceResist += (buffs.elementBuff * 5);
+		this.stats.dragonResist += (buffs.elementBuff * 5);
 	}
 
 	private updateSkillStats(equippedSkills: EquippedSkillModel[]) {
@@ -214,6 +223,26 @@ export class StatService {
 			}
 		}
 
+		const elementConversionSkill = equippedSkills.find(skill => skill.id == 'elementConversion');
+		if (elementConversionSkill && elementConversionSkill.skill.mode == ModeType.AllSkillActive) {
+			const sumElementalRes =
+				this.stats.fireResist + this.stats.passiveFireResist
+				+ this.stats.waterResist + this.stats.passiveWaterResist
+				+ this.stats.thunderResist + this.stats.passiveThunderResist
+				+ this.stats.iceResist + this.stats.passiveIceResist
+				+ this.stats.dragonResist + this.stats.passiveDragonResist;
+			let elementalBonus = 0;
+			if (sumElementalRes >= 15) {
+				if (sumElementalRes < 30) {
+					elementalBonus = 10;
+				} else if (sumElementalRes < 40) {
+					elementalBonus = 20;
+				} else {
+					elementalBonus = Math.floor((sumElementalRes - 30) / 20) * 10 + 20;
+				}
+			}
+			this.stats.activeElementAttack += elementalBonus;
+		}
 	}
 
 	private updateAugmentations(augmentations: AugmentationModel[]) {

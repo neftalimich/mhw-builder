@@ -36,14 +36,19 @@
 			<br />
 			<h4>
 				Melodies
-				<span [hidden]="!detailsVisible" (click)="detailsVisible = !detailsVisible"><i class="fas fa-minus-circle number"></i></span>
-				<span [hidden]="detailsVisible" (click)="detailsVisible = !detailsVisible"><i class="fas fa-plus-circle number"></i></span>
+				<span [hidden]="!detailsVisible" (click)="detailsVisible = !detailsVisible"><i
+						class="fas fa-minus-circle number"></i></span>
+				<span [hidden]="detailsVisible" (click)="detailsVisible = !detailsVisible"><i
+						class="fas fa-plus-circle number"></i></span>
 			</h4>
 			<div [hidden]="!detailsVisible">
 				<hr>
 				<mhw-builder-melodies [weaponMelodies]="weaponSlot.item.melodies"></mhw-builder-melodies>
 			</div>
 		</ng-container>
+		<mhw-builder-equipped-buffs [hidden]="!buffsVisible">
+
+		</mhw-builder-equipped-buffs>
 	</div>
 
 	<mhw-builder-tooltip></mhw-builder-tooltip>
@@ -74,14 +79,13 @@
 	<mhw-builder-modal #contributorsModal title="Information">
 		<div style="padding:16px;">
 			<h3>
-				<a href="https://github.com/TurkeyTickle/mhw-builder" target="_blank" rel="noreferrer">TurkeyTickle Github (v1.0)</a>
+				<a href="https://github.com/TurkeyTickle/mhw-builder" target="_blank" rel="noreferrer">TurkeyTickle
+					Github (v1.0)</a>
 			</h3>
 			<h3>
-				<a href="https://www.github.com/neftalimich/mhw-builder" target="_blank" rel="noreferrer">Neftalí Michelet Github (v2.0)</a>
+				<a href="https://www.github.com/neftalimich/mhw-builder" target="_blank" rel="noreferrer">Neftalí
+					Michelet Github (v2.0)</a>
 			</h3>
-			<p>
-				<a href="https://neftalimich.github.io/mhworld-data-page/" target="_blank" rel="noreferrer">MHW Data Page (BETA)</a>
-			</p>
 			<p>
 				<a href="https://twitter.com/mhw_builder" target="_blank" rel="noreferrer">MHW Builder Twitter</a>
 			</p>
@@ -95,21 +99,29 @@
 	</mhw-builder-modal>
 
 	<mhw-builder-modal #itemListModal>
-		<mhw-builder-weapon-list *ngIf="slotService.selectedItemSlot && dataService.getEquipmentCategory(slotService.selectedItemSlot.slotName) == equipmentCategoryTypes.Weapon"
-								 [itemType]="slotService.selectedItemSlot?.slotName" [onlyIceborne]="slotService.onlyIceborne"></mhw-builder-weapon-list>
+		<mhw-builder-weapon-list
+			*ngIf="slotService.selectedItemSlot && dataService.getEquipmentCategory(slotService.selectedItemSlot.slotName) == equipmentCategoryTypes.Weapon"
+			[itemType]="slotService.selectedItemSlot?.slotName" [onlyIceborne]="slotService.onlyIceborne">
+		</mhw-builder-weapon-list>
 
-		<mhw-builder-armor-list *ngIf="slotService.selectedItemSlot && dataService.getEquipmentCategory(slotService.selectedItemSlot.slotName) == equipmentCategoryTypes.Armor"
-								[itemTypeFilters]="[slotService.selectedItemSlot?.slotName]" [onlyIceborne]="slotService.onlyIceborne"></mhw-builder-armor-list>
+		<mhw-builder-armor-list
+			*ngIf="slotService.selectedItemSlot && dataService.getEquipmentCategory(slotService.selectedItemSlot.slotName) == equipmentCategoryTypes.Armor"
+			[itemTypeFilters]="[slotService.selectedItemSlot?.slotName]" [onlyIceborne]="slotService.onlyIceborne">
+		</mhw-builder-armor-list>
 
-		<mhw-builder-charm-list *ngIf="slotService.selectedItemSlot && dataService.getEquipmentCategory(slotService.selectedItemSlot.slotName) == equipmentCategoryTypes.Charm"
-								[itemType]="slotService.selectedItemSlot?.slotName"></mhw-builder-charm-list>
+		<mhw-builder-charm-list
+			*ngIf="slotService.selectedItemSlot && dataService.getEquipmentCategory(slotService.selectedItemSlot.slotName) == equipmentCategoryTypes.Charm"
+			[itemType]="slotService.selectedItemSlot?.slotName"></mhw-builder-charm-list>
 
-		<mhw-builder-tool-list *ngIf="slotService.selectedItemSlot && dataService.getEquipmentCategory(slotService.selectedItemSlot.slotName) == equipmentCategoryTypes.Tool"
-							   [itemType]="slotService.selectedItemSlot?.slotName"></mhw-builder-tool-list>
+		<mhw-builder-tool-list
+			*ngIf="slotService.selectedItemSlot && dataService.getEquipmentCategory(slotService.selectedItemSlot.slotName) == equipmentCategoryTypes.Tool"
+			[itemType]="slotService.selectedItemSlot?.slotName"></mhw-builder-tool-list>
 
-		<mhw-builder-decoration-list *ngIf="slotService.selectedDecorationSlot" [decorationLevel]="slotService.selectedDecorationSlot?.level"></mhw-builder-decoration-list>
+		<mhw-builder-decoration-list *ngIf="slotService.selectedDecorationSlot"
+			[decorationLevel]="slotService.selectedDecorationSlot?.level"></mhw-builder-decoration-list>
 		<mhw-builder-augmentations-list *ngIf="slotService.selectedAugmentationSlot"></mhw-builder-augmentations-list>
-		<mhw-builder-upgrades-list *ngIf="slotService.selectedUpgradeSlot" [upgradeContainer]="slotService.selectedUpgradeSlot?.upgradeContainer"></mhw-builder-upgrades-list>
+		<mhw-builder-upgrades-list *ngIf="slotService.selectedUpgradeSlot"
+			[upgradeContainer]="slotService.selectedUpgradeSlot?.upgradeContainer"></mhw-builder-upgrades-list>
 		<mhw-builder-setbonus-list *ngIf="slotService.selectedSetbonusSlot"></mhw-builder-setbonus-list>
 		<mhw-builder-modifications-list *ngIf="slotService.selectedModificationSlot"></mhw-builder-modifications-list>
 		<mhw-builder-kinsect-list *ngIf="slotService.selectedKinsectSlot"></mhw-builder-kinsect-list>
@@ -117,6 +129,11 @@
 
 	<mhw-builder-modal #changeLogModal title="Change Log">
 		<div style="padding:16px;">
+			<h3>2020-07-12 Alatreon (Version 3.1.8)</h3>
+			<ul>
+				<li>Alatreon.</li>
+				<li>Buffs Alpha</li>
+			</ul>
 			<h3>2020-01-01 ICEBORNE (Version 3.0.0)</h3>
 			<ul>
 				<li>Safi'Jiiva Weapons and Awakenings.</li>

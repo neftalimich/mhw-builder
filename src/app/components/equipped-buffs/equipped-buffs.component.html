@@ -1,0 +1,16 @@
+<div class="container">
+    <br />
+    <h4>
+        Buffs (ALPHA)
+        <span [hidden]="!buffsVisible" (click)="buffsVisible = !buffsVisible"><i
+                class="fas fa-minus-circle number"></i></span>
+        <span [hidden]="buffsVisible" (click)="buffsVisible = !buffsVisible"><i
+                class="fas fa-plus-circle number"></i></span>
+    </h4>
+    <div [hidden]="!buffsVisible">
+        <span class="detail-icon cursor-p" (click)="buffElementLarge()">
+            <img [src]="'assets/images/drinks/drink-element-icon.png'" alt="element buff"> Large Element
+            {{elementBuffActive == 3 ? 'ON': 'OFF'}}
+        </span>
+    </div>
+</div>

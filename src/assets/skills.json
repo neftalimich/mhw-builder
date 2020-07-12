@@ -1741,7 +1741,6 @@
 			}
 		]
 	},
-
 	{
 		"id": "honeyHunter",
 		"name": "Honey Hunter",
@@ -1752,7 +1751,6 @@
 			}
 		]
 	},
-
 	{
 		"id": "carvingPro",
 		"name": "Carving Pro",
@@ -2315,7 +2313,6 @@
 			}
 		]
 	},
-
 	{
 		"id": "mastersTouch",
 		"name": "Master's Touch",
@@ -2519,7 +2516,6 @@
 			}
 		]
 	},
-
 	{
 		"id": "staminaThiefSecrect",
 		"name": "Stamina Thief Secrect",
@@ -2734,6 +2730,32 @@
 		"levels": [
 			{
 				"description": "Greatly increases odds of getting special Festival rewards. (No effects when joining mid-quest.)"
+			}
+		]
+	},
+	{
+		"id": "elementConversion",
+		"name": "Element Conversion",
+		"description": "",
+		"levels": [
+			{
+				"description": "Equipped weapon's elemental power increases as your armor's elemental resistance increases."
+			}
+		],
+		"hasActiveStats": true
+	},
+	{
+		"id": "allElementalResistance",
+		"name": "All Elemental Resistance",
+		"description": "",
+		"levels": [
+			{
+				"description": "Increases all elemental resistances + 20%.",
+				"passiveFireResist": 20,
+				"passiveWaterResist": 20,
+				"passiveThunderResist": 20,
+				"passiveIceResist": 20,
+				"passiveDragonResist": 20
 			}
 		]
 	}

@@ -18,6 +18,7 @@ import { DecorationListComponent } from './components/decoration-list/decoration
 import { DecorationSlotComponent } from './components/decoration-slot/decoration-slot.component';
 import { EquippedSkillsComponent } from './components/equipped-skills/equipped-skills.component';
 import { EquippedStatsComponent } from './components/equipped-stats/equipped-stats.component';
+import { EquippedBuffsComponent } from './components/equipped-buffs/equipped-buffs.component';
 import { ItemDetailsComponent } from './components/item-details/item-details.component';
 import { ItemSlotComponent } from './components/item-slot/item-slot.component';
 import { KinsectDetailsComponent } from './components/kinsect-details/kinsect-details.component';
@@ -79,6 +80,7 @@ import { TooltipService } from './services/tooltip.service';
 		DecorationSlotComponent,
 		EquippedStatsComponent,
 		EquippedSkillsComponent,
+		EquippedBuffsComponent,
 		CalcDetailsComponent,
 		SkillDetailsComponent,
 		SetBonusDetailsComponent,

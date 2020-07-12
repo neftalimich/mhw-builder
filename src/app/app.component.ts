@@ -48,6 +48,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 	tabsVisible = false;
 	attackDefenseVisible = true;
 	skillsVisible = true;
+	buffsVisible = true;
 	detailsVisible = true;
 
 	modalTitle: string;
@@ -154,11 +155,13 @@ export class AppComponent implements OnInit, AfterViewInit {
 				this.statsVisible = true;
 				this.attackDefenseVisible = true;
 				this.skillsVisible = false;
+				this.buffsVisible = true;
 			} else {
 				this.equipmentVisible = true;
 				this.statsVisible = false;
 				this.attackDefenseVisible = false;
 				this.skillsVisible = false;
+				this.buffsVisible = false;
 			}
 			this.tabsVisible = true;
 		} else {
@@ -166,6 +169,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 			this.statsVisible = true;
 			this.attackDefenseVisible = true;
 			this.skillsVisible = true;
+			this.buffsVisible = true;
 			this.tabsVisible = false;
 		}
 	}
@@ -181,6 +185,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 		this.attackDefenseVisible = true;
 		this.skillsVisible = false;
 		this.detailsVisible = true;
+		this.buffsVisible = true;
 	}
 	skillsSelected() {
 		this.equipmentVisible = false;
@@ -188,6 +193,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 		this.attackDefenseVisible = false;
 		this.skillsVisible = true;
 		this.detailsVisible = false;
+		this.buffsVisible = false;
 	}
 
 	@HostListener('document:keydown', ['$event']) onKeydownHandler(event: KeyboardEvent) {
