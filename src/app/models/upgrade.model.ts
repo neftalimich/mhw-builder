@@ -8,6 +8,7 @@ export class UpgradeModel {
 	description: string;
 	levels: UpgradeLevelModel[];
 	multiplier?: number;
+	WeaponLevels?: number[][];
 	WeaponCustomUpgrades: number[][];
 }
 

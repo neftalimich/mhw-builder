@@ -1,5 +1,4 @@
 import { ChangeDetectorRef, Injectable } from '@angular/core';
-import * as _ from 'lodash';
 import { Subject } from 'rxjs';
 import { AugmentationSlotComponent } from '../components/augmentation-slot/augmentation-slot.component';
 import { AwakeningSlotComponent } from '../components/awakening-slot/awakening-slot.component';
@@ -523,8 +522,8 @@ export class SlotService {
 	}
 
 	private applySlotAugmentation() {
-		const slotAugs = _.filter(this.equipmentService.augmentations, aug => aug.id == 4);
-		const augDecorationSlot = _.find(this.weaponSlot.item.slots, slot => slot.augmentation);
+		const slotAugs = this.equipmentService.augmentations.filter(aug => aug.id == 4);
+		const augDecorationSlot = this.weaponSlot.item.slots.find(slot => slot.augmentation);
 
 		if (slotAugs && slotAugs.length) {
 			this.changeDetector.detectChanges();
@@ -542,8 +541,8 @@ export class SlotService {
 				this.weaponSlot.item.slots.push({ level: slotAugs[0].levels[slotAugs.length - 1].slotLevel, augmentation: true });
 			}
 		} else {
-			if (_.some(this.weaponSlot.item.slots, decorationSlot => decorationSlot.augmentation)) {
-				this.weaponSlot.item.slots = _.reject(this.weaponSlot.item.slots, decorationSlot => decorationSlot === augDecorationSlot);
+			if (this.weaponSlot.item.slots.some(decorationSlot => decorationSlot.augmentation)) {
+				this.weaponSlot.item.slots = this.weaponSlot.item.slots.filter(decorationSlot => !(decorationSlot === augDecorationSlot)); // Was Reject
 				this.equipmentService.removeDecoration(this.weaponSlot.decorationSlots.last.decoration);
 			}
 		}
@@ -620,10 +619,11 @@ export class SlotService {
 			for (let i = this.weaponSlot.item.slots.length - 1; i >= 0; i--) {
 				const slot = this.weaponSlot.item.slots[i];
 				const toRemove = Math.min(slot.level, -extraSlots);
-
-				const added = slot.slotsAdded.find(x => x.itemType == itemType);
-				if (added) {
-					added.level -= toRemove;
+				if (slot.slotsAdded) {
+					const added = slot.slotsAdded.find(x => x.itemType == itemType);
+					if (added) {
+						added.level -= toRemove;
+					}
 				}
 				const decoSlot = this.weaponSlot.decorationSlots.toArray()[i];
 				if (decoSlot && decoSlot.decoration && decoSlot.decoration.level > slot.level - toRemove) {

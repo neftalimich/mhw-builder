@@ -58,7 +58,7 @@
 		</thead>
 		<tbody>
 			<ng-container *ngFor="let ammo of ammoCapacities.ammo">
-				<tr *ngIf="!allZero2(ammo.levels)">
+				<tr *ngIf="!allZero(ammo.levels)">
 					<td>
 						<img [src]="'assets/images/ammo/ammo-'+ammo.name+'-icon.png'" alt="Bullet" /> {{ammo.name|titlecase}}
 					</td>

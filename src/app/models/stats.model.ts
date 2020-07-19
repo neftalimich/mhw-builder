@@ -119,6 +119,8 @@ export class StatsModel {
 	passiveIceResist: number;
 	passiveDragonResist: number;
 
+	passiveElementResistPercent?: number;
+
 	healOnHitPercent: number;
 	hastenRecovery?: number;
 

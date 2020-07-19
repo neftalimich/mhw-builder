@@ -94,7 +94,11 @@ export class UpgradesListComponent implements OnInit {
 
 	selectUpgLevel(augIndex: number, level: number) {
 		const auxUpg = this.upgradeContainer.upgradeDetails[augIndex];
-		const auxLevel = this.upgrades[augIndex].levels[level - 1];
+		let auxOverrideValue: number = null;
+		if (this.upgrades[augIndex].WeaponLevels) {
+			auxOverrideValue = this.upgrades[augIndex].WeaponLevels[this.weaponIndex][level - 1];
+		}
+
 		if (auxUpg.level == level) {
 			auxUpg.level = level - 1;
 			if (level > 1) {
@@ -102,21 +106,57 @@ export class UpgradesListComponent implements OnInit {
 				this.upgradeContainer.used -= auxUpg.totalSlots;
 				this.upgradeContainer.used += auxDown.totalSlots;
 
+				if (auxOverrideValue) {
+					this.overrideUpgrageLevel(auxDown, augIndex, auxOverrideValue);
+				}
 				this.updatePassiveStats(auxUpg, auxDown);
 			} else {
 				this.upgradeContainer.used -= auxUpg.totalSlots;
-
 				this.clearPassiveStats(auxUpg);
 			}
 		} else {
+			const auxLevel = this.upgrades[augIndex].levels[level - 1];
 			if (this.upgradeContainer.used - auxUpg.totalSlots + auxLevel.totalSlots <= this.upgradeContainer.slots) {
 				this.upgradeContainer.used -= auxUpg.totalSlots;
 				this.upgradeContainer.used += auxLevel.totalSlots;
 
 				auxUpg.level = level;
+
+				if (auxOverrideValue) {
+					this.overrideUpgrageLevel(auxLevel, augIndex, auxOverrideValue);
+				}
 				this.updatePassiveStats(auxUpg, auxLevel);
 			}
 		}
+	}
+
+	private overrideUpgrageLevel(upgradeLevel: UpgradeLevelModel, augIndex: number, value: number) {
+		switch (augIndex) {
+			case 0:
+				upgradeLevel.passiveAttack = value;
+				break;
+			case 1:
+				upgradeLevel.passiveAffinity = value;
+				break;
+			case 2:
+				upgradeLevel.passiveDefense = value;
+				break;
+			case 3:
+				upgradeLevel.slotLevel = value;
+				break;
+			case 4:
+				upgradeLevel.healOnHitPercent = value;
+				break;
+			case 5:
+				upgradeLevel.passiveAilment = value;
+				upgradeLevel.passiveElement = value;
+				break;
+			case 6:
+				break;
+			default:
+				break;
+		}
+		upgradeLevel.description = '+' + value;
 	}
 
 	updatePassiveStats(aug: UpgradeLevelModel, level: UpgradeLevelModel) {

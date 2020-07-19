@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import * as _ from 'lodash';
 import { StatService } from 'src/app/services/stat.service';
-import { AmmoCapacitiesModel } from '../../models/ammo-capacities.model';
+import { AmmoCapacitiesModel, AmmoLevelModel } from '../../models/ammo-capacities.model';
 import { DeviationType, RecoilType, ReloadType } from '../../types/deviation.type';
 
 @Component({
@@ -40,12 +39,8 @@ export class AmmoCapacitiesComponent implements OnInit {
 	ngOnInit() {
 	}
 
-	allZero(arr: number[]) {
-		return _.every(arr, v => !v);
-	}
-
-	allZero2(levels) {
-		return _.every(levels, v => v.capacity == 0);
+	allZero(levels: AmmoLevelModel[]) {
+		return levels.every(v => v.capacity == 0);
 	}
 
 	setRecoil(val: number) {

@@ -1,5 +1,4 @@
 import { ChangeDetectorRef, Injectable } from '@angular/core';
-import * as _ from 'lodash';
 import { Subject } from 'rxjs';
 import { ItemSlotComponent } from '../components/item-slot/item-slot.component';
 import { AwakeningLevelModel } from '../models/awakening-level.model';
@@ -407,6 +406,12 @@ export class BuildService {
 
 								detail.description = upgrades[i].levels[buildItem.upgradeLevels[i] - 1].description;
 
+								if (upgrades[i].WeaponLevels) {
+									const overrideValue = upgrades[i].WeaponLevels[weaponIndex][buildItem.upgradeLevels[i] - 1];
+									this.overrideUpgrageLevel(detail, i, overrideValue);
+								} else {
+
+								}
 								upgradeContainer.used += detail.totalSlots;
 							} else {
 								detail.requiredSlots = 0;
@@ -614,12 +619,12 @@ export class BuildService {
 			}
 
 			if (item.slots) {
-				let decorations = _.filter(this.equipmentService.decorations, d => d.itemId === item.id);
-				decorations = _.orderBy(decorations, [d => d.level], ['desc']);
+				let decorations = this.equipmentService.decorations.filter(d => d.itemId === item.id);
+				decorations = decorations.sort((a, b) => (a.level < b.level) ? 1 : ((a.level > b.level) ? -1 : 0));
 				for (let i = 0; i < item.slots.length; i++) {
 					const slot = item.slots[i];
-					const decoration = _.find(decorations, d => d.itemId == item.id && d.level <= slot.level);
-					decorations = _.without(decorations, decoration);
+					const decoration = decorations.find(d => d.itemId == item.id && d.level <= slot.level);
+					decorations = decorations.filter(d => !(d === decoration));
 					if (decoration) {
 						result += `d${decoration.id.toString()}`;
 					}
@@ -628,5 +633,34 @@ export class BuildService {
 		}
 
 		return result;
+	}
+
+	private overrideUpgrageLevel(upgradeLevel: UpgradeLevelModel, augIndex: number, value: number) {
+		switch (augIndex) {
+			case 0:
+				upgradeLevel.passiveAttack = value;
+				break;
+			case 1:
+				upgradeLevel.passiveAffinity = value;
+				break;
+			case 2:
+				upgradeLevel.passiveDefense = value;
+				break;
+			case 3:
+				upgradeLevel.slotLevel = value;
+				break;
+			case 4:
+				upgradeLevel.healOnHitPercent = value;
+				break;
+			case 5:
+				upgradeLevel.passiveAilment = value;
+				upgradeLevel.passiveElement = value;
+				break;
+			case 6:
+				break;
+			default:
+				break;
+		}
+		upgradeLevel.description = '+' + value;
 	}
 }

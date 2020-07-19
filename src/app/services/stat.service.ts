@@ -210,6 +210,8 @@ export class StatService {
 					if (level.passiveIceResist) { this.stats.passiveIceResist += level.passiveIceResist; }
 					if (level.passiveDragonResist) { this.stats.passiveDragonResist += level.passiveDragonResist; }
 
+					if (level.passiveElementResistPercent) { this.stats.passiveElementResistPercent = level.passiveElementResistPercent; }
+
 					if (level.hiddenElementUp) { this.stats.elementAttackMultiplier = level.hiddenElementUp; }
 					if (level.ammoUp) { this.stats.ammoUp += level.ammoUp; }
 					if (level.eldersealLevelBoost) { this.stats.eldersealLevelBoost = level.eldersealLevelBoost; }
@@ -221,6 +223,14 @@ export class StatService {
 					this.stats.frostcraft = [];
 				}
 			}
+		}
+
+		if (this.stats.passiveElementResistPercent) {
+			this.stats.passiveFireResist += (this.stats.fireResist + this.stats.passiveFireResist) * this.stats.passiveElementResistPercent / 100;
+			this.stats.passiveWaterResist += (this.stats.waterResist + this.stats.passiveWaterResist) * this.stats.passiveElementResistPercent / 100;
+			this.stats.passiveThunderResist += (this.stats.thunderResist + this.stats.passiveThunderResist) * this.stats.passiveElementResistPercent / 100;
+			this.stats.passiveIceResist += (this.stats.iceResist + this.stats.passiveIceResist) * this.stats.passiveElementResistPercent / 100;
+			this.stats.passiveDragonResist += (this.stats.dragonResist + this.stats.passiveDragonResist) * this.stats.passiveElementResistPercent / 100;
 		}
 
 		const elementConversionSkill = equippedSkills.find(skill => skill.id == 'elementConversion');
@@ -241,7 +251,8 @@ export class StatService {
 					elementalBonus = Math.floor((sumElementalRes - 30) / 20) * 10 + 20;
 				}
 			}
-			this.stats.activeElementAttack += elementalBonus;
+
+			this.stats.baseElementAttack += elementalBonus;
 		}
 	}
 

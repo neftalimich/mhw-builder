@@ -68,5 +68,7 @@ export class SkillLevelModel {
 	passiveIceResist: number;
 	passiveDragonResist: number;
 
+	passiveElementResistPercent?: number;
+
 	activeSkills: SkillReferenceModel[];
 }

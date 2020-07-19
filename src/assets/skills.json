@@ -2751,11 +2751,7 @@
 		"levels": [
 			{
 				"description": "Increases all elemental resistances + 20%.",
-				"passiveFireResist": 20,
-				"passiveWaterResist": 20,
-				"passiveThunderResist": 20,
-				"passiveIceResist": 20,
-				"passiveDragonResist": 20
+				"passiveElementResistPercent": 20
 			}
 		]
 	}
