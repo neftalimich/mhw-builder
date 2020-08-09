@@ -753,6 +753,16 @@ id	itemType	rarity	name	defense	fireResist	waterResist	thunderResist	iceResist	d
 1798	Arms	12	Escadora Armguards β +	160;178;198	3	0	0	3	2	attackBoost-3;alatreonDivinity	4;3	alatreon	4
 1799	Waist	12	Escadora Might  β +	160;178;198	3	0	0	3	2	attackBoost-3;dragonResistance-3;alatreonDivinity	4;1	alatreon	4
 1800	Legs	12	Escadora Sheath  β +	160;178;198	3	0	0	3	2	defenseBoost-3;alatreonDivinity	4;4;2	alatreon	4
+1801	Head	11	Frostfang Helm α +	162;180;200	-3	2	-2	3	0	criticalEye-2;quickSheath-1;frostfangAbsoluteArt	3;2;1	frostfang-barioth	0
+1802	Chest	11	Frostfang Mail α +	162;180;200	-3	2	-2	3	0	attackBoost-3;criticalDraw-1;frostfangAbsoluteArt	3;2	frostfang-barioth	0
+1803	Arms	11	Frostfang Vambraces α +	162;180;200	-3	2	-2	3	0	criticalEye-2;slugger-2;frostfangAbsoluteArt	2;2	frostfang-barioth	0
+1804	Waist	11	Frostfang Coil α +	162;180;200	-3	2	-2	3	0	quickSheath-1;criticalDraw-1;frostfangAbsoluteArt	3;3;1	frostfang-barioth	0
+1805	Legs	11	Frostfang Greaves α +	162;180;200	-3	2	-2	3	0	attackBoost-1;slugger-3;frostfangAbsoluteArt	1;1	frostfang-barioth	0
+1806	Head	11	Frostfang Helm β +	162;180;200	-3	2	-2	3	0	criticalEye-2;frostfangAbsoluteArt	4;2;1	frostfang-barioth	0
+1807	Chest	11	Frostfang Mail β +	162;180;200	-3	2	-2	3	0	attackBoost-3;frostfangAbsoluteArt	4;2	frostfang-barioth	0
+1808	Arms	11	Frostfang Vambraces β +	162;180;200	-3	2	-2	3	0	criticalEye-2;frostfangAbsoluteArt	4;4	frostfang-barioth	0
+1809	Waist	11	Frostfang Coil  β +	162;180;200	-3	2	-2	3	0	quickSheath-1;frostfangAbsoluteArt	4;3;1	frostfang-barioth	0
+1810	Legs	11	Frostfang Greaves  β +	162;180;200	-3	2	-2	3	0	attackBoost-1;frostfangAbsoluteArt	4;4	frostfang-barioth	0
 3001	Head	9	Oolong Hair α +	120;136;158	1	1	1	4	1	criticalEye-3;festivalBlessing	4	event	0
 3002	Chest	9	Oolong Vest α +	120;136;158	1	1	1	4	1	staminaSurge-2;festivalBlessing	4	event	0
 3003	Arms	9	Oolong Sleeves α +	120;136;158	1	1	1	4	1	coalescence-2;festivalBlessing	4	event	0

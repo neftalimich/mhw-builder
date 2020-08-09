@@ -706,5 +706,19 @@
 				"pieces": 3
 			}
 		]
+	},
+	{
+		"id": "frostfangAbsoluteArt",
+		"name": "Frostfang Absolute Art",
+		"setLevels": [
+			{
+				"id": "punishingDraw",
+				"pieces": 1
+			},
+			{
+				"id": "sluggerSecret",
+				"pieces": 3
+			}
+		]
 	}
 ]

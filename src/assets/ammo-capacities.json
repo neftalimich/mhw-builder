@@ -16312,6 +16312,399 @@
     "bloqued": false
   },
   {
+    "id": 3172,
+    "ammo": [
+      {
+        "name": "normal",
+        "levels": [
+          {
+            "capacity": 4,
+            "type": 0,
+            "recoil": [ 2, 2, 2, 2, 2 ],
+            "reload": [ 3, 3, 3, 4, 4 ]
+          },
+          {
+            "capacity": 0,
+            "type": 0,
+            "recoil": [ 3, 3, 3, 3, 3 ],
+            "reload": [ 3, 3, 3, 3, 3 ]
+          },
+          {
+            "capacity": 1,
+            "type": 0,
+            "recoil": [ 4, 3, 3, 3, 2 ],
+            "reload": [ 2, 2, 2, 2, 3 ]
+          }
+        ]
+      },
+      {
+        "name": "pierce",
+        "levels": [
+          {
+            "capacity": 0,
+            "type": 0,
+            "recoil": [ 3, 3, 3, 3, 3 ],
+            "reload": [ 3, 3, 3, 3, 3 ]
+          },
+          {
+            "capacity": 0,
+            "type": 0,
+            "recoil": [ 3, 3, 3, 3, 3 ],
+            "reload": [ 3, 3, 3, 3, 3 ]
+          },
+          {
+            "capacity": 1,
+            "type": 0,
+            "recoil": [ 4, 3, 3, 2, 2 ],
+            "reload": [ 2, 2, 2, 3, 3 ]
+          }
+        ]
+      },
+      {
+        "name": "spread",
+        "levels": [
+          {
+            "capacity": 0,
+            "type": 0,
+            "recoil": [ 3, 3, 3, 3, 3 ],
+            "reload": [ 3, 3, 3, 3, 3 ]
+          },
+          {
+            "capacity": 0,
+            "type": 0,
+            "recoil": [ 3, 3, 3, 3, 3 ],
+            "reload": [ 3, 3, 3, 3, 3 ]
+          },
+          {
+            "capacity": 3,
+            "type": 0,
+            "recoil": [ 4, 3, 2, 2, 2 ],
+            "reload": [ 2, 2, 3, 3, 4 ]
+          }
+        ]
+      },
+      {
+        "name": "recover",
+        "levels": [
+          {
+            "capacity": 2,
+            "type": 0,
+            "recoil": [ 3, 2, 2, 2, 2 ],
+            "reload": [ 1, 2, 3, 3, 4 ]
+          },
+          {
+            "capacity": 1,
+            "type": 0,
+            "recoil": [ 4, 2, 2, 2, 2 ],
+            "reload": [ 1, 2, 3, 3, 4 ]
+          }
+        ]
+      },
+      {
+        "name": "exhaust",
+        "levels": [
+          {
+            "capacity": 4,
+            "type": 0,
+            "recoil": [ 3, 2, 2, 2, 2 ],
+            "reload": [ 2, 2, 4, 4, 4 ]
+          },
+          {
+            "capacity": 0,
+            "type": 0,
+            "recoil": [ 3, 3, 3, 3, 3 ],
+            "reload": [ 3, 3, 3, 3, 3 ]
+          }
+        ]
+      },
+      {
+        "name": "freeze",
+        "levels": [
+          {
+            "capacity": 4,
+            "type": 2,
+            "recoil": [ 3, 2, 2, 2, 2 ],
+            "reload": [ 1, 1, 1, 1, 1 ]
+          }
+        ]
+      },
+      {
+        "name": "slicing",
+        "levels": [
+          {
+            "capacity": 3,
+            "type": 0,
+            "recoil": [ 4, 3, 3, 3, 2 ],
+            "reload": [ 2, 2, 3, 4, 4 ]
+          }
+        ]
+      },
+      {
+        "name": "demon",
+        "levels": [
+          {
+            "capacity": 1,
+            "type": 0,
+            "recoil": [ 3, 2, 2, 2, 2 ],
+            "reload": [ 1, 2, 3, 4, 4 ]
+          }
+        ]
+      },
+      {
+        "name": "armor",
+        "levels": [
+          {
+            "capacity": 1,
+            "type": 0,
+            "recoil": [ 3, 2, 2, 2, 2 ],
+            "reload": [ 1, 2, 3, 4, 4 ]
+          }
+        ]
+      },
+      {
+        "name": "tranq",
+        "levels": [
+          {
+            "capacity": 2,
+            "type": 0,
+            "recoil": [ 4, 3, 2, 2, 2 ],
+            "reload": [ 3, 3, 3, 4, 4 ]
+          }
+        ]
+      }
+    ],
+    "deviation": [ "Average", "Low", "None", "None", "None" ],
+    "specialAmmo": "Wyvernblast",
+    "missingData": false,
+    "missingMods": false,
+    "bloqued": false
+  },
+  {
+    "id": 3173,
+    "ammo": [
+      {
+        "name": "normal",
+        "levels": [
+          {
+            "capacity": 7,
+            "type": 0,
+            "recoil": [ 3, 2, 2, 2, 2 ],
+            "reload": [ 3, 3, 3, 4, 4 ]
+          },
+          {
+            "capacity": 0,
+            "type": 0,
+            "recoil": [ 3, 3, 3, 3, 3 ],
+            "reload": [ 3, 3, 3, 3, 3 ]
+          },
+          {
+            "capacity": 4,
+            "type": 0,
+            "recoil": [ 4, 4, 3, 3, 2 ],
+            "reload": [ 2, 2, 2, 3, 3 ]
+          }
+        ]
+      },
+      {
+        "name": "pierce",
+        "levels": [
+          {
+            "capacity": 0,
+            "type": 0,
+            "recoil": [ 3, 3, 3, 3, 3 ],
+            "reload": [ 3, 3, 3, 3, 3 ]
+          },
+          {
+            "capacity": 0,
+            "type": 0,
+            "recoil": [ 3, 3, 3, 3, 3 ],
+            "reload": [ 3, 3, 3, 3, 3 ]
+          },
+          {
+            "capacity": 3,
+            "type": 0,
+            "recoil": [ 5, 4, 4, 4, 3 ],
+            "reload": [ 1, 2, 2, 3, 3 ]
+          }
+        ]
+      },
+      {
+        "name": "spread",
+        "levels": [
+          {
+            "capacity": 0,
+            "type": 0,
+            "recoil": [ 3, 3, 3, 3, 3 ],
+            "reload": [ 3, 3, 3, 3, 3 ]
+          },
+          {
+            "capacity": 0,
+            "type": 0,
+            "recoil": [ 3, 3, 3, 3, 3 ],
+            "reload": [ 3, 3, 3, 3, 3 ]
+          },
+          {
+            "capacity": 5,
+            "type": 0,
+            "recoil": [ 4, 4, 3, 2, 2 ],
+            "reload": [ 2, 2, 3, 3, 4 ]
+          }
+        ]
+      },
+      {
+        "name": "sticky",
+        "levels": [
+          {
+            "capacity": 0,
+            "type": 0,
+            "recoil": [ 3, 3, 3, 3, 3 ],
+            "reload": [ 3, 3, 3, 3, 3 ]
+          },
+          {
+            "capacity": 0,
+            "type": 0,
+            "recoil": [ 3, 3, 3, 3, 3 ],
+            "reload": [ 3, 3, 3, 3, 3 ]
+          },
+          {
+            "capacity": 3,
+            "type": 0,
+            "recoil": [ 5, 5, 4, 4, 3 ],
+            "reload": [ 1, 1, 2, 2, 3 ]
+          }
+        ]
+      },
+      {
+        "name": "cluster",
+        "levels": [
+          {
+            "capacity": 0,
+            "type": 0,
+            "recoil": [ 3, 3, 3, 3, 3 ],
+            "reload": [ 3, 3, 3, 3, 3 ]
+          },
+          {
+            "capacity": 0,
+            "type": 0,
+            "recoil": [ 3, 3, 3, 3, 3 ],
+            "reload": [ 3, 3, 3, 3, 3 ]
+          },
+          {
+            "capacity": 1,
+            "type": 0,
+            "recoil": [ 4, 4, 4, 4, 3 ],
+            "reload": [ 1, 1, 1, 1, 1 ]
+          }
+        ]
+      },
+      {
+        "name": "recover",
+        "levels": [
+          {
+            "capacity": 2,
+            "type": 0,
+            "recoil": [ 5, 4, 4, 4, 3 ],
+            "reload": [ 1, 1, 2, 3, 3 ]
+          },
+          {
+            "capacity": 2,
+            "type": 0,
+            "recoil": [ 5, 5, 4, 4, 3 ],
+            "reload": [ 1, 1, 2, 3, 3 ]
+          }
+        ]
+      },
+      {
+        "name": "exhaust",
+        "levels": [
+          {
+            "capacity": 7,
+            "type": 0,
+            "recoil": [ 2, 2, 2, 2, 2 ],
+            "reload": [ 3, 4, 4, 4, 4 ]
+          },
+          {
+            "capacity": 0,
+            "type": 0,
+            "recoil": [ 3, 3, 3, 3, 3 ],
+            "reload": [ 3, 3, 3, 3, 3 ]
+          }
+        ]
+      },
+      {
+        "name": "freeze",
+        "levels": [
+          {
+            "capacity": 7,
+            "type": 0,
+            "recoil": [ 2, 2, 2, 2, 2 ],
+            "reload": [ 2, 3, 3, 4, 4 ]
+          }
+        ]
+      },
+      {
+        "name": "slicing",
+        "levels": [
+          {
+            "capacity": 4,
+            "type": 0,
+            "recoil": [ 5, 4, 4, 3, 3 ],
+            "reload": [ 1, 1, 2, 3, 3 ]
+          }
+        ]
+      },
+      {
+        "name": "wyvern",
+        "levels": [
+          {
+            "capacity": 1,
+            "type": 0,
+            "recoil": [ 6, 6, 6, 6, 6 ],
+            "reload": [ 1, 1, 1, 2, 2 ]
+          }
+        ]
+      },
+      {
+        "name": "demon",
+        "levels": [
+          {
+            "capacity": 3,
+            "type": 0,
+            "recoil": [ 5, 5, 4, 3, 3 ],
+            "reload": [ 1, 1, 2, 3, 3 ]
+          }
+        ]
+      },
+      {
+        "name": "armor",
+        "levels": [
+          {
+            "capacity": 2,
+            "type": 0,
+            "recoil": [ 5, 5, 4, 3, 3 ],
+            "reload": [ 1, 1, 2, 3, 3 ]
+          }
+        ]
+      },
+      {
+        "name": "tranq",
+        "levels": [
+          {
+            "capacity": 3,
+            "type": 0,
+            "recoil": [ 3, 3, 2, 2, 2 ],
+            "reload": [ 2, 3, 3, 4, 4 ]
+          }
+        ]
+      }
+    ],
+    "deviation": [ "Low", "None", "None", "None", "None" ],
+    "specialAmmo": "Wyvernsnipe",
+    "missingData": false,
+    "missingMods": false,
+    "bloqued": false
+  },
+  {
     "id": 4055,
     "ammo": [
       {
@@ -21548,5 +21941,5 @@
     "missingData": false,
     "missingMods": false,
     "bloqued": false
-  }
+  },
 ]
