@@ -50,7 +50,7 @@ export class ArmorListComponent implements OnInit {
 	waistId = 0;
 	legsId = 0;
 
-	showFilterContainer = false;
+	showFilterContainer = true;
 	showSortContainer = true;
 
 	@HostListener('window:resize')
