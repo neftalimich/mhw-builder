@@ -2754,5 +2754,27 @@
 				"passiveElementResistPercent": 20
 			}
 		]
+	},
+	{
+		"id": "inheritance",
+		"name": "Inheritance",
+		"description": "",
+		"levels": [
+			{
+				"description": "Remove the skill level cap for the skill secrets."
+			}
+		]
+	},
+	{
+		"id": "transcendence",
+		"name": "Transcendece",
+		"description": "",
+		"levels": [
+			{
+				"description": "Grands True Razor Sharp/Spare Shot.Health/Stamina +100 at the start ofa quest of after fainting.",
+				"passiveHealth": 50,
+				"passiveStamina": 50
+			}
+		]
 	}
 ]

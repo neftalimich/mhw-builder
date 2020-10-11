@@ -46,7 +46,7 @@ id	rarity	name	levels	skills
 269	6	Ice Charm	3	iceResistance-1
 270	6	Blight Charm	3	blightResistance-1
 271	12	Frost Charm	5	iceAttack-1
-272	11	Master's Charm	4	criticalEye-1
+272	12	Master's Charm	5	criticalEye-1
 273	12	Evasion Charm	5	evadeWindow-1
 274	8	Sheath Charm	3	quickSheath-1
 275	6	Whetstone Charm	3	speedSharpening-1
@@ -63,16 +63,16 @@ id	rarity	name	levels	skills
 286	7	Bombardier Charm	3	bombardier-1
 287	11	Mushroom Charm	3	mushroomancer-1
 288	12	Awakening Charm	3	freeElemAmmoUp-1
-289	12	Handicraft Charm	4	handicraft-1
+289	12	Handicraft Charm	5	handicraft-1
 290	5	Mud Puppy Charm	1	muckResistance-1;leapOfFaith-1
 291	5	Trickshot Charm	1	dungmaster-1;blindsider-1
 292	5	Hunter's Life Charm	1	bbqMaster-1;masterFisher-1
 293	5	Procurer's Charm	1	proTransporter-1;honeyHunter-1
 294	5	Gatherer's Charm	1	masterGatherer-1;carvingPro-1
 295	7	Guard Charm	3	ironSkin-1
-296	10	Earplugs Charm	4	earplugs-1
+296	12	Earplugs Charm	5	earplugs-1
 297	9	Tremor Charm	3	tremorResistance-1
-298	8	Exploiter Charm	2	weaknessExploit-1
+298	12	Exploiter Charm	3	weaknessExploit-1
 299	12	Focus Charm	3	focus-1
 300	11	Breaker Charm	3	partbreaker-1
 301	11	Fury Charm	5	resentment-1
@@ -88,7 +88,7 @@ id	rarity	name	levels	skills
 311	7	Clearmind Charm	1	heatGuard-1;effluvialExpert-1
 312	7	Rider's Charm	1	masterMounter-1;jumpMaster-1
 313	7	Surveyor's Charm	1	scoutflyRangeUp-1;scholar-1
-314	12	Critical Charm	2	criticalBoost-1
+314	12	Critical Charm	3	criticalBoost-1
 315	11	Invigorate Charm	3	powerProlonger-1
 316	11	Penetration Charm	2	piercingShots-1
 317	11	Dispersal Charm	2	spreadPowerShots-1

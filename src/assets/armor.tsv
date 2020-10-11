@@ -763,6 +763,16 @@ id	itemType	rarity	name	defense	fireResist	waterResist	thunderResist	iceResist	d
 1808	Arms	11	Frostfang Vambraces β +	162;180;200	-3	2	-2	3	0	criticalEye-2;frostfangAbsoluteArt	4;4	frostfang-barioth	0
 1809	Waist	11	Frostfang Coil  β +	162;180;200	-3	2	-2	3	0	quickSheath-1;frostfangAbsoluteArt	4;3;1	frostfang-barioth	0
 1810	Legs	11	Frostfang Greaves  β +	162;180;200	-3	2	-2	3	0	attackBoost-1;frostfangAbsoluteArt	4;4	frostfang-barioth	0
+1811	Head	12	Dragonhead α +	180;198;218	-1	2	2	0	-4	stunResistance-3;guard-3;fatalisLegend	3;2;2	fatalis	5
+1812	Chest	12	Dragonhide α +	180;198;218	-1	2	2	0	-4	weaknessExploit-1;evadeWindow-2;fatalisLegend	4;4;3	fatalis	5
+1813	Arms	12	Dragonclaws α +	180;198;218	-1	2	2	0	-4	weaknessExploit-1;handicraft-3;fatalisLegend	4;1	fatalis	5
+1814	Waist	12	Dragonbarbs α +	180;198;218	-1	2	2	0	-4	criticalEye-3;weaknessExploit-1;fatalisLegend	4;3;3	fatalis	5
+1815	Legs	12	Dragonfeet α +	180;198;218	-1	2	2	0	-4	evadeWindow-1;handicraft-2;fatalisLegend	4;4	fatalis	5
+1816	Head	12	Dragonhead β +	180;198;218	-1	2	2	0	-4	stunResistance-3;fatalisLegend	4;4;4	fatalis	5
+1817	Chest	12	Dragonhide β +	180;198;218	-1	2	2	0	-4	weaknessExploit-1;evadeWindow-1;fatalisLegend	4;4;4	fatalis	5
+1818	Arms	12	Dragonclaws β +	180;198;218	-1	2	2	0	-4	weaknessExploit-1;fatalisLegend	4;4;4	fatalis	5
+1819	Waist	12	Dragonbarbs  β +	180;198;218	-1	2	2	0	-4	criticalEye-2;fatalisLegend	4;4;4	fatalis	5
+1820	Legs	12	Dragonfeet  β +	180;198;218	-1	2	2	0	-4	evadeWindow-1;fatalisLegend	4;4;4	fatalis	5
 3001	Head	9	Oolong Hair α +	120;136;158	1	1	1	4	1	criticalEye-3;festivalBlessing	4	event	0
 3002	Chest	9	Oolong Vest α +	120;136;158	1	1	1	4	1	staminaSurge-2;festivalBlessing	4	event	0
 3003	Arms	9	Oolong Sleeves α +	120;136;158	1	1	1	4	1	coalescence-2;festivalBlessing	4	event	0

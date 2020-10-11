@@ -720,5 +720,23 @@
 				"pieces": 3
 			}
 		]
+	},
+	{
+		"id": "fatalisLegend",
+		"name": "Fatalis Legend",
+		"setLevels": [
+			{
+				"id": "inheritance",
+				"pieces": 2
+			},
+			{
+				"id": "transcendence",
+				"pieces": 4
+			},
+			{
+				"id": "trueRazorSharpSpareShot",
+				"pieces": 4
+			}
+		]
 	}
 ]
