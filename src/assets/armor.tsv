@@ -297,7 +297,7 @@ id	itemType	rarity	name	defense	fireResist	waterResist	thunderResist	iceResist	d
 1296	Head	10	Rathalos Helm β +	140;150;172	3	1	-2	1	-3	attackBoost-2;rathalosEssence	4;1	rathalos	0
 1297	Chest	10	Rathalos Mail β +	140;150;172	3	1	-2	1	-3	weaknessExploit-2;rathalosEssence	4	rathalos	0
 1298	Arms	10	Rathalos Vambraces β +	140;150;172	3	1	-2	1	-3	jumpMaster-1;rathalosEssence	4;3	rathalos	0
-1299	Waist	10	Rathalos Coil β +	140;150;172	3	1	-2	1	-3	fireAttack-2;rathalosEssence	3;2	rathalos	0
+1299	Waist	10	Rathalos Coil β +	140;150;172	3	1	-2	1	-3	fireAttack-2;rathalosEssence	4;2	rathalos	0
 1300	Legs	10	Rathalos Greaves β +	140;150;172	3	1	-2	1	-3	slingerCapacity-2;attackBoost-1;rathalosEssence	4	rathalos	0
 1301	Head	11	Rath Soul Helm α +	148;156;172	3	2	2	-3	-4	criticalBoost-1;cliffhanger-1;rathalosEssence	1;1	rathalos	0
 1302	Chest	11	Rath Soul Mail α +	148;156;172	3	2	2	-3	-4	freeElemAmmoUp-1;partbreaker-1;rathalosEssence	2	rathalos	0
