@@ -1169,7 +1169,7 @@
 				"activeStaminaDepletionReductionPercent": 50
 			},
 			{
-				"description": "(2) Iincreases affinity by 50% and reduces stamina depletion by 50%.",
+				"description": "(2) Increases affinity by 50% and reduces stamina depletion by 50%.",
 				"activeAffinity": 50,
 				"activeStaminaDepletionReductionPercent": 50
 			},
